@@ -58,6 +58,12 @@
     build: "ga"
   when: build == "candidate"
 
+- name: Reset bmc
+  command: "ipmitool -I lanplus -U {{ hostvars[item]['ipmi_user'] }} -P {{ hostvars[item]['ipmi_password'] }} -H {{ hostvars[item]['ipmi_address'] }} -p {{ hostvars[item]['ipmi_port'] | default(623) }} mc reset cold"
+  with_items: "{{ groups['masters'] + groups['workers'] }}"
+  when:
+    - dci_reset_bmc|default(False)|bool
+
 # Download Openshift from DCI
 - name: Mirror release
   include_role:
@@ -164,4 +170,15 @@
       - "/var/consoles/{{ hostvars.localhost.cluster }}/{{ hostvars.localhost.cluster }}*"
   when: hostvars.localhost.cluster is defined
   become: true
+
+- name: Check bmc
+  command: "ipmitool -I lanplus -U {{ hostvars[item]['ipmi_user'] }} -P {{ hostvars[item]['ipmi_password'] }} -H {{ hostvars[item]['ipmi_address'] }} -p {{ hostvars[item]['ipmi_port'] | default(623) }} mc info"
+  with_items: "{{ groups['masters'] + groups['workers'] }}"
+  retries: 6
+  delay: 10
+  register: result
+  until: result.rc == 0
+  when:
+    - dci_reset_bmc|default(False)|bool
+
 ...

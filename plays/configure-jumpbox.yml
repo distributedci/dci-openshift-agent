@@ -10,6 +10,7 @@
       - "httpd"
       - "expect"
       - "skopeo" # needed for image mirroring in offline mode
+      - "ipmitool"
     state: installed
 
 - name: Install grpcurl
