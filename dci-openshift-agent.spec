@@ -20,6 +20,7 @@ Requires: ansible-collection-community-kubernetes
 Requires: python3-pyyaml python3-openshift
 Requires: ansible-role-dci-cvp
 Requires: jq
+Requires: ansible-collection-community-kubernetes
 
 %{?systemd_requires}
 Requires(pre): shadow-utils

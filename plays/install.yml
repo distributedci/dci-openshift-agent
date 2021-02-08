@@ -45,4 +45,10 @@
   vars:
     label_loop: "{{ groups['masters'] + groups['workers'] }}"
     label_item: "{{ hostvars }}"
+
+- name: "dci-openshift-agent : Setup cluster for CNV"
+  include_role:
+    name: cnv-setup
+  when:
+    - hostvars.localhost.cnv_version is defined
 ...
