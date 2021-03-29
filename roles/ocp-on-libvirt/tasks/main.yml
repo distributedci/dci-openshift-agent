@@ -10,6 +10,16 @@
       loop: "{{ hosts }}"
       loop_control:
         loop_var: host
+    - include_tasks: dns_setup.yml
+    - include_role:
+        name: vbmc
+      vars:
+        vbmc_host: localhost
+        vbmc_nodes: "{{ resources }}"
+    - include_tasks: dci_setup.yml
+    - include_role:
+        name: conserver
+      when: enable_conserver
   when: hook_action == 'install'
 
 - block:
@@ -21,4 +31,11 @@
       loop: "{{ networks }}"
       loop_control:
         loop_var: network
+    - include_tasks: dns_cleanup.yml
+    - include_role:
+        name: vbmc
+      vars:
+        vbmc_host: localhost
+        vbmc_nodes: "{{ resources }}"
+        hook_action: cleanup
   when: hook_action == 'cleanup'
