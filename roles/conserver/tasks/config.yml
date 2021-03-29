@@ -1,0 +1,45 @@
+---
+- name: Set Defaults
+  set_fact:
+    ipmi_sol_hosts: []
+    socket_hosts: []
+
+- name: Check for Serial over IPMI
+  command:
+    cmd: >
+      ipmitool -H {{ hostvars[item].ipmi_address }}
+               -U {{ hostvars[item].ipmi_user }}
+               -P {{ hostvars[item].ipmi_password }}
+               -p {{ hostvars[item].ipmi_port }}
+               -I lanplus
+               sol info
+  register: ipmi_sol
+  with_items: "{{ groups['masters'] + groups['workers'] }}"
+
+- name: Build list of Serial over IPMI hosts
+  set_fact:
+    ipmi_sol_hosts: "{{ ipmi_sol_hosts + [hostvars[item.item].name] }}"
+  when: item.rc == 0
+  loop: "{{ ipmi_sol.results }}"
+
+- name: Include IPMI console config
+  include-tasks: config-ipmi.yml
+  when:
+    ipmi_sol_hosts| length>0
+
+- name: Check for Serial over SOCKET (libvirt)
+  stat:
+    path: "/tmp/{{ hostvars[item].name }}.console"
+  register: socket_file
+  with_items: "{{ groups['masters'] + groups['workers'] }}"
+
+- name: Build list of Serial over SOCKET hosts (libvirt)
+  set_fact:
+    socket_hosts: "{{ socket_hosts + [hostvars[item.item].name] }}"
+  when: item.stat.exists
+  loop: "{{ socket_file.results }}"
+
+- name: Include libvirt console config
+  include-tasks: config-libvirt.yml
+  when:
+    socket_hosts| length>0
