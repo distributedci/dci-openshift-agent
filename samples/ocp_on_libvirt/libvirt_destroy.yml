@@ -3,11 +3,7 @@
   hosts: localhost
   tasks:
     - include_role:
-        name: bootstrap-libvirt
-      vars:
-        hook_action: cleanup
-    - include_role:
-        name: dns-setup
+        name: ocp-on-libvirt
       vars:
         hook_action: cleanup
     - include_role:
