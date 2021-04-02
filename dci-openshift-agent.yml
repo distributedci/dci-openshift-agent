@@ -28,11 +28,6 @@
       set_fact:
         job_id: '{{ job_info.job.id }}'
 
-    - name: set job state
-      dci_job:
-        id: "{{ job_id }}"
-        status: "new"
-
     # Keep in sync with test-runner parsing
     - name: UI URL
       debug:
