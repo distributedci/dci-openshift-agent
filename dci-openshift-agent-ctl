@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ANSIBLE_PID=
+JOB_ID_FILE=
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 start=0
 params="$(getopt -o hsdp:c:v -l help,start,dev,prefix:,config:,verbose --name "$(basename -- "$0")" -- "$@")"
@@ -23,6 +25,35 @@ arguments:
 EOF
     exit $1
 }
+
+function finish ()
+{
+    echo "finish $*"
+
+    if [ -n "${ANSIBLE_PID}" ]; then
+        PGID=$(ps -o pgid= ${ANSIBLE_PID} | grep -o [0-9]*)
+
+        if [ -n "${ANSIBLE_PID}" ]; then
+            kill -KILL -$PGID
+        else
+            echo "Unable to find process group for ${ANSIBLE_PID}"
+            kill ${ANSIBLE_PID}
+        fi
+
+        wait ${ANSIBLE_PID}
+        exit $?
+    fi
+
+    if [ ! -z "${JOB_ID_FILE}" ] && [ ! -z "${JUNIT_OUTPUT_DIR}" ]; then
+        JOB_ID=$(cat ${JOB_ID_FILE})
+        for junit_file in ${JUNIT_OUTPUT_DIR}/*.xml; do
+            junit_filename=$(basename "${junit_file%.xml}")
+            dcictl job-upload-file --name ${junit_filename} --path ${junit_file} --mime application/junit ${JOB_ID}
+        done
+    fi
+}
+
+trap finish 0 SIGKILL
 
 if [ -r /etc/dci-openshift-agent/config ]; then
     . /etc/dci-openshift-agent/config
@@ -102,7 +133,18 @@ if [ "$start" -eq 1 ]; then
         [ -e $DIR/dcirc.sh ] && . $DIR/dcirc.sh
         export ANSIBLE_CONFIG=$DIR/dev-ansible.cfg
     fi
-    exec ansible-playbook dci-openshift-agent.yml -e @$config ${prefix_args} "$@"
+
+    if [ -z "${JUNIT_OUTPUT_DIR}" ]; then
+        setsid ansible-playbook dci-openshift-agent.yml -e @$config ${prefix_args} "$@" &
+        ANSIBLE_PID=$!
+    else
+        JOB_ID_FILE="$(mktemp /tmp/job.XXXXX)"
+        setsid ansible-playbook dci-openshift-agent.yml -e JOB_ID_FILE="${JOB_ID_FILE}" -e @$config ${prefix_args} "$@" &
+        ANSIBLE_PID=$!
+    fi
+    wait ${ANSIBLE_PID}
+    ANSIBLE_PID=
+    exit $?
 else
     echo "Dry-Run: pass -s or --start to actually execute"
     if [ -z "$dev" ]; then
@@ -112,6 +154,11 @@ else
         echo "$DIR/dcirc.sh"
         echo "ANSIBLE_CONFIG=$DIR/dev-ansible.cfg"
     fi
-    echo ansible-playbook dci-openshift-agent.yml -e @$config ${prefix_args} "$@"
+    if [ -z "${JUNIT_OUTPUT_DIR}" ]; then
+        echo "setsid ansible-playbook dci-openshift-agent.yml -e @$config ${prefix_args} "$@" &"
+    else
+        JOB_ID_FILE="$(mktemp /tmp/job.XXXXX)"
+        echo "setsid ansible-playbook dci-openshift-agent.yml -e JOB_ID_FILE="${JOB_ID_FILE}" -e @$config ${prefix_args} "$@" &"
+    fi
     exit 1
 fi
