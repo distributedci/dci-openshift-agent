@@ -16,6 +16,24 @@
       "revId": "aef884cff661a4f5a4dc9a58863103051c87a3eb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7859b192_b6eaba4f",
+        "filename": "roles/cnv-setup/defaults/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-05T17:20:40Z",
+      "side": 1,
+      "message": "Good point but I have changed this to be consistent with the the two vars above: what is the goal of deploying cnv and hco operators if we don\u0027t test it at the end?",
+      "parentUuid": "a598f0bf_11196851",
+      "revId": "aef884cff661a4f5a4dc9a58863103051c87a3eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
