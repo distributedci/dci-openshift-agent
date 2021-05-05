@@ -2,9 +2,9 @@
 - name: enable cnv repo
   become: true
   when: hostvars.localhost.local_registry is defined
-  rhsm_repository:
-    name: "cnv-{{ cnv_version }}-for-rhel-8-x86_64-rpms"
-    state: enabled
+  shell:
+    cmd: >
+     dnf config-manager --enable cnv-{{ cnv_version }}-for-rhel-8-x86_64-rpms
 
 - name: install virtctl package
   become: true
@@ -18,3 +18,28 @@
     src: /usr/bin/virtctl
     dest: /usr/local/bin/oc-virt
     state: link
+
+- name: "Create the test VirtualMachine"
+  k8s:
+    definition: "{{ lookup('template', cnv_vm_yaml) }}"
+
+- name: "Create the test VirtualMachineInstance"
+  shell:
+    cmd: >
+     /usr/bin/virtctl start vm-cirros
+
+- name: "Get VMI status"
+  shell:
+    cmd: >
+     oc get vmi -o json | jq -r '.items[0].status.phase'
+  register: vmi_test_status
+  retries: 24
+  delay: 5
+  until: vmi_test_status == "Running"
+
+- name: "Delete the test VMI"
+  shell:
+    cmd: >
+     /usr/bin/virtctl stop vm-cirros
+
+...
