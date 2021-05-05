@@ -1,0 +1,40 @@
+---
+- name: Copy Cirros-VM for test
+  shell:
+    cmd: >
+      skopeo copy --authfile {{ hostvars.localhost.provision_cache_store }}/{{ cluster }}-pull-secret.txt"
+      --dest-tls-verify=false docker://quay.io/repository/{{ cnv_vm_image }}
+      docker://{{ local_registry_host }}:{{ local_registry_port }}/{{ cnv_vm_image }}
+  register: copy
+  retries: 5
+  delay: 5
+  until:
+    - copy is not failed
+
+- name: "Create the test VirtualMachine"
+  k8s:
+    definition: "{{ lookup('template', cnv_vm_yaml) }}"
+
+- name: "Create the test VirtualMachineInstance"
+  shell:
+    cmd: >
+      oc apply virtualmachine vm-cirros --type merge -p \
+                  '{"spec":{"running":true}}'
+
+- name: "Get VMI status"
+  k8s_info:
+    api: kubevirt.io/v1alpha3
+    kind: VirtualMachineInstance
+    name: vm-cirros
+    namespace: default
+  register: vmi_test
+  retries: 10
+  delay: 5
+  until: vmi_test.resources[0].status.phase == "Running"
+
+- name: "Delete the test VMI"
+  shell:
+    cmd: >
+      oc apply virtualmachine vm-cirros --type merge -p \
+                  '{"spec":{"running":false}}'
+...
