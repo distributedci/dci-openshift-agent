@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87a9eb55_b2451a92",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-05-05T17:25:16Z",
+      "side": 1,
+      "message": "We should probably remove this from here anyway.  We shouldn\u0027t need it in settings.yml and here.",
+      "revId": "38cf471b883f73eafd5ac7f2372b10feca820b31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
