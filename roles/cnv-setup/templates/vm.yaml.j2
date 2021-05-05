@@ -29,7 +29,7 @@ spec:
       terminationGracePeriodSeconds: 0
       volumes:
       - containerDisk:
-          image: {{ cnv_catalog_registry }}:{{ cnv_catalog_registry_port }}{{ cnv_vm_image }}
+          image: {{ local_registry_host }}:{{ local_registry_port }}{{ cnv_vm_image }}
         name: containerdisk
       - cloudInitNoCloud:
           userData: |
