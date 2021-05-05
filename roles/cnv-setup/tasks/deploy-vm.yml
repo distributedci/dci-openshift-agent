@@ -2,9 +2,9 @@
 - name: enable cnv repo
   become: true
   when: hostvars.localhost.local_registry is defined
-  rhsm_repository:
-    name: "cnv-{{ cnv_version }}-for-rhel-8-x86_64-rpms"
-    state: enabled
+  shell:
+    cmd: >
+     dnf config-manager --enable cnv-{{ cnv_version }}-for-rhel-8-x86_64-rpms
 
 - name: install virtctl package
   become: true
