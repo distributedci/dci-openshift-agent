@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1ab880bf_714d79ff",
+        "filename": "dci-openshift-agent-ctl",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2021-05-07T22:52:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1109c1c5_b0d6471a",
+      "revId": "650bd06a098ba6fbd8e1522960cde06dca9453c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff10a44_baafb987",
         "filename": "dci-openshift-agent-ctl",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2021-05-07T04:16:12Z",
       "side": 1,
       "message": "cleaining should be done in a defensive way:\n\nif [ -n \"${JOB_ID_FILE}\" ]; then\n# remove file\nfi\n\nif [ -n \"${JUNIT_OUTPUT_DIR}\" ]; then\n# remove dir\nfi",
+      "revId": "650bd06a098ba6fbd8e1522960cde06dca9453c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f40079d_51889cbe",
+        "filename": "dci-openshift-agent-ctl",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2021-05-07T22:52:29Z",
+      "side": 1,
+      "message": "These ones are already checked at line 48.",
+      "parentUuid": "5ff10a44_baafb987",
       "revId": "650bd06a098ba6fbd8e1522960cde06dca9453c8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
