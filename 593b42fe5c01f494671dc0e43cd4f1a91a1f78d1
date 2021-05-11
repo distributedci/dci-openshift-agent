@@ -34,6 +34,23 @@
       "revId": "593b42fe5c01f494671dc0e43cd4f1a91a1f78d1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1050570c_51018e54",
+        "filename": "roles/cnv-setup/defaults/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-05-11T15:45:06Z",
+      "side": 1,
+      "message": "But this is an extra step that the partner has to do right?  They have to mirror this image to their registry or the deploy_vm will fail.",
+      "revId": "593b42fe5c01f494671dc0e43cd4f1a91a1f78d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
