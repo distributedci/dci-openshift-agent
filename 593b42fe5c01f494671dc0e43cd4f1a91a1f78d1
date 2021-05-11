@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1de4e720_8530f42f",
+        "filename": "roles/cnv-setup/defaults/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-05-11T15:09:26Z",
+      "side": 1,
+      "message": "I\u0027m still confused about if this is going to stay enabled or not here.  I can see setting it to make testing this PR easier but I thought this would go back to false and the Dallas config would set this to true.",
+      "revId": "593b42fe5c01f494671dc0e43cd4f1a91a1f78d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
