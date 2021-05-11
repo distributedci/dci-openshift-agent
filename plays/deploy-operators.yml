@@ -93,4 +93,22 @@
   when:
   - hostvars.localhost.local_storage_operator_image is defined
 ### End LocalStorage
+
+
+### Begin deploy all CRs
+- block:
+  - name: "deploy-operators : Create all Custom Resources"
+    include_role:
+      name: deploy-cr
+    vars:
+      api_version: "{{ item.api_version | default(omit) }}"
+      kind: "{{ item.kind | default(omit) }}"
+      namespace: "{{ item.namespace | default(omit) }}"
+      name: "{{ item.name | default(omit) }}"
+      spec: "{{ item.spec | default(omit) }}"
+  with_list: "{{ hostvars.localhost.cluster_crs }}"
+  when:
+  - hostvars.localhost.cluster_crs is list
+
+### End Deploy all CRs
 ...
