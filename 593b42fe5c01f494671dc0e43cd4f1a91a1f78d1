@@ -16,6 +16,24 @@
       "revId": "593b42fe5c01f494671dc0e43cd4f1a91a1f78d1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fbe4d99_c70e45b9",
+        "filename": "roles/cnv-setup/defaults/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-11T15:22:19Z",
+      "side": 1,
+      "message": "IMO, the 3 cnv_deploy_* options should have the same value. You want to install the oc-virt bin if you install cnv or hco on your ocp and you want to test a simple vm deployment to be sure everything is setup properly.",
+      "parentUuid": "1de4e720_8530f42f",
+      "revId": "593b42fe5c01f494671dc0e43cd4f1a91a1f78d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
