@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dfa33c30_7ce5e886",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-12T08:47:33Z",
+      "side": 1,
+      "message": "All vars can be omitted ans set a default value? you need at least a name isn\u0027t it?",
+      "revId": "e1359149ffe1d8c6c73276af2002c9814ccce988",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
