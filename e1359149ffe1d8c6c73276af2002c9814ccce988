@@ -16,6 +16,24 @@
       "revId": "e1359149ffe1d8c6c73276af2002c9814ccce988",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "542c4eeb_d0bdec58",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-05-13T14:30:59Z",
+      "side": 1,
+      "message": "actually the role has assertions for all required variables, but I think it\u0027ll make more sense to force them here as well.",
+      "parentUuid": "dfa33c30_7ce5e886",
+      "revId": "e1359149ffe1d8c6c73276af2002c9814ccce988",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
