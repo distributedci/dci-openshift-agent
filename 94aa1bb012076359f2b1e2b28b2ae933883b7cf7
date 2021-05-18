@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8218e328_526ebb4e",
+        "filename": "roles/cnv-setup/defaults/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-18T03:55:43Z",
+      "side": 1,
+      "message": "I think this one should be: test_deploy_vm",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6f01b23_de663910",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-18T03:55:43Z",
+      "side": 1,
+      "message": "I thought this would be optional, i.e. only when disconnected. I think it should support both connected and disconnected environments. I think it shouldn\u0027t be a lot of extra effort to allow connected as well. What do you think?",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "543acc65_2072acfe",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-18T03:55:43Z",
+      "side": 1,
+      "message": "I wonder if we could use k8s module like:\n  k8s:\n    state: present\n    definition:\n      kind: VirtualMachine\n      metadata:\n        name: vm-cirros\n        namespace: default\n      spec:\n        running: true",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bfea4a2d_5a7d8dfb",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-18T03:55:43Z",
+      "side": 1,
+      "message": "Like on creation, wondering if we could use k8s module",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f8bc62e7_5b031b3a",
+        "filename": "roles/cnv-setup/templates/vm.yaml.j2",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-18T03:55:43Z",
+      "side": 1,
+      "message": "If connected and disconnected would be supported this may change.",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
