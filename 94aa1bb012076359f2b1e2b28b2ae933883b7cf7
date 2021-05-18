@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "4924071f_14f9653f",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-18T12:26:37Z",
+      "side": 1,
+      "message": "You are right! I just forgot to add the condition statement in the task. I am updating this",
+      "parentUuid": "d6f01b23_de663910",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "543acc65_2072acfe",
         "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
         "patchSetId": 9
@@ -47,6 +65,24 @@
       "writtenOn": "2021-05-18T03:55:43Z",
       "side": 1,
       "message": "I wonder if we could use k8s module like:\n  k8s:\n    state: present\n    definition:\n      kind: VirtualMachine\n      metadata:\n        name: vm-cirros\n        namespace: default\n      spec:\n        running: true",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4bb2d623_78ba6ae1",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-18T12:26:37Z",
+      "side": 1,
+      "message": "Let me try that!",
+      "parentUuid": "543acc65_2072acfe",
       "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -84,6 +120,24 @@
       "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "572dd570_00187a66",
+        "filename": "roles/cnv-setup/templates/vm.yaml.j2",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-18T12:26:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f8bc62e7_5b031b3a",
+      "revId": "94aa1bb012076359f2b1e2b28b2ae933883b7cf7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
