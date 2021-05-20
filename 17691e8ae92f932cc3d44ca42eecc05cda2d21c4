@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "13c40c3c_9b3227c5",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-20T03:35:20Z",
+      "side": 1,
+      "message": "This one should be set_fact instead of vars :)",
+      "revId": "17691e8ae92f932cc3d44ca42eecc05cda2d21c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a2237540_d48d9d18",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-20T03:35:20Z",
+      "side": 1,
+      "message": "I think you could have these two tasks in a block as they both are meant for disconnected",
+      "revId": "17691e8ae92f932cc3d44ca42eecc05cda2d21c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
