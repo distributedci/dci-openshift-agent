@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4917686e_025be043",
+        "filename": "roles/cnv-setup/tasks/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-20T07:39:01Z",
+      "side": 1,
+      "message": "I see your point but I prefer to keep everything related to cnv in one dedicated role instead of splitting it.",
+      "parentUuid": "fa5211f3_6595407e",
+      "revId": "17691e8ae92f932cc3d44ca42eecc05cda2d21c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "13c40c3c_9b3227c5",
         "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
         "patchSetId": 10
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "06cb73a6_57cd549b",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-20T07:39:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "13c40c3c_9b3227c5",
+      "revId": "17691e8ae92f932cc3d44ca42eecc05cda2d21c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a2237540_d48d9d18",
         "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
         "patchSetId": 10
@@ -50,6 +86,24 @@
       "revId": "17691e8ae92f932cc3d44ca42eecc05cda2d21c4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5e34dab6_f9a3c6b2",
+        "filename": "roles/cnv-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-05-20T07:39:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a2237540_d48d9d18",
+      "revId": "17691e8ae92f932cc3d44ca42eecc05cda2d21c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
