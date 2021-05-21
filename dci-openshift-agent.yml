@@ -134,6 +134,8 @@
           loop: "{{ dci_config_dirs }}"
           loop_control:
             loop_var: hookdir
+          tags:
+            - hook-install
 
       when:
         - dci_main is not defined or dci_main == 'install'
@@ -185,6 +187,8 @@
           loop: "{{ dci_config_dirs }}"
           loop_control:
             loop_var: hookdir
+          tags:
+             - hook-upgrade
 
       when:
         - dci_main is defined
