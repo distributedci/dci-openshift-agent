@@ -33,6 +33,15 @@
     dest: "~/.ssh/{{ cluster }}-provisioner_rsa"
     flat: true
 
+- name: "dci-openshift-agent : set nodes_fqdn_list"
+  set_fact:
+        nodes_fqdn_list: []
+
+- name: "dci-openshift-agent : Build list of nodes with fqdn"
+  set_fact:
+    nodes_fqdn_list: "{{ nodes_fqdn_list }} + [ '{{ item }}.{{ cluster }}.{{ domain }}' ]"
+  with_items: "{{ groups['masters'] + groups['workers'] }}"
+
 - name: Erase bootloader to prevent old OS to boot
   delegate_to: "{{ item }}"
   become: true
@@ -45,7 +54,7 @@
   when:
     - dci_erase_bootloader_on_disk|default(False)|bool
     - dci_main is not defined or dci_main == 'install'
-  with_items: "{{ groups['masters'] + groups['workers'] }}"
+  with_items: "{{ nodes_fqdn_list }}"
   ignore_unreachable: true
   ignore_errors: true
 ...
