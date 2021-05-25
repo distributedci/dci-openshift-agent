@@ -1,7 +1,7 @@
 apiversion: v1
 kind: Node
 metadata:
-  name: {{ item }}
+  name: {{ label_item[item].inventory_hostname }}
   labels:
   {% for key, value in label_item[item].labels.items() %}
     {{ key }}: "{{ value}}"
