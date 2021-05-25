@@ -11,7 +11,7 @@
   vars:
     sideload_ocp_cluster: "{{ cluster }}"
     sideload_ocp_provisioner: "{{ groups['provisioner'][0] }}"
-    sideload_ocp_cluster_nodes: "{{ groups['masters'] + groups['workers'] }}"
+    sideload_ocp_cluster_nodes: "{{ nodes_fqdn_list }}"
     sideload_images:
       - "mirror.gcr.io/library/busybox:1.29"
       - "docker.io/library/httpd:2.4.38-alpine"
