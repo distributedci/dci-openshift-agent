@@ -1,0 +1,18 @@
+2021-05-26 18:37:19,759 p=369469 u=togarcia n=ansiblelint | Discovering files to lint: git ls-files -z *.yaml *.yml
+2021-05-26 18:37:19,793 p=369469 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '301' with 'no-changed-when' but it will become an error in the future.
+2021-05-26 18:37:19,793 p=369469 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '303' with 'command-instead-of-module' but it will become an error in the future.
+2021-05-27 08:57:42,162 p=40983 u=togarcia n=ansiblelint | Discovering files to lint: git ls-files -z *.yaml *.yml
+2021-05-27 08:57:42,197 p=40983 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '301' with 'no-changed-when' but it will become an error in the future.
+2021-05-27 08:57:42,197 p=40983 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '303' with 'command-instead-of-module' but it will become an error in the future.
+2021-05-27 08:57:49,222 p=41066 u=togarcia n=ansiblelint | Discovering files to lint: git ls-files -z *.yaml *.yml
+2021-05-27 08:57:49,350 p=41066 u=togarcia n=ansiblelint | Listing 2 violation(s) that are fatal
+2021-05-27 08:57:49,352 p=41066 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '301' with 'no-changed-when' but it will become an error in the future.
+2021-05-27 08:57:49,352 p=41066 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '303' with 'command-instead-of-module' but it will become an error in the future.
+2021-05-27 08:58:17,677 p=41188 u=togarcia n=ansiblelint | Discovering files to lint: git ls-files -z *.yaml *.yml
+2021-05-27 08:58:17,799 p=41188 u=togarcia n=ansiblelint | Listing 2 violation(s) that are fatal
+2021-05-27 08:58:17,800 p=41188 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '301' with 'no-changed-when' but it will become an error in the future.
+2021-05-27 08:58:17,800 p=41188 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '303' with 'command-instead-of-module' but it will become an error in the future.
+2021-05-27 11:01:27,219 p=56171 u=togarcia n=ansiblelint | Discovering files to lint: git ls-files -z *.yaml *.yml
+2021-05-27 11:01:27,337 p=56171 u=togarcia n=ansiblelint | Listing 2 violation(s) that are fatal
+2021-05-27 11:01:27,338 p=56171 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '301' with 'no-changed-when' but it will become an error in the future.
+2021-05-27 11:01:27,338 p=56171 u=togarcia n=ansiblelint.__main__ | Replaced deprecated tag '303' with 'command-instead-of-module' but it will become an error in the future.
