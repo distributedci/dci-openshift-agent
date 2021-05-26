@@ -266,14 +266,14 @@ _Step 3a :_ “Installing”
 
 - Start OpenShift install: `/plays/install.yml` and `/hooks/install.yml`. This is launched the variable `dci_main` is undefined or equal to `install`.
 
-_tags: running, installing_
+_tags: running, installing, redhat-installing, partner-installing_
 _runs on provisioner_
 
 _Step 3b :_ “Upgrading”
 
 - Start OpenShift upgrade: `/plays/upgrade.yml` and `/hooks/upgrade.yml`. This is launched when the variable `dci_main` is set to `upgrade`.
 
-_tags: running, upgrading_
+_tags: running, upgrading, redhat-upgrading, partner-upgrading_
 _runs on provisioner_
 
 _Step 4 :_ “Red Hat tests”

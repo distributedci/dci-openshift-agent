@@ -124,16 +124,16 @@
   tags:
     - running
     - installing
+    - redhat-installing
   tasks:
     - block:
         - name: "dci-openshift-agent : Launch install"
           include_tasks: plays/install.yml
 
-        - name: "dci-openshift-agent : Launch partner install"
-          include_tasks: '{{ hookdir }}/hooks/install.yml'
-          loop: "{{ dci_config_dirs }}"
-          loop_control:
-            loop_var: hookdir
+        - name: "dci-openshift-agent: Deploy operators to OCP cluster"
+          include_tasks: plays/deploy-operators.yml
+          tags:
+            - operator-deployment
 
       when:
         - dci_main is not defined or dci_main == 'install'
@@ -163,12 +163,31 @@
 
           ignore_unreachable: true
 
+# Step 3a bis : hook installing
+- name: 'Launch hook install'
+  hosts: provisioner
+  tags:
+    - running
+    - partner-installing
+  tasks:
+    - block:
+        - name: "dci-openshift-agent : Launch partner install"
+          include_tasks: '{{ hookdir }}/hooks/install.yml'
+          loop: "{{ dci_config_dirs }}"
+          loop_control:
+            loop_var: hookdir
+      when:
+        - dci_main is not defined or dci_main == 'install'
+
+      rescue: *teardown_failure
+
 # Step 3b : upgrading
 - name: 'Launch upgrade'
   hosts: provisioner
   tags:
     - running
     - upgrading
+    - redhat-upgrading
   tasks:
     - block:
         - name: "dci-openshift-agent : Launch upgrade"
@@ -177,6 +196,21 @@
             local_repo: "{{ hostvars[groups['registry_host'][0]].local_repo }}"
           include_tasks: plays/upgrade.yml
 
+      when:
+        - dci_main is defined
+        - dci_main == 'upgrade'
+
+      rescue: *teardown_failure
+
+# Step 3b bis : hook upgrading
+- name: 'Launch hook upgrade'
+  hosts: provisioner
+  tags:
+    - running
+    - upgrading
+    - partner-upgrading
+  tasks:
+    - block:
         - name: "dci-openshift-agent : Launch partner upgrade"
           vars:
             local_registry: "{{ hostvars[groups['registry_host'][0]].local_registry }}"
@@ -192,19 +226,7 @@
 
       rescue: *teardown_failure
 
-# Step 4 : deploy operators, run on the provisioner so OC is automatically set
-- name: 'Deploy operators to OCP cluster'
-  hosts: provisioner
-  tags:
-    - running
-    - operator-deployment
-  tasks:
-    - block:
-        - include_tasks: plays/deploy-operators.yml
-
-      rescue: *teardown_failure
-
-# Step 5 : redhat testing
+# Step 4 : redhat testing
 - name: 'Launch Red Hat tests'
   hosts: localhost
   tags:
@@ -217,7 +239,7 @@
 
       rescue: *teardown_failure
 
-# Step 6 : partner testing
+# Step 5 : partner testing
 - name: 'Launch partner tests'
   hosts: localhost
   tags:
@@ -241,7 +263,7 @@
         status: "post-run"
       tags: [dci]
 
-# Step 7 : post run
+# Step 6 : post run
 - name: Launch post run
   hosts: localhost
   tags:
@@ -264,7 +286,7 @@
         status: "success"
       tags: [dci]
 
-# Step 8 : state "success"
+# Step 7 : state "success"
 - name: 'Success'
   hosts: localhost
   tags:
