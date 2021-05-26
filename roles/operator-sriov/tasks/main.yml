@@ -139,6 +139,10 @@
   loop: "{{ nodes.resources }}"
   no_log: true
 
+- name: Add sriov label to worker nodes
+  shell: |
+    oc label node {{ worker_node }} feature.node.kubernetes.io/network-sriov.capable: "true"
+
 - name: Get SriovNetworkNodeState for one of the worker node
   k8s_info:
     api: sriovnetwork.openshift.io/v1
