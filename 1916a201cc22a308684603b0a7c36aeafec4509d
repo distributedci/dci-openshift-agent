@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69dad05d_5988da15",
+        "filename": "ansible.log",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-05-27T14:50:43Z",
+      "side": 1,
+      "message": "was this file added by mistake?",
+      "revId": "1916a201cc22a308684603b0a7c36aeafec4509d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
