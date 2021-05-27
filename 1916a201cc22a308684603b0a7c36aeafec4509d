@@ -16,6 +16,24 @@
       "revId": "1916a201cc22a308684603b0a7c36aeafec4509d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40de1d2c_dda7db18",
+        "filename": "ansible.log",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-05-27T17:53:46Z",
+      "side": 1,
+      "message": "😮 yes, added by mistake, thanks for pointing it out, getting rid of it",
+      "parentUuid": "69dad05d_5988da15",
+      "revId": "1916a201cc22a308684603b0a7c36aeafec4509d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
