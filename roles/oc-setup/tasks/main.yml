@@ -4,15 +4,23 @@
   tags:
     - install
 
-- name: "test_ oc-setup : Check inventory to match ocp cluster config"
+- name: "get nodes"
   k8s_info:
     kubeconfig: "{{ dci_cluster_configs_dir }}/kubeconfig"
     api_version: v1
-    kind: node
-    name: "{{ hostvars[item].name }}"
-  register: node
-  with_items: "{{ groups['masters'] + groups['workers'] }}"
-  failed_when: "'resources' not in node or node.resources == []"
+    kind: Node
+    field_selectors:
+      - status=Ready
+  register: nodes
+  tags:
+    - check
+
+- name: "debug nodes"
+  debug:
+    msg: "{{ nodes }}"
+
+- name: "test_ oc-setup : Check number of nodes"
+  failed_when: "{{ (groups['masters'] + groups['workers'])|length != nodes|length }} "
   tags:
     - check
 
