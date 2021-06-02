@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "55269900_1fac93d8",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-02T04:16:03Z",
+      "side": 1,
+      "message": "Not sure why the last run does not show this change (this particular task is not in the log) the errors[0][1] are showing the shortname.\n\nI may suggest doing this to avoid one extra task to set the empty list\n\n```\n    nodes_fqdn_list: \"{{ nodes_fqdn_list|default([]) }} + [ \u0027{{ item }}.{{ cluster }}.{{ domain }}\u0027 ]\"\n```\n\n[0] https://www.distributed-ci.io/jobs/b13133b2-9085-4c3c-aa67-916e9f730142/jobStates#c4bf93fd-f105-4031-b889-bf31bab8ccc1:file126\n[1] https://www.distributed-ci.io/jobs/b13133b2-9085-4c3c-aa67-916e9f730142/jobStates#263fd5b7-79a3-4556-b96d-b645db04ad25:file402",
+      "revId": "953445a8747cd7ba1536f681345d46137d788752",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
