@@ -16,6 +16,24 @@
       "revId": "953445a8747cd7ba1536f681345d46137d788752",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b1204d47_2a9d7405",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-06-02T08:30:22Z",
+      "side": 1,
+      "message": "I think it is because of the depends-on. You cannot have two patches that modify the same project without overriding during the tests. I will disable sriov to see how it is behaving.\nGood catch for the compact version :)",
+      "parentUuid": "55269900_1fac93d8",
+      "revId": "953445a8747cd7ba1536f681345d46137d788752",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
