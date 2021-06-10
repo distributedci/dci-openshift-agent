@@ -46,7 +46,9 @@
 - name: Get logs from OCP deployment
   script: ./scripts/get-logs "{{ hostvars[groups['provisioner'][0]]['ansible_user'] }}@{{ groups['provisioner'][0] }}" "{{ logdir.path }}" "{{ groups['masters'] }}"
   delegate_to: localhost
-  ignore_errors: true
+  register: dci_script_logs
+  # Only fail if the script is not in place
+  failed_when: dci_script_logs.rc == 127
 
 - name: Find deployment logs (text)
   find:

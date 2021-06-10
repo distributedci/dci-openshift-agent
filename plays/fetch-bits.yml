@@ -1,3 +1,4 @@
+---
 - name: Set the components variable
   set_fact:
     components: '{{ job_info.job.components }}'
@@ -39,6 +40,7 @@
     state: directory
     owner: '{{ ansible_user_id }}'
     group: '{{ ansible_user_gid }}'
+    mode:  0755
   with_items:
     - '{{ dci_cache_dir }}'
     - '{{ dci_mirror_location }}/dci_repo'
@@ -279,6 +281,7 @@
     file:
       path: "{{ provision_cache_store }}/{{ version }}/clients_done"
       state: touch
+      mode: 0644
 
   - name: Load variables from rhcos.json
     include_vars:
@@ -344,6 +347,7 @@
     file:
       path: "{{ provision_cache_store }}/{{ version }}/mirror_done"
       state: touch
+      mode: 0644
 
   when:
     - "'registry_host' in groups"
@@ -353,3 +357,5 @@
     - hostvars[groups['registry_host'][0]].local_repo is defined
     - hostvars[groups['registry_host'][0]].provision_cache_store is defined
   delegate_to: "{{ groups['registry_host'][0] }}"
+
+...

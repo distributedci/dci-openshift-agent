@@ -40,6 +40,7 @@
     state: directory
     owner: '{{ ansible_user_id }}'
     group: '{{ ansible_user_gid }}'
+    mode: 0755
   with_items:
     - '{{ dci_cache_dir }}'
     - '{{ dci_mirror_location }}/dci_repo'
@@ -68,6 +69,7 @@
   file:
     path: "{{ dci_cluster_configs_dir }}"
     state: directory
+    mode: 0755
 
 - name: "Setup podman on the jumphost"
   include_role:

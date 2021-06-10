@@ -22,7 +22,8 @@
        -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }}
        -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
        /usr/bin/test-run.sh  -ginkgo.focus="sctp" --junit /tests/{{ date.stdout }}/sctp
-    ignore_errors: yes
+    register: dci_sctp_tests
+    failed_when: dci_sctp_tests.rc != 0
     when: cnf_test_suites is defined and  "sctp" in cnf_test_suites
 
   - name: Run PTP tests
@@ -34,7 +35,8 @@
        -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }}
        -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
        /usr/bin/test-run.sh  -ginkgo.focus="ptp" --junit  /tests/{{ date.stdout }}/ptp
-    ignore_errors: yes
+    register: dci_ptp_tests
+    failed_when: dci_ptp_tests.rc != 0
     when: cnf_test_suites is defined and "ptp" in cnf_test_suites
 
   - name: Run performance tests
@@ -46,7 +48,8 @@
        -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }}
        -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
        /usr/bin/test-run.sh  -ginkgo.focus="performance" --junit  /tests/{{ date.stdout }}/performance
-    ignore_errors: yes
+    register: dci_performance_tests
+    failed_when: dci_performance_tests.rc != 0
     when: cnf_test_suites is defined and "performance" in cnf_test_suites
 
   - name: Run SRIOV tests
@@ -58,7 +61,8 @@
          -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }}
          -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
          /usr/bin/test-run.sh  -ginkgo.focus="sriov" --junit  /tests/{{ date.stdout }}/sriov
-    ignore_errors: yes
+    register: dci_sriov_tests
+    failed_when: dci_sriov_tests.rc != 0
     when: cnf_test_suites is defined and "sriov" in cnf_test_suites
 
   - name: Run DPDK tests
@@ -70,7 +74,8 @@
         -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }} -e DPDK_TESTS_IMAGE=dpdk:{{ cnf_tests_image }}
         -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
         /usr/bin/test-run.sh  -ginkgo.focus="dpdk" --junit  /tests/{{ date.stdout }}/dpdk
-    ignore_errors: yes
+    register: dci_dpdk_tests
+    failed_when: dci_dpdk_tests.rc != 0
     when: cnf_test_suites is defined and "dpdk" in cnf_test_suites
 
   - name: Rename junit xml files with the feature name
@@ -100,3 +105,5 @@
       job_id: "{{ hostvars.localhost.job_id }}"
       mime: "application/junit"
     with_items: "{{ junit_matched.files }}"
+
+...
