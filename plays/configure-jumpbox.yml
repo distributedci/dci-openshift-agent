@@ -68,6 +68,7 @@
   file:
     path: "{{ dci_cluster_configs_dir }}"
     state: directory
+    mode: 0755
 
 - name: "Setup podman on the jumphost"
   include_role:
