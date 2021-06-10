@@ -16,7 +16,7 @@
     shell: >
       oc patch mcp worker
       --type=merge
-      -p '{"spec":{"maxUnavailable":{{ hostvars.localhost.groups['workers']|length - 1 }}}}'
+      -p '{ "spec": { "maxUnavailable": {{ hostvars.localhost.groups['workers']|length - 1 }} } }'
     when:
     - hostvars.localhost.groups['workers']|length > 1
 

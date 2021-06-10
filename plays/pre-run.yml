@@ -42,10 +42,11 @@
         dd if=/dev/zero of=$disk bs=512 count=1
       done
     fi
+  register: dci_wipe_boot
   when:
     - dci_erase_bootloader_on_disk|default(False)|bool
     - dci_main is not defined or dci_main == 'install'
   with_items: "{{ groups['masters'] + groups['workers'] }}"
   ignore_unreachable: true
-  ignore_errors: true
+  failed_when: dci_wipe_boot.rc != 0
 ...
