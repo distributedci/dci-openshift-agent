@@ -54,6 +54,10 @@
   hosts: localhost
   tags:
     - pre-run
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
         # prepare infrastructure
