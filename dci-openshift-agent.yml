@@ -5,6 +5,10 @@
   tags:
     - job
     - dci
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
   tasks:
     - name: Read credentials from env vars
       set_fact:
