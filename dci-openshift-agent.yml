@@ -14,6 +14,12 @@
         dci_ui_url="{{ lookup('env','DCI_UI_URL') | default('https://www.distributed-ci.io', True) }}"
       no_log: true
 
+    - name: Set proxy env variables
+      environment:
+        http_proxy: "{{ http_proxy }}"
+        https_proxy: "{{ https_proxy }}"
+        no_proxy: "{{ no_proxy_list }}"
+
     # Schedule a new job only if not passed via dci-pipeline
     - name: Schedule a new job
       dci_job:
