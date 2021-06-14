@@ -12,7 +12,7 @@
   block:
   - name: "Define hostname for the catalog registry server"
     set_fact:
-      catalog_registry: "jumphost.{{ cluster }}.dfwt5g.lab"
+      catalog_registry: "{{ local_registry }}"
     when: catalog_registry is undefined
 
   - name: "Define port for the catalog registry server"
