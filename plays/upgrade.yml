@@ -91,21 +91,32 @@
     cmd: oc adm upgrade --to {{ version }}
 
 - name: "upgrader : Wait for upgrade to start"
-  command:
+  #command:
+  #  chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
+  #  cmd: oc wait --timeout=1m --for=condition=Progressing clusterversion/version
+  shell:
     chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
-    cmd: oc wait --timeout=1m --for=condition=Progressing clusterversion/version
-  retries: 5
+    cmd: "oc get clusterversion/version -o json"
+  register: cluster_version_output
+  until: ("Working towards " + version) in ((cluster_version_output.stdout | from_json).status.conditions | selectattr("type", "equalto", "Progressing") | first).message
+  retries: 10
+  delay: 30
 
 - name: "upgrader : Monitor upgrade until complete"
   shell:
     chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
+#    cmd: "oc get clusterversion/version -o json"
     cmd: >
-      oc get clusterversion/version -o json
-      | jq -r '.status.history[] | select(.version == "{{ version }}").state'
-  register: upgrade_progress
-  until: upgrade_progress.stdout.find("Completed") > -1
+      echo '{"current_time": "'$(date +%Y-%m-%dT%H:%M:%SZ)'", "cluster_version": '$(oc get clusterversion/version -o json)'}'
+  register: cluster_version_output
+  until: >
+    ("Done applying " + version) in ((cluster_version_output.stdout | from_json).cluster_version.status.conditions | selectattr("type", "equalto", "Available") | first).message or
+    ((((cluster_version_output.stdout | from_json).cluster_version.status.conditions | selectattr("type", "equalto", "Failing") | first).status | default(False) | bool) == True and
+    ((cluster_version_output.stdout | from_json).current_time | to_datetime('%Y-%m-%dT%H:%M:%SZ') - (((cluster_version_output.stdout | from_json).cluster_version.status.conditions | selectattr("type", "equalto", "Failing") | first).lastTransitionTime | to_datetime('%Y-%m-%dT%H:%M:%SZ'))).total_seconds() > 300)
+#    ("Unable to apply " + version) in ((cluster_version_output.stdout | from_json).cluster_version.status.conditions | selectattr("type", "equalto", "Progressing") | first).message
   retries: 120
   delay: 60
+  failed_when: (((cluster_version_output.stdout | from_json).status.conditions | selectattr("type", "equalto", "Failing") | first).status | bool) == True
 
 - name: "test_ upgrader : Check the master nodes managed by MCP are updated and ready"
   k8s_info:
