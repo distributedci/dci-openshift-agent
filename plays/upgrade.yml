@@ -93,19 +93,19 @@
 - name: "upgrader : Wait for upgrade to start"
   command:
     chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
-    cmd: oc wait --timeout=1m --for=condition=Progressing clusterversion/version
+    cmd: oc wait --timeout=5m --for=condition=Progressing clusterversion/version
   retries: 5
 
 - name: "upgrader : Monitor upgrade until complete"
   shell:
     chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
-    cmd: >
-      oc get clusterversion/version -o json
-      | jq -r '.status.history[] | select(.version == "{{ version }}").state'
-  register: upgrade_progress
-  until: upgrade_progress.stdout.find("Completed") > -1
-  retries: 120
-  delay: 60
+    cmd: "oc get clusterversion/version -o json"
+  register: cluster_version_output
+  until: >
+    (((cluster_version_output.stdout | from_json).status.conditions | selectattr("type", "equalto", "Failing") | first).status | bool) == True or
+    ((((cluster_version_output.stdout | from_json).status.conditions | selectattr("type", "equalto", "Progressing") | first).status | bool) == False and
+    (((cluster_version_output.stdout | from_json).status.conditions.stdout | from_json | selectattr("type", "equalto", "Available") | first).status | bool) == True)
+  retries: 90
 
 - name: "test_ upgrader : Check the master nodes managed by MCP are updated and ready"
   k8s_info:
