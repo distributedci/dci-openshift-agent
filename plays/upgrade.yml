@@ -111,25 +111,96 @@
   register: start_upgrade
 
 - name: "upgrader : Wait for upgrade to start"
-  command:
-    chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
-    cmd: oc wait --timeout=1m --for=condition=Progressing clusterversion/version
-  register: wait_for_upgrade
-  retries: 5
-  until: wait_for_upgrade.rc == 0
-  when:
-    - start_upgrade.stdout.find("Cluster is already at version") == -1
+  k8s_info:
+    kind: ClusterVersion
+    name: version
+  register: cluster_version_info
+  vars:
+    cluster_version_conditions: '{{ cluster_version_info.resources.0.status.conditions }}'
+    condition_progressing: '{{ cluster_version_conditions | selectattr("type", "equalto", "Progressing") | first }}'
+  until: ("Working towards " + version) in condition_progressing.message
+  retries: 10
+  delay: 30
+
+#- name: "upgrader : Monitor upgrade until complete"
+#  k8s_info:
+#    kind: ClusterVersion
+#    name: version
+#  register: cluster_version_info
+#  vars:
+#    cluster_version_conditions: '{{ cluster_version_info.resources.0.status.conditions }}'
+#    condition_available: '{{ cluster_version_conditions | selectattr("type", "equalto", "Available") | first }}'
+#    condition_failing: '{{ cluster_version_conditions | selectattr("type", "equalto", "Failing") | first }}'
+#  until:
+#  - '"resources" in cluster_version_info'
+#  - >
+#    ("Done applying " + version) in (condition_available.message | default("")) or
+#    ("Unable to apply " + version) in (condition_failing.message | default(""))
+#  retries: 120
+#  delay: 60
+#  failed_when:
+#  - '"resources" in cluster_version_info'
+#  - (condition_failing.status | bool) == True
 
 - name: "upgrader : Monitor upgrade until complete"
-  shell:
+  shell: |
+    FSM=progressing
+
+    function log {
+        if [ -n "$VERBOSE" ]
+        then
+            echo $(date +%Y-%m-%d_%M:%S): $1 > /dev/stderr
+        fi
+    }
+
+    while true
+    do
+        OC=$(oc get clusterversion/version -o json)
+        FAILING=$(echo ${OC} | jq -r '.status.conditions[] | select(.type == "Failing").message')
+        FAILING_STATUS=$(echo ${OC} | jq -r '.status.conditions[] | select(.type == "Failing").status' | grep "True")
+        IS_FAILING=$?
+
+        AVAILABLE=$(echo ${OC} | jq -r '.status.conditions[] | select(.type == "Available").message' | grep "Done applying {{ version }}")
+        IS_COMPLETE=$?
+
+        if [ "$FSM" == "progressing" ]
+        then
+            log "Currently progressing"
+            if [ "$IS_COMPLETE" == 0 ]
+            then
+                echo $AVAILABLE
+                exit 0
+            elif [ "$IS_FAILING" == 0 ]
+            then
+                log "Changing FSM to failing"
+                FSM=failing
+                FAILING_TS=$(date +%s)
+            fi
+        elif [ "$FSM" == "failing" ]
+        then
+            TS=$(date +%s)
+            LAPSE=$(( TS - FAILING_TS ))
+            log "Lapse: " ${LAPSE}
+            if [ "$IS_FAILING" == 1 ]
+            then
+                log "Changing FSM to progressing"
+                FSM=progressing
+                FAILING_TS=0
+            elif [ $LAPSE -ge 900 ]
+            then
+                echo $FAILING
+                exit 1
+            else
+                echo log $FAILING
+            fi
+        fi
+
+        sleep 15
+    done
+  args:
     chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
-    cmd: >
-      oc get clusterversion/version -o json
-      | jq -r '.status.history[] | select(.version == "{{ version }}").state'
-  register: upgrade_progress
-  until: upgrade_progress.stdout.find("Completed") > -1
-  retries: 120
-  delay: 60
+  async: 7200
+  poll: 15
 
 - name: "test_ upgrader : Check the master nodes managed by MCP are updated and ready"
   k8s_info:
