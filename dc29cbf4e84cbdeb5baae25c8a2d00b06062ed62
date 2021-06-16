@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e821b017_f76a34c3",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 40
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-06-16T08:13:41Z",
+      "side": 1,
+      "message": "It goes from a 150s timeout to half an hour. Are you sure it is needed?",
+      "revId": "dc29cbf4e84cbdeb5baae25c8a2d00b06062ed62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34df537d_ba87339c",
+        "filename": "roles/operators-mirror/tasks/redhat-catalog-source.yml",
+        "patchSetId": 40
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-06-16T08:13:41Z",
+      "side": 1,
+      "message": "I don\u0027t see where those tasks are called from. There is already a redhat-catalog-source.yml in the prepare-cnf role but it does not have the oc patch cmd to disable default catalog.",
+      "revId": "dc29cbf4e84cbdeb5baae25c8a2d00b06062ed62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
