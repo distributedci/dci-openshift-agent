@@ -1,0 +1,11 @@
+Verified+1: Zuul CI <zuul@softwarefactory-project.io>
+Verified+2: Yassine Lamgarchal <yassine.lamgarchal@redhat.com>
+Workflow+1: Tony Garcia <tonyg@redhat.com>
+Workflow+1: Yassine Lamgarchal <yassine.lamgarchal@redhat.com>
+Code-Review+2: Yassine Lamgarchal <yassine.lamgarchal@redhat.com>
+Code-Review+2: Charles CAPORALI <ccaporal@redhat.com>
+Submitted-by: Yassine Lamgarchal <yassine.lamgarchal@redhat.com>
+Submitted-at: Fri, 18 Jun 2021 15:40:19 +0000
+Reviewed-on: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/21897
+Project: dci-openshift-agent
+Branch: refs/heads/master
