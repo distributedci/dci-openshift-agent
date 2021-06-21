@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96a7ba7f_12967018",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-21T04:07:15Z",
+      "side": 1,
+      "message": "typo `environemnts` --\u003e environments\nAlso there\u0027s a trailing space.",
+      "revId": "2914183800cd5183c2ec712171ee5ac20e92e87d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "da9e9989_a7655014",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-21T04:07:15Z",
+      "side": 1,
+      "message": "typo `bellow` --\u003e below.",
+      "revId": "2914183800cd5183c2ec712171ee5ac20e92e87d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5cf29ce3_702bbca4",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-21T04:07:15Z",
+      "side": 1,
+      "message": "Trailing space",
+      "revId": "2914183800cd5183c2ec712171ee5ac20e92e87d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
