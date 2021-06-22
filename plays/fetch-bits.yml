@@ -25,7 +25,7 @@
 - name: Set build:ga when build:candidate
   set_fact:
     build: "ga"
-    version: "{{ version.split('-')[0] }}"
+    version: "{{ '-'.join(version.split('-')[:2]) }}"
   when: build == "candidate"
 
 - name: Set pullsecret from job_info
