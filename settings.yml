@@ -10,7 +10,7 @@ dci_topic: OCP-4.7
 # Or you can query by name or type and tags
 #dci_components_by_query: ['name:4.7.8']
 #dci_components_by_query: ['type:ocp,tags:ocp-vanilla-4.7-simple-ok']
-#dci_components_by_query: ['tags:build:ga']
+dci_components_by_query: ['tags:build:ga']
 #If you specify both the components list will be combined.
 
 # By default we don't run the conformance tests
