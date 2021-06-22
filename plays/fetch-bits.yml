@@ -21,11 +21,12 @@
 
 # Candidate builds are ga builds that haven't gone ga quite yet.
 # The following changes the build and version vars to look like ga
-# for the upstream install playbooks
+# for the upstream install playbooks. Also, the RC versions include
+# the rc name, so versions must be set as x.y.z-rc.N
 - name: Set build:ga when build:candidate
   set_fact:
     build: "ga"
-    version: "{{ version.split('-')[0] }}"
+    version: "{{ '-'.join(version.split('-')[:2]) }}"
   when: build == "candidate"
 
 - name: Set pullsecret from job_info
