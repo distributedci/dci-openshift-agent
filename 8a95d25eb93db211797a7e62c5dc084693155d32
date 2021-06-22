@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "59d3ac63_bb7f4f0d",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-06-22T14:41:56Z",
+      "side": 1,
+      "message": "this is seconds, you want to wait 3 minutes between checks? that seems like a lot to me. I\u0027d put shorter retries with more retries, e.g. 30s x 10 retries.",
+      "revId": "8a95d25eb93db211797a7e62c5dc084693155d32",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f0b3fe0b_a16a2149",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-06-22T14:41:56Z",
+      "side": 1,
+      "message": "I think you still want the failed_when, or add a wait condition in the k8s_info block",
+      "revId": "8a95d25eb93db211797a7e62c5dc084693155d32",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
