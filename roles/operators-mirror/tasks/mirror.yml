@@ -1,7 +1,6 @@
 ---
 - name: set OPM version
   set_fact:
-    dci_opm_version: "v{{ base_version }}"
     filter_by_arg: "--index-filter-by-os"
 
 - name: change filter according to the version

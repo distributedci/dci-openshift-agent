@@ -1,5 +1,5 @@
 ---
-- name: Build Operator catalog image v{{ base_version }}
+- name: Build Operator catalog image {{ dci_opm_version }}
   shell:
     cmd: >
       set -x;
