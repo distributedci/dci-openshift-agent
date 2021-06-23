@@ -25,9 +25,10 @@
         components_by_query: "{{ dci_components_by_query }}"
         topic: "{{ dci_topic }}"
         comment: "{{ dci_comment | default('') }}"
+        url: "{{ dci_url | default('') }}"
       register: job_info
       when: job_info is not defined
-      no_log: true
+#      no_log: true
 
     - name: set job id
       set_fact:
