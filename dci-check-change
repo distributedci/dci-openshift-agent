@@ -44,7 +44,7 @@ set -x
 ARGS="$@"
 
 if [ $1 = --virt ]; then
-    VIRT=--virt
+    VIRT="--virt"
     shift
 fi
 
