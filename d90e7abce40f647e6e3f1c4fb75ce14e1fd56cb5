@@ -22,6 +22,30 @@
       "revId": "d90e7abce40f647e6e3f1c4fb75ce14e1fd56cb5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47f2366a_f350b0a6",
+        "filename": "plays/fetch-bits.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 405
+      },
+      "writtenOn": "2021-06-24T12:02:49Z",
+      "side": 1,
+      "message": "why not  \n\nversion: \"{{ version.split(\u0027-0.rc-\u0027)[0] }}\"",
+      "parentUuid": "a7580402_212edae5",
+      "range": {
+        "startLine": 29,
+        "startChar": 1,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "d90e7abce40f647e6e3f1c4fb75ce14e1fd56cb5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
