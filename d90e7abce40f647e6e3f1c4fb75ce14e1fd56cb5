@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7580402_212edae5",
+        "filename": "plays/fetch-bits.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 28
+      },
+      "writtenOn": "2021-06-24T07:49:25Z",
+      "side": 1,
+      "message": "This is not sufficient to match the way the name is built.\n\nThe name is currently built like this:\n\n         metadata[\"name\"] \u003d \"%s-0.rc-%s\" % (\n             metadata[\"name\"],\n             created.strftime(\"%Y-%m-%d-%H%M%S\"),\n         )\n\n\nTo make it work the \"-0.rc-\u003cdate\u003e\" part (added by the current code in the feeder) should be removed from the version field:\n\n     version[0:version.index(\"-0.rc-\")]",
+      "range": {
+        "startLine": 29,
+        "startChar": 1,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "d90e7abce40f647e6e3f1c4fb75ce14e1fd56cb5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
