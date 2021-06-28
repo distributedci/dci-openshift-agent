@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6fbe8799_f5949e5b",
+        "filename": "roles/cnv-setup/tasks/deploy-cnv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-06-28T14:46:52Z",
+      "side": 0,
+      "message": "Is the number ip specific to a cnv version?",
+      "revId": "e872fbe821716d8a785eb90e999b7417738dc4d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
