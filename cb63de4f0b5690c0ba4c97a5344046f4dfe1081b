@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52de1db4_337794dd",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-28T17:38:10Z",
+      "side": 1,
+      "message": "Can you add an extra ! to the end, this is quite important, also could you modify your comment and add a [WIP] in front of it.\nNote: None of them are required, but is so you practice\na) How to update a change based on some feedback\nb) How to modify the commit message.\n\nThat\u0027s all 😊",
+      "revId": "cb63de4f0b5690c0ba4c97a5344046f4dfe1081b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
