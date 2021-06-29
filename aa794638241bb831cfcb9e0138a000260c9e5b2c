@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9bccd786_34039e9e",
+        "filename": "README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-29T17:00:31Z",
+      "side": 1,
+      "message": "This document needs some more changes to reflect the refactored steps, I\u0027d expect to see 3a-1, 3a-2 and so forth.",
+      "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e9874baa_a50d8484",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-29T17:00:31Z",
+      "side": 1,
+      "message": "Should we move the hooks/teardown out of \u0026teardown_failure? not sure we want to run any hook teardown at the install step nor at the new Deploy operator step. It makes sense to run them later but not before IMO",
+      "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "96824031_af5ce3cb",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-29T17:00:31Z",
+      "side": 1,
+      "message": "I think the comment header for Step 5 was removed, let\u0027s add it back, this time it will be Step 4.",
+      "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
