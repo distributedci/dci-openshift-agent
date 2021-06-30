@@ -16,6 +16,24 @@
       "revId": "e872fbe821716d8a785eb90e999b7417738dc4d7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f4e5f71_4cb4acea",
+        "filename": "roles/cnv-setup/tasks/deploy-cnv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-06-30T16:12:02Z",
+      "side": 0,
+      "message": "This only happened once in https://www.distributed-ci.io/jobs/60e745ee-537a-479d-9e52-7678a0f6b28f/jobStates (CILAB-191), it is not clear the reason of the 2nd IP but its generation is `2`, while I did not see a failure in the generation 1, a 2nd was created a 1 sec after. This change should allow multiple IP in situations like this.\nThe next task extracts the IP name just to monitor later the status of the CSV, in case of an issue it will fail at that point so this patch should be safe.",
+      "parentUuid": "6fbe8799_f5949e5b",
+      "revId": "e872fbe821716d8a785eb90e999b7417738dc4d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
