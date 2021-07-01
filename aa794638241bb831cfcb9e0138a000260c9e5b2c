@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "44fb585f_49a7ce89",
+        "filename": "README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-07-01T12:58:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9bccd786_34039e9e",
+      "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e9874baa_a50d8484",
         "filename": "dci-openshift-agent.yml",
         "patchSetId": 13
@@ -30,6 +48,24 @@
       "writtenOn": "2021-06-29T17:00:31Z",
       "side": 1,
       "message": "Should we move the hooks/teardown out of \u0026teardown_failure? not sure we want to run any hook teardown at the install step nor at the new Deploy operator step. It makes sense to run them later but not before IMO",
+      "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c9a9a53_08b94f4a",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-07-01T12:58:18Z",
+      "side": 1,
+      "message": "Hum I think the tear-down process should be the same in all the steps of the pipeline. If you want to clean something that has been done in the pre-run section for example.",
+      "parentUuid": "e9874baa_a50d8484",
       "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -50,6 +86,24 @@
       "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "36e0191a_b70ad0e7",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-07-01T12:58:18Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "96824031_af5ce3cb",
+      "revId": "aa794638241bb831cfcb9e0138a000260c9e5b2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
