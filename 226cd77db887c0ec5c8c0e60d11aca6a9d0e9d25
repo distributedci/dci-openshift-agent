@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "860e695f_24a6cfc2",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-07-01T19:48:34Z",
+      "side": 1,
+      "message": "Don\u0027t comment out lines, just remove them",
+      "revId": "226cd77db887c0ec5c8c0e60d11aca6a9d0e9d25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ea419714_402f5004",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-07-01T19:48:34Z",
+      "side": 1,
+      "message": "I think this isn\u0027t necessary, this task is purely a replacement for a \"sleep 5\" that used to be here somewhere. All this does is \"wait for the upgrade process to start so we can start monitoring in the next task\".\nI would leave this alone as is, the `--for\u003dcondition\u003dProgressing` is doing exactly what you\u0027re doing here traversing the JSON",
+      "revId": "226cd77db887c0ec5c8c0e60d11aca6a9d0e9d25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e3c06925_878113e9",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-07-01T19:48:34Z",
+      "side": 1,
+      "message": "As I understand it this allows you to fail quicker if a problem is detected instead of waiting for the retry loop to exit, but it becomes a bit unreadable.\n\nI suggest start by using the k8s_info module (it wasn\u0027t available back when this was written) and start from there. Keep simpler `until` and `failed_when` conditions for the loop.\n\nKeep in mind that the whole upgrade process is done in a reconciliation loop, so it is entirely possible for the status to reach a \"Failing\" status before retrying.",
+      "revId": "226cd77db887c0ec5c8c0e60d11aca6a9d0e9d25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
