@@ -70,7 +70,7 @@
         -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }} -e DPDK_TESTS_IMAGE=dpdk:{{ cnf_tests_image }}
         -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
         /usr/bin/test-run.sh  -ginkgo.focus="dpdk" --junit  /tests/{{ date.stdout }}/dpdk
-    ignore_errors: yes
+    failed_when: False
     when: cnf_test_suites is defined and "dpdk" in cnf_test_suites
 
   - name: Rename junit xml files with the feature name
