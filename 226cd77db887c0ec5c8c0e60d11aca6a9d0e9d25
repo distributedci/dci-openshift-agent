@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "453912cd_26e16a10",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-07-05T12:24:35Z",
+      "side": 1,
+      "message": "I had to update this task because of the condition I was setting on the next one.\n\nThe problem one, on some test execution I saw the Progressing condition transitioning to True and then the Failing condition doing the same immediately while retrieve some data on the upgrade path. The Failing condition would get solved on its own, I gues on retrying, and just after that the message in the Progressing condition would change to \"Moving towards {{ version }}\".\n\nThe goal of this CR is to develop a way to detect a permanent error in the upgrade process without having to rely on the monitor (next task) timeout, so that\u0027s why I also started monitoring the Failing condition (see my comment on the next task).",
+      "parentUuid": "ea419714_402f5004",
+      "revId": "226cd77db887c0ec5c8c0e60d11aca6a9d0e9d25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e3c06925_878113e9",
         "filename": "plays/upgrade.yml",
         "patchSetId": 19
