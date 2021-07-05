@@ -68,6 +68,24 @@
       "revId": "226cd77db887c0ec5c8c0e60d11aca6a9d0e9d25",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2cdbf38a_e4b47c9a",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-07-05T12:32:22Z",
+      "side": 1,
+      "message": "Using k8s_info module seems like the right way to go. Thanks.\n\nRegarding the upgrade retry loop I\u0027m having the following problem. As explained above, the idea of the CR was to provide the agent with a mean to fast getting out of the Monitor task in the event of a failure. The problem I\u0027m experiencing is the cluster version may activate the Failing condition due to a failure, and then disable the condition a few minutes later as it retries to upgrade the components (I guess this is what you mean by the reconciliation loop). So, as far as I can tell, openshift will retry upgrading itself once and again so the actual only possible condition for a failure on the upgrade would be that the monitor times out. It\u0027s either that or we find a way to keep a counter on the failures and set a maximum retry attempts.",
+      "parentUuid": "e3c06925_878113e9",
+      "revId": "226cd77db887c0ec5c8c0e60d11aca6a9d0e9d25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
