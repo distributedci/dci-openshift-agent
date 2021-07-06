@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "425f7ca2_ba68010e",
+        "filename": "samples/ocp_on_libvirt/ci.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-06T15:23:37Z",
+      "side": 1,
+      "message": "It would be nice to restart the service in case there\u0027s a failure or the job is killed, what do you think? Example:\nRestart\u003don-failure",
+      "revId": "eb2d02269ddd47fd60f03e4ac6018e021e22085d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
