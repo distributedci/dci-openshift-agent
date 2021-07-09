@@ -4,8 +4,9 @@
 
 - name: Get openshift_version from job.components
   set_fact:
-    version: "{{ item['name'] }}"
+    version: "{{ item['data']['version'] }}"
     tags: "{{ item['tags'] }}"
+    url: "{{ item['url'] }}"
   with_items: "{{ job_info.job.components }}"
   when: item["type"] == "ocp"
 
@@ -20,13 +21,10 @@
   when: item.split(":")[0] == "build"
 
 # Candidate builds are ga builds that haven't gone ga quite yet.
-# The following changes the build and version vars to look like ga
-# for the upstream install playbooks. The dci-feeder adds '-0.rc-$TIMESTAMP'
-# to the version, we have to strip it here.
+# The following changes the build var to look like ga
 - name: Set build:ga when build:candidate
   set_fact:
     build: "ga"
-    version: "{{ version.split('-0.rc-')[0] }}"
   when: build == "candidate"
 
 - name: Set pullsecret from job_info
@@ -130,8 +128,10 @@
       state: directory
 
   - name: Store Release.txt File
+    vars:
+      release_txt_url: "{% if url %}{{ url }}{% else %}{{ release_url }}/{{ version }}/{% endif %}release.txt"
     get_url:
-      url: "{{ release_url }}/{{ version }}/release.txt"
+      url: "{{ release_txt_url }}"
       dest: "{{ provision_cache_store }}/{{ version }}"
       owner: "{{ ansible_user }}"
       group: "{{ ansible_user }}"
