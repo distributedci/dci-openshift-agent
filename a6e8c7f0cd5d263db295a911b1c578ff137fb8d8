@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82f57070_99ad46d2",
+        "filename": "plays/fetch-bits.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-07-09T11:37:37Z",
+      "side": 1,
+      "message": "We will need to also split url into webserver_url and version so that the following will work in the upstream playbooks:\nhttps://github.com/openshift-kni/baremetal-deploy/blob/b0456a77103c0005d10897150dc07f14e41f2a06/ansible-ipi-install/roles/node-prep/tasks/10_validation.yml#L137\nhttps://github.com/openshift-kni/baremetal-deploy/blob/b0456a77103c0005d10897150dc07f14e41f2a06/ansible-ipi-install/roles/node-prep/tasks/10_validation.yml#L257",
+      "revId": "a6e8c7f0cd5d263db295a911b1c578ff137fb8d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
