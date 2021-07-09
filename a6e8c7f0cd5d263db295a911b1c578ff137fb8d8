@@ -16,6 +16,24 @@
       "revId": "a6e8c7f0cd5d263db295a911b1c578ff137fb8d8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb1e21ce_1021e77f",
+        "filename": "plays/fetch-bits.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 28
+      },
+      "writtenOn": "2021-07-09T13:06:10Z",
+      "side": 1,
+      "message": "Okay, did not see that one.\n\nThen I have some questions:\n\n- Where is this role included ?\n\n- Do we need the full URL at all or should we store only the equivalent of release_url and continue building with the version (the not modified one) ???",
+      "parentUuid": "82f57070_99ad46d2",
+      "revId": "a6e8c7f0cd5d263db295a911b1c578ff137fb8d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
