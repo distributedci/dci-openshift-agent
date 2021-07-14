@@ -1,4 +1,5 @@
 ---
+
 - name: "Find test text files"
   find:
     paths: "{{ dci_cluster_configs_dir }}"
