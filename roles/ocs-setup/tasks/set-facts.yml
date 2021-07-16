@@ -1,0 +1,36 @@
+---
+- name: Set fact for Internal StorageCluster name
+  set_fact:
+    ocs_storagecluster_name: ocs-storagecluster
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Set fact for External StorageCluster name
+  set_fact:
+    ocs_storagecluster_name: ocs-external-storagecluster
+  when:
+    - not internal_ocs | default(true) | bool
+
+- name: Set fact for Internal RBD StorageClass name
+  set_fact:
+    ocs_sc_rbd_name: ocs-storagecluster-ceph-rbd
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Set fact for External RBD StorageClass name
+  set_fact:
+    ocs_sc_rbd_name: ocs-external-storagecluster-ceph-rbd
+  when:
+    - not internal_ocs | default(true) | bool
+
+- name: Set fact for Internal CephFS StorageClass name
+  set_fact:
+    ocs_sc_cephfs_name: ocs-storagecluster-cephfs
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Set fact for External CephFS StorageClass name
+  set_fact:
+    ocs_sc_cephfs_name: ocs-external-storagecluster-cephfs
+  when:
+    - not internal_ocs | default(true) | bool
