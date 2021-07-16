@@ -142,7 +142,10 @@ This is the dci openshift agent settings (format is YAML). Use this to specify w
 | baremetal\_deploy\_version        | False    | String | HEAD      | Allows you to lock upstream baremetal repo to specific version |
 | http\_proxy                       | False    | String |           | http proxy to use                                              |
 | https\_proxy                      | False    | String |           | https proxy to use                                             |
+| must_gather_mirror_list           | False    | List   |["registry.redhat.io/openshift4/ose-must-gather"] | List of must-gather images to mirror on a disconnected cluster local registry.\* |
 | no\_proxy\_list                   | False    | String |           | Comma separated list of hosts not going through the proxies    |
+
+[Here](https://docs.openshift.com/container-platform/4.7/support/gathering-cluster-data.html) you can find information on the available must-gather images.
 
 Example:
 
