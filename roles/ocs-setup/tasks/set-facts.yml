@@ -1,0 +1,16 @@
+---
+- name: Set facts for OCP integration with Internal OCS
+  set_fact:
+    ocs_storagecluster_name: ocs-storagecluster
+    ocs_sc_rbd_name: ocs-storagecluster-ceph-rbd
+    ocs_sc_cephfs_name: ocs-storagecluster-cephfs
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Set fact for External StorageCluster name
+  set_fact:
+    ocs_storagecluster_name: ocs-external-storagecluster
+    ocs_sc_rbd_name: ocs-external-storagecluster-ceph-rbd
+    ocs_sc_cephfs_name: ocs-external-storagecluster-cephfs
+  when:
+    - not internal_ocs | default(true) | bool
