@@ -1,0 +1,25 @@
+---
+# defaults file for ocs-setup
+
+### Local Storage Operator variables
+# (Optional) registry catalog URL with index from where to pull the image
+# local_storage_operator_catalog_source: "registry.redhat.io/redhat/redhat-operator-index:v4.7"
+#
+# (Required) Channel versions to use, namespace and operators names
+local_storage_operator: local-storage-operator
+local_storage_namespace: openshift-local-storage
+local_storage_channel: "4.8"
+
+### OCS Storage Operator variables
+# (Optional) registry catalog URL with index from where to pull the image
+# ocs_operator_image_catalog_source: "registry.redhat.io/redhat/redhat-operator-index:v4.7"
+#
+# (Required) Channel versions to use, namespace and operators names
+ocs_storage_operator: ocs-operator
+ocs_storage_namespace: openshift-storage
+ocs_storage_channel: "stable-4.8"
+
+# (Required) enable or disable a phase
+ocs_deploy_install: true
+ocs_deploy_test: true
+ocs_deploy_teardown: false

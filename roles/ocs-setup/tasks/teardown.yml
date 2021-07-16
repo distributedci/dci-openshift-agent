@@ -1,0 +1,249 @@
+---
+- name: Delete CephRBD PVC
+  community.kubernetes.k8s:
+    state: absent
+    validate_certs: no
+    definition:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: rbd-pvc
+        namespace: default
+
+- name: Delete CephFS PVC
+  community.kubernetes.k8s:
+    state: absent
+    validate_certs: no
+    definition:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: cephfs-pvc
+        namespace: default
+
+- name: Verify the Storage Cluster object exists
+  community.kubernetes.k8s_info:
+    validate_certs: no
+    kind: StorageCluster
+    namespace: "{{ ocs_storage_namespace }}"
+    name: "{{ ocs_storagecluster_name }}"
+  register: ocs_storagecluster_object
+
+- name: Notify Rook to clean up the physical drives
+  command:
+    cmd: |
+      oc annotate storagecluster {{ ocs_storagecluster_name }} uninstall.ocs.openshift.io/cleanup-policy="delete" --overwrite -n {{ ocs_storage_namespace }}
+  register: rook_cleanup_drives
+  changed_when: "'no change' not in rook_cleanup_drives.stdout"
+  when:
+    - "'resources' in ocs_storagecluster_object"
+    - ocs_storagecluster_object.resources != []
+    - internal_ocs | default(true) | bool
+
+- name: Notify Rook and NooBaa to proceed with uninstall even if PVCs/OBCs are provisioned
+  command:
+    cmd: |
+      oc annotate storagecluster {{ ocs_storagecluster_name }} uninstall.ocs.openshift.io/mode="forced" --overwrite -n {{ ocs_storage_namespace }}
+  register: rook_uninstall_mode
+  changed_when: "'no change' not in rook_uninstall_mode.stdout"
+  when:
+    - "'resources' in ocs_storagecluster_object"
+    - ocs_storagecluster_object.resources != []
+
+- name: Wait 60 seconds for Rook and NooBaa objects to be notified
+  wait_for:
+    timeout: 60
+  when:
+    - (rook_uninstall_mode.stdout is defined or rook_cleanup_drives.stdout is defined)
+    - ("'change' in rook_uninstall_mode.stdout" or "'change' in rook_cleanup_drives.stdout is defined")
+
+- name: Delete the Storage Cluster Object and wait up to 300s
+  community.kubernetes.k8s:
+    state: absent
+    validate_certs: no
+    definition:
+      apiVersion: v1
+      kind: StorageCluster
+      metadata:
+        namespace: "{{ ocs_storage_namespace }}"
+        name: "{{ ocs_storagecluster_name }}"
+    wait: yes
+    wait_timeout: 300
+  register: delete_storage_cluster
+  when:
+    - "'resources' in ocs_storagecluster_object"
+    - ocs_storagecluster_object.resources != []
+
+- name: Wait 60 seconds for Storage Cluster Objects to be cleaned
+  wait_for:
+    timeout: 60
+  when:
+    - delete_storage_cluster.changed is defined
+    - delete_storage_cluster.changed | bool
+
+- name: Check for cleanup pods status is Completed
+  shell: |
+      oc get pods -n {{ ocs_storage_namespace }} | grep -i cleanup
+  register: ocs_cleanup_pods_status
+  changed_when: false
+  when: 
+    - delete_storage_cluster.changed | bool
+    - internal_ocs | default(true) | bool
+  until:
+    - "'Completed' in ocs_cleanup_pods_status.stdout"
+  retries: 30
+  delay: 10
+
+- name: Delete OCS namespace and wait up to 300s till the deletion is completed
+  community.kubernetes.k8s:
+    validate_certs: no
+    state: absent
+    api_version: v1
+    kind: Namespace
+    name: "{{ ocs_storage_namespace }}"
+    wait: yes
+    wait_timeout: 300
+
+- name: Delete Multicloud External Nooba Storage Class
+  community.kubernetes.k8s:
+    validate_certs: no
+    state: absent
+    api_version: v1
+    kind: StorageClass
+    name: openshift-storage.noobaa.io
+    wait: yes
+    wait_timeout: 300
+  when:
+    - not internal_ocs | default(true) | bool
+
+- name: Verify Local Storage namespace exists
+  community.kubernetes.k8s_info:
+    validate_certs: no
+    api_version: v1
+    kind: Namespace
+    name: "{{ local_storage_namespace }}"
+  register: local_storage_ns_status
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Get Local Storage device paths
+  community.kubernetes.k8s_info:
+    validate_certs: no
+    api_version: local.storage.openshift.io/v1
+    kind: LocalVolume
+    namespace: "{{ local_storage_namespace }}"
+    name: local-block
+  register: local_volume_block
+  when:
+    - internal_ocs | default(true) | bool
+    - "'resources' in local_storage_ns_status"
+    - local_storage_ns_status.resources != "[]"
+
+- name: Undefine Local Storage Volumes
+  include_role:
+    name: deploy-cr
+  vars:
+    api_version: local.storage.openshift.io/v1
+    kind: LocalVolume
+    namespace: "{{ local_storage_namespace }}"
+    name: local-block
+    spec:
+      nodeSelector:
+        nodeSelectorTerms:
+        - matchExpressions:
+            - key: cluster.ocs.openshift.io/openshift-storage
+              operator: In
+              values:
+              - ""
+      storageClassDevices:
+        - storageClassName: localblock
+          volumeMode: Block
+          devicePaths: []
+  when:
+    - internal_ocs | default(true) | bool
+    - "'resources' in local_volume_block"
+    - local_volume_block.resources != []
+    - local_volume_block.resources[0].spec.storageClassDevices[0].devicePaths != []
+    - "'resources' in local_storage_ns_status"
+    - local_storage_ns_status.resources != []
+
+- name: Delete all Persistent Volumes
+  command:
+    cmd: |
+      oc delete pv --all
+  register: delete_all_pv
+  changed_when: "'no change' not in delete_all_pv.stdout"
+  when:
+    - internal_ocs | default(true) | bool
+    - "'resources' in local_volume_block"
+    - local_volume_block.resources != []
+    - "'resources' in local_storage_ns_status"
+    - local_storage_ns_status.resources != []
+
+- name: Delete disk symlinks
+  shell: |
+      for node in `oc get nodes -o custom-columns=NAME:.metadata.name --no-headers -l cluster.ocs.openshift.io/openshift-storage`
+        do
+          echo -e "************ $node **************"
+          oc debug node/$node -- chroot /host rm -rf /mnt/local-storage/localblock
+        done
+  register: delete_disks_symlinks
+  changed_when: "'no change' not in delete_disks_symlinks.stdout"
+  when:
+    - internal_ocs | default(true) | bool
+    - "'resources' in local_volume_block"
+    - local_volume_block.resources != []
+    - "'resources' in local_storage_ns_status"
+    - local_storage_ns_status.resources != []
+
+# https://bugzilla.redhat.com/show_bug.cgi?id=1732374
+- name: Remove finalizer from LocalVolume to delete the CR
+  command:
+    cmd: |
+      oc patch LocalVolume local-block --type=merge -p '{"metadata":{"finalizers":[]}}' -n {{ local_storage_namespace }}
+  register: delete_localvolume
+  changed_when: "'no change' not in delete_localvolume.stdout"
+  when:
+    - internal_ocs | default(true) | bool
+    - "'resources' in local_volume_block"
+    - local_volume_block.resources != []
+    - "'resources' in local_storage_ns_status"
+    - local_storage_ns_status.resources != []
+
+- name: Delete Local Storage namespace and wait up to 300s till the deletion is completed
+  community.kubernetes.k8s:
+    validate_certs: no
+    state: absent
+    api_version: v1
+    kind: Namespace
+    name: "{{ local_storage_namespace }}"
+    wait: yes
+    wait_timeout: 300
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Delete OCS CRD
+  community.kubernetes.k8s:
+    validate_certs: no
+    state: absent
+    api_version: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    name: "{{ item }}"
+  loop:
+    - backingstores.noobaa.io
+    - bucketclasses.noobaa.io
+    - cephblockpools.ceph.rook.io
+    - cephclients.ceph.rook.io
+    - cephclusters.ceph.rook.io
+    - cephfilesystems.ceph.rook.io
+    - cephnfses.ceph.rook.io
+    - cephobjectrealms.ceph.rook.io
+    - cephobjectstores.ceph.rook.io
+    - cephobjectstoreusers.ceph.rook.io
+    - cephobjectzonegroups.ceph.rook.io
+    - cephobjectzones.ceph.rook.io
+    - cephrbdmirrors.ceph.rook.io
+    - namespacestores.noobaa.io
+    - noobaas.noobaa.io
+    - ocsinitializations.ocs.openshift.io
+    - storageclusters.ocs.openshift.io

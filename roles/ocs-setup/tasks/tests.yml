@@ -1,0 +1,167 @@
+---
+- name: Deploy the Rook-Ceph toolbox pod
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: ocs.openshift.io/v1
+      kind: OCSInitialization
+      metadata:
+        name: ocsinit
+        namespace: "{{ ocs_storage_namespace }}"
+      spec:
+        enableCephTools: true
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Get OCS toolbox pod
+  community.kubernetes.k8s_info:
+    kind: Pod
+    namespace: "{{ ocs_storage_namespace }}"
+    label_selectors:
+      - "app = rook-ceph-tools"
+  register: ocs_toolbox_pod
+  until:
+    - ocs_toolbox_pod.resources is defined
+    - ocs_toolbox_pod.resources != []
+    - ocs_toolbox_pod.resources[0].status.phase == "Running"
+  retries: 10
+  delay: 3
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Get Internal OCS health status
+  command:
+    cmd: |
+      oc rsh -n {{ ocs_storage_namespace }} {{ ocs_toolbox_pod.resources[0].metadata.name }} ceph -s
+  register: ocs_health_status
+  changed_when: false
+  when:
+    - internal_ocs | default(true) | bool
+    - ocs_toolbox_pod.resources[0].metadata.name is defined
+    - ocs_toolbox_pod.resources[0].status.phase == "Running"
+
+- name: Verify Internal OCS status is healthy
+  debug:
+    var: ocs_health_status.stdout
+  when:
+    - ocs_health_status.stdout is defined
+    - internal_ocs | default(true) | bool
+  failed_when:
+    - "'HEALTH_ERR' in ocs_health_status.stdout"
+
+- name: Get External OCS health status
+  community.kubernetes.k8s_info:
+    kind: CephCluster
+    namespace: "{{ ocs_storage_namespace }}"
+    name: ocs-external-storagecluster-cephcluster
+  register: external_ocs_health_status
+  when:
+    - not internal_ocs | default(true) | bool
+
+- name: Verify External OCS status is healthy
+  debug:
+    var: external_ocs_health_status.resources[0].status.ceph.health
+  when:
+    - external_ocs_health_status.resources is defined
+    - not internal_ocs | default(true) | bool
+  failed_when:
+    - "'HEALTH_ERR' in external_ocs_health_status.resources[0].status.ceph.health"
+
+- name: Get CephRBD StorageClass
+  community.kubernetes.k8s_info:
+    kind: StorageClass
+    name: "{{ ocs_sc_rbd_name }}"
+  register: ocs_storageclass_rbd
+
+- name: Get CephFS StorageClass
+  community.kubernetes.k8s_info:
+    kind: StorageClass
+    name: "{{ ocs_sc_cephfs_name }}"
+  register: ocs_storageclass_cephfs
+
+- name: Test CephRBD PVC
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: rbd-pvc
+        namespace: default
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: "{{ ocs_sc_rbd_name }}"
+  register: ocs_cephrbd_pvc
+  when:
+    - ocs_storageclass_rbd.resources is defined
+    - ocs_storageclass_rbd.resources != []
+    - ocs_sc_rbd_name == ocs_storageclass_rbd.resources[0].metadata.name
+
+- name: Test CephFS PVC
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: cephfs-pvc
+        namespace: default
+      spec:
+        accessModes:
+        - ReadWriteMany
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: "{{ ocs_sc_cephfs_name }}"
+  register: ocs_cephfs_pvc
+  when:
+    - ocs_storageclass_cephfs.resources is defined
+    - ocs_storageclass_cephfs.resources != []
+    - ocs_sc_cephfs_name == ocs_storageclass_cephfs.resources[0].metadata.name
+
+- name: Wait 60 seconds for PVCs to bound
+  wait_for:
+    timeout: 60
+  when: (ocs_cephrbd_pvc.changed | bool) or
+      (ocs_cephfs_pvc.changed | bool)
+
+- name: Get CephRBD PVC status
+  community.kubernetes.k8s_info:
+    kind: PersistentVolumeClaim
+    namespace: default
+    name: rbd-pvc
+  register: cephrbd_pvc_status
+  when:
+    - ocs_storageclass_rbd.resources is defined
+    - ocs_storageclass_rbd.resources != []
+    - ocs_sc_rbd_name == ocs_storageclass_rbd.resources[0].metadata.name
+
+- name: CephRBD PVC Status is Bound
+  debug:
+    var: cephrbd_pvc_status.resources[0].status.phase
+  when:
+    - "'resources' in cephrbd_pvc_status"
+    - cephrbd_pvc_status.resources != []
+  failed_when:
+    - cephrbd_pvc_status.resources[0].status.phase != "Bound"
+
+- name: Get CephFS PVC status
+  community.kubernetes.k8s_info:
+    kind: PersistentVolumeClaim
+    namespace: default
+    name: cephfs-pvc
+  register: cephfs_pvc_status
+  when:
+    - ocs_storageclass_cephfs.resources is defined
+    - ocs_storageclass_cephfs.resources != []
+    - ocs_sc_cephfs_name == ocs_storageclass_cephfs.resources[0].metadata.name
+
+- name: CephFS PVC status is Bound
+  debug:
+    var: cephfs_pvc_status.resources[0].status.phase
+  when:
+    - "'resources' in cephfs_pvc_status"
+    - cephfs_pvc_status.resources != []
+  failed_when:
+    - cephfs_pvc_status.resources[0].status.phase != "Bound"

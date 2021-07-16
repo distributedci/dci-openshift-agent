@@ -1,0 +1,131 @@
+---
+- name: "Define OCS CatalogSource"
+  include_role:
+    name: olm-catalog-source
+  vars:
+    catalog: ocs-catalog
+    image: "{{ ocs_operator_image }}"
+  when:
+    - ocs_operator_image is defined
+    - ocs_operator_image | length < 1
+
+- name: "Define Local Storage CatalogSource"
+  include_role:
+    name: olm-catalog-source
+  vars:
+    catalog: local-storage-catalog
+    image: "{{ local_storage_operator_image }}"
+  when:
+    - internal_ocs | default(true) | bool
+    - local_storage_operator_image is defined
+    - local_storage_operator_image | length < 1
+
+- name: Deploy Local Storage operator
+  include_role:
+    name: olm-operator
+  vars:
+    operator: "{{ local_storage_operator }}"
+    namespace: "{{ local_storage_namespace }}"
+    channel: "{{ local_storage_channel }}"
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Deploy OCS operator
+  include_role:
+    name: olm-operator
+  vars:
+    operator: "{{ ocs_storage_operator }}"
+    namespace: "{{ ocs_storage_namespace }}"
+    channel: "{{ ocs_storage_channel }}"
+
+- name: "installer : Apply OCS node labels"
+  include_role:
+    name: label-nodes
+  vars:
+    label_loop: "{{ groups['ocs_nodes'] }}"
+    label_item: "{{ hostvars }}"
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Configure Local Storage Volumes
+  include_role:
+    name: deploy-cr
+  vars:
+    api_version: local.storage.openshift.io/v1
+    kind: LocalVolume
+    namespace: "{{ local_storage_namespace }}"
+    name: local-block
+    spec:
+      nodeSelector:
+        nodeSelectorTerms:
+        - matchExpressions:
+            - key: cluster.ocs.openshift.io/openshift-storage
+              operator: In
+              values:
+              - ""
+      storageClassDevices:
+        - storageClassName: localblock
+          volumeMode: Block
+          devicePaths: "{{ local_storage_devices }}"
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Define OCS Storage Cluster settings
+  include_role:
+    name: deploy-cr
+  vars:
+    api_version: ocs.openshift.io/v1
+    kind: StorageCluster
+    namespace: "{{ ocs_storage_namespace }}"
+    name: ocs-storagecluster
+    spec:
+      manageNodes: false
+      monDataDirHostPath: /var/lib/rook
+      storageDeviceSets:
+      - count: "{{ ocs_storage_ds_count }}"
+        dataPVCTemplate:
+          spec:
+            accessModes:
+            - ReadWriteOnce
+            resources:
+              requests:
+                storage: "1"
+            storageClassName: localblock
+            volumeMode: Block
+        name: ocs-deviceset
+        placement: {}
+        portable: false
+        replica: 3
+        resources: {}
+  when:
+    - internal_ocs | default(true) | bool
+
+- name: Define External RHCS Cluster Settings in a secret
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: v1
+      kind: Secret
+      metadata:
+        name: rook-ceph-external-cluster-details
+        namespace: "{{ ocs_storage_namespace }}"
+      data:
+        external_cluster_details: >-
+          {{ external_ceph_data | string | b64encode }}
+      type: Opaque
+  when:
+    - not internal_ocs | default(true) | bool
+
+- name: Enable External OCS Storage Cluster
+  include_role:
+    name: deploy-cr
+  vars:
+    api_version: ocs.openshift.io/v1
+    kind: StorageCluster
+    namespace: "{{ ocs_storage_namespace }}"
+    name: "{{ ocs_storagecluster_name }}"
+    spec:
+      externalStorage:
+        enable: true
+      labelSelector: {}
+  when:
+    - not internal_ocs | default(true) | bool
