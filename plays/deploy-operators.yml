@@ -50,50 +50,13 @@
 ### End CNV
 
 ### Begin OCS
-- block:
-  - name: "deploy-operators : Define OCS CatalogSource"
-    include_role:
-      name: olm-catalog-source
-    vars:
-      catalog: ocs-catalog
-      image: "{{ hostvars.localhost.ocs_operator_image }}"
-
-  - name: "deploy-operators : Install OCS Operator"
-    include_role:
-      name: olm-operator
-    vars:
-      operator: ocs-operator
-      channel: alpha
-      source: ocs-catalog
-      namespace: openshift-storage
-      ns_labels:
-        openshift.io/cluster-monitoring: "true"
+- name: "Deploy OCS and LocalStorage"
+  include_role:
+    name: ocs-setup
   when:
-  - hostvars.localhost.ocs_operator_image is defined
+  - hostvars.localhost.enable_ocs is defined
+  - hostvars.localhost.enable_ocs | bool
 ### End OCS
-
-### Begin LocalStorage
-- block:
-  - name: "deploy-operators : Define LocalStorage CatalogSource"
-    include_role:
-      name: olm-catalog-source
-    vars:
-      catalog: local-storage-catalog
-      image: "{{ hostvars.localhost.local_storage_operator_image }}"
-
-  - name: "deploy-operators : Install LocalStorage Operator"
-    include_role:
-      name: olm-operator
-    vars:
-      operator: local-storage-operator
-      channel: "{{ hostvars.localhost.local_storage_operator_channel | default('preview') }}"
-      source: local-storage-catalog
-      namespace: openshift-local-storage
-
-  when:
-  - hostvars.localhost.local_storage_operator_image is defined
-### End LocalStorage
-
 
 ### Begin deploy all CRs
 - name: "deploy-operators : Create all Custom Resources"
