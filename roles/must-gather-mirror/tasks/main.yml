@@ -1,0 +1,14 @@
+- name: Mirroring must-gather images
+  shell:
+    cmd: >
+      skopeo copy --remove-signatures --all --authfile {{ dci_pullsecret_file }}
+      --dest-tls-verify=false docker://{{ must_gather_default_registry + '/' if item == (item | basename) else '' }}{{ item }}
+      docker://{{ local_registry }}/{{ item | basename }}
+  register: skopeo_copy
+  retries: 5
+  delay: 5
+  until:
+    - skopeo_copy is not failed
+  loop: "{{ must_gather_mirror_list }}"
+
+
