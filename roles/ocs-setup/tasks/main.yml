@@ -1,0 +1,26 @@
+---
+# tasks file for ocs-setup
+
+- name: "Set Facts"
+  include_tasks: set-facts.yml
+
+- name: "Run install"
+  include_tasks: install.yml
+  when:
+    - ocs_deploy_install| bool
+  tags:
+    - install
+
+- name: Run tests
+  include_tasks: tests.yml
+  when:
+    - ocs_deploy_test| bool
+  tags:
+    - test
+
+- name: Run teardown
+  include_tasks: teardown.yml
+  when:
+    - ocs_deploy_teardown| bool
+  tags:
+    - teardown
