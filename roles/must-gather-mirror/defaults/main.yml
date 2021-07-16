@@ -1,0 +1,4 @@
+must_gather_default_registry: registry.redhat.io
+
+must_gather_mirror_list:
+  - registry.redhat.io/openshift4/ose-must-gather
