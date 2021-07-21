@@ -66,4 +66,12 @@
 
 - name: Deploy Red Hat Catalog Source
   include_tasks: redhat-catalog-source.yml
+
+- name: Create worker-cnf pool
+  k8s:
+    kubeconfig: "{{ dci_cluster_configs_dir }}/kubeconfig"
+    definition: "{{ lookup('file', mcp-worker-cnf.yml) }}"
+
+- name: Check MCP nodes are ok
+  include_tasks: nodes-ok.yml
 ...

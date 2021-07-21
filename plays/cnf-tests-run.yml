@@ -56,7 +56,7 @@
       cmd: >
          podman run --rm -v {{ dci_cluster_configs_dir }}/:/kubeconfig:Z  -e  KUBECONFIG=/kubeconfig/kubeconfig
          -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }}
-         -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
+         -e DISCOVERY_MODE=true -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
          /usr/bin/test-run.sh  -ginkgo.focus="sriov" --junit  /tests/{{ date.stdout }}/sriov
     ignore_errors: yes
     when: cnf_test_suites is defined and "sriov" in cnf_test_suites
