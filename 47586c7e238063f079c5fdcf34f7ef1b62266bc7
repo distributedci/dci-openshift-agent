@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ca7d8e3_d5a84e05",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-07-23T07:36:09Z",
+      "side": 1,
+      "message": "for commands, we use the .txt extension instead of .log",
+      "revId": "47586c7e238063f079c5fdcf34f7ef1b62266bc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
