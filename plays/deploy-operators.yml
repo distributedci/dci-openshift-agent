@@ -1,6 +1,19 @@
 ---
 # This playbook is executed in the provisioner host
 
+# If not set by operators-mirror then we must not be in disconnected
+# mode and should use the default entry for connected mode.
+- name: "deploy-operators : Set default redhat-operators"
+  set_fact:
+    opm_catalog_source_name: "{{ opm_catalog_source_name | default('redhat-operators') }}"
+
+# Generate disconnected catalogSources
+- name: "deploy-operators : Generate disconnected catalogSources"
+  import_role:
+    name: operators-catalog
+  when:
+  - hostvars.localhost.provision_cache_store is defined
+
 ### Begin CNF
 - name: "deploy-operators : Validate nodes for CNF"
   import_role:
