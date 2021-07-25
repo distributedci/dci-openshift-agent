@@ -1,0 +1,35 @@
+- name: Basic facts
+  set_fact:
+    opm_catalog_source_name: "{{ hostvars.localhost.opm_catalog_source_name }}"
+    opm_catalog_source_displayname: "{{ hostvars.localhost.opm_catalog_source_displayname }}"
+    opm_catalog_source_namespace: "{{ hostvars.localhost.opm_catalog_source_namespace }}"
+    opm_local_registry_path: "{{ hostvars.localhost.opm_local_registry_path }}"
+    dci_opm_version: "{{ hostvars.localhost.dci_opm_version }}"
+    local_registry: "{{ hostvars.localhost.local_registry }}"
+
+- name: Get oc version output
+  environment:
+    KUBECONFIG: "{{ dci_cluster_configs_dir }}/kubeconfig"
+  shell: |
+    {{ dci_cluster_configs_dir }}/oc version
+  register: oc_version_str
+  delegate_to: localhost
+
+- name: Get OCP version
+  set_fact:
+    ocp_version: "{{ '.'.join(item.split(':')[1].strip().split('.')[0:2]) }}"
+    ocp_version_maj: "{{ item.split(':')[1].strip().split('.')[0] }}"
+    ocp_version_min: "{{ item.split(':')[1].strip().split('.')[1] }}"
+  when: "'Server Version' in item"
+  loop: "{{ oc_version_str.stdout_lines }}"
+
+- name: Fail if the ocp version is not set
+  fail:
+    msg: "OCP version is not set"
+  when: not ocp_version
+
+- name: Set facts for newer ocp versions
+  set_fact:
+    opm_local_registry_path: "/redhat/redhat-operator-index"
+  when:
+    - version is version("4.6.17", ">=")
