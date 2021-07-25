@@ -1,6 +1,18 @@
 ---
 # This playbook is executed in the provisioner host
 
+# This will be overridden in a disconnected environment
+- name: "deploy-operators : Set default redhat-operators"
+  set_fact:
+    opm_catalog_source_name: redhat-operators
+
+# Generate disconnected catalogSources
+- name: "deploy-operators : Generate disconnected catalogSources"
+  import_role:
+    name: opererators-catalog
+  when:
+  - hostvars.localhost.provision_cache_store is defined
+
 ### Begin CNF
 - name: "deploy-operators : Validate nodes for CNF"
   import_role:
