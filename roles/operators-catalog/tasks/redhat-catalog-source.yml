@@ -1,0 +1,38 @@
+---
+- name: test_ Check for sriov-network-operator packagemanifests
+  k8s_info:
+    api_version: packages.operators.coreos.com/v1
+    kind: PackageManifest
+    name: sriov-network-operator
+    namespace: default
+  register: pkg_manifest_sriov
+
+- name: Deploy CatalogSource if not already deployed
+  when: pkg_manifest_sriov.resources|length == 0
+  block:
+  - name: Create CatalogSource for Red Hat operators
+    k8s:
+      definition:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        metadata:
+          name: "{{ opm_catalog_source_name }}"
+          namespace: "{{ opm_catalog_source_namespace }}"
+        spec:
+          sourceType: grpc
+          image: "{{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}"
+          displayName: "{{ opm_catalog_source_displayname }}"
+          publisher: grpc
+
+  - name: Wait for sriov-network-operator packagemanifests creation
+    k8s_info:
+      api_version: packages.operators.coreos.com/v1
+      kind: PackageManifest
+      name: sriov-network-operator
+      namespace: default
+    register: pkg_manifest_sriov
+    retries: 30
+    delay: 5
+    until: pkg_manifest_sriov.resources|length != 0
+    failed_when: pkg_manifest_sriov.resources|length == 0
+...
