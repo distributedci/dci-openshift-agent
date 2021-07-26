@@ -16,6 +16,24 @@
       "revId": "698d6c7fbcc43f7e194901dcf40238114c067b4e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5cbeca2b_768e5b8d",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-07-26T12:01:26Z",
+      "side": 1,
+      "message": "It should only execute in disconnected mode - right now it\u0027s using the same logic as operators-mirror to determine if we are in disconnectd mode or not.  I know @jorge was changing the logic for determining disconnected mode, but I don\u0027t believe that has been merged yet.",
+      "parentUuid": "18e43eaa_960c19bf",
+      "revId": "698d6c7fbcc43f7e194901dcf40238114c067b4e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
