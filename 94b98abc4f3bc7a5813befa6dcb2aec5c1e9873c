@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d18417de_f490b06d",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-26T22:34:10Z",
+      "side": 1,
+      "message": "I think you could reduce one nested *if*, if you iterate through the list of nodes, may not be needed to verify the list of nodes is 0 as in that case you would iterate over 0 elements.",
+      "revId": "94b98abc4f3bc7a5813befa6dcb2aec5c1e9873c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d9b7aa71_47b2aeb3",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-26T22:34:10Z",
+      "side": 1,
+      "message": "It\u0027s not clear to me where do you use $remdir, I see in the code down below (line 123-174) and I see some logs are placed in $remdir, but not in this section of the code. Here everything is placed in $dir.\nI\u0027m pretty sure I\u0027m missing something, but not sure where 😄",
+      "revId": "94b98abc4f3bc7a5813befa6dcb2aec5c1e9873c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
