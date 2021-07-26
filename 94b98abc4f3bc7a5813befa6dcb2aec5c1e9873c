@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0dc6ea55_18506fc8",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-07-26T22:55:23Z",
+      "side": 1,
+      "message": "Thanks for the feedback, yes I think I can reduce the validation only using the nodes output",
+      "parentUuid": "d18417de_f490b06d",
+      "revId": "94b98abc4f3bc7a5813befa6dcb2aec5c1e9873c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d9b7aa71_47b2aeb3",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "94b98abc4f3bc7a5813befa6dcb2aec5c1e9873c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0f562a09_0659d664",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-07-26T22:55:23Z",
+      "side": 1,
+      "message": "you\u0027re right, it\u0027s not used anywhere, I thought it was used to store the logs temporally, but looking at this carefully is not, at least not in this new patch",
+      "parentUuid": "d9b7aa71_47b2aeb3",
+      "revId": "94b98abc4f3bc7a5813befa6dcb2aec5c1e9873c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
