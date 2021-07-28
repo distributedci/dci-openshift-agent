@@ -45,13 +45,16 @@
         job_id: '{{ job_info.job.id }}'
 
     - name: copy the job_id to the JOB_ID_FILE if it exists
-      copy: content="{{ job_id }}" dest={{ JOB_ID_FILE }}
+      copy:
+        content: "{{ job_id }}"
+        dest: "{{ JOB_ID_FILE }}"
+        mode: 0644
       when: JOB_ID_FILE is defined
 
     # Keep in sync with test-runner parsing
     - name: UI URL
       debug:
-        msg: 'Follow the log at: {{ dci_ui_url }}/jobs/{{ hostvars.localhost.job_info.job.id }}/jobStates' # noqa 204
+        msg: 'Follow the log at: {{ dci_ui_url }}/jobs/{{ hostvars.localhost.job_info.job.id }}/jobStates'  # noqa 204
 
     - name: Set DCI tags for the current job
       dci_job:
@@ -198,7 +201,7 @@
     - block:
         - include_tasks: plays/deploy-operators.yml
       when:
-      - dci_main is not defined or dci_main == 'install'
+        - dci_main is not defined or dci_main == 'install'
 
       rescue: *teardown_failure
 

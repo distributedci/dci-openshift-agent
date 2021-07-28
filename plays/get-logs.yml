@@ -44,14 +44,14 @@
   delegate_to: localhost
 
 - name: Get logs from OCP deployment
-  script: ./scripts/get-logs "{{ hostvars[groups['provisioner'][0]]['ansible_user'] }}@{{ groups['provisioner'][0] }}" "{{ logdir.path }}" "{{ groups['masters'] }}"
+  script: ./scripts/get-logs "{{ hostvars[groups['provisioner'][0]]['ansible_user'] }}@{{ groups['provisioner'][0] }}" "{{ logdir.path }}" "{{ groups['masters'] }}"  # noqa: yaml
   delegate_to: localhost
   ignore_errors: true
 
 - name: Find deployment logs (text)
   find:
     paths: "{{ logdir.path }}"
-    recurse: yes
+    recurse: true
     patterns: "*.log,*.txt,*.html"
   register: logs_matched
   delegate_to: localhost
@@ -65,7 +65,7 @@
 - name: Find deployment logs (compressed)
   find:
     paths: "{{ logdir.path }}"
-    recurse: yes
+    recurse: true
     patterns: "*.gz"
   register: logs_matched
   delegate_to: localhost
