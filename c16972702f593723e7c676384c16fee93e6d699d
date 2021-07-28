@@ -16,6 +16,47 @@
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0cf51fd_834343b3",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-07-28T09:53:46Z",
+      "side": 1,
+      "message": "Regarding documentation, what should the scope be? Describe the meaning of the variable and possible values? Its utility?\nHere I provide some ideas for documenting this, AFAIK (this may apply for other variables too):\n1) Extend DCI OpenShift Agent README with a section related to \"useful variables\" or something like this, then include there the variable and its description. However, as this kind of variables seem not to be provided in a config file (like settings.yml or pipelines), this may be confusing. \n2) In the dallas-internal-docs repo, create a new README with tips related to the Openshift Agent, including this info and enabling the inclusion of info from other parts of the agent.\nWhat do you think?",
+      "parentUuid": "00fdfda5_3a0332b2",
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26bddbc9_4061be09",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-07-28T09:53:46Z",
+      "side": 1,
+      "message": "Just one question here, for clarification purposes. If base_version variable is no longer set in the operators-mirror role (it was previously done in this facts.yml file), is it needed to include it here? Or is it maintained there just in case it is defined somewhere? (e.g. in pipelines)\nMoreover, just another observation: base_version did not include originally the \u0027v\u0027, but here, dci_opm_version \u003d base_version if base_version is provided.",
+      "range": {
+        "startLine": 4,
+        "startChar": 25,
+        "endLine": 4,
+        "endChar": 37
+      },
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
