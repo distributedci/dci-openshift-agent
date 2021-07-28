@@ -23,8 +23,7 @@
     dci_pullsecret_file: "{{ hostvars.localhost.provision_cache_store }}/{{ cluster }}-pull-secret.txt"
   include_role:
     name: operators-mirror
-  when:
-  - hostvars.localhost.provision_cache_store is defined
+  when: hostvars.localhost.provision_cache_store is defined
 
 - name: Get provisioner SSH identity
   delegate_to: "{{ groups['provisioner'][0] }}"

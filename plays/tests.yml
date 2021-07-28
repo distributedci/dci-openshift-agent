@@ -32,14 +32,6 @@
 
 # Setup and run cnf-tests
 - block:
-
-#     - name: Create local git repo on jumphost for disconnected cnf-tests
-#       include_tasks: cnf-tests-git.yml
-#       when:
-#         - "'registry_host' in groups"
-#         - groups['registry_host'] | length > 0
-#         - cnf_tests_mode == "offline"
-
     - name: Mirror images to local registry for disconnected cnf-tests
       include_tasks: cnf-tests-mirror.yml
       when: cnf_tests_mode == "offline"
@@ -56,8 +48,8 @@
   include_role:
     name: dci-cvp
   vars:
-    dci_cvp_bundle_spec:  "{{ cvp_bundle_spec }}"
-    dci_cvp_bundle_tag:  "{{ cvp_bundle_tag }}"
+    dci_cvp_bundle_spec: "{{ cvp_bundle_spec }}"
+    dci_cvp_bundle_tag: "{{ cvp_bundle_tag }}"
     dci_cvp_pullsecret_file: "{{ dci_pullsecret_file }}"
     dci_cvp_registry_host: "{{ local_registry }}"
     dci_cvp_cache_dir: "{{ dci_cache_dir }}"

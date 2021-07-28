@@ -35,7 +35,7 @@
         namespace: "{{ namespace }}"
       spec:
         targetNamespaces:
-        - "{{ namespace }}"
+          - "{{ namespace }}"
 
 - name: Create subscription for OLM operator
   k8s:
