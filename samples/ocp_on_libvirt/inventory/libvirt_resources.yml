@@ -1,6 +1,6 @@
 all:
   vars:
-    dci_topic: OCP-4.7
+    dci_topic: OCP-4.8
     prov_nic: eth0
     pub_nic: eth1
     provisionhost_user: dci
