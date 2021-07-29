@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "511292bd_0f584623",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-07-29T15:44:28Z",
+      "side": 1,
+      "message": "I should clarify the comment above.  it only sets it if it isn\u0027t set already.  And it would only be set if operators-mirror role runs.",
+      "parentUuid": "847e8755_61c9406a",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "41cfb491_f82ead84",
         "filename": "plays/deploy-operators.yml",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2021-07-29T14:29:40Z",
       "side": 1,
       "message": "since https://github.com/dci-labs/inventories/pull/29 has been merged, you could use dci_disconnected here",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "15763689_570c1ff3",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-07-29T15:44:28Z",
+      "side": 1,
+      "message": "dci_disconnected is not documented in dci-openshift-agent so I would argue I can\u0027t use it yet. :-)",
+      "parentUuid": "41cfb491_f82ead84",
       "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "9a9b0ef2_7a50becc",
+        "filename": "roles/cnv-setup/tasks/deploy-cnv.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-07-29T15:44:28Z",
+      "side": 1,
+      "message": "sourceNamespace is not in any of the vars/ocp-4.* files so I think this is safe.  The default should be upstream if operators-mirror hasn\u0027t defined it.",
+      "parentUuid": "f2c553a4_b250b0aa",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a4563b0d_d2954368",
         "filename": "roles/operators-catalog/tasks/facts.yml",
         "patchSetId": 9
@@ -64,6 +118,24 @@
       "writtenOn": "2021-07-29T14:29:40Z",
       "side": 1,
       "message": "pretty sure we already already have the version fact available since pre-run.yml (and personally I\u0027d pass these as vars in the import_role) no need to re-calculate, only need to split for major and minor",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab55379d_ac89273d",
+        "filename": "roles/operators-catalog/tasks/facts.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-07-29T15:44:28Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a4563b0d_d2954368",
       "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
