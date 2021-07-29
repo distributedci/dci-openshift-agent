@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "847e8755_61c9406a",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-07-29T14:29:40Z",
+      "side": 1,
+      "message": "would it make sense to only do these when in online mode? I feel like having a value that will change can lead to unintended behavior later in the ansible run",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "41cfb491_f82ead84",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-07-29T14:29:40Z",
+      "side": 1,
+      "message": "since https://github.com/dci-labs/inventories/pull/29 has been merged, you could use dci_disconnected here",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f2c553a4_b250b0aa",
+        "filename": "roles/cnv-setup/tasks/deploy-cnv.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-07-29T14:29:40Z",
+      "side": 1,
+      "message": "I think this changes according to the version of OCP installed, that\u0027s why there were vars/ocp-4.{5,6,7}, just to double check. If not, would it make sense to define in the role\u0027s defaults?",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4563b0d_d2954368",
+        "filename": "roles/operators-catalog/tasks/facts.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-07-29T14:29:40Z",
+      "side": 1,
+      "message": "pretty sure we already already have the version fact available since pre-run.yml (and personally I\u0027d pass these as vars in the import_role) no need to re-calculate, only need to split for major and minor",
+      "revId": "b0dd08eff08bf5b42550a64f31976a1ee754f480",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
