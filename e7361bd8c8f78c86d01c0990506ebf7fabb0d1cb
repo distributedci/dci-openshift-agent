@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a5f94c9e_43661dce",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-07-29T20:09:58Z",
+      "side": 1,
+      "message": "I believe that will be a List.\nMaybe add a link to https://docs.openshift.com/container-platform/4.7/support/gathering-cluster-data.html that has details about the available must-gather images. \n\nThanks",
+      "range": {
+        "startLine": 145,
+        "startChar": 49,
+        "endLine": 145,
+        "endChar": 55
+      },
+      "revId": "e7361bd8c8f78c86d01c0990506ebf7fabb0d1cb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
