@@ -22,6 +22,30 @@
       "revId": "e7361bd8c8f78c86d01c0990506ebf7fabb0d1cb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2ff2e42c_25abf470",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-07-30T13:10:53Z",
+      "side": 1,
+      "message": "My mistake. Thanks for catching that.\nI\u0027ll include the link as you suggested.",
+      "parentUuid": "a5f94c9e_43661dce",
+      "range": {
+        "startLine": 145,
+        "startChar": 49,
+        "endLine": 145,
+        "endChar": 55
+      },
+      "revId": "e7361bd8c8f78c86d01c0990506ebf7fabb0d1cb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
