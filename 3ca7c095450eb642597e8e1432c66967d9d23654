@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee60f81a_eba97b25",
+        "filename": "README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-30T17:13:08Z",
+      "side": 1,
+      "message": "I\u0027d include somewhere there that it requires authentication to obtain such images",
+      "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6d7ef9d_fa41810b",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-30T17:13:08Z",
+      "side": 1,
+      "message": "I think you need the org or namespace included in the target as well, example:\n\nThe source is: registry.redhat.io/openshift4/ose-must-gather\nthe target should be: registry.dfwt5g.lab:5000/openshift4/ose-must-gather\n\nlocal_registry \u003d registry.dfwt5g.lab:5000\nitem | basename \u003d ose-must-gather\n\nthe org/ns openshift4 is missing",
+      "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f48962c0_eb6063c6",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 10
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-30T17:13:08Z",
+      "side": 1,
+      "message": "Have you tried this with multiple images?  I wonder if multiple tarballs will be created or if consecutive executions will replace the previous must-gather tarball.\n\nI see in man page that you could do one run with the images you want to use, so instead of looping through the must-gather execution multiple times you could just build your must_gather_opts with multiple images like this:\n\noc adm must-gather --image\u003dquay.io/kubevirt/must-gather --image\u003dquay.io/openshift/origin-must-gather",
+      "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "11031f0b_7fd451f5",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 10
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-30T17:13:08Z",
+      "side": 1,
+      "message": "Similar comment as where the mirroring happens, this is removing the org/ns, only the registry needs to be changed",
+      "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c07b043d_284389d8",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 10
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-07-30T17:13:08Z",
+      "side": 1,
+      "message": "nitpick, use spaces rather than spaces to keep it consistent",
+      "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
