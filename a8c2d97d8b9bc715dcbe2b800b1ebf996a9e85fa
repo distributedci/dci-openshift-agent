@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9804aa3_a16f9f6d",
+        "filename": "ansible.cfg",
+        "patchSetId": 19
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-08-02T15:12:09Z",
+      "side": 0,
+      "message": "I am a bit confused by this change. It uses \u0027kni\u0027 user to ssh to provisioner right? or is it just a default variable that we overwrite in dallas?",
+      "revId": "a8c2d97d8b9bc715dcbe2b800b1ebf996a9e85fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
