@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "d4374888_3c700c7d",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T21:57:59Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d9441ca5_9ad034dd",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aed4663b_3eb8f8f5",
         "filename": "roles/mirror-ocp-release/tasks/dirs.yml",
         "patchSetId": 19
@@ -51,6 +69,24 @@
       "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f418e2a6_45af69d9",
+        "filename": "roles/mirror-ocp-release/tasks/dirs.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T21:57:59Z",
+      "side": 1,
+      "message": "We found the reason, as fetch-bits.yaml was in a big block with delegate_to registry, which is not OK.\nFor now we will see that any file running through dci-pipeline will own the files created locally, a new card will be created to try to consolidate the user running to be dci-openshift-agent.",
+      "parentUuid": "aed4663b_3eb8f8f5",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -103,6 +139,24 @@
       "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "589963ca_5debc8e9",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T21:57:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f4c75a62_76b19eed",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -190,6 +244,24 @@
       "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a2f39039_410c33b0",
+        "filename": "roles/mirror-ocp-release/tasks/files.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T21:57:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "183f2849_08c0ecbd",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
