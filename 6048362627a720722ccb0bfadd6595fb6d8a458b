@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d9441ca5_9ad034dd",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-03T21:44:22Z",
+      "side": 1,
+      "message": "This was an edge case on the upgrade monitoring, Nacho is working on revamping this so I bet this will be obsolete real soon anyway",
+      "parentUuid": "f8f3733a_42011fdf",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aed4663b_3eb8f8f5",
         "filename": "roles/mirror-ocp-release/tasks/dirs.yml",
         "patchSetId": 19
@@ -50,6 +68,24 @@
       "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73db9bdd_93243349",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-03T21:44:22Z",
+      "side": 1,
+      "message": "talked this out on a video call, using a registered variable instead of a fact so not to pollute the facts, it is my feeling we abuse set_fact sometimes",
+      "parentUuid": "f9c8861b_d7e536b2",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -87,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "1e1eccf8_992622c9",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-03T21:44:22Z",
+      "side": 1,
+      "message": "yep thanks for pointing this out, removing extract-tools.yml which I\u0027d forgotten about 😋",
+      "parentUuid": "04b8298f_a7098373",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f5de736e_87abfd31",
         "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
         "patchSetId": 19
@@ -101,6 +155,24 @@
       "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "42db9182_c595ddcb",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-03T21:44:22Z",
+      "side": 1,
+      "message": "I\u0027d tested this out previously by just *not* cloning the repo and kicking off an install, it didn\u0027t break with my use case but I am not ready to scrap it altogether just in case we have a different code flow I didn\u0027t see.",
+      "parentUuid": "f5de736e_87abfd31",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -138,6 +210,24 @@
     },
     {
       "key": {
+        "uuid": "6f273de6_c3512250",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-03T21:44:22Z",
+      "side": 1,
+      "message": "yep this was leftover, meant to be done in the next tasks, removed",
+      "parentUuid": "96d55981_377fa0a4",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "41579a53_a16b8a94",
         "filename": "roles/mirror-ocp-release/tasks/installer.yml",
         "patchSetId": 19
@@ -155,6 +245,24 @@
     },
     {
       "key": {
+        "uuid": "4ea359a9_27ae361e",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-03T21:44:22Z",
+      "side": 1,
+      "message": "discussed in a call, seems like chdir is not needed in this case, removed",
+      "parentUuid": "41579a53_a16b8a94",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "edf8b1dc_d8ae1cd5",
         "filename": "roles/mirror-ocp-release/tasks/installer.yml",
         "patchSetId": 19
@@ -169,6 +277,24 @@
       "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bb81d62e_17630a52",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-03T21:44:22Z",
+      "side": 1,
+      "message": "yeah good catch, added",
+      "parentUuid": "edf8b1dc_d8ae1cd5",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
