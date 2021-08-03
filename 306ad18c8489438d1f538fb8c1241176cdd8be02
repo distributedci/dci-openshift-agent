@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a356b368_fb4a1900",
+        "filename": "README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T22:50:43Z",
+      "side": 1,
+      "message": "Authentication *is* required, otherwise you can\u0027t pull the images, I\u0027d rephrase a bit this statement to be clear on that.",
+      "revId": "306ad18c8489438d1f538fb8c1241176cdd8be02",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fdf57579_d258cc63",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 12
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T22:50:43Z",
+      "side": 1,
+      "message": "Suggestion to use bash in-var replacement instead:\n\n# Strip anything in front of image until first \u0027/\u0027\nimage\u003d\"${registry}/${image#*/}\"",
+      "revId": "306ad18c8489438d1f538fb8c1241176cdd8be02",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
