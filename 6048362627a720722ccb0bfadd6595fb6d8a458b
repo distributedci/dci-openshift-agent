@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8f3733a_42011fdf",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "I\u0027m not sure if the changes in this task are part of the disconnected reorg, as I don\u0027t see related vars in here, or if they were included by mistake?",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aed4663b_3eb8f8f5",
+        "filename": "roles/mirror-ocp-release/tasks/dirs.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "These two tasks are changing the ownership of what we currently have in dallas. I see the job where this was tested set the ownership to `dciteam:` instead `dci-openshift-agent` what the other dirs have.\nThis could explain the failure we had a few weeks back as `dci-openshift-agent` was unable to write inside /opt/cache.\nNot saying this is wrong, but I think we need to figure out what\u0027s the right user that should be creationg those directories 😄",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9c8861b_d7e536b2",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "Not sure if the previous way to get release_version and release_image had a disadvantage compared to using shell, my first impression is to prefer the old way, but I may be missing something.",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4c75a62_76b19eed",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "I found really strange that files like signature.bin, release.txt among others, have ownership of `dci-openshift-agent` (this is, IMO, the expected) but the creation of the dirs (see my comment in dirs.yaml) and graph-4.7, among some others belong to `dciteam`.",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "04b8298f_a7098373",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "I\u0027m OK having fetch and untar for two set of client_tools, in that case extract-tools.yml can be deleted OR it could be modified to perform the best practices you followed here and just send the appropriate client_tools depending on the version.",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5de736e_87abfd31",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "I think is needed, but not sure the context you ask the question.\nI wonder if it could cause issues when running two jobs at the same time and having HEAD at a different commit?",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "183f2849_08c0ecbd",
+        "filename": "roles/mirror-ocp-release/tasks/files.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "It\u0027s so strange that all the files in here were created under `dciteam:` but some of the ones created under fetch.yml belonged to `dci-openshift-agent`, both are using the same owner and group",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "96d55981_377fa0a4",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "While is not bad to be specific, I don\u0027t think it\u0027s required in here or is it? I tend to see it inside other loops so you can have better control of the loop in place, but I don\u0027t think this is inside any other loop.",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "41579a53_a16b8a94",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "I think `{{ cache_dir }}/{{ version }} may not be needed in all the references in here since you chdir to that dir already",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "edf8b1dc_d8ae1cd5",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-03T05:45:19Z",
+      "side": 1,
+      "message": "Don\u0027t you need to define loop_var in each task where you won\u0027t be using the default item? I see you set it above in line 8, but not anymore in this and the following task",
+      "revId": "6048362627a720722ccb0bfadd6595fb6d8a458b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
