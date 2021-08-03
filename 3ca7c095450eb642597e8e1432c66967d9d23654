@@ -88,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "397891d6_3e4cc2a8",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 10
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-08-03T10:47:42Z",
+      "side": 1,
+      "message": "Yup, implementing changes as well.",
+      "parentUuid": "11031f0b_7fd451f5",
+      "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c07b043d_284389d8",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 10
@@ -99,6 +117,24 @@
       "writtenOn": "2021-07-30T17:13:08Z",
       "side": 1,
       "message": "nitpick, use spaces rather than spaces to keep it consistent",
+      "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa91022e_f84a81b1",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 10
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-08-03T10:47:42Z",
+      "side": 1,
+      "message": "Didn\u0027t notice the tabs getting there. Fixing.",
+      "parentUuid": "c07b043d_284389d8",
       "revId": "3ca7c095450eb642597e8e1432c66967d9d23654",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
