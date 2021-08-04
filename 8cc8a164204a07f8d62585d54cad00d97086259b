@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e7923c4_88b4d9d4",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-04T15:59:29Z",
+      "side": 1,
+      "message": "I think this is not required any longer for 4.5 and newer  I created a PR to get that removed from our inventories as it was deprecated starting in 4.5 https://github.com/dci-labs/inventories/pull/27",
+      "revId": "8cc8a164204a07f8d62585d54cad00d97086259b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "46c87b0d_ebe5fd76",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-04T15:59:29Z",
+      "side": 1,
+      "message": "Same comment as above",
+      "revId": "8cc8a164204a07f8d62585d54cad00d97086259b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
