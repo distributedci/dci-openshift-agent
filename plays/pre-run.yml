@@ -74,6 +74,22 @@
   when:
     - dci_disconnected | default(false) |  bool
 
+- name: "Clone/update baremetal-deploy repo"
+  vars:
+    git_repo: "{{ hostvars.localhost.baremetal_deploy_repo }}"
+    git_ref: "{{ hostvars.localhost.baremetal_deploy_version }}"
+  git:
+    version: "{{ git_ref }}"
+    repo: "{{ git_repo }}"
+    dest: "{{ dci_cache_dir }}/baremetal_deploy_repo"
+    force: true
+  # On RHEL8 git clone can sporadically fail with OpenSSL SSL_read:
+  # SSL_ERROR_SYSCALL, errno 104.
+  register: git_clone
+  retries: 3
+  delay: 10
+  until: not git_clone.failed
+
 - name: Gather the package facts
   package_facts:
     manager: auto
