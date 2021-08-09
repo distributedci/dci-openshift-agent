@@ -2,6 +2,10 @@
 - name: Destroy bootstrap VM
   hosts: localhost
   tasks:
+    - name: Always fail
+      fail:
+        msg: 'failed on purpose'
+
     - include_role:
         name: bootstrap-libvirt
       vars:
