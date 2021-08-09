@@ -22,6 +22,30 @@
       "revId": "646a52e03a257e0782d526b41581917d43012ad9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "062aa314_82f28c24",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-08-09T11:17:45Z",
+      "side": 1,
+      "message": "\u003e should this information be put in a different variable, rather than JOBURL? because, in VOTE_RESULT variable (line 70), JOBURL is used as it was an URL, but with these assignments, we are no longer using an URL\n\nfixed in next iteration",
+      "parentUuid": "c93b125c_fb9abd47",
+      "range": {
+        "startLine": 44,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 28
+      },
+      "revId": "646a52e03a257e0782d526b41581917d43012ad9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
