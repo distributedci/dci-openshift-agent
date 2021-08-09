@@ -1,4 +1,8 @@
 ---
+- name: Always fail
+  fail:
+    msg: 'failed on purpose'
+
 - name: Validate we have all the pieces to run in disconnected mode
   assert:
     that:
