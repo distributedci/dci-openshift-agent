@@ -34,8 +34,20 @@ finish() {
         RET=$?
     fi
 
-    # Keep in sync with UI URL task in dci-openshift-agent.yml
-    JOBURL=$(sed -n -e 's@^.*Follow the log at: \(.*/jobs/.*/jobStates\).*@\1@p' < output|tail -1)
+    if [ -r output ]; then
+        # Keep in sync with UI URL task in dci-openshift-agent.yml
+        JOBURL=$(sed -n -e 's@^.*Follow the log at: \(.*/jobs/.*/jobStates\).*@\1@p' < output|tail -1)
+
+        # It could have failed before the information step
+        if [ -z "$JOBURL" ]; then
+            RET=1
+            JOBURL="pre-run"
+        fi
+    else
+        # Script failed before launching the agent
+        RET=1
+        JOBURL="preparation"
+    fi
 
     if [ $RET = 0 ]; then
         VOTE="+1"
