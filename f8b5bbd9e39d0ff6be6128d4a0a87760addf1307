@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c696093_3ba3710c",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-09T21:09:41Z",
+      "side": 1,
+      "message": "😮 I\u0027m not sure if we are truly using the installer at this cloned location. I checked the logs in a running job and I see a different location is being used:\n\n\n[dciteam@jumphost ~]$ dci-queue log -n 1000 8nodes 3476 2\u003e/dev/null | grep -m1 baremetal\ntask path: /var/lib/dci-openshift-agent/baremetal_deploy_repo/ansible-ipi-install/roles/node-prep/tasks/10_validation.yml:101\n\n[dciteam@jumphost ~]$ cd /var/lib/dci-openshift-agent/baremetal_deploy_repo/; git log -1 --pretty\u003dreference; cd -\n6d1db47 (build(deps): update ansible-lint requirement from \u003c5.0.0 to \u003c6.0.0 (#673), 2021-02-22)\n\nSee the repo is not pointing to what is currently for HEAD (https://github.com/openshift-kni/baremetal-deploy/commit/aba9391e1007ee026c92f2bf548e4ff5e723b14c) , but an outdated commit back in Feb.",
+      "revId": "f8b5bbd9e39d0ff6be6128d4a0a87760addf1307",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
