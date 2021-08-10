@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c1177122_99db9a39",
+        "filename": "test-runner",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-08-10T13:20:29Z",
+      "side": 1,
+      "message": "Just to understand how it works before setting a +1: there could be times in which LOCATION is an URL or \"pre-run\"/\"preparation\", right? Why removing the URL when we are in \"pre-run\" or \"preparation\" cases? (because we will lose the quick reference to the URL in that case)",
+      "range": {
+        "startLine": 39,
+        "startChar": 8,
+        "endLine": 39,
+        "endChar": 16
+      },
+      "revId": "d38d9e23b2298415d402e74078bd1fb29b7389da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
