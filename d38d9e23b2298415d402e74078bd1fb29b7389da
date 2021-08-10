@@ -22,6 +22,30 @@
       "revId": "d38d9e23b2298415d402e74078bd1fb29b7389da",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d892b275_15e53b02",
+        "filename": "test-runner",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-08-10T13:22:57Z",
+      "side": 1,
+      "message": "it doesn\u0027t remove the URL. It is to cover cases where we don\u0027t have an URL.",
+      "parentUuid": "c1177122_99db9a39",
+      "range": {
+        "startLine": 39,
+        "startChar": 8,
+        "endLine": 39,
+        "endChar": 16
+      },
+      "revId": "d38d9e23b2298415d402e74078bd1fb29b7389da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
