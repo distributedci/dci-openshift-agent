@@ -1,0 +1,6 @@
+---
+# vars file for sno-installer
+pullsecret_file: "{{ dir }}/pull-secret.txt"
+installer_extract_cmd: openshift-install
+default_libvirt_pool_dir: "/var/lib/libvirt/images"
+live_iso_url: ""

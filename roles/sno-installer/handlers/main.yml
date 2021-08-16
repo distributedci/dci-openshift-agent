@@ -1,0 +1,10 @@
+---
+# handlers file for sno-installer
+- name: Delete any old tmp dirs with OpenShift related binaries
+  file:
+    path: "{{ tempdir }}"
+    state: absent
+  tags:
+  - cleanup
+  - getoc
+
