@@ -1,0 +1,9 @@
+---
+# handlers file for sno-node-prep
+- name: Reload Network Manager
+  service:
+    name: NetworkManager
+    state: reloaded
+  become: yes
+  when: (del_dnsmasq_aio.changed | bool) or (del_nm_aio.changed | bool)
+  tags: cleanup
