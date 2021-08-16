@@ -37,3 +37,16 @@ To get the logs, use the journalctl command:
 ```
 sudo journalctl -u ci -f
 ```
+
+### Input/Output
+
+ci service get events from gerrit via SSH, everytime you add a comment in a change request from gerrit
+it would evaluate how to handle it. It does this by looking for specific strings, then it uses all this
+to produce a command that will continue with the flow to deploy an environment, for instance the command
+is `dci-check-change` with some parameters:
+
+- a `recheck` command will produce `dci-check-change $CR-number`
+- a `check` command will produce the same, as the recheck
+- but if the string `check libvirt` is passed then extra parameters can be used, for instance
+ - `check libvirt --sno` will produce `dci-check-change --sno $CR-number` (specially designed to SNO)
+ - `check libvirt -e var=value` will produce `dci-check-change $CR-number -e var=value` (intended to pass parameters to ansible)
