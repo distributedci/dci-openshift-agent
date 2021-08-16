@@ -1,0 +1,18 @@
+---
+- name: Set rhcos live base iso image fact
+  set_fact:
+    live_iso_name: "sno-{{ version }}.iso"
+  tags: rhcos_live_mirror
+
+- name: Download {{ rhcos_live_uri }}
+  get_url:
+    url:  "{{ live_iso_url }}"
+    dest: "{{ dir }}/{{ live_iso_name }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+    setype: virt_content_t
+    timeout: 600
+  become: true
+  tags: rhcos_live_mirror
+

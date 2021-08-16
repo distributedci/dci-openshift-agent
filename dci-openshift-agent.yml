@@ -155,7 +155,13 @@
     - block:
         - name: "dci-openshift-agent : Launch install"
           include_tasks: plays/install.yml
+          when: sno_install is not defined or not sno_install| bool
 
+        - name: "dci-openshift-agent : SNO Launch install"
+          include_tasks: plays/install-sno.yml
+          when:
+            - sno_install is defined
+            - sno_install| bool
       when:
         - dci_main is not defined or dci_main == 'install'
 
