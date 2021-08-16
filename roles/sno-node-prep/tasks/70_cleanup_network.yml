@@ -1,0 +1,52 @@
+---
+- name: Get list of all Networks
+  community.libvirt.virt_net:
+    command: list_nets
+  register: all_nets
+  become: yes
+  tags: cleanup
+
+- name: Stop SNO network
+  community.libvirt.virt_net:
+    command: destroy
+    name: "{{ vm_net_name }}"
+  become: yes
+  with_items:
+    - "{{ all_nets.list_nets }}"
+  when: item is search(vm_net_name)
+  tags: cleanup
+
+- name: Undefine SNO network
+  community.libvirt.virt_net:
+    command: undefine
+    name: "{{ vm_net_name }}"
+  become: yes
+  with_items:
+    - "{{ all_nets.list_nets }}"
+  when: item is search(vm_net_name)
+  tags: cleanup
+
+- name: Undefine DNS entries to be redirected in aio.conf
+  file:
+    path: /etc/NetworkManager/dnsmasq.d/aio.conf
+    state: absent
+  register: del_dnsmasq_aio
+  become: yes
+  tags: cleanup
+
+- name: Remove dnsmasq from the DNS configuration of NetworkManager
+  file:
+    path: /etc/NetworkManager/conf.d/aio.conf
+    state: absent
+  register: del_nm_aio
+  become: yes
+  tags: cleanup
+
+- name: Reload Network Manager
+  service:
+    name: NetworkManager
+    state: reloaded
+  become: yes
+  when: (del_dnsmasq_aio.changed | bool) or (del_nm_aio.changed | bool)
+  tags: cleanup
+
