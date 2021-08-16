@@ -1,0 +1,14 @@
+[all:vars]
+dir="{{ ansible_user_dir }}/clusterconfigs"
+domain="example.com"
+cluster="ocp4"
+extcidrnet="192.168.126.0/24"
+sno_install=true
+
+[provisioner]
+localhost ansible_user=dci-openshift-agent ansible_ssh_common_args="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
+[masters]
+master1.ocp4.example.com name=master1 role=master ansible_user=core
+
+[workers]
