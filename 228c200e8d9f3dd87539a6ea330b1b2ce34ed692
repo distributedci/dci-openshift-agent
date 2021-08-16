@@ -22,6 +22,30 @@
       "revId": "228c200e8d9f3dd87539a6ea330b1b2ce34ed692",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ac4c41cb_ae5e5e0b",
+        "filename": "samples/ocp_on_libvirt/ci.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-08-16T06:46:00Z",
+      "side": 1,
+      "message": "the idea is to define it in /etc/dci-openshift-agent/config to be able to respond to a \"check libvirt\" comment for example.",
+      "parentUuid": "70dd9dd8_acae5d9e",
+      "range": {
+        "startLine": 51,
+        "startChar": 35,
+        "endLine": 51,
+        "endChar": 50
+      },
+      "revId": "228c200e8d9f3dd87539a6ea330b1b2ce34ed692",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
