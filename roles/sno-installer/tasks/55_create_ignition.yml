@@ -1,0 +1,5 @@
+---
+- name: Create OpenShift Ignition File
+  shell: |
+    /usr/local/bin/openshift-install --dir {{ dir }} create single-node-ignition-config
+  tags: ignition

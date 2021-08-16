@@ -1,0 +1,7 @@
+---
+# vars file for sno-installer
+pullsecret_file: "{{ dir }}/pull-secret.txt"
+cmd: openshift-install
+default_libvirt_pool_dir: "/var/lib/libvirt/images"
+#live_iso_url: "http://192.168.126.1/rhcos-48.84.202106091622-0-live.x86_64.iso"
+live_iso_url: ""
