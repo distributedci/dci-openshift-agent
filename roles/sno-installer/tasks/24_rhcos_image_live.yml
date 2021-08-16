@@ -1,0 +1,27 @@
+---
+# rhcos_json fact already set in 23_rhcos_image_paths.yaml
+- name: Set facts for RHCOS_LIVE_SHA256
+  set_fact:
+    rhcos_live_sha256: "{{ rhcos_json.json | json_query(iso_sha) }}"
+  vars:
+    iso_sha: 'images."live-iso".sha256'
+  tags: rhcos_live
+
+- name: Set rhcos live base iso image fact
+  set_fact:
+    live_iso_name: "{{ rhcos_live_uri }}"
+  tags: rhcos_live
+
+- name: Download {{ rhcos_live_uri }}
+  get_url:
+    url:  "{{ rhcos_path }}{{ rhcos_live_uri }}"
+    dest: "{{ dir }}/{{ live_iso_name }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+    setype: virt_content_t
+    checksum: "sha256:{{ rhcos_live_sha256 }}"
+    timeout: 600
+  become: true
+  tags: rhcos_live
+
