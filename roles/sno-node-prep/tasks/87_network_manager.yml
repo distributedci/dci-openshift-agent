@@ -1,0 +1,25 @@
+---
+- name: Define DNS entries to be redirected in aio.conf
+  copy:
+    content: "server=/api.{{ cluster }}.{{ domain }}/{{ extcidrnet | ansible.netcommon.ipaddr('first_usable') }}"
+    dest: /etc/NetworkManager/dnsmasq.d/aio.conf
+    owner: root
+    group: root
+  become: yes
+  tags: dnsredirect
+
+- name: Include dnsmasq in the DNS configuration of NetworkManager
+  copy:
+    content: "[main]\ndns=dnsmasq"
+    dest: /etc/NetworkManager/conf.d/aio.conf
+    owner: root
+    group: root
+  become: yes
+  tags: dnsredirect
+
+- name: Reload Network Manager
+  service:
+    name: NetworkManager
+    state: reloaded
+  become: yes
+  tags: dnsredirect
