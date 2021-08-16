@@ -1,0 +1,16 @@
+---
+- name: 'Single Node Openshift Deployment on Libvirt'
+  hosts: provisioner
+  vars:
+    version: "4.8.9"
+    build: "ga"
+  tasks:
+
+  - name: "Prepare SNO Host"
+    import_role:
+      name: sno-node-prep
+
+  - name: "Deploy SNO VM"
+    import_role:
+      name: sno-installer
+
