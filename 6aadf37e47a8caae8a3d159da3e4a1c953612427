@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bcfa8328_3e312bd1",
+        "filename": "roles/operators-catalog/tasks/facts.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-17T22:42:12Z",
+      "side": 1,
+      "message": "From the last job attempt I think this has to be changed to use the local_registry in the registry_host, like in here https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L8",
+      "revId": "6aadf37e47a8caae8a3d159da3e4a1c953612427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
