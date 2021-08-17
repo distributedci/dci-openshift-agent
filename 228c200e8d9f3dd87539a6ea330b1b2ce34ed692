@@ -46,6 +46,30 @@
       "revId": "228c200e8d9f3dd87539a6ea330b1b2ce34ed692",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "856fb4c7_9f572b5d",
+        "filename": "samples/ocp_on_libvirt/ci.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-08-17T10:52:07Z",
+      "side": 1,
+      "message": "okey, understood, thanks!",
+      "parentUuid": "ac4c41cb_ae5e5e0b",
+      "range": {
+        "startLine": 51,
+        "startChar": 35,
+        "endLine": 51,
+        "endChar": 50
+      },
+      "revId": "228c200e8d9f3dd87539a6ea330b1b2ce34ed692",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
