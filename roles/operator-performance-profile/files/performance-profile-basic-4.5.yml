@@ -16,12 +16,12 @@ spec:
     isolated: "2-19,22-39,42-59,62-79"
     reserved: "0,1,40,41,20,21,60,61"
   hugepages:
-    defaultHugepagesSize: "1G"
+    defaultHugepagesSize: "2Mi"
     pages:
-      - size: "1G"
+      - size: "2Mi"
         count: 32
         node: 0
-      - size: "1G"
+      - size: "2Mi"
         count: 32
         node: 1
   numa:
