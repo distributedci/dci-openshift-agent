@@ -182,6 +182,13 @@
             - name: Run the failure process
               include_tasks: plays/failure.yml
 
+            - name: Run the failure process for partners
+              include_tasks: "{{ hookdir }}/hooks/failure.yml"
+              loop: "{{ dci_config_dirs }}"
+              loop_control:
+                loop_var: hookdir
+              ignore_errors: true
+
           ignore_unreachable: true
 
 # Step 3a-2 : deploy operators, run on the provisioner so OC is automatically set
