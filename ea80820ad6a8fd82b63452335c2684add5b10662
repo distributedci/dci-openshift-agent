@@ -33,6 +33,23 @@
       "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "822d6313_b03e8188",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-25T22:13:24Z",
+      "side": 1,
+      "message": "Similarly, if url comes with the right data then build is not needed here",
+      "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
