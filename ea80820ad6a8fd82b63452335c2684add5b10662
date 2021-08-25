@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a086d814_e1f72ff8",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-25T17:41:17Z",
+      "side": 1,
+      "message": "I think build parameter was only used to build the URL, if we\u0027re passing the URL we don\u0027t need it anymore",
+      "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94be7e55_3707de67",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-08-25T17:41:17Z",
+      "side": 1,
+      "message": "by storing the right URL in the component (and making it required in main.yml) we don\u0027t have to do this whole dance anymore, can just pass as `{{ url }}/release.txt` (same for every other get_url call in this role). I think we can get rid of the `build` parameter altogether.",
+      "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
