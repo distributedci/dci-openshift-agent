@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7fbe30b6_49b29089",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2021-08-25T16:56:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "59d3ac63_bb7f4f0d",
+      "revId": "8a95d25eb93db211797a7e62c5dc084693155d32",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f0b3fe0b_a16a2149",
         "filename": "roles/oc-setup/tasks/main.yml",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "I think the logic is ok, with_items is making sure we call k8s_info for each node and resources will be empty until the node shows up.",
       "parentUuid": "f0b3fe0b_a16a2149",
+      "revId": "8a95d25eb93db211797a7e62c5dc084693155d32",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7153d275_da1cb8c8",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2021-08-25T16:56:00Z",
+      "side": 1,
+      "message": "agreed",
+      "parentUuid": "2c99d7d5_d9f3eb9d",
       "revId": "8a95d25eb93db211797a7e62c5dc084693155d32",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
