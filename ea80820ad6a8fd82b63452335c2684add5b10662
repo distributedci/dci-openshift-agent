@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "34b41f50_46242a4a",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 28
+      },
+      "writtenOn": "2021-08-26T08:54:47Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a086d814_e1f72ff8",
+      "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "94be7e55_3707de67",
         "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "aeaf588e_0d5fe80a",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 28
+      },
+      "writtenOn": "2021-08-26T08:54:47Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "94be7e55_3707de67",
+      "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "822d6313_b03e8188",
         "filename": "roles/mirror-ocp-release/tasks/main.yml",
         "patchSetId": 3
@@ -50,6 +86,24 @@
       "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4c482d09_4f835db9",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 28
+      },
+      "writtenOn": "2021-08-26T08:54:47Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "822d6313_b03e8188",
+      "revId": "ea80820ad6a8fd82b63452335c2684add5b10662",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
