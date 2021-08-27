@@ -53,6 +53,7 @@ if [ -n "$GERRIT_USER" ]; then
                 esac
             fi
         done
+        sleep 30
    done
 fi
 
