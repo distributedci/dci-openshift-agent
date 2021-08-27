@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92b8672a_ea8cfa4f",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-27T21:00:33Z",
+      "side": 1,
+      "message": "I\u0027ve been trying to test this, as I know it\u0027s not possible to use environment in include_role but this is import_role. While in my case it doesn\u0027t fail, I can\u0027t see the env variable in the role: https://gist.github.com/tonyskapunk/983490e68100818aff4b6608e5b700c2\n\nThe failure in the job shows that no variable was rendered, I wonder if it\u0027s related 😕",
+      "revId": "82c14cf68ba5ee5f59864ec3a01fdb46236fdc84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
