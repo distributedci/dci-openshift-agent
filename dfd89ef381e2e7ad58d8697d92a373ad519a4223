@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b728570e_0f1f09a8",
+        "filename": "test-runner",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-27T17:02:25Z",
+      "side": 1,
+      "message": "Do we need .cfg?\n\nThe one that is going to be hard to include is those bash scripts without an extension, *if* any of the others are used in libvirt, e.g. dci-check-change, dci-openshift-agent-ctl, get-logs, among others. Most of them may not be used, but get-logs for sure is used.",
+      "revId": "dfd89ef381e2e7ad58d8697d92a373ad519a4223",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
