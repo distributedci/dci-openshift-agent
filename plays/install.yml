@@ -17,6 +17,51 @@
     pullsecret: "{{ hostvars.localhost.pullsecret | to_json }}"
   no_log: true
 
+- name: "tkrishto: Retrieve old images using shell"
+  shell: |
+    pwd
+    whoami
+    id
+    find {{ ansible_user_dir }}/.cache/openshift-installer/image_cache/* -maxdepth 1 -mtime +1
+  register: shell_output
+
+- name: "print shell output"
+  debug:
+    var: shell_output.stdout
+
+- name: "tkrishto: Retrieve gcow2 images older than 26 weeks"
+  find:
+    paths: "{{ ansible_user_dir }}/.cache/openshift-installer/image_cache"
+    file_type: file
+    age: 26w
+    recurse: no
+    use_regex: yes
+    patterns: ['^[\S]+\.qcow2$']
+  register: old_images_to_delete
+
+- name: "tkrishto: Delete gcow2 images older than 26 weeks"
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ old_images_to_delete.files }}"
+
+- name: "tkrishto: Retrieve gcow2 images older than 26 weeks-2"
+  find:
+    paths: "{{ ansible_user_dir }}/.cache/openshift-installer/image_cache"
+    file_type: file
+    age: 26w
+    recurse: no
+    use_regex: yes
+    patterns: ['^[\S]+\.qcow2$']
+  register: old_images_to_delete
+
+- name: "tkrishto: Ensure that old images were correctly deleted"
+  fail:
+    msg: "Some .gcow2 images were not deleted from .cache:
+    {{ old_images_to_delete.files | map(attribute='path') | list }}"
+  when: old_images_to_delete.matched > 0
+  ignore_errors: True
+
 - name: "installer : Populate clusterosimage"
   set_fact:
     clusterosimage: "{{ hostvars.localhost.clusterosimage }}"
