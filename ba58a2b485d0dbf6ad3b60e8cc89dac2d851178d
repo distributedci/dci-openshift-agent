@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0eca256_d8131352",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-27T22:47:06Z",
+      "side": 1,
+      "message": "I\u0027m a bit confused in here, the task above copies the binary oc and the kubeconfig from the provisioner to the jumphost. In the jumphost I see oc has u+x:\n\n$ ls -ln ~/clusterconfigs-cluster?/oc\n-rwxr-xr-x. 1 1004 1004 78607432 Dec  8  2020 /home/dciteam/clusterconfigs-cluster4/oc\n-rwxr-xr-x. 1 1004 1004 72733320 Aug 27 16:19 /home/dciteam/clusterconfigs-cluster5/oc\n-rwxr-xr-x. 1 1004 1004 78607432 Aug 26 02:34 /home/dciteam/clusterconfigs-cluster6/oc\n\nI did a test by doing a fetch with the provisioner being the same as my localhost (\"jumphost\") and copied a file that had u+x and those permissions prevailed, I wonder if some umask of situation is what you are facing when the file is fetched 😮",
+      "revId": "ba58a2b485d0dbf6ad3b60e8cc89dac2d851178d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
