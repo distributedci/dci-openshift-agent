@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f0d84378_eadc26a4",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-27T15:49:38Z",
+      "side": 1,
+      "message": "This may leave out changed files that we may want to test, e.g. jinja templates or bash scripts, would it be better to look for .md or .rst files?",
+      "revId": "738d11a567b1a20a3059a50801b9e0de5beb89f8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
