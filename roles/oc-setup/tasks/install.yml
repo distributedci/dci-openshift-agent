@@ -9,6 +9,12 @@
   - /usr/local/bin/oc
   - ~/clusterconfigs/auth/kubeconfig
 
+- name: "oc-setup : Make sure oc binary has execution permissions"
+  delegate_to: localhost
+  file:
+    path: "{{ dci_cluster_configs_dir }}/oc"
+    mode: u+rwx,g+rx,o+rx
+
 - name: "oc-setup : Install packages needed for login"
   package:
     name: httpd-tools
