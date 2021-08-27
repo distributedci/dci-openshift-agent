@@ -35,6 +35,8 @@
   import_role:
     name: prepare-cnf
     tasks_from: nodes-ok.yml
+  environment:
+    KUBECONFIG: "{{ dir }}/auth/kubeconfig"
 
 - block:
   - name: "deploy-operators : Prepare cluster for CNF"
