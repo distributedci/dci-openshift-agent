@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "543794d1_b7e5012e",
+        "filename": "plays/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-08-30T14:08:46Z",
+      "side": 1,
+      "message": "No need to put your name in task description. A git blame can show who wrote each line",
+      "revId": "0cb536f0e48ef52b64e3c4621352c648b2ccfa22",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cd86ce59_90ca28f2",
+        "filename": "plays/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-08-30T14:08:46Z",
+      "side": 1,
+      "message": "I don\u0027t think it is necessary to check if has been correctly deleted. We can trust ansible for that",
+      "revId": "0cb536f0e48ef52b64e3c4621352c648b2ccfa22",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
