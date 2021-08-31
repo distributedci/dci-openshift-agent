@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dcf81f70_01bedfd3",
+        "filename": "plays/install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-31T13:28:37Z",
+      "side": 1,
+      "message": "An idea, since the following tasks require cache_directory to exist, you could add them into a block and just have them execute when that directory exists",
+      "revId": "15877cb36fa7b9be29f515d93c4f9abd54d83ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "972e4696_4e4c6d2e",
+        "filename": "plays/install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-31T13:28:37Z",
+      "side": 1,
+      "message": "When having multiple AND conditions is better to split them in multiple lines, so it\u0027s easier to read, e.g.\n\nwhen:\n  - condition1\n  - condition2\n\nAlthough, this may not be needed if a block is used 😊",
+      "revId": "15877cb36fa7b9be29f515d93c4f9abd54d83ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0dbf2c9f_ac55a84c",
+        "filename": "plays/install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-08-31T13:28:37Z",
+      "side": 1,
+      "message": "likewise",
+      "revId": "15877cb36fa7b9be29f515d93c4f9abd54d83ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
