@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b0946d4_a364231c",
+        "filename": "plays/install.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2021-08-31T14:59:08Z",
+      "side": 1,
+      "message": "Maybe you can use the loop option instead with_items\nhttps://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html",
+      "range": {
+        "startLine": 41,
+        "startChar": 2,
+        "endLine": 41,
+        "endChar": 12
+      },
+      "revId": "0fe92f0e84bfa783e173957ab9a81c21c6e8a6d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
