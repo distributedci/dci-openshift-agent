@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc67c0b8_0cf9a68e",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-09-01T09:21:36Z",
+      "side": 1,
+      "message": "it should be item[\u0027data\u0027][\u0027url\u0027], that is  why it is failing (or components are not defined correctly in dci)",
+      "revId": "8a49e62488ab70c3b71c67a10ec40a8d1d42dc1c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
