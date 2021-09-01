@@ -16,6 +16,24 @@
       "revId": "8a49e62488ab70c3b71c67a10ec40a8d1d42dc1c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2caef052_cee2d4ab",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 28
+      },
+      "writtenOn": "2021-09-01T09:26:17Z",
+      "side": 1,
+      "message": "The url field will be in the component, not in data. See https://softwarefactory-project.io/r/c/dci-feeder-api/+/22286/6/dcifeeder/products/openshift/topics/openshift.py#86\n\nThe test might be bad however.",
+      "parentUuid": "fc67c0b8_0cf9a68e",
+      "revId": "8a49e62488ab70c3b71c67a10ec40a8d1d42dc1c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
