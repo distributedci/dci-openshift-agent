@@ -7,7 +7,23 @@
   include_role:
     name: ansible-role-dci-podman
 
-- name: "dci-openshift-agent : Side-load podman images prior to testing"
+- name: Get oc version output
+  environment:
+    KUBECONFIG: "{{ dci_cluster_configs_dir }}/kubeconfig"
+  shell: |
+    {{ dci_cluster_configs_dir }}/oc version
+  register: oc_version_str
+  delegate_to: localhost
+
+- name: Get OCP version
+  set_fact:
+    ocp_version: "{{ '.'.join(item.split(':')[1].strip().split('.')[0:2]) }}"
+    ocp_version_maj: "{{ item.split(':')[1].strip().split('.')[0] }}"
+    ocp_version_min: "{{ item.split(':')[1].strip().split('.')[1] }}"
+  when: "'Server Version' in item"
+  loop: "{{ oc_version_str.stdout_lines }}"
+
+- name: "dci-openshift-agent : Side-load podman images prior to testing (legacy)"
   vars:
     sideload_ocp_cluster: "{{ cluster }}"
     sideload_ocp_provisioner: "{{ groups['provisioner'][0] }}"
@@ -24,12 +40,21 @@
   when:
     - (dci_openshift_agent_conformance | string | length) > 0
     - dci_disconnected | default(false) | bool
+    - ocp_version_maj|int == 4
+    - ocp_version_min|int <= 6
 
 - name: "dci-openshift-agent : Run Red Hat test suite"
+  vars:
+    ocp_version_maj: "{{ ocp_version_maj }}"
+    ocp_version_min: "{{ ocp_version_min }}"
+    conformance_registry_certificate: "{{ registry_certificate }}"
+    conformance_local_registry: "{{ local_registry }}"
+    conformance_registry_auth: "{{ dci_pullsecret_file }}"
   include_role:
     name: redhat-tests
   when:
     - (dci_openshift_agent_conformance | string | length) > 0
+    - registry_certificate is defined
 
 # Setup and run cnf-tests
 - block:
