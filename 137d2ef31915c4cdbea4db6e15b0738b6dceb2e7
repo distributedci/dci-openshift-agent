@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5060cf57_bf33afb2",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2021-09-03T14:28:42Z",
+      "side": 1,
+      "message": "It should be *true*",
+      "revId": "137d2ef31915c4cdbea4db6e15b0738b6dceb2e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
