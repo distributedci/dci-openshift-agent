@@ -1,0 +1,28 @@
+[jumpbox]
+jumpbox.cluster.example.lab ansible_host="{{ test_ansible_host }}" ansible_become=yes ansible_user="{{ test_ansible_user }}"
+
+[provisioner]
+provisioner.cluster.example.lab baremetal_ip=192.168.1.11 baremetal_mac=aa:bb:cc:00:00:11
+
+[masters]
+master-0.cluster.example.lab baremetal_ip=192.168.1.20 baremetal_mac=aa:bb:cc:00:00:20
+master-1.cluster.example.lab baremetal_ip=192.168.1.21 baremetal_mac=aa:bb:cc:00:00:21
+master-2.cluster.example.lab baremetal_ip=192.168.1.22 baremetal_mac=aa:bb:cc:00:00:22
+
+[workers]
+worker-0.cluster.example.lab baremetal_ip=192.168.1.30 baremetal_mac=aa:bb:cc:00:00:30
+worker-1.cluster.example.lab baremetal_ip=192.168.1.31 baremetal_mac=aa:bb:cc:00:00:31
+
+[all:vars]
+pub_nic="{{ test_pub_nic }}"
+domain=cluster.example.lab
+public_dns=8.8.8.8
+dns_hosts={"apps.cluster.example.lab": "192.168.1.40", "api.cluster.example.lab": "192.168.1.40", "api-int.cluster.example.lab": "192.168.1.40"}
+baremetal_range=192.168.1.100,192.168.1.200
+baremetal_network=192.168.1.0/24
+baremetal_netmask=255.255.255.0
+baremetal_router=192.168.1.1
+# (optional) If not defined, the role asumes the jumpbox ansible_host
+#baremetal_dnsserver=192.168.1.10
+# (optional) If not defined, the role asumes the jumpbox ansible_host
+#baremetal_ntpserver=192.168.1.10

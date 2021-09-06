@@ -1,0 +1,22 @@
+- name: Install the dnsmasq package
+  yum:
+    name: dnsmasq
+    state: latest
+
+- name: Deploy teh service settings
+  template:
+    dest: /etc/dnsmasq.d/
+    src: general.conf
+
+- name: Start the dnsmasq service
+  service:
+    name: dnsmasq
+    state: started
+    enabled: yes
+
+- name: Set the localhost DNS resolution
+  copy:
+    dest: /etc/resolv.conf
+    content: |
+      search {{ domain }}
+      nameserver 127.0.0.1

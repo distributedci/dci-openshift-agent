@@ -1,0 +1,15 @@
+- name: Stop dnsmasq service
+  service:
+    name: dnsmasq
+    state: stopped
+    enabled: false
+
+- name: Remove dnsmasq package
+  yum:
+    name: dnsmasq
+    state: absent
+
+- name: Delete dnsmasq config files
+  file:
+    path: /etc/dnsmasq
+    state: absent
