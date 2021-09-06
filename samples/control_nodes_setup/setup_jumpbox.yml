@@ -1,0 +1,10 @@
+- name: Setting up the jumpbox
+  hosts: jumpbox
+  become: true
+  vars_prompt:
+    - name: rhn_user
+      private: no
+    - name: rhn_pass
+      private: yes
+  tasks:
+    - import_tasks: setup_jumpbox_tasks.yml

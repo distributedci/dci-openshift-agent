@@ -1,0 +1,10 @@
+- name: Setting up the provision host
+  hosts: provisioner
+  become: true
+  vars_prompt:
+    - name: rhn_user
+      private: no
+    - name: rhn_pass
+      private: yes
+  tasks:
+    - import_tasks: setup_provisioner_tasks.yml

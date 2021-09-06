@@ -1,0 +1,4 @@
+- include_tasks: "{{ hookdir }}/setup_jumpbox_tasks.yml"
+  vars:
+    ansible_become: yes
+    ansible_become_user: root
