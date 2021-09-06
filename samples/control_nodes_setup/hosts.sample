@@ -1,0 +1,51 @@
+[jumpbox]
+jumpbox.cluster.example.lab ansible_become=yes ansible_user="{{ sample_ansible_user }}" ansible_host="{{ sample_ansible_host }}"
+
+[provisioner]
+provisioner.cluster.example.lab ansible_become=yes ansible_user=root baremetal_ip=192.168.1.11 baremetal_mac=aa:bb:cc:00:00:11
+
+[masters]
+master-0.cluster.example.lab baremetal_ip=192.168.1.20 baremetal_mac=aa:bb:cc:00:00:20
+master-1.cluster.example.lab baremetal_ip=192.168.1.21 baremetal_mac=aa:bb:cc:00:00:21
+master-2.cluster.example.lab baremetal_ip=192.168.1.22 baremetal_mac=aa:bb:cc:00:00:22
+
+[workers]
+worker-0.cluster.example.lab baremetal_ip=192.168.1.30 baremetal_mac=aa:bb:cc:00:00:30
+worker-1.cluster.example.lab baremetal_ip=192.168.1.31 baremetal_mac=aa:bb:cc:00:00:31
+
+
+[provisioner:vars]
+pub_nic=eth1
+prov_nic=eth0
+# (optional) pub_bridge_ip: address to assign to the baremetal interface. Is
+# undefined, DHCP method is assumed and a DHCP server must exist in the subnet
+# for the provision host to be accessible.
+#pub_bridge_ip=192.168.1.10/24
+# (optional) pub_bridge_gw: address of the gateway for the baremetal network.
+# Mandatory if the pub_bridge_ip is defined.
+#pub_bridge_gw: 192.168.1.1
+# (optional) prov_bridge_ip defaults to 172.22.0.1/21
+#prov_bridge_ip=172.22.0.1/21
+
+[all:vars]
+dci_client_id='remoteci/0123456-789a-bcdef'
+dci_api_secret='1234567890abcdefABCDEF'
+dci_cs_url='https://api.distributed-ci.io/'
+
+# (optional) Used to enabled the deployment and setup of dnsmasq server for
+# DHCP and DNSMasq
+dci_local_dhcp=false
+
+pub_nic="{{ sample_pub_nic }}"
+domain=cluster.example.lab
+public_dns=8.8.8.8
+dns_hosts={"apps.cluster.example.lab": "192.168.1.40", "api.cluster.example.lab": "192.168.1.40", "api-int.cluster.example.lab": "192.168.1.40"}
+baremetal_range=192.168.1.100,192.168.1.200
+baremetal_network=192.168.1.0/24
+baremetal_netmask=255.255.255.0
+baremetal_router=192.168.1.1
+# (optional) If not defined, the role asumes the jumpbox ansible_host
+#baremetal_dnsserver=192.168.1.10
+# (optional) If not defined, the role asumes the jumpbox ansible_host
+#baremetal_ntpserver=192.168.1.10
+
