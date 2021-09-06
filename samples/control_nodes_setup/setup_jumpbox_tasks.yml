@@ -1,0 +1,139 @@
+- name: Asserting target OS and version
+  assert:
+    that:
+      - ansible_distribution == 'RedHat'
+      - ansible_distribution_major_version == '8'
+
+- name: Verifying the status of subscription manager
+  command: /usr/bin/subscription-manager status
+  check_mode: no
+  register: subscription_manager_status
+  failed_when: no
+  changed_when: no
+
+- name: Subscribe system to RHN
+  redhat_subscription:
+    state: present
+    username: '{{ rhn_user }}'
+    password: '{{ rhn_pass }}'
+#        pool_ids:
+#          - 2c9280817af91203017b360dc8a644ee: 2
+    syspurpose:
+      usage: 'Development/Test'
+      role: Red Hat Enterprise Linux Server
+      service_level_agreement: 'Self-Support'
+  when: '"Overall Status: Unknown" in subscription_manager_status.stdout'
+      
+- name: Enabling repositories
+  rhsm_repository:
+    name: '{{ item }}'
+    state: enabled
+  with_items:
+    - rhel-8-for-x86_64-appstream-rpms
+    - rhel-8-for-x86_64-baseos-rpms
+
+- name: Install EPEL release
+  yum:
+    name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm"
+    state: present
+    disable_gpg_check: true
+
+- name: Install DCI release
+  yum:
+    name: "https://packages.distributed-ci.io/dci-release.el{{ ansible_distribution_major_version }}.noarch.rpm"
+    state: present
+    disable_gpg_check: true
+
+- name: Install dci-openshift-agent
+  yum:
+    name: dci-openshift-agent
+    state: present
+
+#    - name: Install dnsmasq
+#      yum:
+#        name: dnsmasq
+#        state: latest
+#
+#    - name: Allowing DNS service in firewall
+#      firewalld:
+#        zone: public
+#        service: dns
+#        state: present
+#        permanent: yes
+#        immediate: yes
+
+          #- name: Set up DHCP dedicated IP (this step is not clear but was don on eno1:2 on jumpbox)
+    
+- name: Create the SSH config directory
+  file:
+    path: /var/lib/dci-openshift-agent/.ssh
+    state: directory
+    mode: 0700
+    owner: dci-openshift-agent
+    group: dci-openshift-agent
+
+- name: Check status of the SSH key pair
+  file:
+    path: /var/lib/dci-openshift-agent/.ssh/id_rsa
+    state: file
+  register: ssh_key_pair
+
+- name: Create the SSH key pair
+  openssh_keypair:
+    comment: "dci-openshift-agent@{{ inventory_hostname }}"
+    group: dci-openshift-agent
+    owner: dci-openshift-agent
+    mode: 0600
+    path: /var/lib/dci-openshift-agent/.ssh/id_rsa
+    size: 4096
+    creates: /var/lib/dci-openshift-agent/.ssh/id_rsa
+  when: ssh_key_pair.changed
+        
+- name: Fetch the SSH public key
+  fetch:
+    dest: /tmp
+    src: /var/lib/dci-openshift-agent/.ssh/id_rsa.pub
+  check_mode: no
+
+- name: Installing the dnf-automatic package
+  yum:
+    name: dnf-automatic
+
+- name: Setting up the dnf-automatic service
+  template:
+    dest: /etc/dnf/automatic.conf
+    src: etc_dnf_automatic.conf
+
+- name: Enabling the dnf-automatic service
+  service:
+    name: dnf-automatic.timer
+    state: started
+    enabled: yes
+
+# DCI-OPENSHIFT-APP-AGENT
+
+- name: Install app agent packages
+  yum:
+    name:
+      - python3-kubernetes
+      - dci-openshift-app-agent
+
+- name: Create the dcirc file
+  copy:
+    content: |
+      #!/usr/bin/env bash
+          
+          
+      DCI_CLIENT_ID='{{ dci_client_id }}'
+      DCI_API_SECRET='{{ dci_api_secret }}'
+      DCI_CS_URL='{{ dci_cs_url }}'
+      export DCI_CLIENT_ID
+      export DCI_API_SECRET
+      export DCI_CS_URL
+          
+    dest: /etc/{{ agent }}/dcirc.sh
+  loop:
+    - dci-openshift-agent
+    - dci-openshift-app-agent
+  loop_control:
+    loop_var: agent
