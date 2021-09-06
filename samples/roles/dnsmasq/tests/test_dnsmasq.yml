@@ -1,0 +1,47 @@
+- hosts: jumpbox
+  vars_prompt:
+    - name: test_ansible_host
+      prompt: Address of the jumpbox host
+      private: no
+    - name: test_ansible_user
+      prompt: Jumpbox login user name
+      private: no
+    - name: test_pub_nic
+      prompt: Host interface to the baremetal network
+      private: no
+  tasks:
+    - block:
+        - include_role:
+            name: '{{ playbook_dir | dirname | dirname }}/dnsmasq'
+            tasks_from: main
+
+        - name: Check dnsmasq service is running
+          service:
+            name: dnsmasq
+            state: started
+            enabled: yes
+          register: dnsmasq_service
+
+        - name: Check local DNS resolution
+          shell: dig api.cluster.example.lab @127.0.0.1 +short
+          register: dig_local
+
+
+        - fail:
+            msg: Local DNS resolution not working
+          when: dig_local.stdout != '192.168.1.40'
+
+        - name: Check public DNS resolution
+          shell: dig distributed-ci.io @127.0.0.1 +short
+          register: dig_public
+
+        - fail:
+            msg: Public DNS resolution not working
+          when: dig_public.stdout != '54.39.176.8'
+
+      always:
+        - include_role:
+            name: '{{ playbook_dir | dirname | dirname }}/dnsmasq'
+            tasks_from: uninstall
+          tags: teardown
+              
