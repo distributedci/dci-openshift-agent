@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2296760d_6a365936",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2021-09-06T14:23:03Z",
+      "side": 1,
+      "message": "likewise: `when: not dci_disconnected | default(false) | bool`",
+      "revId": "6e5aa96eefaaf3426e97b882e93cf410ea930c11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5afc4a0b_3bd87844",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2021-09-06T14:23:03Z",
+      "side": 1,
+      "message": "Hi Charles, you might want to write this line shorter: `when: dci_disconnected | default(false) | bool`",
+      "revId": "6e5aa96eefaaf3426e97b882e93cf410ea930c11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
