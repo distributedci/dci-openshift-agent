@@ -1,0 +1,159 @@
+- name: Setting up the provisioner
+  hosts: provisioner
+  become: true
+  vars_prompt:
+    - name: rhn_user
+      private: no
+    - name: rhn_pass
+      private: yes
+  tasks:
+    - name: Asserting target OS and version
+      assert:
+        that:
+          - ansible_distribution in ['RedHat', 'CentOS']
+          - ansible_distribution_major_version == '8'
+
+    - name: Verifying the status of subscription manager
+      command: /usr/bin/subscription-manager status
+      check_mode: no
+      register: subscription_manager_status
+      failed_when: no
+      when: ansible_distribution == 'RedHat'
+
+    - name: Subscribe system to RHN
+      redhat_subscription:
+        state: present
+        username: '{{ rhn_user }}'
+        password: '{{ rhn_pass }}'
+        syspurpose:
+          usage: 'Development/Test'
+          role: Red Hat Enterprise Linux Server
+          service_level_agreement: 'Self-Support'
+      register: new_subscription
+      when: 'ansible_distribution == "RedHat" and "Overall Status: Unknown" in subscription_manager_status.stdout'
+      
+    - name: Enabling repositories
+      rhsm_repository:
+        name: '{{ item }}'
+        state: enabled
+      with_items:
+        - rhel-8-for-x86_64-appstream-rpms
+        - rhel-8-for-x86_64-baseos-rpms
+      when: 'ansible_distribution == "RedHat" and (new_subscription.changed or "Overall Status: Unknown" not in subscription_manager_status.stdout)'
+        
+    - name: Installing the libvirt packages
+      yum:
+        name:
+          - libvirt
+          - qemu-kvm
+          - mkisofs
+          - python3-devel
+          - jq
+          - ipmitool
+          - python3-libvirt
+      
+    - name: Installing the dnf-automatic package
+      yum:
+        name: dnf-automatic
+
+    - name: Setting up the dnf-automatic service
+      template:
+        dest: /etc/dnf/automatic.conf
+        src: etc_dnf_automatic.conf
+
+    - name: Enabling the dnf-automatic service
+      service:
+        name: dnf-automatic.timer
+        state: started
+        enabled: yes
+
+    - name: Creating the dci user
+      user:
+        name: "{{ dci_provisioner_user | default('dci') }}"
+        groups: libvirt
+        
+    - name: Setting sudo privileges for user dci
+      copy:
+        dest: "/etc/sudoers.d/{{ dci_provisioner_user | default('dci') }}"
+        content: "{{ dci_provisioner_user | default('dci') }} ALL=(root) NOPASSWD:ALL"
+        mode: 0440
+
+    - name: Setting the SSH directory
+      file:
+        path: "/home/{{ dci_provisioner_user | default('dci') }}/.ssh"
+        state: directory
+        owner: "{{ dci_provisioner_user | default('dci') }}"
+        group: "{{ dci_provisioner_user | default('dci') }}"
+        mode: 0700
+
+    - name: Enabling the SSH public key for remote clients
+      lineinfile:
+        dest: "/home/{{ dci_provisioner_user | default('dci') }}/.ssh/authorized_keys"
+        line: '{{ lookup("file", "/tmp/" + hostvars[groups.jumpbox.0].inventory_hostname + "/var/lib/dci-openshift-agent/.ssh/id_rsa.pub") }}'
+        create: yes
+        owner: "{{ dci_provisioner_user | default('dci') }}"
+        group: "{{ dci_provisioner_user | default('dci') }}"
+        mode: 0600
+
+    - name: Activating firewall firewall
+      service:
+        name: firewalld
+        state: started
+        enabled: yes
+        
+    - name: Setting up firewall
+      firewalld:
+        zone: public
+        service: http
+        permanent: yes
+        immediate: yes
+        state: enabled
+        
+    - name: Starting the libvirtd service
+      service:
+        name: libvirtd
+        state: started
+        enabled: yes
+        
+    - name: Setting up the default storage pool
+      virt_pool:
+        name: default
+          #command: create
+        command: define
+        autostart: yes
+          #state: active
+        xml: |
+          <pool type='dir'>
+            <name>default</name>
+            <target>
+              <path>/var/lib/libvirt/images</path>
+            </target>
+          </pool>
+
+    - name: Build the storage pool
+      virt_pool:
+        name: default
+        command: start
+        autostart: yes
+          
+    - name: Setting up the baremetal network
+      shell: |
+        nmcli con down "{{ pub_nic }}"
+        nmcli con delete "{{ pub_nic }}"
+        # RHEL 8.1 appends the word "System" in front of the connection, delete in case it exists
+        nmcli con down "System {{ pub_nic }}"
+        nmcli con delete "System {{ pub_nic }}"
+        nmcli connection add ifname baremetal type bridge con-name baremetal
+        nmcli con add type bridge-slave ifname "{{ pub_nic }}" master baremetal
+        pkill dhclient;dhclient baremetal
+      # TODO: this may need setting as asynchronous. In the doc it's run with nohup in case of ssh interruption
+      
+    - name: Settin up the provisioning network
+      shell: |
+        nmcli con down "{{ prov_nic }}"
+        nmcli con delete "{{ prov_nic }}"
+        nmcli connection add ifname provisioning type bridge con-name provisioning
+        nmcli con add type bridge-slave ifname "{{ prov_nic }}" master provisioning
+        nmcli connection modify provisioning ipv6.addresses fd00:1101::1/64 ipv6.method manual
+        nmcli con down provisioning
+        nmcli con up provisioning
