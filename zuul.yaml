@@ -1,0 +1,59 @@
+- project:
+    name: dci-openshift-agent
+    check:
+      jobs:
+        - dci-agent-syntax-check
+        - dci-rpm-build-el8
+        - dci-setup_jumphost
+        - dci-setup_provisioner:
+            dependencies:
+              - dci-setup_jumphost
+    dci-gate:
+      jobs:
+        - dci-agent-syntax-check
+        - dci-rpm-build-el8
+    dci-post:
+      queue: dci
+      jobs:
+        - dci-rpm-build-el8
+        - dci-rpm-publish:
+            dependencies:
+              - dci-rpm-build-el8
+                #dci-control-nodes-check:
+                #jobs:
+                #- dci-setup_jumphost
+                #- dci-setup_provisioner:
+                #dependencies:
+                #- dci-setup_jumphost
+
+                #- pipeline:
+                #name: dci-control-nodes-check
+                #manager: independent
+                #trigger:
+                #my_gerrit:
+                #- event: comment-added
+                #comment: dci-contro-nodes-check
+                #success:
+                #my_gerrit:
+                #Verified: 1
+                #failure:
+                #my_gerrit:
+                #Verified: -1
+
+- job:
+    name: dci-setup_jumphost
+    description: Runs the setup_jumpbox playbook
+    run: samples/control_nodes_setup/testing.yml
+    nodeset:
+      nodes:
+        - name: testrunner
+          label: dci-centos-8
+
+- job:
+    name: dci-setup_provisioner
+    description: Runs the setup_provisioner playbook
+    run: samples/control_nodes_setup/testing.yml
+    nodeset:
+      nodes:
+        - name: testrunner
+          label: dci-centos-8
