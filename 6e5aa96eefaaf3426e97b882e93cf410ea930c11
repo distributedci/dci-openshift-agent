@@ -114,6 +114,30 @@
     },
     {
       "key": {
+        "uuid": "ac613c7d_226eb7be",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-07T15:45:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "253c10d5_dc867457",
+      "range": {
+        "startLine": 17,
+        "startChar": 28,
+        "endLine": 17,
+        "endChar": 42
+      },
+      "revId": "6e5aa96eefaaf3426e97b882e93cf410ea930c11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afc4a0b_3bd87844",
         "filename": "roles/redhat-tests/tasks/conformance.yml",
         "patchSetId": 5
