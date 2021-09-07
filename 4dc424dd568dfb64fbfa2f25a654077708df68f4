@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6a612f5d_a12c9c24",
+        "filename": "samples/ocp_on_libvirt/ci.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-07T20:18:04Z",
+      "side": 1,
+      "message": "Fred, I\u0027m testing the script with a fake data payload, number\u003d12345, comment\u003d\"check libvirt var\u003dtrue\" and DCI_CHECK_NAME\u003dlibvirt, when I run the script I see it returns: \"dci-check-change 12345 var\u003dtrue\". If the goal of this change was to pass extra vars to dci-check-change script, then I think it looks good:\n\n++ DCI_CHECK_NAME\u003dlibvirt\n+ comment\u003d\u0027check libvirt var\u003dtrue\u0027\n+ \u0027[\u0027 -n libvirt \u0027]\u0027\n+ egrep -qi \u0027^\\s*check\\s+libvirt\u0027\n++ egrep -i \u0027check\\s+libvirt\u0027\n++ head -1\n++ sed -e \u0027s/^\\s*check\\s*libvirt\\s*//i\u0027\n+ echo dci-check-change 12345 var\u003dtrue\ndci-check-change 12345 var\u003dtrue\n\nI was getting confused because passing a comment with \"check libvirt\" message only, it returns a similar output as when we add \"recheck\" in the comment. So if this is intended then just let me know and I\u0027ll give a +2,\n\n++ DCI_CHECK_NAME\u003dlibvirt\n+ comment\u003d\u0027check libvirt\u0027\n+ \u0027[\u0027 -n libvirt \u0027]\u0027\n+ egrep -qi \u0027^\\s*check\\s+libvirt\u0027\n++ egrep -i \u0027check\\s+libvirt\u0027\n++ head -1\n++ sed -e \u0027s/^\\s*check\\s*libvirt\\s*//i\u0027\n+ dci-check-change 12345                                                                                                                                                                           \ndci-check-change 12345",
+      "revId": "4dc424dd568dfb64fbfa2f25a654077708df68f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
