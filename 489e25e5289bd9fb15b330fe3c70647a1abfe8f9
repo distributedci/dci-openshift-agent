@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e04fc56a_eeeb19e2",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-07T16:43:11Z",
+      "side": 1,
+      "message": "good catch, that is remnant of my local testing. I will remove it. \nAt some time we may use the outputs of the release mirroring to generate the trust bundle file instead of having it hard-coded in a file as we have it now.\n\nThank for checking!",
+      "parentUuid": "afcd7357_005660a7",
+      "revId": "489e25e5289bd9fb15b330fe3c70647a1abfe8f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0704c193_87d63c0c",
         "filename": "roles/operators-mirror/tasks/mirror.yml",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2021-09-07T13:45:42Z",
       "side": 1,
       "message": "just curious why this extra step is needed.  Does the oc amd catalog mirror not mirror correctly when using the tag?",
+      "revId": "489e25e5289bd9fb15b330fe3c70647a1abfe8f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "46e4ca73_71fcdb24",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-07T16:43:11Z",
+      "side": 1,
+      "message": "Hello Bill, an index usually do not include the index image itself. If you pass the image to oc adm using a tag it will not mirror de index image and will skip it on the ImageContent source policy. \n\nIf you pass it using SHA, the index will be mirrored and also the entry will be added to the Image content source policy.",
+      "parentUuid": "c9389594_74fd3a73",
       "revId": "489e25e5289bd9fb15b330fe3c70647a1abfe8f9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
