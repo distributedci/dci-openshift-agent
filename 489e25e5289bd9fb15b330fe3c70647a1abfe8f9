@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0278605b_86e47b50",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-07T19:03:22Z",
+      "side": 1,
+      "message": "nitpick: typo in `older`",
+      "revId": "489e25e5289bd9fb15b330fe3c70647a1abfe8f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "afcd7357_005660a7",
         "filename": "roles/mirror-ocp-release/tasks/images.yml",
         "patchSetId": 2
