@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "fcabc9b7_2b2db9bc",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-07T18:09:32Z",
+      "side": 1,
+      "message": "Thanks Bill, I added the reference to the pull secret.",
+      "parentUuid": "0704c193_87d63c0c",
+      "revId": "489e25e5289bd9fb15b330fe3c70647a1abfe8f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c9389594_74fd3a73",
         "filename": "roles/operators-mirror/tasks/mirror.yml",
         "patchSetId": 2
