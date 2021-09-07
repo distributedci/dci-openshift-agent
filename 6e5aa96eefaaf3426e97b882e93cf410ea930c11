@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "473c3306_bec035db",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-09-07T12:34:03Z",
+      "side": 1,
+      "message": "By default it is run in connected mode so by default dci_disconnected is false. Don\u0027t forget Dallas env is a particular case and on partners side, they are mostly running in connected mode",
+      "parentUuid": "d888d398_267ab188",
+      "range": {
+        "startLine": 17,
+        "startChar": 28,
+        "endLine": 17,
+        "endChar": 42
+      },
+      "revId": "6e5aa96eefaaf3426e97b882e93cf410ea930c11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5afc4a0b_3bd87844",
         "filename": "roles/redhat-tests/tasks/conformance.yml",
         "patchSetId": 5
@@ -53,6 +77,24 @@
       "writtenOn": "2021-09-06T14:23:03Z",
       "side": 1,
       "message": "Hi Charles, you might want to write this line shorter: `when: dci_disconnected | default(false) | bool`",
+      "revId": "6e5aa96eefaaf3426e97b882e93cf410ea930c11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "663ad380_809a3cf0",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-09-07T12:34:03Z",
+      "side": 1,
+      "message": "I am not convinced this is particularly easier to read this way but I\u0027ll do the change anyway",
+      "parentUuid": "5afc4a0b_3bd87844",
       "revId": "6e5aa96eefaaf3426e97b882e93cf410ea930c11",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
