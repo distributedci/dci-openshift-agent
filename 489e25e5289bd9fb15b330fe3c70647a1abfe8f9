@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "afcd7357_005660a7",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-07T13:45:42Z",
+      "side": 1,
+      "message": "Where is the output \"/tmp/releases\" from this used?",
+      "revId": "489e25e5289bd9fb15b330fe3c70647a1abfe8f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9389594_74fd3a73",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-07T13:45:42Z",
+      "side": 1,
+      "message": "just curious why this extra step is needed.  Does the oc amd catalog mirror not mirror correctly when using the tag?",
+      "revId": "489e25e5289bd9fb15b330fe3c70647a1abfe8f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
