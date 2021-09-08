@@ -16,6 +16,24 @@
       "revId": "4dc424dd568dfb64fbfa2f25a654077708df68f4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "24faf421_cac6aede",
+        "filename": "samples/ocp_on_libvirt/ci.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-09-08T11:19:59Z",
+      "side": 1,
+      "message": "The idea is to pass args like you would do it with dci-openshift-agent-ctl. For example:\n\ncheck libvirt -e var\u003dtrue\n\nNot sure it answers your concern...",
+      "parentUuid": "6a612f5d_a12c9c24",
+      "revId": "4dc424dd568dfb64fbfa2f25a654077708df68f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
