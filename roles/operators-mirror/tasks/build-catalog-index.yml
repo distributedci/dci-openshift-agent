@@ -22,10 +22,4 @@
   notify:
     - "Fix permissions and removing tmp files"
 
-- name: "Push the new index image to the local registry"
-  shell:
-    cmd: >
-      podman push {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
-      --authfile {{ dci_pullsecret_file }}
-
 ...
