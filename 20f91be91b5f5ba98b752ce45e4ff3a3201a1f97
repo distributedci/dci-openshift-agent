@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "beeb7d38_b335275f",
+        "filename": "test-runner",
+        "patchSetId": 5
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-10T04:15:25Z",
+      "side": 1,
+      "message": "After some testing, I think this is the reason why the nodes end up in inspection failed status. The problem is that the new inventory in $CONFIG_DIR is not used to deploy",
+      "revId": "20f91be91b5f5ba98b752ce45e4ff3a3201a1f97",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "38cfb0a6_267bc4bf",
+        "filename": "test-runner",
+        "patchSetId": 5
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-10T04:15:25Z",
+      "side": 1,
+      "message": "Our ansible.cfg is hardcoded to use /etc/dci-openshift-agent/hosts, so new deployments use the old /etc/dci-openshift-agent/hosts file from previous test, which has different MACs for masters and ironic fails to inspect nodes.",
+      "revId": "20f91be91b5f5ba98b752ce45e4ff3a3201a1f97",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16de4813_63832e8d",
+        "filename": "test-runner",
+        "patchSetId": 5
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-10T04:15:25Z",
+      "side": 1,
+      "message": "$CMD (or d-o-a-ctl) does not have any parameters in this line to use the new inventory from $CONFIG_DIR. \nI think this can be fixed with something like this: \u0027$CMD -vvv -s -- -i $CONFIG_DIR/hosts \"$@\" $OPTS\u0027\nin this case the -i forces to use the new inventory, and notice that the \"--\" is before \"$@\" this complements our change 22370 when we pass variables with \"check libvirt -e var\u003dvalue\", the vars were passed correctly to dci-check-change, but when test-runner was using d-o-a-ctl to launch the deployment, \"$@\" parameters were not passed correctly. \nIf we go with this approach, it would be good idea to delete /etc/dci-openshift-agent/hosts to avoid confusion, because from now on automated tests with test-runner will not use it anymore. I\u0027ll test on next patch set",
+      "revId": "20f91be91b5f5ba98b752ce45e4ff3a3201a1f97",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
