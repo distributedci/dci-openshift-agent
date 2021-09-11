@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c916e98b_0bc7948e",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "nit: upstream instead of appstream",
+      "revId": "c393faad4380797ef405e95405c4b01a5ec15657",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}

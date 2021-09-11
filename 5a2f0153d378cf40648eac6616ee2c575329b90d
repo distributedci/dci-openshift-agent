@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "01f77a67_e2c9803d",
+        "filename": "roles/sno-installer/tasks/57_embed_ignition_into_iso.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed, why it was required to add it?",
+      "revId": "5a2f0153d378cf40648eac6616ee2c575329b90d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}

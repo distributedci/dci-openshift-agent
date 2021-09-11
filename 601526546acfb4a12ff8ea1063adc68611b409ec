@@ -1,0 +1,361 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "61932574_eb458135",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "I think we have to be careful here as other tasks create temp files in the same way, I think a specific pattern for SNO should be created and only look for that one to cleanup. Thoughts?\n\nAlternatively use a handler to wipe any temp directory used after.",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0a06ccc9_91b6dd51",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "I assume this is done to ensure the required version is in place, right? I\u0027m just concerned that we may be clashing with other jobs using similar patterns? maybe is worth using a similar patter used in the rest of the d-o-a by using a cache location e.g. /opt/cache/\u003cversion\u003e/\u003cbinaries\u003e and only install if that\u0027s missing?",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bda07b0e_903941b2",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "Some of these tasks seem a bit redundant compared to https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/mirror-ocp-release/tasks/fetch.yml#L20-L177 may be worth exploring what can be reused from there",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "39c336c2_ee0e06c7",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "Rather than copying the file could we reuse the pull secret we are using? https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L38-L41\n\nOr perhaps this is needed for the installer manifest?",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa39a4cb_d1877914",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "Maybe we could reuse this? https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/mirror-ocp-release/tasks/installer.yml#L11-L22",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "986fe4b6_353ffdcd",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "Similar comment as to attempt to use /opt/cache/\u003cversion\u003e/\u003cbinaries\u003e,  if possible",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "67992c5d_b511ffc8",
+        "filename": "roles/sno-installer/tasks/57_embed_ignition_into_iso.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "Is it really needed to run with elevated privileges? I had no issues without them",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a448b55_2d2bed53",
+        "filename": "roles/sno-installer/tasks/70_wait_deployment.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "How is this entry added into the DNS resolution? when tested I had to inject this into my hosts file to resolve the name",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "759246ef_d099e68b",
+        "filename": "roles/sno-installer/tasks/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "nit: trailing blank space",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "526b6531_7fb2e921",
+        "filename": "roles/sno-installer/vars/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "nit: remove commented out code",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f36c95b2_a9e4083e",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "I assume some of these validations will be taking place in other parts of the agent, correct?\nI\u0027m  wondering if we could add some comments to have them removed later, or what do you think?",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d939780d_4c82c224",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "Maybe this could be included in either:\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/configure-jumpbox.yml OR\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/configure-provisioner.yml ?\n\nOr omit if we install the packages required",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1177b4f1_afc68c4a",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "I think some of these release_url variables should be now covered with the url coming from the component: https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L27",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "953a6a4c_cd668ea2",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "This one is also obtained here: https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/mirror-ocp-release/tasks/fetch.yml#L26",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5136286_f3d858f4",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "We get them these facts over here: https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L92-L94",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f4e24fb_8c7383fd",
+        "filename": "roles/sno-node-prep/tasks/85_libvirt_network.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "nit: white spaces",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a748c3db_a90c098e",
+        "filename": "roles/sno-node-prep/vars/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "I think we should include:\npython3-jmespath\npython3-netaddr",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95b52441_0778b568",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "nit: upstream instead of appstream",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "773529d7_ca7d0c19",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "22369 is now merged 😆",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be08b9ed_105ec0cf",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "Missing backtics",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7e99cad5_a58d9a58",
+        "filename": "samples/sno_on_libvirt/sno-on-libvirt.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-11T16:51:17Z",
+      "side": 1,
+      "message": "This one is also needed: python3-jmespath",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
