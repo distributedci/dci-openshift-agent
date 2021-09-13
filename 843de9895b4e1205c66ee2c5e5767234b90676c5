@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95271d00_f0ea0705",
+        "filename": "plays/tests.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T22:24:58Z",
+      "side": 1,
+      "message": "I saw the failure in the console[1], and it seems ansible didn\u0027t like we re-used the same var names ocp_version_* I tested using diff names to store the facts, then pass these variables and I got better results. Please see test output https://gist.github.com/manurodriguez/3f1a858c5f74bcc86bf686a0bef9f7b5\nI also tested not passing the ocp_version_m* variables in this task at all, since they were already facts, and the redhat-tests role got them fine. \n\n[1] https://www.distributed-ci.io/jobs/0b3b2395-eead-4039-9fcb-42cb5fec685f/jobStates#5c0acd75-45d9-4bed-a769-ef63fb63b728:file357",
+      "revId": "843de9895b4e1205c66ee2c5e5767234b90676c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
