@@ -28,4 +28,54 @@
       podman push {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
       --authfile {{ dci_pullsecret_file }}
 
+- name: "Create temporary variables"
+  set_fact:
+    container_name: "tmp_{{lookup('password','/dev/null chars=digits length=8')}}"
+    container_port: "550{{9 | random }}{{9 | random }}"
+
+- name: "Start a temporary container from image generated"
+  shell:
+    cmd: >
+      podman run -d --rm --name {{ container_name }}_index -p {{ container_port }}:50051
+      {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+
+- name: "Get the list of operator available"
+  shell: grpcurl -plaintext localhost:{{ container_port }} api.Registry/ListPackages
+  register: packages_available
+
+- name: "Stop the temporary container"
+  shell:
+    cmd: >
+      podman stop {{ container_name }}_index
+
+- name: "Get Digest of missing operaors"
+  shell:
+    cmd: > 
+      skopeo inspect docker://{{ opm_external_mirror[item] | replace('OCP_VERSION',dci_opm_version | regex_replace ('v')) }} | jq -r '.Digest'
+  loop: "{{ opm_mirror_list }}"
+  register: new_bundles 
+  when:
+    - item not in packages_available.stdout
+    - opm_external_mirror[item] is defined
+
+- name: "Install missing operators"
+  shell:
+    chdir: "{{ tmp_prune.path }}"
+    cmd: >
+      set -x;
+      bundle_digest=docker://{{ opm_external_mirror[item.item] | regex_replace ('OCP_VERSION/.*$', item.stdout)}};
+      REGISTRY_AUTH_FILE={{ dci_pullsecret_file }}
+      {{ provision_cache_store }}/{{ version }}/opm index add
+      --from-index {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      --bundles $bundle_digest
+      --tag {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      --pull-tool podman
+  loop: "{{ new_bundles.results }}"
+  when: item['stdout'] is defined
+
+- name: "Push again the new index image to the local registry"
+  shell:
+    cmd: >
+      podman push {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      --authfile {{ dci_pullsecret_file }}
 ...
