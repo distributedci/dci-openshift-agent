@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4cbefb33_13eb03a3",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-13T23:01:50Z",
+      "side": 1,
+      "message": "I think  you need to re-push the newly generated image with the added operator to the registry",
+      "revId": "b403d9133ad3d70ce2a510e4acdfc739d0e8d529",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
