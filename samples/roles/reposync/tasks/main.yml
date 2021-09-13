@@ -11,4 +11,5 @@
     src: sync-repos.sh.j2
     dest: "{{ reposync_base }}/sync-repos.sh"
     mode: 0755
+  when: reposync_repos | length > 0
 ...
