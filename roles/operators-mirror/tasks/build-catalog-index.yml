@@ -28,4 +28,55 @@
       podman push {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
       --authfile {{ dci_pullsecret_file }}
 
+- name: "Create temporary variables"
+  set_fact:
+    container_name: "tmp_{{lookup('password','/dev/null chars=digits length=8')}}"
+    container_port: "550{{9 | random }}{{9 | random }}"
+
+- name: "Start a temporary container from image generated"
+  shell:
+    cmd: >
+      podman run -d --rm --name {{ container_name }}_index -p {{ container_port }}:50051
+      {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+
+- name: "Get the list of operator available"
+  shell: grpcurl -plaintext localhost:{{ container_port }} api.Registry/ListPackages
+  register: packages_available
+
+- name: "Stop the temporary container"
+  shell:
+    cmd: >
+      podman stop {{ container_name }}_index
+
+- name: "Validate if operator is missing"
+  assert: 
+    that: 
+      - item in packages_available.stdout
+  loop: "{{ opm_mirror_list }}"
+
+- name: "Install missing from previous version"
+  shell:
+    chdir: "{{ tmp_prune.path }}"
+    cmd: >
+      set -x;
+      id=$(podman run -d --rm  registry.redhat.io/redhat/redhat-operator-index:v{{ ( base_version|float - 0.1 ) | round(1) }});
+      podman cp ${id}:/database/index.db index.db;
+      bundle=$(sqlite3 index.db "select bundlepath from operatorbundle where name like '%{{ item }}%' order by name desc limit 1");
+      podman stop ${id};
+      REGISTRY_AUTH_FILE={{ dci_pullsecret_file }}
+      {{ provision_cache_store }}/{{ version }}/opm index add
+      --from-index {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      --bundles $bundle
+      --tag {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      --pull-tool podman
+  loop: "{{ opm_mirror_list }}"
+  when: 
+    - item not in packages_available.stdout
+    - build != 'ga' 
+
+- name: "Push again the new index image to the local registry"
+  shell:
+    cmd: >
+      podman push {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      --authfile {{ dci_pullsecret_file }}
 ...
