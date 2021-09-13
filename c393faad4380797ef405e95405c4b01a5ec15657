@@ -16,6 +16,24 @@
       "revId": "c393faad4380797ef405e95405c4b01a5ec15657",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7614d3af_3bdf0347",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "I meant the rhel-8-for-x86_64-baseos-rpms and rhel-8-for-x86_64-appstream-rpms, I\u0027ll update the README to be more specific :)",
+      "parentUuid": "c916e98b_0bc7948e",
+      "revId": "c393faad4380797ef405e95405c4b01a5ec15657",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }

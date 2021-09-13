@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "522f8457_6b87d9cc",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "I think we can scope this to the list of files we want from /tmp/ansible.* In this case will be oc, kubectl, openshift-install, README.md and openshift-client-linux-4.8.11.tar.gz, all files coming from this last tar.gz",
+      "parentUuid": "61932574_eb458135",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0a06ccc9_91b6dd51",
         "filename": "roles/sno-installer/tasks/10_get_oc.yml",
         "patchSetId": 16
@@ -30,6 +48,24 @@
       "writtenOn": "2021-09-11T16:51:17Z",
       "side": 1,
       "message": "I assume this is done to ensure the required version is in place, right? I\u0027m just concerned that we may be clashing with other jobs using similar patterns? maybe is worth using a similar patter used in the rest of the d-o-a by using a cache location e.g. /opt/cache/\u003cversion\u003e/\u003cbinaries\u003e and only install if that\u0027s missing?",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1441da8_671465d7",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "This is just to check if the files are present to generate a list and delete them in next clean up task. But I like the idea of /opt/cache/\u003cversion\u003e/\u003cbinaries\u003e to gain time",
+      "parentUuid": "0a06ccc9_91b6dd51",
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "b3ee26c3_a1c5db44",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Yes, this is redundant, but it\u0027s because I made sno-roles independent of d-o-a roles, so anybody can use these SNO roles and install it without DCI, then I required to fetch in the SNO roles, but we can check what is on fetch.yml and update SNO fetch tasks to use the same approach, I\u0027m thinking of adding a validation if possible in SNO fetch tasks to check if facts or something already defined from mirror-ocp-release role, then do not do anything, but at the same time continue to make SNO independent of DCI, let\u0027s see, if starts getting complex, I\u0027ll have to opt to abandon this idea.",
+      "parentUuid": "bda07b0e_903941b2",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "39c336c2_ee0e06c7",
         "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
         "patchSetId": 16
@@ -64,6 +118,24 @@
       "writtenOn": "2021-09-11T16:51:17Z",
       "side": 1,
       "message": "Rather than copying the file could we reuse the pull secret we are using? https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L38-L41\n\nOr perhaps this is needed for the installer manifest?",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6df4da92_786dde85",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Actually {{ pullsecret }} comes from the topic in the pre-run.yml when using SNO with DCI, but now that I see this copy is not really required (next tasks use the variable, and not the file), this tasks was just to store the pull secret in a file. Also just to clarify when using SNO standalone we have to declare the pullsecret in the inventory (needs documentation)",
+      "parentUuid": "39c336c2_ee0e06c7",
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "731c8ed6_6ac51ac2",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Yes, any tasks that we already have in DCI roles and contain more validation would be good to mimic in tasks from SNO roles.",
+      "parentUuid": "fa39a4cb_d1877914",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "986fe4b6_353ffdcd",
         "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
         "patchSetId": 16
@@ -98,6 +188,24 @@
       "writtenOn": "2021-09-11T16:51:17Z",
       "side": 1,
       "message": "Similar comment as to attempt to use /opt/cache/\u003cversion\u003e/\u003cbinaries\u003e,  if possible",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e909ef25_b9f35466",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Yes, we definitely are going to check the /opt/cache/\u003cversion\u003e/\u003cbinaries option.",
+      "parentUuid": "986fe4b6_353ffdcd",
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -138,6 +246,24 @@
     },
     {
       "key": {
+        "uuid": "08db571e_f63fa8a5",
+        "filename": "roles/sno-installer/tasks/70_wait_deployment.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "This is handled by tasks in roles/sno-node-prep/tasks/87_network_manager.yml, we haven\u0027t had to modify /etc/hosts and per your offline comments I have the same output (dnsmasq listening in 192.168.126.1:53 udp/tcp) but in my case DNS resolution works. So this is a good one Tony, I\u0027ll research more and might reach out to you to test.",
+      "parentUuid": "2a448b55_2d2bed53",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "759246ef_d099e68b",
         "filename": "roles/sno-installer/tasks/main.yml",
         "patchSetId": 16
@@ -155,6 +281,24 @@
     },
     {
       "key": {
+        "uuid": "b5ec32a8_dd5a1a12",
+        "filename": "roles/sno-installer/tasks/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Ups! we\u0027ll fix :)",
+      "parentUuid": "759246ef_d099e68b",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "526b6531_7fb2e921",
         "filename": "roles/sno-installer/vars/main.yml",
         "patchSetId": 16
@@ -166,6 +310,24 @@
       "writtenOn": "2021-09-11T16:51:17Z",
       "side": 1,
       "message": "nit: remove commented out code",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "548607b1_2af354a7",
+        "filename": "roles/sno-installer/vars/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "This was intended to be an example of providing an URL with the ISO without having to do all the tasks to get the URL and pull ISO from the internet, but I forgot to add a comment to explain, so I remove and better add it to the README.md",
+      "parentUuid": "526b6531_7fb2e921",
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -189,6 +351,24 @@
     },
     {
       "key": {
+        "uuid": "32a2850c_1cec8663",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "You are right some of this validation might happen in other parts of the DCI agent code, but again these tasks are included here because I wanted to keep SNO functional without DCI, so I needed to validate here, in a SNO without DCI install these tasks are the first to run, the goal was to stop right there if validations fail.",
+      "parentUuid": "f36c95b2_a9e4083e",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d939780d_4c82c224",
         "filename": "roles/sno-node-prep/tasks/10_validation.yml",
         "patchSetId": 16
@@ -206,6 +386,24 @@
     },
     {
       "key": {
+        "uuid": "6a4031be_c600067b",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Same reason as above, I do not want to move these tasks from SNO and place in DCI role tasks, if not the SNO standalone mode won\u0027t have these validations, I need to think about this in case there is a better solution.",
+      "parentUuid": "d939780d_4c82c224",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1177b4f1_afc68c4a",
         "filename": "roles/sno-node-prep/tasks/10_validation.yml",
         "patchSetId": 16
@@ -217,6 +415,24 @@
       "writtenOn": "2021-09-11T16:51:17Z",
       "side": 1,
       "message": "I think some of these release_url variables should be now covered with the url coming from the component: https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L27",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4fb99e1c_df130b05",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "yes, same reasoning as above, these are duplicates, so maybe need to add validation to not set the facts if they are already set, same applies for the comments below",
+      "parentUuid": "1177b4f1_afc68c4a",
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -274,6 +490,24 @@
     },
     {
       "key": {
+        "uuid": "4efbcc76_b50afaca",
+        "filename": "roles/sno-node-prep/tasks/85_libvirt_network.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": ":( I\u0027ll clean those",
+      "parentUuid": "6f4e24fb_8c7383fd",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a748c3db_a90c098e",
         "filename": "roles/sno-node-prep/vars/main.yml",
         "patchSetId": 16
@@ -288,6 +522,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8c2697d8_9068b8e8",
+        "filename": "roles/sno-node-prep/vars/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Yes, we\u0027ll include, the tasks in 10_validation.yml check if python3-netaddr is installed, but it won\u0027t harm to include them here.",
+      "parentUuid": "a748c3db_a90c098e",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -414,6 +666,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce017057_c298567e",
+        "filename": "samples/sno_on_libvirt/sno-on-libvirt.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "Got it, we\u0027ll include",
+      "parentUuid": "7e99cad5_a58d9a58",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }

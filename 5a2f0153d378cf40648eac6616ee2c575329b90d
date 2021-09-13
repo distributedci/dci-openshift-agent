@@ -16,6 +16,24 @@
       "revId": "5a2f0153d378cf40648eac6616ee2c575329b90d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "11f6c153_cc33b9a6",
+        "filename": "roles/sno-installer/tasks/57_embed_ignition_into_iso.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:14:01Z",
+      "side": 1,
+      "message": "I also did not required this, tested in Fedora34 and RHEL84, this was a recent change after testing on a new RHEL 8.4 lab, quick fix was to add the become, since the last task on this play changes the embedded iso permissions, if time allows we\u0027ll do more tests to see why testing wasn\u0027t consistent and possibly remote the escalation.",
+      "parentUuid": "01f77a67_e2c9803d",
+      "revId": "5a2f0153d378cf40648eac6616ee2c575329b90d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
