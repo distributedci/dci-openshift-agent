@@ -308,6 +308,24 @@
     },
     {
       "key": {
+        "uuid": "dc340baf_1ec4201b",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-13T05:22:46Z",
+      "side": 1,
+      "message": "I believe the text is correct, need access to the appstream repository:\nhttps://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/using-appstream_using-appstream",
+      "parentUuid": "95b52441_0778b568",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "773529d7_ca7d0c19",
         "filename": "samples/sno_on_libvirt/README.md",
         "patchSetId": 16
@@ -325,6 +343,29 @@
     },
     {
       "key": {
+        "uuid": "d4939120_3bd69694",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-13T05:22:46Z",
+      "side": 1,
+      "message": "I do not see this file in the patch",
+      "range": {
+        "startLine": 77,
+        "startChar": 44,
+        "endLine": 77,
+        "endChar": 58
+      },
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "be08b9ed_105ec0cf",
         "filename": "samples/sno_on_libvirt/README.md",
         "patchSetId": 16
@@ -336,6 +377,23 @@
       "writtenOn": "2021-09-11T16:51:17Z",
       "side": 1,
       "message": "Missing backtics",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d60a60ea_4ca64d84",
+        "filename": "samples/sno_on_libvirt/hosts",
+        "patchSetId": 16
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-13T05:22:46Z",
+      "side": 1,
+      "message": "is it required to add the pull secret here?",
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
