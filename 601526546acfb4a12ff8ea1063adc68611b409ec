@@ -578,6 +578,24 @@
     },
     {
       "key": {
+        "uuid": "96630808_7abb931e",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:20:22Z",
+      "side": 1,
+      "message": "Yes, you are right Beto I meant appstream, I\u0027m adding the whole name to avoid confusion.",
+      "parentUuid": "dc340baf_1ec4201b",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "773529d7_ca7d0c19",
         "filename": "samples/sno_on_libvirt/README.md",
         "patchSetId": 16
@@ -592,6 +610,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4fb1e82f_4620af47",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:20:22Z",
+      "side": 1,
+      "message": "Yes, I fixed the comments :)",
+      "parentUuid": "773529d7_ca7d0c19",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -618,6 +654,30 @@
     },
     {
       "key": {
+        "uuid": "f2e4e465_fb18fd69",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:20:22Z",
+      "side": 1,
+      "message": "I updated the readme, it was deploy-sno-standalone.yml",
+      "parentUuid": "d4939120_3bd69694",
+      "range": {
+        "startLine": 77,
+        "startChar": 44,
+        "endLine": 77,
+        "endChar": 58
+      },
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "be08b9ed_105ec0cf",
         "filename": "samples/sno_on_libvirt/README.md",
         "patchSetId": 16
@@ -635,6 +695,24 @@
     },
     {
       "key": {
+        "uuid": "f0edd740_37ab00ad",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:20:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be08b9ed_105ec0cf",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d60a60ea_4ca64d84",
         "filename": "samples/sno_on_libvirt/hosts",
         "patchSetId": 16
@@ -649,6 +727,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "da1f3898_5b2b3ae4",
+        "filename": "samples/sno_on_libvirt/hosts",
+        "patchSetId": 16
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-13T17:20:22Z",
+      "side": 1,
+      "message": "Only for SNO standalone, I\u0027ll clarify that in the README, for deployments of SNO with DCI agent, no need for that.",
+      "parentUuid": "d60a60ea_4ca64d84",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
