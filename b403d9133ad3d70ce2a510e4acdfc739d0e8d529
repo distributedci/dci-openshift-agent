@@ -16,6 +16,24 @@
       "revId": "b403d9133ad3d70ce2a510e4acdfc739d0e8d529",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94f04822_486e9dc3",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2021-09-14T11:44:24Z",
+      "side": 1,
+      "message": "Yes definitely 😊",
+      "parentUuid": "4cbefb33_13eb03a3",
+      "revId": "b403d9133ad3d70ce2a510e4acdfc739d0e8d529",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
