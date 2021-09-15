@@ -46,6 +46,30 @@
       "revId": "a1e14d33b2dc7145b67219e81bc38b339abad005",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ec078a0_efdadbde",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-15T13:32:39Z",
+      "side": 1,
+      "message": "perfect :) I think your last change should fix the problem, let\u0027s see it. I will resolve this comment in the meanwhile",
+      "parentUuid": "20bb8ee9_95597664",
+      "range": {
+        "startLine": 16,
+        "startChar": 78,
+        "endLine": 16,
+        "endChar": 103
+      },
+      "revId": "a1e14d33b2dc7145b67219e81bc38b339abad005",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
