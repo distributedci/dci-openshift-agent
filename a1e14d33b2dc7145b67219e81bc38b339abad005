@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5d188dde_158045f6",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-15T10:20:06Z",
+      "side": 1,
+      "message": "Is this variable defined somewhere? I saw that, in patchset 11, you removed the definition of this variable in plays/tests.yml because the job failed because \u0027dci_pullsecret_file\u0027 is undefined.\nBut, when you tested that patchset, the failed variable was conformance_local_registry, and for this patchset 12, you have modified its definition but not deleting it.\nSo, I was wondering if this variable is defined in a different place (I checked your PR in inventories repo and it is not there neither), or if its definition is needed again, in case the job fails.",
+      "range": {
+        "startLine": 16,
+        "startChar": 78,
+        "endLine": 16,
+        "endChar": 103
+      },
+      "revId": "a1e14d33b2dc7145b67219e81bc38b339abad005",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
