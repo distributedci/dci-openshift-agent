@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f68736f9_3dee0605",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-15T18:11:37Z",
+      "side": 1,
+      "message": "I think we need to stop this container either right after extracting the list of operators or later as a handler",
+      "revId": "b1cc748de38e464bf5459076f0bab55a4eabe629",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
