@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8ff951f_f80e5179",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-16T14:27:59Z",
+      "side": 1,
+      "message": "This tasks already runs the get-logs script in line 54 which is the one that does the heavy lifting to pull logs, I think your command to pull the cluster network information might be better located inside that script. Please see https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/scripts/get-logs we have a bunch of commands there already as examples.",
+      "revId": "20db932ffa1dfe59330feab5b9ae80f88bc304a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
