@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "432b9ae1_4376fa38",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-16T20:12:41Z",
+      "side": 1,
+      "message": "Just minor typo in the file extension, please update to $dir/clusternetwork.txt 😎",
+      "revId": "ebfecd3ab1370163da18fc21584cda71ff3a42f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
