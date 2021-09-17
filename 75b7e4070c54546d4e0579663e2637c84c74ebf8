@@ -124,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "38e0ef16_cae6ec6a",
+        "filename": "roles/sno-installer/tasks/24_rhcos_image_live.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-17T21:10:47Z",
+      "side": 1,
+      "message": "No needed, removing",
+      "parentUuid": "d5d47ce1_7d16e81c",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8cad680d_457612c1",
         "filename": "roles/sno-node-prep/tasks/10_validation.yml",
         "patchSetId": 26
