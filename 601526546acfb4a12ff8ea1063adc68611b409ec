@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4ea71939_54e6606c",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Oh my bad I should\u0027ve been more clear, what I meant to say is that the patterns in here should match to what you\u0027re creating down below in line 43. The problem is that we have other jobs that are creating temp files in /tmp, e.g.\n\n[dciteam@jumphost ~]$ ls -d /tmp/ansible.* | head -3\n/tmp/ansible.04tqu4nn\n/tmp/ansible.05ci06pa\n/tmp/ansible.0gtypb1_\n\nWe could be wiping something by mistake. I was thinking that adding a prefix could help as well to make the pattern more clear, e.g. /tmp/sno.*\n\nThat would imply adding a prefix in your task in line 40 like prefix: sno",
+      "parentUuid": "522f8457_6b87d9cc",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0a06ccc9_91b6dd51",
         "filename": "roles/sno-installer/tasks/10_get_oc.yml",
         "patchSetId": 16
@@ -69,6 +87,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62005452_4a61cce9",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1441da8_671465d7",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -107,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "13f233af_4c35d84c",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3ee26c3_a1c5db44",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "39c336c2_ee0e06c7",
         "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
         "patchSetId": 16
@@ -139,6 +193,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "64f23f47_f35c3c8c",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6df4da92_786dde85",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -177,6 +249,24 @@
     },
     {
       "key": {
+        "uuid": "2f56f0dc_31faff8b",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "731c8ed6_6ac51ac2",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "986fe4b6_353ffdcd",
         "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
         "patchSetId": 16
@@ -212,6 +302,24 @@
     },
     {
       "key": {
+        "uuid": "d074ddda_089ebf8a",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e909ef25_b9f35466",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "67992c5d_b511ffc8",
         "filename": "roles/sno-installer/tasks/57_embed_ignition_into_iso.yml",
         "patchSetId": 16
@@ -226,6 +334,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0d521c7a_8c52f181",
+        "filename": "roles/sno-installer/tasks/57_embed_ignition_into_iso.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "67992c5d_b511ffc8",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -261,6 +387,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8e17411c_9bfa25d3",
+        "filename": "roles/sno-installer/tasks/70_wait_deployment.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "08db571e_f63fa8a5",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -334,6 +478,24 @@
     },
     {
       "key": {
+        "uuid": "1a01a9a4_7428f42c",
+        "filename": "roles/sno-installer/vars/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "548607b1_2af354a7",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f36c95b2_a9e4083e",
         "filename": "roles/sno-node-prep/tasks/10_validation.yml",
         "patchSetId": 16
@@ -366,6 +528,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "51e0f666_6f0b3642",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32a2850c_1cec8663",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -404,6 +584,24 @@
     },
     {
       "key": {
+        "uuid": "6702337e_542bb9fb",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a4031be_c600067b",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1177b4f1_afc68c4a",
         "filename": "roles/sno-node-prep/tasks/10_validation.yml",
         "patchSetId": 16
@@ -439,6 +637,24 @@
     },
     {
       "key": {
+        "uuid": "81078bbd_cfcd74d9",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fb99e1c_df130b05",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "953a6a4c_cd668ea2",
         "filename": "roles/sno-node-prep/tasks/10_validation.yml",
         "patchSetId": 16
@@ -456,6 +672,24 @@
     },
     {
       "key": {
+        "uuid": "d73bc84f_ec8fc490",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "953a6a4c_cd668ea2",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f5136286_f3d858f4",
         "filename": "roles/sno-node-prep/tasks/10_validation.yml",
         "patchSetId": 16
@@ -470,6 +704,24 @@
       "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1413944d_f0d14df3",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f5136286_f3d858f4",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {

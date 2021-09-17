@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f601a309_7c67ca38",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Didn\u0027t find a place where openshift-baremetal-install is used for SNO, but I see openshift-install is placed in here, maybe that\u0027s the one we want here?",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "39d0bfb7_b49ec8e7",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "recently learned that two tarballs names are used, so you could avoid the use of `release_version.stdout`, if you wanted, e.g.\n- openshift-client-linux-4.8.12.tar.gz\n- openshift-client-linux.tar.gz\n\nhttps://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.8.12/\n\nAlso you could reduce the get_url task above if you do unarchive with the url in the src, e.g. `src: \"{{ release_url }}/{{ version }}/{{ item }}-linux.tar.gz\"",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5082de23_82d8264b",
+        "filename": "roles/sno-installer/tasks/23_rhcos_image_paths.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Do we need to elevate privileges here?",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5d47ce1_7d16e81c",
+        "filename": "roles/sno-installer/tasks/24_rhcos_image_live.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "Do we need elevated privileges?",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8cad680d_457612c1",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "This one is interesting, I think the version validation is required above the task where the major and minor versions are set.\nI think that could be done with an assert, maybe something like: \nhttps://gist.github.com/tonyskapunk/03d20cf3a41668b0972937efa87b1a1e\nThat way you avoid the need of setting those facts.",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47b7235c_f31a94de",
+        "filename": "roles/sno-node-prep/tasks/71_cleanup_dns_entries.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "nit: white spaces",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7d420395_561176a2",
+        "filename": "roles/sno-node-prep/tasks/71_cleanup_dns_entries.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "This one seems duplicated as it\u0027s done in 88_etc_hosts.yml",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "799ec4f6_84c1fdf8",
+        "filename": "samples/ocp_on_libvirt/README.md",
+        "patchSetId": 26
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "These two lines (starting with ` *` are not rendered well in html) if you do `  -` then they are indented correctly",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "012c18c5_3b73188a",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 26
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-17T18:14:15Z",
+      "side": 1,
+      "message": "nit: replace each \"\u003d\" in (sub)titles with \"#\" to have the titles rendered correclty, it\u0027s helpful as an anchor is created and could be used to reference to a section. Example:\n\n\u003d\u003d Playbooks to deploy Single Node Openshift on a libvirt VM   becomes\n# Playbooks to deploy Single Node Openshift on a libvirt VM\n\nand\n\n\u003d\u003d\u003d Pre-requisites   becomes\n## Pre-requisites",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
