@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "095d2ca6_9eaf350a",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-17T21:05:09Z",
+      "side": 1,
+      "message": "Actually I\u0027m not using temporal location anymore (tmp/ansible*) to store the binaries, the new code in 10_get_oc.yml stores them in /opt/cache and deletes them from /usr/local/bin. I should probably update this comment before :)",
+      "parentUuid": "4ea71939_54e6606c",
+      "revId": "601526546acfb4a12ff8ea1063adc68611b409ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0a06ccc9_91b6dd51",
         "filename": "roles/sno-installer/tasks/10_get_oc.yml",
         "patchSetId": 16
