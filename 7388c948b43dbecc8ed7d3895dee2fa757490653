@@ -16,6 +16,24 @@
       "revId": "7388c948b43dbecc8ed7d3895dee2fa757490653",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4052267_bd358632",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-17T04:06:17Z",
+      "side": 1,
+      "message": "Hello Charles,\n\nIt failed again, I did more testing this time. The pipefail was no allowing o run any command. \n- adding it to assign a terminal to the commands to be executed\n- the command lines inside the containers had line breaks. In one lines seems to work.\n\nSorry for not been adding the patch directly. Manuel and I are having issues updating your change, we are always getting a new change ID.\n\n---\n- name: \"test_ redhat-tests: Run the openshift conformance test suite (connected)\"\n  shell: \u003e\n    podman run --pull\u003dalways -it --rm\n    -v {{ dci_cluster_configs_dir }}:/tests:Z\n    -e TESTS\u003d{{ dci_openshift_agent_conformance }}\n    -e KUBECONFIG\u003d/tests/kubeconfig\n    quay.io/openshift/origin-tests:{{ ocp_version_maj }}.{{ ocp_version_min }}\n    /bin/bash -c \"openshift-tests run {{ dci_openshift_agent_conformance }}\"\n  when:\n   - not (dci_disconnected | default(false) | bool)\n   - ocp_version_maj|int \u003d\u003d 4\n\n- name: \"test_ redhat-tests: Run the openshift conformance test suite (disconnected)\"\n  shell: \u003e\n    podman run --pull\u003dalways -it --rm\n    -v {{ dci_cluster_configs_dir }}:/tests:Z\n    -v {{ conformance_registry_certificate }}:/etc/ssl/certs/domain.crt\n    -v {{ conformance_registry_auth }}:/auths.json\n    -e TESTS\u003d{{ dci_openshift_agent_conformance }}\n    -e KUBECONFIG\u003d/tests/kubeconfig\n    quay.io/openshift/origin-tests:{{ ocp_version_maj }}.{{ ocp_version_min }} \n    /bin/bash -c \"openshift-tests images --to-repository {{ conformance_local_registry }}/conformance-test | oc image mirror -a /auths.json -f - --keep-manifest-list\u003dtrue --continue-on-error\u003dtrue --skip-missing\u003dtrue \u0026\u0026 openshift-tests run {{ dci_openshift_agent_conformance }} --from-repository {{ conformance_local_registry }}/conformance-test --junit-dir /tests\"\n  when:\n    - dci_disconnected | default(false) | bool\n    - ocp_version_maj|int \u003d\u003d 4\n    - ocp_version_min|int \u003e\u003d 7\n...",
+      "parentUuid": "3fc2e05b_41a9ebd9",
+      "revId": "7388c948b43dbecc8ed7d3895dee2fa757490653",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
