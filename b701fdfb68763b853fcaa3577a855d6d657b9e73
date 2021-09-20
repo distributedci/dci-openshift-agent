@@ -16,6 +16,24 @@
       "revId": "b701fdfb68763b853fcaa3577a855d6d657b9e73",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "24fe6c8d_60aba4a0",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-20T21:27:01Z",
+      "side": 1,
+      "message": "It is a valid value from the point of view of the URL that uses the version, but the validation \n in this task was not considering that. I had to add more tasks that I wanted, but now it validates either latest-4.8 and above, or 4.8 and above. If we use only \"latest\" won\u0027t work.",
+      "parentUuid": "6d2bcadd_002490f0",
+      "revId": "b701fdfb68763b853fcaa3577a855d6d657b9e73",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
