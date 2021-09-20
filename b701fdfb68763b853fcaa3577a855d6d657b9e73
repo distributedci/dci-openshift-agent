@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6d2bcadd_002490f0",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-20T17:05:54Z",
+      "side": 1,
+      "message": "Oh I missed to ask about this one, is `latest-4.8` a valid value?",
+      "revId": "b701fdfb68763b853fcaa3577a855d6d657b9e73",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
