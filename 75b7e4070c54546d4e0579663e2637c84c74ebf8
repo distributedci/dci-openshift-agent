@@ -247,6 +247,24 @@
     },
     {
       "key": {
+        "uuid": "d57ea907_fbd696c4",
+        "filename": "roles/sno-node-prep/tasks/71_cleanup_dns_entries.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-21T18:47:08Z",
+      "side": 1,
+      "message": "Actually this was not a duplicate, the task here cleans the /etc/hosts entry, whereas the task in 88_etc_hosts.yml adds it. So I\u0027m adding back after cleaning tests.",
+      "parentUuid": "1f1bca67_4ea69217",
+      "revId": "75b7e4070c54546d4e0579663e2637c84c74ebf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "799ec4f6_84c1fdf8",
         "filename": "samples/ocp_on_libvirt/README.md",
         "patchSetId": 26
