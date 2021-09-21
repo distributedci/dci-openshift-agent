@@ -1,0 +1,242 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0759c122_b1a9d683",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "You already use a block here, move the `when` clause on these 2 tasks to the block level. Same on the other changes in this file.",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "12232d67_8243601b",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "no need to delegate here, pre-run already executes on the jumpbox",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01255f02_b17b00d3",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "Don\u0027t delegate_to, this happens in the jumpbox and is unnecessary. If you think it\u0027s needed then do it up in dci-openshift-agent.yml where this play is included",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de5f19a8_5cc271f4",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "I think it would be more readable to encapsulate all of these tasks in a single block so you can do a single `when` clause",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f704f99c_c9487ff6",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "over-indentation here",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8271669_d166f5e6",
+        "filename": "roles/conserver/tasks/config-ipmi.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "There\u0027s a problem here: for multi-cluster environments (e.g. \u003e 1 cluster per jumpbox like Dallas) this would rewrite the conserver config if 2 concurrent agent runs execute at the same time. I think you have to add the cluster name to the resulting conf file.",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dae0645b_0d80bb19",
+        "filename": "roles/conserver/tasks/config-libvirt.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "If you\u0027re going to copy socat_retry.sh in both cases, remove from here and from config-ipmi.yml and move up to config.yml",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f201876_41276f87",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "this is a role, use defaults/main.yml instead of facts",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a74dd426_99be5731",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "I suggest making this assignment when you include the role and don\u0027t inspect hostvars or groups inside the role. Example:\n\n```\n - include_role:\n   name: conserver\n   vars:\n     cluster_nodes: \"{{ groups[\u0027masters\u0027] + (\u0027workers\u0027 in groups) | ternary(groups[\u0027workers\u0027], []) }}\"\n```\n\nThen you would always be looping over a variable named cluster_nodes inside the role",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b11888ca_9c50ef3a",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "same as up above, avoid using hostvars/groups inside the role",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f87e9a74_7294a64d",
+        "filename": "roles/conserver/tasks/service.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "Why \u0027restarted\u0027 ? This would restart the conserver service on every agent run, no? Concurrent runs would have side effects too",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06c8a79f_b8dec0bc",
+        "filename": "roles/conserver/templates/conserver.cf",
+        "patchSetId": 28
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "I think you should remove all the comment boilerplate and only leave the factual config.",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1f253e97_eb4df5a0",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "\u003c3",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f711577_134a11f1",
+        "filename": "roles/ocp-on-libvirt/defaults/main.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-21T22:12:35Z",
+      "side": 1,
+      "message": "This should be in the hosts or settings file for libvirt envs, not here I don\u0027t think.",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
