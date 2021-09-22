@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6bbb42c1_51c259f4",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "0759c122_b1a9d683",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "12232d67_8243601b",
         "filename": "plays/pre-run.yml",
         "patchSetId": 28
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ab281471_3f2b4c7e",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "12232d67_8243601b",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "01255f02_b17b00d3",
         "filename": "plays/teardown.yml",
         "patchSetId": 28
@@ -50,6 +86,24 @@
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a6393e4_a462ebf9",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "01255f02_b17b00d3",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "012c3b14_e90c0c87",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f704f99c_c9487ff6",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a8271669_d166f5e6",
         "filename": "roles/conserver/tasks/config-ipmi.yml",
         "patchSetId": 28
@@ -101,6 +173,24 @@
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "23e1e0d2_888f1d20",
+        "filename": "roles/conserver/tasks/config-ipmi.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a8271669_d166f5e6",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -121,6 +211,24 @@
     },
     {
       "key": {
+        "uuid": "3951fb27_920730ce",
+        "filename": "roles/conserver/tasks/config-libvirt.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "It should only be needed for libvirt.  removed.",
+      "parentUuid": "dae0645b_0d80bb19",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3f201876_41276f87",
         "filename": "roles/conserver/tasks/config.yml",
         "patchSetId": 28
@@ -132,6 +240,24 @@
       "writtenOn": "2021-09-21T22:12:35Z",
       "side": 1,
       "message": "this is a role, use defaults/main.yml instead of facts",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5c4af3e_2f928f8a",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "I moved it to vars/main.yml.  Set Defaults was not the right name here.",
+      "parentUuid": "3f201876_41276f87",
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -189,6 +315,24 @@
     },
     {
       "key": {
+        "uuid": "febc23cc_b6845132",
+        "filename": "roles/conserver/tasks/service.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "The infrastructure isn\u0027t normally run every time.  We are running the libvirt-down and libvirt-up in the CI for libvirt, but that is not normal.  In Dallas you would have to run add_conserver.yml from the samples dir to execute this.  The reason we have to restart is to pick up the changes in the config file.",
+      "parentUuid": "f87e9a74_7294a64d",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "06c8a79f_b8dec0bc",
         "filename": "roles/conserver/templates/conserver.cf",
         "patchSetId": 28
@@ -200,6 +344,24 @@
       "writtenOn": "2021-09-21T22:12:35Z",
       "side": 1,
       "message": "I think you should remove all the comment boilerplate and only leave the factual config.",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d597bf99_ab4f080c",
+        "filename": "roles/conserver/templates/conserver.cf",
+        "patchSetId": 28
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "I meant to remove this template.  thanks!",
+      "parentUuid": "06c8a79f_b8dec0bc",
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -234,6 +396,41 @@
       "writtenOn": "2021-09-21T22:12:35Z",
       "side": 1,
       "message": "This should be in the hosts or settings file for libvirt envs, not here I don\u0027t think.",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1163acd3_043e9842",
+        "filename": "roles/ocp-on-libvirt/defaults/main.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "Why can\u0027t the default be to enable?",
+      "parentUuid": "0f711577_134a11f1",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4fd3b2f9_57bb4e31",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T13:19:04Z",
+      "side": 1,
+      "message": "Should I change the default in the role to false and leave this as true?",
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
