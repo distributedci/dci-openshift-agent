@@ -1,0 +1,32 @@
+---
+- name: "Create SriovNetworkNodePolicy for {{ sriov['policy'] }}"
+  k8s:
+    definition: "{{ lookup('template', 'sriov-policy.yaml.j2') }}"
+
+- name: "Verify SriovNetworkTargetNamespace {{ sriov['target_namespace'] }} exists"
+  k8s_info:
+    api_version: v1
+    kind: Namespace
+    name: "{{ sriov['target_namespace'] }}"
+  register: target_namespace_exists
+  when:
+    - sriov['target_namespace'] is defined
+    - sriov['target_namespace'] | length != 0
+
+- name: "Create SriovNetworkTargetNamespace {{ sriov['target_namespace'] }}"
+  k8s:
+    api_version: v1
+    kind: Namespace
+    state: present
+    name: "{{ sriov['target_namespace'] }}"
+  when:
+    - target_namespace_exists.resources is defined
+    - target_namespace_exists.resources|length == 0
+
+- name: "Create SriovNetwork for {{ sriov['name'] }}"
+  k8s:
+    definition: "{{ lookup('template', 'sriov-network.yaml.j2') }}"
+  when:
+    - sriov['name'] is defined and sriov['name'] | length != 0
+    - sriov['vlan'] is defined and sriov['vlan'] > 0
+...
