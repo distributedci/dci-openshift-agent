@@ -281,6 +281,24 @@
     },
     {
       "key": {
+        "uuid": "1dce7732_4e274bde",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-22T15:43:29Z",
+      "side": 1,
+      "message": "I\u0027m going to implement the cluster_nodes but I think accessing hostvars is fine, otherwise it\u0027s a lot of duplication for no apparent benefit.",
+      "parentUuid": "a74dd426_99be5731",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b11888ca_9c50ef3a",
         "filename": "roles/conserver/tasks/config.yml",
         "patchSetId": 28
