@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "249760a1_c6ff378d",
+        "filename": "plays/cnf-tests-mirror.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-22T08:15:23Z",
+      "side": 1,
+      "message": "-Is it not a separate command, as in the original code?\n-In case of being correct, I think you are missing a \"\\\" at the end of line 37, after /usr/bin/mirror.",
+      "range": {
+        "startLine": 37,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 24
+      },
+      "revId": "e48916c6729e5972359101f8809e2c291e62ea56",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
