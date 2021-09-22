@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0c1b626a_5dc5cd91",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-22T07:24:57Z",
+      "side": 1,
+      "message": "With this, all the task under ocs-setup/tasks/main.yml are executed sequentially, aren\u0027t they?  So, are all the steps included in this role (including, for example, tests and teardown) executed due to this? In that case, should \"include_role\" have a \"tasks_from\" clause to indicate hte tasks to execute, depending on the phase we are on d-o-a?",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 19
+      },
+      "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
