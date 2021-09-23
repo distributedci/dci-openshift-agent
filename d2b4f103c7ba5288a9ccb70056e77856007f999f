@@ -22,6 +22,30 @@
       "revId": "d2b4f103c7ba5288a9ccb70056e77856007f999f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "35943da0_bf396ec2",
+        "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-23T13:32:41Z",
+      "side": 1,
+      "message": "Sure, even without this validation the namespace will only be create once, because k8s detects is present after the second try, but any ideas than save us extra cycles or calls to the API are welcome, so I added some validation there, thanks!",
+      "parentUuid": "6570822f_f757cbc9",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 76
+      },
+      "revId": "d2b4f103c7ba5288a9ccb70056e77856007f999f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
