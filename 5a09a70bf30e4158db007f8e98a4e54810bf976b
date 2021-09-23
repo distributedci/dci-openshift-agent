@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3265b60c_8d2dd2c4",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-23T19:51:34Z",
+      "side": 1,
+      "message": "I shared some ideas with Tony, I also do not like passing a json payload as an inventory variable, so this new patch addresses this, still json, but now in a format easier to read.",
+      "parentUuid": "0dee6fad_15a51afc",
+      "revId": "5a09a70bf30e4158db007f8e98a4e54810bf976b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ad8ff0ae_2eecab8f",
         "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "15bc2c14_2e612d2c",
+        "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-23T19:51:34Z",
+      "side": 1,
+      "message": "I was also thinking that the namespace should be created in a post tasks, maybe by the app that is using it (i.e.: example-cnf). I\u0027ll keep them for now to test this patch and while we confirm if is not required",
+      "parentUuid": "ad8ff0ae_2eecab8f",
+      "revId": "5a09a70bf30e4158db007f8e98a4e54810bf976b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5f5101b3_d1ccd68c",
         "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2021-09-23T17:42:01Z",
       "side": 1,
       "message": "Ah!!, here is were we make reference to the ns. I wonder if this SriovNetwork cr really needs the namespace created, I\u0027m looking into a deployed cluster with SRIOV and the cr has annotated the ns, but not sure if it\u0027s a requirement to exist.  I\u0027ll see if I can confirm that.",
+      "revId": "5a09a70bf30e4158db007f8e98a4e54810bf976b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "20ca1b0a_f11fdc3c",
+        "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-23T19:51:34Z",
+      "side": 1,
+      "message": "The network I can also argue that can be created by the app that use it, I was thinking maybe the role operator-sriov should only enable the operator, but setting the VFs here seems fair.  I\u0027ll see too if I can test creating the network without the namespace",
+      "parentUuid": "5f5101b3_d1ccd68c",
       "revId": "5a09a70bf30e4158db007f8e98a4e54810bf976b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
