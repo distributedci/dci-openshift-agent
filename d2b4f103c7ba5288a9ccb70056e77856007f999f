@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6570822f_f757cbc9",
+        "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-23T08:04:44Z",
+      "side": 1,
+      "message": "If the elements of sriov list use the same namespace, maybe I would include a task prior to this, checking if the namespace to be created already exists or not, to avoid creating more than once. For example:\n\n- name: Check if {{ sriov[\u0027target_namespace\u0027] }} namespace exists\n  k8s_info:\n    api_version: v1\n    kind: Namespace\n    name: {{ sriov[\u0027target_namespace\u0027] }}\n  register: namespace_exists\n\nThen, you only need to add the following to Create SriovNetworkTargetNamespace task:\n\n  when: namespace_exists.resources|length \u003d\u003d 0",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 76
+      },
+      "revId": "d2b4f103c7ba5288a9ccb70056e77856007f999f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
