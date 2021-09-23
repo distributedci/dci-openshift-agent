@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "f74d2c59_05f839d0",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-23T07:36:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "856b98ad_8ad81081",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 19
+      },
+      "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c5e8108e_1698af0a",
         "filename": "roles/ocs-setup/defaults/main.yml",
         "patchSetId": 5
@@ -66,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "35c0fb2d_677d6d05",
+        "filename": "roles/ocs-setup/defaults/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-23T07:36:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c5e8108e_1698af0a",
+      "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ac83162b_7e24d855",
         "filename": "roles/ocs-setup/tasks/main.yml",
         "patchSetId": 5
@@ -80,6 +122,24 @@
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d3240766_a3d1c6ca",
+        "filename": "roles/ocs-setup/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-09-23T07:36:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ac83162b_7e24d855",
+      "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
