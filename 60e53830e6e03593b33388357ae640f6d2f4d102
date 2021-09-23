@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6cf75fbc_c07478be",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-23T22:53:14Z",
+      "side": 1,
+      "message": "Uh oh!, the last issue is that the task runs in the provisioner (deploy-operators.yml) and the file is in the jumphost or localhost . Seems like this will require a `delegate_to` but not sure if it will work on an include_task, maybe it will need to be split in two tasks, one to set the fact and other to run the sriov-setup ?",
+      "revId": "60e53830e6e03593b33388357ae640f6d2f4d102",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
