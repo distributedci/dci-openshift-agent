@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "880fb2ac_e9aabcd8",
+        "filename": "plays/tests.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-23T22:48:19Z",
+      "side": 1,
+      "message": "Can we use `dci_pullsecret_file` instead?\n\nSee below (line 61) `dci-cvp` uses most of the variables here used by redhat-tests, let\u0027s take advantage of them",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94bd3872_ba22db41",
+        "filename": "plays/tests.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-23T22:48:19Z",
+      "side": 1,
+      "message": "ditto, can we use `{{ local_registry }}` ?",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4912f3ae_c593b154",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-23T22:48:19Z",
+      "side": 1,
+      "message": "Does this mean we can\u0027t run conformance tests disconnected in 4.7?\nI see it can be done when connected, why the difference?",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
