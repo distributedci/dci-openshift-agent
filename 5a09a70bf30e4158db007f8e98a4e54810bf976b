@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0dee6fad_15a51afc",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-23T17:42:01Z",
+      "side": 1,
+      "message": "Talked about this offline, that it may be easier to read if the config was provided in an external file rather than a variable",
+      "revId": "5a09a70bf30e4158db007f8e98a4e54810bf976b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad8ff0ae_2eecab8f",
+        "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-23T17:42:01Z",
+      "side": 1,
+      "message": "Ah! I wasn\u0027t aware we were creating this ns this early. I\u0027m not sure what\u0027s the value of creating it in here as I see no annotation or anything special about this ns in relationship with SRIOV.\nI think we can delete these two tasks (namespace related)",
+      "revId": "5a09a70bf30e4158db007f8e98a4e54810bf976b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5f5101b3_d1ccd68c",
+        "filename": "roles/operator-sriov/tasks/sriov-setup.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-23T17:42:01Z",
+      "side": 1,
+      "message": "Ah!!, here is were we make reference to the ns. I wonder if this SriovNetwork cr really needs the namespace created, I\u0027m looking into a deployed cluster with SRIOV and the cr has annotated the ns, but not sure if it\u0027s a requirement to exist.  I\u0027ll see if I can confirm that.",
+      "revId": "5a09a70bf30e4158db007f8e98a4e54810bf976b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
