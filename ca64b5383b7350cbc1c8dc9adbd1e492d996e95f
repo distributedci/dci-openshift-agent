@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b5a2e99_60196810",
+        "filename": "plays/cnf-tests-mirror.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-09-23T08:40:43Z",
+      "side": 1,
+      "message": "FYI, registry has its own certificate and we can get ride this insecure option. I am doing this for  conformance tests because \u0027openshift-tests\u0027 cmd does not accept insecure options.\nSo by adding \"-v {{ conformance_registry_certificate }}:/etc/ssl/certs/domain.crt:z\" we can remove the insecure option. (variable is define here https://github.com/dci-labs/inventories/pull/41/files)\nAnyway, it\u0027s just to let you know, I don\u0027t think it is necessary to change this.",
+      "revId": "ca64b5383b7350cbc1c8dc9adbd1e492d996e95f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
