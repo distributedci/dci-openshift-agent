@@ -229,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "942ea43d_24ae489f",
+        "filename": "roles/conserver/tasks/config-libvirt.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3951fb27_920730ce",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3f201876_41276f87",
         "filename": "roles/conserver/tasks/config.yml",
         "patchSetId": 28
@@ -261,6 +279,24 @@
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "117e1dd4_28767d62",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d5c4af3e_2f928f8a",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -299,6 +335,24 @@
     },
     {
       "key": {
+        "uuid": "a4487aa2_effb7ba5",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1dce7732_4e274bde",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b11888ca_9c50ef3a",
         "filename": "roles/conserver/tasks/config.yml",
         "patchSetId": 28
@@ -313,6 +367,24 @@
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29d2c2ee_fa9d78cd",
+        "filename": "roles/conserver/tasks/config.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b11888ca_9c50ef3a",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -351,6 +423,24 @@
     },
     {
       "key": {
+        "uuid": "8fd47fde_19b2ca6d",
+        "filename": "roles/conserver/tasks/service.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "febc23cc_b6845132",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "06c8a79f_b8dec0bc",
         "filename": "roles/conserver/templates/conserver.cf",
         "patchSetId": 28
@@ -383,6 +473,24 @@
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ee8fd71_5cc64b45",
+        "filename": "roles/conserver/templates/conserver.cf",
+        "patchSetId": 28
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d597bf99_ab4f080c",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -438,6 +546,24 @@
     },
     {
       "key": {
+        "uuid": "28088a5c_4ab71029",
+        "filename": "roles/ocp-on-libvirt/defaults/main.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1163acd3_043e9842",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4fd3b2f9_57bb4e31",
         "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
         "patchSetId": 28
@@ -452,6 +578,24 @@
       "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9ba4a24_cb4d3fde",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 28
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-23T23:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fd3b2f9_57bb4e31",
+      "revId": "186abd870fdef10ab588b2c9461d7f9945d15a72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
