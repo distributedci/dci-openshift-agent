@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "7297bfc6_beb99529",
+        "filename": "plays/tests.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-24T17:06:59Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3fa2d2b8_c5429827",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "94bd3872_ba22db41",
         "filename": "plays/tests.yml",
         "patchSetId": 26
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "b2fcd0f1_ca0c48f6",
+        "filename": "plays/tests.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-24T17:06:59Z",
+      "side": 1,
+      "message": "Thanks for clarifying in that case I agree with leaving as is, but as Ramón pointed out it would be good to do some cleanup, if possible, and mostly fix CVP if that\u0027s an issue. But do it on a different request.",
+      "parentUuid": "659b9820_0fcf349d",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4912f3ae_c593b154",
         "filename": "roles/redhat-tests/tasks/conformance.yml",
         "patchSetId": 26
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "Mirroring option and campaign definition are available only started from 4.7 but in this version, some images are still the old Docker layout so they cannot be pushed to our local registry that\u0027s why we are running them on 4.8.\n4.7 should work fine in connected mode.",
       "parentUuid": "4912f3ae_c593b154",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3eb83cac_20115a8c",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-24T17:06:59Z",
+      "side": 1,
+      "message": "Ok, then let\u0027s keep it this way, I think we could get it in 4.7 in disconnected when we move to quay. The schema v1 is mostly a limitation on the registration, although is a good one to have.",
+      "parentUuid": "99fd2786_ca267fed",
       "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
