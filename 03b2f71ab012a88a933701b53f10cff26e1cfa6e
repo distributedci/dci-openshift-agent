@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9a49f05c_b2c9cf2a",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "995b0703_8c9a71a7",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "899be930_4809166e",
         "filename": "README.md",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "cf7e16ae_79e4b68d",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "899be930_4809166e",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf207ddf_68fcc2be",
         "filename": "README.md",
         "patchSetId": 4
@@ -50,6 +86,24 @@
       "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2dc612bf_1e7a0dc0",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Technically you can use centos8 as well, but I\u0027ll mention RHEL8",
+      "parentUuid": "bf207ddf_68fcc2be",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -93,6 +147,30 @@
     },
     {
       "key": {
+        "uuid": "8c01f9db_a3026ce5",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06316ff2_68d5c254",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 10
+      },
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ea08c48_49858c29",
         "filename": "README.md",
         "patchSetId": 4
@@ -113,6 +191,30 @@
       "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db7ad4ad_549f1e8b",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ea08c48_49858c29",
+      "range": {
+        "startLine": 172,
+        "startChar": 9,
+        "endLine": 172,
+        "endChar": 41
+      },
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -139,6 +241,30 @@
     },
     {
       "key": {
+        "uuid": "df1cd103_798c756c",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cdf60632_d552f1f8",
+      "range": {
+        "startLine": 213,
+        "startChar": 62,
+        "endLine": 214,
+        "endChar": 60
+      },
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "13686478_c6c950d1",
         "filename": "README.md",
         "patchSetId": 4
@@ -153,6 +279,24 @@
       "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80534c62_b118375b",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "13686478_c6c950d1",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -173,6 +317,24 @@
     },
     {
       "key": {
+        "uuid": "72e089a0_8f8d1106",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5d14324f_a483c349",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "06eeb5e5_8ecea79a",
         "filename": "docs/ocp_on_libvirt.md",
         "patchSetId": 4
@@ -187,6 +349,24 @@
       "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2ca71305_4f45ef47",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06eeb5e5_8ecea79a",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -207,6 +387,24 @@
     },
     {
       "key": {
+        "uuid": "622ba16a_402a58d8",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "38f683dd_b1ef0d88",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "89b91566_9c33d73f",
         "filename": "docs/ocp_on_libvirt.md",
         "patchSetId": 4
@@ -221,6 +419,24 @@
       "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "929c4604_1ab71953",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-09-24T19:29:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "89b91566_9c33d73f",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
