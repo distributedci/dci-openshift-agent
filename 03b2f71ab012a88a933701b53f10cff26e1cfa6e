@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "5d14324f_a483c349",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-24T15:31:30Z",
+      "side": 1,
+      "message": "Now that the troubleshooting sections is here. Do you mind adding something I wanted to add long ago please? We just need a note highlighting that metal3-bootstrap authentication changes between version of OCP, like this:\n\nNOTE: metal3-boostrap service in OCP \u003e\u003d 4.7 uses auth_type: http_basic, but in OCP \u003c\u003d 4.6 uses auth_type: none, and no need to set auth section with the credentials.",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "06eeb5e5_8ecea79a",
         "filename": "docs/ocp_on_libvirt.md",
         "patchSetId": 4
