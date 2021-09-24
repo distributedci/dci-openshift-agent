@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "899be930_4809166e",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-24T14:40:02Z",
+      "side": 1,
+      "message": "We should clarify dhcp requirements as well.  DHCP static entries for all nodes plus a pool of 5 ip addresses with short lease times (2 hours) that will be used for the bootstrap vm.",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0989e871_588771fa",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-24T14:40:02Z",
+      "side": 1,
+      "message": "\u003c3",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13686478_c6c950d1",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-24T14:40:02Z",
+      "side": 1,
+      "message": "We should put the #commenting on the previous line since ansible will add the # and everything after to the variable.  For example:\ndnsvip would end up being \u00271.2.3.4 # Virtual IP for the cluster ingress\u0027",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06eeb5e5_8ecea79a",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-24T14:40:02Z",
+      "side": 1,
+      "message": "samples/ocp_on_libvirt",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "38f683dd_b1ef0d88",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-24T14:40:02Z",
+      "side": 1,
+      "message": "inventory/libvirt_resources.yml",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "89b91566_9c33d73f",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-24T14:40:02Z",
+      "side": 1,
+      "message": "Can we link from here to the page where we show to run the agent?  Or maybe describe that now that you have configured your virtual hardware you are ready to run the ocp agent.  From the OCP agents point of view your virtual hardware will look just like real physical hardware.",
+      "revId": "03b2f71ab012a88a933701b53f10cff26e1cfa6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
