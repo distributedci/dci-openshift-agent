@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3fa2d2b8_c5429827",
+        "filename": "plays/tests.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-09-24T07:06:37Z",
+      "side": 1,
+      "message": "Same as answer as for local registry variable",
+      "parentUuid": "880fb2ac_e9aabcd8",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "94bd3872_ba22db41",
         "filename": "plays/tests.yml",
         "patchSetId": 26
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "659b9820_0fcf349d",
+        "filename": "plays/tests.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-09-24T07:06:37Z",
+      "side": 1,
+      "message": "I was using this variable at the beginning but at the Patchset 11, I faced this error https://www.distributed-ci.io/jobs/df4bac05-0901-4cd8-a267-fcea9bc407ab/jobStates#43adba1a-2d1a-4580-b4b7-c2a1829e40e8:file357\nIn fact, the example with CVP is skipped because the variable is not defined and it is not expected I guess",
+      "parentUuid": "94bd3872_ba22db41",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4912f3ae_c593b154",
         "filename": "roles/redhat-tests/tasks/conformance.yml",
         "patchSetId": 26
@@ -47,6 +83,24 @@
       "writtenOn": "2021-09-23T22:48:19Z",
       "side": 1,
       "message": "Does this mean we can\u0027t run conformance tests disconnected in 4.7?\nI see it can be done when connected, why the difference?",
+      "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "99fd2786_ca267fed",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-09-24T07:06:37Z",
+      "side": 1,
+      "message": "Mirroring option and campaign definition are available only started from 4.7 but in this version, some images are still the old Docker layout so they cannot be pushed to our local registry that\u0027s why we are running them on 4.8.\n4.7 should work fine in connected mode.",
+      "parentUuid": "4912f3ae_c593b154",
       "revId": "e425b7898dd52c6adbb159e2a9a37e77fc59570d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
