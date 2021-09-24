@@ -16,6 +16,24 @@
       "revId": "60e53830e6e03593b33388357ae640f6d2f4d102",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77e71b11_b54ed6a3",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-24T02:51:28Z",
+      "side": 1,
+      "message": "Yes, good point, and in patch set 4 I also forgot to update the condition (sriov_network which was no longer a valid variable), besides the new json files with the variables were not in the expected path because pull/46 hasn\u0027t been merged, so I copied them manually, and I added a new tasks deleted to localhost to load the vars.",
+      "parentUuid": "6cf75fbc_c07478be",
+      "revId": "60e53830e6e03593b33388357ae640f6d2f4d102",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
