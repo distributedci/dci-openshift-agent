@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ba2d7b0_762f1ec0",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-24T20:49:51Z",
+      "side": 1,
+      "message": "Added that section. Thanks",
+      "parentUuid": "d85108d3_5ea044ae",
+      "revId": "853959e08d75498801e845ba657cc9e2949d6164",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cf2ac2e4_feaba515",
         "filename": "samples/sno_on_libvirt/README.md",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "853959e08d75498801e845ba657cc9e2949d6164",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3bf6f13b_a9987625",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-09-24T20:49:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cf2ac2e4_feaba515",
+      "revId": "853959e08d75498801e845ba657cc9e2949d6164",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
