@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9e3b1a9c_882fcdf3",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-24T22:54:43Z",
+      "side": 1,
+      "message": "A couple of typos, should read:\nThe deployment consists on  a Single Cluster Node playing the Master and Worker Node at the same time.",
+      "revId": "b3eb5c93e08f7d2554b3f2f9569dd5ec8c0cae2a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "20b6bac3_9dc78e3e",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-09-24T22:54:43Z",
+      "side": 1,
+      "message": "Typo:\npseudo-official",
+      "revId": "b3eb5c93e08f7d2554b3f2f9569dd5ec8c0cae2a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
