@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d85108d3_5ea044ae",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-24T20:04:05Z",
+      "side": 1,
+      "message": "I do not want to scare folks wanting to deploy SNO because they do not have that amount of resources, because it can work with less, I suggest to mention that these are the pseduo-official resources for now, but it has been tested with 6vcpu, 16GB RAM and 20GB disk. I\u0027m waiting for the official release to get the official recommended values, I heard in the SNO channel, that 32GB requirement in the assisted installer will probably go down to 24GB.",
+      "revId": "853959e08d75498801e845ba657cc9e2949d6164",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf2ac2e4_feaba515",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-24T20:04:05Z",
+      "side": 1,
+      "message": "I probably included this space in previous commit. Do you mind remove it please? :)",
+      "revId": "853959e08d75498801e845ba657cc9e2949d6164",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
