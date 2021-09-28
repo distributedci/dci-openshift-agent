@@ -7,7 +7,7 @@ default {{ cluster }} {
 
 {% for host in ipmi_sol_hosts %}
 console {{ cluster }}-{{ hostvars[host].name }} {
-  include {{ cluster }}
+  include {{ cluster }};
   type exec;
   exec "/usr/bin/ipmitool -I lanplus -H {{ hostvars[host].ipmi_address }} -U {{ hostvars[host].ipmi_user }} -P {{ hostvars[host].ipmi_password }}  sol deactivate && echo 'Disconnected' ; ulimit -v 31720 ; /usr/bin/ipmitool -I lanplus -H {{ hostvars[host].ipmi_address }} -U {{ hostvars[host].ipmi_user }} -P {{ hostvars[host].ipmi_password }}  sol activate";
 }
