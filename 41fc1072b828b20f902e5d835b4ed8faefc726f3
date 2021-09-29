@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "14caf7d2_1381fee5",
+        "filename": "roles/conserver/templates/conserver-ipmi.cf",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-29T13:23:29Z",
+      "side": 1,
+      "message": "I would love to put this whole line in the defaults section but I don\u0027t see a way to reference the hostvars variables.  the args may be different (-H vs -h).\n\nIf other commands appear through feedback from Partners I would be happy to re-address this when we have an actual use case.",
+      "parentUuid": "7ba14c66_4e32b621",
+      "revId": "41fc1072b828b20f902e5d835b4ed8faefc726f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5da2f677_a92ade49",
         "filename": "roles/conserver/templates/conserver-ipmi.cf",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2021-09-28T22:13:29Z",
       "side": 1,
       "message": "I\u0027m not sure this line is necessary. If it\u0027s the case, we should probably use the good range depending of the infrastructure.",
+      "revId": "41fc1072b828b20f902e5d835b4ed8faefc726f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56bc5833_ffec89c9",
+        "filename": "roles/conserver/templates/conserver-ipmi.cf",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-09-29T13:23:29Z",
+      "side": 1,
+      "message": "I\u0027m going to remove allowed and leave the trusted on localhost",
+      "parentUuid": "5da2f677_a92ade49",
       "revId": "41fc1072b828b20f902e5d835b4ed8faefc726f3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
