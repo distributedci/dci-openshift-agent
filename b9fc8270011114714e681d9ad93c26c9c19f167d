@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f41cc86_f5c0c79b",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-09-30T19:46:05Z",
+      "side": 1,
+      "message": "If possible let\u0027s delete that empty space at the end of the line, this happens to me too all the time :P",
+      "revId": "b9fc8270011114714e681d9ad93c26c9c19f167d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
