@@ -129,11 +129,16 @@ export GERRIT_USER
 if [ $1 = --virt ]; then
     VIRT=virt
     DCI_NAME=${DCI_NAME:-"libvirt"}
+    CLUSTER=dciokd
     shift
 elif [ $1 = --sno ]; then
     VIRT=sno
     DCI_NAME=${DCI_NAME:-"sno"}
+    CLUSTER=dcisno
     shift
+else
+    # TODO: extract cluster
+    CLUSTER=
 fi
 
 DIR=$1
@@ -307,16 +312,52 @@ export ANSIBLE_CONFIG="$PWD/ansible.cfg"
 setsid $CMD -s -v -- -v $OPTS -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\"]}" "$@" >& output &
 PID=$!
 
-# make everything read-only to mimic what is delivered as rpm or in
-# the system
-chmod -R a-w "$DIR" || :
-
 tail -f output&
 PID2=$!
 
 wait $PID
 RET=$?
 PID=
+
+# test the deployed cluster with the fake cnf from dci-openshift-app-agent
+OC=oc
+for p in /usr/local/bin "$HOME"/clusterconfigs-*; do
+    if [ -x "$p/oc" ]; then
+        OC="$p/oc"
+        break
+    fi
+done
+
+CLUSTER="$($OC config view -o jsonpath='{.clusters[0].name}')"
+export KUBECONFIG="$HOME/clusterconfigs-$CLUSTER/kubeconfig"
+
+if [ -r "$KUBECONFIG" ]; then
+    OCPVERS=$(oc version -o json|jq -r .openshiftVersion)
+    OCPVERS=${OCPVERS%%-*}
+    # extract the DCI topic
+    case "$OCPVERS" in
+        *.*.*)
+            OCP_TOPIC="OCP-${OCPVERS%.*}"
+            ;;
+        *.*)
+            OCP_TOPIC="OCP-$OCPVERS"
+            ;;
+        *)
+            "$BASEDIR"/send-feedback "$DIR" "Unsupported OCP version scheme: $OCPVERS"
+            exit 1
+            ;;
+    esac
+    if [ -d dci-openshift-app-agent ]; then
+        cd dci-openshift-app-agent
+        setsid $PWD/dci-openshift-app-agent-ctl -s -d -- -e dci_config_dir=/var/lib/dci-openshift-app-agent/samples/basic_example -e dci_topic="$OCP_TOPIC" &>> ../output &
+        cd ..
+    else
+        setsid dci-openshift-app-agent-ctl -s -- -e dci_config_dir=$PWD/samples/basic_example -e dci_topic="$OCP_TOPIC" &>> output &
+    fi
+    do_wait
+else
+    echo "$KUBECONFIG is not readable"
+fi
 
 exit $RET
 
