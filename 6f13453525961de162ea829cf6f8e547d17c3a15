@@ -1,0 +1,9 @@
+Code-Review+2: Tony Garcia <tonyg@redhat.com>
+Code-Review+1: Tatiana Krishtop <tkrishto@redhat.com>
+Workflow+1: Tony Garcia <tonyg@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Tue, 05 Oct 2021 20:53:15 +0000
+Reviewed-on: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/22825
+Project: dci-openshift-agent
+Branch: refs/heads/master
