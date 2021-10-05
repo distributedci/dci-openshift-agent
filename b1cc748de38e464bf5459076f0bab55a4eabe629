@@ -16,6 +16,24 @@
       "revId": "b1cc748de38e464bf5459076f0bab55a4eabe629",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0ecb2453_c1980e4d",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2021-10-05T13:09:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f68736f9_3dee0605",
+      "revId": "b1cc748de38e464bf5459076f0bab55a4eabe629",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
