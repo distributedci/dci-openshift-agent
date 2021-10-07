@@ -56,8 +56,9 @@
       REGISTRY_AUTH_FILE: "{{ dci_pullsecret_file }}"
     shell:
       cmd: >
-       podman run --rm -v {{ dci_cluster_configs_dir }}/:/kubeconfig:Z  -e  KUBECONFIG=/kubeconfig/kubeconfig
-       -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/" -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }}
+       podman run --rm -v {{ dci_cluster_configs_dir }}/:/kubeconfig:Z
+       -e KUBECONFIG=/kubeconfig/kubeconfig -e IMAGE_REGISTRY="{{ cnf_tests_image_registry }}/"
+       -e ROLE_WORKER_CNF=worker -e CNF_TESTS_IMAGE=cnf-tests:{{ cnf_tests_image }}
        -v {{ dci_cluster_configs_dir }}:/tests:Z {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}
        /usr/bin/test-run.sh  -ginkgo.focus="performance" --junit  /tests/{{ date.stdout }}/performance
     ignore_errors: yes
