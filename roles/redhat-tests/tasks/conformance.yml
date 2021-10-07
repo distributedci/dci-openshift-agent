@@ -14,6 +14,14 @@
    - ocp_version_maj|int == 4
    - ocp_version_min|int >= 7
 
+- name: set disconnected JSON config
+  set_fact:
+    provider_config: "{{ lookup('file', 'templates/provider.j2') | from_json }}"
+  when:
+    - dci_disconnected | default(false) | bool
+    - ocp_version_maj|int == 4
+    - ocp_version_min|int >= 8
+
 - name: "test_ redhat-tests: Run the openshift conformance test suite (disconnected)"
   shell:
     cmd: >
@@ -26,7 +34,8 @@
      quay.io/openshift/origin-tests:{{ ocp_version_maj }}.{{ ocp_version_min }}
      /bin/bash -c "openshift-tests images --to-repository {{ conformance_local_registry }}/conformance-test
      | oc image mirror -a /auths.json -f - --keep-manifest-list=true --continue-on-error=true --skip-missing=true
-     && openshift-tests run {{ dci_openshift_agent_conformance }} --from-repository {{ conformance_local_registry }}/conformance-test --junit-dir /tests" > {{ dci_cluster_configs_dir }}/conformance-run.txt
+     && openshift-tests run {{ dci_openshift_agent_conformance }} --from-repository {{ conformance_local_registry }}/conformance-test \
+     --provider={{ provider }} --junit-dir /tests" > {{ dci_cluster_configs_dir }}/conformance-run.txt
   ignore_errors: yes
   when:
     - dci_disconnected | default(false) | bool
