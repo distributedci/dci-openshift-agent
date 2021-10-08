@@ -56,6 +56,12 @@ function finish ()
                 dcictl job-upload-file --name ansible.log --path ${OUTPUT_DIR}/ansible.log ${JOB_ID}
             fi
         fi
+        # Keep job id in /var/tmp/$CLUSTER.dci.job_id to survive
+        # execution and be in a known location for test-runner to find
+        # it. Keep in sync with test-runner.
+        CLUSTER=$(sed -n -e 's@changed:.*/clusterconfigs-\([^\"]*\)/kubeconfig.*@\1@p' "$ANSIBLE_LOG_PATH")
+        mv -f "$JOB_ID" "/var/tmp/$CLUSTER.dci.job_id"
+
         echo "removing output dir: ${OUTPUT_DIR}"
         rm -rf ${OUTPUT_DIR}
     fi
