@@ -151,7 +151,7 @@ else
     BASEDIR=/usr/share/dci-openshift-agent
 fi
 
-if [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
+if [ -z "$NO_DCI_QUEUE" ] && [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
     if [ -n "$USE_PREFIX" ]; then
         dci-queue schedule $DCI_QUEUE -- $BASEDIR/test-runner $VIRT $DIR -p @RESOURCE "$@"
     else
