@@ -14,7 +14,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-set -e
+set -ex
 
 cleanup() {
     if [ -d $DIR.bootstrap ]; then
@@ -45,8 +45,6 @@ fi
 if [ ! -x $BASEDIR/extract-dependencies ]; then
     BASEDIR=/usr/share/dci-openshift-agent
 fi
-
-set -x
 
 ARGS="$@"
 
@@ -103,14 +101,11 @@ if [ -d $DIR ]; then
              exit
          fi
          dci-queue unschedule $DCI_QUEUE $jobid
-         if [ -d $DIR ]; then
-             find $DIR -type d -not -perm -u=w -exec chmod u+w {} \;
-             rm -rf $DIR
-         fi        
-    else
-        $BASEDIR/send-feedback $DIR "A job is already scheduled or running in $DIR. Aborting."
-        exit 1
-    fi
+     fi
+     if [ -d "$DIR" ]; then
+         find "$DIR" -type d -not -perm -u=w -exec chmod u+w {} \;
+         rm -rf "$DIR"
+     fi        
 fi
 
 trap cleanup 0
@@ -132,33 +127,47 @@ fi
 
 BASEDIR=$(sed -e 's/\.bootstrap//' <<< $BASEDIR)
 
+# we should have only one directory and one or zero json file
 if [ "$TYPE" = "github" ]; then
     mv *.json github.json
+    DESC=$(jq -r .body github.json)
+else
+    DESC=$(cd $(ls|fgrep -v .json); git log -1)
 fi
 
-# we should have only one directory and one or zero json file
-(
-  # extract depends-on from a pr body
-  jq -r .body *.json || :
-  # extract depends-on from the last commit message
-  cd $(ls|fgrep -v .json); git log -1
-) | tr -d '\r' | sort -u | $BASEDIR/extract-dependencies $DIR
+# extract Depends-On
+echo "$DESC" | tr -d '\r' | sort -u | $BASEDIR/extract-dependencies $DIR
+
+# process Test-Hints (only no-check, sno or libvirt for now)
+if grep -qi "^\s*Test-Hints:\s*sno\s*" <<< $DESC; then
+    VIRT=--sno
+fi
+
+if grep -qi "^\s*Test-Hints:\s*libvirt\s*" <<< $DESC; then
+    VIRT=--virt
+fi
+
+if grep -qi "^\s*Test-Hints:\s*no-check\s*" <<< $DESC; then
+    VIRT=--no-check
+    NO_DCI_QUEUE=1
+fi
+
+# process Test-Args-Hints
+OPTS=$(sed -n -e "s/^\s*Test-Args-Hints:\s*//pi" <<< $DESC)
 
 # take test-runner from the local dir
 if [ -d dci-openshift-agent ]; then
     BASEDIR=$PWD/dci-openshift-agent
-else
-    BASEDIR=/usr/share/dci-openshift-agent
 fi
 
-if [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
+if [ -z "$NO_DCI_QUEUE" ] && [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
     if [ -n "$USE_PREFIX" ]; then
-        dci-queue schedule $DCI_QUEUE -- $BASEDIR/test-runner $VIRT $DIR -p @RESOURCE "$@"
+        dci-queue schedule $DCI_QUEUE -- $BASEDIR/test-runner $VIRT $DIR -p @RESOURCE "$@" $OPTS
     else
-        dci-queue schedule $DCI_QUEUE -- bash -c "echo @RESOURCE; exec $BASEDIR/test-runner $VIRT $DIR $@"
+        dci-queue schedule $DCI_QUEUE -- bash -c "echo @RESOURCE; exec $BASEDIR/test-runner $VIRT $DIR $@ $OPTS"
     fi
 else
-    $BASEDIR/test-runner $VIRT $DIR "$@"
+    $BASEDIR/test-runner $VIRT $DIR "$@" $OPTS
 fi
 
 # dci-check-change ends here
