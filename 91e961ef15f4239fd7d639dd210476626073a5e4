@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3484d8a_2db8d96f",
+        "filename": "roles/redhat-tests/tasks/conformance.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-10-08T18:24:45Z",
+      "side": 1,
+      "message": "I think this is provider_config. you might want to single quote it to allow spaces and carrier returns.",
+      "revId": "91e961ef15f4239fd7d639dd210476626073a5e4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
