@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "58d6f180_b747a335",
+        "filename": "docs/development.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-10-12T16:45:27Z",
+      "side": 1,
+      "message": "Should we add d-o-a-a as a dependency? or at least \"Recommend\"[0] to have d-o-a-a? \n\ntest-runner called by dci-check-change won\u0027t succeed if d-o-a-a is not installed\n\n\n[0] https://rpm-software-management.github.io/rpm/manual/dependencies.html",
+      "revId": "30641a73bfaac03374bb57365642e40f76152ba0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
