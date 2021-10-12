@@ -16,6 +16,24 @@
       "revId": "30641a73bfaac03374bb57365642e40f76152ba0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0eddab8f_734986fb",
+        "filename": "docs/development.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-12T17:16:45Z",
+      "side": 1,
+      "message": "I have resolved it in another way by testing if d-o-a-a-ctl is presen to run the second job.",
+      "parentUuid": "58d6f180_b747a335",
+      "revId": "30641a73bfaac03374bb57365642e40f76152ba0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
