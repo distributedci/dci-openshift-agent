@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5a50cf1_90535438",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-10-13T13:11:53Z",
+      "side": 1,
+      "message": "This entry is not in your example above, the closest I see is \"console-openshift-console.apps.dcisno.example.com\"",
+      "revId": "f421e2dcd7ffcd7a689193ad62df315cabef539b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
