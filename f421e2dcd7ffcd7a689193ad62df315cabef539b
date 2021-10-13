@@ -16,6 +16,24 @@
       "revId": "f421e2dcd7ffcd7a689193ad62df315cabef539b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd8793b6_d3659e9c",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-10-13T22:53:05Z",
+      "side": 1,
+      "message": "Good catch Tony. I fixed it.",
+      "parentUuid": "e5a50cf1_90535438",
+      "revId": "f421e2dcd7ffcd7a689193ad62df315cabef539b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
