@@ -4,7 +4,7 @@
   environment:
     KUBECONFIG: "{{ dci_cluster_configs_dir | expanduser }}/kubeconfig"
   shell: |
-    {{ dci_cluster_configs_dir }}/oc login --insecure-skip-tls-verify=true -u admin -p admin https://api.{{ cluster }}.{{ domain }}:6443
+    {{ dci_cluster_configs_dir }}/oc login --insecure-skip-tls-verify=true -u admin -p {{ admin_pass }} https://api.{{ cluster }}.{{ domain }}:6443
   retries: 10
   delay: 10
   register: result
