@@ -17,14 +17,15 @@
 set -ex
 
 cleanup() {
-    if [ -d $DIR.bootstrap ]; then
-        rm -rf $DIR.bootstrap
+    if [ -d "$DIR.bootstrap" ]; then
+        rm -rf "$DIR.bootstrap"
     fi
 }
 
 VIRT=
 DCI_QUEUE=
 SNO_DCI_QUEUE=
+SUPPORTED_HINTS=
 
 if [ -r /etc/dci-openshift-agent/config ]; then
     . /etc/dci-openshift-agent/config
@@ -32,14 +33,18 @@ fi
 
 BASEDIR=$(cd $(dirname $0); pwd)
 
-if [ $# = 0 -o "$1" = -h ]; then
+if [ $# = 0 ] || [ "$1" = -h ]; then
   name=$(basename -- "$0")
     cat << EOF
-    echo "Usage: $name [--virt|--sno] [-f] (<GitHub PR URL>|<Gerrit review id>)" 1>&2
+    echo "Usage: $name [--virt|--sno] [-s] (<GitHub PR URL>|<Gerrit review id>) [<kubeconfig path>] [<ctl args>]" 1>&2
+    Extract changes from Gerrit or GitHub and test them without impacting what is on the system.
+
     arguments:
     --virt       Use OCP on Libvirt.
     --sno        Use SNO on Libvirt.
-    -f           Force a suffix to be added.
+    -s           Force a suffix to be added.
+    <kubeconfig> to avoid running an OCP installation.
+    <ctl args>   arguments passed to the ctl.
 EOF
     exit 1
 fi
@@ -63,8 +68,8 @@ elif [ $1 = --sno ]; then
     shift
 fi
 
-# force a suffix to be added on -f
-if [ "$1" = "-f" ]; then
+# force a suffix to be added on -s
+if [ "$1" = "-s" ]; then
     # manage recursive call (bootstrap): extract the directory name
     # from the path of the command
     if grep -Fq '.bootstrap' <<< $BASEDIR; then
@@ -155,24 +160,28 @@ fi
 echo "$DESC" | tr -d '\r' | sort -u | $BASEDIR/extract-dependencies $DIR
 
 # process Test-Hints (only no-check, sno or libvirt for now)
-if grep -qi "^\s*Test-Hints:\s*sno\s*" <<< $DESC; then
+if [[ "sno" =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*sno\s*" <<< $DESC; then
     VIRT=--sno
     if [ -n "$SNO_DCI_QUEUE" ]; then
         DCI_QUEUE="$SNO_DCI_QUEUE"
     fi
 fi
 
-if grep -qi "^\s*Test-Hints:\s*libvirt\s*" <<< $DESC; then
+if [[ "sno" =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*libvirt\s*" <<< $DESC; then
     VIRT=--virt
 fi
 
-if grep -qi "^\s*Test-Hints:\s*no-check\s*" <<< $DESC; then
+if [[ "no-check" =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*no-check\s*" <<< $DESC; then
     VIRT=--no-check
     NO_DCI_QUEUE=1
 fi
 
 # process Test-Args-Hints
-OPTS=$(sed -n -e "s/^\s*Test-Args-Hints:\s*//pi" <<< $DESC)
+if [[ "args" =~ $SUPPORTED_HINTS ]]; then
+    OPTS=$(sed -n -e "s/^\s*Test-Args-Hints:\s*//pi" <<< $DESC)
+else
+    OPTS=
+fi
 
 # take test-runner from the local dir
 if [ -d dci-openshift-agent ]; then
