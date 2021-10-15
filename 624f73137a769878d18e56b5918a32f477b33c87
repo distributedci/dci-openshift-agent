@@ -16,6 +16,24 @@
       "revId": "624f73137a769878d18e56b5918a32f477b33c87",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af010362_676a4e82",
+        "filename": "plays/tests.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-10-15T21:01:58Z",
+      "side": 1,
+      "message": "yes separating the tasks to create users might be simpler, I was thinking another option to validate if the users already exist and only produce creds and set users if they are not there. But also requires a few more tasks and conditions.",
+      "parentUuid": "68bb0c87_d91701e5",
+      "revId": "624f73137a769878d18e56b5918a32f477b33c87",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
