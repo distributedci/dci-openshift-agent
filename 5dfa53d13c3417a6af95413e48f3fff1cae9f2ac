@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42a849d5_71593af9",
+        "filename": "dci-check-change",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-10-15T11:58:25Z",
+      "side": 1,
+      "message": "should be \u003ckubeconfig path\u003e?",
+      "range": {
+        "startLine": 47,
+        "startChar": 5,
+        "endLine": 47,
+        "endChar": 15
+      },
+      "revId": "5dfa53d13c3417a6af95413e48f3fff1cae9f2ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e20bbded_a004e1f8",
+        "filename": "dci-check-change",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-10-15T11:58:25Z",
+      "side": 1,
+      "message": "missing this space from being removed",
+      "range": {
+        "startLine": 113,
+        "startChar": 66,
+        "endLine": 113,
+        "endChar": 74
+      },
+      "revId": "5dfa53d13c3417a6af95413e48f3fff1cae9f2ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "85f1033b_e5517f66",
+        "filename": "test-runner",
+        "patchSetId": 3
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-10-15T11:58:25Z",
+      "side": 1,
+      "message": "shouldn\u0027t it be the following?\n```\nDO_VOTE\u003d${DO_VOTE:-\"\"}\n```\nbecause, if defined as commented in development.md, the current way of defining the variable would override the value passed in /etc/dci-openshift-agent/config file, no?",
+      "range": {
+        "startLine": 127,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 8
+      },
+      "revId": "5dfa53d13c3417a6af95413e48f3fff1cae9f2ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
