@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0b244a1b_d40bc704",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-10-15T02:07:16Z",
+      "side": 1,
+      "message": "👍",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5a0d019_10ea2284",
+        "filename": "roles/oc-setup/tasks/config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-10-15T02:07:16Z",
+      "side": 1,
+      "message": "What do you think if we go with 0640?",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71e2f409_dcfe0153",
+        "filename": "roles/oc-setup/tasks/config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-10-15T02:07:16Z",
+      "side": 1,
+      "message": "Same question, can we do 0640?",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c6f6a82f_cb962952",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-10-15T02:07:16Z",
+      "side": 1,
+      "message": "Was this just a reference to the variable right? the {{ }} make me think we are expecting this will be interpreted as jinja and print the variable content :)\nI prefer the way to wrote in the main README:\n/home/`\u003cuser\u003e`/`\u003cclusterconfigs-path\u003e`/ocp_creds.txt",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "698be7b9_0dd5db47",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-10-15T02:07:16Z",
+      "side": 1,
+      "message": "just minor typo here, should read: \"standalone\"",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
