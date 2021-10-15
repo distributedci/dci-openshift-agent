@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4fbe09d9_f2f3185a",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-10-15T17:35:49Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "0b244a1b_d40bc704",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a5a0d019_10ea2284",
         "filename": "roles/oc-setup/tasks/config.yml",
         "patchSetId": 2
@@ -33,6 +51,24 @@
       "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6e09b860_31b75461",
+        "filename": "roles/oc-setup/tasks/config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-10-15T17:35:49Z",
+      "side": 1,
+      "message": "Agreed, thanks!",
+      "parentUuid": "a5a0d019_10ea2284",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "9e4496a3_1dc8c93b",
+        "filename": "roles/oc-setup/tasks/config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-10-15T17:35:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71e2f409_dcfe0153",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c6f6a82f_cb962952",
         "filename": "samples/sno_on_libvirt/README.md",
         "patchSetId": 2
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "8e2f76e7_9da5bf87",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-10-15T17:35:49Z",
+      "side": 1,
+      "message": "Fixed, thanks!",
+      "parentUuid": "c6f6a82f_cb962952",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "698be7b9_0dd5db47",
         "filename": "samples/sno_on_libvirt/README.md",
         "patchSetId": 2
@@ -84,6 +156,24 @@
       "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "19dcfe53_dadca0b0",
+        "filename": "samples/sno_on_libvirt/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-10-15T17:35:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "698be7b9_0dd5db47",
+      "revId": "26b21a71d5495853d78cc8f9b7cd1d661ab46293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
