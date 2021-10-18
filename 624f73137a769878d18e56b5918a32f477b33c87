@@ -34,6 +34,24 @@
       "revId": "624f73137a769878d18e56b5918a32f477b33c87",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9eb9f95c_5142552f",
+        "filename": "plays/tests.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-10-18T18:35:46Z",
+      "side": 1,
+      "message": "I discussed this with Tony, the duplicated call can be safely removed. If the play is executed by specific tag there won\u0027t be issues if kubeconfig is available.",
+      "parentUuid": "af010362_676a4e82",
+      "revId": "624f73137a769878d18e56b5918a32f477b33c87",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
