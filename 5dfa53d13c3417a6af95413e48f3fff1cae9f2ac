@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7c6027ac_621822c8",
+        "filename": "dci-check-change",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-18T07:09:09Z",
+      "side": 1,
+      "message": "changing that",
+      "parentUuid": "42a849d5_71593af9",
+      "range": {
+        "startLine": 47,
+        "startChar": 5,
+        "endLine": 47,
+        "endChar": 15
+      },
+      "revId": "5dfa53d13c3417a6af95413e48f3fff1cae9f2ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e20bbded_a004e1f8",
         "filename": "dci-check-change",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "680af26f_ee6b06bf",
+        "filename": "dci-check-change",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-18T07:09:09Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "e20bbded_a004e1f8",
+      "range": {
+        "startLine": 113,
+        "startChar": 66,
+        "endLine": 113,
+        "endChar": 74
+      },
+      "revId": "5dfa53d13c3417a6af95413e48f3fff1cae9f2ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "85f1033b_e5517f66",
         "filename": "test-runner",
         "patchSetId": 3
@@ -68,6 +116,30 @@
       "revId": "5dfa53d13c3417a6af95413e48f3fff1cae9f2ac",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "23d99128_6da456ae",
+        "filename": "test-runner",
+        "patchSetId": 3
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-18T07:09:09Z",
+      "side": 1,
+      "message": "not really as the setting of this variable must be done in /etc/dci-openshift-agent/config and it is sourced just below.",
+      "parentUuid": "85f1033b_e5517f66",
+      "range": {
+        "startLine": 127,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 8
+      },
+      "revId": "5dfa53d13c3417a6af95413e48f3fff1cae9f2ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
