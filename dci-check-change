@@ -183,6 +183,13 @@ else
     OPTS=
 fi
 
+# process Test-App-Hints
+if [[ "app" =~ "$SUPPORTED_HINTS" ]]; then
+    APP_NAME=$(sed -n -e "s/^\s*Test-App-Hints:\s*//pi" <<< $DESC)
+else
+    APP_NAME=basic_example
+fi
+
 # take test-runner from the local dir
 if [ -d dci-openshift-agent ]; then
     BASEDIR=$PWD/dci-openshift-agent
@@ -190,12 +197,12 @@ fi
 
 if [ -z "$NO_DCI_QUEUE" ] && [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
     if [ -n "$USE_PREFIX" ]; then
-        dci-queue schedule $DCI_QUEUE -- $BASEDIR/test-runner $VIRT $DIR -p @RESOURCE "$@" $OPTS
+        dci-queue schedule $DCI_QUEUE -- env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $DIR -p @RESOURCE "$@" $OPTS
     else
-        dci-queue schedule $DCI_QUEUE -- bash -c "echo @RESOURCE; exec $BASEDIR/test-runner $VIRT $DIR $@ $OPTS"
+        dci-queue schedule $DCI_QUEUE -- bash -c "echo @RESOURCE; export APP_NAME=$APP_NAME; exec $BASEDIR/test-runner $VIRT $DIR $@ $OPTS"
     fi
 else
-    $BASEDIR/test-runner $VIRT $DIR "$@" $OPTS
+    env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $DIR "$@" $OPTS
 fi
 
 # dci-check-change ends here
