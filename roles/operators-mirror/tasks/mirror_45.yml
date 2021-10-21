@@ -1,0 +1,109 @@
+---
+- name: set OPM version (non GA)
+  set_fact:
+    dci_opm_version: "{{ opm_version | default('v' + base_version|string) }}"
+    filter_by_arg: "--index-filter-by-os"
+  when: build != 'ga'
+
+- name: set OPM version (GA)
+  set_fact:
+    dci_opm_version: "v{{ base_version }}"
+    filter_by_arg: "--index-filter-by-os"
+  when: build == 'ga'
+
+- name: change filter according to the version
+  set_fact:
+    filter_by_arg: "--filter-by-os"
+
+- name: Build Operator catalog image v{{ base_version }}
+  shell:
+    cmd: >
+      set -x;
+      {{ provision_cache_store }}/{{ version }}/oc adm catalog build
+      --appregistry-org redhat-operators
+      --from={{ opm_from_registry }}:{{ dci_opm_version }}
+      --filter-by-os="linux/amd64"
+      --to={{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      -a {{ dci_pullsecret_file }} --insecure
+
+- name: Mirror catalog manifests
+  shell:
+    chdir: "{{ dci_cluster_configs_dir }}"
+    cmd: >
+      set -x;
+      {{ provision_cache_store }}/{{ version }}/oc adm catalog mirror
+      {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
+      {{ local_registry }} -a {{ dci_pullsecret_file }} --insecure
+      {{ filter_by_arg }}="linux/amd64" --manifests-only
+      --to-manifests={{ manifests_dir }} 2>&1
+  register: catalog_manifests_output
+
+- name: "Set manifests database path"
+  set_fact:
+    manifests_database: "{{ catalog_manifests_output.stdout | regex_search('/tmp/[^ ]+(bundles|index).db') }}"
+
+- name: "Extract dependencies for operators"
+  shell:
+    chdir: "{{ dci_cluster_configs_dir }}"
+    cmd: >
+      set -x;
+      echo "select image from related_image where operatorbundle_name like '%{{ item }}%';"
+      | sqlite3 {{ manifests_database }}
+  loop: "{{ opm_mirror_list }}"
+  register: opm_deps
+  notify:
+    - "Clean up temporary manifest files"
+
+- name: "Create opm dependency list"
+  set_fact:
+    opm_dep_list: "{{ opm_dep_list | default([]) }} + {{ item.stdout_lines }}"
+  loop: "{{ opm_deps.results }}"
+
+- name: Copy Containers using the dependency list
+  shell:
+    cmd: >
+      skopeo copy --remove-signatures --all --authfile {{ dci_pullsecret_file }}
+      --dest-tls-verify=false docker://{{ item.split('=')[0] }}
+      docker://{{ item.split('=')[1] }}
+  register: copy
+  retries: 5
+  delay: 5
+  until:
+    - copy is not failed
+  loop: "{{ lookup('file', dci_cluster_configs_dir + '/'+ manifests_dir + '/mapping.txt').splitlines() }}"
+  failed_when: false
+  when:
+    - item | regex_findall(opm_dep_list | join('|'))
+
+- name: Generate mirror entries
+  set_fact:
+    mirrors: "{{ mirrors | default({}) | combine({ item.split('=')[0].split('/')[0]
+            + '/' + item.split('=')[0].split('/')[1] :
+            item.split('=')[1].split('/')[0]
+            + '/' + item.split('=')[1].split('/')[1]}) }}"
+  loop: "{{ lookup('file', dci_cluster_configs_dir + '/' + manifests_dir + '/mapping.txt').splitlines() }}"
+  when:
+    - item | regex_findall(opm_dep_list | join('|'))
+
+- name: Generate mirror bundle
+  template:
+    src: mirror-bundle.yml
+    dest: "{{ dci_cluster_configs_dir }}/mirror-bundle.yml"
+
+- name: Copy trust bundle
+  copy:
+    src: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_mirrors_file }}"
+    dest: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
+
+- name: Add Dynamic mirror to trust bundle
+  blockinfile:
+    path: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
+    block: "{{ lookup('file', dci_cluster_configs_dir + '/mirror-bundle.yml') }}"
+
+- name: Override disconnected_registry_mirrors_file
+  set_fact:
+    disconnected_registry_mirrors_file: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
+  delegate_facts: true
+  delegate_to: "{{ groups['registry_host'][0] }}"
+
+...
