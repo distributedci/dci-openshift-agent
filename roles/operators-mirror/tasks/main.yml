@@ -7,4 +7,11 @@
 
 - name: "Mirror"
   include_tasks: mirror.yml
+  when:
+    - version is version("4.6.17", ">=")
+
+- name: "Mirror operator for OCP 4.5"
+  include_tasks: mirror_45.yml
+  when:
+    - version is version('4.6.17', "<")
 ...
