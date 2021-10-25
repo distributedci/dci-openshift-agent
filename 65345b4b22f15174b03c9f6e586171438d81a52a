@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b1d728dc_c6d0a5a2",
+        "filename": "docs/development.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-25T14:11:51Z",
+      "side": 1,
+      "message": "this is done manually by the adminstrator to suite what he wants to configure but it is completely optional. It is documented in https://doc.distributed-ci.io/dci-openshift-agent/#overloading-settings-and-hooks-directories",
+      "parentUuid": "2c634f44_4e4fa681",
+      "range": {
+        "startLine": 109,
+        "startChar": 1,
+        "endLine": 109,
+        "endChar": 32
+      },
+      "revId": "65345b4b22f15174b03c9f6e586171438d81a52a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8ea2f535_268db30a",
         "filename": "docs/development.md",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2021-10-25T12:47:59Z",
       "side": 1,
       "message": "If using args or app, then you cannot select sno, for example, no?",
+      "range": {
+        "startLine": 112,
+        "startChar": 38,
+        "endLine": 112,
+        "endChar": 46
+      },
+      "revId": "65345b4b22f15174b03c9f6e586171438d81a52a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86a8c7cd_257fb65c",
+        "filename": "docs/development.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-25T14:11:51Z",
+      "side": 1,
+      "message": "yes you can use both args and sno. why not?",
+      "parentUuid": "8ea2f535_268db30a",
       "range": {
         "startLine": 112,
         "startChar": 38,
