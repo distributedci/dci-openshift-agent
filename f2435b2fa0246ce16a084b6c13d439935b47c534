@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de6ad41f_d9b35a18",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-10-25T15:15:51Z",
+      "side": 1,
+      "message": "I guess the implication of this change is that in order to run without dci the job_info must include this structure.\nRunning without dci is not a common thing, but it would be nice to document this new requirement in the doc to make it easy to accomplish (https://github.com/redhat-cip/dci-openshift-agent/blob/master/docs/development.md?plain\u003d1#L141-L148)",
+      "revId": "f2435b2fa0246ce16a084b6c13d439935b47c534",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
