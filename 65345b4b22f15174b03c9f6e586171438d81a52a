@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "f079a2cf_7ba95309",
+        "filename": "docs/development.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-10-25T14:24:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b1d728dc_c6d0a5a2",
+      "range": {
+        "startLine": 109,
+        "startChar": 1,
+        "endLine": 109,
+        "endChar": 32
+      },
+      "revId": "65345b4b22f15174b03c9f6e586171438d81a52a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ea2f535_268db30a",
         "filename": "docs/development.md",
         "patchSetId": 6
@@ -93,6 +117,30 @@
       "revId": "65345b4b22f15174b03c9f6e586171438d81a52a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa076b1a_c2395248",
+        "filename": "docs/development.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-10-25T14:24:21Z",
+      "side": 1,
+      "message": "true, sorry... I forgot that you are using the \u003d~ operator",
+      "parentUuid": "86a8c7cd_257fb65c",
+      "range": {
+        "startLine": 112,
+        "startChar": 38,
+        "endLine": 112,
+        "endChar": 46
+      },
+      "revId": "65345b4b22f15174b03c9f6e586171438d81a52a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
