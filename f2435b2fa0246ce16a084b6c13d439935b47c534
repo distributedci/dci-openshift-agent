@@ -16,6 +16,24 @@
       "revId": "f2435b2fa0246ce16a084b6c13d439935b47c534",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "51a48d0a_c1bc77cd",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-10-26T14:38:10Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it have failed even before this PR unless openshift_secret was defined?  I will test if I can add a | default({}) to the job_info section.",
+      "parentUuid": "de6ad41f_d9b35a18",
+      "revId": "f2435b2fa0246ce16a084b6c13d439935b47c534",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
