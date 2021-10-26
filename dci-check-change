@@ -26,6 +26,7 @@ VIRT=
 DCI_QUEUE=
 SNO_DCI_QUEUE=
 SUPPORTED_HINTS=
+NO_DCI_QUEUE=
 
 if [ -r /etc/dci-openshift-agent/config ]; then
     . /etc/dci-openshift-agent/config
@@ -91,6 +92,16 @@ fi
 # disable hints
 if [ "$1" = "-f" ]; then
     SUPPORTED_HINTS=
+    shift
+fi
+
+# validate kubeconfig or stop
+if [[ "$2" =~ .*/kubeconfig ]]; then
+    if ! oc --kubeconfig "$2" version || ! oc --kubeconfig "$2" get nodes; then
+        echo "Unable to use $2 to connect to OCP" 1>&2
+        exit 1
+    fi
+    NO_DCI_QUEUE=1
 fi
 
 case $CHANGEID in
