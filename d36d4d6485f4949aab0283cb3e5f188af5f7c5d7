@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ed6b914_8360d9ac",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-10-26T09:34:15Z",
+      "side": 1,
+      "message": "there\u0027s a typo there",
+      "revId": "d36d4d6485f4949aab0283cb3e5f188af5f7c5d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
