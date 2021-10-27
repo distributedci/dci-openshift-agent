@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51e38f48_845eafa3",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-10-27T08:50:59Z",
+      "side": 1,
+      "message": "I am confused with this $2. What should be $1 in this case?",
+      "revId": "0ce2bf69c0aae864c6ce9cdd4003df7a3fe56219",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
