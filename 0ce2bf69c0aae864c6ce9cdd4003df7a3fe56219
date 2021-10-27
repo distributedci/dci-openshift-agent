@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "15b6f7d9_d6f2a4a5",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-27T12:32:31Z",
+      "side": 1,
+      "message": "ok fixing it.",
+      "parentUuid": "7fb52bfb_d7549c78",
+      "range": {
+        "startLine": 93,
+        "startChar": 13,
+        "endLine": 93,
+        "endChar": 15
+      },
+      "revId": "0ce2bf69c0aae864c6ce9cdd4003df7a3fe56219",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "51e38f48_845eafa3",
         "filename": "dci-check-change",
         "patchSetId": 1
@@ -57,6 +81,24 @@
       "revId": "0ce2bf69c0aae864c6ce9cdd4003df7a3fe56219",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "41f14051_36719774",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-10-27T12:32:31Z",
+      "side": 1,
+      "message": "I agree. It was already fixed in my local version. Pushing a new one.",
+      "parentUuid": "0b6c1410_12863d24",
+      "revId": "0ce2bf69c0aae864c6ce9cdd4003df7a3fe56219",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
