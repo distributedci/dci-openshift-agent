@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "efeb9a78_f57bbcda",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-10-27T17:13:25Z",
+      "side": 1,
+      "message": "I like this, but the caveat is that the fact that is defined in this task (dci_cluster_configs_dir) will be missing  later and is used in many places: https://github.com/redhat-cip/dci-openshift-agent/search?q\u003ddci_cluster_configs_dir\n\nWe either define it earlier or later.",
+      "revId": "408930c8a361a5ae35c5da1f88f0ad4eb90dbb0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
