@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05462f6f_c3b10c34",
+        "filename": "plays/configure-jumpbox.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-10-27T22:33:22Z",
+      "side": 1,
+      "message": "I\u0027d delete this block and create a new one where is deleted then created on install 😎",
+      "revId": "5eb22ede8b27377c9005ad073bbed4fe5959c8bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}

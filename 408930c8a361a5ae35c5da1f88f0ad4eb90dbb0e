@@ -34,6 +34,24 @@
       "revId": "408930c8a361a5ae35c5da1f88f0ad4eb90dbb0e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f18ed1fb_665ecf9a",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-10-27T22:33:22Z",
+      "side": 1,
+      "message": "Wow, this is interesting, I also think that the block is never executed, unless a different group/vars is passed. In any case is an interesting way to add some sort of default behavior, although is not that clear.\n\nI\u0027d go ahead and delete the block and put both tasks in a new block that will be used only for installs, that way is clear.",
+      "parentUuid": "2cfe1267_fc1d0508",
+      "revId": "408930c8a361a5ae35c5da1f88f0ad4eb90dbb0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
