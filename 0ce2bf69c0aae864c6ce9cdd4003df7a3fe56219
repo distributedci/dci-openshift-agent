@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7fb52bfb_d7549c78",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-10-27T11:22:51Z",
+      "side": 1,
+      "message": "It is not related to this change, but I found another issue related to this. \nIf we attend to line #40, the arguments\u0027 order should be [-f] (\u003cGitHub PR URL\u003e|\u003cGerrit review id\u003e).\nBut with this code, the order is the opposite.\nOne of these two things must be changed then.",
+      "range": {
+        "startLine": 93,
+        "startChar": 13,
+        "endLine": 93,
+        "endChar": 15
+      },
+      "revId": "0ce2bf69c0aae864c6ce9cdd4003df7a3fe56219",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "51e38f48_845eafa3",
         "filename": "dci-check-change",
         "patchSetId": 1
@@ -13,6 +36,24 @@
       "writtenOn": "2021-10-27T08:50:59Z",
       "side": 1,
       "message": "I am confused with this $2. What should be $1 in this case?",
+      "revId": "0ce2bf69c0aae864c6ce9cdd4003df7a3fe56219",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0b6c1410_12863d24",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-10-27T11:22:51Z",
+      "side": 1,
+      "message": "I agree with Charles, I think it should be $1 instead of $2",
+      "parentUuid": "51e38f48_845eafa3",
       "revId": "0ce2bf69c0aae864c6ce9cdd4003df7a3fe56219",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
