@@ -50,6 +50,8 @@
   file:
     path: "{{ dci_cluster_configs_dir }}"
     state: absent
+  when:
+    - dci_main is undefined or dci_main == 'install'
 
 - block:
   - name: "Create a temp dir where the cluster configs will live"
@@ -69,6 +71,8 @@
   file:
     path: "{{ dci_cluster_configs_dir }}"
     state: directory
+  when:
+    - dci_main is undefined or dci_main == 'install'
 
 - name: "Setup podman on the jumphost"
   include_role:
