@@ -16,6 +16,24 @@
       "revId": "408930c8a361a5ae35c5da1f88f0ad4eb90dbb0e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2cfe1267_fc1d0508",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-10-27T17:54:35Z",
+      "side": 1,
+      "message": "I saw this, but my understanding was that (dci_cluster_configs_dir) is defined in the group vars[1], so the task to set the fact in plays/configure-jumpbox.yml#L63 was not really performed unless dci_cluster_configs_dir is undefined. I might be missing something, but I suspect that fact there in the block is never executed as long as we have the variable in groups_var/all. (maybe I should delete that block too if is never used)\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/group_vars/all\n\nOn the other hand I wasn\u0027t sure of how important are the other tasks on that play. So I moved the condition to the tasks that clean up and create the directory (dci_cluster_configs_dir) to play safe. Why do you think?",
+      "parentUuid": "efeb9a78_f57bbcda",
+      "revId": "408930c8a361a5ae35c5da1f88f0ad4eb90dbb0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
