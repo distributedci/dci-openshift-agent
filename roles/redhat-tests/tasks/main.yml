@@ -1,8 +1,8 @@
 ---
-- name: "redhat-tests : Setup"
-  include_tasks: setup.yml
-  tags:
-  - setup
+#- name: "redhat-tests : Setup"
+#  include_tasks: setup.yml
+#  tags:
+#  - setup
 
 - name: "redhat-tests : Run openshift conformance tests"
   include_tasks: conformance.yml
