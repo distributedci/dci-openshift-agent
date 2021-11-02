@@ -16,15 +16,9 @@
     - not rhcos_json.stat.exists or force_mirroring
 
 - name: "Fetch rhcos.json File"
-  get_url:
-    url: "https://raw.githubusercontent.com/openshift/installer/{{ commit_id.stdout }}/data/data/rhcos.json"
-    dest: "{{ cache_dir }}/{{ version }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
-    mode: "0644"
-    setype: httpd_sys_content_t
-    timeout: 300
-  become: true
+  shell: >
+    {{ cache_dir }}/{{ version }}/openshift-baremetal-install coreos print-stream-json >>
+    {{ cache_dir }}/{{ version }}/rhcos.json
   register: rhcos_json_file
   retries: 3
   delay: 10
@@ -39,19 +33,19 @@
 
 - name: "Check if QEMU image exists"
   stat:
-    path: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('images.qemu.path') }}"
+    path: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.qemu.formats.\"qcow2.gz\".disk.location') | replace('\"', '') | basename }}"
     get_checksum: false
   register: qemu_img
 
 - name: "Download QEMU image"
   get_url:
-    url: "{{ rhcos_json_vars | json_query('baseURI') }}{{ rhcos_json_vars | json_query('images.qemu.path') }}"
-    dest: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('images.qemu.path') }}"
+    url: "{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.qemu.formats.\"qcow2.gz\".disk.location') | replace('\"', '') }}"
+    dest: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.qemu.formats.\"qcow2.gz\".disk.location') | replace('\"', '') | basename }}"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
     mode: "0644"
     setype: httpd_sys_content_t
-    checksum: "sha256:{{ rhcos_json_vars | json_query('images.qemu.sha256') }}"
+    checksum: "sha256:{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.qemu.formats.\"qcow2.gz\".disk.sha256') | replace('\"', '') }}"
     timeout: 3600
   register: qemu_img_file
   become: true
@@ -63,19 +57,19 @@
 
 - name: "Check if OpenStack image exists"
   stat:
-    path: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('images.openstack.path') }}"
+    path: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.location') | replace('\"', '') | basename }}"
     get_checksum: false
   register: openstack_img
 
 - name: "Download OpenStack image"
   get_url:
-    url: "{{ rhcos_json_vars | json_query('baseURI') }}{{ rhcos_json_vars | json_query('images.openstack.path') }}"
-    dest: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('images.openstack.path') }}"
+    url: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.location') | replace('\"', '') }}"
+    dest: "{{ cache_dir }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.location') | replace('\"', '') | basename }}"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
     mode: "0644"
     setype: httpd_sys_content_t
-    checksum: "sha256:{{ rhcos_json_vars | json_query('images.openstack.sha256') }}"
+    checksum: "sha256:{{ cache_dir }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.sha256') | replace('\"', '') }}"
     timeout: 3600
   become: true
   register: openstack_img_file
@@ -87,8 +81,8 @@
 
 - name: "Set facts for *osimage URL overrides"
   set_fact:
-    bootstraposimage: "{{ webserver_url }}/{{ rhcos_json_vars | json_query('images.qemu.path') }}?sha256={{ rhcos_json_vars | json_query('images.qemu.\"uncompressed-sha256\"') }}"
-    clusterosimage: "{{ webserver_url }}/{{ rhcos_json_vars | json_query('images.openstack.path') }}?sha256={{ rhcos_json_vars | json_query('images.openstack.sha256') }}"
+    bootstraposimage: "{{ webserver_url }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.qemu.formats.\"qcow2.gz\".disk.location') | replace('\"', '') | basename }}?sha256={{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.qemu.formats.\"qcow2.gz\".disk.uncompressed-sha256') | replace('\"', '') }}"
+    clusterosimage: "{{ webserver_url }}/{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.location') | replace('\"', '') | basename }}?sha256={{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.sha256') | replace('\"', '') }}"
 
 - name: "Check if container_images.done exists"
   stat:
