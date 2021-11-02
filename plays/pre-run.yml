@@ -98,7 +98,7 @@
   with_items: "{{ dci_rpms_to_components }}"
 
 - include_tasks: track_git_repo.yml
-  with_items: "{{ dci_gits_to_components }}"
+  with_items: "{{ dci_gits_to_components }} + {{ dev_gits_to_components }}"
 
 # Mirror Operators for offline mode
 - name: "dci-openshift-agent : Mirror Operators"
