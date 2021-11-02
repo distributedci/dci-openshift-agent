@@ -103,7 +103,7 @@ do_wait() {
 
     if [ -n "$1" ]; then
         while [ ! -r output ]; do
-            sleep 10
+            sleep 1
         done
         tail -f output&
         PID2=$!
@@ -188,6 +188,7 @@ trap finish 0
 
 set -x
 
+GIT_REPOS=
 PIPELINEID="pipeline-id:${DCI_QUEUE_JOBID:=noqueue.$$}"
 CHANGEID=$(basename "$DIR")
 CHANGEID=${CHANGEID%%-*}
@@ -229,6 +230,7 @@ fi
 # directories
 
 if [ -d dci-openshift-agent ]; then
+    GIT_REPOS="\"$PWD/dci-openshift-agent\",$GIT_REPOS"
     ln -s "$PWD"/dci-openshift-agent/* .
     rm -f ansible.cfg dci-openshift-agent.yml
     cp dci-openshift-agent/ansible.cfg .
@@ -257,10 +259,12 @@ else
 fi
 
 if [ -d baremetal-deploy ]; then
+    GIT_REPOS="\"$PWD/baremetal-deploy\",$GIT_REPOS"
     sed -i -e "s@/var/lib/dci-openshift-agent/baremetal_deploy_repo/@$PWD/baremetal-deploy/@g" ansible.cfg
 fi
 
 for conf in $(ls -d *config 2> /dev/null); do
+    GIT_REPOS="\"$PWD/$conf\",$GIT_REPOS"
     sed -i -e "s@/var/lib/dci-openshift-agent/$conf/@$PWD/$conf/@g" ansible.cfg
     if [ -r "$conf/settings.yml" ]; then
         sed -i -e "s@/var/lib/dci-openshift-agent/$conf/@$PWD/$conf/@g" "$conf/settings.yml"
@@ -272,6 +276,7 @@ for conf in $(ls -d *config 2> /dev/null); do
 done
 
 if [ -d dci-ansible ]; then
+    GIT_REPOS="\"$PWD/dci-ansible\",$GIT_REPOS"
     sed -i -e "s@/usr/share/dci/\(modules\|module_utils\|action_plugins\)@$PWD/dci-ansible/\1@g" -e "s@/usr/share/dci/callback/@$PWD/dci-ansible/callback/@" ansible.cfg
     # for d-o-a-a-ctl
     export DCI_ANSIBLE_DIR=$PWD/dci-ansible
@@ -280,6 +285,7 @@ fi
 DCI_ANSIBLE_ROLES=
 for d in $(ls -d ansible-role-dci-* 2> /dev/null); do
     if [ -r "$d/tasks/main.yml" ]; then
+        GIT_REPOS="\"$PWD/$d\",$GIT_REPOS"
         sed -i -e "s@\(roles_path\s*=\s*\)@\1${PWD}:@" ansible.cfg
         # for d-o-a-a-ctl
         if [ -z "$DCI_ANSIBLE_ROLES" ]; then
@@ -289,6 +295,10 @@ for d in $(ls -d ansible-role-dci-* 2> /dev/null); do
         fi
     fi
 done
+
+if [ -d dci-openshift-app-agent ]; then
+    GIT_REPOS="\"$PWD/dci-openshift-app-agent\",$GIT_REPOS"
+fi
 
 # create a python virtualenv if there is any project with a
 # requirements.txt into the changes
@@ -317,6 +327,10 @@ if [ -n "$REQS" ]; then
         python setup.py develop || :
         cd -
     done
+fi
+
+if [ -n "$GIT_REPOS" ]; then
+    OPTS="$OPTS -e {\"dev_gits_to_components\":[$GIT_REPOS]}"
 fi
 
 FEEDBACK="Starting dci-check-change job."
@@ -382,11 +396,11 @@ if [ -s "$KUBECONFIG" ]; then
         cd dci-openshift-app-agent
         ln -s /etc/dci-openshift-app-agent/dcirc.sh .
         export CONFIG_DIR="$PWD"
-        setsid $PWD/dci-openshift-app-agent-ctl -s -d -- $OPTS -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" -e dci_config_dir="$PWD/samples/$APP_NAME" -e dci_name="$APP_NAME" "$@" &>> ../output &
+        setsid $PWD/dci-openshift-app-agent-ctl -s -d -v -- -v $OPTS -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" -e dci_config_dir="$PWD/samples/$APP_NAME" -e dci_name="$APP_NAME" "$@" &>> ../output &
         cd ..
     else
         unset CONFIG_DIR
-        setsid dci-openshift-app-agent-ctl -s -- $OPTS -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" -e dci_config_dir="/var/lib/dci-openshift-app-agent/samples/$APP_NAME" -e dci_name="$APP_NAME" "$@" &>> output &
+        setsid dci-openshift-app-agent-ctl -s -v -- -v $OPTS -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" -e dci_config_dir="/var/lib/dci-openshift-app-agent/samples/$APP_NAME" -e dci_name="$APP_NAME" "$@" &>> output &
     fi
 
     if [ -n "$KCFG" ]; then
