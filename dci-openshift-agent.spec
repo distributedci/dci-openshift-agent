@@ -1,6 +1,6 @@
 Name:          dci-openshift-agent
 Version:       0.3.1
-Release:       1.VERS%{?dist}
+Release:       2.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
 URL:           https://github.com/redhat-cip/dci-openshift-agent
@@ -22,7 +22,6 @@ Requires: python3-pyyaml python3-openshift
 Requires: ansible-role-dci-cvp
 Requires: jq
 
-%{?systemd_requires}
 Requires(pre): shadow-utils
 
 %description
@@ -81,7 +80,7 @@ exit 0
 
 %post
 %systemd_post %{name}.service
-%systemd_preun %{name}.timer
+%systemd_post %{name}.timer
 
 %preun
 %systemd_preun %{name}.service
@@ -121,7 +120,10 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
-* Wed Apr  7 2021 Frederic Lepied <flepied@redhat.com> 0.3.1-1
+* Fri Nov 5 2021 Guillaume Vincent <gvincent@redhat.com> 0.3.1-2
+- remove useless systemd_requires entry in spec file
+
+* Wed Apr 7 2021 Frederic Lepied <flepied@redhat.com> 0.3.1-1
 - fix packaging of roles (label-nodes was missing)
 
 * Tue Apr  6 2021 Frederic Lepied <flepied@redhat.com> 0.3.0-1
