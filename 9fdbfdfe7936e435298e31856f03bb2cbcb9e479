@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dcc7c327_2245d8d7",
+        "filename": "test-runner",
+        "patchSetId": 10
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-11-05T15:06:37Z",
+      "side": 1,
+      "message": "space to be removed here",
+      "range": {
+        "startLine": 111,
+        "startChar": 0,
+        "endLine": 111,
+        "endChar": 8
+      },
+      "revId": "9fdbfdfe7936e435298e31856f03bb2cbcb9e479",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b2f0dca_215d2a61",
+        "filename": "test-runner",
+        "patchSetId": 10
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-11-05T15:06:37Z",
+      "side": 1,
+      "message": "space to be removed here",
+      "range": {
+        "startLine": 352,
+        "startChar": 0,
+        "endLine": 352,
+        "endChar": 4
+      },
+      "revId": "9fdbfdfe7936e435298e31856f03bb2cbcb9e479",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
