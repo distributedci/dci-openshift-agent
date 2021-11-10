@@ -122,7 +122,7 @@ do_wait() {
 BASEDIR=$(cd $(dirname $0); pwd)
 
 if [ $# -lt 1 ]; then
-    echo "Usage: $0 (--virt|--sno|--no-check) <change directory> [<kubeconfig path>] [<dci-openshift-agent-ctl options>]" 1>&2
+    echo "Usage: $0 (--virt|--sno|--no-check) (-n) <change directory> [<kubeconfig path>] [<dci-openshift-agent-ctl options>]" 1>&2
     exit 1
 fi
 
@@ -149,6 +149,11 @@ elif [ "$1" = "--sno" ]; then
     shift
 elif [ "$1" = "--no-check" ]; then
     VIRT="no-check"
+    shift
+fi
+
+if [ "$1" = "-n" ]; then
+    unset DO_VOTE
     shift
 fi
 
