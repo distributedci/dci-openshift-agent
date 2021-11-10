@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da4c756d_0d138e77",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-10T18:22:15Z",
+      "side": 1,
+      "message": "Could you make this match the condition below, i.e. [\u003c 4.8]",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2269f2ec_8324e429",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-10T18:22:15Z",
+      "side": 1,
+      "message": "Can you add that this is for [\u003e\u003d 4.8]",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5836db64_1304f528",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-10T18:22:15Z",
+      "side": 1,
+      "message": "The replace of double-quotes is not needed, basename is able to handle the trimming just right",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dbd60acd_3eb2754b",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-10T18:22:15Z",
+      "side": 1,
+      "message": "The comment is not clear on what sha is going to be used at the end as I see it is still using uncompressed.\n\nRegardless, I don\u0027t think those SHAs are used at all 😄 \n\nI did not see anything special on the webserver that hosts the images, I have the impression that the sha256 argument is completely ignored, see:\n\n$ curl -i -D - -so /dev/null http://jumphost.cluster6.dfwt5g.lab:8080/rhcos-48.84.202109241901-0-qemu.x86_64.qcow2.gz?sha256\u003dfakedata\nHTTP/1.1 200 OK\nDate: Wed, 10 Nov 2021 18:19:37 GMT\nServer: Apache/2.4.34 (Red Hat) OpenSSL/1.0.2k-fips\nLast-Modified: Thu, 07 Oct 2021 03:28:51 GMT\nETag: \"3cb2a505-5cdbadc88d993\"\nAccept-Ranges: bytes\nContent-Length: 1018340613\nContent-Type: application/x-gzip\n\n$ curl -i -D - -so /dev/null http://jumphost.cluster6.dfwt5g.lab:8080/rhcos-48.84.202109241901-0-qemu.x86_64.qcow2.gz?sha256\u003d0105a1de918e94e9c456f32dac63e3cf296efa0b59f543fc23c1ef00ebb15a5f                                                                  \nHTTP/1.1 200 OK\nDate: Wed, 10 Nov 2021 18:19:43 GMT\nServer: Apache/2.4.34 (Red Hat) OpenSSL/1.0.2k-fips\nLast-Modified: Thu, 07 Oct 2021 03:28:51 GMT\nETag: \"3cb2a505-5cdbadc88d993\"\nAccept-Ranges: bytes\nContent-Length: 1018340613\nContent-Type: application/x-gzip\n\nRemove it and give it a try, I think it will not make a difference and luckily we can get rid of that additional uncompressed variable.",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
