@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65d70a35_076369c3",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-11-10T10:23:42Z",
+      "side": 1,
+      "message": "Hum I don\u0027t see where this variable is used and how is it impacting the \u0027send-feedback\u0027 script",
+      "revId": "066b0382d72f606f0938747f30c78fd746054aad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
