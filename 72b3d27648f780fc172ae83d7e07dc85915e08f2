@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "23240e18_b3b7c7a8",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-11-11T10:44:18Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "da4c756d_0d138e77",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2269f2ec_8324e429",
         "filename": "roles/mirror-ocp-release/tasks/images.yml",
         "patchSetId": 7
@@ -33,6 +51,24 @@
       "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e64504e_2ea702a3",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-11-11T10:44:18Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2269f2ec_8324e429",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4f6efbdb_731ddb78",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-11-11T10:44:18Z",
+      "side": 1,
+      "message": "Thanks for the suggestion. I didn\u0027t know that. I\u0027ll try removing the replacement, although I have some concerns on the final effect of this. Let\u0027s see if it passes the checks.",
+      "parentUuid": "5836db64_1304f528",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dbd60acd_3eb2754b",
         "filename": "roles/mirror-ocp-release/tasks/images.yml",
         "patchSetId": 7
@@ -64,6 +118,24 @@
       "writtenOn": "2021-11-10T18:22:15Z",
       "side": 1,
       "message": "The comment is not clear on what sha is going to be used at the end as I see it is still using uncompressed.\n\nRegardless, I don\u0027t think those SHAs are used at all 😄 \n\nI did not see anything special on the webserver that hosts the images, I have the impression that the sha256 argument is completely ignored, see:\n\n$ curl -i -D - -so /dev/null http://jumphost.cluster6.dfwt5g.lab:8080/rhcos-48.84.202109241901-0-qemu.x86_64.qcow2.gz?sha256\u003dfakedata\nHTTP/1.1 200 OK\nDate: Wed, 10 Nov 2021 18:19:37 GMT\nServer: Apache/2.4.34 (Red Hat) OpenSSL/1.0.2k-fips\nLast-Modified: Thu, 07 Oct 2021 03:28:51 GMT\nETag: \"3cb2a505-5cdbadc88d993\"\nAccept-Ranges: bytes\nContent-Length: 1018340613\nContent-Type: application/x-gzip\n\n$ curl -i -D - -so /dev/null http://jumphost.cluster6.dfwt5g.lab:8080/rhcos-48.84.202109241901-0-qemu.x86_64.qcow2.gz?sha256\u003d0105a1de918e94e9c456f32dac63e3cf296efa0b59f543fc23c1ef00ebb15a5f                                                                  \nHTTP/1.1 200 OK\nDate: Wed, 10 Nov 2021 18:19:43 GMT\nServer: Apache/2.4.34 (Red Hat) OpenSSL/1.0.2k-fips\nLast-Modified: Thu, 07 Oct 2021 03:28:51 GMT\nETag: \"3cb2a505-5cdbadc88d993\"\nAccept-Ranges: bytes\nContent-Length: 1018340613\nContent-Type: application/x-gzip\n\nRemove it and give it a try, I think it will not make a difference and luckily we can get rid of that additional uncompressed variable.",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6758d5f3_08a28115",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-11-11T10:44:18Z",
+      "side": 1,
+      "message": "I see. I was trying to reproduce the operations for versions 4.7-. Right now I removed the usage of uncompressed-sha256 in favor of plain sha256. Do you think in could be removed for good, or shall we keep it in case it\u0027s needed in the future?",
+      "parentUuid": "dbd60acd_3eb2754b",
       "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
