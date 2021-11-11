@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "8a8ea8cf_567020d1",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-11T17:20:32Z",
+      "side": 1,
+      "message": "The end result is the same 😊",
+      "parentUuid": "4f6efbdb_731ddb78",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dbd60acd_3eb2754b",
         "filename": "roles/mirror-ocp-release/tasks/images.yml",
         "patchSetId": 7
@@ -136,6 +154,24 @@
       "side": 1,
       "message": "I see. I was trying to reproduce the operations for versions 4.7-. Right now I removed the usage of uncompressed-sha256 in favor of plain sha256. Do you think in could be removed for good, or shall we keep it in case it\u0027s needed in the future?",
       "parentUuid": "dbd60acd_3eb2754b",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0d29a0d9_62c542ac",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-11T17:20:32Z",
+      "side": 1,
+      "message": "It does not seem to take any effect at all. My test shows that regardless of the variable you get the same file.\n\nDropping the arg should be good too, see:\n\n$ curl -i -D - -so /dev/null http://jumphost.cluster6.dfwt5g.lab:8080/rhcos-48.84.202109241901-0qemu.x86_64.qcow2.gz\nHTTP/1.1 200 OK\nDate: Thu, 11 Nov 2021 17:18:32 GMT\nServer: Apache/2.4.34 (Red Hat) OpenSSL/1.0.2k-fips\nLast-Modified: Thu, 07 Oct 2021 03:28:51 GMT\nETag: \"3cb2a505-5cdbadc88d993\"\nAccept-Ranges: bytes\nContent-Length: 1018340613\nContent-Type: application/x-gzip",
+      "parentUuid": "6758d5f3_08a28115",
       "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
