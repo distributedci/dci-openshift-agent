@@ -175,6 +175,24 @@
       "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13114d0d_09f66ce4",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-11T20:19:22Z",
+      "side": 1,
+      "message": "I think the SHA is used to verify the downloaded QEMU image later down the road?",
+      "parentUuid": "0d29a0d9_62c542ac",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
