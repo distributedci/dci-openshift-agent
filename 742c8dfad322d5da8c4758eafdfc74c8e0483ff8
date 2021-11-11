@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7878e35a_9c6e6470",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-11T20:18:41Z",
+      "side": 1,
+      "message": "oh neat! the old way was kinda gross",
+      "revId": "742c8dfad322d5da8c4758eafdfc74c8e0483ff8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3828b63_90c3dd2e",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-11T20:18:41Z",
+      "side": 1,
+      "message": "even though I don\u0027t like abusing set_fact, I can see how in here it can be potentially much easier than lots and lots of ternary() stuff",
+      "revId": "742c8dfad322d5da8c4758eafdfc74c8e0483ff8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
