@@ -193,6 +193,24 @@
       "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2223bb3a_40622949",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-11T21:34:18Z",
+      "side": 1,
+      "message": "It is, but earlier, on line 89. After that the SHA is of no use 😆",
+      "parentUuid": "13114d0d_09f66ce4",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
