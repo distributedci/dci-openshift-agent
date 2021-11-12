@@ -229,6 +229,24 @@
       "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f9ce1c1_2e5c5e7f",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-11-12T11:45:49Z",
+      "side": 1,
+      "message": "As it turns out, I just found out why the uncompressed-sha256 is needed.\nApparently, in versions prior to 4.8, the download process of the qemu image is as follows:\n- image is downloaded\n- image is uncompressed\n- uncompressed image sha is verified\nAnd the installer takes the sha value from the URL.\nI added a comment in the code to clarify using uncompressed-sha in the url is not a mistake for future contributors.",
+      "parentUuid": "eb8792ce_200e9e2d",
+      "revId": "72b3d27648f780fc172ae83d7e07dc85915e08f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
