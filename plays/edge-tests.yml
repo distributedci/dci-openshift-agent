@@ -1,0 +1,51 @@
+---
+- name: Make tmp edge test dir
+  tempfile:
+    prefix: edge-tests
+    state: directory
+  register: dci_edge_test_dir
+
+- name: Create dirs in test dir
+  file:
+    path: "{{ dci_edge_test_dir.path }}/{{ item }}"
+    state: directory
+  loop:
+    - kubeconfig
+    - results
+    - ssh
+    - work
+
+- name: Copy test requirements to tmp dir
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ dci_edge_test_dir.path }}/{{ item.dst_dir }}"
+  loop:
+    - { "src": "{{ dci_cluster_configs_dir }}/kubeconfig", "dst": "kubeconfig/" }
+    - { "src": "{{ dci_cluster_configs_dir }}/install-config.yaml.bkup", "dst": "work/install-config.yaml" }
+    - { "src": "{{ ansible_user_dir }}/.ssh/id_rsa", "dst": "ssh/" }
+
+- name: Run edge tests
+  shell: >
+    podman run
+    -it
+    --rm
+    --net=host
+    -v {{ dci_edge_test_dir.path }}/kubeconfig:/kubeconfig:Z
+    -v {{ dci_edge_test_dir.path }}/ssh:/root/.ssh:Z
+    -v {{ dci_edge_test_dir.path }}/work:/work:Z
+    -v {{ dci_edge_test_dir.path }}/results:/out:Z
+    {{ dci_edge_test_image }}:/{{ ocp_version }}
+    docker-registry.upshift.redhat.com/ocp-edge-qe/autotests:4.8
+    {{ dci_edge_test }} -m {{ dci_edge_test_mark }}
+    --junit-xml out/edge_test_results.xml
+  ignore_errors: yes
+
+- name: Copy edge test results to log dir
+  copy:
+    src: "{{ dci_edge_test_dir.path }}/results/edge_test_results.xml"
+    dest: "{{ dci_cluster_configs_dir }}/edge_test_junit.xml"
+
+- name: Delete tmp edge test dir
+  file:
+    path: "{{ dci_edge_test_dir.path }}"
+    state: absent
