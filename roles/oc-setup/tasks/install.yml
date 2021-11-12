@@ -1,5 +1,5 @@
 ---
-- name: "oc-setup : Get oc binary and KUBECONFIG from provisioner node"
+- name: "oc-setup : Get oc binary install-config and KUBECONFIG from provisioner node"
   delegate_to: "{{ groups['provisioner'][0] }}"
   fetch:
     src: "{{ item }}"
@@ -8,6 +8,7 @@
   loop:
   - /usr/local/bin/oc
   - ~/clusterconfigs/auth/kubeconfig
+  - ~/clusterconfigs/install-config.yaml.bkup
 
 - name: "oc-setup : Install packages needed for login"
   package:
