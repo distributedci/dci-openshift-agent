@@ -79,4 +79,11 @@
     - local_registry_host is defined
     - local_registry_port is defined
     - dci_pullsecret_file is defined
+
+- name: Run edge Tests
+  include_tasks: edge-tests.yml
+  when:
+    - dci_edge_test is defined
+    - ocp_version is version("=", "4.8")
+
 ...
