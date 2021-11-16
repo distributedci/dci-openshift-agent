@@ -17,13 +17,6 @@
     name: "{{ item.path | basename }}"
     job_id: "{{ hostvars.localhost.job_id }}"
   with_items: "{{ logs_matched.files }}"
-
-- name: "Find test Junit files"
-  find:
-    paths: "{{ dci_cluster_configs_dir }}"
-    recurse: true
-    patterns: "*junit*.xml"
-  register: junit_matched
   delegate_to: localhost
 
 - name: "Upload Junit files to DCI Control Server"
@@ -36,7 +29,8 @@
     name: "{{ item.path | basename | regex_replace('^(.*).xml$','\\1') }}"
     job_id: "{{ hostvars.localhost.job_id }}"
     mime: "application/junit"
-  with_items: "{{ junit_matched.files }}"
+  with_fileglob: '*junit*.xml'
+  delegate_to: localhost
 
 - name: Generate temp dir for deployment logs
   tempfile:
