@@ -16,6 +16,24 @@
       "revId": "d4b55bee8098b9c23e16d96e0cf0d604c813d535",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78b5955b_9fb0a5aa",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 23
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-11-17T11:59:56Z",
+      "side": 1,
+      "message": "Done. I have also modified clusternetwork.txt to be .yaml too.",
+      "parentUuid": "8e0af483_894da749",
+      "revId": "d4b55bee8098b9c23e16d96e0cf0d604c813d535",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
