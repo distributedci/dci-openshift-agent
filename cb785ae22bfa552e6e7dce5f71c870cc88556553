@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "225f3208_1bf5f2da",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-11-18T18:12:38Z",
+      "side": 1,
+      "message": "Good catch, thanks Ramón",
+      "parentUuid": "6d06e147_5e467e54",
+      "range": {
+        "startLine": 88,
+        "startChar": 33,
+        "endLine": 88,
+        "endChar": 46
+      },
+      "revId": "cb785ae22bfa552e6e7dce5f71c870cc88556553",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "13ccefc5_5e6d5252",
         "filename": "roles/operator-performance-profile/tasks/main.yml",
         "patchSetId": 4
@@ -36,6 +60,24 @@
       "writtenOn": "2021-11-18T17:47:26Z",
       "side": 1,
       "message": "Not sure if 5 seconds is enough or too much 😄\nWe used:\n- 30s in example-cnf: https://github.com/dci-labs/example-cnf-config/blob/master/testpmd/hooks/roles/mirror-rh-nfv/tasks/main.yml#L47-L49\n- 1min in cvp: https://softwarefactory-project.io/r/plugins/gitiles/ansible-role-dci-cvp/+/refs/changes/25/22225/11/tasks/mirror_bundle.yml#89\n- 1min in preflight: https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-app-agent/+/refs/changes/47/22647/165/roles/preflight/tasks/scorecard_check_operator.yml#89\n\nIf 5s is enough I\u0027m OK for it, but seems like we will need to wait a little bit more, wdyt?",
+      "revId": "cb785ae22bfa552e6e7dce5f71c870cc88556553",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "094030e3_097260bf",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-11-18T18:12:38Z",
+      "side": 1,
+      "message": "Will let 30s, so we we will have 50/50",
+      "parentUuid": "13ccefc5_5e6d5252",
       "revId": "cb785ae22bfa552e6e7dce5f71c870cc88556553",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
