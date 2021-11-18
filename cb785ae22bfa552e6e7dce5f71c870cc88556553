@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6d06e147_5e467e54",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-11-18T14:35:29Z",
+      "side": 1,
+      "message": "\"to be created\" is repeated twice",
+      "range": {
+        "startLine": 88,
+        "startChar": 33,
+        "endLine": 88,
+        "endChar": 46
+      },
+      "revId": "cb785ae22bfa552e6e7dce5f71c870cc88556553",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
