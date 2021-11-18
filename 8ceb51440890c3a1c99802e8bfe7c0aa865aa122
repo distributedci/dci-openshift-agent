@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2396dc8c_54278b83",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-11-18T11:06:17Z",
+      "side": 0,
+      "message": "I take the delegate_to is needed for failures happening on the play \"Launch install\" which runs on host \"provisioner\".\n\nIf this is right, don\u0027t we need to have a delegate_to clause in this task as well?\n\nI mean, in line 21 we look for junit files in the localhost but, when running on the provisioner, this task will try to upload files from the provisioner.\n\nThis would be safe if the junit files are not created in the \"Launch install\" play, but in such case, there\u0027s no point on having the delegate_to in line 27 in the first place, is there?",
+      "revId": "8ceb51440890c3a1c99802e8bfe7c0aa865aa122",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
