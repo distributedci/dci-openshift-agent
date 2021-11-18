@@ -34,6 +34,24 @@
       "revId": "8ceb51440890c3a1c99802e8bfe7c0aa865aa122",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f1802650_89760db3",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-11-18T13:40:28Z",
+      "side": 0,
+      "message": "I am not sure to get your point Nacho.\nIndeed, a failure happens in Install steps, we are connected to the provisioner so the delegate_to is needed to get logs from the Jumpbox.",
+      "parentUuid": "9188121e_67aebe1d",
+      "revId": "8ceb51440890c3a1c99802e8bfe7c0aa865aa122",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
