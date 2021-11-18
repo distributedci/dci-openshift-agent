@@ -16,6 +16,24 @@
       "revId": "8ceb51440890c3a1c99802e8bfe7c0aa865aa122",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9188121e_67aebe1d",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-11-18T12:18:12Z",
+      "side": 0,
+      "message": "Hi Nacho, I think Charles changed this in the latest patchset, you will see delegate_to is used in \"Upload Junit files to DCI Control Server\" task.",
+      "parentUuid": "2396dc8c_54278b83",
+      "revId": "8ceb51440890c3a1c99802e8bfe7c0aa865aa122",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
