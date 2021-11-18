@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc3885e5_d9942698",
+        "filename": "roles/operator-performance-profile/files/performance-profile-basic-4.5.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-18T17:40:00Z",
+      "side": 1,
+      "message": "We don\u0027t support 4.5 any longer, let\u0027s get rid of this",
+      "revId": "12500efb54353253b9f325d5f4270071c54ba745",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
