@@ -52,6 +52,24 @@
       "revId": "8ceb51440890c3a1c99802e8bfe7c0aa865aa122",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e8ad1ede_25c37ee2",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-11-19T09:02:18Z",
+      "side": 0,
+      "message": "I might have made a mistake when reading the code. I see the delegate_to instruction in this task now.\nSorry for the confusion.\nI\u0027ll give my vote for this change.",
+      "parentUuid": "f1802650_89760db3",
+      "revId": "8ceb51440890c3a1c99802e8bfe7c0aa865aa122",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
