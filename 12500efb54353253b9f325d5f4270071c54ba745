@@ -16,6 +16,24 @@
       "revId": "12500efb54353253b9f325d5f4270071c54ba745",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "36bf3f99_d905c03c",
+        "filename": "roles/operator-performance-profile/files/performance-profile-basic-4.5.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-11-19T09:45:16Z",
+      "side": 1,
+      "message": "Thanks Tony, I have also done that for 4.6 because SPK needs at least 4.7 to work",
+      "parentUuid": "fc3885e5_d9942698",
+      "revId": "12500efb54353253b9f325d5f4270071c54ba745",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
