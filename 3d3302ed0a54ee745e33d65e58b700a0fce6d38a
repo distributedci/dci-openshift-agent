@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e49a6c4b_eefcd73c",
+        "filename": "roles/prepare-cnf/tasks/nodes-ok.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-11-19T18:53:18Z",
+      "side": 1,
+      "message": "Hello Piere, \n\nThere is another reference to the workers in https://github.com/redhat-cip/dci-openshift-agent/blob/66e9018b7da386de446a1630dc0a6a897b3d1aba/plays/cnf-tests-run.yml#L28 \n\nNot sure if you need to update this also for your testing.\n\nThere are other places where we perform the validation, but maybe not in the scope of your change.\n\nRegards",
+      "revId": "3d3302ed0a54ee745e33d65e58b700a0fce6d38a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
