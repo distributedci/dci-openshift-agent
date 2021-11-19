@@ -24,6 +24,6 @@
     - "'resources' in mcp_worker"
     - "mcp_worker.resources|length == 1"
     - "'status' in mcp_worker.resources[0]"
-    - "mcp_worker.resources[0].status.readyMachineCount == groups['workers']|length"
+    - "mcp_worker.resources[0].status.readyMachineCount == mcp_worker_nodes | default(groups['workers']|length)"
     - "mcp_worker.resources[0].status.updatedMachineCount == mcp_worker.resources[0].status.machineCount"
 ...
