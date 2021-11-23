@@ -1,0 +1,7 @@
+provisioning_bridge: provisioning
+baremetal_bridge: baremetal
+networks:
+  - name: baremetal
+    bridge: baremetal
+  - name: provisioning
+    bridge: provisioning
