@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f98d8a0_3cd99da0",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-11-23T16:26:27Z",
+      "side": 1,
+      "message": "I\u0027d suggest to do \"${1/%kubeconfig/oc}\" instead. Just in case someone provides a directory like: `/some/path/kubeconfig/some/other/dir/kubeconfig` this way we guarantee that we are replacing the last occurrence of kubeconfig and not the first one",
+      "revId": "4c724765a1045eb55a3fbb6a44f977e2c275ab03",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
