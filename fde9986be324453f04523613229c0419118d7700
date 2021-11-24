@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51e18d7e_665317ac",
+        "filename": "samples/libvirt_to_bridge/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T00:04:18Z",
+      "side": 1,
+      "message": "There are a couple of sections on the main README and the main ocp-on-libvirt README with more troubleshooting steps",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d8f91cbb_5e9602ae",
+        "filename": "samples/libvirt_to_bridge/libvirt_to_bridge.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T00:04:18Z",
+      "side": 1,
+      "message": "also check the length of the workers group is \u003e 0",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f767336_77d0d26f",
+        "filename": "samples/libvirt_to_bridge/libvirt_to_bridge.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T00:04:18Z",
+      "side": 1,
+      "message": "needs an extra blank line to separate the tasks here, same in all tasks further down below",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ce486d6_1e6d5778",
+        "filename": "samples/libvirt_to_bridge/tasks/bridge.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T00:04:18Z",
+      "side": 1,
+      "message": "*baremetal",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73c22c2d_e28f7918",
+        "filename": "samples/libvirt_to_bridge/tasks/bridge.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T00:04:18Z",
+      "side": 1,
+      "message": "stick to long-form nmcli commands as you\u0027ve been doing so far",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3e0d499_28747e32",
+        "filename": "samples/libvirt_to_bridge/tasks/bridge.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T00:04:18Z",
+      "side": 1,
+      "message": "multiple lines would make this more readable",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f7b9d6aa_9873477e",
+        "filename": "samples/libvirt_to_bridge/templates/baremetal.conf.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T00:04:18Z",
+      "side": 1,
+      "message": "maybe this range could be configurable",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
