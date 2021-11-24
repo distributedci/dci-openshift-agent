@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "1c63f0ed_b6d37659",
+        "filename": "samples/libvirt_to_bridge/libvirt_to_bridge.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-11-24T16:29:28Z",
+      "side": 1,
+      "message": "Actually, no.  It\u0027s valid for there to be no workers (likely) when migrating from libvirt.",
+      "parentUuid": "d8f91cbb_5e9602ae",
+      "revId": "fde9986be324453f04523613229c0419118d7700",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8f767336_77d0d26f",
         "filename": "samples/libvirt_to_bridge/libvirt_to_bridge.yml",
         "patchSetId": 2
