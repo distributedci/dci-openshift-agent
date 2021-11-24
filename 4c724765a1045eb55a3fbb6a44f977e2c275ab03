@@ -16,6 +16,24 @@
       "revId": "4c724765a1045eb55a3fbb6a44f977e2c275ab03",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a02e753_8e61bc58",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-11-24T22:52:40Z",
+      "side": 1,
+      "message": "also a nitpick: you don\u0027t need the echo here, you can leave the direct assignment with the transformation e.g. OC_CLIENT\u003d\"${1/%kubeconfig/oc}\"",
+      "parentUuid": "5f98d8a0_3cd99da0",
+      "revId": "4c724765a1045eb55a3fbb6a44f977e2c275ab03",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
