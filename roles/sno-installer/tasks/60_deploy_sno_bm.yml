@@ -1,0 +1,22 @@
+---
+- name: Add Kubeconfig to Ansible User .bashrc
+  lineinfile:
+    path: "{{ ansible_user_dir }}/.bashrc"
+    line: "export KUBECONFIG={{ dir }}/auth/kubeconfig"
+  tags: install
+
+- name: Show How to monitor for installation status
+  debug:
+    msg:
+      - "Next step will provision SNO Baremetal. It might take a few minutes for the API to respond"
+      - "Once the api gets available you can run the following in another shell session"
+      - "to monitor the installation progress:  export KUBECONFIG={{ dir }}/auth/kubeconfig"
+      - "watch -n5 -d 'oc get nodes ; oc get co ; oc get clusterversion'"
+  tags: install
+
+#- name: Installing Single Node OpenShift on Baremetal
+#  shell: >
+#     tasks to kick baremetal deployment go here
+#     - use ipmitool to set PXE as first boot option
+#     - use ipmitool to power on server
+...
