@@ -1,4 +1,35 @@
 ---
+- name: "Wait for SNO node to be available to get details"
+  block:
+    - name: "Pause to wait for SNO to reboot"
+      pause:
+        seconds: 300
+
+    - name: "Wait for Node to become Ready"
+      command:
+        cmd: |
+          oc get nodes
+      register: node_status
+      changed_when: false
+      until:
+        - "' Ready' in node_status.stdout"
+      retries: 90
+      delay: 10
+
+    - name: "Verify API is available"
+      k8s_info:
+        api: v1
+        kind: Node
+      register: cluster_nodes_sno
+      until:
+        - cluster_nodes_sno is defined
+        - cluster_nodes_sno.resources is defined
+      retries: 20
+      delay: 60
+  when:
+    - sno_install_type is defined
+    - sno_install_type == "baremetal"
+
 - name: "Wait for ALL nodes to be in a Done state"
   k8s_info:
     api: v1
