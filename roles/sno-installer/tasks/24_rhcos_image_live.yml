@@ -1,5 +1,14 @@
 ---
-# rhcos_json_vars fact already set in 23_rhcos_image_paths.yaml
+# rhcos_json_vars fact already set in 21_rhcos_image_paths.yml
+- name: "Set Facts for RHCOS LIVE"
+  set_fact:
+    rhcos_live_iso_name: "{{ rhcos_json_file.stdout | from_json | json_query(iso_name) | basename }}"
+    rhcos_live_iso_sha256: "{{ rhcos_json_file.stdout | from_json  | json_query(iso_sha) }}"
+    rhcos_path: "{{ rhcos_json_file.stdout | from_json  | json_query(iso_name) }}"
+  vars:
+    iso_name: 'architectures.x86_64.artifacts.metal.formats.iso.disk.location'
+    iso_sha: 'architectures.x86_64.artifacts.metal.formats.iso.disk.sha256'
+  tags: rhcos_live
 
 - name: "Check if LIVE image exists"
   stat:
