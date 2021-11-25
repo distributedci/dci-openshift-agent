@@ -138,3 +138,115 @@
   tags:
   - always
   - validation
+
+- name: Get BMC firmware version and set fact
+  block:
+  - name: "Get the chassis information of baremetal node"
+    redfish_info:
+      category: Chassis
+      command: GetChassisInventory
+      baseuri: "{{ hostvars[item]['ipmi_address']|ipwrap }}"
+      username: "{{ hostvars[item]['ipmi_user'] }}"
+      password: "{{ hostvars[item]['ipmi_password'] }}"
+    register: chassis_result
+    until: chassis_result is succeeded
+    retries: 3
+    delay: 10
+    loop: "{{ groups.masters }}"
+  
+  - name: "Get the firmware information of the baremetal node"
+    redfish_info:
+      category: Update
+      command: GetFirmwareInventory
+      baseuri: "{{ hostvars[item]['ipmi_address']|ipwrap }}"
+      username: "{{ hostvars[item]['ipmi_user'] }}"
+      password: "{{ hostvars[item]['ipmi_password'] }}"
+    register: firmware_result
+    until: firmware_result is succeeded
+    retries: 3
+    delay: 10
+    loop: "{{ groups.masters }}"
+
+  rescue:
+  - debug:
+      msg: "Verify BMC credentials or if Redfish is enabled"
+  when:
+    - sno_install_type is defined
+    - sno_install_type == 'baremetal'
+    - hostvars.localhost.groups['masters']|length == 1
+  tags:
+  - always
+  - validation
+  - baremetal
+
+- name: "Validate and add fact for Dell iDRAC firmware"
+  block:
+  - name: "Set BMC firmware fact with iDRAC firmware higher or equal than 4.20.20.20"
+    set_fact:
+      bmc_firmware: "{{ firmware_result.results[0].redfish_facts.firmware.entries | json_query(query) }}"
+    when:
+      - not chassis_result.results[0].failed|bool
+      - not firmware_result.results[0].failed|bool
+      - "'Dell' in chassis_result.results[0].redfish_facts.chassis.entries[0].Manufacturer"
+      - firmware_result.results[0].redfish_facts.firmware.entries | json_query(query) | max >= "4.20.20.20"
+    vars:
+      query: "[?Name=='Integrated Dell Remote Access Controller'].Version"
+    register: dell_host_redfish_result
+    retries: 6 # 1 minute (10 * 6)
+    delay: 10 # Every 10 seconds
+  rescue:
+  - name: "Attempt to set Dell iDRAC Firmware failed"
+    debug:
+      msg: 'Dell iDRAC firmware missing or older than 4.20.20.20, installer would not mount virtual ISO'
+  when:
+    - sno_install_type is defined
+    - sno_install_type == 'baremetal'
+    - chassis_result is succeeded
+    - firmware_result is succeeded
+  tags:
+  - always
+  - validation
+  - baremetal
+
+- name: "Validate and add fact for HPE iLO firmware"
+  block:
+  - name: "Set BMC firmware fact with iLO firmware higher or equal than 2.14"
+    set_fact:
+      bmc_firmware: "{{ firmware_result.results[0].redfish_facts.firmware.entries | json_query(query) }}"
+    when:
+      - not chassis_result.results[0].failed|bool
+      - not firmware_result.results[0].failed|bool
+      - "'HPE' in chassis_result.results[0].redfish_facts.chassis.entries[0].Manufacturer"
+      - firmware_result.results[0].redfish_facts.firmware.entries | json_query(query) | max >= "2.14"
+    vars:
+      query: "[?Name=='iLO 5'].Version"
+    register: hp_host_redfish_result
+    retries: 6 # 1 minute (10 * 6)
+    delay: 10 # Every 10 seconds
+  rescue:
+  - name: "Attempt to set HP iLO Firmware failed"
+    debug:
+      msg: 'HPE iLO firmware missing or older than 2.14, installer would not mount virtual ISO'
+  when:
+    - sno_install_type is defined
+    - sno_install_type == 'baremetal'
+    - hostvars.localhost.groups['masters']|length == 1
+    - chassis_result is succeeded
+    - firmware_result is succeeded
+  tags:
+  - always
+  - validation
+  - baremetal
+
+- name: "Print BMC firmware version"
+  debug:
+    msg: "{{ bmc_firmware }}"
+  when:
+    - bmc_firmware is defined
+    - sno_install_type is defined
+    - sno_install_type == 'baremetal'
+  tags:
+  - always
+  - validation
+  - baremetal
+...

@@ -1,0 +1,74 @@
+---
+- name: Add Kubeconfig to Ansible User .bashrc
+  lineinfile:
+    path: "{{ ansible_user_dir }}/.bashrc"
+    line: "export KUBECONFIG={{ dir }}/auth/kubeconfig"
+  tags: install
+
+- name: Show How to monitor for installation status
+  debug:
+    msg:
+      - "Next step will provision SNO Baremetal. It might take a few minutes for the API to respond"
+      - "Once the api gets available you can run the following in another shell session"
+      - "to monitor the installation progress:  export KUBECONFIG={{ dir }}/auth/kubeconfig"
+      - "watch -n5 -d 'oc get nodes ; oc get co ; oc get clusterversion'"
+  tags: install
+
+- name: Installing Single Node OpenShift Baremetal
+  become: true
+  tags: install
+
+- name: Checking if an ISO is already mounted (virtual media)
+  uri:
+    url: "https://{{ hostvars[item].ipmi_address }}/redfish/v1/managers/1/virtualmedia/2/"
+    method: GET
+    user: "{{ hostvars[item].ipmi_user }}"
+    password: "{{ hostvars[item].ipmi_password }}"
+    force_basic_auth: true
+    validate_certs: false
+    status_code: 200
+  loop: "{{ groups['masters'] }}"
+  register: virtualmedia
+
+- set_fact:
+    virtualmedia_mounted: "{{ item.json.Inserted }}"
+  with_items: "{{ virtualmedia.results }}"
+  no_log: true
+
+- name: Umounting ISO via REST API (virtual media)
+  uri:
+    url: "https://{{ hostvars[item].ipmi_address }}/redfish/v1/managers/1/virtualmedia/2/"
+    method: POST
+    user: "{{ hostvars[item].ipmi_user }}"
+    password: "{{ hostvars[item].ipmi_password }}"
+    force_basic_auth: true
+    validate_certs: false
+    body: '{"Action": "VirtualMedia.EjectMedia"}'
+    body_format: json
+  loop: "{{ groups['masters'] }}"
+  when: 
+    - virtualmedia_mounted | bool
+
+- name: Mounting firmware ISO (virtual media)
+  uri:
+    url: "https://{{ hostvars[item].ipmi_address }}/redfish/v1/managers/1/virtualmedia/2/"
+    method: PATCH
+    user: "{{ hostvars[item].ipmi_user }}"
+    password: "{{ hostvars[item].ipmi_password }}"
+    force_basic_auth: true
+    validate_certs: false
+    body: '{"Image": "{{ embeddediso_url }}"}'
+    body_format: json
+  loop: "{{ groups['masters'] }}"
+
+- name: Making sure next boot will be on mounted ISO
+  uri:
+    url: "https://{{ hostvars[item].ipmi_address }}/redfish/v1/managers/1/virtualmedia/2/"
+    method: PATCH
+    user: "{{ hostvars[item].ipmi_user }}"
+    password: "{{ hostvars[item].ipmi_password }}"
+    force_basic_auth: true
+    validate_certs: false
+    body: '{"Oem": {"Hpe": {"BootOnNextServerReset": true}}}'
+    body_format: json
+  loop: "{{ groups['masters'] }}"
