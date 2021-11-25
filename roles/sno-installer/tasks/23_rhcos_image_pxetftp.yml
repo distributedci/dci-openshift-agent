@@ -1,0 +1,152 @@
+---
+# rhcos_json fact already set in 21_rhcos_image_paths.yaml
+- name: "Set Facts for RHCOS PXE"
+  set_fact:
+    rhcos_pxe_kernel_name: "{{ rhcos_json_file.stdout | from_json | json_query(kernel_name) | basename }}"
+    rhcos_pxe_kernel_sha256: "{{ rhcos_json_file.stdout | from_json  | json_query(kernel_sha) }}"
+    rhcos_pxe_kernel_url: "{{ rhcos_json_file.stdout | from_json  | json_query(kernel_name) }}"
+    rhcos_pxe_initramfs_name: "{{ rhcos_json_file.stdout | from_json | json_query(initramfs_name) | basename }}"
+    rhcos_pxe_initramfs_sha256: "{{ rhcos_json_file.stdout | from_json  | json_query(initramfs_sha) }}"
+    rhcos_pxe_initramfs_url: "{{ rhcos_json_file.stdout | from_json  | json_query(initramfs_name) }}"
+    rhcos_pxe_rootfs_name: "{{ rhcos_json_file.stdout | from_json | json_query(rootfs_name) | basename }}"
+    rhcos_pxe_rootfs_sha256: "{{ rhcos_json_file.stdout | from_json  | json_query(rootfs_sha) }}"
+    rhcos_pxe_rootfs_url: "{{ rhcos_json_file.stdout | from_json  | json_query(rootfs_name) }}"
+  vars:
+    kernel_name: 'architectures.x86_64.artifacts.metal.formats.pxe.kernel.location'
+    kernel_sha: 'architectures.x86_64.artifacts.metal.formats.pxe.kernel.sha256'
+    initramfs_name: 'architectures.x86_64.artifacts.metal.formats.pxe.initramfs.location'
+    initramfs_sha: 'architectures.x86_64.artifacts.metal.formats.pxe.initramfs.sha256'
+    rootfs_name: 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.location'
+    rootfs_sha: 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.sha256'
+  tags:
+    - cache
+    - rhcospxe
+
+- name: "Check if kernel image exists"
+  stat:
+    path: "{{ tftp_dir }}/images/{{ rhcos_pxe_kernel_name }}"
+    get_checksum: false
+  register: kernel_img
+  delegate_to: "{{ tftp_server }}"
+  when:
+    - dnsmasq_enabled|bool
+  tags: rhcospxe
+
+- name: "Download {{ rhcos_pxe_kernel_name }} for tftp"
+  get_url:
+    url:  "{{ rhcos_pxe_kernel_url }}"
+    dest: "{{ tftp_dir }}/images/{{ rhcos_pxe_kernel_name }}"
+    owner: "root"
+    group: "root"
+    mode: '0644'
+    setype: tftpdir_rw_t
+    checksum: "sha256:{{ rhcos_pxe_kernel_sha256 }}"
+    timeout: 600
+  register: kernel_img_file
+  retries: 3
+  delay: 10
+  until: kernel_img_file is not failed
+  become: true
+  delegate_to: "{{ tftp_server }}"
+  when:
+    - dnsmasq_enabled|bool
+    - not kernel_img.stat.exists or force_mirroring
+  tags: rhcospxe
+
+- name: "Check if initramfs image exists"
+  stat:
+    path: "{{ tftp_dir }}/images/{{ rhcos_pxe_initramfs_name }}"
+    get_checksum: false
+  register: initramfs_img
+  delegate_to: "{{ tftp_server }}"
+  when:
+    - dnsmasq_enabled|bool
+  tags: rhcospxe
+
+- name: "Download {{ rhcos_pxe_initramfs_name }} for tftp"
+  get_url:
+    url:  "{{ rhcos_pxe_initramfs_url }}"
+    dest: "{{ tftp_dir }}/images/{{ rhcos_pxe_initramfs_name }}"
+    owner: "root"
+    group: "root"
+    mode: '0644'
+    setype: tftpdir_rw_t
+    checksum: "sha256:{{ rhcos_pxe_initramfs_sha256 }}"
+    timeout: 600
+  register: initramfs_img_file
+  retries: 3
+  delay: 10
+  until: initramfs_img_file is not failed
+  become: true
+  delegate_to: "{{ tftp_server }}"
+  when:
+    - dnsmasq_enabled|bool
+    - not initramfs_img.stat.exists or force_mirroring
+  tags: rhcospxe
+
+- name: "Check if rootfs image exists"
+  stat:
+    path: "{{ cache_dir }}/{{ rhcos_pxe_rootfs_name }}"
+    get_checksum: false
+  register: rootfs_img
+  delegate_to: "{{ cache_provisioner | ternary(groups['provisioner'][0], groups['registry_host'][0]) }}"
+  tags:
+    - cache
+    - rhcospxe
+
+- name: "Download {{ rhcos_pxe_rootfs_name }} for cache"
+  get_url:
+    url:  "{{ rhcos_pxe_rootfs_url }}"
+    dest: "{{ provision_cache_store }}/{{ rhcos_pxe_rootfs_name }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+    setype: httpd_sys_content_t
+    checksum: "sha256:{{ rhcos_pxe_rootfs_sha256 }}"
+    timeout: 600
+  register: rootfs_img_file
+  retries: 3
+  delay: 10
+  until: rootfs_img_file is not failed
+  become: true
+  delegate_to: "{{ cache_provisioner | ternary(groups['provisioner'][0], groups['registry_host'][0]) }}"
+  when:
+    - cache_enabled|bool
+    - not rootfs_img.stat.exists or force_mirroring
+  tags:
+    - cache
+    - rhcospxe
+
+  #use the hostname from the inventory to groups[registry][0] or provisioner[0] as the http://URL
+  #use a ternary for the delegate_to
+- name: Get URL of host providing the webserver
+  set_fact:
+    host_url: "{{ cache_provisioner | ternary(groups['provisioner'][0], groups['registry_host'][0]) }}"
+  tags:
+    - cache
+    - rhcospxe
+
+- name: Set kernel image path override if not provided by the user
+  set_fact:
+    coreos_pxe_kernel_path: "/images/{{ rhcos_pxe_kernel_name }}"
+  when: coreos_pxe_kernel_path is not defined or coreos_pxe_kernel_path|length < 1
+  tags:
+    - cache
+    - rhcospxe
+
+- name: Set initramfs image path override if not provided by the user
+  set_fact:
+    coreos_pxe_initramfs_path: "/images/{{ rhcos_pxe_initramfs_name }}"
+  when: coreos_pxe_initramfs_path is not defined or coreos_pxe_initramfs_path|length < 1
+  tags:
+    - cache
+    - rhcospxe
+
+- name: Set rootfs image URL override if not provided by the user
+  set_fact:
+    coreos_pxe_rootfs_url: "http://{{ host_url }}:{{ webserver_caching_port }}/{{ rhcos_pxe_rootfs_name }}"
+  when: coreos_pxe_rootfs_url is not defined or coreos_pxe_rootfs_url|length < 1
+  tags:
+    - cache
+    - rhcospxe
+...

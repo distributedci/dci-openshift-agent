@@ -1,5 +1,38 @@
 ---
-- name: Create OpenShift Ignition File
+- name: "Create OpenShift Ignition File"
   shell: |
     {{ ocp_binary_path }}/openshift-install --dir {{ dir }} create single-node-ignition-config
   tags: ignition
+
+- name: "Extra tasks to get ignition file for baremetal SNO"
+  block:
+  - name: "Set coreos sno ignition facts"
+    set_fact:
+      coreos_sno_ignition: "{{ cache_dir }}/{{ version }}/sno.ign"
+  
+  - name: "Copy OpenShift Ignition File"
+    copy:
+      src: "{{ dir }}/bootstrap-in-place-for-live-iso.ign"
+      dest: "{{ coreos_sno_ignition }}"
+      remote_src: true
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
+      mode: '0644'    
+      setype: httpd_sys_content_t
+    become: true
+    delegate_to: "{{ cache_provisioner | ternary(groups['provisioner'][0], groups['registry_host'][0]) }}"
+  
+  - name: "Set coreos_sno_ignition_url fact"
+    set_fact:
+      coreos_sno_ignition_url: "http://{{ host_url }}:{{ webserver_caching_port }}/{{ version }}/sno.ign"
+    when: |
+      coreos_sno_ignition_url is not defined or
+      coreos_sno_ignition_url|length < 1
+  when:
+    - cache_enabled|bool
+    - sno_install_type is defined
+    - sno_install_type == "baremetal"
+  tags:
+    - ignition
+    - cache
+...

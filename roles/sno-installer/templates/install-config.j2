@@ -48,7 +48,11 @@ controlPlane:
 platform:
   none: {}
 BootstrapInPlace:
-  InstallationDisk: {{ installation_disk | default('/dev/vda') }}
+{% if sno_install_type|length and sno_install_type == 'baremetal'  %}
+  InstallationDisk: {{ installation_disk | default('/dev/sda') }}
+{% else %}
+  InstallationDisk: {{ hostvars['masters'][0].installation_disk | default('/dev/vda') }}
+{% endif %}
 publish: External
 pullSecret: '{{ pullsecret }}'
 sshKey: '{{ key }}'
