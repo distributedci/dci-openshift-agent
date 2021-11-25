@@ -1,0 +1,13 @@
+---
+- name: "Generate grub.cfg file for SNO node"
+  template:
+    src: grub.cfg.j2
+    dest: /var/lib/tftpboot/grub.cfg-{{ hostvars["master-0"].baremetal_mac }}
+    owner: "root"
+    group: "root"
+    mode: '0644'
+    setype: tftpdir_rw_t
+  become: true
+  delegate_to: localhost
+  tags: rhcos_grub
+...
