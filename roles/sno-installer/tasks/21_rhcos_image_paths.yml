@@ -1,0 +1,13 @@
+---
+- name: "Fetch rhcos.json File"
+  shell: >
+    set -o pipefail &&
+    {{ cache_dir }}/{{ version }}/openshift-install coreos print-stream-json |
+    tee {{ cache_dir }}/{{ version }}/rhcos.json
+  register: rhcos_json_file
+  retries: 3
+  delay: 10
+  until: rhcos_json_file is not failed
+  delegate_to: "{{ cache_provisioner | ternary(groups['provisioner'][0], groups['registry_host'][0]) }}"
+  tags: rhcospath
+...
