@@ -1,0 +1,32 @@
+---
+- name: "Check if rhcos.json exists"
+  stat:
+    path: "{{ cache_dir }}/{{ version }}/rhcos.json"
+    get_checksum: false
+  register: rhcos_json
+  tags: rhcospath
+
+- name: "Fetch rhcos.json File"
+  shell: >
+    set -o pipefail &&
+    {{ cache_dir }}/{{ version }}/openshift-install coreos print-stream-json |
+    tee {{ cache_dir }}/{{ version }}/rhcos.json
+  register: rhcos_json_file
+  retries: 3
+  delay: 10
+  until: rhcos_json_file is not failed
+  delegate_to: "{{ cache_server }}" # This fact was defined in 10_get_oc.yml
+  changed_when: false
+  no_log: true
+  when:
+    - not rhcos_json.stat.exists or force_mirroring
+  tags: rhcospath
+
+- name: "Load variables from rhcos.json"
+  include_vars:
+    file: "{{ cache_dir }}/{{ version }}/rhcos.json"
+    name: rhcos_json_vars
+  when:
+    - not rhcos_json.stat.exists
+  tags: rhcospath
+...

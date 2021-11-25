@@ -15,5 +15,5 @@
 - name: test_ Check enough worker nodes availability
   fail:
     msg: "Not enough worker nodes ({{ worker_node_count }}) to perform required tasks"
-  when: worker_node_count|int <= 1
+  when: worker_node_count|int < (1 if install_type == "sno" else 2)
 ...
