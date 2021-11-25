@@ -3,3 +3,24 @@
   shell: |
     {{ ocp_binary_path }}/openshift-install --dir {{ dir }} create single-node-ignition-config
   tags: ignition
+
+- name: Set kernel image URL override if not provided by the user
+  set_fact:
+    coreos_sno_ignition: "{{ cache_dir }}/{{ version }}/sno.ign"
+  tags: ignition
+
+- name: Copy OpenShift Ignition File
+  copy:
+    src: "{{ dir }}/bootstrap-in-place-for-live-iso.ign"
+    dest: "{{ coreos_sno_ignition }}"
+    remote_src: true
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'    
+    setype: httpd_sys_content_t
+  become: true
+  when:
+    - sno_install_type is defined
+    - sno_install_type == "baremetal"
+  tags: ignition
+...

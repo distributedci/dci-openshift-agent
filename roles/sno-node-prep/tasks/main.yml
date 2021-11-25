@@ -16,30 +16,41 @@
 - include_tasks: 60_enabled_services.yml
   tags: services
 
-- include_tasks: 70_cleanup_libvirt_network.yml
-  tags: cleanup
+- include_tasks: 65_dnsmasq_tftp.yml
+  when: 
+    - sno_install_type is defined
+    - sno_install_type == "baremetal"
+  tags: services
 
-- include_tasks: 71_cleanup_dns_entries.yml
-  tags: cleanup
+- name: "Network and Storage for Virtual SNO"
+  block:
+  - include_tasks: 70_cleanup_libvirt_network.yml
+    tags: cleanup
 
-- include_tasks: 72_cleanup_files.yml
-  tags: cleanup
+  - include_tasks: 71_cleanup_dns_entries.yml
+    tags: cleanup
 
-- include_tasks: 80_libvirt_storage.yml
-  tags: storagepool
+  - include_tasks: 72_cleanup_files.yml
+    tags: cleanup
 
-- include_tasks: 85_libvirt_network.yml
-  tags: virtnetwork
+  - include_tasks: 80_libvirt_storage.yml
+    tags: storagepool
 
-- include_tasks: 87_network_manager.yml
-  when:
-    - ansible_facts['distribution'] == "RedHat"
-  tags: dnsredirect
+  - include_tasks: 85_libvirt_network.yml
+    tags: virtnetwork
 
-- include_tasks: 88_etc_hosts.yml
-  when:
-    - ansible_facts['distribution'] == "Fedora"
-  tags: dnsredirect
+  - include_tasks: 87_network_manager.yml
+    when:
+      - ansible_facts['distribution'] == "RedHat"
+    tags: dnsredirect
+
+  - include_tasks: 88_etc_hosts.yml
+    when:
+      - ansible_facts['distribution'] == "Fedora"
+    tags: dnsredirect
+  when: |
+    - (sno_install_type is undefined) or
+      (sno_install_type == "virtual")
 
 - include_tasks: 90_create_config_install_dirs.yml
   tags:

@@ -1,0 +1,66 @@
+---
+- name: "Collect efi files" 
+  find:
+    paths: /boot/efi/EFI/
+    recurse: true
+    patterns: "*.efi,*.EFI"
+  register: efi_files
+  become: true
+  delegate_to: localhost
+  tags: tftp
+
+- name: "Copy efi files"
+  copy:
+    remote_src: true
+    src: "{{ item.path }}"
+    dest: "/var/lib/tftpboot/"
+    setype: tftpdir_rw_t
+  loop: "{{ efi_files.files }}"
+  loop_control:
+    label: "{{ item.path }}"
+  become: true
+  delegate_to: localhost
+  tags: tftp
+
+- name: Define TFTP settings for dnsmasq
+  copy:
+    content: |
+      address=/api.{{ cluster }}.{{ domain }}/{{ sno_extnet_ip }}
+      address=/.apps.{{ cluster }}.{{ domain }}/{{ sno_extnet_ip }}
+      address=/master-0.{{ cluster }}.{{ domain }}/{{ sno_extnet_ip }}
+      enable-tftp
+      tftp-root=/var/lib/tftpboot/
+      dhcp-match=set:efi,option:client-arch,7
+      dhcp-match=set:efi,option:client-arch,9
+      dhcp-match=set:efi,option:client-arch,11
+      dhcp-boot=shimx64.efi
+      domain={{ cluster }}.{{ domain }},{{ extcidrnet }}
+      dhcp-host={{ hostvars["master-0"].baremetal_mac }},{{ sno_extnet_ip }},master-0.{{ cluster }}.{{ domain }}
+    dest: /etc/dnsmasq.d/{{ cluster }}.conf
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  become: yes
+  delegate_to: localhost
+  tags: tftp
+
+- name: Reload dnsmasq
+  service:
+    name: dnsmasq
+    state: restarted
+  become: yes
+  delegate_to: localhost
+  tags: tftp
+
+- name: "Create TFTP images directory"
+  file:
+    path: "/var/lib/tftpboot/images"
+    state: directory
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=rx
+    setype: tftpdir_rw_t
+  become: true
+  delegate_to: localhost
+  tags: tftp
+...
