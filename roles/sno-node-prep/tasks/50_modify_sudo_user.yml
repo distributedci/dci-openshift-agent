@@ -7,6 +7,9 @@
     state: present
     generate_ssh_key: yes
   become: yes
+  when: |
+    - (sno_install_type is undefined) or
+      (sno_install_type == "virtual")
   tags: user
 
 - name: Grant "{{ ansible_user }}" user execute access to "{{ ansible_user_dir }}"

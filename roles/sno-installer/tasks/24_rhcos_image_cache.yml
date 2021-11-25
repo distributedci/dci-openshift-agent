@@ -1,0 +1,237 @@
+---
+# If we're executing these plays, then:
+# 1. cache_enabled is true
+# 2. Access to www.redhat.com has been confirmed
+
+#SELinux when already has httpd_sys_content_t giving issues changing,thus leaving it the same
+#for the provision_cache_store to prevent issues. Also removing ":z" from podman_container for
+#provision_cache_store in the later task.
+- name: "Create {{ provision_cache_store }} and {{ httpd_cache_files }} on host with online access"
+  file:
+    path: "{{ item[0] }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    setype: "{{ item[1] }}"
+    mode: '0775'
+  with_nested:
+    - [ "{{ provision_cache_store }}" , "{{ httpd_cache_files }}" ]
+    - [ 'httpd_sys_content_t', '_default' ]
+  tags: cache
+
+- name: "Add magic and httpd.conf file to {{ httpd_cache_files }} dir"
+  template:
+    src: "{{ item[0] }}"
+    dest: "{{ httpd_cache_files }}/{{ item[1] }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+  with_nested:
+    - [ 'magic.j2', 'httpd_conf.j2' ]
+    - [ 'magic', 'httpd.conf' ]
+  tags: cache
+
+# rhcos_json fact already set in 23_rhcos_image_paths.yaml
+- name: "Set Facts for RHCOS PXE"
+  set_fact:
+    rhcos_pxe_kernel_name: "{{ rhcos_json_file.stdout | from_json | json_query(kernel_name) | basename }}"
+    rhcos_pxe_kernel_sha256: "{{ rhcos_json_file.stdout | from_json  | json_query(kernel_sha) }}"
+    rhcos_pxe_kernel_url: "{{ rhcos_json_file.stdout | from_json  | json_query(kernel_name) }}"
+    rhcos_pxe_initramfs_name: "{{ rhcos_json_file.stdout | from_json | json_query(initramfs_name) | basename }}"
+    rhcos_pxe_initramfs_sha256: "{{ rhcos_json_file.stdout | from_json  | json_query(initramfs_sha) }}"
+    rhcos_pxe_initramfs_url: "{{ rhcos_json_file.stdout | from_json  | json_query(initramfs_name) }}"
+    rhcos_pxe_rootfs_name: "{{ rhcos_json_file.stdout | from_json | json_query(rootfs_name) | basename }}"
+    rhcos_pxe_rootfs_sha256: "{{ rhcos_json_file.stdout | from_json  | json_query(rootfs_sha) }}"
+    rhcos_pxe_rootfs_url: "{{ rhcos_json_file.stdout | from_json  | json_query(rootfs_name) }}"
+  vars:
+    kernel_name: 'architectures.x86_64.artifacts.metal.formats.pxe.kernel.location'
+    kernel_sha: 'architectures.x86_64.artifacts.metal.formats.pxe.kernel.sha256'
+    initramfs_name: 'architectures.x86_64.artifacts.metal.formats.pxe.initramfs.location'
+    initramfs_sha: 'architectures.x86_64.artifacts.metal.formats.pxe.initramfs.sha256'
+    rootfs_name: 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.location'
+    rootfs_sha: 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.sha256'
+  tags: cache
+
+- name: "Check if kernel image exists"
+  stat:
+    path: "{{ cache_dir }}/{{ rhcos_pxe_kernel_name }}"
+    get_checksum: false
+  register: kernel_img
+  delegate_to: localhost
+  tags: cache
+
+- name: "Download {{ rhcos_pxe_kernel_name }} for cache"
+  get_url:
+    url:  "{{ rhcos_pxe_kernel_url }}"
+    dest: "/var/lib/tftpboot/images/{{ rhcos_pxe_kernel_name }}"
+    owner: "root"
+    group: "root"
+    mode: '0644'
+    setype: tftpdir_rw_t
+    checksum: "sha256:{{ rhcos_pxe_kernel_sha256 }}"
+    timeout: 600
+  register: kernel_img_file
+  retries: 3
+  delay: 10
+  until: kernel_img_file is not failed
+  become: true
+  delegate_to: localhost
+  when:
+    - not kernel_img.stat.exists or force_mirroring
+  tags: cache
+
+- name: "Check if initramfs image exists"
+  stat:
+    path: "{{ cache_dir }}/{{ rhcos_pxe_initramfs_name }}"
+    get_checksum: false
+  register: initramfs_img
+  delegate_to: localhost
+  tags: cache
+
+- name: "Download {{ rhcos_pxe_initramfs_name }} for cache"
+  get_url:
+    url:  "{{ rhcos_pxe_initramfs_url }}"
+    dest: "/var/lib/tftpboot/images/{{ rhcos_pxe_initramfs_name }}"
+    owner: "root"
+    group: "root"
+    mode: '0644'
+    setype: tftpdir_rw_t
+    checksum: "sha256:{{ rhcos_pxe_initramfs_sha256 }}"
+    timeout: 600
+  register: initramfs_img_file
+  retries: 3
+  delay: 10
+  until: initramfs_img_file is not failed
+  become: true
+  delegate_to: localhost
+  when:
+    - not initramfs_img.stat.exists or force_mirroring
+  tags: cache
+
+- name: "Check if rootfs image exists"
+  stat:
+    path: "{{ cache_dir }}/{{ rhcos_pxe_rootfs_name }}"
+    get_checksum: false
+  register: rootfs_img
+  tags: cache
+
+- name: "Download {{ rhcos_pxe_rootfs_name }} for cache"
+  get_url:
+    url:  "{{ rhcos_pxe_rootfs_url }}"
+    dest: "{{ provision_cache_store }}/{{ rhcos_pxe_rootfs_name }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+    setype: httpd_sys_content_t
+    checksum: "sha256:{{ rhcos_pxe_rootfs_sha256 }}"
+    timeout: 600
+  register: rootfs_img_file
+  retries: 3
+  delay: 10
+  until: rootfs_img_file is not failed
+  become: true
+  when:
+    - not rootfs_img.stat.exists or force_mirroring
+  tags: cache
+
+  #use the hostname from the inventory to groups[registry][0] or provisioner[0] as the http://URL
+  #use a ternary to toggle between the url status
+  #use a ternary for the delegate_to
+- name: Get URL of host providing the webserver
+  set_fact:
+    host_url: "{{ groups['provisioner'][0] }}"
+  tags: cache
+
+- name: Set kernel image URL override if not provided by the user
+  set_fact:
+    coreos_live_kernel_url: "http://{{ host_url }}:{{ webserver_caching_port }}/{{ rhcos_pxe_kernel_name }}"
+  when: coreos_live_kernel_url is not defined or coreos_live_kernel_url|length < 1
+  tags: cache
+
+- name: Set initramfs image URL override if not provided by the user
+  set_fact:
+    coreos_live_initramfs_url: "http://{{ host_url }}:{{ webserver_caching_port }}/{{ rhcos_pxe_initramfs_name }}"
+  when: coreos_live_initramfs_url is not defined or coreos_live_initramfs_url|length < 1
+  tags: cache
+
+- name: Set rootfs image URL override if not provided by the user
+  set_fact:
+    coreos_live_rootfs_url: "http://{{ host_url }}:{{ webserver_caching_port }}/{{ rhcos_pxe_rootfs_name }}"
+  when: coreos_live_rootfs_url is not defined or coreos_live_rootfs_url|length < 1
+  tags: cache
+
+#Leaving SELinux details alone and not using ":z"
+#for the provision_cache_store due to issues attempting
+#to revert context. Leaving behavior as it was previously
+#to avoid breaking other user environments.
+- name: Start RHCOS image cache container
+  containers.podman.podman_container:
+    name: rhcos_image_cache
+    image: registry.centos.org/centos/httpd-24-centos7:latest
+    state: stopped
+    network: host
+    volumes:
+      - "{{ provision_cache_store }}:/var/www/html"
+      - "{{ httpd_cache_files }}:/opt/rh/httpd24/root/etc/httpd/conf:z"
+  register: rhcos_image_cache_info
+  tags: cache
+
+- name: Setting facts about container
+  set_fact:
+    rhcos_image_cache_name: "{{ rhcos_image_cache_info.container.Name }}"
+    rhcos_image_cache_pidfile: "{{ rhcos_image_cache_info.container.ConmonPidFile }}"
+  tags: cache
+
+- name: Ensuring container restarts upon reboot
+  block:
+    - name: Ensure user specific systemd instance are persistent
+      command:  |
+              /usr/bin/loginctl enable-linger {{ ansible_user }}
+
+    - name: Create systemd user directory
+      file:
+        path: "{{ ansible_user_dir }}/.config/systemd/user"
+        state: directory
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0775'
+
+    - name: Copy the systemd service file
+      copy:
+        content: |
+          [Unit]
+          Description=Podman container-cache.service
+          [Service]
+          Restart=on-failure
+          ExecStart=/usr/bin/podman start {{ rhcos_image_cache_name }}
+          ExecStop=/usr/bin/podman stop -t 10 {{ rhcos_image_cache_name }}
+          KillMode=none
+          Type=forking
+          PIDFile={{ rhcos_image_cache_pidfile }}
+          [Install]
+          WantedBy=default.target
+        dest: "{{ ansible_user_dir }}/.config/systemd/user/container-cache.service"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0644'
+
+    - name: Reload systemd service
+      systemd:
+        daemon_reexec: yes
+        scope: user
+      environment:
+        DBUS_SESSION_BUS_ADDRESS: "{{ ansible_env.DBUS_SESSION_BUS_ADDRESS|default('unix:path=/run/user/' +  ansible_effective_user_id|string + '/bus') }}"
+    - name: Enable container-cache.service
+      systemd:
+        name: container-cache.service
+        enabled: yes
+        scope: user
+      environment:
+        DBUS_SESSION_BUS_ADDRESS: "{{ ansible_env.DBUS_SESSION_BUS_ADDRESS|default('unix:path=/run/user/' +  ansible_effective_user_id|string + '/bus') }}"
+    - name: Start container-cache.service
+      systemd:
+        name: container-cache.service
+        state: started
+        scope: user
+      environment:
+        DBUS_SESSION_BUS_ADDRESS: "{{ ansible_env.DBUS_SESSION_BUS_ADDRESS|default('unix:path=/run/user/' +  ansible_effective_user_id|string + '/bus') }}"
+  tags: cache
