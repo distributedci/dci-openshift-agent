@@ -15,6 +15,15 @@
 
 - include_tasks: 24_rhcos_image_live.yml
   tags: rhcos_live
+  when:
+    - sno_install_type is defined
+    - sno_install_type == "virtual"
+
+- include_tasks: 24_rhcos_image_cache.yml
+  tags: cache
+  when:
+    - sno_install_type is defined
+    - sno_install_type == "baremetal"
 
 - include_tasks: 25_create_install_config.yml
   tags: installconfig
@@ -28,14 +37,33 @@
 - include_tasks: 55_create_ignition.yml
   tags: ignition
 
+- include_tasks: 56_create_grubpxe.yml
+  tags: rhcos_grub
+  when:
+    - sno_install_type is defined
+    - sno_install_type == "baremetal"
+
 - include_tasks: 57_embed_ignition_into_iso.yml
+  when: |
+    - (sno_install_type is undefined) or
+      (sno_install_type == "virtual")
   tags: embedded
 
-- include_tasks: 59_cleanup_sno_vm.yml
-  tags: cleanup
+- block:
+  - include_tasks: 59_cleanup_sno_vm.yml
+    tags: cleanup
 
-- include_tasks: 60_deploy_sno_vm.yml
+  - include_tasks: 60_deploy_sno_vm.yml
+    tags: install
+  when: |
+    - (sno_install_type is undefined) or
+      (sno_install_type == "virtual")
+
+- include_tasks: 60_deploy_sno_bm.yml
   tags: install
+  when:
+    - sno_install_type is defined
+    - sno_install_type == "baremetal"
 
 - include_tasks: 70_wait_deployment.yml
   tags: waitdeploy
