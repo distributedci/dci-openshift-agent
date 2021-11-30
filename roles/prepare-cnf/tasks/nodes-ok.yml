@@ -7,6 +7,6 @@
   until:
     - '"Working" not in ((cluster_nodes.resources == None) | ternary([], cluster_nodes.resources)) | json_query("[].metadata.annotations.\"machineconfiguration.openshift.io/state\"")'
   retries: 240
-  delay: 10
+  delay: 20
   failed_when:
     - '"Degraded" in ((cluster_nodes.resources == None) | ternary([], cluster_nodes.resources)) | json_query("[].metadata.annotations.\"machineconfiguration.openshift.io/state\"")'
