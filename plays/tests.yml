@@ -28,9 +28,6 @@
     conformance_local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
   include_role:
     name: redhat-tests
-  when:
-    - (dci_openshift_agent_conformance | string | length) > 0
-    - registry_certificate is defined
 
 # Setup and run cnf-tests
 - block:
