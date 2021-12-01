@@ -24,13 +24,10 @@
     ocp_version_maj: "{{ ocp_version_major | int }}"
     ocp_version_min: "{{ ocp_version_minor | int }}"
     conformance_registry_certificate: "{{ registry_certificate }}"
-    conformance_registry_auth: "{{ provision_cache_store }}/{{ cluster }}-pull-secret.txt"
+    registry_auth_file: "{{ provision_cache_store }}/{{ cluster }}-pull-secret.txt"
     conformance_local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
   include_role:
     name: redhat-tests
-  when:
-    - (dci_openshift_agent_conformance | string | length) > 0
-    - registry_certificate is defined
 
 # Setup and run cnf-tests
 - block:
