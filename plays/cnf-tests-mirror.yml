@@ -31,3 +31,5 @@
       -f - \
       -a {{ dci_pullsecret_file }} \
       --insecure=true
+  when:
+    - dci_pullsecret_file is defined
