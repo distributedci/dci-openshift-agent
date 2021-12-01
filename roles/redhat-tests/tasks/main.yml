@@ -1,7 +1,18 @@
 ---
 - name: "redhat-tests : Run openshift conformance tests"
+  vars:
+    conformance_registry_certificate: "{{ registry_certificate }}"
   include_tasks: conformance.yml
   tags:
   - conformance
+  when:
+    - (dci_openshift_agent_conformance | string | length) > 0
+    - registry_certificate is defined
 
+- name: "redhat-tests : Run openshift CSI driver tests"
+  include_tasks: csi-tests.yml
+  tags:
+  - csi-tests
+  when:
+    - (dci_openshift_csi_test_manifest | string | length) > 0
 ...
