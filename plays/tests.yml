@@ -19,12 +19,12 @@
   when: "'Server Version' in item"
   loop: "{{ oc_version_str.stdout_lines }}"
 
-- name: "dci-openshift-agent : Run Red Hat test suite"
+- name: "dci-openshift-agent : Run Red Hat Conformance test suite"
   vars:
     ocp_version_maj: "{{ ocp_version_major | int }}"
     ocp_version_min: "{{ ocp_version_minor | int }}"
     conformance_registry_certificate: "{{ registry_certificate }}"
-    conformance_registry_auth: "{{ provision_cache_store }}/{{ cluster }}-pull-secret.txt"
+    conformance_registry_auth: "{{ dci_pullsecret_file }}"
     conformance_local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
   include_role:
     name: redhat-tests
@@ -32,17 +32,24 @@
     - (dci_openshift_agent_conformance | string | length) > 0
     - registry_certificate is defined
 
+- name: "dci-openshift-agent : Run Red Hat CSI test suite"
+  vars:
+    csi_registry_auth: "{{ dci_pullsecret_file }}"
+    csi_cluster_configs_dir: "{{ dci_cluster_configs_dir }}"
+    csi_cluster_tests_dir: "{{ dci_cluster_tests_dir }}"
+    csi_test_manifest: "{{ dci_openshift_csi_test_manifest }}"
+  include_role:
+    name: redhat-tests
+  when:
+    - (dci_openshift_csi_test_manifest | string | length) > 0
+
 # Setup and run cnf-tests
 - block:
     - name: Mirror images to local registry for disconnected cnf-tests
-      vars:
-        dci_pullsecret_file: "{{ provision_cache_store }}/{{ cluster }}-pull-secret.txt"
       include_tasks: cnf-tests-mirror.yml
       when: cnf_tests_mode == "offline"
 
     - name: Run cnf tests
-      vars:
-        dci_pullsecret_file: "{{ provision_cache_store }}/{{ cluster }}-pull-secret.txt"
       include_tasks: cnf-tests-run.yml
   when:
     - cnf_tests_mode is defined
