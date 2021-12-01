@@ -1,0 +1,14 @@
+---
+- name: "test_ redhat-tests: Run the openshift CSI tests"
+  shell:
+    cmd: >
+     podman run --pull=always --rm
+     --authfile {{ dci_pullsecret_file }}
+     -v {{ dci_cluster_configs_dir }}:/tests:Z
+     -v {{ dci_cluster_tests_dir }}/{{ dci_openshift_csi_test_manifest }}:/manifest.yaml:z
+     -e TEST_CSI_DRIVER_FILES=/manifest.yaml
+     -e KUBECONFIG=/tests/kubeconfig
+     registry.redhat.io/openshift4/ose-tests:v{{ ocp_version_maj }}.{{ ocp_version_min }}
+     /bin/bash -c "openshift-tests run openshift/csi --junit-dir /tests" > {{ dci_cluster_configs_dir }}/csi-report.txt
+  ignore_errors: true
+...
