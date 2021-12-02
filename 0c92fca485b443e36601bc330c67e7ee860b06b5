@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fb55b3c_d430d71e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-02T23:25:40Z",
+      "side": 1,
+      "message": "IMO we don\u0027t need enable_cnv, I think that by adding kubevirt-hyperconverged to the opm_mirror_list is an indication that we want to deploy cnv, otherwise we wouldn\u0027t include it, wdyt?",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "947eb5e6_e20b8656",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-02T23:25:40Z",
+      "side": 1,
+      "message": "This \"if\" section is not needed, since we\u0027ve dropped support to 4.5\nIMO, we don\u0027t need cnv_version variable any more.",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
