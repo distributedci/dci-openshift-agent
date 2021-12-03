@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e61567e_26b395af",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-12-03T01:12:40Z",
+      "side": 1,
+      "message": "Should this be conformance_registry_certificate?  And is that even correct if we allow this to be run in the connected mode?",
+      "revId": "802137c28983d4ec4229389ef60251b702a49e06",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
