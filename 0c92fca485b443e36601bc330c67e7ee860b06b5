@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "922f3ef5_33dc57fa",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-12-03T15:30:25Z",
+      "side": 1,
+      "message": "How would this work in a connected environment then?",
+      "parentUuid": "3fb55b3c_d430d71e",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "947eb5e6_e20b8656",
         "filename": "roles/cnv-setup/templates/sub.yaml.j2",
         "patchSetId": 1
