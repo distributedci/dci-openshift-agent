@@ -16,6 +16,24 @@
       "revId": "802137c28983d4ec4229389ef60251b702a49e06",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3cb731e1_3f6c5e82",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-03T19:19:23Z",
+      "side": 1,
+      "message": "registry_certificate is the TLS certificate required during conformance tests (domain.crt). We will need to review this later to check if will be required once we fully move to quay.\nconformance_registry_certificate has been removed and defined as a fact (dci_pullsecret_file) in plays/tests.yml in order to use it on all the test suites.",
+      "parentUuid": "5e61567e_26b395af",
+      "revId": "802137c28983d4ec4229389ef60251b702a49e06",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
