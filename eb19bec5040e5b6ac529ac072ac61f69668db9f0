@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dc5d3931_127e53c7",
+        "filename": "roles/sno-node-prep/tasks/65_dnsmasq_tftp.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2021-12-03T02:35:59Z",
+      "side": 1,
+      "message": "not sure about this part 😂",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 70
+      },
+      "revId": "eb19bec5040e5b6ac529ac072ac61f69668db9f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
