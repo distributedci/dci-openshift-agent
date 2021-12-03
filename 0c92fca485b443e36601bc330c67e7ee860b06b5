@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "86bac287_02539b9b",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-03T18:35:49Z",
+      "side": 1,
+      "message": "You\u0027re right! I missed to think about that, in that case we need that variable to enable CNV and for disconnected envs we must not forget the opm_mirror_list 😄",
+      "parentUuid": "922f3ef5_33dc57fa",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "947eb5e6_e20b8656",
         "filename": "roles/cnv-setup/templates/sub.yaml.j2",
         "patchSetId": 1
