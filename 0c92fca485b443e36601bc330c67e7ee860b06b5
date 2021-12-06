@@ -69,6 +69,24 @@
       "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca4082ef_0ae84cbf",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2021-12-06T19:20:31Z",
+      "side": 1,
+      "message": "\u003e This \"if\" section is not needed, since we\u0027ve dropped support to 4.5\n\u003e IMO, we don\u0027t need cnv_version variable any more.\n\nI agree with this, probably better to drop it altogether.",
+      "parentUuid": "947eb5e6_e20b8656",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
