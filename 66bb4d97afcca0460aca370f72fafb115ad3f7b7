@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "51619f6e_c9d8c825",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-12-07T09:56:48Z",
+      "side": 1,
+      "message": "Oh you are right! In my tests it was working because it was already mirrored.",
+      "parentUuid": "23f7b000_0dde8a85",
+      "revId": "66bb4d97afcca0460aca370f72fafb115ad3f7b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "62560765_787f2a36",
         "filename": "plays/upgrade.yml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2021-12-06T23:39:58Z",
       "side": 1,
       "message": "Not sure if looking just at the IP would be enough to determine that an upgrade has been completed. We use it to extract the name that will be used by the csv and then we monitor the csv.",
+      "revId": "66bb4d97afcca0460aca370f72fafb115ad3f7b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4cb5ec4b_2f26e37c",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-12-07T09:56:48Z",
+      "side": 1,
+      "message": "hum, I don\u0027t like monitoring the CSV because an upgrade does not create a new CSV, so monitoring the status can be misleading. In addition, still need to find the best way to check the csv of the different operators",
+      "parentUuid": "62560765_787f2a36",
       "revId": "66bb4d97afcca0460aca370f72fafb115ad3f7b7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
