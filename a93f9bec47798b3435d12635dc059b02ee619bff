@@ -16,6 +16,24 @@
       "revId": "a93f9bec47798b3435d12635dc059b02ee619bff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2abfd1cc_431da420",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-07T03:30:13Z",
+      "side": 1,
+      "message": "I tried but yeah. those do not work from the agent, those should work if someone wants to use the role as an independet unit. We can remove them, but may not hurt to keep them. Let me know what do you think.",
+      "parentUuid": "2a7960ab_f834988c",
+      "revId": "a93f9bec47798b3435d12635dc059b02ee619bff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
