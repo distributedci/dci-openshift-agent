@@ -32,6 +32,10 @@
       - auths is defined
       - auths.auths is defined
       - webserver_url is defined
+      - install_type | string
+      - install_type in ['ipi', 'sno']
+      - sno_install_type | string
+      - sno_install_type in ['none', 'virtual', 'baremetal']
 
 - name: "Mirroring OCP"
   debug:
