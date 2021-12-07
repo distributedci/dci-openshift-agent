@@ -87,6 +87,24 @@
       "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b7ef2600_1118c604",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-07T10:57:36Z",
+      "side": 1,
+      "message": "I agree too. However, we should not just \"delete\" the reference to cnv_version, we should also think about what will happen with OCP 4.5 pipelines, because they are using currently cnv_version variable. If we delete it, the pipeline is supposed not to be working because 4.5 needs to specify the channel variable. So, should we delete also the OCP 4.5 pipelines?",
+      "parentUuid": "ca4082ef_0ae84cbf",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
