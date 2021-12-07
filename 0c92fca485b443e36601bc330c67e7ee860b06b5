@@ -105,6 +105,24 @@
       "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb7c17d7_72bb3271",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-12-07T14:38:45Z",
+      "side": 1,
+      "message": "Even if we have dropped support for 4.5, we got problems with recent version of cnv (the ones coming with 4.8). In the case of an upgrade from 4.7 to 4.8, we don\u0027t want to have the cnv updated automatically, that\u0027s why having a fix version could be useful",
+      "parentUuid": "b7ef2600_1118c604",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
