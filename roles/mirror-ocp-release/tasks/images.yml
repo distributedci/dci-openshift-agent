@@ -59,7 +59,9 @@
     openstack_image: "{{ rhcos_json_vars | json_query('images.openstack.path') }}"
     openstack_url: "{{ rhcos_json_vars | json_query('baseURI') }}{{ rhcos_json_vars | json_query('images.openstack.path') }}"
     openstack_sha256: "{{ rhcos_json_vars | json_query('images.openstack.sha256') }}"
-  when: version is version("4.8", "<")
+  when:
+    - version is version("4.8", "<")
+    - install_type == 'ipi'
 
 - name: Setting image facts [>= 4.8]
   set_fact:
@@ -70,13 +72,17 @@
     openstack_image: "{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.location') | basename }}"
     openstack_url: "{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.location') }}"
     openstack_sha256: "{{ rhcos_json_vars | json_query('architectures.x86_64.artifacts.openstack.formats.\"qcow2.gz\".disk.sha256') }}"
-  when: version is version("4.8", ">=")
+  when:
+    - version is version("4.8", ">=")
+    - install_type == 'ipi'
 
 - name: "Check if QEMU image exists"
   stat:
     path: "{{ cache_dir }}/{{ qemu_image }}"
     get_checksum: false
   register: qemu_img
+  when:
+    - install_type == 'ipi'
 
 - name: "Download QEMU image"
   get_url:
@@ -95,12 +101,15 @@
   until: qemu_img_file is not failed
   when:
     - not qemu_img.stat.exists or force_mirroring
+    - install_type == 'ipi'
 
 - name: "Check if OpenStack image exists"
   stat:
     path: "{{ cache_dir }}/{{ openstack_image }}"
     get_checksum: false
   register: openstack_img
+  when:
+    - install_type == 'ipi'
 
 - name: "Download OpenStack image"
   get_url:
@@ -119,6 +128,7 @@
   until: openstack_img_file is not failed
   when:
     - not openstack_img.stat.exists or force_mirroring
+    - install_type == 'ipi'
 
 # NOTE: using uncompressed-sha256 for the bootstraposimage is not a mistake,
 # but needed on OCP versions prior to 4.8. The reason being, when the installer
@@ -128,6 +138,13 @@
   set_fact:
     bootstraposimage: "{{ webserver_url }}/{{ qemu_image }}?sha256={{ qemu_uncompressed_sha256 }}"
     clusterosimage: "{{ webserver_url }}/{{ openstack_image }}?sha256={{ openstack_sha256 }}"
+  when:
+    - install_type == 'ipi'
+
+- name: "Mirror SNO images"
+  include_tasks: sno_images.yml
+  when:
+    - install_type == 'sno'
 
 - name: "Check if container_images.done exists"
   stat:
