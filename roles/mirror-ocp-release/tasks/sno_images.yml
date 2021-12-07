@@ -1,0 +1,103 @@
+---
+# rhcos_json_vars fact already set in images.yml
+- name: "Set Facts for RHCOS LIVE"
+  set_fact:
+    rhcos_live_iso_name: "{{ rhcos_json_vars | from_json | json_query(iso_name) | basename }}"
+    rhcos_live_iso_sha256: "{{ rhcos_json_vars | from_json  | json_query(iso_sha) }}"
+    rhcos_path: "{{ rhcos_json_vars | from_json  | json_query(iso_name) }}"
+  vars:
+    iso_name: 'architectures.x86_64.artifacts.metal.formats.iso.disk.location'
+    iso_sha: 'architectures.x86_64.artifacts.metal.formats.iso.disk.sha256'
+  when:
+    - sno_install_type == 'virtual'
+  tags:
+    - cache
+    - rhcos_live
+
+- name: "Check if LIVE image exists"
+  stat:
+    path: "{{ cache_dir }}/{{ rhcos_live_iso_name }}"
+    get_checksum: false
+  register: live_img
+  when:
+    - sno_install_type == 'virtual'
+  tags:
+    - cache
+    - rhcos_live
+
+- name: "Download LIVE image"
+  get_url:
+    url: "{{ rhcos_path }}"
+    dest: "{{ cache_dir }}/{{ rhcos_live_iso_name }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: "0644"
+    setype: virt_content_t
+    checksum: "sha256:{{ rhcos_live_iso_sha256 }}"
+    timeout: 1200
+  register: live_img_file
+  retries: 3
+  delay: 10
+  until: live_img_file is not failed
+  when:
+    - sno_install_type == 'virtual'
+    - not live_img.stat.exists or force_mirroring
+  tags:
+    - cache
+    - rhcos_live
+
+- name: "Set Facts for RHCOS PXE"
+  set_fact:
+    rhcos_pxe_rootfs_name: "{{ rhcos_json_vars | from_json | json_query(rootfs_name) | basename }}"
+    rhcos_pxe_rootfs_sha256: "{{ rhcos_json_vars | from_json  | json_query(rootfs_sha) }}"
+    rhcos_pxe_rootfs_url: "{{ rhcos_json_vars | from_json  | json_query(rootfs_name) }}"
+  vars:
+    rootfs_name: 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.location'
+    rootfs_sha: 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.sha256'
+  when:
+    - sno_install_type == 'baremetal'
+  tags:
+    - cache
+    - rhcospxe
+
+- name: "Check if rootfs image exists"
+  stat:
+    path: "{{ cache_dir }}/{{ rhcos_pxe_rootfs_name }}"
+    get_checksum: false
+  register: rootfs_img
+  when:
+    - sno_install_type == 'baremetal'
+  tags:
+    - cache
+    - rhcospxe
+
+- name: "Download {{ rhcos_pxe_rootfs_name }} for cache"
+  get_url:
+    url: "{{ rhcos_pxe_rootfs_url }}"
+    dest: "{{ cache_dir }}/{{ rhcos_pxe_rootfs_name }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+    setype: httpd_sys_content_t
+    checksum: "sha256:{{ rhcos_pxe_rootfs_sha256 }}"
+    timeout: 600
+  register: rootfs_img_file
+  retries: 3
+  delay: 10
+  until: rootfs_img_file is not failed
+  become: true
+  when:
+    - sno_install_type == 'baremetal'
+    - not rootfs_img.stat.exists or force_mirroring
+  tags:
+    - cache
+    - rhcospxe
+
+- name: "Set rootfs image URL override if not provided by the user"
+  set_fact:
+    coreos_pxe_rootfs_url: "http://{{ webserver_url }}/{{ rhcos_pxe_rootfs_name }}"
+  when: coreos_pxe_rootfs_url is not defined or coreos_pxe_rootfs_url|length < 1
+  tags:
+    - cache
+    - rhcospxe
+...
