@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a7960ab_f834988c",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-07T00:04:36Z",
+      "side": 1,
+      "message": "included roles (as this one) will not list tags, but I\u0027m not sure if you could still use them, e.g. if you call the d-o-a with csi-tests, would that be able to get here and execute only this task?",
+      "revId": "a93f9bec47798b3435d12635dc059b02ee619bff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
