@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "a3bc5101_5cb12ffc",
+        "filename": "plays/tests.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2021-12-07T13:40:53Z",
+      "side": 1,
+      "message": "Hi Beto, this variable seems to be quite generic, why not to put it into group_vars/all?",
+      "revId": "1d9ff139489b29c9f932664b43b6f50d60f33136",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ff3a846a_f3f7c113",
         "filename": "plays/tests.yml",
         "patchSetId": 8
