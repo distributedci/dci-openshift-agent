@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6dbbb64b_1f8b090e",
+        "filename": "group_vars/all",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-08T23:54:20Z",
+      "side": 1,
+      "message": "Not sure if we should define dci_pullsecret_file here, as is used only in disconnected environments.\nprovision_cache_store is also only defined in a disconnected environment\n\nI believe it was good to have it in plays/tests.yml I\u0027d suggest then to check if is a disconnected environment, then to define the variable, we do similarly in the plays/pre-run.yml",
+      "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "44908502_3507c567",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-08T23:54:20Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this is needed because is already a conditional to run this: https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/changes/05/23305/12/plays/tests.yml?autodive\u003d0%2F#33",
+      "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
