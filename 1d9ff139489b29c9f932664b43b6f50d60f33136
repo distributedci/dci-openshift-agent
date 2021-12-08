@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7e39f834_f65407e3",
+        "filename": "plays/tests.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-08T01:09:16Z",
+      "side": 1,
+      "message": "Hello Tatiana, \nYeah, while I was running only the test suite found that dci_pullsecret_file is only during pre-run and not available in the tests plays (running with tag: redhat-tests). So all was failing. I have added it to group_vars all to get rid of the errors. Need to do some validations.\n\nThanks",
+      "parentUuid": "a3bc5101_5cb12ffc",
+      "revId": "1d9ff139489b29c9f932664b43b6f50d60f33136",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ff3a846a_f3f7c113",
         "filename": "plays/tests.yml",
         "patchSetId": 8
@@ -30,6 +48,30 @@
       "writtenOn": "2021-12-07T11:17:56Z",
       "side": 1,
       "message": "I think you need to move this definition to roles/redhat-tests/tasks/main.yml, when calling the confirmance.yml file, in the same way that you have done for the when clauses, just to avoid problems.",
+      "range": {
+        "startLine": 30,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 66
+      },
+      "revId": "1d9ff139489b29c9f932664b43b6f50d60f33136",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05c52dd6_6f34a9c5",
+        "filename": "plays/tests.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-08T01:09:16Z",
+      "side": 1,
+      "message": "Thanks Ramon,\nI updated a bit how the tests are run. Will do more testing, please review again once the jobs run fine. \n\nCheers",
+      "parentUuid": "ff3a846a_f3f7c113",
       "range": {
         "startLine": 30,
         "startChar": 4,
