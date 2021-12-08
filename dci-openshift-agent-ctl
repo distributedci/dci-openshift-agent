@@ -63,7 +63,7 @@ function finish ()
         fi
 
         echo "removing output dir: ${OUTPUT_DIR}"
-        rm -rf ${OUTPUT_DIR}
+        rm -rf "${OUTPUT_DIR}"
     fi
     exit $RET
 }
@@ -118,7 +118,7 @@ do
     esac
 done
 
-if [ -r ${config_dir}/hosts ] && [ -z "$prefix" ] ; then
+if [ -r "${config_dir}/hosts" ] && [ -z "$prefix" ]; then
     hosts_args="-i ${config_dir}/hosts"
 fi
 
@@ -134,8 +134,12 @@ if [ -n "$prefix" ]; then
     if [ -e "$hosts" ]; then
         prefix_args="-i $hosts"
     else
-        echo "Missing $hosts"
-        exit 1
+        if [ -r "${config_dir}/hosts" ]; then
+            prefix_args="-i ${config_dir}/hosts"
+        else
+            echo "Missing $hosts or ${config_dir}/hosts"
+            exit 1
+        fi
     fi
 fi
 
@@ -151,7 +155,7 @@ if [ "$start" -eq 1 ]; then
     fi
 
     OUTPUT_DIR="$(mktemp -d /tmp/dci-openshift-agent.XXXXX)"
-    cd ${OUTPUT_DIR}
+    cd "${OUTPUT_DIR}" || exit 1
     JOB_ID_FILE="$OUTPUT_DIR/dci-openshift-agent.job"
     export ANSIBLE_LOG_PATH=${OUTPUT_DIR}/ansible.log
     export JUNIT_OUTPUT_DIR=${OUTPUT_DIR}
