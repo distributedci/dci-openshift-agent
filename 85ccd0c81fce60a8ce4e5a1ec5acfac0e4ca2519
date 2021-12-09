@@ -16,6 +16,24 @@
       "revId": "85ccd0c81fce60a8ce4e5a1ec5acfac0e4ca2519",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd14c736_fbb22b11",
+        "filename": "roles/sno-installer/templates/install-config.j2",
+        "patchSetId": 15
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2021-12-09T17:10:35Z",
+      "side": 1,
+      "message": "Yes, that\u0027s exactly what I wanted to do. Thanks",
+      "parentUuid": "1abb32c5_1be21c37",
+      "revId": "85ccd0c81fce60a8ce4e5a1ec5acfac0e4ca2519",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
