@@ -37,6 +37,47 @@
     },
     {
       "key": {
+        "uuid": "32b183d0_169543ef",
+        "filename": "group_vars/all",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-09T15:17:37Z",
+      "side": 1,
+      "message": "I\u0027d say that the d-o-a-a approach is a good one, but in this case, dci_pullsecret_file depends on two other variables instead of only one, so readability would be worse, maybe. And also, d-o-a-a is a smaller project and the usage of provisionhost_registry_creds there, in terms of % of appearance in the code, is higher than dci_pullsecret_file, so maybe it would be better to define the variable where used.",
+      "parentUuid": "e211f3ee_1745eec3",
+      "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebfd02d2_b862a5d2",
+        "filename": "plays/tests.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-09T15:17:37Z",
+      "side": 1,
+      "message": "Mmm, it may be confusing, in terms of readability, that this task and the next one have the same action: call the redhat-tests role, and then, in that role, depending on the variables, we execute some tasks or others.\nDo you think it is possible to follow the previous approach? i.e. have a single task that calls the redhat-tests role, then execute there the proper test suites depending on the values of the variables that are checked.",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 22
+      },
+      "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "44908502_3507c567",
         "filename": "roles/redhat-tests/tasks/main.yml",
         "patchSetId": 12
@@ -48,6 +89,24 @@
       "writtenOn": "2021-12-08T23:54:20Z",
       "side": 1,
       "message": "I\u0027m not sure if this is needed because is already a conditional to run this: https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/changes/05/23305/12/plays/tests.yml?autodive\u003d0%2F#33",
+      "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34f3430f_cfa1e3da",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-09T15:17:37Z",
+      "side": 1,
+      "message": "I think this is done because the task called \"dci-openshift-agent : Run Red Hat CSI test suite\" in the tests.yml play also calls this playbook, and in that case, it can be true the dci_openshift_agent_conformance check, so that the conformance tests would be executed again (unless registry_certificate is checked again, because that variable is not used in CSI tests).\nHowever, I think this can be improved, see my comment in the tests.yml play.",
+      "parentUuid": "44908502_3507c567",
       "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
