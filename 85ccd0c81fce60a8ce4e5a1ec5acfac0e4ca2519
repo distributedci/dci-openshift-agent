@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1abb32c5_1be21c37",
+        "filename": "roles/sno-installer/templates/install-config.j2",
+        "patchSetId": 15
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-12-09T15:07:12Z",
+      "side": 1,
+      "message": "This line is causing problems in my testing. It says hostvars[\u0027masters\u0027] is undefined and, although the error does not seem to be accurate, I believe the problem is you meant:\n\nhostvars[groups[\u0027masters\u0027][0]]\n\nIs this possible?",
+      "revId": "85ccd0c81fce60a8ce4e5a1ec5acfac0e4ca2519",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
