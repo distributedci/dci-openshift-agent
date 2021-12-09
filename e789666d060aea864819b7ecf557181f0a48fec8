@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e211f3ee_1745eec3",
+        "filename": "group_vars/all",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2021-12-09T08:43:25Z",
+      "side": 1,
+      "message": "Hi Tony, maybe we could go a for conditional definition here as Ramon did in d-o-a-a:\n```\nprovisionhost_registry_creds: \"{% if dci_disconnected is defined and dci_disconnected|bool and provision_cache_store is defined %}{{ provision_cache_store }}/pull-secret.txt{% else %}{% endif %}\"\n```",
+      "parentUuid": "6dbbb64b_1f8b090e",
+      "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "44908502_3507c567",
         "filename": "roles/redhat-tests/tasks/main.yml",
         "patchSetId": 12
