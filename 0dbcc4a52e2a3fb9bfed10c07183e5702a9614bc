@@ -16,6 +16,24 @@
       "revId": "0dbcc4a52e2a3fb9bfed10c07183e5702a9614bc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a38b1a3_4fd4c8bb",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2021-12-10T22:12:48Z",
+      "side": 1,
+      "message": "that means we cannot control the version of cnv installed in OCP 4.7? that\u0027s unfortunate, I was hoping to use this as a trick to update to 4.8 without changing cnv version",
+      "parentUuid": "9e017532_f4c9011d",
+      "revId": "0dbcc4a52e2a3fb9bfed10c07183e5702a9614bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
