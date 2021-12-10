@@ -34,6 +34,24 @@
       "revId": "0dbcc4a52e2a3fb9bfed10c07183e5702a9614bc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "444f2361_15e983d5",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-10T22:46:06Z",
+      "side": 1,
+      "message": "In 4.7 is not possible to install a different version from what I\u0027m seeing, only one channel is available 😞\n\nWe ned to check 4.8 to see if some other channel is available.",
+      "parentUuid": "1a38b1a3_4fd4c8bb",
+      "revId": "0dbcc4a52e2a3fb9bfed10c07183e5702a9614bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
