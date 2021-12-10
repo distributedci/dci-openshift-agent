@@ -123,6 +123,24 @@
       "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03de31b0_f8d81942",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-10T17:27:40Z",
+      "side": 1,
+      "message": "I don\u0027t remember the issues with 4.8 😕, but I agree that it could be helpful with upgrading. Let\u0027s go with it and then we can see if is making a difference for the upgrade when dealing with it.",
+      "parentUuid": "fb7c17d7_72bb3271",
+      "revId": "0c92fca485b443e36601bc330c67e7ee860b06b5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
