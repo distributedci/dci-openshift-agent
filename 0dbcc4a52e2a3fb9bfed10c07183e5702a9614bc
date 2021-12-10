@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9e017532_f4c9011d",
+        "filename": "roles/cnv-setup/templates/sub.yaml.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-10T20:30:16Z",
+      "side": 1,
+      "message": "This is not working in 4.7 because there is no channel named 2.6, just \"stable\".\nWe need to check if 4.8 has any other channel otherwise this is not going to be needed.\n\nLast job set it to 2.6:\n$ oc -n openshift-cnv get sub\nNAME              PACKAGE                   SOURCE                      CHANNEL\nhco-operatorhub   kubevirt-hyperconverged   mirrored-redhat-operators   2.6\n\nNo IP was created as that channel does not exist:\n$ oc -n openshift-cnv get ip\nNo resources found in openshift-cnv namespace.\n\n\n$ oc -n openshift-marketplace get packagemanifest kubevirt-hyperconverged -o json | jq .status.defaultChannel\n\"stable\"\n\n$ oc -n openshift-marketplace get packagemanifest kubevirt-hyperconverged -o json | jq .status.channels[].name\n\"stable\"",
+      "revId": "0dbcc4a52e2a3fb9bfed10c07183e5702a9614bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
