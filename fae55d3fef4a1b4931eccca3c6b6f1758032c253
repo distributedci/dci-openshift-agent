@@ -22,6 +22,30 @@
       "revId": "fae55d3fef4a1b4931eccca3c6b6f1758032c253",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68a031e6_abe06a2a",
+        "filename": "dci-check-change",
+        "patchSetId": 15
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2021-12-13T13:31:34Z",
+      "side": 1,
+      "message": "\u003e I am wondering if this may cause problems with parameters that request arrays to be provided properly, e.g. cnf_test_suites: \"diagnostic networking\" for tnf in d-o-a-a\n\nyes it can be. I have an idea on how to make it correct.",
+      "parentUuid": "b11f755e_c4a8c1a1",
+      "range": {
+        "startLine": 224,
+        "startChar": 142,
+        "endLine": 224,
+        "endChar": 144
+      },
+      "revId": "fae55d3fef4a1b4931eccca3c6b6f1758032c253",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
