@@ -98,9 +98,11 @@
             - block:
                 - name: Run the teardown play
                   include_tasks: plays/teardown.yml
+                  delegate_to: localhost
 
                 - name: Run the teardown hooks
                   include_tasks: "{{ hookdir }}/hooks/teardown.yml"
+                  delegate_to: localhost
                   loop: "{{ dci_config_dirs }}"
                   loop_control:
                     loop_var: hookdir
@@ -111,6 +113,7 @@
           always:
             - name: Run the error process
               include_tasks: plays/failure.yml
+              delegate_to: localhost
 
           ignore_unreachable: true
 
@@ -175,9 +178,11 @@
             - block:
                 - name: Run the teardown play
                   include_tasks: plays/teardown.yml
+                  delegate_to: localhost
 
                 - name: Run the teardown hooks
                   include_tasks: "{{ hookdir }}/hooks/teardown.yml"
+                  delegate_to: localhost
                   loop: "{{ dci_config_dirs }}"
                   loop_control:
                     loop_var: hookdir
@@ -188,6 +193,7 @@
           always:
             - name: Run the failure process for partners
               include_tasks: "{{ hookdir }}/hooks/failure.yml"
+              delegate_to: localhost
               loop: "{{ dci_config_dirs }}"
               loop_control:
                 loop_var: hookdir
@@ -195,6 +201,7 @@
 
             - name: Run the failure process
               include_tasks: plays/failure.yml
+              delegate_to: localhost
 
           ignore_unreachable: true
 
