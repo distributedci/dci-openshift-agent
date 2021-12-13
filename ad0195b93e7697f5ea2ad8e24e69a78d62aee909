@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "9672d63c_ce7d4878",
+        "filename": "plays/tests.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2021-12-13T14:41:17Z",
+      "side": 1,
+      "message": "Hi Beto, if I understand well, local_registry_host and local_registry_port are not defined on libvirt. Do we want to run CSI tests there?",
+      "revId": "ad0195b93e7697f5ea2ad8e24e69a78d62aee909",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "997c33ea_0e1b6e93",
         "filename": "roles/redhat-tests/README.md",
         "patchSetId": 15
