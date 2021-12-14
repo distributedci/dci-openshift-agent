@@ -110,6 +110,24 @@
       "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "27f14776_fb510805",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-14T01:00:04Z",
+      "side": 1,
+      "message": "Thanks, Ramon and Tony. I got back to the previous approach to define which test is executed inside de role. I was trying not to touch on how the conformance test role was defined as this change was only to add support for CSI. But considering that we may need to add other End to End tests I hope this is more generic now.",
+      "parentUuid": "34f3430f_cfa1e3da",
+      "revId": "e789666d060aea864819b7ecf557181f0a48fec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
