@@ -33,6 +33,16 @@
       when: job_info is not defined
       no_log: true
 
+    - name: Get job_info
+      debug:
+        var: job_info
+      when: job_info is defined
+
+    - name: Get dci_name
+      debug:
+        var: dci_name
+      when: dci_name is defined
+
     - name: Assertions
       assert:
         that:
