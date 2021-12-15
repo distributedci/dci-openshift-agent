@@ -33,6 +33,10 @@
       when: job_info is not defined
       no_log: true
 
+    - name: Get job_info
+      debug:
+        msg: "{{ job_info.job.name }} == {{ dci_name }}"
+
     - name: Assertions
       assert:
         that:
