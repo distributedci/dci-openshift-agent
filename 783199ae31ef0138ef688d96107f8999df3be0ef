@@ -16,6 +16,24 @@
       "revId": "783199ae31ef0138ef688d96107f8999df3be0ef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1afe20ce_da9de2de",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-12-15T20:36:06Z",
+      "side": 1,
+      "message": "Yup.  Wish gerrit would have emailed me about your comment before I stared at it for a while. 😊",
+      "parentUuid": "21dd661a_8d6a57ce",
+      "revId": "783199ae31ef0138ef688d96107f8999df3be0ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
