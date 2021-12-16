@@ -16,6 +16,24 @@
       "revId": "0ba71e9ba7a13086385bc1f085da2916d7e3e530",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1126abbe_b402a9db",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2021-12-16T00:57:51Z",
+      "side": 1,
+      "message": "I actually think absolute links are more error prone. 😊",
+      "parentUuid": "e597641f_1182108a",
+      "revId": "0ba71e9ba7a13086385bc1f085da2916d7e3e530",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
