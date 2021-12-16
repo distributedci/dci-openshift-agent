@@ -34,6 +34,24 @@
       "revId": "0ba71e9ba7a13086385bc1f085da2916d7e3e530",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e54b22db_67efeea2",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2021-12-16T15:36:47Z",
+      "side": 1,
+      "message": "hehe we should have use relative path in task @L2",
+      "parentUuid": "1126abbe_b402a9db",
+      "revId": "0ba71e9ba7a13086385bc1f085da2916d7e3e530",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
