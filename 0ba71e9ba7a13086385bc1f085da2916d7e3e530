@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e597641f_1182108a",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2021-12-16T00:46:43Z",
+      "side": 1,
+      "message": "should we use ~/clusterconfigs/auth/kubeconfig  or {{ dci_cluster_configs_dir }}/clusterconfigs/auth/kubeconfig   instead of the error prone \"../\" ?",
+      "revId": "0ba71e9ba7a13086385bc1f085da2916d7e3e530",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
