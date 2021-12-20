@@ -16,6 +16,24 @@
       "revId": "9acb85654f7ee9ac5e2c967b9f3570a8239a0b73",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6bf55a36_3790b78e",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-20T22:32:17Z",
+      "side": 1,
+      "message": "My bad, I read it wrong, assuming the `ansible_user` was *not* defined  in the inventory, but it is, so there\u0027s no need to gather facts to access this value.\nOne last question, I know you told me it is working in your test, but just curious if you didn\u0027t have an issue with globbing resolution, i.e. `~username` worked it fine, right?",
+      "parentUuid": "5f8ff8ed_84ffaea7",
+      "revId": "9acb85654f7ee9ac5e2c967b9f3570a8239a0b73",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
