@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f8ff8ed_84ffaea7",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2021-12-20T17:47:40Z",
+      "side": 1,
+      "message": "This makes perfect sense, but I\u0027m not sure at this point (pre-run) we have extracted the facts in the provisioner, so hostvars in there won\u0027t be populated yet. The configuration section runs in the provisioner but that happens later.\nTo guarantee the provisioner has populated those facts you will need to run a \"setup\" there first, like we do here: https://github.com/dci-labs/f5-aspenmesh-config/blob/master/hooks/pre-run.yml#L43-L46",
+      "revId": "9acb85654f7ee9ac5e2c967b9f3570a8239a0b73",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
