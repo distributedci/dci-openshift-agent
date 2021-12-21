@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9fa15815_07d3705c",
+        "filename": "group_vars/all",
+        "patchSetId": 43
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-21T14:14:09Z",
+      "side": 1,
+      "message": "As ts_csi_test_manifest \u003d {{dci_openshift_csi_test_manifest}}, do we really need to define this here?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 24
+      },
+      "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba34d8f9_3dca6868",
+        "filename": "plays/tests.yml",
+        "patchSetId": 43
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-21T14:14:09Z",
+      "side": 1,
+      "message": "whitespace to be deleted?",
+      "range": {
+        "startLine": 47,
+        "startChar": 88,
+        "endLine": 47,
+        "endChar": 94
+      },
+      "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "026d6712_b2399af6",
+        "filename": "roles/redhat-tests/README.md",
+        "patchSetId": 43
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-21T14:14:09Z",
+      "side": 1,
+      "message": "this one does not appear in the defaults/main.yml file, but it appears in plays/tests.yml, just to make you aware in case you have to include it in defaults too.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 109
+      },
+      "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
