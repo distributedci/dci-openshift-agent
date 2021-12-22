@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a405334f_ed26bc29",
+        "filename": "group_vars/all",
+        "patchSetId": 43
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-22T19:21:32Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9fa15815_07d3705c",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 24
+      },
+      "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba34d8f9_3dca6868",
         "filename": "plays/tests.yml",
         "patchSetId": 43
@@ -36,6 +60,30 @@
       "writtenOn": "2021-12-21T14:14:09Z",
       "side": 1,
       "message": "whitespace to be deleted?",
+      "range": {
+        "startLine": 47,
+        "startChar": 88,
+        "endLine": 47,
+        "endChar": 94
+      },
+      "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "629027b3_6789523b",
+        "filename": "plays/tests.yml",
+        "patchSetId": 43
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-22T19:21:32Z",
+      "side": 1,
+      "message": "Updated, thanks",
+      "parentUuid": "ba34d8f9_3dca6868",
       "range": {
         "startLine": 47,
         "startChar": 88,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "8c23233b_d1e974ed",
+        "filename": "roles/redhat-tests/README.md",
+        "patchSetId": 43
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-22T19:21:32Z",
+      "side": 1,
+      "message": "Good catch, thanks",
+      "parentUuid": "026d6712_b2399af6",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 109
+      },
+      "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a97ac052_e569a8ca",
         "filename": "roles/redhat-tests/tasks/main.yml",
         "patchSetId": 43
@@ -82,6 +154,24 @@
       "writtenOn": "2021-12-21T16:49:28Z",
       "side": 1,
       "message": "Hi Beto, you don\u0027t need parenthesis here:\n```\nwhen:   \n  - ts_csi_test_manifest | string | length \u003e 0\n```",
+      "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "25d0d0ff_99093fad",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 43
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2021-12-22T19:21:32Z",
+      "side": 1,
+      "message": "Updated it, thanks!",
+      "parentUuid": "a97ac052_e569a8ca",
       "revId": "8cea2ca39040302b42cc576fac102b0dc0067605",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
