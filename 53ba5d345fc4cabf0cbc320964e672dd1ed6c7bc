@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f381d841_c9f134b4",
+        "filename": "roles/redhat-tests/README.md",
+        "patchSetId": 44
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-22T11:07:56Z",
+      "side": 1,
+      "message": "Should be \"quay.io/openshift/origin-tests\", according to defaults/main.yml",
+      "range": {
+        "startLine": 15,
+        "startChar": 37,
+        "endLine": 15,
+        "endChar": 77
+      },
+      "revId": "53ba5d345fc4cabf0cbc320964e672dd1ed6c7bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f35a4c56_988597e3",
+        "filename": "roles/redhat-tests/README.md",
+        "patchSetId": 44
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-22T11:07:56Z",
+      "side": 1,
+      "message": "Should be \"\", according to defaults/main.yml",
+      "range": {
+        "startLine": 21,
+        "startChar": 37,
+        "endLine": 21,
+        "endChar": 63
+      },
+      "revId": "53ba5d345fc4cabf0cbc320964e672dd1ed6c7bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
