@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "d0730981_67b4bf00",
+        "filename": "roles/operators-mirror/tasks/build-catalog-image.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-12-23T14:23:43Z",
+      "side": 1,
+      "message": "This is unrelated to this change, but I see we still use \"--filter-by-os\" instead of the version dependent \"{{ filter_by_art }}\" as we do, for insteance in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/22204/2/roles/operators-mirror/tasks/mirror.yml#30\nI this correct?",
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "00fdfda5_3a0332b2",
         "filename": "roles/operators-mirror/tasks/facts.yml",
         "patchSetId": 2
@@ -54,6 +71,47 @@
         "endLine": 4,
         "endChar": 37
       },
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9eedf0ec_ea141fa1",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-12-23T14:23:43Z",
+      "side": 1,
+      "message": "I\u0027d like to rise Ramon\u0027s question as well.",
+      "parentUuid": "26bddbc9_4061be09",
+      "range": {
+        "startLine": 4,
+        "startChar": 25,
+        "endLine": 4,
+        "endChar": 37
+      },
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b1f145c2_50c680fd",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2021-12-23T14:23:43Z",
+      "side": 1,
+      "message": "Also, aren\u0027t the above two facts redundant? I mean, we\u0027re just setting facts with the same name as the input variables. Is there any reason for that?",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
