@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2be8325b_aa54dd38",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2021-12-24T11:44:22Z",
+      "side": 1,
+      "message": "should it be `core` instead of `$core` ?",
+      "range": {
+        "startLine": 57,
+        "startChar": 4,
+        "endLine": 57,
+        "endChar": 9
+      },
+      "revId": "e45f2f4f597a27e63febe8a6a7c55e21c5477222",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
