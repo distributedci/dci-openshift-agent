@@ -101,6 +101,30 @@
     },
     {
       "key": {
+        "uuid": "088c08d1_73b93f9e",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-04T19:07:34Z",
+      "side": 1,
+      "message": "If you look at the next file in the patch you will see that dci_opm_version was set and a \u0027v\u0027 was prepended to base_version.",
+      "parentUuid": "9eedf0ec_ea141fa1",
+      "range": {
+        "startLine": 4,
+        "startChar": 25,
+        "endLine": 4,
+        "endChar": 37
+      },
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b1f145c2_50c680fd",
         "filename": "roles/operators-mirror/tasks/facts.yml",
         "patchSetId": 2
@@ -112,6 +136,24 @@
       "writtenOn": "2021-12-23T14:23:43Z",
       "side": 1,
       "message": "Also, aren\u0027t the above two facts redundant? I mean, we\u0027re just setting facts with the same name as the input variables. Is there any reason for that?",
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b067de3_f5a34ad3",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-04T19:07:34Z",
+      "side": 1,
+      "message": "it\u0027s not redundant, the version.split is the default if base_version is not set.",
+      "parentUuid": "b1f145c2_50c680fd",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
