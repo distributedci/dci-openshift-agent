@@ -125,6 +125,30 @@
     },
     {
       "key": {
+        "uuid": "901e41cd_fbb0a824",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T09:24:45Z",
+      "side": 1,
+      "message": "Okey, so we can assume that, in case of defining base_version externally, it has to include the \"v\". Clear for me.",
+      "parentUuid": "088c08d1_73b93f9e",
+      "range": {
+        "startLine": 4,
+        "startChar": 25,
+        "endLine": 4,
+        "endChar": 37
+      },
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b1f145c2_50c680fd",
         "filename": "roles/operators-mirror/tasks/facts.yml",
         "patchSetId": 2
@@ -172,6 +196,24 @@
       "side": 1,
       "message": "He, I don\u0027t believe we\u0027re discussing the same lines here.\nI meant lines 7 and 8, where we take variables opm_catalog_source_name and namespace and set them to facts with the same name. Isn\u0027t that redundant or that is follow I purpose I don\u0027t see?\nI know those lines are not in the scope of the CR, but I can\u0027t help wondering.",
       "parentUuid": "5b067de3_f5a34ad3",
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a352434_a0fc8e95",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T09:24:45Z",
+      "side": 1,
+      "message": "I agree with Nacho, in fact, this kind of redundant definitions gave me problems in the past, so I would try to avoid them if possible.",
+      "parentUuid": "d68519cb_6017d987",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
