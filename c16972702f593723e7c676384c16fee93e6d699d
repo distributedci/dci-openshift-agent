@@ -217,6 +217,24 @@
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6207b7be_711654e3",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-05T14:20:09Z",
+      "side": 1,
+      "message": "ahh.. I see what you mean.\n\nThe reason for this is an oddity in ansible.  Those variables are set in the roles defaults.  But defaults only exist in the role..  meaning, they are not exported.  I know it looks ugly, but think of this as doing a shell export command on arguments.  By doing this it makes these variables available for operators-catalog which is the other piece that ties this together.",
+      "parentUuid": "2a352434_a0fc8e95",
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
