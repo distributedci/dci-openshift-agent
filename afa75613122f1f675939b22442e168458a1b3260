@@ -1,0 +1,326 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51d49ad3_5b240781",
+        "filename": "docs/control_nodes_setup.md",
+        "patchSetId": 20
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "Setting (typo)",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b1ca3e8_c479cd1a",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 6
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94db2dcf_9437be0d",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 4
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03fae1ac_a619de54",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "85231e88_9375d0a6",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "spaces to be deleted",
+      "range": {
+        "startLine": 130,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 10
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0408698_a85e5936",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "spaces to be deleted",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 10
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e97b53f9_5c678141",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 6
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "15608b2c_9d3427e3",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ffb91979_51deff61",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 6
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb765450_69342eac",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2de9f746_fd7085ba",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 105,
+        "startChar": 0,
+        "endLine": 105,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94a5d743_0af769f2",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e3cda16f_dd0158ce",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f76e08f_9a944b4f",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-05T10:22:03Z",
+      "side": 1,
+      "message": "space to be deleted",
+      "range": {
+        "startLine": 243,
+        "startChar": 0,
+        "endLine": 243,
+        "endChar": 10
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
