@@ -1,0 +1,344 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6230a20_406f0093",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "What about creating another task file with those tasks only related to ipi, .e.g ipi_images.yml and here you can call either ipi_images.yml or sno_images.yml, is a bit of extra effort but it separates both tasks really well imo, wdyt?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db650e2c_45db7bc7",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "You could have the sno_install_type assertion in a different task only when install_type is sno, that way you avoid having a \u0027none\u0027 type",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8438fa3f_bb9138e7",
+        "filename": "roles/mirror-ocp-release/tasks/sno_images.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "You could split this file into two one with sno_virtual_images.yml and another with sno_baremetal_images.yml and call them from images.yml based on the sno_install_type",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ec4c600_185e99e5",
+        "filename": "roles/mirror-ocp-release/tasks/sno_images.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "This applies to both sno_install_types? or just baremetal?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5c2cd8c_f052f742",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "Is the oc binary placed in the provisioner under `dir`??",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "239b7074_90c09dfe",
+        "filename": "roles/prepare-cnf/tasks/main.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "If I\u0027m understanding this correctly this implies that ipi installs require at least 2 workers while in the past only 1 was required. Is there a reason for this?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e83f9c60_f82181cc",
+        "filename": "roles/prepare-cnf/tasks/nodes-ok.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "I wonder if this also applies to SNO virtual deployments?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cc5f8cba_3a29db00",
+        "filename": "roles/sno-installer/README.md",
+        "patchSetId": 35
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "I know we have been using master-0 in SNO since virtual support was added, but I wonder if we could rename it to something more generic like sno, sno-0, node-0, controller-0, control-plane-0. Upstream k8s has adopted more neutral names already",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b24fc070_4dff972c",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "I think you could set a fact to only use the validation once and then use it where needed either the provisioner or the registry_host.",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dbee5c9e_ff7fc302",
+        "filename": "roles/sno-installer/tasks/15_disconnected_registry_existing.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "Let\u0027s have a chat to go over this, we have a couple, if not more, places where we use pullsecrets, maybe we can simplify it a bit",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9670ee28_83325afa",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "This block is quite similar to the above with the main difference that most tasks run in the registry_host, it may be possible to reuse the code above by using `delegate_to: .... | default(omit)` that way only when registry_host is used (because of a disconnected env) then it will run the commands there. We can talk about this one too",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1878bdaf_7d75ce67",
+        "filename": "roles/sno-installer/tasks/21_rhcos_image_paths.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "I believe this is in here in case the role wants to be used on its own outside the agent right?\n\nIn that case would it be worth not executing those tasks that were already executed earlier, when used through the agent?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc654a79_48eaaee7",
+        "filename": "roles/sno-installer/tasks/22_rhcos_image_cache.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "Seems like all the tasks could be in a block with delegate_to OR you could call this from main in a block and a delegate_to e.g.\n\n[main.yml]\n-- snip --\n\n- block:\n    - include_tasks: 22_rhcos_image_cache.yml\n  delegate_to: ...\n\n-- snip --",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "58bb2df1_5bee3118",
+        "filename": "roles/sno-installer/tasks/23_rhcos_image_pxetftp.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "Maybe group in a block all those delegate_to tasks?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cbdb8440_132fec85",
+        "filename": "roles/sno-installer/tasks/24_rhcos_image_live.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "why not use `rhcos_json_vars` instead of rhcos_json_file or why to redefine it in here if it has been already defined under sno_images.yml [https://softwarefactory-project.io/r/gitweb?p\u003ddci-openshift-agent.git;f\u003droles/mirror-ocp-release/tasks/sno_images.yml;hb\u003drefs/changes/59/23259/35#l5]\n\nI think this is to allow this role to be used on its own right?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "804384c8_b66d7df8",
+        "filename": "roles/sno-installer/tasks/main.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "I believe, these could be simplified by checking dci_disconnected variable (https://github.com/dci-labs/inventories/blob/master/dallas/8nodes/cluster6#L98), but let\u0027s talk about all the pullsecrets topic in a meeting 😄",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c8d77fc_39223178",
+        "filename": "roles/sno-node-prep/tasks/15_validation_disconnected_registry.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "I\u0027m afraid registry_port is not under the registry_host host. it is under all:vars as local_registry_port over here: https://github.com/dci-labs/inventories/blob/master/dallas/8nodes/cluster6#L113\n\nIf all you need to know is that you\u0027re using a disconnected environment or not and then set some facts to connect to that registry then you could check dci_disconnected if is defined and true (https://github.com/dci-labs/inventories/blob/master/dallas/8nodes/cluster6#L98) before including this task file.\n\nThen under this task you could just define the disconnected_regsitry_auths_file that contains the pull secrets and any other variable that you may need later.",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d65498b_b7ba89a9",
+        "filename": "roles/sno-node-prep/tasks/45_networking_facts.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "For my education, what is ipaddr(\u002710\u0027) ?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b459fea2_27f076bb",
+        "filename": "roles/sno-node-prep/tasks/65_dnsmasq_tftp.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "I think you can do this on other places where you\u0027re dealing between provisioner and registry_host, it makes so much easy to read the delegate_to later in the tasks",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6e98b2cd_0033728b",
+        "filename": "roles/sno-node-prep/tests/inventory-baremetal",
+        "patchSetId": 35
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-07T23:16:47Z",
+      "side": 1,
+      "message": "Can we rename this one?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
