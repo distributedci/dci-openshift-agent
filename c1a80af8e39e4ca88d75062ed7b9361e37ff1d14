@@ -87,6 +87,24 @@
     },
     {
       "key": {
+        "uuid": "ca74e325_ff6bd63a",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-08T03:01:26Z",
+      "side": 1,
+      "message": "Good catch, it is done on patch 36 😊\nhttps://softwarefactory-project.io/r/c/dci-openshift-agent/+/23259/35..36/roles/sno-installer/tasks/10_get_oc.yml",
+      "parentUuid": "d5c2cd8c_f052f742",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "239b7074_90c09dfe",
         "filename": "roles/prepare-cnf/tasks/main.yml",
         "patchSetId": 35
@@ -302,6 +320,24 @@
       "writtenOn": "2022-01-07T23:16:47Z",
       "side": 1,
       "message": "For my education, what is ipaddr(\u002710\u0027) ?",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6777a50_ed1afb18",
+        "filename": "roles/sno-node-prep/tasks/45_networking_facts.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-08T03:01:26Z",
+      "side": 1,
+      "message": "it used to get an ip address from a cidr based with the index given.\nIn this case, extcidrnet is by default 192.168.126.0/24 and we are taking the 10th IP of this cidr : 192.168.126.10",
+      "parentUuid": "3d65498b_b7ba89a9",
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
