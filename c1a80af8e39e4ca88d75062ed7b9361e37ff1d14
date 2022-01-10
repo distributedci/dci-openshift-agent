@@ -122,6 +122,24 @@
     },
     {
       "key": {
+        "uuid": "16aeb4a3_de49164b",
+        "filename": "roles/prepare-cnf/tasks/main.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-10T09:03:20Z",
+      "side": 1,
+      "message": "Hi. I don\u0027t know the reason for this, but note that the condition that an IPI installation needs 2 or more worker nodes is out of the scope of this PR, but something already present in the master branch: https://github.com/redhat-cip/dci-openshift-agent/blob/0d54a1cf3ae7f34cc86157536e2442564df08d06/roles/prepare-cnf/tasks/main.yml#L18",
+      "parentUuid": "239b7074_90c09dfe",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e83f9c60_f82181cc",
         "filename": "roles/prepare-cnf/tasks/nodes-ok.yml",
         "patchSetId": 35
