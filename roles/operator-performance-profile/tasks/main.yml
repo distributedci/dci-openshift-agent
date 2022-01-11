@@ -87,7 +87,25 @@
 
 - name: Pause for Machine Config to be created
   pause:
-    seconds: 30
+    seconds: 60
+
+- name: Wait for updated machine configs to be applied on the nodes
+  k8s_info:
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfigPool
+  register: reg_mcpool_status
+  vars:
+    status_query: "resources[*].status.conditions[?type=='Updated'].status"
+    # query to extract all status for the UPDATED column in
+    # machine config pool
+    update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
+    # once have all the status in an array, flatten it and unique it.
+    # All of the status's should be True. So after flattening and uniquing
+    # it we are expecting to see an array with just 1 element ['True']
+  until:
+    - update_status == ['True']
+  retries: 60
+  delay: 60
 
 - name: Check nodes
   include_role:
