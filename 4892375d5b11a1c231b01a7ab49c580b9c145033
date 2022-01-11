@@ -16,6 +16,24 @@
       "revId": "4892375d5b11a1c231b01a7ab49c580b9c145033",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "245ea5e0_bd179e79",
+        "filename": "roles/sno-installer/tasks/21_rhcos_image_paths.yml",
+        "patchSetId": 36
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:43:16Z",
+      "side": 1,
+      "message": "Pierre, I included this in Patchset 37 😊",
+      "parentUuid": "77c1a64c_76d00d0d",
+      "revId": "4892375d5b11a1c231b01a7ab49c580b9c145033",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
     }
   ]
 }
