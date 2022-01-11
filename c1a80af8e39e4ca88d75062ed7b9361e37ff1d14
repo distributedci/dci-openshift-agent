@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9be36f72_976670d0",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d6230a20_406f0093",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db650e2c_45db7bc7",
         "filename": "roles/mirror-ocp-release/tasks/main.yml",
         "patchSetId": 35
@@ -33,6 +51,24 @@
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5960b5a5_32926495",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "db650e2c_45db7bc7",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "d118f48c_d4a359e8",
+        "filename": "roles/mirror-ocp-release/tasks/sno_images.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8438fa3f_bb9138e7",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1ec4c600_185e99e5",
         "filename": "roles/mirror-ocp-release/tasks/sno_images.yml",
         "patchSetId": 35
@@ -67,6 +121,24 @@
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "887c4a50_363fe2a1",
+        "filename": "roles/mirror-ocp-release/tasks/sno_images.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Only applies to baremetal, those variables are only taken in the sno-baremetal plays, now this task in on the sno_baremetal_images.yml play and it\u0027s only populated when install_type \u003d\u003d \u0027sno\u0027 and sno_install_type \u003d\u003d \u0027baremetal\u0027",
+      "parentUuid": "1ec4c600_185e99e5",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -157,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "6ff19a98_eb8f09a5",
+        "filename": "roles/prepare-cnf/tasks/nodes-ok.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Yes, this should also apply on virtual SNO, we haven\u0027t deployed operators in virtual SNO, but same validation would be required, so now I\u0027m running this block when install_type \u003d\u003d sno",
+      "parentUuid": "e83f9c60_f82181cc",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cc5f8cba_3a29db00",
         "filename": "roles/sno-installer/README.md",
         "patchSetId": 35
@@ -171,6 +261,24 @@
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4cd6da16_6f5ef55f",
+        "filename": "roles/sno-installer/README.md",
+        "patchSetId": 35
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Yes I renamed it, actually this new PR allows to use whatever name is defined in the inventory for SNO node.",
+      "parentUuid": "cc5f8cba_3a29db00",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -191,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "52182b84_6d8321c1",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Good idea, then code would look simpler",
+      "parentUuid": "b24fc070_4dff972c",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dbee5c9e_ff7fc302",
         "filename": "roles/sno-installer/tasks/15_disconnected_registry_existing.yml",
         "patchSetId": 35
@@ -202,6 +328,24 @@
       "writtenOn": "2022-01-07T23:16:47Z",
       "side": 1,
       "message": "Let\u0027s have a chat to go over this, we have a couple, if not more, places where we use pullsecrets, maybe we can simplify it a bit",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92b3a853_d9671310",
+        "filename": "roles/sno-installer/tasks/15_disconnected_registry_existing.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "I still need to work on this, from our conversation we identified some mirroring tasks (not necessary SNO related) that use /opt/cache/{{ cluster }}-pull-secret.txt in that file we have the contents of the pullsecret variable and contents of the file from disconnected_registry_auths_file variable. The file /opt/cache/{{ cluster }}-pull-secret.txt\nis not stored in our repos and we depend on it, so we need to either upload the current ones of  each cluster to service-configs repo, or build it during the deployment, then I can benefit from this in the SNO mirroring and registry tasks, for now in SNO tasks I\u0027m only checking if the file exists then I use it, otherwise I get the pullsecret variable content, append the content of disconnected_registry_auths_file variable and store it in /opt/cache/{{ cluster }}-pull-secret.txt, but we can do some of this in the DCI mirroring tasks. I\u0027ll think more about it.",
+      "parentUuid": "dbee5c9e_ff7fc302",
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
@@ -225,6 +369,24 @@
     },
     {
       "key": {
+        "uuid": "f601066c_02561124",
+        "filename": "roles/sno-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "I added similar tasks inside the block and use delegate but with the cache_server fact defined in 10_get_oc.yml, this way the tasks will either run in the provisioner or the registry node.",
+      "parentUuid": "9670ee28_83325afa",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1878bdaf_7d75ce67",
         "filename": "roles/sno-installer/tasks/21_rhcos_image_paths.yml",
         "patchSetId": 35
@@ -239,6 +401,24 @@
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7600fd43_d04bb7e9",
+        "filename": "roles/sno-installer/tasks/21_rhcos_image_paths.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Yes, I added a validation to only run when {{ cache_dir }}/{{ version }}/rhcos.json does not exists",
+      "parentUuid": "1878bdaf_7d75ce67",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -259,6 +439,24 @@
     },
     {
       "key": {
+        "uuid": "1cf7d1c2_c16dd602",
+        "filename": "roles/sno-installer/tasks/22_rhcos_image_cache.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "I called the 22_rhcos_image_cache.yml playbook from the main using a block and the delegate",
+      "parentUuid": "dc654a79_48eaaee7",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "58bb2df1_5bee3118",
         "filename": "roles/sno-installer/tasks/23_rhcos_image_pxetftp.yml",
         "patchSetId": 35
@@ -273,6 +471,24 @@
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ed4533b_701dc154",
+        "filename": "roles/sno-installer/tasks/23_rhcos_image_pxetftp.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Done, tasks are placed in blocks to be delegated to respective server",
+      "parentUuid": "58bb2df1_5bee3118",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -293,6 +509,24 @@
     },
     {
       "key": {
+        "uuid": "b7375519_f11f986c",
+        "filename": "roles/sno-installer/tasks/24_rhcos_image_live.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Good catch, I updated the tasks in 23_rhcos_image_pxetftp.yml and 24_rhcos_image_live.yml to use rhcos_json_vars content to have the same as roles/mirror-ocp-release/tasks/sno_*_images.yml and images.yml \n\nAnd yes this looks repetitive, but it allows to use the role in standalone without dci",
+      "parentUuid": "cbdb8440_132fec85",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "804384c8_b66d7df8",
         "filename": "roles/sno-installer/tasks/main.yml",
         "patchSetId": 35
@@ -310,6 +544,24 @@
     },
     {
       "key": {
+        "uuid": "ca5b503e_374eb353",
+        "filename": "roles/sno-installer/tasks/main.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "it could be, but then in standalone mode dci_disconnected variable does not exists, right now disconnected_registry fact gets defined in roles/sno-node-prep/tasks/15_validation_disconnected_registry.yml and it will get populated when disconnected_registry_auths_file and disconnected_registry_mirrors_file files are defined",
+      "parentUuid": "804384c8_b66d7df8",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1c8d77fc_39223178",
         "filename": "roles/sno-node-prep/tasks/15_validation_disconnected_registry.yml",
         "patchSetId": 35
@@ -324,6 +576,24 @@
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc610919_43c47118",
+        "filename": "roles/sno-node-prep/tasks/15_validation_disconnected_registry.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "yes, even worse I do not even use registry_port fact, so I removed that task, I\u0027m using the pull secret vars to interact with the registry.",
+      "parentUuid": "1c8d77fc_39223178",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     },
     {
       "key": {
@@ -379,6 +649,24 @@
     },
     {
       "key": {
+        "uuid": "b5e324e9_21f53cbb",
+        "filename": "roles/sno-node-prep/tasks/65_dnsmasq_tftp.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Right, I\u0027m using this approach now in plays from 20_extract_installer.yml, 21_rhcos_image_paths.yml and 23_rhcos_image_pxetftp.yml",
+      "parentUuid": "b459fea2_27f076bb",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e98b2cd_0033728b",
         "filename": "roles/sno-node-prep/tests/inventory-baremetal",
         "patchSetId": 35
@@ -393,6 +681,24 @@
       "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf88bb2d_6091896d",
+        "filename": "roles/sno-node-prep/tests/inventory-baremetal",
+        "patchSetId": 35
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-11T22:41:23Z",
+      "side": 1,
+      "message": "Yes, this PR will use whatever name we define here and use it to setup DNS records and node name validation",
+      "parentUuid": "6e98b2cd_0033728b",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
