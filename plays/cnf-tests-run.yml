@@ -13,6 +13,10 @@
        cnf_tests_image_registry: 'quay.io/openshift-kni'
     when: cnf_tests_mode == "online"
 
+  - name: Pause before checking that all nodes are in Done state
+    pause:
+      seconds: 60
+
   - name: test_ Wait for ALL nodes to be in a Done state
     k8s_info:
       kubeconfig: "{{ dci_cluster_configs_dir }}/kubeconfig"

@@ -131,6 +131,10 @@
   retries: 120
   delay: 60
 
+- name: Pause before checking that all nodes are in Done state
+  pause:
+    seconds: 60
+
 - name: "test_ upgrader : Wait for ALL nodes to be in a Done state"
   k8s_info:
     api: v1

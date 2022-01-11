@@ -1,4 +1,8 @@
 ---
+- name: Pause before checking that all nodes are in Done state
+  pause:
+    seconds: 60
+
 - name: "Wait for ALL nodes to be in a Done state"
   k8s_info:
     api: v1
