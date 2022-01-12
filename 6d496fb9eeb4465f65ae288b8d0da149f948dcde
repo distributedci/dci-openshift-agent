@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de5c60d8_63184ce3",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-01-12T09:06:10Z",
+      "side": 1,
+      "message": "Hi Beto, is it sufficient condition? According to docs, we have to verify both Updated\u003dTrue and Updating\u003dFalse. Or Updated\u003dTrue and Updating\u003dTrue is an impossible situation and could never happen?",
+      "revId": "6d496fb9eeb4465f65ae288b8d0da149f948dcde",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
