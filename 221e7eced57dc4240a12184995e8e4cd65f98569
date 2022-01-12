@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b082c5ec_ba014dd1",
+        "filename": "roles/sno-installer/tasks/main.yml",
+        "patchSetId": 37
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-12T00:17:57Z",
+      "side": 1,
+      "message": "I think I didn\u0027t give a good example, my bad, you have to do the delegate_to in the block, not in the include_tasks, assuming only this task 22_rhcos_image_cache.yml needs to be delegated then you\u0027ll need to do add it into another block like this:\n\n```\n- block:\n  - include_tasks: 22_rhcos_image_cache.yml\n    when: cache_enabled|bool\n  delegate_to: \"{{ cache_server }}\" # This fact was defined in 10_get_oc.yml\n```",
+      "revId": "221e7eced57dc4240a12184995e8e4cd65f98569",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
