@@ -16,6 +16,24 @@
       "revId": "6d496fb9eeb4465f65ae288b8d0da149f948dcde",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4805c129_d540407b",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-12T15:11:44Z",
+      "side": 1,
+      "message": "Hello Tatiana, yeah. I am sure that it is enough. We can start from here and add more validations if we start seeing issues.\n\nThanks",
+      "parentUuid": "de5c60d8_63184ce3",
+      "revId": "6d496fb9eeb4465f65ae288b8d0da149f948dcde",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
