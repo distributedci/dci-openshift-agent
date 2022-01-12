@@ -177,6 +177,24 @@
     },
     {
       "key": {
+        "uuid": "20026db3_d681e4bd",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-12T17:19:10Z",
+      "side": 1,
+      "message": "Per the last test[1], I noticed this works in SNO deployments, but it breaks non-SNO deployment, in SNO we store the oc client in `dir` and copy it to /usr/local/bin/ but in non-SNO the oc client is not stored in `dir` only in /usr/local/bin/ so I think is safe to pull it from /usr/local/bin/oc, I\u0027ll fix that in next patch \n\n[1] https://www.distributed-ci.io/jobs/ed99913b-c4ab-486b-9156-322f4b2be65f/jobStates#a0746c1b-4b02-43ae-be42-4c83fa8791db:file267",
+      "parentUuid": "ca74e325_ff6bd63a",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "239b7074_90c09dfe",
         "filename": "roles/prepare-cnf/tasks/main.yml",
         "patchSetId": 35
