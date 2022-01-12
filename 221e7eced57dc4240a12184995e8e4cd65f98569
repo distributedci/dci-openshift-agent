@@ -16,6 +16,24 @@
       "revId": "221e7eced57dc4240a12184995e8e4cd65f98569",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9a2de3e_9513c17e",
+        "filename": "roles/sno-installer/tasks/main.yml",
+        "patchSetId": 37
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-12T01:25:58Z",
+      "side": 1,
+      "message": "You explained well, I just missed that part, this patchset 38 fixes it. Thanks.",
+      "parentUuid": "b082c5ec_ba014dd1",
+      "revId": "221e7eced57dc4240a12184995e8e4cd65f98569",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
