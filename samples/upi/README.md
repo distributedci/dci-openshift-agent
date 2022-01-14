@@ -1,0 +1,194 @@
+
+# OpenShift 4 Bare Metal - User Provisioned Infrastructure (UPI)
+
+- [OpenShift 4 Bare Metal Install - User Provisioned Infrastructure (UPI)](#openshift-4-bare-metal-install---user-provisioned-infrastructure-upi)
+  - [Required Services](#required-services)
+  - [Example Configs](#example-configs)
+  - [Example Hook](#example-hook)
+
+## Requiered Services
+
+The Following services must be configured:
+
+- HTTPD
+- DHCP
+- DNS
+- HAProxy
+- TFTPBoot
+
+## Example Configs
+
+
+1. Set a Static IP for OCP network interface `nmtui-edit eno1` or edit `/etc/sysconfig/network-scripts/ifcfg-eno1`
+
+   - **Address**: 192.168.7.1
+   - **DNS Server**: 127.0.0.1
+   - **Search domain**: ocp4.example.com
+   - Never use this network for default route
+   - Automatically connect
+
+   > If changes arent applied automatically you can bounce the NIC with `nmcli connection down eno1` and `nmcli connection up eno1`
+
+1. Install and configure BIND DNS
+
+   Install
+
+   ```bash
+   dnf install bind bind-utils -y
+   ```
+
+   Apply configuration
+
+   ```bash
+   cp ~/samples/upi/dns/named.conf /etc/named.conf
+   cp -R ~/samples/upi/dns/zones /var/named/
+   ```
+
+   Configure the firewall for DNS
+
+   ```bash
+   firewall-cmd --add-port=53/udp --zone=internal --permanent
+   firewall-cmd --reload
+   ```
+
+   Enable and start the service
+
+   ```bash
+   systemctl enable named
+   systemctl start named
+   systemctl status named
+   ```
+
+   > At the moment DNS will still be pointing to the LAN DNS server. You can see this by testing with `dig ocp4.example.com`.
+
+   Change the LAN nic (eno1) to use 127.0.0.1 for DNS AND ensure `Ignore automatically Obtained DNS parameters` is ticked
+
+   ```bash
+   nmtui-edit eno1
+   ```
+
+   Restart Network Manager
+
+   ```bash
+   systemctl restart NetworkManager
+   ```
+
+   Confirm dig now sees the correct DNS results by using the DNS Server running locally
+
+   ```bash
+   dig ocp4.example.com
+   # The following should return the answer bootstrap.ocp4.example.com from the local server
+   dig -x 192.168.7.20
+   ```
+
+1. Install & configure DHCP
+
+   Install the DHCP Server
+
+   ```bash
+   dnf install dhcp-server -y
+   ```
+
+   Edit dhcpd.conf from the cloned git repo to have the correct mac address for each host and copy the conf file to the correct location for the DHCP service to use
+
+   ```bash
+   cp ~/samples/upi/dhcpd.conf /etc/dhcp/dhcpd.conf
+   ```
+
+   Configure the Firewall
+
+   ```bash
+   firewall-cmd --add-service=dhcp --zone=internal --permanent
+   firewall-cmd --reload
+   ```
+
+   Enable and start the service
+
+   ```bash
+   systemctl enable dhcpd
+   systemctl start dhcpd
+   systemctl status dhcpd
+
+1. Install & configure Apache Web Server
+
+   Install Apache
+
+   ```bash
+   dnf install httpd -y
+   ```
+
+   Change default listen port to 8080 in httpd.conf
+
+   ```bash
+   sed -i 's/Listen 80/Listen 0.0.0.0:8080/' /etc/httpd/conf/httpd.conf
+   ```
+
+   Configure the firewall for Web Server traffic
+
+   ```bash
+   firewall-cmd --add-port=8080/tcp --zone=internal --permanent
+   firewall-cmd --reload
+   ```
+
+   Enable and start the service
+
+   ```bash
+   systemctl enable httpd
+   systemctl start httpd
+   systemctl status httpd
+   ```
+
+   Making a GET request to localhost on port 8080 should now return the default Apache webpage
+
+   ```bash
+   curl localhost:8080
+   ```
+
+1. Install & configure HAProxy
+
+   Install HAProxy
+
+   ```bash
+   dnf install haproxy -y
+   ```
+
+   Copy HAProxy config
+
+   ```bash
+   cp ~/samples/upi/haproxy.cfg /etc/haproxy/haproxy.cfg
+   ```
+
+   Configure the Firewall
+
+   > Note: Opening port 9000 in the external zone allows access to HAProxy stats that are useful for monitoring and troubleshooting. The UI can be accessed at: `http://{ocp-svc_IP_address}:9000/stats`
+
+   ```bash
+   firewall-cmd --add-port=6443/tcp --zone=internal --permanent # kube-api-server on control plane nodes
+   firewall-cmd --add-port=6443/tcp --zone=external --permanent # kube-api-server on control plane nodes
+   firewall-cmd --add-port=22623/tcp --zone=internal --permanent # machine-config server
+   firewall-cmd --add-service=http --zone=internal --permanent # web services hosted on worker nodes
+   firewall-cmd --add-service=http --zone=external --permanent # web services hosted on worker nodes
+   firewall-cmd --add-service=https --zone=internal --permanent # web services hosted on worker nodes
+   firewall-cmd --add-service=https --zone=external --permanent # web services hosted on worker nodes
+   firewall-cmd --add-port=9000/tcp --zone=external --permanent # HAProxy Stats
+   firewall-cmd --reload
+   ```
+
+   Enable and start the service
+
+   ```bash
+   setsebool -P haproxy_connect_any 1 # SELinux name_bind access
+   systemctl enable haproxy
+   systemctl start haproxy
+   systemctl status haproxy
+
+1. Install & configure TFTPBOOT
+
+   Install TFTPBoot
+
+
+   ```bash
+   dnf install tftp-server -y
+   ```
+
+## Example Hook
