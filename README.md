@@ -311,6 +311,8 @@ dnsvip=1.2.3.4
 ;dci_disconnected=true
 # Must be reachable from the cluster
 ;webserver_url="http://<jumpbox IP/DNS>:8080"
+# Path of the file with the pull secret and registry auths in json format.
+;pullsecret_file=/path/to/clusterX-pull-secret.txt
 # Path on the jumpbox
 ;disconnected_registry_auths_file=/path/to/auths.json
 # Path on the jumpbox
@@ -354,6 +356,24 @@ provisionhost ansible_user=kni prov_nic=eno1 pub_nic=ens3 ansible_ssh_common_arg
 NOTE: If the jumpbox server is in a different network than the baremetal
 network, then include extcirdnet=<baremetal-network/mask> in the all:vars
 section of the inventory
+
+#### Disconnected mode in DCI OCP agent
+
+When using DCI in a disconnected environment, the following variables must be used:
+
+| Variable                           | Description |
+| ---------------------------------- | ----------- |
+| These variables are declared in the all:vars section |
+| dci_disconnected=true | (Required) Main variable to specify this is a disconnected environment |
+| webserver_url="http://<jumpbox IP/DNS>:8080" | (Optional) URL of the web server hosting the deployment images. Must be reachable from the cluster nodes.|
+| pullsecret_file=/path/to/clusterX-pull-secret.txt | (Optional) Path of the file in the jumpbox with the pull secret and registry auths in json format. If not provided the content of disconnected_registry_auths_file and pullsecret variable (pulled from DCI components) will be combined to be used by all disconnected tasks. |
+| provision_cache_store="/path/to/qcow/cache" | (Required) Path on the jumpbox, of the directory where the initial IPI images are stored. Must have enough space to hold your qcow images
+| local_registry_host=local-registry | (Required) Registry host that will mirror all container images. Ideally provide the FQDN. |
+| local_registry_port=5000 | (Required) Registry port |
+| local_repo=ocp4/openshift4 | (Required) Registry namespace where the OCP images will be stored |
+| The variables below are declared in the registry_host:vars group section |
+| disconnected_registry_auths_file=/path/to/auths.json | (Required if pullsecret_file var not provided) Path on the jumpbox of the file with the registry authentication credentials in json format. |
+| disconnected_registry_mirrors_file=/path/to/trust-bundle.yml | (Required) Path on the jumpbox of the file with the trust-bundle certificates of the registry server in yaml format |
 
 ### Overloading settings and hooks directories
 
