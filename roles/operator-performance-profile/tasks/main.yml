@@ -76,6 +76,11 @@
 
 ########## PerformanceProfile creations in this block #############
 
+# It may happen that the MCP is not updated yet with the default MC applied to the worker nodes, so we may have a
+# conflict with the new MC created by the PerformanceProfile
+- name: Check MCP status before creating the PerformanceProfile
+  include_tasks: check-mcp.yml
+
 - name: Create PerformanceProfile
   k8s:
     definition: "{{ lookup('file', performance_definition | default('performance-profile-basic-' + ocp_version + '.yml')) }}"
@@ -89,16 +94,7 @@
   pause:
     seconds: 60
 
-- name: Wait for updated machine configs to be applied on the nodes
-  k8s_info:
-    api_version: machineconfiguration.openshift.io/v1
-    kind: MachineConfigPool
-  register: reg_mcpool_status
-  vars:
-    status_query: "resources[*].status.conditions[?type=='Updated'].status"
-    update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
-  until:
-    - update_status == ['True']
-  retries: 60
-  delay: 60
+- name: Check MCP status after creating the PerformanceProfile
+  include_tasks: check-mcp.yml
+
 ...
