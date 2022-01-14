@@ -39,14 +39,13 @@
     include_role:
       name: prepare-cnf
 
+  # Can't use k8s module here as maxUnavailable is rendered as a str due to jinja templating
+  # The only way to avoid that problem is to exec ansible with ANSIBLE_JINJA2_NATIVE=true
   - name: "deploy-operators : Increase maxUnavailable count to n-1"
-    k8s:
-      definition:
-        kind: MachineConfigPool
-        metadata:
-          name: worker
-        spec:
-          maxUnavailable: "{{ hostvars.localhost.groups['workers']|length - 1 }}"
+    shell: >
+      oc patch mcp worker
+      --type=merge
+      -p '{"spec":{"maxUnavailable":{{ hostvars.localhost.groups['workers']|length - 1 }}}}'
     when:
     - hostvars.localhost.groups['workers']|length > 1
 
