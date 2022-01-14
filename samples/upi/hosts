@@ -1,0 +1,22 @@
+[all:vars]
+dir="{{ ansible_user_dir }}/clusterconfigs"
+bootstrap_interface="192.168.7.1"
+cluster=ocp4
+install_type=upi
+
+# Master nodes
+[masters]
+ocp4-master0 name=ocp4-master0 ipmi_user=root ipmi_password=password ipmi_address=192.168.1.61 ipmi_port=6231
+ocp4-master1 name=ocp4-master1 ipmi_user=root ipmi_password=password ipmi_address=192.168.1.61 ipmi_port=6232
+ocp4-master2 name=ocp4-master2 ipmi_user=root ipmi_password=password ipmi_address=192.168.1.61 ipmi_port=6233
+
+# Worker nodes
+[workers]
+#ocp4-worker0 name=ocp4-worker0 ipmi_user=ADMIN ipmi_password=ADMIN ipmi_address=192.168.1.52
+
+# Bootstrap host
+[bootstrap]
+ocp4-bootstrap name=ocp4-bootstrap ipmi_user=root ipmi_password=password ipmi_address=192.168.1.61 ipmi_port=6230
+
+[provisioner]
+okd-master-1 ansible_user=dci-openshift-agent

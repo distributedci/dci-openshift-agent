@@ -1,0 +1,5 @@
+---
+- name: Get CSR's to approve
+  command:
+    cmd: approve_workers.sh {{ ocp_binary_path }}
+...
