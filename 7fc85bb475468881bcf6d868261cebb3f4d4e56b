@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fe9d7f3_215f2642",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-15T01:38:43Z",
+      "side": 1,
+      "message": "not sure this variable is defined.",
+      "range": {
+        "startLine": 51,
+        "startChar": 29,
+        "endLine": 51,
+        "endChar": 36
+      },
+      "revId": "7fc85bb475468881bcf6d868261cebb3f4d4e56b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
