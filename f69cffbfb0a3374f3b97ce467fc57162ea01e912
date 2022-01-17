@@ -34,6 +34,24 @@
       "revId": "f69cffbfb0a3374f3b97ce467fc57162ea01e912",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5ca73e59_58ec11b8",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-17T19:17:46Z",
+      "side": 1,
+      "message": "Thanks for the information about upgrades completion times. I was guesstimating. I have decreased the retries to 120. Will give it a try.",
+      "parentUuid": "8c936af1_6db12f03",
+      "revId": "f69cffbfb0a3374f3b97ce467fc57162ea01e912",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
