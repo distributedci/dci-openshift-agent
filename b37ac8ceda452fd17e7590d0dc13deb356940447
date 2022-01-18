@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d165b414_12eefa1b",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-18T13:10:33Z",
+      "side": 1,
+      "message": "exists",
+      "range": {
+        "startLine": 52,
+        "startChar": 40,
+        "endLine": 52,
+        "endChar": 45
+      },
+      "revId": "b37ac8ceda452fd17e7590d0dc13deb356940447",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": true
+    }
+  ]
+}
