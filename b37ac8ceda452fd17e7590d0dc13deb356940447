@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "d165b414_12eefa1b",
         "filename": "plays/pre-run.yml",
@@ -20,8 +21,31 @@
         "endChar": 45
       },
       "revId": "b37ac8ceda452fd17e7590d0dc13deb356940447",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9b44796_bc12800d",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-18T14:42:00Z",
+      "side": 1,
+      "message": "fixed the typo",
+      "parentUuid": "d165b414_12eefa1b",
+      "range": {
+        "startLine": 52,
+        "startChar": 40,
+        "endLine": 52,
+        "endChar": 45
+      },
+      "revId": "b37ac8ceda452fd17e7590d0dc13deb356940447",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
