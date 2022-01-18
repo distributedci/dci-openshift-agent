@@ -1,0 +1,13 @@
+---
+- name: "Create a temporary directory for job_logs"
+  tempfile:
+    state: directory
+    prefix: dci_logs.
+  register: job_logs
+  when: job_logs is undefined
+
+- name: "Log Dir Path"
+  debug:
+    Msg: {{ job_logs.path }}
+
+...
