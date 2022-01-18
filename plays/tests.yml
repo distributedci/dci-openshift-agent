@@ -1,4 +1,5 @@
 ---
+
 - name: "dci-openshift-agent : Setup podman on the jumphost"
   include_role:
     name: ansible-role-dci-podman
@@ -31,6 +32,7 @@
     ts_configs_dir: "{{ dci_cluster_configs_dir }}"
     ts_csi_tests_dir: "{{ dci_cluster_tests_dir }}"
     ts_csi_test_manifest: "{{ dci_openshift_csi_test_manifest }}"
+    ts_log_dir: "{{ job_logs }}"
   include_role:
     name: redhat-tests
 

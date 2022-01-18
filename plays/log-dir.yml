@@ -1,0 +1,16 @@
+---
+- name: "Create a temporary directory for job_logs"
+  tempfile:
+    state: directory
+    prefix: dci_logs.
+  register: job_logs
+  when: job_logs is undefined 
+
+- name: "Set Logs path"
+  set_fact:
+    job_logs: "{{ job_logs.path }}"
+
+- name: "Print job_logs path"
+  debug:
+    msg: "Job logs are saved in {{ job_logs }}"
+...
