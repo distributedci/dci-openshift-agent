@@ -67,8 +67,12 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+
     - block:
         # prepare infrastructure
+
+        - include_tasks: plays/log-dir.yml
+
         - name: Run the pre-run
           include_tasks: plays/pre-run.yml
 
@@ -290,6 +294,9 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
+
+        - include_tasks: plays/log-dir.yml
+
         - include_tasks: plays/tests.yml
 
       rescue: *teardown_failure
@@ -307,6 +314,9 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
+
+        -  include_tasks: plays/log-dir.yml
+
         # Launch user tests
         - name: Run the partner tests
           include_tasks: '{{ hookdir }}/hooks/tests.yml'
