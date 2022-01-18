@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "efc6d569_9798a8a2",
         "filename": "plays/pre-run.yml",
@@ -20,10 +21,10 @@
         "endChar": 60
       },
       "revId": "25b541fa4e2b854d4de9399042848232b1ddcc61",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "5a8ea885_33df64d5",
         "filename": "plays/pre-run.yml",
@@ -44,8 +45,31 @@
         "endChar": 60
       },
       "revId": "25b541fa4e2b854d4de9399042848232b1ddcc61",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4081dc8_19aad191",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-18T16:40:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5a8ea885_33df64d5",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 60
+      },
+      "revId": "25b541fa4e2b854d4de9399042848232b1ddcc61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
