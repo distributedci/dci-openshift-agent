@@ -22,6 +22,30 @@
       "revId": "13d34d4b1069aeb80917780b591905567549a9d0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f497ced6_5dd69649",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-18T03:02:46Z",
+      "side": 1,
+      "message": "Task updated.",
+      "parentUuid": "6f62c099_ce85454a",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 33
+      },
+      "revId": "13d34d4b1069aeb80917780b591905567549a9d0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
