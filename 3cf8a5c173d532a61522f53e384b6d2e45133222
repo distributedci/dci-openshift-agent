@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c052c634_5423c7ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 47
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-19T22:59:55Z",
+      "side": 1,
+      "message": "Hi Nacho, I saw you still have some commented lines in the patch so I think you are still retaking it and testing, IMHO it would be a good idea to update your patch to contain latest changes in the upgrade from the last days to gain momentum, ping me if you need some help. I\u0027ll be curious to see these new tasks in action. ",
+      "revId": "3cf8a5c173d532a61522f53e384b6d2e45133222",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
