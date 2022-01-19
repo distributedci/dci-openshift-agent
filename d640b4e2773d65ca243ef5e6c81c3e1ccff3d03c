@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "356024bc_33b79edf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-19T22:30:34Z",
+      "side": 1,
+      "message": "This looks good to me, I\u0027m just curious what is the end goal of storing the job component id into a file? ",
+      "revId": "d640b4e2773d65ca243ef5e6c81c3e1ccff3d03c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
