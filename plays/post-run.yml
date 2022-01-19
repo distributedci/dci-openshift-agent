@@ -5,6 +5,7 @@
     outputs:
       kubeconfig: "~/clusterconfigs/auth/kubeconfig"
       hosts: "/etc/hosts"
+      ocp_comp: "/tmp/{{ job_id }}.ocp_prod_id"
 
 - name: Copy outputs if defined
   delegate_to: "{{ groups['provisioner'][0] }}"
@@ -17,4 +18,5 @@
 
 - name: Upload logs
   include_tasks: get-logs.yml
+
 ...
