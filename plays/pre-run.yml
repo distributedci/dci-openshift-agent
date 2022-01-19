@@ -27,8 +27,18 @@
     tags: "{{ item['tags'] }}"
     url: "{{ item['url']|default('') }}"
     version: "{{ item['data']['version'] }}"
+    ocp_product_id: "{{ item['data']['id'] }}"
   with_items: "{{ job_info.job.components }}"
   when: item["type"] == "ocp"
+
+- name: Export the OCP component id into a file
+  copy:
+    dest: "{{ job_info['outputs']['ocp_comp'] }}"
+    content: "{{ ocp_product_id }}"
+  when:
+    - job_info is defined
+    - 'outputs' in job_info
+    - 'ocp_comp' in job_info['outputs']
 
 - name: Get build from tag
   set_fact:
