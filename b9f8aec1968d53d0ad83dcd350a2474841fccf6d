@@ -67,6 +67,24 @@
       "message": "Just to be clear, I don\u0027t think this line is doing any harm so no changes are needed, however, is the line really needed? I mean, the dci_pullsecret_file is set as a fact a few lines above, so it should be available for the roles without needing to pass it.\nSame comment applies to the roles included in this file.\nI\u0027ll give my +1 to the change either way.",
       "revId": "b9f8aec1968d53d0ad83dcd350a2474841fccf6d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e60d318f_1a92bc17",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-19T15:25:46Z",
+      "side": 1,
+      "message": "Interesting, let me test without passing the var to the roles, I also was wondering if it was really needed. Let\u0027s see.",
+      "parentUuid": "c52f692f_273a2168",
+      "revId": "b9f8aec1968d53d0ad83dcd350a2474841fccf6d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
