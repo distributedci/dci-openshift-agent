@@ -1,6 +1,24 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eac0cd8d_c2a7bf91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Thanks for the comments. I proceeed them so I hope the CR is ready for approval.",
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "51d49ad3_5b240781",
         "filename": "docs/control_nodes_setup.md",
@@ -20,10 +38,34 @@
         "endChar": 8
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b509851b_425ced1d",
+        "filename": "docs/control_nodes_setup.md",
+        "patchSetId": 20
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "51d49ad3_5b240781",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "6b1ca3e8_c479cd1a",
         "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
@@ -43,10 +85,34 @@
         "endChar": 6
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "242ca1ed_71691add",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6b1ca3e8_c479cd1a",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 6
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "94db2dcf_9437be0d",
         "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
@@ -66,10 +132,34 @@
         "endChar": 4
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3209aab1_eeb1ce60",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "94db2dcf_9437be0d",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 4
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "03fae1ac_a619de54",
         "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
@@ -89,10 +179,34 @@
         "endChar": 8
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b2177d0_e91f0f25",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03fae1ac_a619de54",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "85231e88_9375d0a6",
         "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
@@ -112,10 +226,34 @@
         "endChar": 10
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42832676_d2115fd4",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "85231e88_9375d0a6",
+      "range": {
+        "startLine": 130,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 10
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "b0408698_a85e5936",
         "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
@@ -135,10 +273,34 @@
         "endChar": 10
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a42579c_55a5c52f",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0408698_a85e5936",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 10
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "e97b53f9_5c678141",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -158,10 +320,34 @@
         "endChar": 6
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15b269ce_cccaae61",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e97b53f9_5c678141",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 6
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "15608b2c_9d3427e3",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -181,10 +367,34 @@
         "endChar": 8
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a1f15c9_0db88d5a",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15608b2c_9d3427e3",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "ffb91979_51deff61",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -204,10 +414,34 @@
         "endChar": 6
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eeb299b2_360777e4",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ffb91979_51deff61",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 6
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "cb765450_69342eac",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -227,10 +461,34 @@
         "endChar": 8
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "163200fc_b10b0110",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb765450_69342eac",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "2de9f746_fd7085ba",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -250,10 +508,34 @@
         "endChar": 8
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "466f337f_8277039b",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2de9f746_fd7085ba",
+      "range": {
+        "startLine": 105,
+        "startChar": 0,
+        "endLine": 105,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "94a5d743_0af769f2",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -273,10 +555,34 @@
         "endChar": 8
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ed93e2b_fec629e4",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "94a5d743_0af769f2",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "e3cda16f_dd0158ce",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -296,10 +602,34 @@
         "endChar": 8
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "98664f9a_0cbe9309",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e3cda16f_dd0158ce",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 8
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "8f76e08f_9a944b4f",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
@@ -319,8 +649,31 @@
         "endChar": 10
       },
       "revId": "afa75613122f1f675939b22442e168458a1b3260",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bd54661_bcae7217",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:22:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f76e08f_9a944b4f",
+      "range": {
+        "startLine": 243,
+        "startChar": 0,
+        "endLine": 243,
+        "endChar": 10
+      },
+      "revId": "afa75613122f1f675939b22442e168458a1b3260",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
