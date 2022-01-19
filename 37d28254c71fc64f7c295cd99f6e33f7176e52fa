@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "02ae2328_a1e886a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-19T22:23:43Z",
+      "side": 1,
+      "message": "Nacho, good work here, I only have a couple of questions, thanks!",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "77ef16eb_c3d863e8",
@@ -134,6 +151,41 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1406d4dd_ba9bde82",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-19T22:23:43Z",
+      "side": 1,
+      "message": "This is a good one, I think this tasks is reading the content of a ssh pub key generated in a previous play[1] in the jumphost to save it in the authorized_keys of the provisioner, if that\u0027s the case, this kind of syntax is new to me, :)\n\n[1]https://softwarefactory-project.io/r/c/dci-openshift-agent/+/22977/21/samples/control_nodes_setup/setup_jumpbox_tasks.yml#92",
+      "parentUuid": "279e80fe_c3ec5763",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fda5fa54_1e2d7ccf",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-19T22:23:43Z",
+      "side": 1,
+      "message": "Just for curiosity, any reason why you decided to configure prov and bare interfaces here? I see the prov and baremetal networks can also be setup by the baremetal-deploy plays[1], if we set them up is ok, then the baremetal-deploy roles won\u0027t change them, I was just trying to see if there is any benefit.\n\n[1] https://github.com/openshift-kni/baremetal-deploy/blob/master/ansible-ipi-install/roles/node-prep/tasks/40_bridge.yml",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1113bd00_ce288232",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
         "patchSetId": 21
@@ -202,6 +254,23 @@
         "endLine": 243,
         "endChar": 2
       },
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eabe95f6_8a9659dc",
+        "filename": "samples/control_nodes_setup/testing.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-19T22:23:43Z",
+      "side": 1,
+      "message": "What is this file for?",
       "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
