@@ -16,6 +16,24 @@
       "message": "Good stuff Bill and team, I know it\u0027s a WIP but I was just checking in case I\u0027m doing something in SNO that could affect you, but I do not see anything that could interfere now. I\u0027ll be monitoring this to review and test, now that you are providing samples for an UPI deploy on VMs will be simple to follow.  ",
       "revId": "7a9bde1db2a7fa09eb2bbde8c940f356d006ca51",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50c93cfa_606a45c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-19T16:15:32Z",
+      "side": 1,
+      "message": "Thanks!  I finally had a successful install.  The piece that was tripping me up was you have to approve workers via CSR\u0027s that show up. Now to update the docs so you and others can try it.",
+      "parentUuid": "c9106550_428681db",
+      "revId": "7a9bde1db2a7fa09eb2bbde8c940f356d006ca51",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
