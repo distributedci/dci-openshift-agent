@@ -1,6 +1,131 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "01c721c6_7e9a564c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T13:42:09Z",
+      "side": 1,
+      "message": "looks good to me 😊",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77ef16eb_c3d863e8",
+        "filename": "samples/control_nodes_setup/setup_jumpbox.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T13:42:09Z",
+      "side": 1,
+      "message": "I suggest to use a valid yaml format here with *:* \n\n```\ndci_client_id: \"{{ lookup(\u0027env\u0027,\u0027DCI_CLIENT_ID\u0027) }}\"\ndci_api_secret: \"{{ lookup(\u0027env\u0027,\u0027DCI_API_SECRET\u0027) }}\"\ndci_cs_url: \"{{ lookup(\u0027env\u0027,\u0027DCI_CS_URL\u0027) }}\"\ndci_ui_url: \"{{ lookup(\u0027env\u0027,\u0027DCI_UI_URL\u0027) | default(\u0027https://www.distributed-ci.io\u0027, True) }}\"\n```",
+      "range": {
+        "startLine": 12,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 102
+      },
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5735fb39_fc639cc8",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T13:42:09Z",
+      "side": 1,
+      "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36399e3b_9ae7ee8a",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T13:42:09Z",
+      "side": 1,
+      "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1113bd00_ce288232",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T13:42:09Z",
+      "side": 1,
+      "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98fd9426_06ae8b66",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T13:42:09Z",
+      "side": 1,
+      "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b78e067e_1f374d02",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T13:42:09Z",
+      "side": 1,
+      "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01cd791f_ab5a1036",
