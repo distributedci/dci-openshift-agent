@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a326ce2_4ee4a405",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 43
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:53:07Z",
+      "side": 1,
+      "message": "I\u0027m taking the liberty to mark as done those comments I could verify.",
+      "revId": "ac038c904470fc6696e394de1a847f88296cb09e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

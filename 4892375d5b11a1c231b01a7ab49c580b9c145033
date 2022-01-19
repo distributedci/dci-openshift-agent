@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "77c1a64c_76d00d0d",
         "filename": "roles/sno-installer/tasks/21_rhcos_image_paths.yml",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "I suggest to add a `no_log: true` to reduce the output.",
       "revId": "4892375d5b11a1c231b01a7ab49c580b9c145033",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "245ea5e0_bd179e79",
         "filename": "roles/sno-installer/tasks/21_rhcos_image_paths.yml",
@@ -32,8 +33,25 @@
       "message": "Pierre, I included this in Patchset 37 😊",
       "parentUuid": "77c1a64c_76d00d0d",
       "revId": "4892375d5b11a1c231b01a7ab49c580b9c145033",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9abec1c0_b3e3d380",
+        "filename": "roles/sno-installer/tasks/21_rhcos_image_paths.yml",
+        "patchSetId": 36
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-19T11:53:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "245ea5e0_bd179e79",
+      "revId": "4892375d5b11a1c231b01a7ab49c580b9c145033",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
