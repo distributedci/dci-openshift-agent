@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dce7b8c5_7e8f8a1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T14:30:33Z",
+      "side": 1,
+      "message": "Some other comments 😊",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "77ef16eb_c3d863e8",
@@ -60,6 +77,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f71fc268_e705472a",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T14:30:33Z",
+      "side": 1,
+      "message": "If the file is not present it will get an error.\nIt is better to use stat module instead",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 24
+      },
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "36399e3b_9ae7ee8a",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
         "patchSetId": 21
@@ -71,6 +111,23 @@
       "writtenOn": "2022-01-19T13:42:09Z",
       "side": 1,
       "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "279e80fe_c3ec5763",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-19T14:30:33Z",
+      "side": 1,
+      "message": "I don\u0027t understand this line 😊",
       "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
