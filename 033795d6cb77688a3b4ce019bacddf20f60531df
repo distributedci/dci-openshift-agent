@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3993380_cab45a88",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-20T14:38:51Z",
+      "side": 1,
+      "message": "LGTM, but maybe I will do a new test before merging, as some tasks have slightly changed.",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
