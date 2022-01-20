@@ -34,6 +34,24 @@
       "parentUuid": "c052c634_5423c7ae",
       "revId": "3cf8a5c173d532a61522f53e384b6d2e45133222",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1adee3b_f711e67c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 47
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-20T19:39:19Z",
+      "side": 1,
+      "message": "I meant to rebase your patch with the latest changes from recent weeks, to consider a couple of commits in the upgrade.yml file Beto submitted.",
+      "parentUuid": "a44d9183_e7398d16",
+      "revId": "3cf8a5c173d532a61522f53e384b6d2e45133222",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
