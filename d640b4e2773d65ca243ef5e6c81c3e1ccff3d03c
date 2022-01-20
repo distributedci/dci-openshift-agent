@@ -16,6 +16,23 @@
       "message": "This looks good to me, I\u0027m just curious what is the end goal of storing the job component id into a file? ",
       "revId": "d640b4e2773d65ca243ef5e6c81c3e1ccff3d03c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c882e09b_a7e22463",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-01-20T02:00:42Z",
+      "side": 1,
+      "message": "@Manuel: In fact, the CNFs jobs were looking for the previous job to get the OCP component. Accessing the previous job is now not authorized in a recent server change because if the CNF-Remoteci doesn\u0027t belongs to the team of the previous job then it must not be able to access it (it was a security/multi-tenancy bug). To workaround this we can leverage the inputs/outputs mechanism of dci-pipeline to pass as an input the OCP component to the next stage (cnf), this is done by writing the data in the file system (shared location).",
+      "revId": "d640b4e2773d65ca243ef5e6c81c3e1ccff3d03c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
