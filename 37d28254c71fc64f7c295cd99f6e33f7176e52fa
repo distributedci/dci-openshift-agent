@@ -75,6 +75,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b434f717_7ce1e24c",
+        "filename": "samples/control_nodes_setup/setup_jumpbox.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77ef16eb_c3d863e8",
+      "range": {
+        "startLine": 12,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 102
+      },
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5735fb39_fc639cc8",
@@ -88,6 +112,24 @@
       "writtenOn": "2022-01-19T13:42:09Z",
       "side": 1,
       "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b1a794f_91e7a5b6",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5735fb39_fc639cc8",
       "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -115,6 +157,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bef4c739_56c860f8",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f71fc268_e705472a",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 24
+      },
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "36399e3b_9ae7ee8a",
@@ -128,6 +194,24 @@
       "writtenOn": "2022-01-19T13:42:09Z",
       "side": 1,
       "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "660ee390_b7910873",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36399e3b_9ae7ee8a",
       "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -187,6 +271,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9412053e_6b00351b",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "when the playbook setup_jumpbox.yml is run, ansible create a key pair in the jumpbox dci-openshift-agent home directory and retrieves the public key with fetch.\nfetch places the key at /tmp/{hostname}/var/lib/dci-openshift-agent/.ssy/id_rsa.pub.\nWhat we do in this line is copying the content of the public key into the authorized_keys file in the provisioner, in order to allow passwordless login from the jumpbox.",
+      "parentUuid": "279e80fe_c3ec5763",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fda5fa54_1e2d7ccf",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
         "patchSetId": 21
@@ -198,6 +300,24 @@
       "writtenOn": "2022-01-19T22:23:43Z",
       "side": 1,
       "message": "Just for curiosity, any reason why you decided to configure prov and bare interfaces here? I see the prov and baremetal networks can also be setup by the baremetal-deploy plays[1], if we set them up is ok, then the baremetal-deploy roles won\u0027t change them, I was just trying to see if there is any benefit.\n\n[1] https://github.com/openshift-kni/baremetal-deploy/blob/master/ansible-ipi-install/roles/node-prep/tasks/40_bridge.yml",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14de7e2a_339656b0",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "I had my doubts as well on whether to keep these actions here, but I used the libvirt code for reference and we do it here. On the other hand, I guessed it\u0027d be a good idea to keep them in order to detect networking issues before running the agent for the first time.\nDo you recommend removing them?",
+      "parentUuid": "fda5fa54_1e2d7ccf",
       "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -219,6 +339,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e57e1003_bddb52d9",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1113bd00_ce288232",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "98fd9426_06ae8b66",
@@ -236,6 +374,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fd3ae0d_20f485a5",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98fd9426_06ae8b66",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b78e067e_1f374d02",
@@ -249,6 +405,24 @@
       "writtenOn": "2022-01-19T13:42:09Z",
       "side": 1,
       "message": "usage of loop is preferable",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea17cef6_9d01daea",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b78e067e_1f374d02",
       "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -276,6 +450,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5031bacc_9ff10fc4",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01cd791f_ab5a1036",
+      "range": {
+        "startLine": 243,
+        "startChar": 0,
+        "endLine": 243,
+        "endChar": 2
+      },
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eabe95f6_8a9659dc",
@@ -289,6 +487,24 @@
       "writtenOn": "2022-01-19T22:23:43Z",
       "side": 1,
       "message": "What is this file for?",
+      "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c8b49c4_fec28a43",
+        "filename": "samples/control_nodes_setup/testing.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-20T14:22:11Z",
+      "side": 1,
+      "message": "To be honest, I didn\u0027t even remember why I created that file in the first place. I\u0027m removing it.",
+      "parentUuid": "eabe95f6_8a9659dc",
       "revId": "37d28254c71fc64f7c295cd99f6e33f7176e52fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
