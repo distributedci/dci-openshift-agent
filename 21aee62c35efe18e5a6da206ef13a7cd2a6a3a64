@@ -16,6 +16,125 @@
       "message": "Thank you for the review Nacho, running a new test to validate your suggestion.",
       "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3707d28_58bdca7b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:28:03Z",
+      "side": 1,
+      "message": "I think the docs/disconnected_en.md would require some updates as well. But overall is looking really good, thanks for consolidating the use of secrets!",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39a27705_fa06cf83",
+        "filename": "README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:28:03Z",
+      "side": 1,
+      "message": "I\u0027d probably reword this a bit, what about: \"When using the agent in a disconnected environment, the following variables should be used as described\"\nSince not all of them must be used (being optional) or only used if some requirement is met.",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62e991d7_d200819f",
+        "filename": "README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:28:03Z",
+      "side": 1,
+      "message": "pullsecret variable was not included in this table.",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f102c0df_1274cbfe",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:28:03Z",
+      "side": 1,
+      "message": "I\u0027d probably add also a validation that pullsecret is defined since it comes from the inventory.",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9136b9d9_e6e7ef45",
+        "filename": "plays/tests.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:28:03Z",
+      "side": 1,
+      "message": "afaik, tests are run from localhost, I think we can delete this var and dci_pullsecret_file should be available.",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86aabd5f_fb3f9b38",
+        "filename": "plays/tests.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:28:03Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62179b68_1d46b128",
+        "filename": "roles/mirror-ocp-release/tasks/files.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:28:03Z",
+      "side": 1,
+      "message": "Wow! This is interesting, I wasn\u0027t aware we were using yet another secret file! glad we are just using one now 😄",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
