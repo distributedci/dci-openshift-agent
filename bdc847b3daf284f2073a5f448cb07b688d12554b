@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3624285_9160f0b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T19:35:46Z",
+      "side": 1,
+      "message": "LGTM.\n\nI see the new output was copied to the right place and used by the other jobs. The failure is unrelated to this change.",
+      "revId": "bdc847b3daf284f2073a5f448cb07b688d12554b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
