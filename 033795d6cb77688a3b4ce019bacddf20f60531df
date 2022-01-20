@@ -16,6 +16,40 @@
       "message": "LGTM, but maybe I will do a new test before merging, as some tasks have slightly changed.",
       "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3177f975_a0f3ed97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-20T19:26:36Z",
+      "side": 1,
+      "message": "Thanks for the clarifications Nacho. \nJust one more question, below, this will help me to understand if we can run this in one of our Dallas cluster.",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67e420d1_67cb8cef",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-20T19:26:36Z",
+      "side": 1,
+      "message": "Question: my understanding from the conditions is that no registration will occur in the prov node if we are running this in a disconnected environment correct?",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
