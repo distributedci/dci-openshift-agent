@@ -22,6 +22,74 @@
       },
       "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5bec1cf_8e682ce8",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2022-01-20T20:38:54Z",
+      "side": 1,
+      "message": "The samples folder is inside the dci-openshift-agent home folder. We should probably specify that. And if we use the dci-openshift-agent, we should use sudo to cp.",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c7cf440_3cf03492",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2022-01-20T20:38:54Z",
+      "side": 1,
+      "message": "this folder doesn\u0027t exist in the dns sample folder. Only zonefile.db. The file reverse.db is missing.",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74d00acd_b96c29a2",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2022-01-20T20:38:54Z",
+      "side": 1,
+      "message": "We should specify the samples folder is inside the dci-openshift-agent home folder.",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3cfbb99_81bb9df6",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2022-01-20T20:38:54Z",
+      "side": 1,
+      "message": "We should specify the samples folder is inside the dci-openshift-agent home folder.",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
