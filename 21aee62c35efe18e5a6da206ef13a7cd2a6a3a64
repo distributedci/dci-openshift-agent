@@ -88,6 +88,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "09c78ef8_dfe0282c",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-20T22:31:07Z",
+      "side": 1,
+      "message": "Well, it can come from the job as well, so no need to do that validation, unless we run without dci job.",
+      "parentUuid": "f102c0df_1274cbfe",
+      "revId": "21aee62c35efe18e5a6da206ef13a7cd2a6a3a64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9136b9d9_e6e7ef45",
         "filename": "plays/tests.yml",
         "patchSetId": 9
