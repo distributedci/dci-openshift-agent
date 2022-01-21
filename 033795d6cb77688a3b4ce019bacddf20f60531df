@@ -50,6 +50,24 @@
       "message": "Question: my understanding from the conditions is that no registration will occur in the prov node if we are running this in a disconnected environment correct?",
       "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b683df9_ee218c11",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-21T15:14:03Z",
+      "side": 1,
+      "message": "Yes, you\u0027re correcto. Sorry I didn\u0027t get y our point at the beginning.\nActually, there\u0027s a second Jira card to implement full support for disconnected environments.",
+      "parentUuid": "67e420d1_67cb8cef",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
