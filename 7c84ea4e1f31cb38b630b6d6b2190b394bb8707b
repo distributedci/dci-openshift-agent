@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68016e7a_5c998d65",
+        "filename": "plays/install.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-21T09:28:40Z",
+      "side": 0,
+      "message": "This missing task is causing the ci-bot failure at:\n\nhttps://www.distributed-ci.io/jobs/fae5302a-9260-4df8-bf10-3b0ee6b64659/jobStates#791b2b60-7818-46cf-9423-7bf102eda3b1:file23\n\nIt looks like the the IPI installer checks for the definition of the pullsecret variable in the node-prep role:\n\nhttps://github.com/openshift-kni/baremetal-deploy/blob/bdd0f1bfd44dced561d856b463699ea09fd3e950/ansible-ipi-install/roles/node-prep/tasks/10_validation.yml#L48\n\nAlso, the variable seems to be needed in the install role:\n\nhttps://github.com/openshift-kni/baremetal-deploy/blob/bdd0f1bfd44dced561d856b463699ea09fd3e950/ansible-ipi-install/roles/installer/tasks/20_extract_installer.yml#L2\n\nI was going to propose defining the variable in the import_role task, but since it\u0027s needed at least on two roles, you may consider recovering the set_fact.",
+      "revId": "7c84ea4e1f31cb38b630b6d6b2190b394bb8707b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
