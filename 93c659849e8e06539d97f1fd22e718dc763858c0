@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea7b2dd5_cecd5f56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-21T04:42:25Z",
+      "side": 1,
+      "message": "Thanks for the review Tony, patch-set 10 includes fixes and below some comments.",
+      "revId": "93c659849e8e06539d97f1fd22e718dc763858c0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
