@@ -16,6 +16,24 @@
       "message": "Nice patch. \n\nThe samples given are for pxelinux. I think, they work only for legacy bios.\nMaybe an example of grub.cfg for efi server could be also interesting 😊\n\n```$ cat grub.cfg-01-52-54-00-39-f8-e3```\n```\nset default\u003d\"1\"\n\nfunction load_video {\n  insmod efi_gop\n  insmod efi_uga\n  insmod video_bochs\n  insmod video_cirrus\n  insmod all_video\n}\n\nload_video\nset gfxpayload\u003dkeep\ninsmod gzio\ninsmod part_gpt\ninsmod ext2\n\nset timeout\u003d5\n### END /etc/grub.d/00_header ###\n\n### BEGIN /etc/grub.d/10_linux ###\nmenuentry \u0027RHEL CoreOS (Live)\u0027 --class fedora --class gnu-linux --class gnu --class os {\n        linux /rhcos/kernel random.trust_cpu\u003don ignition.config.url\u003dhttp://192.168.7.1:8080/ignition/dci_hooks.ign coreos.live.rootfs_url\u003dhttp://192.168.7.1:8080/install/rootfs.img ignition.firstboot ignition.platform.id\u003dmetal \n        initrd /rhcos/initramfs.img\n}\n```",
       "revId": "4ffef56079d26e11109ff396ec468570ca63fca2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e37dc155_75d26adc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-24T13:53:06Z",
+      "side": 1,
+      "message": "Thanks - I\u0027m updating the examples now.",
+      "parentUuid": "49e3cbfc_e51dbd4b",
+      "revId": "4ffef56079d26e11109ff396ec468570ca63fca2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
