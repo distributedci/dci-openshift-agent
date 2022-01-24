@@ -50,6 +50,24 @@
       "message": "Does it mean that the upgrade can display a \u0027failure\u0027 state only temporary?",
       "revId": "cfffc22a463645aebb54915cc4a135101e18e95b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c5b8ca1_a1291fe4",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 49
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-24T14:44:35Z",
+      "side": 1,
+      "message": "Hi Charles,\nThe problem with the OCP upgrade is, due to the reconciliation loop, every failure condition will eventually got back to \"progressing\" state, so there is no way to identify a permanent failure just by checking the status of the cluster version.\nSo as an intermediate solution we implemented the monitor as a state machine. If the script finds a failure and it does not turn back to \"progressing\" in less that 15 minutes, the monitor assumes the failure is permanent.",
+      "parentUuid": "bad402a7_bb86cece",
+      "revId": "cfffc22a463645aebb54915cc4a135101e18e95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
