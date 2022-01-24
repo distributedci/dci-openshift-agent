@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "39507193_2cd58ec4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 49
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-24T16:56:02Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla openshift-vanilla:components\u003docp\u003d4.7.24, ocp-4.8-upgrade openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.21,",
+      "revId": "cfffc22a463645aebb54915cc4a135101e18e95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bad402a7_bb86cece",
