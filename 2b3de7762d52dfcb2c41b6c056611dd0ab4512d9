@@ -24,6 +24,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e82b9f90_56b0423d",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-24T15:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f598014_c9ec2a01",
+      "range": {
+        "startLine": 9,
+        "startChar": 3,
+        "endLine": 9,
+        "endChar": 12
+      },
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c5bec1cf_8e682ce8",
@@ -37,6 +61,24 @@
       "writtenOn": "2022-01-20T20:38:54Z",
       "side": 1,
       "message": "The samples folder is inside the dci-openshift-agent home folder. We should probably specify that. And if we use the dci-openshift-agent, we should use sudo to cp.",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abb9bcae_37869f72",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-24T15:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c5bec1cf_8e682ce8",
       "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -58,6 +100,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "01461cf9_a948eb6d",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-24T15:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c7cf440_3cf03492",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74d00acd_b96c29a2",
@@ -75,6 +135,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2879c923_7e906047",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-24T15:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74d00acd_b96c29a2",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b3cfbb99_81bb9df6",
@@ -88,6 +166,24 @@
       "writtenOn": "2022-01-20T20:38:54Z",
       "side": 1,
       "message": "We should specify the samples folder is inside the dci-openshift-agent home folder.",
+      "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17c20d67_1976a2f0",
+        "filename": "samples/upi/README.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-01-24T15:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3cfbb99_81bb9df6",
       "revId": "2b3de7762d52dfcb2c41b6c056611dd0ab4512d9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
