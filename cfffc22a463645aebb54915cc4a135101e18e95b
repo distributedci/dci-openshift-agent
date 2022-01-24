@@ -16,6 +16,40 @@
       "message": "Hi Nacho, you have my +1 but waiting for a successful job on dallas after doing the rebase to confirm it is completely fine for merging it.",
       "revId": "cfffc22a463645aebb54915cc4a135101e18e95b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9948eebe_df4147c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 49
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-01-24T14:28:20Z",
+      "side": 1,
+      "message": "If the answer of my question is \u0027no\u0027, then I have not understood your loop ^^ otherwise, I\u0027ll give you a +2",
+      "revId": "cfffc22a463645aebb54915cc4a135101e18e95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bad402a7_bb86cece",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 49
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-01-24T14:28:20Z",
+      "side": 1,
+      "message": "Does it mean that the upgrade can display a \u0027failure\u0027 state only temporary?",
+      "revId": "cfffc22a463645aebb54915cc4a135101e18e95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
