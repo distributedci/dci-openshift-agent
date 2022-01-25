@@ -16,6 +16,57 @@
       "message": "check dallas ocp-4.10-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25991d2a_0ebd4faa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-01-25T10:01:12Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll add a +2 when the test passes 😎",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c38e471b_e2211016",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-01-25T10:01:12Z",
+      "side": 1,
+      "message": "I would add something to make more obvious the beginning in the output, something like \"\u003e\u003e\u003e\u003e Get Logs for...\"",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6e0704c_d788d9f9",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-01-25T10:01:12Z",
+      "side": 1,
+      "message": "Same here",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
