@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9b12a81_d40f1bbf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 44
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-25T13:35:20Z",
+      "side": 1,
+      "message": "Nice patch, it is time to merge it 😊",
+      "revId": "4e7ba688df23aa687f5a9fd2e0d775c67989085b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
