@@ -16,6 +16,23 @@
       "message": "Nice patch, it is time to merge it 😊",
       "revId": "4e7ba688df23aa687f5a9fd2e0d775c67989085b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fb360f6_59f2f678",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 44
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-25T14:32:01Z",
+      "side": 1,
+      "message": "Do we have a job where we have tested the SNO baremetal? Do we have a test for IPI to ensure we are not breaking it?\n\nI\u0027ll give my +2 once I\u0027m done with a test for sno_libvirt with latest changes I expect it to go without issues",
+      "revId": "4e7ba688df23aa687f5a9fd2e0d775c67989085b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
