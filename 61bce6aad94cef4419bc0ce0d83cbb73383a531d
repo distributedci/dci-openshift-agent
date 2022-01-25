@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "299229c9_9eee3120",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-25T12:29:27Z",
+      "side": 1,
+      "message": "\u003e LGTM, I\u0027ll add a +2 when the test passes 😎\n\nThanks Charles! :) I will have into account your suggestions too after finishing with the current job running on dallas. In my case, I have added the \"always\" block just to confirm the commands work fine (they are quite similar to the commands in \"rescue\" block in fact), so that, after validating that, I will remove the \"always\" block, just leaving the \"resue\" one. Is it fine? Or should I leave the \"always\" block anyway to retrieve all the logs?",
+      "parentUuid": "25991d2a_0ebd4faa",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c38e471b_e2211016",
