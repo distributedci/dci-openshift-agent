@@ -33,6 +33,24 @@
       "message": "Do we have a job where we have tested the SNO baremetal? Do we have a test for IPI to ensure we are not breaking it?\n\nI\u0027ll give my +2 once I\u0027m done with a test for sno_libvirt with latest changes I expect it to go without issues",
       "revId": "4e7ba688df23aa687f5a9fd2e0d775c67989085b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38c81da8_fcbb18a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 44
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-25T14:58:03Z",
+      "side": 1,
+      "message": "SNO Baremetal Test: https://www.distributed-ci.io/jobs/30baa5d8-4e58-4d06-b907-4515ce7ab85e/jobStates\nSNO IPI (Not breaked by SNO): https://www.distributed-ci.io/jobs/981b21e3-aca5-4256-8c52-f430d971a73c/jobStates\nSNO Libvirt with latest changes: https://www.distributed-ci.io/jobs/96c7590e-d1aa-4fe5-8468-e94f121584da/jobStates\n\nAll those tests were made on patch-set 40, patches 41-43 have been only doc updates, so I haven\u0027t triggered more deployments. We can if needed!",
+      "parentUuid": "4fb360f6_59f2f678",
+      "revId": "4e7ba688df23aa687f5a9fd2e0d775c67989085b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
