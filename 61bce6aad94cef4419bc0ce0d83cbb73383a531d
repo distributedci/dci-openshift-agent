@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b407789_cbde63fe",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-25T13:18:34Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c38e471b_e2211016",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a6e0704c_d788d9f9",
@@ -83,6 +101,24 @@
       "writtenOn": "2022-01-25T10:01:12Z",
       "side": 1,
       "message": "Same here",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31b18ca1_16d55962",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-25T13:18:34Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a6e0704c_d788d9f9",
       "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
