@@ -1,15 +1,5 @@
 # DCI OpenShift Agent on libvirt
 
-## Table of contents
-
-- [How to run the fully virtualized example](#how-to-run-the-fully-virtualized-example)
-  - [Demo screencast](#demo-screencast)
-  - [Additional resources](#additional-resources)
-- [Troubleshooting](#troubleshooting)
-  - [Installer timeout](#installer-timeout)
-  - [Monitor install log](#monitor-install-log)
-  - [Troubleshooting ironic issues](#troubleshooting-ironic-issues)
-
 If you are interested in getting an OCP deployment running as quickly as
 possible you will find in the `/samples/ocp_on_libvirt` folder some
 configuration examples to run the `DCI Openshift Agent` in a “all-in-one” full
