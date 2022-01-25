@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b13d2b1_acbc3bfd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 49
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-25T04:02:51Z",
+      "side": 1,
+      "message": "Nacho, I wanted to see this patch in action, but last test failed in a task before your changes, if we run a new job, we might pass that part and validate your patch, but there are two failures in the daily jobs similar, so chances are we might hit this again, Beto has been checking that so I\u0027ll ask his opinion, I think we can test this in virtual lab. I\u0027ll run a test tomorrow in pctt-hv8 and see if we can catch the reason of the failure. ",
+      "revId": "cfffc22a463645aebb54915cc4a135101e18e95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bad402a7_bb86cece",
