@@ -16,6 +16,23 @@
       "message": "OK. I looks ready to me. Thanks for the work.",
       "revId": "461bcb36c89a19920adc4e0fe5c13e306189cb3f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d521191_a618b60b",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-25T14:51:52Z",
+      "side": 1,
+      "message": "The value type expected is a boolean",
+      "revId": "461bcb36c89a19920adc4e0fe5c13e306189cb3f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
