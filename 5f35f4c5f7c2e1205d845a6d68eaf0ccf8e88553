@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f10a89e3_89473940",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 45
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-25T19:41:17Z",
+      "side": 1,
+      "message": "I talked with Tony about testing a normal OCP IPI baremetal with this PR to validate SNO change is not breaking it; last issue was related to a wrong validation in the mirroring I included when adding SNO baremetal disconnected support. Patch-set 45 fixes this, now I\u0027ll run all the tests.",
+      "revId": "5f35f4c5f7c2e1205d845a6d68eaf0ccf8e88553",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
