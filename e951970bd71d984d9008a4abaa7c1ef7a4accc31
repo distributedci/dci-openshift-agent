@@ -33,6 +33,40 @@
       "message": "check dallas ocp-4.8-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "744a14c3_da62ff5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-25T19:33:33Z",
+      "side": 1,
+      "message": "Just a suggestion",
+      "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf261436_6329d446",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-25T19:33:33Z",
+      "side": 1,
+      "message": "Hello Ramón, In the agent we are mainly collecting logs in play/get-logs.yml and scripts/get-logs. IMO, that should be a good place for this. That is executed during teardown so will be executed and you have guaranteed that the target directory exists. \n\nI am working on a change to have the log-dir available on all the stages and use that instead of using dci_cluster_configs_dir.",
+      "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
