@@ -1,15 +1,5 @@
 # Getting Involved
 
-## Table of Contents
-
-- [Development](#development)
-  - [Local dev environment](#local-dev-environment)
-  - [Libvirt environment](#libvirt-environment)
-- [Continuous Integration](#continuous-integration)
-  - [Testing a change](#testing-a-change)
-- [Agent troubleshooting](#agent-troubleshooting)
-  - [Launching the agent without DCI calls](#launching-the-agent-without-dci-calls)
-
 # Development
 
 ## Local dev environment
