@@ -1,12 +1,5 @@
 # Playbook to convert OCP on libvirt to bridged networking
 
-## Table of contents
-
-- [How to run the convert bridge playbook](#how-to-run-the-convert-bridge-playbook)
-  - [Updating DHCP, DNS and dci-openshift-agent](#updating-dhcp,-dns-and-dci-openshift-agent)
-  - [Demo screencast](#demo-screencast)
-- [Troubleshooting](#troubleshooting)
-
 If you are interested in combining virtualized masters with physical workers
 then this playbook will help you.
 

@@ -5,15 +5,6 @@ even via proxy servers. You can still install OpenShift Container Platform in
 these environments, but you must download required software and images and make
 them available to the disconnected environment.
 
-## Table of Contents
-
-- [Requirements](#requirements)
-- [Configurations](#configurations)
-- [Deploying the Registry (optional)](#deploying-the-registry-(optional))
-- [Running dci-openshift-agent](#running-dci-openshift-agent)
-- [License](#license)
-- [Contact](#contact)
-
 ## Requirements:
 * The registry host needs to have access to the Internet and at least 110 GB of
   disk space. You will download the required software repositories and

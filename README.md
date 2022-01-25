@@ -14,30 +14,6 @@ There are some benefits of running the DCI OCP Agent:
 5. You have access to all your jobs logs and metrics through distributed-ci.io
    where you can also set notifications for errors/exceptions
 
-## Table of Contents
-
-- [Requirements](#requirements)
-  - [Network requirements](#network-requirements)
-  - [Systems requirements](#systems-requirements)
-    - [Jumpbox requirements](#jumpbox-requirements)
-    - [Systems under test](#systems-under-test)
-  - [Optional](#optional)
-- [Setting up access to DCI](#setting-up-access-to-dci)
-- [Installation of DCI Jumpbox](#installation-of-dci-jumpbox)
-  - [Installation of OCP Provision Host](#installation-of-ocp-provision-host)
-  - [Copying the ssh key to your provisioner](#copying-the-ssh-key-to-your-provisioner)
-  - [Jumpbox Configuration](#jumpbox-configuration)
-  - [Overloading settings and hooks directories](#overloading-settings-and-hooks-directories)
-- [Starting the DCI OCP Agent](#starting-the-dci-ocp-agent)
-- [Interacting with your RHOCP Cluster](#interacting-with-your-rhocp-cluster)
-- [Troubleshooting common issues](#troubleshooting-common-issues)
-- [Keep the DCI OCP Agent Updated](#keep-the-dci-ocp-agent-updated)
-- [dci-openshift-agent workflow](#dci-openshift-agent-workflow)
-- [Getting Involved](#getting-involved)
-- [Create your DCI account on distributed-ci.io](#create-your-dci-account-on-distributed-ci.io)
-- [License](#license)
-- [Contact](#contact)
-
 ## Requirements
 
 ### Network requirements
