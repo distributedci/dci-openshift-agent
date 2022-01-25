@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f81f8a87_d0e684b8",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-25T15:31:24Z",
+      "side": 1,
+      "message": "good point Beto, I will do it. I have created this PR for this in the pipelines to use it with OCP 4.8: https://github.com/dci-labs/dallas-pipelines/pull/208. I\u0027ll run the new job with that PR",
+      "parentUuid": "1d0a1635_159ea229",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c38e471b_e2211016",
