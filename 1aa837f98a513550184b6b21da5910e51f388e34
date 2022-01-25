@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "324be8ba_d4c499ca",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-25T00:05:23Z",
+      "side": 1,
+      "message": "Pierre, Do you mind explain me what would happen here?\nI can see dci_rpms_to_components is a list of rpms in /group_vars/all file, but I have troubles understanding the values of dci_gits_to_components / dev_gits_to_components and what the regex does, thanks!",
+      "revId": "1aa837f98a513550184b6b21da5910e51f388e34",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
