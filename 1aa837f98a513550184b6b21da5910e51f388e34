@@ -16,6 +16,24 @@
       "message": "Pierre, Do you mind explain me what would happen here?\nI can see dci_rpms_to_components is a list of rpms in /group_vars/all file, but I have troubles understanding the values of dci_gits_to_components / dev_gits_to_components and what the regex does, thanks!",
       "revId": "1aa837f98a513550184b6b21da5910e51f388e34",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b67075e3_ef7455db",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-25T02:34:41Z",
+      "side": 1,
+      "message": "Sure.\n\ndci_rpms_to_components: As you said, it is a list of rpm we want to follow with the creation of a component associated to the job for each rpm.\ndci_gits_to_components / dev_gits_to_components are lists of directory which contain git repository that we want to follow. \n\nSo we want to make sure that we don\u0027t create component from the rpm list if it is already in the git list.\n\nHere en example of the variables:\n``` \ndci_rpms_to_components:\n  - dci-ansible\n\ndev_gits_to_components:\n  - /var/lib/dci-openshift-agent/dci-ansible\n```\n\nThe regex converts a complete path to basename. we have two regex to manage this two use cases:\n```\ndev_gits_to_components:\n     - /path/fraise\n     - /path/poire/\n```\nThe first remove the last / if it exists.\nThe second get the basename, I could also use ```map(\u0027basename\u0027)``` for this second regex.",
+      "parentUuid": "324be8ba_d4c499ca",
+      "revId": "1aa837f98a513550184b6b21da5910e51f388e34",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
