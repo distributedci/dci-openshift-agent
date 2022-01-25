@@ -55,6 +55,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1d0a1635_159ea229",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-25T13:25:04Z",
+      "side": 1,
+      "message": "Hello Ramon, I think that if we enable must-gather for CNV (registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel8:v2.6.8) we can get some of the information that you are trying to get here. May worth giving it a try?",
+      "revId": "61bce6aad94cef4419bc0ce0d83cbb73383a531d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c38e471b_e2211016",
         "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
         "patchSetId": 1
