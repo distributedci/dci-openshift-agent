@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "dc5d3931_127e53c7",
         "filename": "roles/sno-node-prep/tasks/65_dnsmasq_tftp.yml",
@@ -20,8 +21,31 @@
         "endChar": 70
       },
       "revId": "eb19bec5040e5b6ac529ac072ac61f69668db9f0",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14a960ff_1862a3a2",
+        "filename": "roles/sno-node-prep/tasks/65_dnsmasq_tftp.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-26T18:47:47Z",
+      "side": 1,
+      "message": "Actually none of DNS entries are really required in SNO baremetal if you use a different server as DNS, in that case it should not do any harm the extra records, at the end they point to the SNO node.",
+      "parentUuid": "dc5d3931_127e53c7",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 70
+      },
+      "revId": "eb19bec5040e5b6ac529ac072ac61f69668db9f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
