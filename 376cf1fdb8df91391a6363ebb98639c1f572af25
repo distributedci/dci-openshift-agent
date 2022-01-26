@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63470314_1f6b25d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T12:50:48Z",
+      "side": 1,
+      "message": "\u003e Patch Set 3:\n\u003e \n\u003e SUCCESS https://www.distributed-ci.io/jobs/779a9b25-2292-47b1-b51d-3b171c209dbd/jobStates from https://github.com/dci-labs/dallas-pipelines/pull/208\n\nWell, after validating the commands work thanks to the \"always\" clause I added for testing it, I have removed that block. In the log, you can see that the expected file is generated (and that should be created if the job fails in Check for hyperconverged tasks, showing hco-operator and failed pods\u0027 logs): https://www.distributed-ci.io/files/ab20387e-d135-43a2-b309-fa52f65805d0\n\nAlso, if you take a look to the job, you can see must-gather-cnv worked properly and provided all the logs from all the pods in openshift-cnv namespace, which is what we intend to do with the commands introduced in this change.\n\nSo, I would say, this change wouldn\u0027t be needed as must-gather-cnv is already doing this job. However, I know that there are sometimes in which must-gather does not generate content, so, should we merge anyway this change to save the logs with this manner apart from must-gather one, just in case? Or should we rely on must-gather in any case? @Beto @Tony @Charles",
+      "revId": "376cf1fdb8df91391a6363ebb98639c1f572af25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
