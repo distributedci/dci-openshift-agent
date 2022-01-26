@@ -265,6 +265,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a594aaf3_f1aa0beb",
+        "filename": "roles/prepare-cnf/tasks/main.yml",
+        "patchSetId": 35
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-26T03:55:08Z",
+      "side": 1,
+      "message": "I set this back as main branch in patch-set 46, I decided not to run the prepare-cnf tasks in SNO because there are no worker nodes[1], and actually we should rename that prepare-cnf role or remove it and add the tasks somewhere else, all it does now is to check if there are enough workers, so the role name makes sense no more and has no much content, we have been deleting tasks from it every time. Anyways that might be a future patch.\n[1] https://softwarefactory-project.io/r/c/dci-openshift-agent/+/23259/46/plays/deploy-operators.yml#41",
+      "parentUuid": "70329898_98ba1694",
+      "revId": "c1a80af8e39e4ca88d75062ed7b9361e37ff1d14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e83f9c60_f82181cc",

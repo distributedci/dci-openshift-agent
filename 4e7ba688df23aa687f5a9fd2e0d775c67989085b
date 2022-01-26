@@ -51,6 +51,24 @@
       "parentUuid": "4fb360f6_59f2f678",
       "revId": "4e7ba688df23aa687f5a9fd2e0d775c67989085b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50e75225_64309d98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 44
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-26T03:55:08Z",
+      "side": 1,
+      "message": "All tests succeeded with patch-set 46, the last four correspond to the following:\n- IPI virtual connected (tested on libvirt pctt-vh2)\n- IPI baremetal disconnected (tested on dallas core)\n- SNO baremetal disconnected (tested in what was worker-18 from cluster1)\n- SNO virtual connected (tested on libvirt pctt-vh2)",
+      "parentUuid": "38c81da8_fcbb18a7",
+      "revId": "4e7ba688df23aa687f5a9fd2e0d775c67989085b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
