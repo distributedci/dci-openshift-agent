@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad833b3d_97300cb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T10:12:05Z",
+      "side": 1,
+      "message": "As commented in the dci-openshift-app-agent change related to this topic, I have the same opinion here: as we also consuming documentation from github repo, having a TOC defined is useful there too. Is it really necessary to remove the TOC then?\n\nI\u0027ll put a -1 to avoid the merge of the change for the moment for better discussing it\n\nAlso, as commented for dci-openshift-app-agent, I have proposed some style-related changes for having a better view on https://doc.distributed-ci.io/dci-openshift-agent",
+      "revId": "3e942cc2d9e6299b8f98b23b6b4369d3cbe32244",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "911066ac_0ee38914",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 704,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T10:12:05Z",
+      "side": 1,
+      "message": "needs reference to the github repo instead",
+      "range": {
+        "startLine": 704,
+        "startChar": 34,
+        "endLine": 704,
+        "endChar": 50
+      },
+      "revId": "3e942cc2d9e6299b8f98b23b6b4369d3cbe32244",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71333b03_fae28631",
+        "filename": "docs/development.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T10:12:05Z",
+      "side": 1,
+      "message": "should it be removed?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 18
+      },
+      "revId": "3e942cc2d9e6299b8f98b23b6b4369d3cbe32244",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b7083d9_b82de67b",
+        "filename": "docs/development.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T10:12:05Z",
+      "side": 1,
+      "message": "should it be moved to the first line?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 13
+      },
+      "revId": "3e942cc2d9e6299b8f98b23b6b4369d3cbe32244",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ef5c715_d71bbd6d",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T10:12:05Z",
+      "side": 1,
+      "message": "may we remove the \":\"?",
+      "range": {
+        "startLine": 8,
+        "startChar": 15,
+        "endLine": 8,
+        "endChar": 16
+      },
+      "revId": "3e942cc2d9e6299b8f98b23b6b4369d3cbe32244",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0307ec5a_7668af6a",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T10:12:05Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 14,
+        "startChar": 17,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "3e942cc2d9e6299b8f98b23b6b4369d3cbe32244",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
