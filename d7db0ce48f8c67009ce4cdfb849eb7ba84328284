@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8fa016a2_69350c84",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-26T23:19:04Z",
+      "side": 1,
+      "message": "Good catch, I didn\u0027t realize about the mime time",
+      "parentUuid": "d6ed695e_819de6c7",
+      "revId": "d7db0ce48f8c67009ce4cdfb849eb7ba84328284",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "190732da_8c4bd33f",
         "filename": "plays/get-logs.yml",
         "patchSetId": 7
@@ -66,6 +84,24 @@
       "writtenOn": "2022-01-26T22:19:22Z",
       "side": 1,
       "message": "I think this task and the following \"Upload text logs\" can now be removed as all the text logs were uploaded in line 22. This is because in the task of line 7 two paths are now included (dci_cluster_configs_dir *AND* job_logs.path)",
+      "revId": "d7db0ce48f8c67009ce4cdfb849eb7ba84328284",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45a0f94f_c9683d72",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-26T23:19:04Z",
+      "side": 1,
+      "message": "Actually I will keep this one and delete the fist block. This one uses upload-log.yml that has a rescue block in case the upload to dci fails.",
+      "parentUuid": "190732da_8c4bd33f",
       "revId": "d7db0ce48f8c67009ce4cdfb849eb7ba84328284",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
