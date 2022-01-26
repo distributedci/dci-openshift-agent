@@ -68,6 +68,24 @@
       "parentUuid": "e0f34bf8_57de4c92",
       "revId": "9a78906242fcdabb60ab4887d3ccfd94252cdc24",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45487bea_a7096807",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-01-26T21:16:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7026b198_b7de9ce8",
+      "revId": "9a78906242fcdabb60ab4887d3ccfd94252cdc24",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
