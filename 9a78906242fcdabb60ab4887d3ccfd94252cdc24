@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51fcaa82_1d2a033b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-01-26T15:19:53Z",
+      "side": 1,
+      "message": "Hi Charles, thank you for taking care of this. Maybe we could optimize a bit, to avoid having this piece of code copied all over the d-o-a and d-o-a-a.",
+      "revId": "9a78906242fcdabb60ab4887d3ccfd94252cdc24",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0f34bf8_57de4c92",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-01-26T15:19:53Z",
+      "side": 1,
+      "message": "Hi @Charles, maybe instead of copy-pasting we could create a separate task and then use include_tasks?",
+      "revId": "9a78906242fcdabb60ab4887d3ccfd94252cdc24",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
