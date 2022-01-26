@@ -16,6 +16,24 @@
       "message": "I haven\u0027t seem MCP pending after those tasks but approach looks good to me, just in case.\nThanks",
       "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45a2f01b_676f9a5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-26T23:59:34Z",
+      "side": 1,
+      "message": "The idea is to be sure the nodes stay in a good shape after these tasks.\n\nTo avoid this case: https://www.distributed-ci.io/jobs/23643a1b-ce0c-4de0-b108-a762cb48f352/jobStates\nThe job was finished with success even if one node was in SchedulingDisabled state.",
+      "parentUuid": "925027b6_2cc465ba",
+      "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
