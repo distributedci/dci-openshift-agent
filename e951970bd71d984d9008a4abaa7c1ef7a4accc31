@@ -67,6 +67,24 @@
       "message": "Hello Ramón, In the agent we are mainly collecting logs in play/get-logs.yml and scripts/get-logs. IMO, that should be a good place for this. That is executed during teardown so will be executed and you have guaranteed that the target directory exists. \n\nI am working on a change to have the log-dir available on all the stages and use that instead of using dci_cluster_configs_dir.",
       "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcc544ec_8fab0c66",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-26T08:22:31Z",
+      "side": 1,
+      "message": "Hi Beto. I have my concerns regarding declaring this in get-logs, because the idea is just to retrieve the logs when we have a failure in this task. As I said to Charles, the \"always\" block that I have defined is just to confirm that the commands work. After doing that check, I will remove it, just leaving the \"rescue\" block. So, if I did it in get-logs, I wouldn\u0027t know where the error were produced, so that I could not determine if I have to execute these commands for HCO or not. That\u0027s why I have defined it in that way.\n\nThen, I will try with a new run with the current status, and if worked, I will remove the \"always\" block definitely. I will also try to validate the content of must-gather-cnv.\n\nIs it fine?",
+      "parentUuid": "cf261436_6329d446",
+      "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
