@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6dfc3403_911818cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-26T16:11:03Z",
+      "side": 1,
+      "message": "Thanks Nacho for me looks good",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67e420d1_67cb8cef",
@@ -84,6 +101,24 @@
       "side": 1,
       "message": "My bad, registration would occur only on connected environments. I understand registration wouldn\u0027t work on a disconnected environment, would it?",
       "parentUuid": "6b683df9_ee218c11",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7491ca6c_10a6c18a",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-26T16:11:03Z",
+      "side": 1,
+      "message": "Nacho, if registration (subscription) works in connected environments for now it\u0027s ok, the registration can be done in disconnected mode too, but you need to set a proxy and modify some settings of the rhn files, anyways that looks more like a future feature, our provisioning nodes use some repositories from the jumpbox but is not updated, so we can talk about that later to address it.",
+      "parentUuid": "675c5d75_f00dca21",
       "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
