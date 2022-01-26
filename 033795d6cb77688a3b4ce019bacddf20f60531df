@@ -52,6 +52,69 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eeabccd9_79e2de4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-26T23:41:26Z",
+      "side": 1,
+      "message": "I run the plays in a new environment this afternoon.\n\nDuring the network part of the provisioner, I lost access to the server because I don´t use dhcp. We can maybe add a warning to the documentation about that.\n\n",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e67a24e1_ed344901",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-26T23:41:26Z",
+      "side": 1,
+      "message": "This option is not existing for openssh_keypair module.",
+      "range": {
+        "startLine": 88,
+        "startChar": 4,
+        "endLine": 88,
+        "endChar": 13
+      },
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2144b904_30bf8849",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-26T23:41:26Z",
+      "side": 1,
+      "message": "We want create it when the key pair in *not* existing :)",
+      "range": {
+        "startLine": 89,
+        "startChar": 1,
+        "endLine": 89,
+        "endChar": 32
+      },
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67e420d1_67cb8cef",
@@ -119,6 +182,29 @@
       "side": 1,
       "message": "Nacho, if registration (subscription) works in connected environments for now it\u0027s ok, the registration can be done in disconnected mode too, but you need to set a proxy and modify some settings of the rhn files, anyways that looks more like a future feature, our provisioning nodes use some repositories from the jumpbox but is not updated, so we can talk about that later to address it.",
       "parentUuid": "675c5d75_f00dca21",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69e0134b_3ae5b3c0",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-26T23:41:26Z",
+      "side": 1,
+      "message": "I think is should be : provisioning",
+      "range": {
+        "startLine": 241,
+        "startChar": 5,
+        "endLine": 241,
+        "endChar": 15
+      },
       "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
