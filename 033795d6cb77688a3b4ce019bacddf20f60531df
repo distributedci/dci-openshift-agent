@@ -68,6 +68,24 @@
       "parentUuid": "67e420d1_67cb8cef",
       "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "675c5d75_f00dca21",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-26T13:17:08Z",
+      "side": 1,
+      "message": "My bad, registration would occur only on connected environments. I understand registration wouldn\u0027t work on a disconnected environment, would it?",
+      "parentUuid": "6b683df9_ee218c11",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
