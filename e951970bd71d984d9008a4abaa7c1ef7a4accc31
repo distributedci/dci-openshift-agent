@@ -85,6 +85,24 @@
       "parentUuid": "cf261436_6329d446",
       "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdd3c3c0_02200713",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-26T15:39:19Z",
+      "side": 1,
+      "message": "I\u0027m with Beto on this, IMO logs should be pulled in the get-logs script, that way we have the collection of the logs centralized.\n\nAlso related, as mentioned in the other PR (https://github.com/dci-labs/dallas-pipelines/pull/208) I\u0027d expect the use of must-gather image to take care of extracting all the logs so we don\u0027t have to do it manually, so perhaps if we use the image we don\u0027t need to do any custom log collection.",
+      "parentUuid": "fcc544ec_8fab0c66",
+      "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
