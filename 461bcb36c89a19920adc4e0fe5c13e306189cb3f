@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2048bf4e_cdc6e1e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-26T18:39:56Z",
+      "side": 1,
+      "message": "Thanks Nacho, the +2 is gone after I updated the patch to fix the doc 😞",
+      "parentUuid": "9bb2cc90_c86138f4",
+      "revId": "461bcb36c89a19920adc4e0fe5c13e306189cb3f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d521191_a618b60b",
