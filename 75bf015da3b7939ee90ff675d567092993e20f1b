@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "537c321f_67fb8e28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-27T00:28:54Z",
+      "side": 1,
+      "message": "Yeah, I have seen this issue. What I found is that in that case the MC on the nodes is properly applied but at some time the kubelet on one node stops sending updates to the cluster. Having one node not schedulable makes the counts in the MCP be to look like \"updating\" because the number of nodes in the cluster does not match with the expected number of updated MCPs. \n\nEvery time you have a node out of service, the MCP status will be affected but that does not mean an actual issue with the MCs. That is what I have observed. But let\u0027s see if this helps. Thanks!",
+      "parentUuid": "45a2f01b_676f9a5c",
+      "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4e2f85ca_22e8583d",
         "filename": "roles/operator-sriov/tasks/main.yml",
         "patchSetId": 4
