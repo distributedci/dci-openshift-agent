@@ -71,6 +71,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "44c8f4b7_7808ce04",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-27T23:51:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8fa016a2_69350c84",
+      "revId": "d7db0ce48f8c67009ce4cdfb849eb7ba84328284",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "190732da_8c4bd33f",
@@ -143,6 +161,30 @@
       "side": 1,
       "message": "Thanks, it is actually not required. In the role it is checking for job_logs.path or defaulting to /tmp. Regards",
       "parentUuid": "94cfa64f_3770fe74",
+      "range": {
+        "startLine": 35,
+        "startChar": 20,
+        "endLine": 35,
+        "endChar": 28
+      },
+      "revId": "d7db0ce48f8c67009ce4cdfb849eb7ba84328284",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "357155b4_97588214",
+        "filename": "plays/tests.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-01-27T23:51:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "21b07ee6_7fed21f3",
       "range": {
         "startLine": 35,
         "startChar": 20,
