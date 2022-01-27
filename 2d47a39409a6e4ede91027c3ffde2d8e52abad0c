@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb9f8038_810ccb4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-27T18:00:37Z",
+      "side": 1,
+      "message": "None of these changes depend on the registry change, we can merge these anytime",
+      "revId": "2d47a39409a6e4ede91027c3ffde2d8e52abad0c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
