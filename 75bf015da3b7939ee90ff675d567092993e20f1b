@@ -34,6 +34,40 @@
       "parentUuid": "925027b6_2cc465ba",
       "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b76a1736_1479ac55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-27T00:19:35Z",
+      "side": 1,
+      "message": "Thanks for adding these validations, I have a question below.",
+      "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e2f85ca_22e8583d",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-27T00:19:35Z",
+      "side": 1,
+      "message": "I like this but shouldn\u0027t we check only if the SR-IOV policies are applied? installing the operator does not triggers the MCP update if I remember correctly, only when applying a policy.",
+      "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
