@@ -103,6 +103,24 @@
       "parentUuid": "fcc544ec_8fab0c66",
       "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be7b8d61_af437059",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T11:36:39Z",
+      "side": 1,
+      "message": "In that case, I think we can leave this CR and focus on the PR to use must-gather instead; because, in the end, we are obtained the desired logs thanks to that.",
+      "parentUuid": "bdd3c3c0_02200713",
+      "revId": "e951970bd71d984d9008a4abaa7c1ef7a4accc31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
