@@ -16,6 +16,40 @@
       "message": "I talked with Tony about this, last patch-set saves the content of dci_pullsecret_file in the pull-secret.txt file in the cache directory. This allows some pipelines that are expecting this file to use it. I also updated a couple of mirroring tasks that were missing to use var dci_pullsecret_file content.",
       "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99d3eb8d_5afdb8bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-01-28T09:01:34Z",
+      "side": 1,
+      "message": "LGTM, just have a little question",
+      "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96ed27ec_2125b541",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-01-28T09:01:34Z",
+      "side": 1,
+      "message": "Why do we need this remote option?",
+      "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
