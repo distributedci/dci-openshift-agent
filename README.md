@@ -725,7 +725,7 @@ be assigned in the correct organisation.
 
 ## License
 
-Apache License, Version 2.0 (see [LICENSE](LICENSE) file)
+Apache License, Version 2.0 (see [LICENSE](https://github.com/redhat-cip/dci-openshift-agent/blob/master/LICENSE) file)
 
 ## Contact
 

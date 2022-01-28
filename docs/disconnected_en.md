@@ -14,13 +14,13 @@ them available to the disconnected environment.
 - [License](#license)
 - [Contact](#contact)
 
-## Requirements:
+## Requirements
 * The registry host needs to have access to the Internet and at least 110 GB of
   disk space. You will download the required software repositories and
   container images to this computer. The registry host will usually be the
   jumpbox but it can be another server.
 
-## Configurations:
+## Configurations
 
 First you have to set the 'dci_disconnected' option to 'True' in the settings
 file `/etc/dci-openshift-agent/settings.yml`.

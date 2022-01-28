@@ -1,4 +1,4 @@
-# Getting Involved
+# Development
 
 ## Table of Contents
 
@@ -9,8 +9,6 @@
   - [Testing a change](#testing-a-change)
 - [Agent troubleshooting](#agent-troubleshooting)
   - [Launching the agent without DCI calls](#launching-the-agent-without-dci-calls)
-
-# Development
 
 ## Local dev environment
 
