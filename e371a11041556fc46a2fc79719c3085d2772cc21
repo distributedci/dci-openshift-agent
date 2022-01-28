@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3c342e7_384c5dca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-28T14:46:49Z",
+      "side": 1,
+      "message": "I\u0027ll pull the patch and rebase because I see there is a merge conflict marked by gerrit, then I\u0027ll run the respective test to be sure.",
+      "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "96ed27ec_2125b541",
@@ -48,6 +65,24 @@
       "writtenOn": "2022-01-28T09:01:34Z",
       "side": 1,
       "message": "Why do we need this remote option?",
+      "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "688c4261_6296a013",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-28T14:46:49Z",
+      "side": 1,
+      "message": "True, is not required since pre-run task run in the localhost, I\u0027ll remove it. thanks Charles.",
+      "parentUuid": "96ed27ec_2125b541",
       "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
