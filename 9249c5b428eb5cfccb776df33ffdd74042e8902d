@@ -16,6 +16,69 @@
       "message": "recheck",
       "revId": "9249c5b428eb5cfccb776df33ffdd74042e8902d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cda8cd5e_047d8447",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T11:57:06Z",
+      "side": 1,
+      "message": "More comments from my side.\nAnd also, I am aware that BigIP and SPK applies SRIOV policies. Should we create some changes there too to do the same?",
+      "revId": "9249c5b428eb5cfccb776df33ffdd74042e8902d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19ea643b_10a49e88",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T11:57:06Z",
+      "side": 1,
+      "message": "May we include these two tasks in a block in order to use the same \u0027when\u0027 conditions for both of them?",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 11
+      },
+      "revId": "9249c5b428eb5cfccb776df33ffdd74042e8902d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0080ad0_318b32d4",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T11:57:06Z",
+      "side": 1,
+      "message": "May we include these two tasks in a block in order to use the same \u0027when\u0027 conditions for both of them?",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 149,
+        "endChar": 11
+      },
+      "revId": "9249c5b428eb5cfccb776df33ffdd74042e8902d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

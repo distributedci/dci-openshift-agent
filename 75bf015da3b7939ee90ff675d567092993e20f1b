@@ -104,6 +104,24 @@
       "message": "I like this but shouldn\u0027t we check only if the SR-IOV policies are applied? installing the operator does not triggers the MCP update if I remember correctly, only when applying a policy.",
       "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf9912ff_561bb73e",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T11:57:06Z",
+      "side": 1,
+      "message": "I agree with you. And we can also see in the HCO operator case that, before running this MCP check, we intend to confirm if HCO is correctly applied. I will describe this in a separate comment.",
+      "parentUuid": "4e2f85ca_22e8583d",
+      "revId": "75bf015da3b7939ee90ff675d567092993e20f1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
