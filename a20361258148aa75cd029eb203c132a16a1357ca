@@ -16,6 +16,23 @@
       "message": "running tests now",
       "revId": "a20361258148aa75cd029eb203c132a16a1357ca",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6f65ef1_b69fccc3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T15:06:03Z",
+      "side": 1,
+      "message": "Feel free to merge it whenever you find it fine, as well as the related PRs",
+      "revId": "a20361258148aa75cd029eb203c132a16a1357ca",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
