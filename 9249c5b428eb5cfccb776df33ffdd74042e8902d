@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "279eb9d1_87b779e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T14:28:08Z",
+      "side": 1,
+      "message": "Okey, clear for me, I will just give a +1 just in case Manuel wants to add something more, because he left a comment before.",
+      "parentUuid": "376efabc_ebb4908e",
+      "revId": "9249c5b428eb5cfccb776df33ffdd74042e8902d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "19ea643b_10a49e88",
@@ -100,6 +118,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a43a9d3_aecaaf26",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T14:28:08Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "26fa345d_d6fe8931",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 11
+      },
+      "revId": "9249c5b428eb5cfccb776df33ffdd74042e8902d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a0080ad0_318b32d4",
@@ -137,6 +179,30 @@
       "side": 1,
       "message": "It costs only one second to launch this check and to ensure all nodes are ready. Even if SR-IOV policies are not applied, this kind of test should not hurt",
       "parentUuid": "a0080ad0_318b32d4",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 149,
+        "endChar": 11
+      },
+      "revId": "9249c5b428eb5cfccb776df33ffdd74042e8902d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88a59fbe_0991f233",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T14:28:08Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "75a68500_a81e8965",
       "range": {
         "startLine": 126,
         "startChar": 0,
