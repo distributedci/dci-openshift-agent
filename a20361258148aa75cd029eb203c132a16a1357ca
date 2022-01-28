@@ -33,6 +33,40 @@
       "message": "Feel free to merge it whenever you find it fine, as well as the related PRs",
       "revId": "a20361258148aa75cd029eb203c132a16a1357ca",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b3c4038_52003983",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-28T16:16:39Z",
+      "side": 1,
+      "message": "Let\u0027s fix that typo",
+      "revId": "a20361258148aa75cd029eb203c132a16a1357ca",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96a99e4b_e2ff0c31",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-28T16:16:39Z",
+      "side": 1,
+      "message": "There\u0027s a typo, remove the trailing }}",
+      "revId": "a20361258148aa75cd029eb203c132a16a1357ca",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
