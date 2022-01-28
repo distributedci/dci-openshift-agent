@@ -69,6 +69,41 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0121a494_9d281584",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-28T14:38:35Z",
+      "side": 1,
+      "message": "Hey Pierre, thanks for your feedback.\n\nI processed most of your comments. Just the one regarding the network setup requires further considerations.",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c2eed7a_fbef0d80",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-28T14:38:35Z",
+      "side": 1,
+      "message": "That\u0027s a good point. The way I see it, we\u0027ll need a comprehensive solution that covers all the possible network configurations:\n\n- static IP addresses.\n- external dhcp solution.\n- internal dhcp solution (dnsmasq running from the jumpbox).",
+      "parentUuid": "eeabccd9_79e2de4f",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e67a24e1_ed344901",
@@ -92,6 +127,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "10c9bbad_1b892eb1",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-28T14:38:35Z",
+      "side": 1,
+      "message": "Thanks for noticing. I just checked it and, actually, the openssh_keypair module does not overwrite the key if the existing one matches the defined parameters.\nIn other words, if you run the task twice, the second time ansible won\u0027t change the key file but, if for instance we change the key size, then a new keypair will be created.\nAnother interesting fact of the module is that, if only the private key file exists and the public doesn\u0027t, the module may recover it.\nSo, all in all, I believe the best option is to remove the verification in line 75 and rely on ansible\u0027s idempotency to handle this file.",
+      "parentUuid": "e67a24e1_ed344901",
+      "range": {
+        "startLine": 88,
+        "startChar": 4,
+        "endLine": 88,
+        "endChar": 13
+      },
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2144b904_30bf8849",
@@ -105,6 +164,30 @@
       "writtenOn": "2022-01-26T23:41:26Z",
       "side": 1,
       "message": "We want create it when the key pair in *not* existing :)",
+      "range": {
+        "startLine": 89,
+        "startChar": 1,
+        "endLine": 89,
+        "endChar": 32
+      },
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "722e89af_4bacaaf0",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-28T14:38:35Z",
+      "side": 1,
+      "message": "(check my previous comment).",
+      "parentUuid": "2144b904_30bf8849",
       "range": {
         "startLine": 89,
         "startChar": 1,
@@ -199,6 +282,30 @@
       "writtenOn": "2022-01-26T23:41:26Z",
       "side": 1,
       "message": "I think is should be : provisioning",
+      "range": {
+        "startLine": 241,
+        "startChar": 5,
+        "endLine": 241,
+        "endChar": 15
+      },
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "765842c3_4736094d",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-28T14:38:35Z",
+      "side": 1,
+      "message": "you\u0027re right! Good catch.",
+      "parentUuid": "69e0134b_3ae5b3c0",
       "range": {
         "startLine": 241,
         "startChar": 5,
