@@ -16,6 +16,24 @@
       "message": "None of these changes depend on the registry change, we can merge these anytime",
       "revId": "2d47a39409a6e4ede91027c3ffde2d8e52abad0c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3b16448_1d42deed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-01-28T09:52:06Z",
+      "side": 1,
+      "message": "Thanks Tony! To be coherent with the changes, I will merge it when merging the changes for the Quay registry.",
+      "parentUuid": "fb9f8038_810ccb4e",
+      "revId": "2d47a39409a6e4ede91027c3ffde2d8e52abad0c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
