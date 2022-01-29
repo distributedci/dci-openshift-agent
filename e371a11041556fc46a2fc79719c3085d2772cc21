@@ -156,6 +156,24 @@
       "parentUuid": "02c18958_10913585",
       "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f07e044d_261d386a",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-29T19:30:25Z",
+      "side": 1,
+      "message": "I ran the two tests this morning, the one with no pullsecret_file defined failed but not because of my change, some SPK stuff. I see you triggered a new one, let\u0027s see where does it gets this time.",
+      "parentUuid": "c7173195_248c7a87",
+      "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
