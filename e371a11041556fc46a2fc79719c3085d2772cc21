@@ -120,6 +120,24 @@
       "message": "I think this block is entering in here when pullsecret_file *is* defined causing task in line 64 to skip hence not defining pullfile.\n\nI think there\u0027s a flaw on the logic, let\u0027s pause with this change until we figure the order in here 😜",
       "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02c18958_10913585",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-29T03:00:02Z",
+      "side": 1,
+      "message": "Indeed there was a flow, but we actually entered the block because pullsecret_file variable was not defined, the inventory in pull/69 was not used. Anyways this helped to discover the scenario when pullsecret_file is not defined, then it needs to combine pullsecret and auths to generate the pullsecret file. I fixed the validation. Running more tests now.",
+      "parentUuid": "90499a68_d1fd654a",
+      "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
