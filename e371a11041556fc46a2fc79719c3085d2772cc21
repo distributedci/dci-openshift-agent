@@ -138,6 +138,24 @@
       "parentUuid": "90499a68_d1fd654a",
       "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7173195_248c7a87",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-01-29T18:47:54Z",
+      "side": 1,
+      "message": "Yep, we need to run 2 tests\n- One from here (no pullsecret_file defined)\n- One from PR #69 (where pullsecret_files is defined)",
+      "parentUuid": "02c18958_10913585",
+      "revId": "e371a11041556fc46a2fc79719c3085d2772cc21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
