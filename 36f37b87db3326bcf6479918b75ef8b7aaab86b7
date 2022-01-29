@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "581ad826_ac129af1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-29T03:16:11Z",
+      "side": 1,
+      "message": "Last three test in order of appearance:\n- SNO baremetal with PAO profile\n- Normal IPI in core cluster with PAO profile\n- Normal Libvirt IPI, no PAO installation. ",
+      "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
