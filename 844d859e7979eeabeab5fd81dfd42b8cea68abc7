@@ -16,6 +16,24 @@
       "message": "check dallas ocp-4.7-vcp",
       "revId": "844d859e7979eeabeab5fd81dfd42b8cea68abc7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9289265_49b1f725",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-01-29T00:40:42Z",
+      "side": 1,
+      "message": "I think the vpc job failed because it needs the PRs https://github.com/dci-labs/service-configs/pull/24 and https://github.com/dci-labs/inventories/pull/69\nI added the deps in the pull/69 so I run the checks from there, I\u0027ll run a VPC job tomorrow when the clusters be available to be sure.",
+      "parentUuid": "9fd8e158_bc168460",
+      "revId": "844d859e7979eeabeab5fd81dfd42b8cea68abc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
