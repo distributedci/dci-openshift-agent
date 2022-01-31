@@ -33,6 +33,24 @@
       "message": "Thanks Pierre!",
       "revId": "70257cb80118263dae0152b190114c42fe29b6ae",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0142c1f9_a2a0b7e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-01-31T18:57:19Z",
+      "side": 1,
+      "message": "Charles is the owner !",
+      "parentUuid": "6a1d4a4d_01cf6070",
+      "revId": "70257cb80118263dae0152b190114c42fe29b6ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
