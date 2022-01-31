@@ -33,6 +33,57 @@
       "message": "LGTM, giving you a +1 as you have Workflow +1, just in case there is more people that wants to review this before merging.",
       "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80b73831_f5a5a544",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-31T14:36:37Z",
+      "side": 1,
+      "message": "Hi Manny,\n\nI can see why this change is needed but I have a couple of doubts I\u0027d like to clarify prior to giving my vote.",
+      "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc8cfe6e_30e561df",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-31T14:36:37Z",
+      "side": 1,
+      "message": "In general I don\u0027t like adding long pauses while waiting for something to happen because we\u0027ll be spending 15 minutes regardless of how much the system really takes to reboot.\nWould you consider adding a retry-until opposite to that in #121, so we wait for the API to become unavailable and thus we consider the system is rebooting, so then we can start waiting for the API to become back online.\nMaybe there are more accurate inputs we can probe to detect the host being restarted but the API sounds like a quite intuitive element to monitor.",
+      "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acac3179_2487ecd3",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-01-31T14:36:37Z",
+      "side": 1,
+      "message": "Isn\u0027t this task redundant with that in line 108? I mean, in line 108 we operate through the API, and in line 121 we verify it\u0027s available, or am I missing something?",
+      "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
