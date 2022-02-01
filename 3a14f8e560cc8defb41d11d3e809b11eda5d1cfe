@@ -67,6 +67,23 @@
       "message": "LGTM too!",
       "revId": "3a14f8e560cc8defb41d11d3e809b11eda5d1cfe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b8f3901_463cbb25",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-02-01T01:27:13Z",
+      "side": 1,
+      "message": "I don\u0027t see how this variable can work when line 53 in pre-run.yml sets this based on job_info.job.topic.data.pull_secret\n\nAnd why should these variables be specific to disconnected mode?",
+      "revId": "3a14f8e560cc8defb41d11d3e809b11eda5d1cfe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
