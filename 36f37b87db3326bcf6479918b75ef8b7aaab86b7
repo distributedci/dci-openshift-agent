@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "85e6fe58_3e349d3a",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-01T00:30:48Z",
+      "side": 1,
+      "message": "You are right, it\u0027s better to have a different type to check the node is coming back from a reboot, I changed the pause to 60 seconds, just enough for PAO MCP to trigger the node reboot, then a task checking the API availability but just with a simple curl, once this is ready it will check getting the node list.",
+      "parentUuid": "fc8cfe6e_30e561df",
+      "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "acac3179_2487ecd3",
@@ -82,6 +100,24 @@
       "writtenOn": "2022-01-31T14:36:37Z",
       "side": 1,
       "message": "Isn\u0027t this task redundant with that in line 108? I mean, in line 108 we operate through the API, and in line 121 we verify it\u0027s available, or am I missing something?",
+      "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1426f4f8_dbcf9c6c",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-01T00:30:48Z",
+      "side": 1,
+      "message": "I agree, it\u0027s redundant, the task in #108 does both, checks API and the node status",
+      "parentUuid": "acac3179_2487ecd3",
       "revId": "36f37b87db3326bcf6479918b75ef8b7aaab86b7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
