@@ -16,6 +16,23 @@
       "message": "We often have \"504 Gateway Timeout\" for these images. \nThis change is definitely very useful !",
       "revId": "9a1fc747ffbbcb6e2194e2547d5f4fe09a29e15c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "613c7b22_1af4c31a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-01T09:44:08Z",
+      "side": 1,
+      "message": "Yes, I agree this may help :) leaving my +1 in case somebody more wants to review",
+      "revId": "9a1fc747ffbbcb6e2194e2547d5f4fe09a29e15c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
