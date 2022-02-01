@@ -36,7 +36,7 @@
 - name: "oc-setup : Symlink kubeconfig to .kube/config"
   delegate_to: "{{ groups['provisioner'][0] }}"
   file:
-    src: "../clusterconfigs/auth/kubeconfig"
+    src: "{{ dir }}/auth/kubeconfig"
     dest: "{{ ansible_env.HOME }}/.kube/config"
     state: link
 ...
