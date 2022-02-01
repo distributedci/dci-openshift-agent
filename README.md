@@ -152,6 +152,7 @@ deployment (More info at [Jumpbox Configuration](#jumpbox-configuration)).
   lab.
 
 ## Setting up access to DCI
+
 The DCI dashboard gives you a view into what jobs you have run in your distributed agent. In order to gain access to it you have to:
 
 1. Go to distributed-ci.io and click login. You will be redirected to
@@ -313,6 +314,11 @@ dnsvip=1.2.3.4
 #dci_disconnected=true
 # Must be reachable from the cluster
 #webserver_url="http://<jumpbox IP/DNS>:8080"
+# Path of the file with the pull secret and registry auths in json format.
+#pullsecret_file=/path/to/clusterX-pull-secret.txt
+# Content of the pull secret as downloaded from from https://cloud.redhat.com/openshift/install/metal/user-provisioned
+# *only* used when running a deployment without DCI.
+#pullsecret='content-in-json-format'
 # Path on the jumpbox
 #disconnected_registry_auths_file=/path/to/auths.json
 # Path on the jumpbox
@@ -357,6 +363,10 @@ NOTE: If the jumpbox server is in a different network than the baremetal
 network, then include extcirdnet=<baremetal-network/mask> in the all:vars
 section of the inventory
 
+### Disconnected mode in DCI OCP agent
+
+When using the agent in a disconnected environment, special variables should be used. See the [disconnected doc](https://github.com/redhat-cip/dci-openshift-agent/blob/master/docs/disconnected_en.md) for more details.
+
 ### Overloading settings and hooks directories
 
 To allow storing the settings and the hooks in a different directory,
@@ -387,7 +397,7 @@ you need to run a DCI job periodically, you have to configure a `systemd timer`
 or a `crontab`.
 
 ```console
-$ systemctl start dci-openshift-agent
+systemctl start dci-openshift-agent
 ```
 
 If you need to run the `dci-openshift-agent` manually in foreground,
@@ -403,10 +413,12 @@ you can use this command line:
 After you run a DCI job you will be able to interact with the RHOCP cluster using the OC client, the API, or the GUI.
 
 1. Using the OC client
+
   ```bash
-  $ export KUBECONFIG=/home/<user>/<clusterconfigs-path>/kubeconfig
-  $ oc get nodes
+  export KUBECONFIG=/home/<user>/<clusterconfigs-path>/kubeconfig
+  oc get nodes
   ```
+
 A copy of the generated kubeconfig file will be attached to the job files section in DCI.
 
 2. Using the GUI/API
@@ -414,6 +426,7 @@ A copy of the generated kubeconfig file will be attached to the job files sectio
 Obtain the credentials generated during the installation from /home/`<user>`/`<clusterconfigs-path>`/ocp_creds.txt in the jumphost.
 
 Get the the URL of the cluster GUI:
+
 ```bash
 $ oc whoami --show-console
 https://console-openshift-console.apps.<cluster>.<domain>
@@ -483,7 +496,6 @@ Here are a few things you can check to make sure the above assertions are true:
   cluster nodes?
 - Is the lab's DNS resolvable from all places via e.g. `dig
   api.<cluster>.<domain>` and `dig foo.apps.<cluster>.<domain>`?
-
 
 ### Troubleshooting OCP bootstrapping
 
@@ -713,6 +725,7 @@ callback](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ju
 and submitted automatically to the DCI control server.
 
 ## Getting involved
+
 Refer to [the development guide](docs/development.md)
 
 ## Create your DCI account on distributed-ci.io
@@ -727,7 +740,7 @@ be assigned in the correct organisation.
 
 ## License
 
-Apache License, Version 2.0 (see [LICENSE](LICENSE) file)
+Apache License, Version 2.0 (see [LICENSE](https://github.com/redhat-cip/dci-openshift-agent/blob/master/LICENSE) file)
 
 ## Contact
 
