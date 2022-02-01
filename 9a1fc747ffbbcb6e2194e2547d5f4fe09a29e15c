@@ -33,6 +33,23 @@
       "message": "Yes, I agree this may help :) leaving my +1 in case somebody more wants to review",
       "revId": "9a1fc747ffbbcb6e2194e2547d5f4fe09a29e15c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "089543e6_a274e3d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-01T14:47:13Z",
+      "side": 1,
+      "message": "Thank you Beto for taking care of this",
+      "revId": "9a1fc747ffbbcb6e2194e2547d5f4fe09a29e15c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
