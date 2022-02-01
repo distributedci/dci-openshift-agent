@@ -16,6 +16,24 @@
       "message": "Looks good to me Pierre, I guess the idea of this PR is to pull journal logs from master nodes when the API is not available and of course if the masters are accessible via ssh correct? ",
       "revId": "edd8a7a70d0709293b700ab5173d2fee35857c95",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4835fc64_b470044c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-02-01T18:00:11Z",
+      "side": 1,
+      "message": "Yes these journals are interesting to know why an ocp installation fails.",
+      "parentUuid": "dda56d8a_94b47e2d",
+      "revId": "edd8a7a70d0709293b700ab5173d2fee35857c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
