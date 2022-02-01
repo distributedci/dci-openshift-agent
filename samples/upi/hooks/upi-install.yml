@@ -50,6 +50,30 @@
   become: true
   tags: rhcos_live
 
+- name: "Download live ISO image"
+  get_url:
+    url: "{{ rhcos_live_iso_path }}"
+    dest: "/var/www/html/rhcos-live.x86_64.iso"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: "0644"
+    setype: virt_content_t
+    checksum: "sha256:{{ rhcos_live_iso_sha256 }}"
+    timeout: 1200
+  register: pxe_img_file
+  retries: 3
+  delay: 10
+  until: pxe_img_file is not failed
+  become: true
+  tags: rhcos_live
+
+- name: Extract UEFI shim
+  command:
+    cmd: "{{ lookup('first_found', findme) }} /var/www/html/rhcos-live.x86_64.iso /var/lib/tftpboot"
+  vars:
+    findme:
+      - extract_shimx64.sh
+
 - name: Generate install-config.yaml
   template:
     src: install-config.j2

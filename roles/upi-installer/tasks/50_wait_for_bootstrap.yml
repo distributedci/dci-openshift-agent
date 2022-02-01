@@ -19,6 +19,7 @@
     password: "{{ hostvars[item]['ipmi_password'] }}"
     port: "{{ hostvars[item]['ipmi_port'] | default(623) }}"
     bootdev: network
+    uefiboot: "{{ hostvars[item]['ipmi_uefi'] | default(false) | bool }}"
   register: network_boot_hosts
   until: network_boot_hosts is not failed
   retries: 10
@@ -40,7 +41,7 @@
 
 - name: Generate nodes var
   set_fact:
-    nodes: "{{ nodes | default([]) + [{ 'node': item, 'ipmi_address': hostvars[item]['ipmi_address'], 'ipmi_user': hostvars[item]['ipmi_user'], 'ipmi_password': hostvars[item]['ipmi_password'], 'ipmi_port': hostvars[item]['ipmi_port'] | default(623) }] }}"
+    nodes: "{{ nodes | default([]) + [{ 'node': item, 'ipmi_address': hostvars[item]['ipmi_address'], 'ipmi_user': hostvars[item]['ipmi_user'], 'ipmi_password': hostvars[item]['ipmi_password'], 'ipmi_port': hostvars[item]['ipmi_port'] | default(623), 'ipmi_uefi': hostvars[item]['ipmi_uefi'] | default(false) | bool }] }}"
   loop: "{{ groups['masters'] + groups['workers'] + groups['bootstrap'] }}"
 
 - name: Wait for nodes to provision
