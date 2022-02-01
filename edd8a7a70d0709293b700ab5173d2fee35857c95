@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dda56d8a_94b47e2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-01T16:12:01Z",
+      "side": 1,
+      "message": "Looks good to me Pierre, I guess the idea of this PR is to pull journal logs from master nodes when the API is not available and of course if the masters are accessible via ssh correct? ",
+      "revId": "edd8a7a70d0709293b700ab5173d2fee35857c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
