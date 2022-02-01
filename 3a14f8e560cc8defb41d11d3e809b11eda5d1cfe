@@ -84,6 +84,24 @@
       "message": "I don\u0027t see how this variable can work when line 53 in pre-run.yml sets this based on job_info.job.topic.data.pull_secret\n\nAnd why should these variables be specific to disconnected mode?",
       "revId": "3a14f8e560cc8defb41d11d3e809b11eda5d1cfe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a90dd370_5229e2c7",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-01T16:59:34Z",
+      "side": 1,
+      "message": "Bill, we were discussing about this in earlier comments of this review (see patch set 9 - Jan 20), in short we agree that this variable is not really used since we pull it from the DCI job. But I thought to include it with the mention that can be used when not deploying with DCI, \n\nAnd that\u0027s right this variable is not specific to disconnected mode, it can be used in connected too, but again mustly without dci. Do you think I should reword it or remove it? Thanks.",
+      "parentUuid": "8b8f3901_463cbb25",
+      "revId": "3a14f8e560cc8defb41d11d3e809b11eda5d1cfe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
