@@ -54,6 +54,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f12482f4_b1c25b97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-02T14:52:59Z",
+      "side": 1,
+      "message": "Hey Charles, it comes from the pipelines, example: https://github.com/dci-labs/dallas-pipelines/blob/master/ocp-4.8-vanilla-pipeline.yml#L28-L32",
+      "parentUuid": "2101ff7a_f4d276c3",
+      "revId": "ba9baffebcb84b81458e98dc92ab7a22d5b9f7a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3b14c629_d5f805c6",
