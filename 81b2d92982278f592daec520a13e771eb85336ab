@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "81b2d92982278f592daec520a13e771eb85336ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e443c452_7ae41ee3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-02T10:59:05Z",
+      "side": 1,
+      "message": "it\u0027s strange because the libvirt job is not being scheduled, although the files are downloaded in hv2:\n\n```\n[dci-openshift-agent@pctt-hv2 gerrit]$ pwd\n/var/lib/dci-openshift-agent/gerrit\n[dci-openshift-agent@pctt-hv2 gerrit]$ ls | grep 837\n23837-a4ede7d0c766bfb5b58d7159704ac590\n```\n\nIt looks like dci-ci-bot needs to pass before accepting the merge",
+      "revId": "81b2d92982278f592daec520a13e771eb85336ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
