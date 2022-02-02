@@ -36,6 +36,41 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2101ff7a_f4d276c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-02T14:40:09Z",
+      "side": 1,
+      "message": "Thank for the explanations, I got the idea now. But still, I did not found where the variable cnf_test_sriov_policy (which is something like \u0027intel-numa0-policy-test\u0027) was defined. Do you where this variable is set?",
+      "parentUuid": "2ffb0d7f_7a0985ad",
+      "revId": "ba9baffebcb84b81458e98dc92ab7a22d5b9f7a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b14c629_d5f805c6",
+        "filename": "plays/tests.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-02T14:40:09Z",
+      "side": 1,
+      "message": "It won\u0027t help to become root on this task. I think you need to add the kubeconfig path when calling k8s module.\nit should be this:\n    kubeconfig: \"{{ dci_cluster_configs_dir }}/kubeconfig\"",
+      "revId": "ba9baffebcb84b81458e98dc92ab7a22d5b9f7a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64b2d6d7_ec3f3f58",
