@@ -50,6 +50,23 @@
       "message": "Nice change, thanks Manuel. I ran a Job in SNO and see that the task that you added are working properly. https://www.distributed-ci.io/jobs/529612e1-97c8-45a9-b0d3-a17b665f5ced/jobStates ",
       "revId": "6168b17d7e1497498effcaa8e73561d7c5ef3479",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a092166e_0a317051",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-02T02:38:42Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "6168b17d7e1497498effcaa8e73561d7c5ef3479",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
