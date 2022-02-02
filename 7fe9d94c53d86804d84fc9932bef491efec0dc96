@@ -33,6 +33,24 @@
       "message": "sorry, too quick with the review :) we need to change the README as well to point to the new value",
       "revId": "7fe9d94c53d86804d84fc9932bef491efec0dc96",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63a05512_261c4fd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-02T21:58:09Z",
+      "side": 1,
+      "message": "Great catch, thanks! It has been fixed on new pachset",
+      "parentUuid": "42f0e293_e239cdcd",
+      "revId": "7fe9d94c53d86804d84fc9932bef491efec0dc96",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
