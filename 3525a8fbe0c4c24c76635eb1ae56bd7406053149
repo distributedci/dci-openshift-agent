@@ -84,6 +84,23 @@
       "message": "Hi Charles, you have my +2 here. It seems that Zuul is not working fine yet. You can merge it whenever Zuul is working again.",
       "revId": "3525a8fbe0c4c24c76635eb1ae56bd7406053149",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c35d5a33_179cb47d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-02T09:05:18Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "3525a8fbe0c4c24c76635eb1ae56bd7406053149",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
