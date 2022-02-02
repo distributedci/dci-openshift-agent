@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99230e36_540a8ec9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-02T13:49:26Z",
+      "side": 1,
+      "message": "I am a bit confused by the CR description. If a workload needs an SR-IOV policy, why can we just use or update the existing one? ",
+      "revId": "ba9baffebcb84b81458e98dc92ab7a22d5b9f7a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64b2d6d7_ec3f3f58",
+        "filename": "plays/tests.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-02T13:49:26Z",
+      "side": 1,
+      "message": "Is there a pipeline in Dallas where the variable is defined?",
+      "revId": "ba9baffebcb84b81458e98dc92ab7a22d5b9f7a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
