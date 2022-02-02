@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ffb0d7f_7a0985ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-02T14:20:16Z",
+      "side": 1,
+      "message": "Hi Charles, now we set up SR-IOV network policy twice: \n- In the agent to run CNF tests, and for that, we need just one network policy. The installation of this policy triggers workers to reboot.\n- In the app-agent to run testpmd tests, and for that, we need _two_ network policies. In the current situation, one policy is reused, and another one is reported ok but _not_ well-created, especially in OCP-4.9. What we see, is that the node reboot is not triggered after that second setup. \n\nWe\u0027re trying to enforce the proper policy setup in the second step by removing the policy from the first step after CNF tests. \n\nI added you to the ticket if you\u0027d like to dive more into the details.",
+      "parentUuid": "99230e36_540a8ec9",
+      "revId": "ba9baffebcb84b81458e98dc92ab7a22d5b9f7a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64b2d6d7_ec3f3f58",
