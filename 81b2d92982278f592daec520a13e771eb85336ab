@@ -33,6 +33,23 @@
       "message": "let\u0027s see if it can be merged",
       "revId": "81b2d92982278f592daec520a13e771eb85336ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10531609_c6054fdd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-02T10:55:19Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "81b2d92982278f592daec520a13e771eb85336ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
