@@ -82,4 +82,16 @@
     - local_registry_host is defined
     - local_registry_port is defined
     - dci_pullsecret_file is defined
+
+- name: Delete SR-IOV network node policy
+  k8s:
+    api_version: sriovnetwork.openshift.io/v1
+    name: "{{ cnf_test_sriov_policy }}"
+    namespace: "openshift-sriov-network-operator"
+    kind: SriovNetworkNodePolicy
+    state: absent
+  when:
+    - cnf_test_suites is defined
+    - "'sriov' in cnf_test_suites"
+    - cnf_test_sriov_policy is defined
 ...
