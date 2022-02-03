@@ -33,6 +33,24 @@
       "message": "masters is an array, you need to get all the elements: ${masters[@]}",
       "revId": "978add68457367f5f6a5875cc25adc4c2e825b36",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76e8c7bf_975ff8ee",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-02-03T20:16:42Z",
+      "side": 1,
+      "message": "Good catch",
+      "parentUuid": "54e5ac37_cfa18da6",
+      "revId": "978add68457367f5f6a5875cc25adc4c2e825b36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
