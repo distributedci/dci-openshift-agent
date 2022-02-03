@@ -16,6 +16,23 @@
       "message": "LGTM, but I\u0027ll run a job on cluster4 to confirm it works.",
       "revId": "f7fa439ace5309fc6cac26ddda6755a4d37dac76",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0001b981_8c367b2a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-03T12:32:17Z",
+      "side": 1,
+      "message": "Last job failed because the changes related to https://softwarefactory-project.io/r/c/dci-openshift-agent/+/23619 (from service-configs and inventories repos) needed to be manually updated on dallas, I\u0027ve done it and I\u0027ve run a new job.",
+      "revId": "f7fa439ace5309fc6cac26ddda6755a4d37dac76",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
