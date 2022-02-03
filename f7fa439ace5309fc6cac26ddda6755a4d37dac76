@@ -50,6 +50,23 @@
       "message": "\u003e Patch Set 1:\n\u003e \n\u003e FAILURE https://www.distributed-ci.io/jobs/9376e69f-3d18-4846-bd9d-838c49c6a335/jobStates from https://softwarefactory-project.io/r/#/c/23890/\n\nIn the same way than in https://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/23841, it is failing in a task not related to this change but needs to be fixed before launching more jobs.",
       "revId": "f7fa439ace5309fc6cac26ddda6755a4d37dac76",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a05dc26_473b0788",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-03T21:13:07Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla",
+      "revId": "f7fa439ace5309fc6cac26ddda6755a4d37dac76",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
