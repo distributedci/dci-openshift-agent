@@ -23,31 +23,6 @@
   include_role:
     name: dci-import-keys
 
-- name: Get openshift_version from job.components
-  set_fact:
-    tags: "{{ item['tags'] }}"
-    url: "{{ item['url']|default('') }}"
-    version: "{{ item['data']['version'] }}"
-    ocp_product_id: "{{ item['id'] }}"
-  with_items: "{{ job_info.job.components }}"
-  when: item["type"] == "ocp"
-
-- name: Export the OCP component id into a file
-  delegate_to: "{{ groups['provisioner'][0] }}"
-  copy:
-    dest: "/tmp/{{ job_id }}.ocp_prod_id"
-    content: "{{ ocp_product_id }}"
-  when:
-    - job_info is defined
-    - "'outputs' in job_info"
-    - "'ocp_comp' in job_info['outputs']"
-
-- name: Get build from tag
-  set_fact:
-    build: "{{ item.split(':')[1] }}"
-  with_items: "{{ tags }}"
-  when: item.split(":")[0] == "build"
-
 - name: Set pullsecret from job_info
   set_fact:
     pullsecret: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
