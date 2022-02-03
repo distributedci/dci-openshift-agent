@@ -143,6 +143,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "80a493a9_934328f5",
+        "filename": "plays/tests.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-03T18:13:20Z",
+      "side": 1,
+      "message": "We have removed this part as we will not create it in the first place 😊",
+      "parentUuid": "6d1a7ed5_83acc28d",
+      "revId": "ba9baffebcb84b81458e98dc92ab7a22d5b9f7a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64b2d6d7_ec3f3f58",
