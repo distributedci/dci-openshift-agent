@@ -22,6 +22,8 @@
     state: absent
 
 - name: Upload logs
+  tags:
+    - get_logs
   include_tasks: get-logs.yml
 
 ...
