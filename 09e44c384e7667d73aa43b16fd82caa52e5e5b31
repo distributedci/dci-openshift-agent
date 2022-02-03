@@ -16,6 +16,23 @@
       "message": "Hi @Tony, should we do a similar change in extract-dependencies as well? \nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/extract-dependencies#L58-L62 ",
       "revId": "09e44c384e7667d73aa43b16fd82caa52e5e5b31",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb677926_0a67ad87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-02-03T19:41:04Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "09e44c384e7667d73aa43b16fd82caa52e5e5b31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
