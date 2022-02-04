@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a02360d_be0d9e93",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-04T20:44:35Z",
+      "side": 1,
+      "message": "I think this needs to be rewritten like this:\n\nwhen: not (item.path | regex_search(\".*_sig-storage.*\"))",
+      "revId": "65cfa6bbe2ab675ac20865fe5a9b1b8d27abdebb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
