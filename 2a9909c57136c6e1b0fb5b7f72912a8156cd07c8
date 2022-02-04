@@ -16,6 +16,41 @@
       "message": "Hi Tony, thank you for the CR.\n\nEven if this change didn\u0027t fix the initial problem in d-o-a-a, it drastically improved the execution of SR-IOV test set in d-o-a:\n\n1/ vanilla ocp-4.9 with this change https://www.distributed-ci.io/jobs/c30d49eb-ec0a-409b-b045-5e393db45e90/jobStates\n\nsriov_validation_junit 6 passed, 42 skipped, !! 0 failed !!\nsriov_setup_junit 0 passed, 1 skipped, 0 failed\nsriov_cnftests-junit 24 passed, 149 skipped, 0 failed\n\n2/ daily vanilla ocp-4.9 https://www.distributed-ci.io/jobs/2b78cb90-af88-4a3b-ba69-6b5bf054e18c/jobStates\n\nsriov_validation_junit 5 passed, 42 skipped, !! 1 failed !!\nsriov_setup_junit didn\u0027t run\nsriov_cnftests-junit didn\u0027t run\n\nConcerning the loadbalancer pod error in d-o-a-a, it seems to be related to a bug in SR-IOV operator 4.9 in the case of the simultaneous creation of two policies. We discussed yesterday that we could open a BZ and use the workaround of Saravanan in the meanwhile. ",
       "revId": "2a9909c57136c6e1b0fb5b7f72912a8156cd07c8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9d06aa0_3af2b681",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-04T14:28:34Z",
+      "side": 1,
+      "message": "In the past I\u0027ve seen sriov-cnf tests almost as last test, if you see this job[1], we had only a failure, and we were creating the policy, so I do not know why sometimes sriov_cnftests do not run. Anyways, I think this demonstrates it is not necessary we add a task to create the policy, because CNF tests do their own stuff. \n\n[1] vanilla ocp-4.9 from Jan/28 https://www.distributed-ci.io/jobs/c012b1f9-98fa-4d7f-8588-3215f2b4f9ee/jobStates\n\nsriov_validation_junit 6 passed, 42 skipped, !! 0 failed !!\nsriov_setup_junit 0 passed, 1 skipped, 0 failed\nsriov_cnftests-junit 23 passed, 149 skipped, 1 failed\n\nNow that we have removed some noise, I also agree that the problem seems to come from creating two policies at the same time, and yes I think the reboot can help, I also suspect if the policies were using a different PF might work, but all this looks like a bug to me.",
+      "parentUuid": "f6e48d55_45e40b73",
+      "revId": "2a9909c57136c6e1b0fb5b7f72912a8156cd07c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ecec40b_5fdb830e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-04T14:28:34Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2a9909c57136c6e1b0fb5b7f72912a8156cd07c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
