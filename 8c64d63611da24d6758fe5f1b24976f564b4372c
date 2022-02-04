@@ -52,6 +52,23 @@
       "parentUuid": "0d48b266_df91695d",
       "revId": "8c64d63611da24d6758fe5f1b24976f564b4372c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c658108e_95c7cc75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-04T19:42:41Z",
+      "side": 1,
+      "message": "I think the run failed because there are some pieces still in pre-run that affect how to build the URL to fetch the data. Check pre-run.yml:39",
+      "revId": "8c64d63611da24d6758fe5f1b24976f564b4372c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
