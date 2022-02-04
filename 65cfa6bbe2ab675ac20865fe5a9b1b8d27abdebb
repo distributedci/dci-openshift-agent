@@ -34,6 +34,24 @@
       "parentUuid": "6a02360d_be0d9e93",
       "revId": "65cfa6bbe2ab675ac20865fe5a9b1b8d27abdebb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "454b6430_47fdb690",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-04T21:07:34Z",
+      "side": 1,
+      "message": "Indeed, both work as expected, thanks!",
+      "parentUuid": "1fa5299a_230763b6",
+      "revId": "65cfa6bbe2ab675ac20865fe5a9b1b8d27abdebb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
