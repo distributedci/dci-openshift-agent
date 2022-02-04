@@ -34,6 +34,24 @@
       "parentUuid": "7590d197_b450959e",
       "revId": "8c64d63611da24d6758fe5f1b24976f564b4372c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae95fd09_6aa26a09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-02-04T13:49:09Z",
+      "side": 1,
+      "message": "yes it is to be able to do only the DCI calls without doing any installation in the dci-pipeline CI job.",
+      "parentUuid": "0d48b266_df91695d",
+      "revId": "8c64d63611da24d6758fe5f1b24976f564b4372c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
