@@ -1,6 +1,24 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7780bb9_991b110f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-04T19:48:12Z",
+      "side": 1,
+      "message": "@Farid you maybe interested in this PR",
+      "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "0c1b626a_5dc5cd91",
         "filename": "plays/deploy-operators.yml",
@@ -20,10 +38,10 @@
         "endChar": 19
       },
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "856b98ad_8ad81081",
         "filename": "plays/deploy-operators.yml",
@@ -44,10 +62,10 @@
         "endChar": 19
       },
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "f74d2c59_05f839d0",
         "filename": "plays/deploy-operators.yml",
@@ -68,10 +86,10 @@
         "endChar": 19
       },
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": false
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "c5e8108e_1698af0a",
         "filename": "roles/ocs-setup/defaults/main.yml",
@@ -85,10 +103,10 @@
       "side": 1,
       "message": "This is where we define what phases are executed, teardown is not executed, unless you supersede variable ocs_deploy_teardown with true",
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "35c0fb2d_677d6d05",
         "filename": "roles/ocs-setup/defaults/main.yml",
@@ -103,10 +121,10 @@
       "message": "Ack",
       "parentUuid": "c5e8108e_1698af0a",
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": false
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "ac83162b_7e24d855",
         "filename": "roles/ocs-setup/tasks/main.yml",
@@ -120,10 +138,10 @@
       "side": 1,
       "message": "The phases in the role (install, test, and teardown) are controlled here by a boolean variable, for instance install and test are always performed.",
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "d3240766_a3d1c6ca",
         "filename": "roles/ocs-setup/tasks/main.yml",
@@ -138,8 +156,7 @@
       "message": "Ack",
       "parentUuid": "ac83162b_7e24d855",
       "revId": "14cb798a79aa906305918736731f358ccf7ae33d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": false
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
