@@ -16,6 +16,24 @@
       "message": "I\u0027m not getting to understand at all the change, Fred, would you mind to explain a bit more the context?",
       "revId": "8c64d63611da24d6758fe5f1b24976f564b4372c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d48b266_df91695d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-04T08:25:35Z",
+      "side": 1,
+      "message": "Hmm, I think this change is to help to test this other one, isn\u0027t it? https://softwarefactory-project.io/r/c/dci-pipeline/+/23891, if true, then nothing more to say",
+      "parentUuid": "7590d197_b450959e",
+      "revId": "8c64d63611da24d6758fe5f1b24976f564b4372c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
