@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6e48d55_45e40b73",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-04T10:51:57Z",
+      "side": 1,
+      "message": "Hi Tony, thank you for the CR.\n\nEven if this change didn\u0027t fix the initial problem in d-o-a-a, it drastically improved the execution of SR-IOV test set in d-o-a:\n\n1/ vanilla ocp-4.9 with this change https://www.distributed-ci.io/jobs/c30d49eb-ec0a-409b-b045-5e393db45e90/jobStates\n\nsriov_validation_junit 6 passed, 42 skipped, !! 0 failed !!\nsriov_setup_junit 0 passed, 1 skipped, 0 failed\nsriov_cnftests-junit 24 passed, 149 skipped, 0 failed\n\n2/ daily vanilla ocp-4.9 https://www.distributed-ci.io/jobs/2b78cb90-af88-4a3b-ba69-6b5bf054e18c/jobStates\n\nsriov_validation_junit 5 passed, 42 skipped, !! 1 failed !!\nsriov_setup_junit didn\u0027t run\nsriov_cnftests-junit didn\u0027t run\n\nConcerning the loadbalancer pod error in d-o-a-a, it seems to be related to a bug in SR-IOV operator 4.9 in the case of the simultaneous creation of two policies. We discussed yesterday that we could open a BZ and use the workaround of Saravanan in the meanwhile. ",
+      "revId": "2a9909c57136c6e1b0fb5b7f72912a8156cd07c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
