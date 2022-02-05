@@ -33,6 +33,24 @@
       "message": "LGTM",
       "revId": "09e44c384e7667d73aa43b16fd82caa52e5e5b31",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a1370f6_328cd912",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-05T02:44:48Z",
+      "side": 1,
+      "message": "That\u0027s a good observation. In that case I believe we\u0027re safe because the pulling (fetch/merge) is made in a temporary location (https://github.com/redhat-cip/dci-openshift-agent/blob/master/extract-dependencies#L37-L38) so it does not happen twice in the same repo.\n\nThis change was observed when the git module is running on a directory that\u0027s never removed. (re-uses the content in place)",
+      "parentUuid": "4dc0f065_c9c00393",
+      "revId": "09e44c384e7667d73aa43b16fd82caa52e5e5b31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
