@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b63a9842_81cc3ff9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-09T10:21:50Z",
+      "side": 1,
+      "message": "I see the purpose of this patch but should we open a bug on MCP side? because it does not sound like an expected behavior to me.",
+      "revId": "311a59569fa970c2b4541bab2beb8fbfd69553dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
