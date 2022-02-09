@@ -1,0 +1,69 @@
+---
+- name: Wait for updated machine configs to be applied on the nodes
+  block:
+    - name: Pause for Machine Config to be created
+      pause:
+        seconds: 60
+
+    - name: Trying to use MachineConfigPool check first
+      k8s_info:
+        api_version: machineconfiguration.openshift.io/v1
+        kind: MachineConfigPool
+        kubeconfig: "{{ dci_cluster_configs_dir }}/kubeconfig"
+      register: reg_mcpool_status
+      vars:
+        status_query: "resources[*].status.conditions[?type=='Updated'].status"
+        update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
+      until:
+        - update_status == ['True']
+      retries: 60
+      delay: 60
+      delegate_to: localhost
+  rescue:
+    - name: MachineConfigPool check failed, using oc mcp get check
+      shell: >
+        {{ dci_cluster_configs_dir }}/oc get mcp
+      register: reg_mcpool_status
+      vars:
+        master_query: "master[\\s]+rendered-master-[a-z0-9]+[\\s]+True[\\s]+False"
+        worker_query: "worker[\\s]+rendered-worker-[a-z0-9]+[\\s]+True[\\s]+False"
+        masters_updated: "{{ reg_mcpool_status.stdout | regex_search(master_query) != None }}"
+        workers_updated: "{{ reg_mcpool_status.stdout | regex_search(worker_query) != None }}"
+      until:
+        - masters_updated
+        - workers_updated
+      retries: 30
+      delay: 10
+      ignore_errors: true
+      delegate_to: localhost
+
+    - name: Get list of workers
+      shell: >
+        {{ dci_cluster_configs_dir }}/oc get nodes
+      register: workers_list
+
+    # Bugzilla report: https://bugzilla.redhat.com/show_bug.cgi?id=2053445
+    - name: Workaround - uncordon all ready workers with disabled scheduling
+      vars:
+        disabled_query: "worker-[0-9]+[\\s]+Ready,SchedulingDisabled"
+        to_remove: "[\\s]+Ready,SchedulingDisabled"
+        cordon_workers: "{{
+          workers_list.stdout | regex_findall(disabled_query) |
+          map('regex_replace', to_remove, '') | list
+          }}"
+      shell: >
+        {{ dci_cluster_configs_dir }}/oc adm uncordon {{ item }}
+      loop: "{{ cordon_workers }}"
+      when: reg_mcpool_status.failed
+      delegate_to: localhost
+
+    - name: "Wait for nodes to be ready"
+      shell: >
+        {{ dci_cluster_configs_dir }}/oc get nodes
+      register: nodes
+      until:
+        - '"NotReady" not in nodes.stdout'
+      retries: 30
+      delay: 10
+      delegate_to: localhost
+...
