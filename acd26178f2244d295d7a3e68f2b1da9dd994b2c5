@@ -54,6 +54,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "571eebc5_33c8ff15",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-09T18:38:27Z",
+      "side": 1,
+      "message": "I think enable_performance_profiling was required and in combination with performance_definition we could apply a desired profile, but from my side it makes sense now to remove it and use only the later variable.",
+      "parentUuid": "9a8f310e_d9971591",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7a193912_f3a0b2bd",
         "filename": "roles/operator-performance-profile/tasks/main.yml",
         "patchSetId": 1
@@ -65,6 +83,24 @@
       "writtenOn": "2022-02-09T18:22:36Z",
       "side": 1,
       "message": "While here, could you fix the typo in here:\n      until: profile_state is not failed\nshould be:\n      until: sno_profile_state is not failed\n\nThanks! :)",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "328a0b61_122c4901",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-09T18:38:27Z",
+      "side": 1,
+      "message": "I missed that one when creating the task, please Charles if you can fix it. And let\u0027s include in the tests a SNO baremetal deployment. I can help you with that.",
+      "parentUuid": "7a193912_f3a0b2bd",
       "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
