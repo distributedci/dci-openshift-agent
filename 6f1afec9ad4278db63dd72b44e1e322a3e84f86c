@@ -33,6 +33,24 @@
       "message": "Is it always worker-0 that hangs? Or I wonder if we should get the name of the worker that remains stuck and use it here.",
       "revId": "6f1afec9ad4278db63dd72b44e1e322a3e84f86c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3abdb40_dd1c3963",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-09T18:58:07Z",
+      "side": 1,
+      "message": "Hello Manuel, \nYeah, we are still testing. And it is always worker-0 the one been unschedulable. We want to see if this works, collect more info and submit a bug for the mcp operator.",
+      "parentUuid": "a02e957e_6fec0104",
+      "revId": "6f1afec9ad4278db63dd72b44e1e322a3e84f86c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
