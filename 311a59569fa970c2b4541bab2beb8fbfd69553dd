@@ -16,6 +16,23 @@
       "message": "I see the purpose of this patch but should we open a bug on MCP side? because it does not sound like an expected behavior to me.",
       "revId": "311a59569fa970c2b4541bab2beb8fbfd69553dd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65bb6e52_ccbdaaf2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-09T15:50:53Z",
+      "side": 1,
+      "message": "Hello everyone, the first part seems to be working: https://www.distributed-ci.io/jobs/1e99186a-908f-415d-bfc2-e86148cb00c0/jobStates#9a9d167a-b3a8-4543-9722-4cd941475a0d:file30 \n\nWe could wait for the second appearance in upgrade job.",
+      "revId": "311a59569fa970c2b4541bab2beb8fbfd69553dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
