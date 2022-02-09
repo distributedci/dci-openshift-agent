@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc430548_10a3fc2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-09T18:50:27Z",
+      "side": 1,
+      "message": "Tatiana, Beto, Thanks for this change, just a question below for now, probably you are still testing.",
+      "revId": "6f1afec9ad4278db63dd72b44e1e322a3e84f86c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a02e957e_6fec0104",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-09T18:50:27Z",
+      "side": 1,
+      "message": "Is it always worker-0 that hangs? Or I wonder if we should get the name of the worker that remains stuck and use it here.",
+      "revId": "6f1afec9ad4278db63dd72b44e1e322a3e84f86c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
