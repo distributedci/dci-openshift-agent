@@ -1,8 +1,4 @@
 ---
-- name: "oc-setup : Install binaries and other packages in jumphost"
-  include_tasks: install.yml
-  tags:
-    - install
 
 - name: "test_ oc-setup : Check inventory to match ocp cluster config"
   k8s_info:
