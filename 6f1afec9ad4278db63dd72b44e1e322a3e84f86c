@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d8dd361_5cddaf29",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-09T23:50:52Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla openshift-vanilla:components\u003docp\u003d4.7.24, ocp-4.8-upgrade openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.26,",
+      "revId": "6f1afec9ad4278db63dd72b44e1e322a3e84f86c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a02e957e_6fec0104",
@@ -49,6 +66,24 @@
       "side": 1,
       "message": "Hello Manuel, \nYeah, we are still testing. And it is always worker-0 the one been unschedulable. We want to see if this works, collect more info and submit a bug for the mcp operator.",
       "parentUuid": "a02e957e_6fec0104",
+      "revId": "6f1afec9ad4278db63dd72b44e1e322a3e84f86c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f12e1dc1_161688e7",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-09T23:50:52Z",
+      "side": 1,
+      "message": "Thanks for the clarification",
+      "parentUuid": "a3abdb40_dd1c3963",
       "revId": "6f1afec9ad4278db63dd72b44e1e322a3e84f86c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
