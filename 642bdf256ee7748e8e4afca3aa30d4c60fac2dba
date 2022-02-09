@@ -16,6 +16,57 @@
       "message": "Verified in my home lab",
       "revId": "642bdf256ee7748e8e4afca3aa30d4c60fac2dba",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23876716_9bddd5be",
+        "filename": "samples/upi/hooks/files/approve_workers.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-09T23:47:35Z",
+      "side": 1,
+      "message": "would be nice to have a simple validation that all parameters are passed and e.g. the kubeconfig exists",
+      "revId": "642bdf256ee7748e8e4afca3aa30d4c60fac2dba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f638ef6_fd216215",
+        "filename": "samples/upi/hooks/templates/install-config.j2",
+        "patchSetId": 11
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-09T23:47:35Z",
+      "side": 1,
+      "message": "add `| default(\"example.com\")` to keep backwards compat",
+      "revId": "642bdf256ee7748e8e4afca3aa30d4c60fac2dba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b9bbf88_071657c6",
+        "filename": "samples/upi/hooks/templates/install-config.j2",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-09T23:47:35Z",
+      "side": 1,
+      "message": "same as above",
+      "revId": "642bdf256ee7748e8e4afca3aa30d4c60fac2dba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

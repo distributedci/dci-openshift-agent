@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64191ab2_a73c0fe5",
+        "filename": "roles/upi-installer/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-09T23:47:35Z",
+      "side": 0,
+      "message": "why is this getting removed? is not clear to me why we\u0027re not waiting for the nodes to be fully up now.",
+      "revId": "afe8f02b3093277251cade94cde3832d25177021",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30bebb06_f453ff92",
+        "filename": "roles/vbmc/tasks/firewalld.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-09T23:47:35Z",
+      "side": 0,
+      "message": "\"Don\u0027t start firewalld in vbmc role, leave it up to the admin.\" - why? is this what\u0027s causing the intermittent failures when setting up a libvirt lab?",
+      "revId": "afe8f02b3093277251cade94cde3832d25177021",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
