@@ -68,7 +68,7 @@
 
 - name: Create PerformanceProfile
   k8s:
-    definition: "{{ lookup('file', performance_definition | default('performance-profile-basic-' + ocp_version + '.yml')) }}"
+    definition: "{{ lookup('file', performance_definition) }}"
   register: profile_state
   retries: 5
   delay: 60
@@ -76,6 +76,7 @@
   when:
     - enable_performance_profiling|default(true)|bool
     - install_type is undefined or install_type != 'sno'
+    - performance_definition is defined
 
 - name: Pause for Machine Config to be created
   pause:
@@ -92,7 +93,7 @@
 
     - name: "Create PerformanceProfile on SNO node"
       k8s:
-        definition: "{{ lookup('file', performance_definition | default('performance-profile-sno.yml')) }}"
+        definition: "{{ lookup('file', performance_definition) }}"
       register: sno_profile_state
       retries: 5
       delay: 60
@@ -104,6 +105,7 @@
       when:
         - sno_profile_state is defined
         - sno_profile_state.changed | bool
+        - performance_definition is defined
 
     - name: "Wait for API to be available"
       uri:
