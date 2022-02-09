@@ -16,6 +16,91 @@
       "message": "Thanks Charles, I always thought we should not keep these files here.",
       "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1b7c59a_60114449",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-09T18:22:36Z",
+      "side": 1,
+      "message": "I think this change makes sense, the only issue that may arise is that by removing those profiles we are changing the default behavior, although that default behavior was meant for Dallas Lab only 😄\n",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a8f310e_d9971591",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-09T18:22:36Z",
+      "side": 1,
+      "message": "I couldn\u0027t find what enable_performance_profiling is. If the new behavior is to only enable the profile when performance_definition is defined, then, enable_performance_profiling is of no use any more, wdyt?",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a193912_f3a0b2bd",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-09T18:22:36Z",
+      "side": 1,
+      "message": "While here, could you fix the typo in here:\n      until: profile_state is not failed\nshould be:\n      until: sno_profile_state is not failed\n\nThanks! :)",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb432a11_f7bcc153",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-09T18:22:36Z",
+      "side": 1,
+      "message": "This is not needed, as the pause will occur only when the previous task has happened and succeeded. You want this condition down below, at the end of the block",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3999aa92_d848e53b",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-09T18:22:36Z",
+      "side": 1,
+      "message": "Here, we can remove enable_performance_profiling as well and replace it with:\n    - performance_definition is defined",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
