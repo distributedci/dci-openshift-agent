@@ -88,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "889f491a_2b350b1f",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-10T09:16:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e87a734_2dab5a2f",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7a193912_f3a0b2bd",
@@ -141,6 +159,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "03682bdc_3cef62f4",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-10T09:16:54Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fb894f8d_6bc40f09",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb432a11_f7bcc153",
@@ -172,6 +208,24 @@
       "side": 1,
       "message": "You are right! Good catch Tony :)",
       "parentUuid": "bb432a11_f7bcc153",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72529652_fff52ed6",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-10T09:16:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c505fdc8_53859964",
       "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
