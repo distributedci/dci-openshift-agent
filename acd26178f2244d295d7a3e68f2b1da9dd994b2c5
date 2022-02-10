@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5e87a734_2dab5a2f",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-10T08:42:01Z",
+      "side": 1,
+      "message": "I have hesitated to remove it, I was afraid to change a default behavior outside of Dallas, but as this variable is not even documented, I think I will remove it. Thank you!",
+      "parentUuid": "571eebc5_33c8ff15",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7a193912_f3a0b2bd",
         "filename": "roles/operator-performance-profile/tasks/main.yml",
         "patchSetId": 1
@@ -107,6 +125,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fb894f8d_6bc40f09",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-10T08:42:01Z",
+      "side": 1,
+      "message": "I will update this",
+      "parentUuid": "328a0b61_122c4901",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bb432a11_f7bcc153",
         "filename": "roles/operator-performance-profile/tasks/main.yml",
         "patchSetId": 1
@@ -124,6 +160,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c505fdc8_53859964",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-10T08:42:01Z",
+      "side": 1,
+      "message": "You are right! Good catch Tony :)",
+      "parentUuid": "bb432a11_f7bcc153",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3999aa92_d848e53b",
         "filename": "roles/operator-performance-profile/tasks/main.yml",
         "patchSetId": 1
@@ -135,6 +189,24 @@
       "writtenOn": "2022-02-09T18:22:36Z",
       "side": 1,
       "message": "Here, we can remove enable_performance_profiling as well and replace it with:\n    - performance_definition is defined",
+      "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6102f8c_d9cdf4d7",
+        "filename": "roles/operator-performance-profile/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-10T08:42:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3999aa92_d848e53b",
       "revId": "acd26178f2244d295d7a3e68f2b1da9dd994b2c5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
