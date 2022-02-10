@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6318ca3_09e0a236",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-10T12:59:38Z",
+      "side": 1,
+      "message": "Hi @Manuel, thank you for checking, I\u0027ve added in the rescue uncordon of all `Ready,SchedulingDisabled` workers.",
+      "revId": "78ac4e0d4c6321f5bf1b37d86f98f2eee8b86cd1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
