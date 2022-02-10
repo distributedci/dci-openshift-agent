@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2eb2ab69_212daf21",
+        "filename": "roles/upi-installer/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-10T18:45:07Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "6d28d5ac_a95bb5ba",
+      "revId": "afe8f02b3093277251cade94cde3832d25177021",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "30bebb06_f453ff92",
@@ -67,6 +85,24 @@
       "side": 0,
       "message": "The QE group uses a script to setup their virtual hosts but they disable the firewall by default. I wanted to be able to use the vbmc role but it forces the firewall on which then breaks everything else.",
       "parentUuid": "30bebb06_f453ff92",
+      "revId": "afe8f02b3093277251cade94cde3832d25177021",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cf3565f_5d57ebd7",
+        "filename": "roles/vbmc/tasks/firewalld.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-02-10T18:45:07Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "c9f06077_069de734",
       "revId": "afe8f02b3093277251cade94cde3832d25177021",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
