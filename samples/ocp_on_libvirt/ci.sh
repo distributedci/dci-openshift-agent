@@ -33,6 +33,10 @@ if [ -n "$GERRIT_USER" ]; then
             project=$(jq -r .change.project <<< $data)
             number=$(jq -r .change.number <<< $data)
             url="$(jq -r .change.url <<< $data | tr -d '\r' | sed 's/[;|&$]//g')"
+            echo "============================"
+            echo "type: ${type}"
+            <<<${data} jq .
+            echo "============================"
             if [ "$type" = "patchset-created" ]; then
                 subject="$(jq -r .change.subject <<< $data)"
                 echo "$type $project $number \"$subject\" $url =============================="
