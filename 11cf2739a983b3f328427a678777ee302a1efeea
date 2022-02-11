@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ada37e02_13a639d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-11T16:55:24Z",
+      "side": 1,
+      "message": "For the moment no, it\u0027s more to collect data:\n- To compare MachineConfigPool and `oc get mcp`. In one job there was a difference, if we could confirm that, we could open a BZ.\n- To check if uncordon workaround would help, and if yes, open another BZ.",
+      "parentUuid": "82b6db5c_84ffc861",
+      "revId": "11cf2739a983b3f328427a678777ee302a1efeea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15df06e8_c351d2f2",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-02-11T15:51:41Z",
       "side": 1,
       "message": "I may add here a reference to the bugzilla related to this issue: https://bugzilla.redhat.com/show_bug.cgi?id\u003d2053445, something like \"Workaround - uncordon all ready workers with disabled scheduling (BZ 2053445)\". It has been done something similar for SPK: https://github.com/dci-labs/f5-spk-config/pull/36/files#diff-1358a5caa39715977c512ce3db7ed94fdf4bd0a20720e4d3498cfb9aa6f63c10R63",
+      "revId": "11cf2739a983b3f328427a678777ee302a1efeea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15485299_606f5d09",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-11T16:55:24Z",
+      "side": 1,
+      "message": "Thank you for the link @Ramon. It seems like to make things work we have to wait several minutes after the uncordon. Maybe we have to apply it here as well.",
+      "parentUuid": "15df06e8_c351d2f2",
       "revId": "11cf2739a983b3f328427a678777ee302a1efeea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
