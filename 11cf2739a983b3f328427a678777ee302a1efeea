@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82b6db5c_84ffc861",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-11T16:17:28Z",
+      "side": 1,
+      "message": "And also, another comment, do we intend to also use this workaround in example-cnf, in which we also have MCP updates?",
+      "revId": "11cf2739a983b3f328427a678777ee302a1efeea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15df06e8_c351d2f2",
