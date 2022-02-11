@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40e4b2a2_2a63e75a",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-11T22:23:07Z",
+      "side": 1,
+      "message": "Let\u0027s add a name to this task",
+      "revId": "2387892312f4df9684019e2724deb2b5762a92d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94de5868_b8d906e1",
+        "filename": "group_vars/all",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-11T22:23:07Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this is the right place to define this.\nI\u0027m also not sure this is the right value because that path belongs to dci-pipeline rpm and it is not a dependency of d-o-a. \n\nI think this location should be by default a /tmp or /var/tmp location and for our pipelines it should be the value proposed, wdyt?",
+      "revId": "2387892312f4df9684019e2724deb2b5762a92d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
