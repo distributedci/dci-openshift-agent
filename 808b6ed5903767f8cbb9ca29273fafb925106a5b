@@ -33,6 +33,23 @@
       "message": "If you do not mind I\u0027ll just run a test with a vanilla pipeline in a non-SNO cluster before merging, just need to get a hold of a cluster :P",
       "revId": "808b6ed5903767f8cbb9ca29273fafb925106a5b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72a50782_d7cff73d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-11T22:36:47Z",
+      "side": 1,
+      "message": "check dallas ocp-4.9-vanilla",
+      "revId": "808b6ed5903767f8cbb9ca29273fafb925106a5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
