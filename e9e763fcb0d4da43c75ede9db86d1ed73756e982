@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14214e20_7d18be07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-13T20:11:57Z",
+      "side": 1,
+      "message": "It looks like kubeconfig is not available for the module at that time. Added a bit of delay for nodes to be ready",
+      "revId": "e9e763fcb0d4da43c75ede9db86d1ed73756e982",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
