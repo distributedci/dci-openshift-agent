@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c069113_021d001b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-13T18:47:56Z",
+      "side": 1,
+      "message": "I see the logs been collected as expected. The job fails because of BigIP",
+      "revId": "07ddfc7e0426e58a8e1cf1965dfd04c44e24f29c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
