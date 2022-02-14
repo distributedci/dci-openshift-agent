@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8db77204_94dc9223",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-14T12:30:06Z",
+      "side": 1,
+      "message": "I would say we can try with some jobs to test it and confirm it\u0027s fine",
+      "revId": "456e34e17b53b20d2dffaa74dcca7f8761d7ca5f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

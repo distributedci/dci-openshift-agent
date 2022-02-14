@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "328fe14e_9f53addc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-14T12:30:06Z",
+      "side": 1,
+      "message": "okey!",
+      "parentUuid": "ada37e02_13a639d6",
+      "revId": "11cf2739a983b3f328427a678777ee302a1efeea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15df06e8_c351d2f2",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "Thank you for the link @Ramon. It seems like to make things work we have to wait several minutes after the uncordon. Maybe we have to apply it here as well.",
       "parentUuid": "15df06e8_c351d2f2",
+      "revId": "11cf2739a983b3f328427a678777ee302a1efeea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c01529a4_43153bcc",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-14T12:30:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "15485299_606f5d09",
       "revId": "11cf2739a983b3f328427a678777ee302a1efeea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
