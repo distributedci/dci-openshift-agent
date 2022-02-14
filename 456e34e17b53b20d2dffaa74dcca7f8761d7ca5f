@@ -16,6 +16,24 @@
       "message": "I would say we can try with some jobs to test it and confirm it\u0027s fine",
       "revId": "456e34e17b53b20d2dffaa74dcca7f8761d7ca5f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9085872_4b7af80d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-14T13:21:25Z",
+      "side": 1,
+      "message": "The job is running since this morning, it enters in one-hour MCP loop from this CR right now: https://www.distributed-ci.io/jobs/a8a9a1db-f656-495a-aa84-62c43aac89b5/jobStates#eb7e3866-af92-4436-ac9e-56ed2762657c:file309",
+      "parentUuid": "8db77204_94dc9223",
+      "revId": "456e34e17b53b20d2dffaa74dcca7f8761d7ca5f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

@@ -16,6 +16,24 @@
       "message": "I do not think HCO actually applies MCPs.",
       "revId": "80e1e8deb5319e4b5fdc562ec1e9cfdd8a7bc980",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efb57d80_c4b6ecd1",
+        "filename": "roles/cnv-setup/tasks/deploy-hco.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-14T13:21:25Z",
+      "side": 1,
+      "message": "@Beto, I checked the job behavior at this point and yes, it seems like everything is immediately fine (except MachineConfigPool which is not retrieved but that\u0027s another issue): https://www.distributed-ci.io/jobs/491ec835-6bed-4012-8a52-883d9824ecd1/jobStates#0f790360-ab5a-401b-9461-62aca27dead5:file343\n\n@Charles, could you please have a look? Does it seem like MCP checks could be removed from deploy-hco?",
+      "parentUuid": "668a0635_519a4018",
+      "revId": "80e1e8deb5319e4b5fdc562ec1e9cfdd8a7bc980",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
