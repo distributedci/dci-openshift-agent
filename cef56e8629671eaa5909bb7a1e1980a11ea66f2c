@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.7-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla:components\u003docp\u003d4.7.24 ocp-4.8-vanilla-upgrade openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.23",
       "revId": "cef56e8629671eaa5909bb7a1e1980a11ea66f2c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e88c7bde_b2dddb07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-14T16:19:51Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla:components\u003docp\u003d4.7.24 ocp-4.8-upgrade openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.23\n\n",
+      "revId": "cef56e8629671eaa5909bb7a1e1980a11ea66f2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
