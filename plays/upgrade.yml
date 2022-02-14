@@ -196,4 +196,17 @@
       oc get clusteroperator -o json | jq -r '  { "op": [.items[].status.conditions[]] }'
   register: cluster_operators
   failed_when: "cluster_operators.stdout | from_json | json_query('length(op[?(type==\"Degraded\" && status==\"True\")])') > 0"
+
+- name: "Checking if all nodes in MCP are updated and ready after the cluster upgrade"
+  k8s_info:
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfigPool
+  register: reg_mcpool_status
+  vars:
+    status_query: "resources[*].status.conditions[?type=='Updated'].status"
+    update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
+  until:
+    - update_status == ['True']
+  retries: 90
+  delay: 10
 ...
