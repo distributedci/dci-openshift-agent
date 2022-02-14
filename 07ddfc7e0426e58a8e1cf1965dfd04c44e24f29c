@@ -16,6 +16,23 @@
       "message": "I see the logs been collected as expected. The job fails because of BigIP",
       "revId": "07ddfc7e0426e58a8e1cf1965dfd04c44e24f29c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d51e5a49_b7441d61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-14T12:39:50Z",
+      "side": 1,
+      "message": "In principle, it looks good to me",
+      "revId": "07ddfc7e0426e58a8e1cf1965dfd04c44e24f29c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
