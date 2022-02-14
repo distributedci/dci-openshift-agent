@@ -33,6 +33,23 @@
       "message": "LGTM, at least let\u0027s try it to check if this fixes the problem we have with the MCP in the upgrade job before launching the Red Hat tests",
       "revId": "cef56e8629671eaa5909bb7a1e1980a11ea66f2c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18a2db0b_02fee783",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-14T13:44:31Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla:components\u003docp\u003d4.7.24 ocp-4.8-vanilla-upgrade openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.23",
+      "revId": "cef56e8629671eaa5909bb7a1e1980a11ea66f2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
