@@ -16,6 +16,23 @@
       "message": "ocp-vanilla is working fine: https://www.distributed-ci.io/jobs/62ba332a-0c3f-4696-83ce-13c882ac0fe9/jobStates#01e1b858-c9b6-4bc0-93e3-54a3e591e895:file310 \n\nopenshift-vanilla-upgrade-4.8 is working fine as well: https://www.distributed-ci.io/jobs/f5e3fb67-07aa-4af5-b5f5-0a2306c014ba/jobStates#88e7fd4b-e424-4a38-b2c4-343070b7e740:file31 ",
       "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "beaa9dbf_e9d6930d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-15T17:12:43Z",
+      "side": 1,
+      "message": "Thanks Tatiana, this LGTM",
+      "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
