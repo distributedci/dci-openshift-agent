@@ -16,6 +16,24 @@
       "message": "if you tested it on hv2, we are good to go.",
       "revId": "5e46d6b099c27f2c3e4536b67d35965c453520fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a89339d_c540f1ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-15T16:14:26Z",
+      "side": 1,
+      "message": "I fixed a missing ) in the last patchset and it has been tested.",
+      "parentUuid": "e0b3ce7a_a06724ed",
+      "revId": "5e46d6b099c27f2c3e4536b67d35965c453520fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
