@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6652128b_c11380be",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-15T11:39:03Z",
+      "side": 1,
+      "message": "missed a \"/\" here to separate both",
+      "range": {
+        "startLine": 46,
+        "startChar": 35,
+        "endLine": 46,
+        "endChar": 39
+      },
+      "revId": "ceb8404adfa39c6a5b6b52bf5e38dcb9397bc4be",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
