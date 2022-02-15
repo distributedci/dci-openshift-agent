@@ -33,6 +33,23 @@
       "message": "Thanks Tatiana, this LGTM",
       "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d11438f1_7344b643",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-15T23:34:07Z",
+      "side": 1,
+      "message": "I see the last successful job actually never failed to use the work-around, that\u0027s funny. Just one question: let\u0027s assume an MC is getting applied, the first node gets stuck in SchedulingDisabled status, after the retries it gets uncordon, the MC will now move on to the other nodes, and it get\u0027s blocked too, the work-around only runs once in the node(s) that are SchedulingDisabled in the first check correct? \nOther than than I like how this is organized. Thanks.",
+      "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
