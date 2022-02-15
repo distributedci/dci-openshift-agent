@@ -52,11 +52,6 @@
         tags: '{{ dci_tags }}'
       when: dci_tags is defined
 
-    - name: pre-run
-      dci_job:
-        id: "{{ job_id }}"
-        status: "pre-run"
-
 # Step 1 : pre run
 - name: 'Launch pre-run'
   hosts: localhost
@@ -67,6 +62,12 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: pre-run
+      dci_job:
+        id: "{{ job_id }}"
+        status: "pre-run"
+      tags:
+        - dci
 
     - block:
         # prepare infrastructure
@@ -114,13 +115,6 @@
           delegate_to: localhost
           ignore_unreachable: true
 
-    - name: running
-      dci_job:
-        id: "{{ hostvars.localhost.job_id }}"
-        status: "running"
-      delegate_to: localhost
-      tags: [dci]
-
 # Step 2 : configure
 - name: 'Launch configure'
   hosts: provisioner
@@ -132,6 +126,14 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ hostvars.localhost.job_id }}"
+        status: "running"
+      delegate_to: localhost
+      tags:
+        - dci
+
     - block:
         # Prepare provisioner host
         - name: Configure provisioner
@@ -156,6 +158,14 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ hostvars.localhost.job_id }}"
+        status: "running"
+      delegate_to: localhost
+      tags:
+        - dci
+
     - block:
         - name: "dci-openshift-agent : Launch install"
           include_tasks: plays/install.yml
@@ -170,7 +180,8 @@
                 id: "{{ hostvars.localhost.job_id }}"
                 status: "failure"
               delegate_to: localhost
-              tags: [dci]
+              tags:
+                - dci
 
             - name: Run the failure process for partners
               include_tasks: "{{ hookdir }}/hooks/failure.yml"
@@ -211,6 +222,14 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ hostvars.localhost.job_id }}"
+        status: "running"
+      delegate_to: localhost
+      tags:
+        - dci
+
     - block:
         - include_tasks: plays/deploy-operators.yml
       when:
@@ -225,6 +244,14 @@
     - running
     - hook-installing
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ hostvars.localhost.job_id }}"
+        status: "running"
+      delegate_to: localhost
+      tags:
+        - dci
+
     - block:
         - name: "dci-openshift-agent : Launch partner install"
           include_tasks: '{{ hookdir }}/hooks/install.yml'
@@ -247,6 +274,14 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ hostvars.localhost.job_id }}"
+        status: "running"
+      delegate_to: localhost
+      tags:
+        - dci
+
     - block:
         - name: "dci-openshift-agent : Launch upgrade"
           vars:
@@ -267,6 +302,14 @@
     - running
     - hook-upgrading
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ hostvars.localhost.job_id }}"
+        status: "running"
+      delegate_to: localhost
+      tags:
+        - dci
+
     - block:
         - name: "dci-openshift-agent : Launch partner upgrade"
           vars:
@@ -295,6 +338,13 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ job_id }}"
+        status: "running"
+      tags:
+        - dci
+
     - block:
 
         - name: "Setup job_logs directory"
@@ -318,6 +368,13 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: running
+      dci_job:
+        id: "{{ job_id }}"
+        status: "running"
+      tags:
+        - dci
+
     - block:
 
         - name: "Setup job_logs directory"
@@ -333,12 +390,6 @@
 
       rescue: *teardown_failure
 
-    - name: post-run
-      dci_job:
-        id: "{{ job_id }}"
-        status: "post-run"
-      tags: [dci]
-
 # Step 6 : post run
 - name: Launch post run
   hosts: localhost
@@ -349,6 +400,13 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: post-run
+      dci_job:
+        id: "{{ job_id }}"
+        status: "post-run"
+      tags:
+        - dci
+
     - block:
 
         - name: Run the partner post-run
@@ -362,12 +420,6 @@
 
       rescue: *teardown_error
 
-    - name: success
-      dci_job:
-        id: "{{ job_id }}"
-        status: "success"
-      tags: [dci]
-
 # Step 7 : state "success"
 - name: 'Success'
   hosts: localhost
@@ -378,6 +430,13 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+    - name: success
+      dci_job:
+        id: "{{ job_id }}"
+        status: "success"
+      tags:
+        - dci
+
     - block:
         - name: Run the success hook
           include_tasks: '{{ hookdir }}/hooks/success.yml'
