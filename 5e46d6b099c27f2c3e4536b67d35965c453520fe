@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0b3ce7a_a06724ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-02-15T08:26:01Z",
+      "side": 1,
+      "message": "if you tested it on hv2, we are good to go.",
+      "revId": "5e46d6b099c27f2c3e4536b67d35965c453520fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
