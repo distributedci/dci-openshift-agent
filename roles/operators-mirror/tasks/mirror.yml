@@ -1,7 +1,4 @@
 ---
-- name: force OPM version
-  set_fact:
-    dci_opm_version: "{{ opm_version | default('v' + base_version|string) }}"
 
 - name: "Build Operator catalog index"
   include_tasks: build-catalog-index.yml
