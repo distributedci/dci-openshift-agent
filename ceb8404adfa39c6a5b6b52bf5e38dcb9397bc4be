@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "92482282_cb906f97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-15T11:39:40Z",
+      "side": 1,
+      "message": "By the way, I\u0027d change commit description to also say that we are including the feature described in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24009",
+      "revId": "ceb8404adfa39c6a5b6b52bf5e38dcb9397bc4be",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6652128b_c11380be",
