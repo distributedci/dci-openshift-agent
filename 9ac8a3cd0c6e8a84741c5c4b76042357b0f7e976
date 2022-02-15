@@ -16,6 +16,23 @@
       "message": "Even when the job failed, the change (`opm_version`) was validated https://www.distributed-ci.io/jobs/2ed83a7e-5ebf-4e70-b626-8f35e2212bde/jobStates#8ad1731d-bbcc-41ac-99a7-9567cb2f13aa:file129",
       "revId": "9ac8a3cd0c6e8a84741c5c4b76042357b0f7e976",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95e72291_1c18571a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-15T23:07:00Z",
+      "side": 1,
+      "message": "Looks good tome, I confirmed we can install PAO and SR-IOV operators.",
+      "revId": "9ac8a3cd0c6e8a84741c5c4b76042357b0f7e976",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
