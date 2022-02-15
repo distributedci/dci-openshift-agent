@@ -1,31 +1,41 @@
 ---
-- name: "Create a tmp directory for the prune image"
-  tempfile:
-    state: directory
-  register: tmp_prune
 
-- name: "Prune source index but opm list"
-  shell:
-    # opm requires write perms in the working directory
-    chdir: "{{ tmp_prune.path }}"
-    cmd: >
-      set -x;
-      REGISTRY_AUTH_FILE={{ dci_pullsecret_file }}
-      {{ provision_cache_store }}/{{ version }}/opm index prune
-      --from-index registry.redhat.io/redhat/redhat-operator-index:{{ dci_opm_version }}
-      --packages {{ opm_mirror_list | join(",") }}
-      --tag {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
-  register: prune_result
-  until: prune_result.rc == 0
-  retries: 3
-  delay: 10
-  notify:
-    - "Fix permissions and removing tmp files"
+  - name: "Get major and minor versions"
+    set_fact:
+      ocp_major: "{{ base_version.split('.')[0] }}"
+      ocp_minor: "{{ base_version.split('.')[1] }}"
 
-- name: "Push the new index image to the local registry"
-  shell:
-    cmd: >
-      podman push {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
-      --authfile {{ dci_pullsecret_file }}
+  - name: "Create a tmp directory for the prune image"
+    tempfile:
+      state: directory
+    register: tmp_prune
 
+  - name: "Index prune - recursive"
+    include_tasks: index-prune.yml
+
+  - name: "Operator index version that will be used"
+    debug:
+      msg: "{{ ocp_major }}.{{ ocp_minor }}"
+
+  - name: "Set new OPM version base on pruned index"
+    set_fact:
+      dci_opm_version: "v{{ ocp_major }}.{{ ocp_minor }}"
+
+  - name: "Create DCI component for pruned Index"
+    dci_component:
+      name: "{{ local_registry }}{{ opm_local_registry_path }}:v{{ ocp_major }}.{{ ocp_minor }}"
+      canonical_project_name: "{{ local_registry }}{{ opm_local_registry_path }}:v{{ ocp_major }}.{{ ocp_minor }}"
+      team_id: "{{ job_info['job']['team_id'] }}"
+      topic_id: "{{ job_info['job']['topic_id'] }}"
+      type: "catalog_index"
+      state: present
+    register: index_component
+
+  - name: "Attach index component to the job"
+    dci_job_component:
+      component_id: " {{ index_component.component.id }} "
+      job_id: " {{ job_id }} "
+    when:
+      - "'component' in index_component"
+      - "'id' in index_component.component"
 ...
