@@ -1,31 +1,30 @@
 ---
-- name: "Create a tmp directory for the prune image"
-  tempfile:
-    state: directory
-  register: tmp_prune
 
-- name: "Prune source index but opm list"
-  shell:
-    # opm requires write perms in the working directory
-    chdir: "{{ tmp_prune.path }}"
-    cmd: >
-      set -x;
-      REGISTRY_AUTH_FILE={{ dci_pullsecret_file }}
-      {{ provision_cache_store }}/{{ version }}/opm index prune
-      --from-index registry.redhat.io/redhat/redhat-operator-index:{{ dci_opm_version }}
-      --packages {{ opm_mirror_list | join(",") }}
-      --tag {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
-  register: prune_result
-  until: prune_result.rc == 0
-  retries: 3
-  delay: 10
-  notify:
-    - "Fix permissions and removing tmp files"
+  - name: "Get DCI topic"
+    set_fact:
+      dci_topic: "OCP-4.11"
 
-- name: "Push the new index image to the local registry"
-  shell:
-    cmd: >
-      podman push {{ local_registry }}{{ opm_local_registry_path }}:{{ dci_opm_version }}
-      --authfile {{ dci_pullsecret_file }}
+  - name: "Get OCP version"
+    set_fact:
+      ocp_version: "{{ dci_topic.split('-')[1] }}"
 
+  - name: "Get major OCP version"
+    set_fact:
+      ocp_major: "{{ ocp_version.split('.')[0] }}"
+
+  - name: "Get minor OCP minor"
+    set_fact:
+      ocp_minor: "{{ ocp_version.split('.')[1] }}"
+
+  - name: "Create a tmp directory for the prune image"
+    tempfile:
+      state: directory
+    register: tmp_prune
+
+  - name: "Index prune - recursive"
+    include_tasks: index-prune.yml
+
+  - name: "Operator index version that will be used"
+    debug:
+      msg: "{{ ocp_major }}.{{ ocp_minor }}"
 ...
