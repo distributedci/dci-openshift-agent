@@ -67,6 +67,41 @@
       "message": "Also FYI, last failure is not related to this patch, the failure is on the bigip side.",
       "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce79209d_4ae5f7a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-16T08:30:55Z",
+      "side": 1,
+      "message": "I would say this can be merged. By the way, the way we commented yesterday in the grooming to report the workarounds, I would include it here but maybe in a separate, new CR. I can handle it, as I am going to do the update for SPK/BigIP.",
+      "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc0d1a04_0d3dd9d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-16T08:30:55Z",
+      "side": 1,
+      "message": "Yep, that\u0027s it, it\u0027s a think that I already commented to Tatiana and that kind of retry to uncordon the new node in SchedulingDisabled status may be included in the future if needed. This is a feature that, for example, I\u0027ve already included in BigIP/SPK PRs. Here, we can include it or not, but for the moment, I guess it\u0027s enough to continue.\n@Tatiana wdyt? From my side, it\u0027s fine to merge this without including this kind of retry, we can add it later if needed",
+      "parentUuid": "d11438f1_7344b643",
+      "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
