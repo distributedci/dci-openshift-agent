@@ -102,6 +102,41 @@
       "parentUuid": "d11438f1_7344b643",
       "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef4c8804_400badbe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-16T08:55:16Z",
+      "side": 1,
+      "message": "\u003e I see the last successful job actually never failed to use the work-around, that\u0027s funny.\n\nIt did fail once, not on the last patchset though: https://www.distributed-ci.io/jobs/ff289f1f-9cf9-417b-9885-d48413771d53/jobStates#72c152d5-b53c-4e6a-9177-4c67a74c175a:file30 Somehow MachineConfigPool object didn\u0027t exist.\n\n\u003e let\u0027s assume an MC is getting applied, the first node gets stuck in SchedulingDisabled status, after the retries it gets uncordon, the MC will now move on to the other nodes, and it get\u0027s blocked too, the work-around only runs once in the node(s) that are SchedulingDisabled in the first check correct? \n\nI\u0027ve never seen that situation. Usually, we have one last worker with one last MC to be applied. But if that would be the case, we could always modify the workaround to uncordon in a loop :)",
+      "parentUuid": "d11438f1_7344b643",
+      "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22b8e0c6_a8dcb874",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-16T08:55:16Z",
+      "side": 1,
+      "message": "Thank you @Beto for the refactoring.\n\nThank you for the reviews @Manuel and @Ramon.\n\nI\u0027m going to merge it as the first step because at least the change does no harm, and the workaround worked once. We could always update it. ",
+      "revId": "96a40d7fa4ef7bbe7b6219dbc99fcfb185310c0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
