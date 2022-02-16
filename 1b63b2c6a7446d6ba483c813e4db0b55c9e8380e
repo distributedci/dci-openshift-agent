@@ -16,6 +16,23 @@
       "message": "I\u0027ve added an updated way of executing wait-mcp, taking into account that it may be needed in other steps like the upgrade, and differentiating between two blocks: one in case dci_workarounds does not include the bz, another if it includes it. I\u0027ve designed it based on the tests I\u0027ve made for BigIP and SPK that worked in this job: https://www.distributed-ci.io/jobs/b8f61c4a-02f6-48ea-9cdb-cfe37b1d18d4/jobStates",
       "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa61a492_a8f27585",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-16T16:48:48Z",
+      "side": 1,
+      "message": "Hi @Ramon, I feel like we go the way more complex than it was intended. We probably could simply wrap the rescue in BZ: https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/common/tasks/wait-mcp.yml#L23-L67",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
