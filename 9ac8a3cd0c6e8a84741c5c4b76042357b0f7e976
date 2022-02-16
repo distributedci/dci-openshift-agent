@@ -33,6 +33,23 @@
       "message": "Looks good tome, I confirmed we can install PAO and SR-IOV operators.",
       "revId": "9ac8a3cd0c6e8a84741c5c4b76042357b0f7e976",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2538f2e2_22d9842b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-16T08:26:18Z",
+      "side": 1,
+      "message": "LGTM, thanks Tony!",
+      "revId": "9ac8a3cd0c6e8a84741c5c4b76042357b0f7e976",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
