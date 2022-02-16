@@ -16,6 +16,24 @@
       "message": "I was under the impression that this common role and this play (wait-mcp.yml) was to allow reuse of this waiting in other places of the agent.\n\nI think this play should have one regular task to wait for the mcp to settle. And another block with the workaround.\n\nWe have to be careful as to when to apply the workaround because this play is used in many places (upgrade, tests, PAO) and the workaround is specifically for PAO iirc.",
       "revId": "bbc984b403240e8e183b78e4f93f3d59de09941d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1de2ebe_acf6245f",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-16T14:27:47Z",
+      "side": 1,
+      "message": "Hi Tony, thanks for your comment. I don\u0027t know if we should only apply the workaround for the PAO, because there are several issues reported on Jira in which the problem with the MCP appears, and not only for PAO, but also for upgrade and other places. If we need to change this and only call the workaround if we are installing PAO, that\u0027s fine for me, but as you said, this would need to be modified. Maybe we can discuss about this in the daily.\n\nHowever, if we apply this for all the cases, I think that, with the current solution, is enough: the workaround is under a block and it\u0027s only applied if dci_workarounds includes the bz",
+      "parentUuid": "a037b0d0_667114fe",
+      "revId": "bbc984b403240e8e183b78e4f93f3d59de09941d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
