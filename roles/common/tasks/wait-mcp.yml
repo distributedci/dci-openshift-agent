@@ -1,10 +1,27 @@
 ---
-- name: Wait for updated machine configs to be applied / uncordon nodes
-  block:
-    - name: "Pause for Machine Config to be created"
-      pause:
-        seconds: 60
 
+- name: "Pause for Machine Config to be created"
+  pause:
+    seconds: 60
+
+- name: Wait for updated machine configs to be applied on the nodes
+  k8s_info:
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfigPool
+    kubeconfig: "{{ dci_cluster_configs_dir }}/kubeconfig"
+  register: reg_mcpool_status
+  vars:
+    status_query: "resources[*].status.conditions[?type=='Updated'].status"
+    update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
+  until:
+    - update_status == ['True']
+  retries: "{{ mcp_wait_retries }}"
+  delay: "{{ mcp_wait_delay }}"
+  delegate_to: localhost
+  when: '"bz2053445" not in dci_workarounds|default([])'
+
+- name: Wait for updated machine configs to be applied on the nodes / With workaround for BZ 2053445
+  block:
     - name: Get Machine config pools status
       k8s_info:
         api_version: machineconfiguration.openshift.io/v1
@@ -66,5 +83,8 @@
           delay: 10
           delegate_to: localhost
       when: reg_disabled_nodes.stdout | length > 0
+  when:
+    - dci_workarounds is defined
+    - '"bz2053445" in dci_workarounds'
 
 ...
