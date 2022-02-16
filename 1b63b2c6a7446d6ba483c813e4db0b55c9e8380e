@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b620dcd_c142c457",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-16T16:20:15Z",
+      "side": 1,
+      "message": "I\u0027ve added an updated way of executing wait-mcp, taking into account that it may be needed in other steps like the upgrade, and differentiating between two blocks: one in case dci_workarounds does not include the bz, another if it includes it. I\u0027ve designed it based on the tests I\u0027ve made for BigIP and SPK that worked in this job: https://www.distributed-ci.io/jobs/b8f61c4a-02f6-48ea-9cdb-cfe37b1d18d4/jobStates",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
