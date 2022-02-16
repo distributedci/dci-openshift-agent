@@ -33,6 +33,24 @@
       "message": "Hi @Ramon, I feel like we go the way more complex than it was intended. We probably could simply wrap the rescue in BZ: https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/common/tasks/wait-mcp.yml#L23-L67",
       "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71e571b4_f56d76b0",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-16T17:04:27Z",
+      "side": 1,
+      "message": "Bad thing is that the rescue below is attached to the block, so we cannot, let\u0027s say, put the \"when\" condition to only the rescue, because it will also apply for the block that uses that rescue. That\u0027s why I\u0027ve done this in this way, also to easily remove the workaround when fixing the BZ.",
+      "parentUuid": "aa61a492_a8f27585",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
