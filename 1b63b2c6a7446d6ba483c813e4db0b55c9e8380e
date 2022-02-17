@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f78d9c22_45e53678",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-17T16:39:49Z",
+      "side": 1,
+      "message": "Ramón, thanks for addressing this. Having a defined approach for workarounds linked to rescue a block is good.",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aa61a492_a8f27585",
@@ -102,6 +119,24 @@
       "side": 1,
       "message": "Thanks Beto for the feedback! However, I don\u0027t think it is a good solution, from my point of view. As I said, a rescue block is meant to be executed when a specific task from a block failed; so, if the rescue block passed, then the captured failure is \"rescued\", let\u0027s say.\n\nSo, imagine we extend your test with this (I\u0027ve changed the when statement because it was not working in my ansible exec, but it is the same):\n\n```\n- name: test\n  hosts: localhost\n  vars:\n    bz_active: false\n  tasks:\n    - name: \"The code that can fail\"\n      block:\n        - name: \"Get minor OCP minor\"\n          set_fact:\n            ocp_minor: \"{{ ocp_version.split(\u0027.\u0027)[3] }}\"  \n      rescue:\n        - name: \"workaround\"\n          block: \n            - name: \"Workaround step1\"\n              debug:\n                msg: \"workaround step 1\"\n            - name: \"Workaround step2\"\n              debug:\n                msg: \"workaround step 2\"\n          when: bz_active|bool\n\n    - name: \"Task that should not be executed if bz_active is false but it is\"\n      debug:\n        msg: \"Continue\"\n```\n\nFirstly, the task on the block will fail. Then, rescue is called, correct. If bz_active is not true, the block within the rescue will not be called, correct. BUT, as rescue has not failed, the previous, failed task can be considered as \"rescued\" and the execution will continue, so that the last task will be executed. This would not be true in case the workaroud is not applied, because if the very first task failed, then the job has to fail, not to pass.\n\nSo, that\u0027s why I would leave this in the current status. What do you think?",
       "parentUuid": "26eedaee_e54d8e09",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d64a81d8_e7a902a6",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-17T16:39:49Z",
+      "side": 1,
+      "message": "I believe it could be possible to re-raise the error from the previous tasks: https://stackoverflow.com/questions/59031422/ansible-blocks-re-raising-errors-in-rescue-block but I am not against your current approach. LGTM, thanks!",
+      "parentUuid": "666d756e_aeb6f5e2",
       "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
