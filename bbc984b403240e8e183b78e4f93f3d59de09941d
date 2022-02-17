@@ -34,6 +34,24 @@
       "parentUuid": "a037b0d0_667114fe",
       "revId": "bbc984b403240e8e183b78e4f93f3d59de09941d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ec30fdb_1a69d726",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-17T17:13:49Z",
+      "side": 1,
+      "message": "I also liked the initial idea to have simple tasks in wait-mcp.yml to check node status and be used anywhere, but I see why we started to include rescues in the same block. I was thinking maybe we can have wait-mcp.yml without any rescue tasks or workarounds, and that\u0027s the ideal play we want to use everywhere, and then have wait-mcp-with-workarounds.yml with all the cool stuff you have been adding. At the end it\u0027s the same, just ordered differently, we\u0027ll keep including both, but only one will run based on the dci_workaround conditions. Anyways I\u0027m ok with this first approach.",
+      "parentUuid": "f1de2ebe_acf6245f",
+      "revId": "bbc984b403240e8e183b78e4f93f3d59de09941d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
