@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04b20557_3e1c4c80",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-17T16:27:56Z",
+      "side": 1,
+      "message": "\u003e Patch Set 4:\n\u003e \n\u003e FAILURE https://www.distributed-ci.io/jobs/adf95a7c-a832-48e9-b8ee-7bed9278ff34/jobStates from https://github.com/dci-labs/dallas-pipelines/pull/241\n\nDon\u0027t have this in mind, it was for testing another stuff.",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aa61a492_a8f27585",
