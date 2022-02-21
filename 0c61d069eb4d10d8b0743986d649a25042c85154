@@ -33,6 +33,23 @@
       "message": "once builder image is fixed this should go through",
       "revId": "0c61d069eb4d10d8b0743986d649a25042c85154",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc9d3825_9b1bfa1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-21T09:55:36Z",
+      "side": 1,
+      "message": "Thanks for taking care Farid!",
+      "revId": "0c61d069eb4d10d8b0743986d649a25042c85154",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
