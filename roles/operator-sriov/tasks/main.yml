@@ -54,6 +54,20 @@
     - ocp_version_maj|int == 4
     - ocp_version_min|int >= 6
 
+- name: "Disable SR-IOV Draining in SNO"
+  k8s:
+    definition:
+      apiVersion: sriovnetwork.openshift.io/v1
+      kind: SriovOperatorConfig
+      metadata:
+        name: default
+        namespace: openshift-sriov-network-operator
+      spec:
+        disableDrain: true
+  when:
+    - install_type is defined
+    - install_type == "sno"
+
 - name: "Get SRIOV InstallPlan details"
   k8s_info:
     api: operators.coreos.com/v1alpha1
