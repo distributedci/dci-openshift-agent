@@ -50,6 +50,23 @@
       "message": "Thanks for taking care Farid!",
       "revId": "0c61d069eb4d10d8b0743986d649a25042c85154",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92fe97d5_35e0abe7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2022-02-21T22:25:38Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "0c61d069eb4d10d8b0743986d649a25042c85154",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
