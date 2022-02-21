@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c270550e_f60d272e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-21T11:27:43Z",
+      "side": 1,
+      "message": "For the moment I\u0027ll merge this, if we need to add further modifications to improve this, then let\u0027s do it in a separate CR.",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aa61a492_a8f27585",
@@ -137,6 +154,24 @@
       "side": 1,
       "message": "I believe it could be possible to re-raise the error from the previous tasks: https://stackoverflow.com/questions/59031422/ansible-blocks-re-raising-errors-in-rescue-block but I am not against your current approach. LGTM, thanks!",
       "parentUuid": "666d756e_aeb6f5e2",
+      "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7accc788_eac599d2",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-21T11:27:43Z",
+      "side": 1,
+      "message": "Thanks for the example Beto! Yes, in the end, is a different way of doing this. By following your approach, we\u0027d only need to add the `fail` module at the end of the rescue block:\n\n```\n---\n- name: test\n  hosts: localhost\n  vars:\n    bz_active: false\n  tasks:\n    - name: \"The code that can fail\"\n      block:\n        - name: \"Get minor OCP minor\"\n          set_fact:\n            ocp_minor: \"{{ ocp_version.split(\u0027.\u0027)[3] }}\"  \n      rescue:\n        - name: \"workaround\"\n          block: \n            - name: \"Workaround step1\"\n              debug:\n                msg: \"workaround step 1\"\n            - name: \"Workaround step2\"\n              debug:\n                msg: \"workaround step 2\"\n          when: bz_active is true\n        - name: \"fail\"\n          fail:\n            msg: fail properly\n          when: bz_active is false\n...\n```\n\nHowever, I think it is simpler to maintain in the way it\u0027s currently defined. So, when the workaround is fixed and the code will eventually be to be deleted, we only need to delete the block below and the when condition of this task and that would be all.\n\nFor the moment, let\u0027s keep in this way, and if we find it can be improved with a different method, then let\u0027s do it.",
+      "parentUuid": "d64a81d8_e7a902a6",
       "revId": "1b63b2c6a7446d6ba483c813e4db0b55c9e8380e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

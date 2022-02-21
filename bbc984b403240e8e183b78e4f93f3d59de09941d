@@ -52,6 +52,24 @@
       "parentUuid": "f1de2ebe_acf6245f",
       "revId": "bbc984b403240e8e183b78e4f93f3d59de09941d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ac74fd0_abe7010f",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-21T11:27:43Z",
+      "side": 1,
+      "message": "Thanks for the feedback Manuel! I think it\u0027s fine to do this as a further step. For the moment, as it seems that the wait for MCP is failing at some points and that we need to apply the workaround for all of them, I would keep wait-mcp.yml as it is right now, but as I said to Beto in the other thread, if we need to improve it, then let\u0027s create a new change to update this.",
+      "parentUuid": "7ec30fdb_1a69d726",
+      "revId": "bbc984b403240e8e183b78e4f93f3d59de09941d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
