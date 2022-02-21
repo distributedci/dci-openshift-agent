@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb826fac_bab08e39",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-21T12:34:43Z",
+      "side": 1,
+      "message": "I\u0027ve added a delegate_to in a task that requires it, because we have seen this failure in the VCP daily job: https://www.distributed-ci.io/jobs/d48f97a3-5ccc-4003-a3d9-66ccdaa03c33/jobStates#7b5a6a4a-7c5a-4fdd-b35b-151c8777ad04:file313. Fixing that with this last patchset. Now it\u0027s ready to be merged.",
+      "revId": "a3a3d269aaf503b24630d2b77da25561a6452f2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
