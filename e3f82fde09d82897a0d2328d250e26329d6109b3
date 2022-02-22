@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b423e655_19896331",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-22T09:59:14Z",
+      "side": 1,
+      "message": "Rebasing after merging CR 24064, ready to be merged.",
+      "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
