@@ -248,6 +248,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "846cb06f_28802a99",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T21:51:41Z",
+      "side": 1,
+      "message": "I think you\u0027ve addressed the port already, I\u0027d like to avoid the naming as well, some suggestions in my previous comment",
+      "parentUuid": "bdbac61c_5d1e1fbd",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c94ea80e_6b6e8f5d",
         "filename": "roles/operators-mirror/tasks/index-prune.yml",
         "patchSetId": 16
