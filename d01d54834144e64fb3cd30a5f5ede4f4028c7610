@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4e2b63e_11655282",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "55b8ea5d_506bb6a5",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d11a47a8_9988a30b",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-02-22T00:22:30Z",
       "side": 1,
       "message": "And for the type, maybe just: \"{{ opm_local_registry_path | basename }}\" ??\n\nwdyt?",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8777043c_05efa32f",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "Ack, lets see how it looks",
+      "parentUuid": "d11a47a8_9988a30b",
       "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2593067b_326fb0a4",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6fedfdfa_ea3ead28",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15682c6c_eaaf9ca6",
@@ -65,6 +119,24 @@
       "writtenOn": "2022-02-22T00:22:30Z",
       "side": 1,
       "message": "Use \"|\" if you want to preserve the new lines and avoid the use of \";\"\nThe downside is that for multi-line commands you will need to add \"\\\"\n\nsame applies to other places down below",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d793e34_8396269e",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15682c6c_eaaf9ca6",
       "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fdb7eec_e759c31b",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b086549f_441d0dd2",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "826f9ea3_08d23135",
@@ -99,6 +189,24 @@
       "writtenOn": "2022-02-22T00:22:30Z",
       "side": 1,
       "message": "nit: By using loop_control +  loop_var we could rename the \"item\" to \"operator\" and make it easier to understand\n\nIs the configs dir created at any point prior this or needs to be created as well?",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b839761_b5d8fc34",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "The config directory is created in \"Prune File Based Catalog index\" during the catalog rendering.",
+      "parentUuid": "826f9ea3_08d23135",
       "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -122,6 +230,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bdbac61c_5d1e1fbd",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "Yeah, this is racely. I think that using cluster name will cause issues if the name do not have a number at the end. So, I will let podman to assign a random port. For the name, will use the cluster name, and if the pod already exists it will be replaced. Will dynamically obtain the port using the container name later.",
+      "parentUuid": "5a6971c1_e6d08902",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c94ea80e_6b6e8f5d",
         "filename": "roles/operators-mirror/tasks/index-prune.yml",
         "patchSetId": 16
@@ -133,6 +259,24 @@
       "writtenOn": "2022-02-22T00:22:30Z",
       "side": 1,
       "message": "Is .name a valid key? is only for FBC?\n\nIn 4.9 I see .packageName",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af564efc_2bd29cf0",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T19:11:07Z",
+      "side": 1,
+      "message": "Not related to FBC, if we query the API for /Listpackages you get .name, for /ListBundles you get .packageName",
+      "parentUuid": "c94ea80e_6b6e8f5d",
       "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
