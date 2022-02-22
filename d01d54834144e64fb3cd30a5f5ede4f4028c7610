@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55b8ea5d_506bb6a5",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "In name and canonical_project_name I don\u0027t think we need the registry embedded in it, if we need we can add the url or a data field. If we look at example-cnf https://www.distributed-ci.io/topics/ef28aab9-d05e-4b93-bc97-f939f70ed300/components/fbcd13de-ea78-4ce3-861d-4d81f93b609f the suggestion would be:\n\nname: \"{{ dci_opm_version }}\"\ncanonical_project_name: \"{{ opm_local_registry_path | basename }}:{{ dci_opm_version }}\"",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d11a47a8_9988a30b",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "And for the type, maybe just: \"{{ opm_local_registry_path | basename }}\" ??\n\nwdyt?",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fedfdfa_ea3ead28",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "Nit: using a different name to make it more clear? index_fallback ?",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15682c6c_eaaf9ca6",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "Use \"|\" if you want to preserve the new lines and avoid the use of \";\"\nThe downside is that for multi-line commands you will need to add \"\\\"\n\nsame applies to other places down below",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b086549f_441d0dd2",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "Let\u0027s create ~/.docker dir first otherwise this will fail",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "826f9ea3_08d23135",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "nit: By using loop_control +  loop_var we could rename the \"item\" to \"operator\" and make it easier to understand\n\nIs the configs dir created at any point prior this or needs to be created as well?",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a6971c1_e6d08902",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "Since these run in the jumphost I\u0027m worried that two jobs running at the same time may have issues because of this.\n\nI know it may be a bit of overhead, but ideally  we will need to run jobs in parallel without disrupting each other.\n\nI\u0027d suggest to use the cluster number as the port to use e.g.\n\n-p50054:50051 cluster4\n-p50056:50051 cluster6\n-p50050:50051 cluster10\n-p50051:50051 default if name does not contain a number?\n\nFor the name you could omit the name and simply register a variable that will hold the output of the command with the sha to use later to stop",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c94ea80e_6b6e8f5d",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T00:22:30Z",
+      "side": 1,
+      "message": "Is .name a valid key? is only for FBC?\n\nIn 4.9 I see .packageName",
+      "revId": "d01d54834144e64fb3cd30a5f5ede4f4028c7610",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
