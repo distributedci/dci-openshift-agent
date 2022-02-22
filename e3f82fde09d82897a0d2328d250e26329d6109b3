@@ -16,6 +16,23 @@
       "message": "Rebasing after merging CR 24064, ready to be merged.",
       "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "817d2f1b_8a1dd90c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T23:20:07Z",
+      "side": 1,
+      "message": "All the changes related to adding the dci_workarounds LGTM.\n\nThe part that adds BZ2053445 I think should be in a different change.\n\nI have 2 main concerns with the latter:\n1. The BZ was reported for 4.7 but I see it was added to practically all the versions in the pipelines (https://github.com/dci-labs/dallas-pipelines/pull/241/files), do we really need the workaround on all of them?\n2. The mcp check is done in more than 1 place, do we need the workaround on all those places?",
+      "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
