@@ -197,7 +197,7 @@
   delay: 5
   until:
     - skopeo_copy is not failed
-  loop: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
+  loop: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather@sha256:7920b5798fb1ef322bedbec9ea29f459bebeadc272eea1c75070be9822d8338f']) }}"
   when: >
     (dci_disconnected | default(false) | bool) or
     (dci_local_mirror | default(false) | bool)

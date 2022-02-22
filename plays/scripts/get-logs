@@ -124,7 +124,7 @@ else
         registry=$($rem oc get imageContentSourcePolicy image-policy-0 -o json 2>/dev/null |
                             jq -r '.spec.repositoryDigestMirrors[].mirrors[]' |
                             grep -Pom1 '(\w+[.:])+\d+')
-        for image in ${DCI_MUST_GATHER_IMAGES:-"registry.redhat.io/openshift4/ose-must-gather"}
+        for image in ${DCI_MUST_GATHER_IMAGES:-"registry.redhat.io/openshift4/ose-must-gather@sha256:7920b5798fb1ef322bedbec9ea29f459bebeadc272eea1c75070be9822d8338f"}
         do
             if [[ -n "${registry}" ]]
             then
