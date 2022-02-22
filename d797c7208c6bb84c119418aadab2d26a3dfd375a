@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f197dfc5_a4035d4b",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-22T10:25:42Z",
+      "side": 1,
+      "message": "May you need to add \" \" here? I mean, ` \"${masters[@]}\" `\n\nBecause, in this job for example, not only the suffix to be removed is present, but also the master name is quoted, maybe https://www.distributed-ci.io/jobs/457c2e92-c387-4c13-b0b3-d55dd57263e7/files. I think that can help, but maybe you also need to check how is taking the master names in order to avoid the quotes in the journal log file.",
+      "range": {
+        "startLine": 84,
+        "startChar": 15,
+        "endLine": 84,
+        "endChar": 28
+      },
+      "revId": "d797c7208c6bb84c119418aadab2d26a3dfd375a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
