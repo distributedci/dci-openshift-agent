@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46e725b0_6b7a848c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-22T20:23:18Z",
+      "side": 1,
+      "message": "I have addressed the recommendations, the on last run, the relevant para for this change was fine, it failed because must-gather image no available (will check).",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
