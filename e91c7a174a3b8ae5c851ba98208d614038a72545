@@ -16,6 +16,91 @@
       "message": "I have addressed the recommendations, the on last run, the relevant para for this change was fine, it failed because must-gather image no available (will check).",
       "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90e4a787_17288a3d",
+        "filename": "roles/operators-catalog/tasks/redhat-catalog-source.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T21:49:06Z",
+      "side": 1,
+      "message": "I think the dci_opm_version should be named opm_version and be defined under facts.yml in the same way as here: https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/changes/17/24017/22/roles/operators-catalog/tasks/facts.yml#3\n\nThis is how the role is receiving the variables from the play that uses it and sets its vars, there you would define:\n\nopm_version: \"{{ hostvars.localhost.dci_opm_version }}\" \n\nAnd here it will be `opm_version` as the other opm_ variables",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ad7c832_fd4cb632",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T21:49:06Z",
+      "side": 1,
+      "message": "Maybe these should be defined under facts.yml? (https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/changes/17/24017/22/roles/operators-mirror/tasks/facts.yml#4) and likely use version as that\u0027s what\u0027s passed to the role (https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/changes/17/24017/22/plays/pre-run.yml#177)",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "089d6ab4_1bada599",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T21:49:06Z",
+      "side": 1,
+      "message": "I still think you don\u0027t need to name it, and just store the uuid output to later use it to delete the container",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d2cb29b6_927fc1bb",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T21:49:06Z",
+      "side": 1,
+      "message": "By using the saved uuid you can get the port with:\npodman inspect \u003cuuid\u003e | jq \u0027.[].NetworkSettings.Ports.\"50051/tcp\"[].HostPort\u0027",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03408ed6_0949254b",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-22T21:49:06Z",
+      "side": 1,
+      "message": "same here if we use the uuid",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
