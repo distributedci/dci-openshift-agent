@@ -71,10 +71,11 @@
 
 - name: "Set dci_pullsecret_file if pullsecret_file var exists"
   block:
+    # Preserve the name of pullsecret_file name in the destination
     - name: "Copy pull secret file to cache directory"
       copy:
         src: "{{ pullsecret_file }}"
-        dest: "{{ provision_cache_store }}/pull-secret.txt"
+        dest: "{{ provision_cache_store }}"
         owner: "{{ ansible_user_id }}"
         group: "{{ ansible_user_gid }}"
         mode: '0644'
@@ -95,10 +96,11 @@
         auths: "{{ pullsecret | combine({'auths': hostvars.localhost.disconnected_auths}, recursive=True) }}"
       no_log: true
 
+    # As well as in pullsecret_file, use cluster name to build pull-secret file name
     - name: "Copy auths fact content to a file"
       copy:
         content: "{{ auths }}"
-        dest: "{{ provision_cache_store }}/pull-secret.txt"
+        dest: "{{ provision_cache_store }}/{{ cluster }}-pull-secret.txt"
         owner: "{{ ansible_user_id }}"
         group: "{{ ansible_user_gid }}"
         mode: '0644'
@@ -106,7 +108,7 @@
 
     - name: "Set dci_pullsecret_file fact if pullsecret_file is not present"
       set_fact:
-        dci_pullsecret_file: "{{ provision_cache_store }}/pull-secret.txt"
+        dci_pullsecret_file: "{{ provision_cache_store }}/{{ cluster }}-pull-secret.txt"
       no_log: true
   when:
     - dci_disconnected | default(false) | bool
