@@ -16,6 +16,23 @@
       "message": "Ramon, \n\nInitially when I stored the pull secret all have the same name because all pull-secret files have the same content and actually I wanted to leave one for all clusters, but since that didn\u0027t happen it makes sense to store each in a separate file, mainly as you said to avoid parallel jobs write the same file.\n\nLet\u0027s run a test in Dallas and I\u0027ll give a +2",
       "revId": "42d656e767e8af95d002a0fb462e2c6305cd686e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73ebd955_fcf01db3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-23T15:21:47Z",
+      "side": 1,
+      "message": "Testing on this job, only running the pre-run to check if pull-secret file is correctly copied, and it is: https://www.distributed-ci.io/jobs/64e8c5f9-a627-4ae6-babe-fc96d2e1083d/jobStates\n\nFirstly, copy is not failed: https://www.distributed-ci.io/jobs/64e8c5f9-a627-4ae6-babe-fc96d2e1083d/jobStates#d1d54d4d-ca05-402b-802e-dac987facbf2:file39\n\nSecondly, by going to the jumphost, we can see the corresponding pull-secret file has been copied correctly (look at the date):\n[dciteam@jumphost ~]$ ls -la /opt/cache | grep pull-secret.txt\n-rw-r--r--.   1 dciteam dciteam       3399 Jan 26 14:59 cluster10-pull-secret.txt\n-rw-r--r--.   1 dciteam dciteam       3385 Feb 23 09:12 cluster4-pull-secret.txt\n-rw-r--r--.   1 dciteam dciteam       3400 Jan 25 18:45 cluster5-pull-secret.txt\n-rw-r--r--.   1 dciteam dciteam       3400 Jan 26 14:57 cluster6-pull-secret.txt\n-rw-r--r--.   1 dciteam dciteam       3385 Feb 17 10:10 pull-secret.txt\n-rw-r--r--.   1 dciteam dciteam       3289 Dec  8 22:58 sno1-pull-secret.txt\n\nSo, as a result, this is working fine",
+      "revId": "42d656e767e8af95d002a0fb462e2c6305cd686e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
