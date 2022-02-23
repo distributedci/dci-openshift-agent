@@ -33,6 +33,24 @@
       "message": "All the changes related to adding the dci_workarounds LGTM.\n\nThe part that adds BZ2053445 I think should be in a different change.\n\nI have 2 main concerns with the latter:\n1. The BZ was reported for 4.7 but I see it was added to practically all the versions in the pipelines (https://github.com/dci-labs/dallas-pipelines/pull/241/files), do we really need the workaround on all of them?\n2. The mcp check is done in more than 1 place, do we need the workaround on all those places?",
       "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d4edb0c_af58b575",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-23T09:40:04Z",
+      "side": 1,
+      "message": "Hi Tony, thanks for the feedback. I will raise the question today to check if everybody agrees on divide this CR in two, just to double check.\n\nRegarding BZ2053445:\n\n1) I think we need it for all the pipelines for the moment; for example, if we take a look to CILAB-407, which was the first issue related to the MCP problem, it was reported for several OCP versions (4.7, 4.8 and 4.10). It\u0027s true that the bugzilla was only reported for OCP 4.7, but it seems that it happens in different versions.\n2) Moreover, if we check CILAB-456, which gathers all the issues related to MCP, we can see there are different occurences in different places (performance-profile, upgrade, etc.), so yes, I\u0027d say we need the workaround in different places.\n\nAlso, for this, I\u0027d like to check with the team, to review different opinions. We can postpone the discussion about merging this until you come back, because this is not urgent at all.",
+      "parentUuid": "817d2f1b_8a1dd90c",
+      "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
