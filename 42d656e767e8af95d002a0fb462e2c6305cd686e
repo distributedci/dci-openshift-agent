@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "415ba1d0_f25766d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-23T14:29:22Z",
+      "side": 1,
+      "message": "Ramon, \n\nInitially when I stored the pull secret all have the same name because all pull-secret files have the same content and actually I wanted to leave one for all clusters, but since that didn\u0027t happen it makes sense to store each in a separate file, mainly as you said to avoid parallel jobs write the same file.\n\nLet\u0027s run a test in Dallas and I\u0027ll give a +2",
+      "revId": "42d656e767e8af95d002a0fb462e2c6305cd686e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
