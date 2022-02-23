@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "383b17a4_1f088ee6",
+        "filename": "roles/operators-catalog/tasks/redhat-catalog-source.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-23T16:42:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "90e4a787_17288a3d",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1ad7c832_fd4cb632",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-02-22T21:49:06Z",
       "side": 1,
       "message": "Maybe these should be defined under facts.yml? (https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/changes/17/24017/22/roles/operators-mirror/tasks/facts.yml#4) and likely use version as that\u0027s what\u0027s passed to the role (https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/changes/17/24017/22/plays/pre-run.yml#177)",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cb715b5_02b7fcae",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-23T16:42:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ad7c832_fd4cb632",
       "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -69,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb00af1a_0a0d2d13",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-23T16:42:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "089d6ab4_1bada599",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d2cb29b6_927fc1bb",
@@ -86,6 +140,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c603a3c1_1b238f2b",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-23T16:42:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d2cb29b6_927fc1bb",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "03408ed6_0949254b",
@@ -99,6 +171,24 @@
       "writtenOn": "2022-02-22T21:49:06Z",
       "side": 1,
       "message": "same here if we use the uuid",
+      "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7344cac5_0c2a34d9",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-23T16:42:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03408ed6_0949254b",
       "revId": "e91c7a174a3b8ae5c851ba98208d614038a72545",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
