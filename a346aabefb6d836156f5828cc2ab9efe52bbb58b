@@ -16,6 +16,23 @@
       "message": "Hi Ramon, thank you for taking care of it, I\u0027m ready to give +2 once the job would pass. ",
       "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41f23dec_b91d00e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-24T15:54:02Z",
+      "side": 1,
+      "message": "I think it is clear we need this in all pipelines and in all points from d-o-a (and also d-o-a-a), but let\u0027s wait for Tony\u0027s feedback in order to confirm if we can go on with this change or separate it into two. In the meanwhile I will create a job to test this.\n\nI\u0027ll put a workflow -1 in the meanwhile, to avoid merging3",
+      "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

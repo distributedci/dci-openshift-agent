@@ -141,6 +141,24 @@
       "parentUuid": "caf58999_46f8722e",
       "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38895552_b125ad3c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-24T15:54:02Z",
+      "side": 1,
+      "message": "Resolved the question from Fred, by doing 2 commits, there would be 2 changes linked between them, and we would need to merge separately, according to the depends-on.",
+      "parentUuid": "a32601fd_1c6e495c",
+      "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
