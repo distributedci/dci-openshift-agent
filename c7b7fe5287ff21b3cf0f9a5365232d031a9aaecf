@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4011622_188cc409",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T09:21:47Z",
+      "side": 1,
+      "message": "Hi Beto, thank you for anticipating the problem and taking care of it in advance. I asked some questions just to better get an idea. Thank you.",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87f681e3_d09624bd",
+        "filename": "roles/operators-catalog/tasks/redhat-catalog-source.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T09:21:47Z",
+      "side": 1,
+      "message": "Hi Beto, just a side note. We have three variables: local_registry_host, local_registry_port, and provisionhost_registry, and use them in all possible combinations. What do you think about simply using provisionhost_registry everywhere (and probably to rename it to local_registry)?",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35ee9cff_3f567a13",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T09:21:47Z",
+      "side": 1,
+      "message": "Is this component for debugging or it\u0027s planned to be used somewhere further?",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbbd7a55_d1022fd3",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T09:21:47Z",
+      "side": 1,
+      "message": "Hi Beto, just to get an idea - why the prune is version-dependent? You\u0027re removing here SQLite catalogs for OCP \u003c 4.10 and FBC for OCP \u003e\u003d 4.10, and it seems like the idea is simply to delete everything.",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fc6f2be_be330778",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T09:21:47Z",
+      "side": 1,
+      "message": "Could we somehow limit a recursion depth to ensure that there will be no infinite loops?",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5538ac81_d89baf79",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T09:21:47Z",
+      "side": 1,
+      "message": "The same question about local_registry_host, local_registry_port, and provisionhost_registry",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
