@@ -50,6 +50,24 @@
       "message": "Hi Ramon, that\u0027s a dupe of the shell task just above (lines 53-58), we could probably delete it",
       "revId": "aa7d90b9b90cb252ab6040d93d2a94f23bb87661",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03c024dc_38baa37e",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-24T13:36:14Z",
+      "side": 1,
+      "message": "thanks for catching this, done",
+      "parentUuid": "420a6472_d46da8e2",
+      "revId": "aa7d90b9b90cb252ab6040d93d2a94f23bb87661",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
