@@ -16,6 +16,40 @@
       "message": "I\u0027ve modified the work to finally do what we were commenting in previous threads: just to avoid having the MCP check twice, then have a block created in the rescue in order to apply the workaround. This is because the execution of `oc get mcp` is being done right now in order to retrieve info to create a new workaround to be included here, so that it would be easier to include it in this way (thx Tatiana for this). I\u0027ll launch a job soon to test it.",
       "revId": "aa7d90b9b90cb252ab6040d93d2a94f23bb87661",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdd1846d_6bda77ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T13:20:35Z",
+      "side": 1,
+      "message": "Hi Ramon, thank you for taking care of it, LGTM, just one minor dupe issue.",
+      "revId": "aa7d90b9b90cb252ab6040d93d2a94f23bb87661",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "420a6472_d46da8e2",
+        "filename": "roles/common/tasks/wait-mcp.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T13:20:35Z",
+      "side": 1,
+      "message": "Hi Ramon, that\u0027s a dupe of the shell task just above (lines 53-58), we could probably delete it",
+      "revId": "aa7d90b9b90cb252ab6040d93d2a94f23bb87661",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
