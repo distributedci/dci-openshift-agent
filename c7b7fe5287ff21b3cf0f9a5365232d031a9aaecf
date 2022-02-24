@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9645347a_d79ec4f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-24T18:54:28Z",
+      "side": 1,
+      "message": "Thanks for the feedback Tatiana",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "87f681e3_d09624bd",
@@ -31,6 +48,24 @@
       "writtenOn": "2022-02-24T09:21:47Z",
       "side": 1,
       "message": "Hi Beto, just a side note. We have three variables: local_registry_host, local_registry_port, and provisionhost_registry, and use them in all possible combinations. What do you think about simply using provisionhost_registry everywhere (and probably to rename it to local_registry)?",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18bb567e_810fcb25",
+        "filename": "roles/operators-catalog/tasks/redhat-catalog-source.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-24T18:54:28Z",
+      "side": 1,
+      "message": "Yeah, as we are doing in DOAA, that sound doable may better in a separate CR.",
+      "parentUuid": "87f681e3_d09624bd",
       "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +87,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2250f0d0_0b5bdf53",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-24T18:54:28Z",
+      "side": 1,
+      "message": "yes,the idea is to record the actual index version used for the deployment, if there is a fallback to a previous versions, there should be an easy way to know which has all the operators required.",
+      "parentUuid": "35ee9cff_3f567a13",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dbbd7a55_d1022fd3",
@@ -69,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c0a19bf_24001679",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-24T18:54:28Z",
+      "side": 1,
+      "message": "Hey Tatiana, the thing is that the opm options required to manage FBC is dependent on the opm version. I believe those are only available starting the version included on the 4.9. Also the options to prune, add bundles are not present on the latest versions of opm.",
+      "parentUuid": "dbbd7a55_d1022fd3",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0fc6f2be_be330778",
@@ -82,6 +153,24 @@
       "writtenOn": "2022-02-24T09:21:47Z",
       "side": 1,
       "message": "Could we somehow limit a recursion depth to ensure that there will be no infinite loops?",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d78bc6ae_324e7f4a",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-24T18:54:28Z",
+      "side": 1,
+      "message": "sure, make it that configurable.",
+      "parentUuid": "0fc6f2be_be330778",
       "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
