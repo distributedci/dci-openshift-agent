@@ -87,6 +87,24 @@
       "parentUuid": "7d4edb0c_af58b575",
       "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "caf58999_46f8722e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-02-24T14:43:44Z",
+      "side": 1,
+      "message": "we can split the change in 2 commits. gerrit will then link them together as a series of changes.",
+      "parentUuid": "7d4edb0c_af58b575",
+      "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
