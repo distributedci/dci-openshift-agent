@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "313c4fd0_ba91e7a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-24T15:23:12Z",
+      "side": 1,
+      "message": "Hi Ramon, thank you for taking care of it, I\u0027m ready to give +2 once the job would pass. ",
+      "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
