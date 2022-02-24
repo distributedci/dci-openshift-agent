@@ -33,6 +33,24 @@
       "message": "Maybe we want the error and the standard output.",
       "revId": "94e7a1f6ec0ff6378f4c25620eacc2a0e2113578",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32b8cf4b_b39d38e3",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-24T23:38:16Z",
+      "side": 1,
+      "message": "sure, in patch-set 2, I\u0027m saving both for all pods",
+      "parentUuid": "91d39272_db0a1f95",
+      "revId": "94e7a1f6ec0ff6378f4c25620eacc2a0e2113578",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
