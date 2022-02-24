@@ -51,6 +51,42 @@
       "parentUuid": "817d2f1b_8a1dd90c",
       "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d0595e0_f7f24554",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-24T12:04:54Z",
+      "side": 1,
+      "message": "I\u0027ve been talking about this with Tatiana and we think we can maintain the scope we are having now, because it affects to different points. If we need to change it again, of course we can do it.",
+      "parentUuid": "7d4edb0c_af58b575",
+      "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cdb4040_680db85c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-24T12:04:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d4edb0c_af58b575",
+      "revId": "e3f82fde09d82897a0d2328d250e26329d6109b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
