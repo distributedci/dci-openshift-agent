@@ -175,6 +175,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "295efe12_c7c70f44",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-24T20:25:36Z",
+      "side": 1,
+      "message": "Actuall will try 3 times.",
+      "parentUuid": "d78bc6ae_324e7f4a",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5538ac81_d89baf79",
