@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f453ae8e_df23cdbc",
+        "filename": "roles/operators-catalog/tasks/facts.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-25T17:51:35Z",
+      "side": 1,
+      "message": "In our current pipelines we are dci_opm_version in the pipelines to pin a specific version of the catalog in case the operators we need are not available in the index for the OCP version that we are trying to install. Here just renamed that variable to opm_version. OPM final value will be really defined until we found an index that has the number of operators that we need. If 4.11 does not have the 2 operators that we need, it will automatically try with 4.10, then 4.9 and so on. The created component will give us information about how many versions behind we had to go in order to get the operators available.",
+      "parentUuid": "42913d10_2b713926",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ff6b63b_ee2af6ef",
@@ -65,6 +83,24 @@
       "writtenOn": "2022-02-25T02:29:42Z",
       "side": 1,
       "message": "Just cosmetics: I see you define this fact here and use it in the next task, but in all the tasks from https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24017/30/roles/operators-mirror/tasks/index-prune.yml you use \"v{{ ocp_major }}.{{ ocp_minor }}\" wouldn\u0027t be better to define the fact before the task that includes the index-prune.yml and use your fact there too? :)",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a5f012b_4c1f0a14",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-25T17:51:35Z",
+      "side": 1,
+      "message": "It is set that way because the final values for opm_version will be defined until the index-prune is completed. The minor version will be decreased if the operators are not available in the current reviewed index. Will try with 3 previous versions to find the operators.",
+      "parentUuid": "7ff6b63b_ee2af6ef",
       "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c19e603e_99c6b5c2",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-25T17:51:35Z",
+      "side": 1,
+      "message": "Fixed",
+      "parentUuid": "7c44b4be_fceb7954",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0b2d951_17ea046c",
@@ -99,6 +153,24 @@
       "writtenOn": "2022-02-25T02:29:42Z",
       "side": 1,
       "message": "Let\u0027s remove this trailing space too, if not Pierre will be sad :| \nAnd question, why is the reason behind the condition below: \"index_fallback | int \u003c 4\"? I mean why 4? and not 3",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bceee95_3685ac3e",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-25T17:51:35Z",
+      "side": 1,
+      "message": "Change to \u003c\u003d3 more easy to read. Not sure if we should make this defined by a variable. I think that we can change it later if needed. At this time for example will try to get operators from 4.11, 4.10, 4.9 and exit if not found. I think that is a reasonable threshold.",
+      "parentUuid": "e0b2d951_17ea046c",
       "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

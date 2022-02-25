@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c55cf6b1_1ecf1b5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 31
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-02-25T17:51:35Z",
+      "side": 1,
+      "message": "Hello Manuel, Tatiana. Thanks for your comments. I have updated the change accordingly. Cheers!",
+      "revId": "014404e39099c985756b040cfc67045c4e00f8b4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
