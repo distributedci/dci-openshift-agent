@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fbd630e_1c2e3224",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 30
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-25T02:29:42Z",
+      "side": 1,
+      "message": "Beto, thanks for this PR, I\u0027m following to get familiar with FBC. Just minor stuff for now.",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42913d10_2b713926",
+        "filename": "roles/operators-catalog/tasks/facts.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-25T02:29:42Z",
+      "side": 1,
+      "message": "On the commit message I see \"Using ocp version as initial dci_opm_version, opm_version is not needed\" I might be missing something here, I do not see the var dci_opm_version anymore, and opm_version is defined here. And also as a fact in  https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24017/30/roles/operators-mirror/tasks/build-catalog-index.yml#26, Could you please clarify this part?",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ff6b63b_ee2af6ef",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-25T02:29:42Z",
+      "side": 1,
+      "message": "Just cosmetics: I see you define this fact here and use it in the next task, but in all the tasks from https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24017/30/roles/operators-mirror/tasks/index-prune.yml you use \"v{{ ocp_major }}.{{ ocp_minor }}\" wouldn\u0027t be better to define the fact before the task that includes the index-prune.yml and use your fact there too? :)",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c44b4be_fceb7954",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-25T02:29:42Z",
+      "side": 1,
+      "message": "trailing space",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0b2d951_17ea046c",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 30
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-25T02:29:42Z",
+      "side": 1,
+      "message": "Let\u0027s remove this trailing space too, if not Pierre will be sad :| \nAnd question, why is the reason behind the condition below: \"index_fallback | int \u003c 4\"? I mean why 4? and not 3",
+      "revId": "f2c6c79378471d96b4e031b37f7441baba08eac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
