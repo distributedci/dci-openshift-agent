@@ -68,6 +68,23 @@
       "message": "check dallas ocp-4.9-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "854c2179_0226bebc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-02-25T09:15:05Z",
+      "side": 1,
+      "message": "\u003e Patch Set 11:\n\u003e \n\u003e SUCCESS https://www.distributed-ci.io/jobs/05dbb5de-9504-4592-b59c-182770f168b6/jobStates from https://softwarefactory-project.io/r/#/c/24042/\n\nIt worked, no rescue block was executed during the job, so we are not breaking anything in the normal case.",
+      "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
