@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ca355f5_a480cb71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-02-25T16:52:08Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "7ac44eab07ae9738004ef9cd3e803ff4435bbaa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4c77329_337d0ed5",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-02-25T16:52:08Z",
+      "side": 1,
+      "message": "space",
+      "revId": "7ac44eab07ae9738004ef9cd3e803ff4435bbaa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d41a4279_f5087713",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-02-25T16:52:08Z",
+      "side": 1,
+      "message": "s/ocp_prod_id/ocp_product_id ?",
+      "revId": "7ac44eab07ae9738004ef9cd3e803ff4435bbaa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
