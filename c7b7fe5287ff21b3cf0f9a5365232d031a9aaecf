@@ -208,6 +208,24 @@
       "message": "The same question about local_registry_host, local_registry_port, and provisionhost_registry",
       "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "608fe404_5860f092",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-25T11:40:28Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5538ac81_d89baf79",
+      "revId": "c7b7fe5287ff21b3cf0f9a5365232d031a9aaecf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
