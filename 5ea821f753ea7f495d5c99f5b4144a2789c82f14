@@ -16,6 +16,23 @@
       "message": "LGTM, can we test it to confirm?",
       "revId": "5ea821f753ea7f495d5c99f5b4144a2789c82f14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0be5cfbb_d11b9512",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-02-28T14:57:06Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vcp ocp-4.7-vcp-upgrade openshift-vcp-upgrade-4.7:components\u003docp\u003d\"4.7.43\"",
+      "revId": "5ea821f753ea7f495d5c99f5b4144a2789c82f14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
