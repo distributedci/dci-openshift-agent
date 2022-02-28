@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c928635e_252a5646",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-28T21:46:54Z",
+      "side": 1,
+      "message": "Thanks for the quick work-around Beto, this looks good, then I assume we\u0027ll remove ose-must-gather image from the list of dci_must_gather_images in the pipelines right? ",
+      "revId": "080e94535e628236c63493651e8d7702c53d1b6c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95a666d8_3727c375",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-02-28T21:46:54Z",
+      "side": 1,
+      "message": "maybe local_registry_host is the correct variable?",
+      "revId": "080e94535e628236c63493651e8d7702c53d1b6c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
