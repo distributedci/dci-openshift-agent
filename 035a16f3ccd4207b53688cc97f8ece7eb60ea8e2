@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b33438f9_f0c841cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-02-28T23:05:27Z",
+      "side": 1,
+      "message": "I think this is a quick way to avoid the issues we have seen with the must-gather tags in *dallas*.\n\nThis made me think of:\n- How far do we want to get by adding complexity to the agent when things are broken outside?\n- In a connected environment this would\u0027ve failed, so our fix is only targeted to disconnected environments, where the image has been already copied, what\u0027s the true value of the change?\n\nI don\u0027t want to disincentivize the change but IMO, if something is broken with the registry then we have to draw a line at some point.\n\nThoughts?",
+      "revId": "035a16f3ccd4207b53688cc97f8ece7eb60ea8e2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
