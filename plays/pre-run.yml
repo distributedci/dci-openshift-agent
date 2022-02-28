@@ -148,8 +148,34 @@
     - dci_disconnected | default(false) | bool
     - opm_mirror_list is defined
 
-# Mirror must-gather images for offline mode
-- name: "dci-openshift-agent : Mirror must-gather images"
+- name: "dci-openshift-agent : Mirror must gather image"
+  block:
+
+      # Mirror latest ose-must-gather image for offline mode
+    - name: "Mirror the ose-must-gather image"
+      command:
+        cmd: >
+          skopeo copy --remove-signatures --all --authfile {{ dci_pullsecret_file }}
+          --dest-tls-verify=false docker://registry.redhat.io/openshift4/ose-must-gather
+          docker://{{ local_registry_host }}:{{ local_registry_port }}/ose-must-gather
+      register: mg_mirror
+      retries: 5
+      delay: 5
+      until:
+        - mg_mirror is not failed
+      when: >
+        (dci_disconnected | default(false) | bool) or
+        (dci_local_mirror | default(false) | bool)
+
+  rescue:
+    - name: "Rescue: Fail if image is already mirrored"
+      command: |
+        skopeo inspect --tls-verify=false docker://{{ local_registry_host }}:{{ local_registry_port }}/ose-must-gather
+      register: mg_inspect
+      failed_when: mg_inspect.rc != 0
+
+  # Mirror additional must-gather images for offline mode
+- name: "dci-openshift-agent : Mirror additional must-gather images"
   command:
     cmd: >
       skopeo copy --remove-signatures --all --authfile {{ dci_pullsecret_file }}
@@ -163,7 +189,7 @@
   delay: 5
   until:
     - skopeo_copy is not failed
-  loop: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
+  loop: "{{ dci_must_gather_images }}"
   when: >
     (dci_disconnected | default(false) | bool) or
     (dci_local_mirror | default(false) | bool)
