@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af4461dd_9938ba4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-02-28T09:06:52Z",
+      "side": 1,
+      "message": "Hello everyone, in today\u0027s VCP job the rescue was triggered because the number of retries was simply not enough: https://www.distributed-ci.io/jobs/0fcda343-23fe-464b-ad42-e39cb83b232c/jobStates \n\nAs we could from the next task, increasing the number of retries by 10 would be enough.",
+      "revId": "ff9c8ec96fac4574eaba711c022d5c369be360c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
