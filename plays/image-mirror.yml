@@ -1,0 +1,25 @@
+- name: "dci-openshift-agent : Mirror images"
+  block:
+
+    - name: "Mirror image {{ image_name | regex_replace('^[^/]*/', '') }}"
+      command:
+        cmd: >
+          skopeo copy --remove-signatures --all --authfile {{ dci_pullsecret_file }}
+          --dest-tls-verify=false docker://{{ image_name }}
+          docker://{{ local_image_location }}
+      vars:
+        local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
+        local_image_location: "{{ local_registry }}/{{ image_name | regex_replace('^[^/]*/', '') }}"
+      register: skopeo_copy
+      retries: 5
+      delay: 5
+      until:
+        - skopeo_copy is not failed 
+     
+  rescue:
+    - name: "Rescue: If image {{ image_name | regex_replace('^[^/]*/', '') }} is already mirrored"
+      command: |
+        skopeo inspect --tls-verify=false docker://{{ local_registry_host }}:{{ local_registry_port }}/{{ image_name | regex_replace('^[^/]*/', '') }}
+      register: mg_inspect
+      failed_when: mg_inspect.rc != 0
+...
