@@ -102,6 +102,24 @@
       "message": "Hi Ramon, let\u0027s rebase and merge this CR if @Tony is fine with that? \nI\u0027d like to try to refer to this code in CR 24115 instead of making a dupe.",
       "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "564d0c99_dfc6b8f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-01T14:11:15Z",
+      "side": 1,
+      "message": "Agreed with Tony that we can safely merge this change, so @Tatiana, it is ready. I\u0027ve rebased now",
+      "parentUuid": "37a2d64b_8e26d4d2",
+      "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
