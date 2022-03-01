@@ -23,7 +23,7 @@
 
   - name: "Set new OPM version base on pruned index"
     set_fact:
-      opm_version: "v{{ ocp_major }}.{{ ocp_minor }}"
+      opm_version: "{{ ocp_major }}.{{ ocp_minor }}"
 
   - name: "Create DCI component for pruned Index"
     dci_component:
