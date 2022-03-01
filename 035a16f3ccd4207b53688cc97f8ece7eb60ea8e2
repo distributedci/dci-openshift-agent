@@ -52,6 +52,24 @@
       "parentUuid": "e0b78338_1baa3f53",
       "revId": "035a16f3ccd4207b53688cc97f8ece7eb60ea8e2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4cdc6d0f_1d2c6bf1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-01T13:07:01Z",
+      "side": 1,
+      "message": "I also agree that is good to add this kind of logic to avoid problems, but the complexity is higher by separating ose-must-gather from the rest of images, also if it is defined under dci_must_gather_images variable. I\u0027d like to propose some improvements:\n\n-Maybe I\u0027d force to define dci_must_gather_images and set it to [\u003cdci-ose-must-gather-image\u003e] as default, to avoid duplicated tasks.\n-Note that, with the current approach, the \"mirror additional must-gather\" would fail in case the mirroring cannot be done, as it does not have a rescue. Do we intend to also rescue them?\n-Note that dci_must_gather_images is also used in plays/get-logs.yml\n-Note that this same mirroring process is also done in d-o-a-a, so the changes is also needed there",
+      "parentUuid": "9763f508_bc874d2f",
+      "revId": "035a16f3ccd4207b53688cc97f8ece7eb60ea8e2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
