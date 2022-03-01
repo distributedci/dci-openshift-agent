@@ -85,6 +85,23 @@
       "message": "\u003e Patch Set 11:\n\u003e \n\u003e SUCCESS https://www.distributed-ci.io/jobs/05dbb5de-9504-4592-b59c-182770f168b6/jobStates from https://softwarefactory-project.io/r/#/c/24042/\n\nIt worked, no rescue block was executed during the job, so we are not breaking anything in the normal case.",
       "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37a2d64b_8e26d4d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-03-01T12:24:41Z",
+      "side": 1,
+      "message": "Hi Ramon, let\u0027s rebase and merge this CR if @Tony is fine with that? \nI\u0027d like to try to refer to this code in CR 24115 instead of making a dupe.",
+      "revId": "a346aabefb6d836156f5828cc2ab9efe52bbb58b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
