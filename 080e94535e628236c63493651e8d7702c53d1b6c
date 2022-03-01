@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "55dd313b_ea0d9ff8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-01T00:07:25Z",
+      "side": 1,
+      "message": "dci_must_gather_images is optional, if we define it we should also include the ose-must-gather one. In this change, we are trying to guarantee that ose image is always available because we mainly use it to get data from the deployment.\n\nUsing valid images in dci_must_gather_images should be a user responsibility that will be a bit more difficult to guarantee that are available.",
+      "parentUuid": "c928635e_252a5646",
+      "revId": "080e94535e628236c63493651e8d7702c53d1b6c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "95a666d8_3727c375",
         "filename": "plays/pre-run.yml",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2022-02-28T21:46:54Z",
       "side": 1,
       "message": "maybe local_registry_host is the correct variable?",
+      "revId": "080e94535e628236c63493651e8d7702c53d1b6c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b9a7e08_bbf569ee",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-01T00:07:25Z",
+      "side": 1,
+      "message": "Fixed, thanks!",
+      "parentUuid": "95a666d8_3727c375",
       "revId": "080e94535e628236c63493651e8d7702c53d1b6c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
