@@ -23,7 +23,7 @@
     chdir: "{{ dci_cluster_configs_dir }}"
     cmd: >
       set -x;
-      {{ provision_cache_store }}/{{ version }}/oc adm catalog mirror
+      {{ provision_cache_store }}/4.9.23/oc adm catalog mirror
       {{ local_registry }}{{ opm_local_registry_path }}@{{ index_sha.stdout }}
       {{ local_registry }} -a {{ dci_pullsecret_file }} --insecure
       --index-filter-by-os="linux/amd64"
