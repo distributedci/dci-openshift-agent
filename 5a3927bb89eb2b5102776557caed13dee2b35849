@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af9ffb2a_bfd43f1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-02T08:37:53Z",
+      "side": 1,
+      "message": "One minor question from my side",
+      "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c1929ca_75aefc60",
+        "filename": "roles/operators-catalog/tasks/redhat-catalog-source.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-02T08:37:53Z",
+      "side": 1,
+      "message": "Here we are using local_registry_host and local_registry_port, and also we use v{{ opm_version }}, but on index-prune.yml, I\u0027ve seen local_registry is used instead, and also no \"v\" is attached to the tag. Can we harmonize this? Or just clarify why to use one option or another on different points?",
+      "range": {
+        "startLine": 12,
+        "startChar": 16,
+        "endLine": 12,
+        "endChar": 115
+      },
+      "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
