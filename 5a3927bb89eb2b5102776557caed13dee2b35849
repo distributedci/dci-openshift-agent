@@ -39,6 +39,47 @@
       },
       "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "828d7160_99030058",
+        "filename": "roles/operators-catalog/tasks/redhat-catalog-source.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-03-02T10:30:38Z",
+      "side": 1,
+      "message": "\u003e Here we are using local_registry_host and local_registry_port, and also we use v{{ opm_version }}, but on index-prune.yml, I\u0027ve seen local_registry is used instead, and also no \"v\" is attached to the tag. Can we harmonize this? Or just clarify why to use one option or another on different points?\n\n+1\nWhen new catalog index is built, logs are showing that the image is tagged with AND without the\u0027v\u0027(I am not sure why, may be to ensure legacy compatibility?)",
+      "parentUuid": "4c1929ca_75aefc60",
+      "range": {
+        "startLine": 12,
+        "startChar": 16,
+        "endLine": 12,
+        "endChar": 115
+      },
+      "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7ea898e_be442678",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-03-02T10:30:38Z",
+      "side": 1,
+      "message": "Regarding the \u0027v\u0027, logs of the last build are showing this:\n[operators-mirror : Build the catalog index]: [...]\n\"Successfully tagged registry.dfwt5g.lab:4443/redhat/redhat-operator-index:v4.10\", \"Successfully tagged registry.dfwt5g.lab:4443/redhat/redhat-operator-index:4.10\"",
+      "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
