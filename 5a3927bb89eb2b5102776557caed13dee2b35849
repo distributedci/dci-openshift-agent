@@ -65,6 +65,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8362914f_bef5cbf2",
+        "filename": "roles/operators-catalog/tasks/redhat-catalog-source.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-02T22:45:42Z",
+      "side": 1,
+      "message": "Thanks, fixed. I was trying to get rid of the v as it is only a tag on our side for the index pruned. But will keep it for now.\n\nFixed the registry var name. On a separate CR we should standardize the registry references.",
+      "parentUuid": "828d7160_99030058",
+      "range": {
+        "startLine": 12,
+        "startChar": 16,
+        "endLine": 12,
+        "endChar": 115
+      },
+      "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a7ea898e_be442678",
@@ -78,6 +102,24 @@
       "writtenOn": "2022-03-02T10:30:38Z",
       "side": 1,
       "message": "Regarding the \u0027v\u0027, logs of the last build are showing this:\n[operators-mirror : Build the catalog index]: [...]\n\"Successfully tagged registry.dfwt5g.lab:4443/redhat/redhat-operator-index:v4.10\", \"Successfully tagged registry.dfwt5g.lab:4443/redhat/redhat-operator-index:4.10\"",
+      "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9195947_b9a13ee5",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-02T22:45:42Z",
+      "side": 1,
+      "message": "Thanks Charles, it is fixed.",
+      "parentUuid": "a7ea898e_be442678",
       "revId": "5a3927bb89eb2b5102776557caed13dee2b35849",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
