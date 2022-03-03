@@ -1,6 +1,24 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7609818_e3b5dc98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-03T19:15:04Z",
+      "side": 1,
+      "message": "Hey Bill, sorry this one has not received review attention in a while.\n\nAt some point setting opm_version would use that version on mirroring without having to deal with is GA or RC (https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/9ac8a3cd0c6e8a84741c5c4b76042357b0f7e976)\n\nBut that has been replaced with another way to find a valid operator index (https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/014404e39099c985756b040cfc67045c4e00f8b4) what it does is that it will try to use the operator index for the running job version e.g. 4.11, if it does not meet the requirements then it will try with the previous operator index: 4.10 and so on. It\u0027s \"smarter\" in a way but won\u0027t allow you to pick a version.\n\nIf this new behavior is not useful for your case we can figure out something to make it happen.",
+      "revId": "c16972702f593723e7c676384c16fee93e6d699d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "d0730981_67b4bf00",
         "filename": "roles/operators-mirror/tasks/build-catalog-image.yml",
@@ -14,10 +32,10 @@
       "side": 1,
       "message": "This is unrelated to this change, but I see we still use \"--filter-by-os\" instead of the version dependent \"{{ filter_by_art }}\" as we do, for insteance in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/22204/2/roles/operators-mirror/tasks/mirror.yml#30\nI this correct?",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "00fdfda5_3a0332b2",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -31,10 +49,10 @@
       "side": 1,
       "message": "I like this idea. I\u0027d just ask to document it, otherwise we will forget about it. Not quite sure where it would be the best place to do it though.",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "b0cf51fd_834343b3",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -49,10 +67,10 @@
       "message": "Regarding documentation, what should the scope be? Describe the meaning of the variable and possible values? Its utility?\nHere I provide some ideas for documenting this, AFAIK (this may apply for other variables too):\n1) Extend DCI OpenShift Agent README with a section related to \"useful variables\" or something like this, then include there the variable and its description. However, as this kind of variables seem not to be provided in a config file (like settings.yml or pipelines), this may be confusing. \n2) In the dallas-internal-docs repo, create a new README with tips related to the Openshift Agent, including this info and enabling the inclusion of info from other parts of the agent.\nWhat do you think?",
       "parentUuid": "00fdfda5_3a0332b2",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "26bddbc9_4061be09",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -72,10 +90,10 @@
         "endChar": 37
       },
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "9eedf0ec_ea141fa1",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -96,10 +114,10 @@
         "endChar": 37
       },
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "088c08d1_73b93f9e",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -120,10 +138,10 @@
         "endChar": 37
       },
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "901e41cd_fbb0a824",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -144,10 +162,10 @@
         "endChar": 37
       },
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": false
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "b1f145c2_50c680fd",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -161,10 +179,10 @@
       "side": 1,
       "message": "Also, aren\u0027t the above two facts redundant? I mean, we\u0027re just setting facts with the same name as the input variables. Is there any reason for that?",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "5b067de3_f5a34ad3",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -179,10 +197,10 @@
       "message": "it\u0027s not redundant, the version.split is the default if base_version is not set.",
       "parentUuid": "b1f145c2_50c680fd",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "d68519cb_6017d987",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -197,10 +215,10 @@
       "message": "He, I don\u0027t believe we\u0027re discussing the same lines here.\nI meant lines 7 and 8, where we take variables opm_catalog_source_name and namespace and set them to facts with the same name. Isn\u0027t that redundant or that is follow I purpose I don\u0027t see?\nI know those lines are not in the scope of the CR, but I can\u0027t help wondering.",
       "parentUuid": "5b067de3_f5a34ad3",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "2a352434_a0fc8e95",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -215,10 +233,10 @@
       "message": "I agree with Nacho, in fact, this kind of redundant definitions gave me problems in the past, so I would try to avoid them if possible.",
       "parentUuid": "d68519cb_6017d987",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "6207b7be_711654e3",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -233,10 +251,10 @@
       "message": "ahh.. I see what you mean.\n\nThe reason for this is an oddity in ansible.  Those variables are set in the roles defaults.  But defaults only exist in the role..  meaning, they are not exported.  I know it looks ugly, but think of this as doing a shell export command on arguments.  By doing this it makes these variables available for operators-catalog which is the other piece that ties this together.",
       "parentUuid": "2a352434_a0fc8e95",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": true
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "0d5d4377_35fa75fc",
         "filename": "roles/operators-mirror/tasks/facts.yml",
@@ -251,8 +269,7 @@
       "message": "okey, got it then!",
       "parentUuid": "6207b7be_711654e3",
       "revId": "c16972702f593723e7c676384c16fee93e6d699d",
-      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
-      "unresolved": false
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
