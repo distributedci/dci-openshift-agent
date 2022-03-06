@@ -76,7 +76,7 @@ if [ -n "$GERRIT_USER" ]; then
             if ! grep -qP "(${tracking_projects})" <<<${project}; then
                 continue
             fi
-            echo "============================"
+            echo "==========================="
             if [ "$type" = "patchset-created" ]; then
                 subject="$(jq -r .change.subject <<< $data)"
                 echo "$type $project $number \"$subject\" $url =============================="
