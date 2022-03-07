@@ -33,6 +33,108 @@
       "message": "recheck",
       "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81ae7ac8_f6006651",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-03-07T23:35:19Z",
+      "side": 1,
+      "message": "good stuff, just general comments to make it more readable",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0f9981a_58183e51",
+        "filename": "docs/upi.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-03-07T23:35:19Z",
+      "side": 1,
+      "message": "would be nice to define what \"UPI\" means for clarity\u0027s sake",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5820b8e4_a1331d4d",
+        "filename": "docs/upi.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-03-07T23:35:19Z",
+      "side": 1,
+      "message": "should this read \u0027settings.yml\u0027 instead? you mention the settings file...",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7aa4c795_c5dd4284",
+        "filename": "roles/upi-installer/tasks/00_validation.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-03-07T23:35:19Z",
+      "side": 1,
+      "message": "what about \u0027candidate\u0027 ? also, could use an `in` clause here too",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac3dbc27_d78eaa3e",
+        "filename": "roles/upi-installer/tasks/10_get_oc.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-03-07T23:35:19Z",
+      "side": 1,
+      "message": "maybe put all these in a block with delegate_to ? would be more readable imo",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "994d0d47_98f9c50d",
+        "filename": "roles/upi-installer/tasks/20_extract_installer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-03-07T23:35:19Z",
+      "side": 1,
+      "message": "could there be an instance where you run this without running 10_get_oc.yml ? if so, maybe fail when cache_server is undefined.",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
