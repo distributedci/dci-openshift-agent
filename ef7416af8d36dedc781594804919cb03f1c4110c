@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e47b923a_eaa827b3",
+        "filename": "docs/upi.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-03-08T19:14:56Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a0f9981a_58183e51",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5820b8e4_a1331d4d",
@@ -86,6 +104,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7ee0c5e_bce1ccfd",
+        "filename": "docs/upi.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-03-08T19:14:56Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5820b8e4_a1331d4d",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7aa4c795_c5dd4284",
@@ -99,6 +135,24 @@
       "writtenOn": "2022-03-07T23:35:19Z",
       "side": 1,
       "message": "what about \u0027candidate\u0027 ? also, could use an `in` clause here too",
+      "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a74c8f8_c7985b83",
+        "filename": "roles/upi-installer/tasks/00_validation.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-03-08T19:14:56Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7aa4c795_c5dd4284",
       "revId": "ef7416af8d36dedc781594804919cb03f1c4110c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
