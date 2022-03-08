@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14454732_030b426a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-08T09:54:20Z",
+      "side": 1,
+      "message": "Thanks for this Tony, I think it\u0027s interesting to avoid testing WIP changes, just not to saturate the libvirt queue. From my side it\u0027s fine, but I don\u0027t know if I am missing something, like in the other change I\u0027ve just reviewed.",
+      "revId": "be383a7dc321ee2e93c4f3e3519105d83fcc2152",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
