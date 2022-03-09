@@ -16,6 +16,23 @@
       "message": "Hi Fred, thank you for the packaging! I don\u0027t know if we could test such a change from Zuul, giving +2.",
       "revId": "d8e3e4dd35fecc236a7eeaaba40aa20022479708",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a5377f8_eb5b649d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-09T14:11:09Z",
+      "side": 1,
+      "message": "The wait-mcp role relies on a variable called dci_cluster_configs_dir which is used for both oc and kubeconfig, but in d-o-a-a, we use a different variable to refer to each case. Here, we would need to create oc_tool_path like we do in d-o-a-a, and then use it when we refer to oc command",
+      "revId": "d8e3e4dd35fecc236a7eeaaba40aa20022479708",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
