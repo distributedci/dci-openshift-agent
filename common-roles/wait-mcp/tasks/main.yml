@@ -20,7 +20,6 @@
       retries: "{{ mcp_wait_retries }}"
       delay: "{{ mcp_wait_delay }}"
       delegate_to: localhost
-
   rescue:
     # If the k8s_info module fails, we will try using OC to get the mcp status, because
     # the output may be different
@@ -88,5 +87,4 @@
       when:
         - dci_workarounds is defined
         - '"bz2053445" in dci_workarounds'
-
 ...
