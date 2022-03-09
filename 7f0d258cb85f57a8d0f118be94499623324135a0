@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.8-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e30706b_aee235c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-03-09T19:51:39Z",
+      "side": 1,
+      "message": "Tatiana, thanks for starting this, just in case I missed anything, I think we are still going to perform the work-around right? but only if the ovnkube-node-* pod in the node with SchedulingDisable is in good shape?  ",
+      "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
