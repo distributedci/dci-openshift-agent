@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee6f322b_10d36a62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-09T14:32:51Z",
+      "side": 1,
+      "message": "There are some locations in which we may need to change `oc` by {{ oc_tool_path }} to complete the transition towards the new variable. Just leaving them here:\n\n- roles/operator-sriov/tasks/main.yml:    oc label node {{ item.metadata.name }} feature.node.kubernetes.io/network-sriov.capable\u003d\"true\"\n- roles/redhat-tests/tasks/conformance.yml:     | oc image mirror -a /auths.json -f - --keep-manifest-list\u003dtrue --continue-on-error\u003dtrue --skip-missing\u003dtrue\n- roles/cnv-setup/tasks/deploy-cnv.yml:    oc patch installplan {{ ip_name }} \\\n\nthe rest is fine for me",
+      "revId": "2d5a1e8e737bc709420167f32f9027d173b6372a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
