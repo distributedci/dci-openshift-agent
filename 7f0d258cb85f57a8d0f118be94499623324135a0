@@ -16,6 +16,23 @@
       "message": "As discussed today with Manuel and Tony, we\u0027re going to deactivate the rescue to simplify BZ-related debug. That would also solve the problem with doa / doaa common roles because we\u0027ll not share kubeconfig and oc in this role anymore.",
       "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6cbb60c7_796b5a5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-03-09T17:25:30Z",
+      "side": 1,
+      "message": "check dallas ocp-4.8-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
+      "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
