@@ -20,31 +20,7 @@
       retries: "{{ mcp_wait_retries }}"
       delay: "{{ mcp_wait_delay }}"
       delegate_to: localhost
-
   rescue:
-    # If the k8s_info module fails, we will try using OC to get the mcp status, because
-    # the output may be different
-    # We are doing this with ignore_errors: true just to retrieve logs in order to
-    # compare the output with k8s_info output, in order to open a bugzilla
-    - name: MachineConfigPool check failed, using oc mcp get check
-      environment:
-        KUBECONFIG: "{{ kubeconfig_path }}"
-      shell: >
-        {{ oc_tool_path }} get mcp
-      register: reg_mcpool_status
-      vars:
-        master_query: "master[\\s]+rendered-master-[a-z0-9]+[\\s]+True[\\s]+False"
-        worker_query: "worker[\\s]+rendered-worker-[a-z0-9]+[\\s]+True[\\s]+False"
-        masters_updated: "{{ reg_mcpool_status.stdout | regex_search(master_query) != None }}"
-        workers_updated: "{{ reg_mcpool_status.stdout | regex_search(worker_query) != None }}"
-      until:
-        - masters_updated
-        - workers_updated
-      retries: "{{ mcp_wait_retries }}"
-      delay: "{{ mcp_wait_delay }}"
-      ignore_errors: true
-      delegate_to: localhost
-
     - name: Wait for updated machine configs to be applied on the nodes failed - no workaround applied
       fail:
         msg: "No workaround is defined, so the job has to fail at this point"
@@ -88,5 +64,4 @@
       when:
         - dci_workarounds is defined
         - '"bz2053445" in dci_workarounds'
-
 ...
