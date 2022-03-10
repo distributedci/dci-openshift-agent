@@ -50,6 +50,41 @@
       "message": "Tatiana, thanks for starting this, just in case I missed anything, I think we are still going to perform the work-around right? but only if the ovnkube-node-* pod in the node with SchedulingDisable is in good shape?  ",
       "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42107d2a_8bb76c52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-10T08:23:17Z",
+      "side": 1,
+      "message": "I also understood the same, at least that we will not remove the workaround for the moment, but reformulating it and also linking it to a new BZ",
+      "parentUuid": "9e30706b_aee235c5",
+      "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb860289_75a768ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-10T08:23:17Z",
+      "side": 1,
+      "message": "I\u0027m not 100% sure about removing at all the workaround, because this issue happens a lot in VCP jobs. ",
+      "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
