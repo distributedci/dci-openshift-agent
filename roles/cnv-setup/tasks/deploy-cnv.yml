@@ -44,7 +44,7 @@
 
 - name: "Approving InstallPlan of CNV"
   shell: >
-    oc patch installplan {{ ip_name }} \
+    {{ oc_tool_path }} patch installplan {{ ip_name }} \
     --namespace {{ cnv_ns }} \
     --type merge \
     --patch '{"spec":{"approved":true}}'
