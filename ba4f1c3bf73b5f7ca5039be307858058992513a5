@@ -50,6 +50,23 @@
       "message": "LGTM",
       "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "481f11e3_cea70a62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-10T16:07:09Z",
+      "side": 1,
+      "message": "In the job launched this morning, it is failing exactly in the modified task from operator-sriov, so we need to check this.",
+      "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
