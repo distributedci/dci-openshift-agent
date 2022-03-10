@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c854161_6dfcb41f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-10T01:11:17Z",
+      "side": 1,
+      "message": "Prune and mirror of \u003c 4.11 index:\n https://www.distributed-ci.io/jobs/4d8b9d74-2721-487c-b32a-f55fffbdbcf1/jobStates\n\nPrune and mirroring of v4.11 index: \n https://www.distributed-ci.io/jobs/aed09969-a340-4b42-9c80-782a8e66e312/jobStates",
+      "revId": "d2a97386f18cafa3829066a0c93fe665be63db54",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
