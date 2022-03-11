@@ -30,7 +30,16 @@
   when:
   - dci_disconnected | default(false) | bool
   - opm_mirror_list is defined
+  - opm_mirror_list != []
 
+- name: Disable default catalog sources for disconnected deployment
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+  shell: |
+    {{ oc_tool_path }} patch OperatorHub cluster --type json -p '[{"op": "add", "path": "/spec/disableAllDefaultSources", "value": true}]'
+  delegate_to: localhost
+  when:
+  - dci_disconnected | default(false) | bool
 
 ### Begin CNF
 
