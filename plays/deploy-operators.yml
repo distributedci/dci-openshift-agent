@@ -30,7 +30,16 @@
   when:
   - dci_disconnected | default(false) | bool
   - opm_mirror_list is defined
+  - opm_mirror_list != []
 
+- name: Disable default catalog sources for disconnected deployment
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+  shell: |
+    {{ oc_tool_path }} patch OperatorHub cluster --type json -p '[{"op": "add", "path": "/spec/disableAllDefaultSources", "value": true}]'
+  delegate_to: localhost
+  when:
+  - dci_disconnected | default(false) | bool
 
 ### Begin CNF
 
@@ -77,12 +86,16 @@
       name: operator-performance-profile
     when:
     - hostvars.localhost.enable_perf_addon|default(true)|bool
+    - opm_mirror_list is defined
+    - '"performance-addon-operator" in opm_mirror_list'
 
   - name: "deploy-operators : Install SRIOV operator"
     include_role:
       name: operator-sriov
     when:
     - hostvars.localhost.enable_sriov|default(true)|bool
+    - opm_mirror_list is defined
+    - '"sriov-networ-operator" in opm_mirror_list'
 
   - name: "deploy-operators : Reset maxUnavailable count to default value 1"
     k8s:
