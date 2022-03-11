@@ -41,7 +41,11 @@
         chdir: "{{ tmp_prune.path }}"
         cmd: >
           set -x;
+<<<<<<< HEAD
           mkdir -p "configs";
+=======
+          mkdir "{{ tmp_prune.path }}/configs";
+>>>>>>> b9a2051 (Prunning index and creating catalog if opm_mirror_list has items)
           REGISTRY_AUTH_FILE={{ dci_pullsecret_file }}
           {{ provision_cache_store }}/{{ version }}/opm render
           registry.redhat.io/redhat/redhat-operator-index:v{{ ocp_major }}.{{ ocp_minor }} |
