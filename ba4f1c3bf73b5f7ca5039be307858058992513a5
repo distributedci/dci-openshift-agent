@@ -103,6 +103,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4657d5e_467fdcf0",
+        "filename": "roles/cnv-setup/tasks/deploy-cnv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-14T10:44:16Z",
+      "side": 1,
+      "message": "Doing the same here.",
+      "parentUuid": "9ca2c5c4_d0bf9114",
+      "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b217836f_ccb691d9",
@@ -116,6 +134,24 @@
       "writtenOn": "2022-03-14T09:50:14Z",
       "side": 1,
       "message": "this task is executed on the provisioner where the oc bin is already in a default location (that why we don\u0027t need to specify the full path of the bin).\nLast test has failed because we are using the path from the jumphost which does not exist for the provisioner.",
+      "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c0c771a_a886691a",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-14T10:44:16Z",
+      "side": 1,
+      "message": "Oh, you\u0027re right Charles, I forgot that, I\u0027ve modified it just not to change to oc_tool_path, thanks for catching!",
+      "parentUuid": "b217836f_ccb691d9",
       "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
