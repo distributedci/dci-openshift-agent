@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5db90f3b_4c33906d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-14T17:40:10Z",
+      "side": 1,
+      "message": "check libvirt -e dci_topic\u003dOCP-4.7",
+      "revId": "392531d54ed148d626f2333e3a9966b3c5bcdf57",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
