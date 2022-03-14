@@ -16,6 +16,46 @@
       "message": "LGTM",
       "revId": "207079b72449859671668b93ff4773d833fb3b9a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "586deff9_d585e570",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-14T10:23:31Z",
+      "side": 1,
+      "message": "Just one minor comment from my side that does not really affect to the current behaviour, but maybe it improves readability.",
+      "revId": "207079b72449859671668b93ff4773d833fb3b9a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75addafb_067bac78",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-14T10:23:31Z",
+      "side": 1,
+      "message": "Real condition here would be \"\u003d\u003d\", doesn\u0027t it?",
+      "range": {
+        "startLine": 49,
+        "startChar": 45,
+        "endLine": 49,
+        "endChar": 47
+      },
+      "revId": "207079b72449859671668b93ff4773d833fb3b9a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
