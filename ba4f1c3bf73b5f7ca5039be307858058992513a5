@@ -67,6 +67,57 @@
       "message": "In the job launched this morning, it is failing exactly in the modified task from operator-sriov, so we need to check this.",
       "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f97dcbc_a2385f6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-03-14T09:50:14Z",
+      "side": 1,
+      "message": "this CR won\u0027t work on tasks that run on provisioner, an update is needed",
+      "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ca2c5c4_d0bf9114",
+        "filename": "roles/cnv-setup/tasks/deploy-cnv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-03-14T09:50:14Z",
+      "side": 1,
+      "message": "The same will apply here",
+      "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b217836f_ccb691d9",
+        "filename": "roles/operator-sriov/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-03-14T09:50:14Z",
+      "side": 1,
+      "message": "this task is executed on the provisioner where the oc bin is already in a default location (that why we don\u0027t need to specify the full path of the bin).\nLast test has failed because we are using the path from the jumphost which does not exist for the provisioner.",
+      "revId": "ba4f1c3bf73b5f7ca5039be307858058992513a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
