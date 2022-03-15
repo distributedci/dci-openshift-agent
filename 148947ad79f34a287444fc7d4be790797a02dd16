@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "332109c9_c47d1999",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-15T12:05:11Z",
+      "side": 1,
+      "message": "Some comments from my side, hope it helps",
+      "revId": "148947ad79f34a287444fc7d4be790797a02dd16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a79afb8_70718981",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-15T12:05:11Z",
+      "side": 1,
+      "message": "typo: network?",
+      "range": {
+        "startLine": 98,
+        "startChar": 14,
+        "endLine": 98,
+        "endChar": 20
+      },
+      "revId": "148947ad79f34a287444fc7d4be790797a02dd16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62ef44ae_28254fff",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-15T12:05:11Z",
+      "side": 1,
+      "message": "isn\u0027t it better to put opm_mirror_list|length? I believe that, if you apply length to a list, it would return 0 if it is an empty list, else a value higher than 0.",
+      "range": {
+        "startLine": 150,
+        "startChar": 6,
+        "endLine": 150,
+        "endChar": 27
+      },
+      "revId": "148947ad79f34a287444fc7d4be790797a02dd16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
