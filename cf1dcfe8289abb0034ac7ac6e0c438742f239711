@@ -16,6 +16,125 @@
       "message": "Sorry, I didn\u0027t merge this because other changes were needed and I realized that 4.11 is failing during installation. It has been in cluster 4 two times. \n\n4.10 ran fine.\n4.11 failed waiting for kubeconfig\n4.9  running test",
       "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5c62f89_b7494e58",
+        "filename": "roles/operators-mirror/defaults/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-15T23:29:31Z",
+      "side": 1,
+      "message": "👍 I like being more explicit where the pruned images are placed, once this change is merged we can delete what\u0027s in olm ns/org.\n\nI also suggest to document this piece, perhaps under https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/heads/master/docs/disconnected_en.md ?",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "359e811c_29198a90",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-15T23:29:31Z",
+      "side": 1,
+      "message": "Maybe rename index_version to index_minor ?",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b95a2afe_b944df57",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-15T23:29:31Z",
+      "side": 1,
+      "message": "This one seems duplicated to me, since this is already in the defaults maybe you could omit it in here?",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c821507d_d1ec8989",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-15T23:29:31Z",
+      "side": 1,
+      "message": "Can you add a \".\" between maj and min? that would be easier to read when trying to figure out what version was used to build this pruned image, thanks!",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a644fcdf_cd753930",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-15T23:29:31Z",
+      "side": 1,
+      "message": "You could omit \"{{ tmp_prune.path }}/\" since you\u0027re already there",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe988398_b69517da",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-15T23:29:31Z",
+      "side": 1,
+      "message": "Since you\u0027re changing this, could you make this one multi-line?",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56e49103_f55c3a9d",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-15T23:29:31Z",
+      "side": 1,
+      "message": "This one does not include 4.11, I remember there was a reason to do this, could you add that in a comment? or if 4.11 is needed then change the condition to include \u003c\u003d 11",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
