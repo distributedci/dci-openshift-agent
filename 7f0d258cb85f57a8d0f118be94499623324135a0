@@ -85,6 +85,24 @@
       "message": "I\u0027m not 100% sure about removing at all the workaround, because this issue happens a lot in VCP jobs. ",
       "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "236ec16b_c62750d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-03-15T17:01:27Z",
+      "side": 1,
+      "message": "Hi Manuel and Ramon, thank you for the feedback, I changed the code to comply with it. \nNow before applying the MCP workaround, I ensure that all pods ovnkube-node-XXX are in the Running state. If that\u0027s not the case, the MCP workaround is not applied, and that keeps all logs needed for BZ.\n\nThe awk command to retrieve non-running pods is validated in Dallas.",
+      "parentUuid": "42107d2a_8bb76c52",
+      "revId": "7f0d258cb85f57a8d0f118be94499623324135a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

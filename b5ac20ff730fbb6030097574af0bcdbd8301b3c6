@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "075415d3_fc1a4899",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-03-15T17:01:27Z",
+      "side": 1,
+      "message": "Hi Manuel and Ramon, thank you for the feedback, I changed the code to comply with it. ",
+      "revId": "b5ac20ff730fbb6030097574af0bcdbd8301b3c6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
