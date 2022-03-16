@@ -71,6 +71,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d2cf9df0_cc2295fa",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-03-16T12:35:45Z",
+      "side": 1,
+      "message": "Is this fact used outside of this role?  If so then you should do something like:\n```\nopm_local_registry_path: \"{{ opm_local_registry_path }}\"\n```\nSo that the default value is available outside of this role.",
+      "parentUuid": "b95a2afe_b944df57",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c821507d_d1ec8989",
         "filename": "roles/operators-mirror/tasks/index-prune.yml",
         "patchSetId": 9
