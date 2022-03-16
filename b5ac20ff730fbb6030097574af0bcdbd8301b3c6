@@ -67,6 +67,24 @@
       "message": "Two comments regarding this check:\n\n- Do we expect to save the output of this command in a file for the future BZ? Or is it enough with the DCI output?\n- Do we expect to fail if ad_ovnkube_pods.stdout | length \u003e 0?",
       "revId": "b5ac20ff730fbb6030097574af0bcdbd8301b3c6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7e5f24f_32c87b53",
+        "filename": "common-roles/wait-mcp/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-03-16T14:19:38Z",
+      "side": 1,
+      "message": "Ramon, about your first question: We are not going to save the output of the command, when the job fails we collect the pods.txt file and there we can see if the ovnkube-node-* are crashing, and with journal logs and must-gather we\u0027ll have enough to file a BZ.\n\nNow if bad_ovnkube_pods.stdout | length \u003e 0 then we won\u0027t run the uncordon, but if I\u0027m understanding where you are going, is that we should fail at this point right? because if we simply do not run the uncordon, job will continue but eventually would fail because a node remains in SchedulingDisable, we could probably fail here to avoid waiting more time. Tatiana wdyt?",
+      "parentUuid": "889c65fc_8914defb",
+      "revId": "b5ac20ff730fbb6030097574af0bcdbd8301b3c6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
