@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8308573d_7086f8e2",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-16T23:03:45Z",
+      "side": 1,
+      "message": "In a connected env, opm_mirror_list will not be defined, still, we want the operators to be installed, I think this will not work, same for the ones below",
+      "revId": "8ebd894e333ac74ccbf286697245bf4070da2698",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
