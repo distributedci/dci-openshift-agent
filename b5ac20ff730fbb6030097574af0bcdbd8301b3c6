@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.8-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "b5ac20ff730fbb6030097574af0bcdbd8301b3c6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "889c65fc_8914defb",
+        "filename": "common-roles/wait-mcp/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-16T10:20:19Z",
+      "side": 1,
+      "message": "Two comments regarding this check:\n\n- Do we expect to save the output of this command in a file for the future BZ? Or is it enough with the DCI output?\n- Do we expect to fail if ad_ovnkube_pods.stdout | length \u003e 0?",
+      "revId": "b5ac20ff730fbb6030097574af0bcdbd8301b3c6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
