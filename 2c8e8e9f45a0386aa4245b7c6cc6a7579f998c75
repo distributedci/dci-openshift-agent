@@ -16,6 +16,40 @@
       "message": "Feedback has been addressed. Thanks!\n- New index tags format is working\n- Tests in progress on core cluster only for ansible_tags\u003djob,pre-run,post-run,success",
       "revId": "2c8e8e9f45a0386aa4245b7c6cc6a7579f998c75",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4a5bf73_0bdb1501",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-17T03:00:15Z",
+      "side": 1,
+      "message": "I\u0027ll give +2 after the change to the doc, thanks!",
+      "revId": "2c8e8e9f45a0386aa4245b7c6cc6a7579f998c75",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a004e06_692bc089",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-17T03:00:15Z",
+      "side": 1,
+      "message": "Could you please change to say \"pruned catalog images\"?",
+      "revId": "2c8e8e9f45a0386aa4245b7c6cc6a7579f998c75",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
