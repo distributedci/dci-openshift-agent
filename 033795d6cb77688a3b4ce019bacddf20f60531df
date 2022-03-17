@@ -104,6 +104,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5929b77_26cd1ff2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-03-17T13:20:06Z",
+      "side": 1,
+      "message": "The last patchset should address all these scenarios.",
+      "parentUuid": "1c2eed7a_fbef0d80",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e67a24e1_ed344901",
@@ -265,6 +283,24 @@
       "side": 1,
       "message": "Nacho, if registration (subscription) works in connected environments for now it\u0027s ok, the registration can be done in disconnected mode too, but you need to set a proxy and modify some settings of the rhn files, anyways that looks more like a future feature, our provisioning nodes use some repositories from the jumpbox but is not updated, so we can talk about that later to address it.",
       "parentUuid": "675c5d75_f00dca21",
+      "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af2bf90c_0ffbf25b",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-03-17T13:20:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7491ca6c_10a6c18a",
       "revId": "033795d6cb77688a3b4ce019bacddf20f60531df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
