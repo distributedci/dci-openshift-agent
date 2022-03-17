@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "480aef45_b6cdb67c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "Feedback has been addressed. Thanks!\n- New index tags format is working\n- Tests in progress on core cluster only for ansible_tags\u003djob,pre-run,post-run,success",
+      "revId": "2c8e8e9f45a0386aa4245b7c6cc6a7579f998c75",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

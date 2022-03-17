@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa5f106f_fadd02b1",
+        "filename": "roles/operators-mirror/defaults/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "Added documentation entry.\n\nSure, created: https://issues.redhat.com/browse/CILAB-509 for the clean registry clean up.",
+      "parentUuid": "c5c62f89_b7494e58",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "359e811c_29198a90",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-03-15T23:29:31Z",
       "side": 1,
       "message": "Maybe rename index_version to index_minor ?",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82f1fd04_123272e2",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "359e811c_29198a90",
       "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -87,6 +123,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20b605d5_509b0187",
+        "filename": "roles/operators-mirror/tasks/facts.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "Yeah, this is used by the operators-catalog role. Redefined it as recommended. Thanks@",
+      "parentUuid": "d2cf9df0_cc2295fa",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c821507d_d1ec8989",
@@ -100,6 +154,24 @@
       "writtenOn": "2022-03-15T23:29:31Z",
       "side": 1,
       "message": "Can you add a \".\" between maj and min? that would be easier to read when trying to figure out what version was used to build this pruned image, thanks!",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0eff1c42_a5a9f1a9",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "Changed it to M.m_timestamp. Will test if that is accepted by the registry",
+      "parentUuid": "c821507d_d1ec8989",
       "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -121,6 +193,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d9f2ff2_9f317b8e",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a644fcdf_cd753930",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fe988398_b69517da",
@@ -138,6 +228,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "10fc6738_11bf551a",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "fe988398_b69517da",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56e49103_f55c3a9d",
@@ -151,6 +259,24 @@
       "writtenOn": "2022-03-15T23:29:31Z",
       "side": 1,
       "message": "This one does not include 4.11, I remember there was a reason to do this, could you add that in a comment? or if 4.11 is needed then change the condition to include \u003c\u003d 11",
+      "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e761887a_32aecff4",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-17T00:02:19Z",
+      "side": 1,
+      "message": "From index_minor \u003c\u003d 10, we should use /database/index.db, for 11 and newer /configs/\n\nChanged condition to \u003c\u003d10",
+      "parentUuid": "56e49103_f55c3a9d",
       "revId": "cf1dcfe8289abb0034ac7ac6e0c438742f239711",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
