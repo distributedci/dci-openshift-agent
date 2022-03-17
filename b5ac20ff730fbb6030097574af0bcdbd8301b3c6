@@ -85,6 +85,24 @@
       "parentUuid": "889c65fc_8914defb",
       "revId": "b5ac20ff730fbb6030097574af0bcdbd8301b3c6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b4be77_4ced993b",
+        "filename": "common-roles/wait-mcp/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-03-17T08:38:48Z",
+      "side": 1,
+      "message": "Hi Ramon and Manuel, thank you for the catch, added the fail.",
+      "parentUuid": "b7e5f24f_32c87b53",
+      "revId": "b5ac20ff730fbb6030097574af0bcdbd8301b3c6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
