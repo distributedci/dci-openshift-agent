@@ -50,6 +50,24 @@
       "message": "Could you please change to say \"pruned catalog images\"?",
       "revId": "2c8e8e9f45a0386aa4245b7c6cc6a7579f998c75",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41e637a1_1648f645",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-17T03:05:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a004e06_692bc089",
+      "revId": "2c8e8e9f45a0386aa4245b7c6cc6a7579f998c75",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
