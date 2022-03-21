@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e30ba33_4d596f12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-03-21T22:49:09Z",
+      "side": 1,
+      "message": "that\u0027s not really needed as dci-ansible already requires python-dciclient. what are you trying to fix with this?",
+      "revId": "31ff584d782c56ad575635a4eb77a81fc32662d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
