@@ -1,0 +1,27 @@
+# target_registry: registry.dfwt5g.lab
+# source_images:
+#   - docker.io/library/busybox:latest
+#   - docker.io/library/nginx@sha256:deadbeef
+#   - docker.io/image:tag
+#   - quay.io/ns/image:tag
+
+---
+- name: "Assert requirements are met"
+  assert:
+    that:
+      - mci_pullsecrets_file is defined
+      - mci_pullsecrets_file | length
+      - mci_source_images is defined
+      - mci_source_images | length
+      - mci_target_registry is defined
+      - mci_target_registry | length
+
+- name: "Mirror required images"
+  include_task:
+    name: mirror-images.yml
+  loop: "{{ images }}"
+  loop_control:
+    loop_var: source_image
+    #label: "{{ image | urlsplit('path') | basename }}"
+
+  # quay.io:443/namespace/subnamespace/image:tag

@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Tony Garcia
+  description: Mirror container images from a remote registry
+  company: Red Hat, Inc.
+  license: Apache-2.0
+  min_ansible_version: 2.9
+  platforms:
+    - name: Red Hat
+      versions:
+        - 8.4
+    - name: Openshift Cluster Platform
+      versions:
+        - 4.8
+  galaxy_tags: []
+dependencies: []

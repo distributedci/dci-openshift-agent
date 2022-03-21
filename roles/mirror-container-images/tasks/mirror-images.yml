@@ -1,0 +1,59 @@
+# Ideas
+# slurp the pullsecret file
+# *IF* docker.io auths is present
+# extract credentials
+#
+# *IF* docker.io in image, get the bearer token for that scope
+# example:
+# curl --user 'user:passwd' \
+#   "https://auth.docker.io/token?service=registry.docker.io&scope=repository:{{ ns/image }}:pull" |
+# jq -r .token
+#
+# With the bearer token, find the rate-limit for the account
+# example:
+# curl --head \
+#   -H "Authorization: Bearer $TOKEN"
+#  https://registry-1.docker.io/v2/{{ ns/image }}/manifests/{{ tag }} 2>&1
+## HTTP/1.1 200 OK
+## docker-content-digest: sha256:1071c060ad84cf07f71aae69b6adb44d81a01b23936ef09b5292fea368d51f22
+## ratelimit-limit: 200;w=21600
+## ratelimit-remaining: 183;w=21600
+#
+
+---
+- name: "Set image scheme"
+  set_fact:
+    image: "docker://{{ source_image }}"
+
+# In docker.io this counts towards the rate limit
+- name: "Get Digest from image in source"
+  shell: >
+    skopeo inspect 
+    --authfile {{ pullsecret_file }}
+    {{ image}}
+  register: src_inspect
+  retries: 5
+  delay: 5
+  until: src_inspect is not failed
+
+- name: "Get Digest from image in target"
+  shell: >
+    skopeo inspect
+    --authfile {{ pull_secrets }}
+    docker://{{ trgt_registry }}/{{ image }}
+  retries: 5
+  delay: 5
+  register: tgt_inspect
+  until: tgt_inspect is not failed
+
+- name: "Mirror missing images"
+  shell: >
+    skopeo copy
+    --authfile {{ pull_secrets }}
+    docker://{{ missing_images | join(" ") }}
+    docker://{{ trgt_registry }}/{{ image_name }}
+  register: mirror_image
+  retries: 5
+  delay: 5
+  until: mirror_image is not failed
+  when: src_digest.json.digest != tgt_digest.json.digest
