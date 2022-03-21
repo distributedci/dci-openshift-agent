@@ -1,5 +1,11 @@
+%if 0%{?rhel} && 0%{?rhel} < 8
+%global with_python2 1
+%else
+%global with_python3 1
+%endif
+
 Name:          dci-openshift-agent
-Version:       0.4.0
+Version:       0.5.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -22,6 +28,11 @@ Requires: python3-pyyaml python3-openshift
 Requires: ansible-role-dci-cvp
 Requires: jq
 Requires: git
+
+%if 0%{?with_python2}
+Requires: python2-dciclient
+%if 0%{?with_python3}
+Requires: python3-dciclient
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -136,6 +147,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Mon Mar 21 2022 Tony Garcia <tonyg@redhat.com> 0.5.0-1
+- Add a Requires on python-dciclient
+
 * Wed Mar  9 2022 Frederic Lepied <flepied@redhat.com> 0.4.0-1
 - store shared roles in /usr/share/dci/roles
 
