@@ -16,6 +16,29 @@
       "message": "recheck",
       "revId": "cd03bb6e47be47b3475ff19a378b6b29c786856e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09f44f26_346360e2",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-21T07:45:01Z",
+      "side": 1,
+      "message": "This has been introduced after a rebase, hasn\u0027t it? I mean, needs to be updated correctly.",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 82
+      },
+      "revId": "cd03bb6e47be47b3475ff19a378b6b29c786856e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
