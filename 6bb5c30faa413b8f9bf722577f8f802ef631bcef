@@ -50,6 +50,24 @@
       "message": "The previous failure is an expected behavior because it was run for a disconnected environment, and no list of operators to mirror was provided but we are trying to enable CNF. dci_prepare_cnf should be set to false then.",
       "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8234d727_3056c921",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-23T07:58:58Z",
+      "side": 1,
+      "message": "So, dci_prepare_cnf should be also changed in the pipeline, shouldn\u0027t it?",
+      "parentUuid": "f3d273e3_8b2f144c",
+      "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
