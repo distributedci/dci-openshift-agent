@@ -68,6 +68,24 @@
       "parentUuid": "f3d273e3_8b2f144c",
       "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09f066c8_4191b9f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-23T15:54:58Z",
+      "side": 1,
+      "message": "It depends, I\u0027d say that is not necessarily required to do it in the pipeline file, but in the args passed to modify it. This is, doing it in the same way you disabled the cnf tests and this just for testing.\n\nThe error seen above, is a wrong configuration (inventory and pipeline)\n\nThe check was requesting:\n\n- To install CNF, \"dci_prepare_cnf: true\" (pipeline)\n- To not mirror any image,  opm_mirror_list was not defined (pipeline)\n- To do it disconnected, dci_disconnected\u003dtrue (inventory)\n\nThis is a misconfiguration, because a cluster can\u0027t be disconnected, asking to install CNF and not mirror its images.\n\nThen, it all depends on what you want to test, e.g.\n\nIf you want to test a disconnected env without opm_mirror_list then yes, you have to not only set \"dci_prepare_cnf: false\" but also not run any other setting that expects CNF.",
+      "parentUuid": "8234d727_3056c921",
+      "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
