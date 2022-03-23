@@ -33,6 +33,23 @@
       "message": "👍",
       "revId": "fe6c430cfb0048a56a7b973251257838b903e843",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ea22e72_509fdb1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-03-23T17:06:51Z",
+      "side": 1,
+      "message": "Thx for the review !\n\nHere an example of execution:\nhttps://www.distributed-ci.io/jobs/774f37cb-1177-451d-9541-3b02009b77f1/jobStates",
+      "revId": "fe6c430cfb0048a56a7b973251257838b903e843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
