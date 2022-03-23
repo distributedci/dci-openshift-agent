@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "9fe5947c105a391772ad67203cd41e7c44d6e16e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd79bda0_2303d0ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-23T19:18:29Z",
+      "side": 1,
+      "message": "I\u0027ll better merge it tomorrow, after having the result from dci-check-change, to avoid conflicts with merges that are nearby the execution of the daily jobs",
+      "revId": "9fe5947c105a391772ad67203cd41e7c44d6e16e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
