@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "246bc78d_7a656094",
+        "filename": "samples/roles/dnsmasq/tasks/.main.yml.swp",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 0,
+      "message": "Should not be needed",
+      "revId": "4af90bf5abb0768627c6d6ad07bd90a3a27a4dc6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6140f1d9_c3bf21a9",
+        "filename": "samples/roles/dnsmasq/tasks/.uninstall.yml.swp",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 0,
+      "message": "I do not think this file is needed",
+      "revId": "4af90bf5abb0768627c6d6ad07bd90a3a27a4dc6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

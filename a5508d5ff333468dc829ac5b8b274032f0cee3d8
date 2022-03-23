@@ -67,6 +67,218 @@
       "message": "recheck",
       "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e29fc8bf_73c07173",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "Hello Nacho, thanks for all the work here. \n\nI have some minor comments/recommendations. \n\nIMO, these set of playbooks can be considered as a single artifact with not dependencies and relations on the agent. I think that we could ship this in an utils/bootstrapping/ directory. The plays may be run only one time during the environment bootstrapping so no need to make it look like a hook.\n\nWe can mention in the Agent\u0027s readme about these helper artifact that will make easier the initial configuration.\n\nwdyt?\n\nCheers!\n\n ",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89830d79_4a295064",
+        "filename": "docs/control_nodes_setup.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "\"the 2 nodes provisioning\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 105,
+        "endLine": 7,
+        "endChar": 132
+      },
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07b2671b_59552184",
+        "filename": "docs/control_nodes_setup.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "\"credential can be provided via inventory or during the ansible-playbook run.\"",
+      "range": {
+        "startLine": 15,
+        "startChar": 87,
+        "endLine": 15,
+        "endChar": 120
+      },
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e95b4386_bd2436cd",
+        "filename": "docs/control_nodes_setup.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "\"providing\"",
+      "range": {
+        "startLine": 19,
+        "startChar": 34,
+        "endLine": 19,
+        "endChar": 41
+      },
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68dea1a6_3444c4f9",
+        "filename": "docs/control_nodes_setup.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "missing \")\"",
+      "range": {
+        "startLine": 19,
+        "startChar": 191,
+        "endLine": 19,
+        "endChar": 192
+      },
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7d09b34_02c4b4f0",
+        "filename": "docs/control_nodes_setup.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "trailing space",
+      "range": {
+        "startLine": 76,
+        "startChar": 258,
+        "endLine": 76,
+        "endChar": 259
+      },
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b3d30e5_979463a2",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "missed comments",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 48
+      },
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb9eceda_74df6eb1",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "Maybe add a ToDo note? or why is commented?",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f16d615_a0dcb364",
+        "filename": "samples/control_nodes_setup/setup_jumpbox_tasks.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "missing comments?",
+      "range": {
+        "startLine": 111,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 30
+      },
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c4ae62c_4ddef2f8",
+        "filename": "samples/roles/dnsmasq/templates/.general.conf.swp",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-23T21:36:05Z",
+      "side": 1,
+      "message": "not needed",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
