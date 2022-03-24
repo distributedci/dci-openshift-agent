@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54ad8e80_dc6c6bca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 405
+      },
+      "writtenOn": "2022-03-24T15:01:52Z",
+      "side": 1,
+      "message": "good one, even if in the doc we put :\n\nThe dci-openshift-agent is packaged and available as a RPM file. However,dci-release and epel-release must be installed first:\n\nhttps://docs.distributed-ci.io/dci-openshift-agent/#setting-up-access-to-dci",
+      "revId": "0719e0052935962db0c49875636ea124c13ca7ea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
