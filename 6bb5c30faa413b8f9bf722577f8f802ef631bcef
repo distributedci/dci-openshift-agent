@@ -86,6 +86,24 @@
       "parentUuid": "8234d727_3056c921",
       "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c49f0f5_cd40c4ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-24T15:32:57Z",
+      "side": 1,
+      "message": "Okey, yes, I was wondering this because, in the pipeline related to this change, it was being tested the case in which opm_mirror_list was not defined but dci_prepare_cnf was true, but I guess that, as it has a [do not merge] title, it is just intended to do tests to validate the behaviour.\nSo, from my side, as I said, it is fine to go on with this, but I\u0027d prefer to wait for more opinions from other people in order to merge this.",
+      "parentUuid": "09f066c8_4191b9f8",
+      "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
