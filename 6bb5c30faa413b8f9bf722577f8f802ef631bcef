@@ -104,6 +104,23 @@
       "parentUuid": "09f066c8_4191b9f8",
       "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4b4107e_810876b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-24T17:14:39Z",
+      "side": 1,
+      "message": "Thanks for the comments, yeah the pipeline was to test the behaviors having the list empty, defined with certain values, absent, etc. ",
+      "revId": "6bb5c30faa413b8f9bf722577f8f802ef631bcef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
