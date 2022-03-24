@@ -51,6 +51,23 @@
       "parentUuid": "54ad8e80_dc6c6bca",
       "revId": "0719e0052935962db0c49875636ea124c13ca7ea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b9803dc_739809d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2022-03-24T19:06:59Z",
+      "side": 1,
+      "message": "LGTM! Thanks Nacho.",
+      "revId": "0719e0052935962db0c49875636ea124c13ca7ea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
