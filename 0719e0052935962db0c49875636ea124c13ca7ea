@@ -33,6 +33,24 @@
       "message": "for your info python3-pyyaml required in the spec file is available on centos-openstack-train",
       "revId": "0719e0052935962db0c49875636ea124c13ca7ea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc437ba1_764b403f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-03-24T15:15:23Z",
+      "side": 1,
+      "message": "Hi Guillaume,\n\nThanks for your comments.\n\nActually, the text you quote applies to the jumpbox, but this CR affects the provision host. And I see in your link the docs also say EPEL must be installed on the provision host.\n\nI\u0027m still a little confused on the need for this change, though.\n\nThe thing is we\u0027re setting up the new BOS2 lab which will run libvirt clusters for OCP testing, and currently we\u0027re trying to replicate the behavior of the CI bot host (pctt-hv2.roq.distributed-ci.io).\n\nIn pctt-hv2, the test-runner builds the libvirt cluster, including a provision host, and runs the dci-openshift-agent smoothly. However in the new bos2 jumpbox, the bot builds the cluster but then the doa fails due to epel being missing in the provision-host, thus the need for this CR.\n\nMy point is, if this CR is not needed in pctt-hv2, maybe it is only a workaround for a missing configuration that should be happening somewhere else.",
+      "parentUuid": "54ad8e80_dc6c6bca",
+      "revId": "0719e0052935962db0c49875636ea124c13ca7ea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
