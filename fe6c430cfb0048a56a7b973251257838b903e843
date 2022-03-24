@@ -50,6 +50,23 @@
       "message": "Thx for the review !\n\nHere an example of execution:\nhttps://www.distributed-ci.io/jobs/774f37cb-1177-451d-9541-3b02009b77f1/jobStates",
       "revId": "fe6c430cfb0048a56a7b973251257838b903e843",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc40e076_9c15c3ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-24T07:40:34Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "fe6c430cfb0048a56a7b973251257838b903e843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
