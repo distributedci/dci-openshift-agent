@@ -113,8 +113,8 @@ else
 
         # Get the output of various oc commands
         $rem oc version > $dir/version.txt
-        $rem oc get clusterversion/version > $dir/clusterversion.txt
-        $rem oc get clusteroperator > $dir/clusteroperator.txt
+        $rem oc get clusterversion/version -o yaml > $dir/clusterversion.yaml
+        $rem oc get clusteroperator -o yaml > $dir/clusteroperator.yaml
         $rem oc get network cluster -o yaml > $dir/clusternetwork.yaml
         $rem oc get nodes -o wide > $dir/nodes.txt
         $rem oc get nodes -o yaml > $dir/all-nodes.yaml
