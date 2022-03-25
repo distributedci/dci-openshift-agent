@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Just a line to trigger job
+
 ANSIBLE_PID=
 JOB_ID_FILE=
 OUTPUT_DIR=
