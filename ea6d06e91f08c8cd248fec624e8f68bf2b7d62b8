@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d27890b1_796d98ce",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-25T16:49:34Z",
+      "side": 1,
+      "message": "But the output is not yaml :(, why is needed the change?",
+      "revId": "ea6d06e91f08c8cd248fec624e8f68bf2b7d62b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
