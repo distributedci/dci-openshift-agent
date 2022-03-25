@@ -24,6 +24,33 @@
       - "python{{ ansible_python.version.major }}-pip"
       - "python{% if ansible_python.version.major == 3 %}3{% endif %}-virtualenv"
 
+      #- name: Copy the SELinux for OCP on Libvirt module description
+      #copy:
+        #dest: /tmp/libvirt.te
+        #content: |
+          #module libvirt 1.0;
+          #
+          #require {
+          #type tmp_t;
+          #type svirt_t;
+          #class sock_file unlink;
+          #}
+          #
+          ##============= svirt_t ==============
+          #allow svirt_t tmp_t:sock_file unlink;
+          #tags: selinux
+
+          #- name: Install the libvirt selinux module
+          #shell: |
+            #checkmodule -M -m -o libvirt.mod libvirt.te
+            #semodule_package -o libvirt.pp -m libvirt.mod
+            #semodule -i libvirt.pp
+            #args:
+              #chdir: /tmp/
+              #become: yes
+              #tags: selinux
+
+
 - name: Get processor family
   set_fact:
     proc_family: >-
@@ -60,6 +87,24 @@
     name: libvirtd
     enabled: yes
     state: started
+
+- name: Create the consoles directory
+  become: true
+  file:
+    path: /var/lib/libvirt/consoles
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Set SELinux context under the consoles directory
+  sefcontext:
+    target: '/var/lib/libvirt/consoles(/.*)?'
+    setype: svirt_home_t
+  become: yes
+
+- name: Restore the contexts under the consoles directory
+  shell: /usr/sbin/restorecon -irv /var/lib/libvirt/consoles
 
 - name: "Add {{ ansible_user_id }} user to libvirt and qemu groups"
   become: true
