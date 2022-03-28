@@ -1,0 +1,113 @@
+---
+- name: Create cluster and generate Assisted Installer Discovery ISO
+  hosts: bastion
+  gather_facts: False
+  vars:
+    - disconnected: "{{ use_local_mirror_registry | default(setup_registry_service | default(true)) }}"
+    - CLUSTER_NAME: "{{ cluster_name }}"
+    - BASE_DNS_DOMAIN: "{{ base_dns_domain }}"
+    - ASSISTED_INSTALLER_HOST: "{{ hostvars['assisted_installer']['host'] }}"
+    - ASSISTED_INSTALLER_PORT: "{{ hostvars['assisted_installer']['port'] }}"
+    - SSH_PUBLIC_KEY: "{{ ssh_public_key }}"
+    - PULL_SECRET: "{{ hostvars['registry_host']['pull_secret'] | default(pull_secret) }}"
+    - CLUSTER_NETWORK_CIDR: "{{ cluster_network_cidr }}"
+    - CLUSTER_NETWORK_HOST_PREFIX: "{{ cluster_network_host_prefix }}"
+    - SERVICE_NETWORK_CIDR: "{{ service_network_cidr }}"
+    - OPENSHIFT_VERSION: "{{ openshift_version }}"
+    - VIP_DHCP_ALLOCATION: "{{ vip_dhcp_allocation }}"
+    - INGRESS_VIP: "{{ ingress_vip }}"
+    - API_VIP: "{{ api_vip }}"
+    - MACHINE_NETWORK_CIDR: "{{ machine_network_cidr }}"
+    - NTP_SERVER: "{{ ntp_server }}"
+    - CLUSTER_ID: "{{ cluster_id }}"
+    - DOWNLOAD_DEST_FILE: "{{ discovery_iso_name }}"
+    - DOWNLOAD_DEST_PATH: "{{ iso_download_dest_path | default('/opt/http_store/data') }}"
+  tasks:
+    - block:
+      - name: "assisted installer: create cluster"
+        include_role:
+          name: create_cluster
+      - name: "assisted installer: generate discovery iso"
+        include_role:
+          name: generate_discovery_iso
+      rescue:
+        - include_tasks: "teardown_failure.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Mounting, Booting the Assisted Installer Discovery ISO
+  hosts: masters, workers
+  gather_facts: False
+  strategy: "{{ use_boot_iso_strategy_free | default(True) | bool | ternary('free', omit) }}"
+  serial: "{{ use_boot_iso_strategy_free | default(True) | bool | ternary(omit, 1) }}"
+  vars:
+    - boot_iso_url: "{{ discovery_iso_server }}/{{ discovery_iso_name }}"
+  tasks:
+    - block:
+      - name: "assisted installer: boot iso"
+        include_role:
+          name: boot_iso
+      rescue:
+        - include_tasks: "teardown_failure.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Installing the cluster
+  hosts: bastion
+  gather_facts: False
+  vars:
+    - ASSISTED_INSTALLER_HOST: "{{ hostvars['assisted_installer']['host'] }}"
+    - ASSISTED_INSTALLER_PORT: "{{ hostvars['assisted_installer']['port'] }}"
+    - CLUSTER_ID: "{{ cluster_id }}"
+    - INGRESS_VIP: "{{ ingress_vip }}"
+    - API_VIP: "{{ api_vip }}"
+    - VIP_DHCP_ALLOCATION: "{{ vip_dhcp_allocation }}"
+  tasks:
+    - block:
+      - name: "assisted installer: install cluster"
+        include_role:
+          name: install_cluster
+      rescue:
+        - include_tasks: "teardown_failure.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Monitoring hosts installation
+  hosts: masters, workers
+  gather_facts: False
+  strategy: free
+  vars:
+    - ASSISTED_INSTALLER_HOST: "{{ hostvars['assisted_installer']['host'] }}"
+    - ASSISTED_INSTALLER_PORT: "{{ hostvars['assisted_installer']['port'] }}"
+    - CLUSTER_ID: "{{ cluster_id | default(hostvars['bastion']['cluster_id']) }}"
+  tasks:
+    - block:
+      - name: "assisted installer: monitor host"
+        include_role:
+          name: monitor_host
+      rescue:
+        - include_tasks: "teardown_failure.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Monitoring cluster installation
+  hosts: bastion
+  gather_facts: False
+  vars:
+    - ASSISTED_INSTALLER_HOST: "{{ hostvars['assisted_installer']['host'] }}"
+    - ASSISTED_INSTALLER_PORT: "{{ hostvars['assisted_installer']['port'] }}"
+    - CLUSTER_ID: "{{ cluster_id }}"
+  tasks:
+    - block:
+      - name: "assisted installer: monitor cluster"
+        include_role:
+          name: monitor_cluster
+      rescue:
+        - include_tasks: "teardown_failure.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
