@@ -16,6 +16,23 @@
       "message": "LGTM, let\u0027s validate it and I\u0027ll +2",
       "revId": "34b83f72ff63b67f1aa3ecbd0adcbeddb6c53abc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a5f0845_f705d9e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-28T20:57:27Z",
+      "side": 1,
+      "message": "Change has been validated in https://www.distributed-ci.io/jobs/a2b17734-8aeb-4a0e-9984-9192fd760150/jobStates \n\nJobs in the core queue are getting stuck during logs collection tasks. Trying on 8nodes.",
+      "revId": "34b83f72ff63b67f1aa3ecbd0adcbeddb6c53abc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
