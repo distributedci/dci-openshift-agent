@@ -1,0 +1,262 @@
+---
+- hosts: localhost
+  connection: local
+  strategy: free
+  become: false
+  gather_facts: false
+  tasks:
+    - block:
+      - name: "Clone/update assisted-deploy repo"
+        vars:
+          git_repo: "{{ hostvars.localhost.assisted_deploy_repo }}"
+          git_ref: "{{ hostvars.localhost.assisted_deploy_version }}"
+        git:
+          version: "{{ git_ref }}"
+          repo: "{{ git_repo }}"
+          dest: "{{ dci_cache_dir }}/assisted_deploy_repo"
+          force: true
+        # On RHEL8 git clone can sporadically fail with OpenSSL SSL_read:
+        # SSL_ERROR_SYSCALL, errno 104.
+        register: git_clone
+        retries: 3
+        delay: 10
+        until: not git_clone.failed
+
+      - name: "Prereq facts check"
+        vars:
+          ssh_public_check: "{{ not (generate_ssh_keys | default(False)) }}"
+          mirror_certificate_check: "{{ ((use_local_mirror_registry | default(False)) == True) and ((setup_registry_service | default(True)) == False) }}"
+        include_role:
+          name: prereq_facts_check
+
+      - name: "Populate image_hashes for relevant images"
+        include_role:
+          name: get_image_hash
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Setup NTP
+  hosts: ntp_host
+  gather_facts: "{{ (setup_ntp_service | default(True)) | bool }}"
+  vars:
+    SETUP_NTP_SERVICE: "{{setup_ntp_service | default(True)}}"
+  tasks:
+    - block:
+      - name: Setup NTP
+        include_role: setup_ntp
+        when: SETUP_NTP_SERVICE == True
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Install and http_store service
+  hosts: http_store
+  gather_facts: "{{ (setup_http_store_service | default(True)) | bool }}"
+  vars:
+    SETUP_HTTP_STORE_SERVICE: "{{ setup_http_store_service | default(True) }}"
+  tasks:
+    - block:
+      - name: Setup http store
+        include_role: setup_http_store
+        when: SETUP_HTTP_STORE_SERVICE == True
+
+      - name: Validate http store
+        include_role: validate_http_store
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Play to populate image_hashes for relevant images
+  hosts: localhost
+  gather_facts: "{{ (setup_registry_service | default(True)) | bool }}"
+  vars:
+    destination_hosts:
+      - registry_host
+  tasks:
+    - block:
+      - name: pre-compute need to get hashes
+        set_fact:
+          run_get_hash: "{{ image_hashes | default({}) | length == 0  }}"
+
+      - name: Get Image Hash
+        include_role: get_image_hash
+        when: run_get_hash
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Play to install and setup mirror registry
+  hosts: registry_host
+  collections:
+    - containers.podman
+    - community.crypto
+    - community.general
+    - ansible.posix
+  gather_facts: "{{ (setup_registry_service | default(True)) | bool }}"
+  vars:
+    downloads_path: /tmp/wip
+    config_file_path: /tmp/wip/config
+    SETUP_REGISTRY_SERVICE: "{{ setup_registry_service | default(True)}}"
+  tasks:
+    - block:
+      - name: Setup selfsigned cert
+        include_role: setup_selfsigned_cert
+        when: SETUP_REGISTRY_SERVICE == True
+
+      - name: Setup mirror registry
+        include_role: setup_mirror_registry
+        when: SETUP_REGISTRY_SERVICE == True
+
+      - name: Populate mirror registry
+        include_role: populate_mirror_registry
+        when: SETUP_REGISTRY_SERVICE == True
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Process KVM nodes
+  hosts: bastion
+  tasks:
+    - block:
+      - name: Process kvm nodes
+        include_role: process_kvm_nodes
+        when: (setup_vms | default(true))
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Provision VMS
+  hosts: vm_hosts
+  gather_facts: "{{ (setup_vms | default((kvm_nodes | default([])) | length | int >= 1)) | bool }}"
+  vars:
+    SETUP_VMS: "{{ setup_vms | default((kvm_nodes | default([])) | length | int >= 1) }}"
+  tasks:
+    - block:
+      - name: Destroy vms
+        include_role: destroy_vms
+        when: SETUP_VMS | bool
+        tags:
+          - destroy_vms
+
+      - name: Setup mv host network
+        include_role: setup_vm_host_network
+        when: (SETUP_VM_BRIDGE | default(SETUP_VMS)) | bool
+
+      - name: Create vms
+        include_role: create_vms
+        when: SETUP_VMS | bool
+        tags:
+          - setup_vms
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Setup DNS Records
+  hosts: dns_host
+  gather_facts: "{{ (setup_dns_service | default(True)) | bool }}"
+  vars:
+    SETUP_DNS_SERVICE: "{{ setup_dns_service | default(True) }}"
+  tasks:
+    - block:
+      - name: Insert dns records
+        include_role: insert_dns_records
+        when: SETUP_DNS_SERVICE == True
+
+      - name: Validate dns records
+        include_role: validate_dns_records
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Play to populate image_hashes for relevant images
+  hosts: localhost
+  vars:
+    destination_hosts:
+      - assisted_installer
+  tasks:
+    - block:
+      - name: pre-compute need to get hashes
+        set_fact:
+          run_get_hash: "{{ image_hashes | default({}) | length == 0  }}"
+
+      - name: Get image hash
+        include_role: get_image_hash
+        when: run_get_hash
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Deploy OpenShift Assisted Installer On Prem
+  hosts: assisted_installer
+  vars:
+    PULL_SECRET: "{{ pull_secret }}"
+    SETUP_ASSISTED_INSTALLER: "{{ setup_assisted_installer | default(True) }}"
+  tasks:
+    - block:
+      - name: Setup assisted installer
+        include_role: setup_assisted_installer
+        when: SETUP_ASSISTED_INSTALLER == True
+
+      - name: Wait for up to 60 minutes for the assisted installer to come online
+        uri:
+          url: "http://{{ ansible_host }}:8090/api/assisted-install/v1/clusters"
+          method: GET
+          status_code: [200, 201]
+        register: result
+        until: result is succeeded
+        retries: 120
+        delay: 30
+        delegate_to: bastion
+        when: SETUP_ASSISTED_INSTALLER == True
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+
+- name: Deploy sushy tools
+  hosts: vm_hosts
+  gather_facts: "{{ (setup_sushy_tools | default(setup_vms | default(True))) | bool }}"
+  vars:
+    SETUP_SUSHY_TOOLS: "{{ setup_sushy_tools | default(setup_vms | default(True)) }}"
+  tasks:
+    - block:
+      - name: Setup sushy tools
+        include_role: setup_sushy_tools
+        when: SETUP_SUSHY_TOOLS == True
+
+      rescue:
+        - include_tasks: "teardown_error.yml"
+      when:
+        - install_method is defined
+        - install_method == 'assisted'
+...
