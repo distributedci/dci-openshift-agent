@@ -375,7 +375,8 @@ if [ -z "$KCFG" ]; then
             do_wait
         elif [ "$VIRT" = assisted ]; then
             FQDN=$(hostname -f)
-            sed -e "s@FQDN@$FQDN@" < hosts.in > hosts
+	    DNS=$(nmcli dev show | awk '/IP4.DNS/ { print $2; exit }')
+            sed -e "s/@FQDN@/$FQDN/; s/@DNS@/$DNS/" < hosts.in > hosts
         fi
         sudo cp hosts /etc/dci-openshift-agent/
         cd "$DIR"
