@@ -1,7 +1,7 @@
 ---
 
 - name: "Setup job_logs directory"
-  include_tasks: plays/log-dir.yml
+  include_tasks: log-dir.yml
   when: job_logs is undefined
 
 - name: Get logs from OCP deployment
@@ -9,6 +9,8 @@
     - DCI_MUST_GATHER_IMAGES: '{{ dci_must_gather_images | default(["registry.redhat.io/openshift4/ose-must-gather"]) | join(" ") }}'
   script: ./scripts/get-logs "{{ hostvars[groups['provisioner'][0]]['ansible_user'] }}@{{ groups['provisioner'][0] }}" "{{ job_logs.path }}" "{{ groups['masters'] }}"
   ignore_errors: true
+  when:
+  - install_type is not defined or install_type != 'assisted'
 
 - name: "Find test Junit files"
   find:
