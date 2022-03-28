@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8b98f2c2_3d04e962",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-28T15:39:02Z",
+      "side": 1,
+      "message": "I wonder if we really need these logs, clusterversion/version, and clusteroperator. All of them we can get the through must gather.\n\nI know that some of them are quite useful without having to go and download must-gather and everything else. But I would say that if something is needed for debugging then we probably should use must-gather.\n\nWith that being said, I think I support part of Pierre\u0027s proposal to leave them without yaml output as they are quite useful like text for a quick view. If we need details then use must-gather? wdyt?",
+      "parentUuid": "a7a70bac_a17b093b",
+      "revId": "ea6d06e91f08c8cd248fec624e8f68bf2b7d62b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d27890b1_796d98ce",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 1
@@ -49,6 +67,24 @@
       "side": 1,
       "message": "The YAML output show very quickly a meaningful error message, specially in the case of a failure during an upgrade",
       "parentUuid": "d27890b1_796d98ce",
+      "revId": "ea6d06e91f08c8cd248fec624e8f68bf2b7d62b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f870ed28_8804f3a5",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-28T15:39:02Z",
+      "side": 1,
+      "message": "Nevermind, I don\u0027t know how to read 😂 you clearly are makint the output yaml",
+      "parentUuid": "7ae85859_a7ef4a50",
       "revId": "ea6d06e91f08c8cd248fec624e8f68bf2b7d62b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
