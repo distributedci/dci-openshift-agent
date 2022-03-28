@@ -1,7 +1,7 @@
 ---
 
 - name: "Setup job_logs directory"
-  include_tasks: plays/log-dir.yml
+  include_tasks: log-dir.yml
   when: job_logs is undefined
 
 - name: Get logs from OCP deployment
