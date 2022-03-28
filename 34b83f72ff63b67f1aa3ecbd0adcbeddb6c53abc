@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5396a03_e2cc424c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-28T20:42:03Z",
+      "side": 1,
+      "message": "LGTM, let\u0027s validate it and I\u0027ll +2",
+      "revId": "34b83f72ff63b67f1aa3ecbd0adcbeddb6c53abc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
