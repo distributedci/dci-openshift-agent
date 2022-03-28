@@ -23,10 +23,16 @@ Requires: ansible-role-dci-podman
 Requires: ansible-role-dci-ocp-imagesideload
 Requires: ansible-collection-community-kubernetes
 Requires: ansible-collection-containers-podman
+Requires: ansible-collection-community-general
+Requires: ansible-collection-community-libvirt
+Requires: ansible-collection-ansible-posix <= 1.2.0
 Requires: python3-pyyaml python3-openshift
 Requires: ansible-role-dci-cvp
 Requires: jq
 Requires: git
+Requires: python3-netaddr
+Requires: skopeo
+Requires: podman
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
