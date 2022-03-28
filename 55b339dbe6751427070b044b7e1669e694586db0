@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.7-vcp ocp-4.8-vcp-upgrade openshift-vcp-upgrade-4.8:components\u003docp\u003d4.8.29\n\n",
       "revId": "55b339dbe6751427070b044b7e1669e694586db0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7e8753b_aba7097e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-28T16:24:33Z",
+      "side": 1,
+      "message": "LGTM, changing to +2 after validation in dallas",
+      "revId": "55b339dbe6751427070b044b7e1669e694586db0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
