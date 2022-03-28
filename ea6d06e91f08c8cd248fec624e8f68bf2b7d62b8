@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b0531911_9a7c9ce5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-03-28T16:17:32Z",
+      "side": 1,
+      "message": "As Tony said, we can download must-gather, extract it and cat the good file (without forgetting to delete everything after). It is definitely doable but slower than just one click :/\n\nIf we add more unique files, must-gather lose interest. If it is too boring to use it we have to think about a way to accelerate its usage.\n\nExample:\n- add a feature to execute omg on tar.gz\n- add an embedded version on omg in dci web site",
+      "parentUuid": "2b87d9c8_5f9003f6",
+      "revId": "ea6d06e91f08c8cd248fec624e8f68bf2b7d62b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d27890b1_796d98ce",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 1
