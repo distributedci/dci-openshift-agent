@@ -156,7 +156,7 @@ if [ -d $DIR ]; then
      fi
 fi
 
-trap cleanup 0
+#trap cleanup 0
 
 mkdir -p $DIR
 cd $DIR
@@ -241,4 +241,5 @@ else
     env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" $OPTS
 fi
 
+cleanup
 # dci-check-change ends here
