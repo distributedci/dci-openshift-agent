@@ -120,6 +120,22 @@
   delay: 10
   until: not git_clone.failed
 
+- name: "Clone/update assisted-deploy repo"
+  vars:
+    git_repo: "{{ hostvars.localhost.assisted_deploy_repo }}"
+    git_ref: "{{ hostvars.localhost.assisted_deploy_version }}"
+  git:
+    version: "{{ git_ref }}"
+    repo: "{{ git_repo }}"
+    dest: "{{ dci_cache_dir }}/assisted_deploy_repo"
+    force: true
+  # On RHEL8 git clone can sporadically fail with OpenSSL SSL_read:
+  # SSL_ERROR_SYSCALL, errno 104.
+  register: git_clone
+  retries: 3
+  delay: 10
+  until: not git_clone.failed
+
 - include_tasks: track_git_repo.yml
   with_items:
     - "{{ dci_gits_to_components }}"
