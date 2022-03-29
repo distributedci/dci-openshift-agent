@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2e67e72_ac92fa7f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-29T13:25:23Z",
+      "side": 1,
+      "message": "I understand the change on the permissions for oc binary, but why do we need to change the hosts file and to include the create parameter in the lineinfile? I am not getting this",
+      "revId": "429db5e40831eb751c9c65ea1fb67ecb8c868335",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
