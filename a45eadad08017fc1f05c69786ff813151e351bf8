@@ -34,6 +34,24 @@
       "parentUuid": "94e299c7_08d90fb5",
       "revId": "a45eadad08017fc1f05c69786ff813151e351bf8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f37da13_74dc9fd8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-03-29T11:48:48Z",
+      "side": 1,
+      "message": "It depends of the issue :) \nDid you activate first the selinux booleans ?\n\nSection 15.6\nhttps://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/securing-virtual-machines-in-rhel-8_configuring-and-managing-virtualization#virtualization-booleans-in-rhel-8_securing-virtual-machines-in-rhel-8\n\nIt exists also an ansible module to activate it:\nhttps://docs.ansible.com/ansible/latest/collections/ansible/posix/seboolean_module.html",
+      "parentUuid": "dddfa000_5c8ad68f",
+      "revId": "a45eadad08017fc1f05c69786ff813151e351bf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
