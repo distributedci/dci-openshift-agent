@@ -50,6 +50,24 @@
       "message": "recheck",
       "revId": "4a1a59e8cdfc788c5c1ffd3d4556c176f5082b56",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c7d981e_4439293a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-29T15:00:03Z",
+      "side": 1,
+      "message": "yeah, no needed. We are going to track the dockerfile. Same as we are doing on other places were we build indices.",
+      "parentUuid": "abc90035_9e6f7a4f",
+      "revId": "4a1a59e8cdfc788c5c1ffd3d4556c176f5082b56",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
