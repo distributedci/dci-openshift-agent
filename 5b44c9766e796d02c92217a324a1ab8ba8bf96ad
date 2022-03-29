@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "efefa806_38044cf6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-03-29T03:55:44Z",
+      "side": 1,
+      "message": "Nacho, I think you saw that this is the reason why the job was not triggered when you only updated the inventory. I think we can include the \"hosts\" file there\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/test-runner#L239\n\nAlso, last failure is random, I\u0027ve seen it in SNO mainly, sometimes the API does not responds, I think we can include re-tries in that tasks if it fails again. I\u0027m re-checking.",
+      "revId": "5b44c9766e796d02c92217a324a1ab8ba8bf96ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a74a85b_759f7e48",
+        "filename": "roles/sno-installer/tasks/60_deploy_sno_vm.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-03-29T03:55:44Z",
+      "side": 1,
+      "message": "Did you include this line so test-runner consider this as a change? :)",
+      "revId": "5b44c9766e796d02c92217a324a1ab8ba8bf96ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
