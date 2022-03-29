@@ -33,6 +33,23 @@
       "message": "LGTM, changing to +2 after validation in dallas",
       "revId": "55b339dbe6751427070b044b7e1669e694586db0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4d8f87c_2529bbfd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-29T07:06:50Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "55b339dbe6751427070b044b7e1669e694586db0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
