@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abc90035_9e6f7a4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-29T13:29:18Z",
+      "side": 1,
+      "message": "Just for understanding. In the commit message, it is said that \"The omp binary released on 03/26 changed the \"opm alpha generate dockerfile\" command to \"opm generate dockerfile\". I\u0027ve seen that \"opm alpha generate dockerfile\" command has been removed in this change, but don\u0027t we need to execute a command like \"opm generate dockerfile\"?",
+      "revId": "4a1a59e8cdfc788c5c1ffd3d4556c176f5082b56",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
