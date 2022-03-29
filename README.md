@@ -388,6 +388,8 @@ dci_topic: OCP-4.10
 dci_config_dirs: [/var/lib/dci-openshift-agent/config]
 ```
 
+**Note**: There are certain particularities about versioning that you can read more in depth in [the versioning document](docs/ocp_versioning.md)
+
 ## Starting the DCI OCP Agent
 
 Now that you have configured the `DCI OpenShift Agent`, you can start the
