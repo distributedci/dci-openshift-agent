@@ -68,6 +68,23 @@
       "parentUuid": "abc90035_9e6f7a4f",
       "revId": "4a1a59e8cdfc788c5c1ffd3d4556c176f5082b56",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8849eb0_b2e16748",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-03-29T19:09:51Z",
+      "side": 1,
+      "message": "Thanks Beto!",
+      "revId": "4a1a59e8cdfc788c5c1ffd3d4556c176f5082b56",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
