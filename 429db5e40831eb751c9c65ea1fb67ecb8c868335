@@ -51,6 +51,24 @@
       "message": "recheck",
       "revId": "429db5e40831eb751c9c65ea1fb67ecb8c868335",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "889432cc_1e39a97b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-30T10:30:19Z",
+      "side": 1,
+      "message": "It\u0027s fine for me then, and the dci-check-change seems to work, so I\u0027ll put my +1 just in case somebody more wants to review.\n\nMaybe the commit message can be changed in order to include more context, like the comments you are saying here, to explain why this change is needed. It would be perfect, from my point of view.",
+      "parentUuid": "05c0e82f_912b2c4c",
+      "revId": "429db5e40831eb751c9c65ea1fb67ecb8c868335",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
