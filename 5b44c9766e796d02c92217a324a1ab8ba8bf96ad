@@ -84,6 +84,24 @@
       "message": "Did you include this line so test-runner consider this as a change? :)",
       "revId": "5b44c9766e796d02c92217a324a1ab8ba8bf96ad",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac5a6b5f_431e8391",
+        "filename": "roles/sno-installer/tasks/60_deploy_sno_vm.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-03-30T09:46:18Z",
+      "side": 1,
+      "message": "No, I didn\u0027t. This line is needed, at least on the BOS2 environment. Otherwise, the task fails if the file does not exist in advance.\n\nCan you think of an alternative way to address this?",
+      "parentUuid": "6a74a85b_759f7e48",
+      "revId": "5b44c9766e796d02c92217a324a1ab8ba8bf96ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

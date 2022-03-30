@@ -16,6 +16,24 @@
       "message": "I understand the change on the permissions for oc binary, but why do we need to change the hosts file and to include the create parameter in the lineinfile? I am not getting this",
       "revId": "429db5e40831eb751c9c65ea1fb67ecb8c868335",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05c0e82f_912b2c4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-03-30T09:46:18Z",
+      "side": 1,
+      "message": "The create paremter is described in my previous comment to Manny.\n\nThe change in the hosts file is needed to overcome the issue with the dci credential env vars.\n\nAs you know, the agent loads the DCI credentials from the environment variables.\n\nIn a regular job, the dci_job tasks are run from the localhost.\n\nSince the localhost is not usually mentioned in the inventory hosts, Ansible knows the actions must be run locally, so the subprocess inherits the environment variables, including the credentials.\n\nThe problem with the original SNO inventory is the provision host is mapped to the jumpbox (localhost) and, by including this reference to the localhost, Ansible assumes every action on the localhost must be run though an SSH connection, thus losing the access to the current environment variables.\n\nThis was causing the dci_job tasks to fail due to missing credentials.\n\nBy setting the ansible_connection\u003dlocal we instruct ansible to run actions in the localhost as subprocesses, thus maintaining access to the env vars.\n\nPlease, let me know if you need me to elaborate on this.",
+      "parentUuid": "a2e67e72_ac92fa7f",
+      "revId": "429db5e40831eb751c9c65ea1fb67ecb8c868335",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
