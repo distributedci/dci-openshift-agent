@@ -81,7 +81,7 @@
 
     - name: "Set dci_pullsecret_file fact if pullsecret_file is not present"
       set_fact:
-        dci_pullsecret_file: "{{ provision_cache_store }}/pull-secret.txt"
+        dci_pullsecret_file: "{{ provision_cache_store }}/pull-secret-no-cloud.txt"
       no_log: true
   when:
     - dci_disconnected | default(false) | bool
