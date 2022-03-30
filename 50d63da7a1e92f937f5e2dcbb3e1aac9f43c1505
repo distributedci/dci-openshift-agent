@@ -16,6 +16,24 @@
       "message": "I think it\u0027s build:ga, build:dev and build:candidate",
       "revId": "50d63da7a1e92f937f5e2dcbb3e1aac9f43c1505",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb7db837_946623b5",
+        "filename": "docs/ocp_versioning.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-03-30T16:22:41Z",
+      "side": 1,
+      "message": "oh I see what you mean now, let me fix",
+      "parentUuid": "80ad551a_9bd8576d",
+      "revId": "50d63da7a1e92f937f5e2dcbb3e1aac9f43c1505",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
