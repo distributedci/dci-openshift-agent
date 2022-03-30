@@ -14,7 +14,7 @@
 
 - name: "installer : Get pullsecret from localhost vars"
   set_fact:
-    pullsecret: "{{ hostvars.localhost.pullsecret | to_json }}"
+    pullsecret: "{{ provision_cache_store }}/pull-secret-no-cloud.txt | to_json }}"
   no_log: true
 
 - name: IPI Installer tasks
