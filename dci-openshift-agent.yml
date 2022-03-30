@@ -56,6 +56,19 @@
       debug:
         var: job_info.job.components
 
+    - name: debug complex var
+      debug:
+        var: preflight_operators_to_certify
+
+    - name: success
+      dci_job:
+        id: "{{ job_id }}"
+        status: "success"
+      tags: [dci]
+
+    - name: End
+      meta: end_play
+
     - name: Get openshift_version from job.components
       set_fact:
         tags: "{{ item['tags'] }}"

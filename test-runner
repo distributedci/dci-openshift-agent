@@ -426,6 +426,7 @@ if [ -s "$KUBECONFIG" ]; then
             APP_OPT="-e dci_config_dir=$PWD/samples/$APP_NAME"
         fi
         setsid $PWD/dci-openshift-app-agent-ctl $PREFIX2 -s -d -v -- -v "${OPTS[@]}" -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" $APP_OPT -e dci_name="$APP_NAME" "$@" &>> ../output &
+        history | tail -10
         cd ..
     else
         unset CONFIG_DIR
