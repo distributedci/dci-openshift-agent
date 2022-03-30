@@ -368,7 +368,7 @@ if [ -z "$KCFG" ]; then
     export DCI_OPENSHIFT_AGENT_DIR="$PWD"
     export ANSIBLE_CONFIG="$PWD/ansible.cfg"
 
-    setsid $CMD $PREFIX -s -v -- -v "${OPTS[@]}" -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" "$@" >& output &
+    setsid $CMD $PREFIX -s -v -- -v "${OPTS[@]}" -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" $@ >& output &
 
     do_wait 1
 fi
@@ -425,7 +425,8 @@ if [ -s "$KUBECONFIG" ]; then
         if [ "$APP_NAME" != "none" ]; then
             APP_OPT="-e dci_config_dir=$PWD/samples/$APP_NAME"
         fi
-        setsid $PWD/dci-openshift-app-agent-ctl $PREFIX2 -s -d -v -- -v "${OPTS[@]}" -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" $APP_OPT -e dci_name="$APP_NAME" "$@" &>> ../output &
+        setsid $PWD/dci-openshift-app-agent-ctl $PREFIX2 -s -d -v -- -v "${OPTS[@]}" -e "{\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$PIPELINEID\"]}" $APP_OPT -e dci_name="$APP_NAME" $@ &>> ../output &
+        history | tail -10
         cd ..
     else
         unset CONFIG_DIR
