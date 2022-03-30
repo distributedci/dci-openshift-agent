@@ -16,6 +16,23 @@
       "message": "👍",
       "revId": "33b0cae69a87a99ebfa8fab40753c0e562c83336",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "864fc375_51699fc9",
+        "filename": "docs/ocp_versioning.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-03-30T07:51:28Z",
+      "side": 1,
+      "message": "We should explain the associated tags to select them in DCI.",
+      "revId": "33b0cae69a87a99ebfa8fab40753c0e562c83336",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
