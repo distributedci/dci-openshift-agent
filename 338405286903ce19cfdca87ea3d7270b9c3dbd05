@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "da171d35_08602b18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-30T06:49:07Z",
+      "side": 1,
+      "message": "I\u0027m not getting the point at all for this change. Why do we want to always execute the uncordon workaround, instead of only when the MCP status is not the correct?",
+      "revId": "338405286903ce19cfdca87ea3d7270b9c3dbd05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2da5128c_397277df",
