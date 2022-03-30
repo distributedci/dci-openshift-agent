@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2da5128c_397277df",
+        "filename": "common-roles/wait-mcp/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-03-30T03:57:05Z",
+      "side": 1,
+      "message": "I tested this and the variable reg_mcpool_status[\u0027failed\u0027] is always defined, if all nodes are ready is false, and if a node is not ready is true. Maybe we want to add the following? \n reg_mcpool_status[\u0027failed\u0027] | bool",
+      "revId": "338405286903ce19cfdca87ea3d7270b9c3dbd05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
