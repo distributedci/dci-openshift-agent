@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffed8cd1_12c6270f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-03-30T10:59:33Z",
+      "side": 1,
+      "message": "Hi Ramon, that\u0027s to deal with the situations when MCP status is good but one of the nodes is in SchedulingDisabled state anyway. \n\nHere is an example: https://www.distributed-ci.io/jobs/3edf935e-a31c-4dfd-ba8e-362d66f676d1/jobStates#02f68780-5370-4631-bed7-356e6cdf6788:file33 \n\nYou could find more details in ticket 475.",
+      "parentUuid": "da171d35_08602b18",
+      "revId": "338405286903ce19cfdca87ea3d7270b9c3dbd05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2da5128c_397277df",
@@ -49,6 +67,24 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "2da5128c_397277df",
+      "revId": "338405286903ce19cfdca87ea3d7270b9c3dbd05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3a47434_3f8332f6",
+        "filename": "common-roles/wait-mcp/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-03-30T10:59:33Z",
+      "side": 1,
+      "message": "Thank you for testing Manuel, the issue is now fixed.",
+      "parentUuid": "7f306bfe_9c3e4f57",
       "revId": "338405286903ce19cfdca87ea3d7270b9c3dbd05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
