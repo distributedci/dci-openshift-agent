@@ -12,10 +12,19 @@
     version: "{{ hostvars.localhost.version }}"
     build: "{{ hostvars.localhost.build }}"
 
+- name: Read the pull secret file
+  shell: "cat {{ provision_cache_store }}/pull-secret-no-cloud.txt"
+  register: result
+
 - name: "installer : Get pullsecret from localhost vars"
   set_fact:
-    pullsecret: "{{ hostvars.localhost.pullsecret | to_json }}"
-  no_log: true
+    pullsecret: "{{ result.stdout | from_json }}"
+
+- name: "debug pullsecret"
+  debug:
+    msg: "{{ pullsecret }}"
+  when:
+  - pullsecret is defined
 
 - name: IPI Installer tasks
   block:
