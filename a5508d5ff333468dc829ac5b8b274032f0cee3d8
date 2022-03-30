@@ -156,6 +156,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6cbc6874_0cc4f043",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-03-30T11:01:56Z",
+      "side": 1,
+      "message": "Hi Beto,\n\nYou\u0027re absolutely right on this, but I had a good reason to deploy this as a hook, and it is that this way you can include the code in a pipeline and have the results published in the DCI dashboard:\n\nhttps://www.distributed-ci.io/jobs/a74e3d91-893a-4efb-99c1-48eaba2417bd/jobStates\n\nIf you think the added complexity on this solution is not worth it, I\u0027d like your opinion and we could refactor it to make it simpler.",
+      "parentUuid": "e29fc8bf_73c07173",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "89830d79_4a295064",
         "filename": "docs/control_nodes_setup.md",
         "patchSetId": 25
