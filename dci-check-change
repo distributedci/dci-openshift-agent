@@ -197,10 +197,9 @@ if [[ no-check =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*no-check\s*
 fi
 
 # process Test-Args-Hints
+declare -a OPTS
 if [[ args =~ $SUPPORTED_HINTS ]]; then
-    OPTS=$(sed -n -e "s/^\s*Test-Args-Hints:\s*//pi" <<< $DESC)
-else
-    OPTS=
+    OPTS+=( $(sed -n -e "s/^\s*Test-Args-Hints:\s*//pi" <<< $DESC) )
 fi
 
 # process Test-App-Hints
@@ -219,12 +218,12 @@ fi
 
 if [ -z "$NO_DCI_QUEUE" ] && [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
     if [ -n "$USE_PREFIX" ]; then
-        dci-queue schedule $DCI_QUEUE -- env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR -p @RESOURCE "$@" $OPTS
+        dci-queue schedule $DCI_QUEUE -- env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR -p @RESOURCE "$@" ${OPTS[@]}
     else
-        dci-queue schedule $DCI_QUEUE -- env RES=@RESOURCE APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" $OPTS
+        dci-queue schedule $DCI_QUEUE -- env RES=@RESOURCE APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" ${OPTS[@]}
     fi
 else
-    env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" $OPTS
+    env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" ${OPTS[@]}
 fi
 
 # dci-check-change ends here
