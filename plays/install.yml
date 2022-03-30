@@ -14,8 +14,7 @@
 
 - name: "installer : Get pullsecret from localhost vars"
   set_fact:
-    pullsecret: "{{ hostvars.localhost.pullsecret | to_json }}"
-  no_log: true
+    pullsecret: "{{ dci_pullsecret_file }}"
 
 - name: IPI Installer tasks
   block:
