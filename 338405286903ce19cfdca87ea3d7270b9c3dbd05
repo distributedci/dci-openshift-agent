@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "89ec9e3f_59562da3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-30T13:29:24Z",
+      "side": 1,
+      "message": "I\u0027ll provide more context in CILAB-475, because I think this may be handled in a different way. Let\u0027s keep posted there",
+      "parentUuid": "ffed8cd1_12c6270f",
+      "revId": "338405286903ce19cfdca87ea3d7270b9c3dbd05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2da5128c_397277df",
         "filename": "common-roles/wait-mcp/tasks/main.yml",
         "patchSetId": 1
