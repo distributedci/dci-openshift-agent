@@ -23,10 +23,29 @@
   include_role:
     name: dci-import-keys
 
-- name: Set pullsecret from job_info
+- name: Set pullsecret from job_info - Connected
   set_fact:
     pullsecret: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
   no_log: true
+  when:
+    - dci_disconnected | default(false) | bool == false
+
+# Removing secret for cloud.openshift.com in order to disable the insights operator
+- name: Set pullsecret from job_info - Disconnected
+  set_fact:
+    pullsecret: |
+      {
+        "auths": {
+        {% for repo in pullsecret.auths | sort(reverse=True) | list %}
+          {% if repo != "cloud.openshift.com" %}
+            "{{ repo }}": {{ pullsecret.auths[repo] | to_json }}{% if loop.last %}{% else %},{% endif %}
+          {% endif %}
+        {% endfor %}
+        }
+      }
+  no_log: true
+  when:
+    - dci_disconnected | default(false) | bool
 
 - name: Read Disconnected auths
   include_vars:
