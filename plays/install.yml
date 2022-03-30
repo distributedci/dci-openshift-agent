@@ -15,7 +15,12 @@
 - name: "installer : Get pullsecret from localhost vars"
   set_fact:
     pullsecret: "{{ hostvars.localhost.pullsecret | to_json }}"
-  no_log: true
+
+- name: "debug pullsecret"
+  debug:
+    msg: "{{ pullsecret }}"
+  when:
+  - pullsecret is defined
 
 - name: IPI Installer tasks
   block:
