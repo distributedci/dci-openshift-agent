@@ -210,6 +210,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7845115b_8b82f105",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-03-31T07:27:44Z",
+      "side": 1,
+      "message": "Actually, let me elaborate a little bit on this.\n\nTo start with, the playbooks are not intended to run as hooks on production environments. A regular workflow would entail running first the setup_jumpbox.yml playbook and then the setup_provisioner.yml playbook.\n\nSo, initially, only these two playbooks would have been needed.\n\nNow, we worked under the requirement that the provisioning would be tested periodically, following the DCI workflows. So, the only way to have the tasks tested in a DCI workflow we needed to create hooks that would be reference in a pipeline, as the one we created in https://github.com/dci-labs/dallas-pipelines/pull/177.\n\nIn order to have the testing hook including the tasks in the playbook we had to split each playbook in two files: the playbook itself (setup_jumpbox.yml, setup_provisioner.yml) and a tasks file (setup_jumpbox_tasks.yml, setup_provisioner_tasks.yml) that could be imported by both, the playbook and the hook.\n\nWith all this, I only intend to clarify that the usual operation of this feature should be as standalone playbooks, and the hook is only there for testing purposes.\n\nThe moment we agree that having the feature tested periodically and published in the dci dashboard is not needed, we can simplify the size of this PR by more than 50%.",
+      "parentUuid": "bcdd8f81_8df61503",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "89830d79_4a295064",
         "filename": "docs/control_nodes_setup.md",
         "patchSetId": 25
