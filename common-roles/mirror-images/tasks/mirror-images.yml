@@ -1,7 +1,6 @@
-- name: "dci-openshift-agent : Mirror images"
+- name: "Mirror image"
   vars:
     image_name: "{{ image | regex_replace('^[^/]*/', '') }}"
-    local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
     local_image_location: "{{ local_registry }}/{{ image_name }}"
   block:
     - name: "Mirror image {{ image_name }}"
@@ -9,7 +8,7 @@
         cmd: >
           skopeo copy
           --remove-signatures
-          --authfile {{ dci_pullsecret_file }}
+          --authfile {{ authfile }}
           --dest-tls-verify=false
           docker://{{ image }}
           docker://{{ local_image_location }}
