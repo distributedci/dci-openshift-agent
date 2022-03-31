@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1e7669e_138bcd61",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-03-31T08:02:38Z",
+      "side": 1,
+      "message": "will it work if pullsecret is undefined or equals {}?",
+      "revId": "5142b9a7f99bfb4e1bb209a78d7d4d657aa89ed2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
