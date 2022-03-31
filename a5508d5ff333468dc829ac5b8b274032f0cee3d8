@@ -228,6 +228,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bda389fe_48d7ba20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-31T09:43:19Z",
+      "side": 1,
+      "message": "Maybe it\u0027s worth to comment this topic to the others, maybe on a daily or in a grooming/Friday, so that everybody is aware of what is being done here and then we can decide how to proceed. For me, both options are valid, both have their advantages and constraints, to I\u0027d say it\u0027s better to agree on one solution and go ahead with it",
+      "parentUuid": "7845115b_8b82f105",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "89830d79_4a295064",
         "filename": "docs/control_nodes_setup.md",
         "patchSetId": 25
