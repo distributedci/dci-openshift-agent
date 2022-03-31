@@ -192,6 +192,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bcdd8f81_8df61503",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-03-31T06:49:35Z",
+      "side": 1,
+      "message": "Ramón is here, hehe.\n\nThe question that Beto has opened is interesting and maybe it is worth to have a team discussion about this, in order to define an agreed solution for this. It seems to be useful to have the results published on DCI in order to check it, but for example, libvirt_up/down playbooks are Ansible tasks that are not reported on DCI and, however, they are executed each time we make use of dci-check-change, and it\u0027s not a problem. Maybe it\u0027s worth to rethink what Beto said because it may be true that it\u0027s better to uncouple this kind of task from the agent itself.",
+      "parentUuid": "9c4f1497_f608a57b",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "89830d79_4a295064",
         "filename": "docs/control_nodes_setup.md",
         "patchSetId": 25
