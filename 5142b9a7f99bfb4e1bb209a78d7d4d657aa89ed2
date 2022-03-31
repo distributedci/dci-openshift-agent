@@ -16,6 +16,24 @@
       "message": "will it work if pullsecret is undefined or equals {}?",
       "revId": "5142b9a7f99bfb4e1bb209a78d7d4d657aa89ed2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f34e152_bd212d93",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-31T23:34:52Z",
+      "side": 1,
+      "message": "hey Charles, had to update the logic. jq was not cooperating with me. Please take a look at the new way and let me know.",
+      "parentUuid": "f1e7669e_138bcd61",
+      "revId": "5142b9a7f99bfb4e1bb209a78d7d4d657aa89ed2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
