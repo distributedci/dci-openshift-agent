@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c741ebf9_78588225",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-03-31T19:45:23Z",
+      "side": 1,
+      "message": "Thank for converting this to a role. Let see how in it goes in a job that requires mirroring",
+      "revId": "5627acade82f324169f2dd3d7963589276703583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
