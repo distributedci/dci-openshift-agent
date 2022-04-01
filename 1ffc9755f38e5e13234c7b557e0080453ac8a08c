@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecf69d85_1ef03e47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-04-01T10:01:46Z",
+      "side": 1,
+      "message": "Hi guys,\n\nThanks to the two of you for the comments.\n\nJust for some context I created this patch because in the BOS2 lab we were getting the following messages in the audit log:\n\ntype\u003dAVC msg\u003daudit(1648646252.241:294810): avc:  denied  { unlink } for  pid\u003d766432 comm\u003d\"qemu-kvm\" name\u003d\"master-1.console\" dev\u003d\"dm-0\" ino\u003d2149135493 scontext\u003dsystem_u:system_r:svirt_t:s0:c386,c827 tcontext\u003dsystem_u:object_r:tmp_t:s0 tclass\u003dsock_file permissive\u003d0\n\nWhere audit2allow suggested the custom module in this patch and didn\u0027t suggest any bolean to activate.\n\nHowever, I\u0027m going to try removing the module and activating the booleans manually to see if the audit message disappears.",
+      "revId": "1ffc9755f38e5e13234c7b557e0080453ac8a08c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
