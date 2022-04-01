@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00382fa4_03101e4b",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-01T00:06:40Z",
+      "side": 1,
+      "message": "I think you could rewrite it like this:\n- not(dci_disconnected | default(false) | bool)\n\nI guess this is the reason of the failure:\n\nliteral-compare: Don\u0027t compare to literal True/False\nplays/pre-run.yml:26 Task/Handler: Set pullsecret from job_info - Connected",
+      "revId": "3875501d04d9420f742930eedf9296e3efe1415d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
