@@ -37,6 +37,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "9716ed8a_4823df85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-01T13:39:38Z",
+      "side": 1,
+      "message": "LGTM, the change (with sorted) passed already, thus I +2 this one",
+      "revId": "9f5ef3f2a46e9ea5a3964922fb8286ff28c0a333",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "b274f7bc_188b4367",
         "filename": "plays/pre-run.yml",
         "patchSetId": 17
