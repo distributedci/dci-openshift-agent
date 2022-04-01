@@ -33,6 +33,23 @@
       "message": "Let\u0027s check the result on the dallas job, if passed I\u0027ll give +2",
       "revId": "64fe7595ca9d17322fb256c841b0f3a368e33cdc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88884e11_52f6725d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-01T09:14:50Z",
+      "side": 1,
+      "message": "It seems it is missing some quotes somewhere, according to the failed job:\n\n```\n2022-04-01 02:09:10,058 p\u003d2572335 u\u003ddciteam n\u003dansible | ERROR! couldn\u0027t resolve module/action \u0027include_task\u0027. This often indicates a misspelling, missing collection, or incorrect module path.\n\nThe error appears to be in \u0027/home/dciteam/gerrit/24476-d74da5ff4c19d8a2b6529b374abd9820/dci-openshift-agent/common-roles/mirror-images/tasks/main.yml\u0027: line 2, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n---\n- name: \"mirror-images: Mirror images\"\n  ^ here\nThis one looks easy to fix. It seems that there is a value started\nwith a quote, and the YAML parser is expecting to see the line ended\nwith the same kind of quote. For instance:\n\n    when: \"ok\" in result.stdout\n\nCould be written as:\n\n   when: \u0027\"ok\" in result.stdout\u0027\n\nOr equivalently:\n\n   when: \"\u0027ok\u0027 in result.stdout\"\n```",
+      "revId": "64fe7595ca9d17322fb256c841b0f3a368e33cdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
