@@ -33,6 +33,24 @@
       "message": "So, it seems the initial problem is the vms are set up to have a console socket under /tmp/{{ hostname }}.console:\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/fe90228094bbeef0593dab01fedd4345b270a2c8/roles/ocp-on-libvirt/templates/libvirt_node.xml.j2#L63\n\nwhere it gets a context qemu-kvm is not compatible with.\n\nTo start with, I see we set the same path for the serial and console sockets, which I don\u0027t know whether it\u0027s correct.\n\nOn the other hand, maybe setting the path to somewhere within /var/lib/libvirt would fix the issue.\n\nAny insights?",
       "revId": "1ffc9755f38e5e13234c7b557e0080453ac8a08c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "185529c0_225a9b79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-01T12:48:07Z",
+      "side": 1,
+      "message": "So for this kind of issue semanage is definitely your friend:\nhttps://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/using_selinux/index#fixing-an-analyzed-selinux-denial_troubleshooting-problems-related-to-selinux",
+      "parentUuid": "15df1ff5_ef585dcd",
+      "revId": "1ffc9755f38e5e13234c7b557e0080453ac8a08c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
