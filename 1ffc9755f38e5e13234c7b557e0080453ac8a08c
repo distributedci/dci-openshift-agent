@@ -16,6 +16,23 @@
       "message": "Hi guys,\n\nThanks to the two of you for the comments.\n\nJust for some context I created this patch because in the BOS2 lab we were getting the following messages in the audit log:\n\ntype\u003dAVC msg\u003daudit(1648646252.241:294810): avc:  denied  { unlink } for  pid\u003d766432 comm\u003d\"qemu-kvm\" name\u003d\"master-1.console\" dev\u003d\"dm-0\" ino\u003d2149135493 scontext\u003dsystem_u:system_r:svirt_t:s0:c386,c827 tcontext\u003dsystem_u:object_r:tmp_t:s0 tclass\u003dsock_file permissive\u003d0\n\nWhere audit2allow suggested the custom module in this patch and didn\u0027t suggest any bolean to activate.\n\nHowever, I\u0027m going to try removing the module and activating the booleans manually to see if the audit message disappears.",
       "revId": "1ffc9755f38e5e13234c7b557e0080453ac8a08c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15df1ff5_ef585dcd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-04-01T11:20:39Z",
+      "side": 1,
+      "message": "So, it seems the initial problem is the vms are set up to have a console socket under /tmp/{{ hostname }}.console:\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/fe90228094bbeef0593dab01fedd4345b270a2c8/roles/ocp-on-libvirt/templates/libvirt_node.xml.j2#L63\n\nwhere it gets a context qemu-kvm is not compatible with.\n\nTo start with, I see we set the same path for the serial and console sockets, which I don\u0027t know whether it\u0027s correct.\n\nOn the other hand, maybe setting the path to somewhere within /var/lib/libvirt would fix the issue.\n\nAny insights?",
+      "revId": "1ffc9755f38e5e13234c7b557e0080453ac8a08c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
