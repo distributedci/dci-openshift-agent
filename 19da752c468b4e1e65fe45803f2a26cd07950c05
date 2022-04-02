@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "19da752c468b4e1e65fe45803f2a26cd07950c05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4b9fc01_b799a517",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-02T18:29:17Z",
+      "side": 1,
+      "message": "Thanks, we passed the upgrade part, now we need to address other issues in trident configs",
+      "revId": "19da752c468b4e1e65fe45803f2a26cd07950c05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
