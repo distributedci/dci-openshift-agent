@@ -16,6 +16,23 @@
       "message": "Example failure can be seen here: https://www.distributed-ci.io/jobs/246c56b3-0848-47da-b854-ff5d7c752b24/jobStates#b5bb0814-8e64-4c2e-a98b-461bf34c82a6:file255",
       "revId": "81960caf19e3215ea8778d58a058c21396e244da",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f44b34e6_aa361a1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-03T20:11:24Z",
+      "side": 1,
+      "message": "👍",
+      "revId": "81960caf19e3215ea8778d58a058c21396e244da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
