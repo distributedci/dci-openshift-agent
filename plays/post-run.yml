@@ -24,4 +24,28 @@
   shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
   ignore_errors: true
 
+- name: Save job info in the cluster
+  block:
+    - name: "Create DCI namespace"
+      community.kubernetes.k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: Namespace
+          metadata:
+            name: openshift-dci
+
+    - name: "Create DCI configmap"
+      community.kubernetes.k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: ConfigMap
+          metadata:
+            name: "doa-{{ ansible_date_time.epoch }}"
+            namespace: openshift-dci
+          data:
+            job_info: "{{ job_info | to_json }}"
+  when: dci_cluster_metadata | default(false) | bool
+
 ...
