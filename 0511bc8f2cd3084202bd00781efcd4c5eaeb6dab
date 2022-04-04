@@ -33,6 +33,23 @@
       "message": "Hello everyone, the change works: https://www.distributed-ci.io/jobs/e52b927b-3dcc-4708-a353-a702ffa645b4/jobStates#967c0499-f838-47e9-8a7b-fffce8289b76:file310",
       "revId": "0511bc8f2cd3084202bd00781efcd4c5eaeb6dab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90cb7c03_3989638c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-04T14:28:24Z",
+      "side": 1,
+      "message": "Tatiana, as discussed during the CI-Duty meeting let\u0027s merge this and then if issues continue we can work on a more complete work-around with retries.",
+      "revId": "0511bc8f2cd3084202bd00781efcd4c5eaeb6dab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
