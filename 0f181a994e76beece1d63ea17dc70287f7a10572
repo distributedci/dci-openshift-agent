@@ -16,6 +16,23 @@
       "message": "Hi Tony, I\u0027ve compared this change with the one in dallas-pipelines and, taking into account the differences between dci-check-change and check, from my side it seems to be fine, but I\u0027d prefer more opinions to completely accept it, just in case I am missing something. Thanks!",
       "revId": "0f181a994e76beece1d63ea17dc70287f7a10572",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "635bd2b9_5468c8c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-04T20:34:08Z",
+      "side": 1,
+      "message": "Thanks Tony, lgtm",
+      "revId": "0f181a994e76beece1d63ea17dc70287f7a10572",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
