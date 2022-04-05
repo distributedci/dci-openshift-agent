@@ -16,6 +16,23 @@
       "message": "Thanks for starting this Tony, I\u0027m not sure we can create namespaces that start with openshift- as they are considered critical for OCP, with the OC command is not possible, from a manifest should work, I was thinking to use the default namespace, but let\u0027s see the results, if it works with openshift- it\u0027s fine.",
       "revId": "759427124364da7e7a754b6c78dff5abd1418f35",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b208eb8_7219e297",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-05T20:27:35Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "759427124364da7e7a754b6c78dff5abd1418f35",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
