@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7ec7eab_d750b852",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-05T11:37:19Z",
+      "side": 1,
+      "message": "LGTM, libvirt job passed",
+      "revId": "0320b922c0efaccb43f45a96ddc3e29abf2a4985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
