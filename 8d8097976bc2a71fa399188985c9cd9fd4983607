@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6d6cf2d_8a4b87c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-04-06T15:20:03Z",
+      "side": 1,
+      "message": "Hi Ramon, thank you for the catch: \"In case the MCP check fails, as we don\u0027t have a rescue block, the job will fail even if the workaround is applied and works\". Let\u0027s merge this one.",
+      "revId": "8d8097976bc2a71fa399188985c9cd9fd4983607",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
