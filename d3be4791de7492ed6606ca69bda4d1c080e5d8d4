@@ -16,6 +16,24 @@
       "message": "It is unclear to me if this does what you intend it to do, you\u0027re effectively passing `--vault-id /usr/bin/dci-vault-client` to the `ansible-playbook` call, I think you want to actually execute `dci-vault-client` and get the ID from the output, unless ansible-playbook does that for you? (the manual isn\u0027t clear on that).\nAs far as I can tell, this would make all clients use the same vault id named \"/usr/bin/dci-vault-client\"",
       "revId": "d3be4791de7492ed6606ca69bda4d1c080e5d8d4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5c2af41_177715e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-04-06T18:28:18Z",
+      "side": 1,
+      "message": "Yes it does what is intended: ansible executes the argument if the argument ends with -client and is an executable file.",
+      "parentUuid": "45c38c61_5a22a75b",
+      "revId": "d3be4791de7492ed6606ca69bda4d1c080e5d8d4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
