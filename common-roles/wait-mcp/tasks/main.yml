@@ -21,7 +21,7 @@
       retries: "{{ mcp_wait_retries }}"
       delay: "{{ mcp_wait_delay }}"
       delegate_to: localhost
-  always:
+  rescue:
     - name: Wait for updated machine configs to be applied on the nodes failed - no workaround applied
       fail:
         msg: "No workaround is defined, so the job has to fail at this point"
