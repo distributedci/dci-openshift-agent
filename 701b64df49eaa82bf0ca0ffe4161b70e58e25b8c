@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ccd7888_f99b2a6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 27
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-07T03:00:05Z",
+      "side": 1,
+      "message": "Nacho, I use the setup_provisioner plays to prepare the provisioner node of cluster2 in Dallas, here some feedback (mostly a nice to have list of items 😊)",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c66cd7c_ca830601",
+        "filename": "samples/control_nodes_setup/setup_provisioner.yml",
+        "patchSetId": 27
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-07T03:00:05Z",
+      "side": 1,
+      "message": "Nice to have: I think with this approach we always have to provide credentials, even in disconnected mode, I was wondering if we can add a variable that when true, it won\u0027t prompt for credentials and it won\u0027t run the tasks to check or perform subscription, because with this variable the playblock will assume access to repositories is configured outside these plays (like our use case in Dallas)",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39342004_daeabe98",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 27
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-07T03:00:05Z",
+      "side": 1,
+      "message": "Can we add dhcp-client package to the list? I performed a base installation in a provisioning hosts with a RHEL 8.5 DVD iso and the last task in this play (https://softwarefactory-project.io/r/c/dci-openshift-agent/+/22977/27/samples/control_nodes_setup/setup_provisioner_tasks.yml#265) failed because that package was not there. Wdyt?",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff29ae8e_845d6d13",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 27
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-07T03:00:05Z",
+      "side": 1,
+      "message": "Nice to have: This task only works if we run first the play to setup the controller (jumpbox), I wonder if we can define a fact with the ssh public key path of the jumpbox and execute this task only if the path is exists, that way we can either pass the path in a variable without having to run the plays to setup the jumphost (which is the use case I\u0027m using in Dallas now)",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba439829_d19e1bdb",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 27
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-07T03:00:05Z",
+      "side": 1,
+      "message": "Nice to have: Now that we talk about SSH, What do you think about including a task to generate the private/public ssh key pair for the dci_provisioner_user here? This is required in the pre-run steps of a deployment: https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L186",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad787f73_0dfccba1",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 27
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-07T03:00:05Z",
+      "side": 1,
+      "message": "Nice to have: Can we include a task to pull https://trunk.rdoproject.org/rhel8-master/deps/latest/Packages/python3-crypto-2.6.1-18.el8ost.x86_64.rpm in the jumphost and install it the provisioner node? Please see comments and package list from https://github.com/openshift-kni/baremetal-deploy/blob/master/ansible-ipi-install/roles/node-prep/vars/main.yml python3-crypto is required by the baremetal_deploy repo, but because we are in disconnected mode it\u0027s expecting the package to be installed already. Of course this task will only run when dci_disconnected \u003d true",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
