@@ -20,6 +20,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "46a82151_23d94bf0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 27
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-04-08T10:15:42Z",
+      "side": 1,
+      "message": "Hi Manny,\n\nThanks a lot for your comments. They\u0027re much appreciated.\n\nI\u0027m taking care of most of them, but for the one below I don\u0027t think it\u0027s worth taking immediate actions since we have a plan to be implemented shortly.\n\nPlease, let me know what you think.",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "2c66cd7c_ca830601",
         "filename": "samples/control_nodes_setup/setup_provisioner.yml",
         "patchSetId": 27
@@ -31,6 +48,24 @@
       "writtenOn": "2022-04-07T03:00:05Z",
       "side": 1,
       "message": "Nice to have: I think with this approach we always have to provide credentials, even in disconnected mode, I was wondering if we can add a variable that when true, it won\u0027t prompt for credentials and it won\u0027t run the tasks to check or perform subscription, because with this variable the playblock will assume access to repositories is configured outside these plays (like our use case in Dallas)",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a456a516_54fb6442",
+        "filename": "samples/control_nodes_setup/setup_provisioner.yml",
+        "patchSetId": 27
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-04-08T10:15:42Z",
+      "side": 1,
+      "message": "Actually, based on the experience from BOS2 the approach I\u0027m considering the for the subscription credentials is to set them in a vault file which, when imported, will require a password, but importing is optional.\n\nIn general, for disconnected environments I\u0027m thinking of setting up a forward proxy in the jumpbox, which would allow registering, installing third party packages and images, etc.",
+      "parentUuid": "2c66cd7c_ca830601",
       "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
