@@ -1,0 +1,259 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e78002a8_cfefdea2",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "why mixing include_tasks and import_playbook?",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4faa518_9d7205dc",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "only leave hostvars[\u0027bastion\u0027][\u0027cluster_id\u0027], you won\u0027t ever override the cluster_id on a single group/node",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70b7e4fb_12fb731c",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "this might be a more expensive operation than needed, better to use `oc get clusterversion`",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5c9463c_f610da44",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "checking if the cluster is up and running seems like it should be in its own section",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41b9b62a_dda414e9",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "not sure why the rest of the tasks here are needed",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94b8b337_2e1b32a5",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "are upgrades different in AI? I think the upgrade path would go through the existing plays/upgrade.yml so this condition may not be needed",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ae25010_b7cb25c3",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "| bool",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1efb96d6_402e9956",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "all of these tasks have the same when condition and they are already in a block, move it to the block level instead",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b1c6b73_7ea13c3d",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "same comment re: install / upgrade",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "915fa9bb_2753c722",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "same comment re: install / upgrade",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c25e0c23_0c02e880",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "this is already a boolean after comparing \u003e\u003d 1",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b722231_ffb97ffc",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "same comment re: install / upgrade",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ccea2ff1_3293c8ae",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "same comment re: install / upgrade",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b786791_ae377a1a",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "same comment re: install / upgrade",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98c75c65_79280b38",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-08T21:47:38Z",
+      "side": 1,
+      "message": "same comment re: install / upgrade",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
