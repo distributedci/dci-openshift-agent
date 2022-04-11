@@ -117,7 +117,7 @@
 - name: "upgrader : Execute the upgrade"
   command:
     chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
-    cmd: oc adm upgrade --to {{ version }}
+    cmd: oc adm upgrade --to {{ version }} {{ upgrade_options | default }}
   register: start_upgrade
 
 - name: "upgrader : Wait for upgrade to start"
