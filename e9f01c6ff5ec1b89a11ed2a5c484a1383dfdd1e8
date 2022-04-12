@@ -67,6 +67,24 @@
       "message": "I confirmed the ansible-lint complains because there is a space missing in this line, in the last three characters, it should get fixed by changing )}} to ) }}",
       "revId": "e9f01c6ff5ec1b89a11ed2a5c484a1383dfdd1e8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "992e9531_8e56253d",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-12T20:52:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04edd9c0_ef962226",
+      "revId": "e9f01c6ff5ec1b89a11ed2a5c484a1383dfdd1e8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
