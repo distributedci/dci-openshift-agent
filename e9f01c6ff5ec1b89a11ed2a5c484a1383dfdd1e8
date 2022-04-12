@@ -33,6 +33,40 @@
       "message": "check dallas ocp-4.7-vanilla ocp-4.8-upgrade",
       "revId": "e9f01c6ff5ec1b89a11ed2a5c484a1383dfdd1e8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b49870d_52358f3a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-12T20:19:40Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ll +2 after the test in Dallas",
+      "revId": "e9f01c6ff5ec1b89a11ed2a5c484a1383dfdd1e8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04edd9c0_ef962226",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-12T20:19:40Z",
+      "side": 1,
+      "message": "I confirmed the ansible-lint complains because there is a space missing in this line, in the last three characters, it should get fixed by changing )}} to ) }}",
+      "revId": "e9f01c6ff5ec1b89a11ed2a5c484a1383dfdd1e8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
