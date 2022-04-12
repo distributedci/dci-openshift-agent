@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0316a5a_73744335",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-12T19:42:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c5cdd4d_f34092da",
+      "revId": "41e4269668893a0feff81e16027ebf3ababba2d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5e034cd9_4f5a3fd3",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-04-12T15:24:36Z",
       "side": 1,
       "message": "What do you think about including a task to delete the temporal tar file downloaded above here at the end? \"/tmp/openshift-client-linux-{{ version }}.tar.gz\"",
+      "revId": "41e4269668893a0feff81e16027ebf3ababba2d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a39622d_8eeaeae3",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-12T19:42:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e034cd9_4f5a3fd3",
       "revId": "41e4269668893a0feff81e16027ebf3ababba2d5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
