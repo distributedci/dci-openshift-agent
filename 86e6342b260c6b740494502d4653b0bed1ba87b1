@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "894e8c94_2c0fab1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "Thanks for the feedback Jorge, but most if not all of the issues should be fixed in upstream crucible since I\u0027d like to keep the playbooks as close to upstream as possible.",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e78002a8_cfefdea2",
@@ -14,6 +31,24 @@
       "writtenOn": "2022-04-08T21:47:38Z",
       "side": 1,
       "message": "why mixing include_tasks and import_playbook?",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6654babe_a92b4853",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "The assisted install breaks out the different services registry, assisted_installer, dhcp, dns, ntp, vm_server etc..  into different hosts.  They could be the same host, but it supports them all being different so that means you need a different playbook for each \"host\".  If I pulled all those playbooks into this one it would be quite large and IMO hard to manage. \n\nMaybe we should everything to import_playbooks for consistency?",
+      "parentUuid": "e78002a8_cfefdea2",
       "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -37,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5bca32dc_8d908ee4",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "I\u0027m not sure what you are saying here.  BTW - This is copied from crucible\u0027s playbook.  Just organized differently to integrate into DCI.",
+      "parentUuid": "a4faa518_9d7205dc",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "70b7e4fb_12fb731c",
         "filename": "plays/assisted-install.yml",
         "patchSetId": 12
@@ -48,6 +101,24 @@
       "writtenOn": "2022-04-08T21:47:38Z",
       "side": 1,
       "message": "this might be a more expensive operation than needed, better to use `oc get clusterversion`",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1416153e_f0cbb386",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "again, if this needs fixing we should fix it in upstream crucible.",
+      "parentUuid": "70b7e4fb_12fb731c",
       "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -71,6 +142,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7da7a1ce_50669c74",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "again, this is how the crucible install playbook works.  I\u0027m trying to stay as close to upstream as possible.",
+      "parentUuid": "b5c9463c_f610da44",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "41b9b62a_dda414e9",
         "filename": "plays/assisted-install.yml",
         "patchSetId": 12
@@ -82,6 +171,24 @@
       "writtenOn": "2022-04-08T21:47:38Z",
       "side": 1,
       "message": "not sure why the rest of the tasks here are needed",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec8fa627_d2d9d186",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "Your not sure why we need credentials to login?  I\u0027m not following",
+      "parentUuid": "41b9b62a_dda414e9",
       "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -105,6 +212,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8c421556_4ea73ad2",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "Remember this is an import_playbook which can\u0027t have conditions on it.  So we need to do the condition here.",
+      "parentUuid": "94b8b337_2e1b32a5",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4ae25010_b7cb25c3",
         "filename": "plays/assisted-pre-run.yml",
         "patchSetId": 12
@@ -116,6 +241,24 @@
       "writtenOn": "2022-04-08T21:47:38Z",
       "side": 1,
       "message": "| bool",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4129920_85c24128",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "Let\u0027s fix this upstream",
+      "parentUuid": "4ae25010_b7cb25c3",
       "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -139,6 +282,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9f784262_1f22dc8a",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "again, lets fix upstream",
+      "parentUuid": "1efb96d6_402e9956",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6b1c6b73_7ea13c3d",
         "filename": "plays/assisted-pre-run.yml",
         "patchSetId": 12
@@ -150,6 +311,24 @@
       "writtenOn": "2022-04-08T21:47:38Z",
       "side": 1,
       "message": "same comment re: install / upgrade",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5d11837_a00f0478",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-04-12T13:24:23Z",
+      "side": 1,
+      "message": "Your comment has made me look closer and I think I may need to add:\ndci_main is undefined or dci_main \u003d\u003d \u0027install\u0027\nto all of these playbooks",
+      "parentUuid": "6b1c6b73_7ea13c3d",
       "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
