@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2fa8ef7_bca9f87f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-12T15:24:36Z",
+      "side": 1,
+      "message": "Pierre, I know this is WIP, but just in case you want to keep polishing the PR. Thanks! ",
+      "revId": "41e4269668893a0feff81e16027ebf3ababba2d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c5cdd4d_f34092da",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-12T15:24:36Z",
+      "side": 1,
+      "message": "just a minor thing since it\u0027s the task name: I see in most of the lines use \"openshift-client-linux-{{ version }}.tar.gz\" any reason to use \"{{ major }}\" variable instead?",
+      "revId": "41e4269668893a0feff81e16027ebf3ababba2d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e034cd9_4f5a3fd3",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-12T15:24:36Z",
+      "side": 1,
+      "message": "What do you think about including a task to delete the temporal tar file downloaded above here at the end? \"/tmp/openshift-client-linux-{{ version }}.tar.gz\"",
+      "revId": "41e4269668893a0feff81e16027ebf3ababba2d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
