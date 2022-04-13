@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eecbdf0b_03decae5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-13T20:24:32Z",
+      "side": 1,
+      "message": "Thx for the review.\nI am not able to upgrade in disconnected environment yet but results in connected environment are good.",
+      "revId": "2d53f66e71581bcce142c00d780292544e5db433",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "12792288_1800a816",
