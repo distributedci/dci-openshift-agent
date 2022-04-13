@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "05ada983_ab9db8e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-13T20:06:25Z",
+      "side": 1,
+      "message": "Pierre, for me looks good, but as Fred mentioned it, throwing a note about this option in the readme would be great!  ",
+      "revId": "2d53f66e71581bcce142c00d780292544e5db433",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "12792288_1800a816",
@@ -31,6 +48,24 @@
       "writtenOn": "2022-04-12T22:26:24Z",
       "side": 1,
       "message": "I thought --allow-explicit-upgrade wasn\u0027t required after 4.6, did that change?",
+      "revId": "2d53f66e71581bcce142c00d780292544e5db433",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7c50dd5_04cfac99",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-13T20:06:25Z",
+      "side": 1,
+      "message": "By default is not required in an standard upgrade, but I think in this case it\u0027s just to be able to force the upgrade when there is not an upgrade path[1], or when upgrades are locked.\n \n[1] --allow-explicit-upgrade\u003dfalse: Upgrade even if the upgrade target is not listed in the available versions list",
+      "parentUuid": "12792288_1800a816",
       "revId": "2d53f66e71581bcce142c00d780292544e5db433",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
