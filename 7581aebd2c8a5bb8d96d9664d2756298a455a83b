@@ -68,6 +68,24 @@
       "parentUuid": "6bf2ce22_ba375566",
       "revId": "7581aebd2c8a5bb8d96d9664d2756298a455a83b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8b7253d_00dae630",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-13T15:55:14Z",
+      "side": 1,
+      "message": "\u003e \u003e When this is used in a disconnected env, do we have a guarantee that oc will be in pcs / version /oc ? I got the feeling that we\u0027ve been assuming the newer version will be available in there but an upgrade does not download the new binaries does it?\n\u003e \n\u003e I didn\u0027t touch this part, if it didn\u0027t work before, this change will not fix it. \n\u003e \n\nMaybe we can address the disconnected part in another PR? and leave this just for the connected envs\n\n\u003e \u003e I think we should copy it to: {{ dci_cluster_configs_dir }}/oc to not pollute local oc, we do this already in some parts in doa, but in all doaa\n\u003e \n\u003e I think dci_cluster_configs_dir is specific to jumphost, in our case we are coping the oc file in the provisionhost.\n\nThis PR runs the untar of the oc client in {{ dci_cluster_configs_dir }}, then we should be good isn\u0027t it. Tony is the last task that copies to /usr/local/bin/oc that you prefer not to pollute?",
+      "parentUuid": "c4089873_cac173a9",
+      "revId": "7581aebd2c8a5bb8d96d9664d2756298a455a83b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
