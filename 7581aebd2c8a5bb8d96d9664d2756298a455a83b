@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "319a4f4d_c146a107",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-13T02:43:11Z",
+      "side": 1,
+      "message": "Thx for your review Tony.",
+      "revId": "7581aebd2c8a5bb8d96d9664d2756298a455a83b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6bf2ce22_ba375566",
@@ -31,6 +48,24 @@
       "writtenOn": "2022-04-12T23:35:39Z",
       "side": 1,
       "message": "When this is used in a disconnected env, do we have a guarantee that oc will be in pcs / version /oc ? I got the feeling that we\u0027ve been assuming the newer version will be available in there but an upgrade does not download the new binaries does it?\n\nI think we should copy it to: {{ dci_cluster_configs_dir }}/oc to not pollute local oc, we do this already in some parts in doa, but in all doaa\n\nBy copying it to the above location we can use it with {{ oc_tool_path }} instead of using `oc` 😄",
+      "revId": "7581aebd2c8a5bb8d96d9664d2756298a455a83b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4089873_cac173a9",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-13T02:43:11Z",
+      "side": 1,
+      "message": "\u003e When this is used in a disconnected env, do we have a guarantee that oc will be in pcs / version /oc ? I got the feeling that we\u0027ve been assuming the newer version will be available in there but an upgrade does not download the new binaries does it?\n\nI didn\u0027t touch this part, if it didn\u0027t work before, this change will not fix it. \n\n\u003e I think we should copy it to: {{ dci_cluster_configs_dir }}/oc to not pollute local oc, we do this already in some parts in doa, but in all doaa\n\nI think dci_cluster_configs_dir is specific to jumphost, in our case we are coping the oc file in the provisionhost.",
+      "parentUuid": "6bf2ce22_ba375566",
       "revId": "7581aebd2c8a5bb8d96d9664d2756298a455a83b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
