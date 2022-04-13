@@ -86,6 +86,24 @@
       "parentUuid": "c4089873_cac173a9",
       "revId": "7581aebd2c8a5bb8d96d9664d2756298a455a83b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b79e7fac_1aac3e7a",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-13T19:35:12Z",
+      "side": 1,
+      "message": "Fair, let\u0027s tackle this on a diff change, I don\u0027t want to block any longer, let\u0027s create a card and move on 👍",
+      "parentUuid": "e8b7253d_00dae630",
+      "revId": "7581aebd2c8a5bb8d96d9664d2756298a455a83b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
