@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2656ae20_f18603af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 28
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-14T03:19:01Z",
+      "side": 1,
+      "message": "Thanks Nacho, from my side looks good, I think you fixed several points from Beto review but you forgot to mark them as resolved. ",
+      "revId": "3b971d0a5d13e85240c49bbe1d9406e8bb5cfb34",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

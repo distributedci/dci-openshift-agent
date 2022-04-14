@@ -89,6 +89,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "8a89dedc_4c45a5f1",
+        "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
+        "patchSetId": 27
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-14T03:19:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "39342004_daeabe98",
+      "revId": "701b64df49eaa82bf0ca0ffe4161b70e58e25b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "ff29ae8e_845d6d13",
         "filename": "samples/control_nodes_setup/setup_provisioner_tasks.yml",
         "patchSetId": 27

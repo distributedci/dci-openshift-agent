@@ -246,6 +246,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8baf1dfb_6dd42814",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-14T03:19:01Z",
+      "side": 1,
+      "message": "Yes, I think this could be a good subject for grooming, I was thinking we were going to use more like I did in the setup of provisioner of cluster2/3, that is: run the standalone plays only once to setup the nodes, it shouldn\u0027t harm anything to run in a hook on every job, but this is where we can discuss the pros ans cons. At least we have some functional now, it\u0027s just a matter to decide how to use it.",
+      "parentUuid": "bda389fe_48d7ba20",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "89830d79_4a295064",
         "filename": "docs/control_nodes_setup.md",
         "patchSetId": 25
