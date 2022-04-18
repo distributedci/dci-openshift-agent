@@ -16,6 +16,23 @@
       "message": "Change is not breaking anything. Failure in test job is because post-run is missing. https://www.distributed-ci.io/jobs/bdf3ced0-35bf-41b0-a25e-d9f10a14826f/jobStates",
       "revId": "1ccb2bca59998c1287d4e5705d25ac6c95c375b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cbcf90d_cd8085ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-18T18:08:37Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "1ccb2bca59998c1287d4e5705d25ac6c95c375b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
