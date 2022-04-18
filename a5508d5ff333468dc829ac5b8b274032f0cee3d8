@@ -264,6 +264,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "60a7421b_f87d4084",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-18T12:06:56Z",
+      "side": 1,
+      "message": "Let me propose this for tomorrow\u0027s grooming and then we can check it.",
+      "parentUuid": "8baf1dfb_6dd42814",
+      "revId": "a5508d5ff333468dc829ac5b8b274032f0cee3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "89830d79_4a295064",
         "filename": "docs/control_nodes_setup.md",
         "patchSetId": 25
