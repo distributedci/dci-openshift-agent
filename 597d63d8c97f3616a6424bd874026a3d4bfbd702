@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2120be07_c24da0a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-18T11:38:46Z",
+      "side": 1,
+      "message": "As it is also used in the app-agent, should we create a new shared role to put this code there and avoid defining the code twice?",
+      "revId": "597d63d8c97f3616a6424bd874026a3d4bfbd702",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
