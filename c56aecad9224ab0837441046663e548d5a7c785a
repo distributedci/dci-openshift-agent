@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7559d189_81fca991",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-04-19T19:09:25Z",
+      "side": 1,
+      "message": "\u003e\u003d is a better check, no?",
+      "revId": "c56aecad9224ab0837441046663e548d5a7c785a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
