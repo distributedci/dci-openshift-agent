@@ -16,6 +16,24 @@
       "message": "\u003e\u003d is a better check, no?",
       "revId": "c56aecad9224ab0837441046663e548d5a7c785a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b66521dd_873921f8",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-20T08:19:44Z",
+      "side": 1,
+      "message": "I think this task only targets OCP 4.8 -\u003e OCP 4.9 upgrade, so I guess \"\u003d\u003d\" is fine because this should not apply for OCP 4.10 and other newer versions",
+      "parentUuid": "7559d189_81fca991",
+      "revId": "c56aecad9224ab0837441046663e548d5a7c785a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
