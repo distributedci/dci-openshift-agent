@@ -34,6 +34,24 @@
       "parentUuid": "7559d189_81fca991",
       "revId": "c56aecad9224ab0837441046663e548d5a7c785a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b06d539_3c7c66a9",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-20T11:57:21Z",
+      "side": 1,
+      "message": "Yes, it is only for 4.9 upgrade.",
+      "parentUuid": "b66521dd_873921f8",
+      "revId": "c56aecad9224ab0837441046663e548d5a7c785a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
