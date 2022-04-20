@@ -1,6 +1,6 @@
 ---
 - name: Destroy bootstrap VM
-  hosts: localhost
+  hosts: all
   tasks:
     - include_role:
         name: ocp-on-libvirt
