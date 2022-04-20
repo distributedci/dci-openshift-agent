@@ -16,6 +16,24 @@
       "message": "Or we could specify vm_host and default to localhost in the inventory file.\n\nBut I\u0027m fine either way since the playbook is specific right now.  but if we ever expanded to setup other infrastructure at the same time (ie: registry, cache, etc) it would be good to be specific so you don\u0027t end up setting up libvirt on every host.",
       "revId": "907484f8639435278a62f343df2530b8a76af5d6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20a8dfbb_1a835d99",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-20T16:30:30Z",
+      "side": 1,
+      "message": "Hi Bill, thanks for reviewing this. In fact, right now I am configuring the BOS2 labs in order to run ocp_on_libvirt and sno_on_libvirt on a remote way (i.e., one of the servers in the BOS2 lab will act as jumphost, and the rest of servers will hold OCP or SNO clusters based on libvirt), and the purpose of this change is to deal with that case.\nI have included your proposal, just tell me if you think it is fine now.",
+      "parentUuid": "ad0e8f5d_11126f02",
+      "revId": "907484f8639435278a62f343df2530b8a76af5d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
