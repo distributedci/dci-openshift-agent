@@ -1,6 +1,6 @@
 ---
 - name: Up bootstrap VM
-  hosts: localhost
+  hosts: all
   vars:
     ansible_python_interpreter: /usr/libexec/platform-python
     hook_action: install
