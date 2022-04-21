@@ -1,0 +1,129 @@
+---
+- name: "test_ redhat-tests: Run the OpenShift Virtualization conformance test suite"
+  block: 
+
+    - name: "Create temporal directory"
+      tempfile:
+        state: directory
+      register: tmp_vct_dir
+
+    - name: "test_ redhat-tests: Get latest sonobuoy release tag"
+      shell:
+        cmd: >
+          curl --silent "https://api.github.com/repos/{{ ts_sonobuoy_repo }}/releases/latest" | jq -r .tag_name
+      register: sonobuoy_tag
+
+    - name: "test_ redhat-tests: Sonobuoy release binary"
+      debug:
+        msg: "https://github.com/{{ ts_sonobuoy_repo }}/releases/download/{{ sonobuoy_tag.stdout }}/sonobuoy_{{ sonobuoy_tag.stdout[1:] }}_linux_amd64.tar.gz"
+
+    - name: "Download the sonobuoy binary"
+      unarchive:
+        src: "https://github.com/{{ ts_sonobuoy_repo }}/releases/download/{{ sonobuoy_tag.stdout }}/sonobuoy_{{ sonobuoy_tag.stdout[1:] }}_linux_amd64.tar.gz"
+        dest: "{{ tmp_vct_dir.path }}"
+        remote_src: yes
+
+    - name: "test_ redhat-tests: Get defined kubevirt conformance manifest"
+      shell:
+        cmd: >
+         curl --silent "https://api.github.com/repos/{{ ts_kubevirt_repo }}/releases/latest" | jq -r .tag_name
+      register:
+        kubevirt_conformance_tag
+
+    - name: "Download the kubevirt conformance manifest"
+      get_url:
+        url: "{{ ts_kubevirt_conformance_manifest }}"
+        dest: "{{ tmp_vct_dir.path }}/kubevirt-conformance.yaml"
+
+    - name: "test_ redhat-tests: Run the kubevirt tests (connected)"
+      block:
+
+        - name: "test_ redhat-tests: Run the Ovirt conformance tests  (connected)"
+          environment:
+            KUBECONFIG: "{{ ts_configs_dir }}/kubeconfig"
+          shell:
+            cmd: >
+              ./sonobuoy
+              run
+              --sonobuoy-image={{ ts_sonobuoy_image }}
+              --kube-conformance-image {{ ts_kubevirt_conformance_image }}
+              --wait
+              --mode quick
+              --skip-preflight
+              --plugin kubevirt-conformance.yaml
+            chdir: "{{ tmp_vct_dir.path }}"
+      when:
+        - not (dci_disconnected | default(false) | bool)
+
+    - name: "test_ redhat-tests: Run the kubevirt tests (disconnected)"
+      block:
+
+        - name: "Replace quay.io with {{ ts_registry }}"
+          replace:
+            path: "{{ tmp_vct_dir.path }}/kubevirt-conformance.yaml"
+            regexp: "{{ ts_kubevirt_conformance_image }}"
+            replace: "{{ ts_registry }}/kubevirt/conformance:{{ ts_kubevirt_conformance_version }}"
+
+        - name: "test_ redhat-tests: Mirror sonobuoy images"
+          include_role:
+            name: mirror_images
+          vars:
+            images: "{{ ts_kubevirt_images }}"
+            local_registry: "{{ ts_registry }}"
+            authfile: "{{ ts_registry_auth }}"
+
+        - name: "test_ redhat-tests: Run the sonobuoy conformance tests (disconnected)"
+          environment:
+            KUBECONFIG: "{{ ts_configs_dir }}/kubeconfig"
+          shell:
+            cmd: >
+              ./sonobuoy
+              run
+              --sonobuoy-image={{ ts_registry }}/sonobuoy/sonobuoy:{{ sonobuoy_tag.stdout }}
+              --wait
+              --mode quick
+              --skip-preflight
+              --plugin-env kubevirt-conformance.CONTAINER_PREFIX={{ ts_registry }}/kubevirt
+              --plugin-env kubevirt-conformance.CONTAINER_TAG={{ ts_kubevirt_conformance_version }}
+              --plugin kubevirt-conformance.yaml
+            chdir: "{{ tmp_vct_dir.path }}"
+      when: >
+        (dci_disconnected | default(false) | bool) or
+        (dci_local_mirror | default(false) | bool)
+
+    - name: "test_ redhat-tests: Retrieve sonobuoy results tarball"
+      environment:
+        KUBECONFIG: "{{ ts_configs_dir }}/kubeconfig"
+      shell:
+        cmd: >
+          ./sonobuoy
+          retrieve
+          -f {{ ts_log_dir }}/ocp_virtualization_conformance_tests_results.tar.gz
+        chdir: "{{ tmp_vct_dir }}"
+
+    - name: "test_ redhat-tests: Retrieve sonobuoy tests summary"
+      environment:
+        KUBECONFIG: "{{ ts_configs_dir }}/kubeconfig"
+      shell:
+        cmd: >
+          ./sonobuoy
+          results
+          {{ ts_log_dir }}/ocp_virtualization_conformance_tests_results.tar.gz > {{ ts_log_dir }}/ocp_virtualization_conformance_tests_summary.txt
+        chdir: "{{ tmp_vct_dir }}"
+
+  always:
+    - name: "test_ redhat-tests: Delete cluster sonobuoy's resources"
+      environment:
+        KUBECONFIG: "{{ ts_configs_dir }}/kubeconfig"
+      shell:
+        cmd: >
+          ./sonobuoy
+          delete
+        chdir: "{{ tmp_vct_dir.path }}"
+
+    - name: "Removing tmp directory"
+      file:
+        path: "{{ tmp_vct_dir.path }}"
+        state: absent
+        force: yes
+...

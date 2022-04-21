@@ -1,0 +1,11 @@
+---
+- name: "test_ redhat-tests: Run the openshift CNI tests"
+  shell:
+    cmd: >
+      podman run --pull=always --rm
+      -v {{ ts_configs_dir }}:/tests:Z
+      -v {{ ts_log_dir }}:/logs:Z
+      -e KUBECONFIG=/tests/kubeconfig
+      {{ ts_e2e_image }}:{{ ts_ocp_version_maj }}.{{ ts_ocp_version_min }}
+      /bin/bash -c "openshift-tests run openshift/network/third-party --junit-dir /logs > /logs/cni_tests_results.log"
+...
