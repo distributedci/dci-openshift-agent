@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e20f725_22a3bb4b",
+        "filename": "roles/redhat-tests/tasks/kubevirt-tests.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "This will be removed on the final change, right?",
+      "revId": "7d5c4138200ebb3968687e9725fe956007520f01",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2973e8ca_730171fb",
+        "filename": "roles/redhat-tests/tasks/kubevirt-tests.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "Where is this one used?",
+      "revId": "7d5c4138200ebb3968687e9725fe956007520f01",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3e7f7bc_3ab3b9f7",
+        "filename": "roles/redhat-tests/tasks/kubevirt-tests.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "txt is the only format they provide? no junit?",
+      "revId": "7d5c4138200ebb3968687e9725fe956007520f01",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

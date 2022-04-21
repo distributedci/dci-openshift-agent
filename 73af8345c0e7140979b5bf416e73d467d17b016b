@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f128bd49_92bd9732",
+        "filename": "group_vars/all",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "Do we need these vars? I don\u0027t see them used later",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e8758ed_7c0b6ccf",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "I\u0027m not sure we reuse this var enough, and most likely won\u0027t change",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebee47d5_6390e282",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "Maybe you would like to split the version on its own var, like the conformance version",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cf46f5c_62d4a423",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "I\u0027m not sure if we really need to define this variable, not sure it will ever change",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ce7ea40_af0a16a3",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "nit: Images mirrored in disconnected clusters",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d18d76a_e29643ed",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "It would be nice to obtain this list dynamically, but not sure if that\u0027s possible",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e7cfaf0_f4e33b26",
+        "filename": "roles/redhat-tests/tasks/cni-tests.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-21T22:33:06Z",
+      "side": 1,
+      "message": "Is the output a log or a junit file?",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
