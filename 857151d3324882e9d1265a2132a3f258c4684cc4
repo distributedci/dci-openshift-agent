@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "895226d0_e0dc7b8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T22:54:32Z",
+      "side": 1,
+      "message": "Testing in 4.7 is failing because some kubevirt CRDs and APIs do not exist. After engaging the kubvirt team in slack found that we need to use the conformance image base in the kubevirt version available in the OCP version. The following table shows the equivalence.\n\n\n4.7 -\u003e 0.36\n4.8 -\u003e 0.41, \n4.9 -\u003e 0.44, \n4.10 -\u003e 0.49\n4.11 -\u003e 0.52 \n\nMore testing will be needed. Not all the conformance images may support overriding the registry and image tags for disconnected environments.\n\nThis will be resumed next week.",
+      "revId": "857151d3324882e9d1265a2132a3f258c4684cc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
