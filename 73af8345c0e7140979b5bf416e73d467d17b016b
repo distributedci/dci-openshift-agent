@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd39cb12_4bd88c03",
+        "filename": "group_vars/all",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T05:08:57Z",
+      "side": 1,
+      "message": "yes, these are needed. Should be provided to the role as vars. I already fixed",
+      "parentUuid": "f128bd49_92bd9732",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6e8758ed_7c0b6ccf",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-04-21T22:33:06Z",
       "side": 1,
       "message": "I\u0027m not sure we reuse this var enough, and most likely won\u0027t change",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "027219f2_74fbe22b",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T05:08:57Z",
+      "side": 1,
+      "message": "not needed, removed it. Thanks",
+      "parentUuid": "6e8758ed_7c0b6ccf",
       "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "61872596_64743b18",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T05:08:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebee47d5_6390e282",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6cf46f5c_62d4a423",
@@ -65,6 +119,24 @@
       "writtenOn": "2022-04-21T22:33:06Z",
       "side": 1,
       "message": "I\u0027m not sure if we really need to define this variable, not sure it will ever change",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e132462_1c9f6c93",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T05:08:57Z",
+      "side": 1,
+      "message": "removed it",
+      "parentUuid": "6cf46f5c_62d4a423",
       "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdef2a33_50f23da7",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T05:08:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ce7ea40_af0a16a3",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8d18d76a_e29643ed",
@@ -103,6 +193,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7b422b7_be63dcc8",
+        "filename": "roles/redhat-tests/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T05:08:57Z",
+      "side": 1,
+      "message": "I do not see a command to list the required images. In the case of the sonobuoy e2e test the images can be mirrored by the binary, but this the kubevirt is an external driver. ;(",
+      "parentUuid": "8d18d76a_e29643ed",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6e7cfaf0_f4e33b26",
@@ -116,6 +224,24 @@
       "writtenOn": "2022-04-21T22:33:06Z",
       "side": 1,
       "message": "Is the output a log or a junit file?",
+      "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c50f289_2e17b951",
+        "filename": "roles/redhat-tests/tasks/cni-tests.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T05:08:57Z",
+      "side": 1,
+      "message": "We are collecting the junit files and dumping the stdout into the log file. Both are stored in the dci_log_dir and will be collected later",
+      "parentUuid": "6e7cfaf0_f4e33b26",
       "revId": "73af8345c0e7140979b5bf416e73d467d17b016b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
