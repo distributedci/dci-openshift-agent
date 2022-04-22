@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ee1c7d6_15eb6a1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-04-22T15:14:57Z",
+      "side": 1,
+      "message": "A really good CR for me 😊",
+      "revId": "48ea281749f8cec0e4fdc7ab2f59bff69b863909",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c21fcd5_1b7821d2",
+        "filename": "roles/redhat-tests/tasks/kubevirt-tests.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-04-22T15:14:57Z",
+      "side": 1,
+      "message": "Hum I am not sure the \u0027remote_src\u0027 option is needed. The ansible doc is saying : \"Set remote_src\u003dyes to unpack an archive which already exists on the target.\" which is not the case here right?",
+      "revId": "48ea281749f8cec0e4fdc7ab2f59bff69b863909",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e28b7078_8e9b36c2",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-04-22T15:14:57Z",
+      "side": 1,
+      "message": "hum Would it not be better to check the CSV of the operator instead of the CRD?",
+      "revId": "48ea281749f8cec0e4fdc7ab2f59bff69b863909",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
