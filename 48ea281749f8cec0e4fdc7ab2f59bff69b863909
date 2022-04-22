@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3856541_feb73593",
+        "filename": "roles/redhat-tests/tasks/kubevirt-tests.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T19:49:36Z",
+      "side": 1,
+      "message": "yes, not needed. Thanks! Will remove it",
+      "parentUuid": "3c21fcd5_1b7821d2",
+      "revId": "48ea281749f8cec0e4fdc7ab2f59bff69b863909",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e28b7078_8e9b36c2",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-04-22T15:14:57Z",
       "side": 1,
       "message": "hum Would it not be better to check the CSV of the operator instead of the CRD?",
+      "revId": "48ea281749f8cec0e4fdc7ab2f59bff69b863909",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a880c97a_a5a6625c",
+        "filename": "roles/redhat-tests/tasks/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-04-22T19:49:36Z",
+      "side": 1,
+      "message": "I think that this is more generic, the role can be used without DCI. No need to check in which NS the CSV, etc. The CRD is the method used also by the conformance binary to check vi virtualization is enabled.",
+      "parentUuid": "e28b7078_8e9b36c2",
       "revId": "48ea281749f8cec0e4fdc7ab2f59bff69b863909",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
