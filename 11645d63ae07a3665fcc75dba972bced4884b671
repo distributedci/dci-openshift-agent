@@ -50,6 +50,24 @@
       "message": "It\u0027s really curious that the very newest OCP 4.11 release is passing in dallas, just by not installing PAO.\nHowever, I have some questions here:\n- Right now, we are using OCP 4.10 operators for OCP 4.11 deployment, so in theory, PAO can be deployed as we are using OCP 4.10 operators.\n- If we remove PAO right now, example-cnf will not work then in OCP 4.11 until having NTO, won\u0027t it?\n- Also, I guess the idea should be to move to OCP 4.11 operators, but as shown in CILAB-571, PAO and SRIOV operator are not present. PAO issue is solved with this change, but what about SRIOV? Then, example-cnf, e.g., will not work too.",
       "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2944199_cf22b1c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-26T16:24:18Z",
+      "side": 1,
+      "message": "Ramon,\n- yes, if we merge this now it will impact any tests that use PAO in 4.11, but on the other hand we are not suppose to PAO in 4.11, so what we test is not valid. (Curious to know it works) \n- example-cnf will depend on NTO now, we\u0027ll have to test it.\nI\u0027m ok holding this until we provide a valid way to setup NTO profiles, I\u0027ll start testing and might add it in this same PR.",
+      "parentUuid": "be9ad443_fd3b04ba",
+      "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
