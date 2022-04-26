@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51c4efec_41c7dc1c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-26T02:00:56Z",
+      "side": 1,
+      "message": "new way to setup NTO profile will be provided in diff PR",
+      "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
