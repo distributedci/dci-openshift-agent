@@ -86,6 +86,8 @@
       name: operator-performance-profile
     when:
     - hostvars.localhost.enable_perf_addon|default(true)|bool
+    - ocp_version_maj|int == 4
+    - ocp_version_min|int <= 10
 
   - name: "deploy-operators : Install SRIOV operator"
     include_role:
