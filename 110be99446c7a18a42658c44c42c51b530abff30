@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e82370e_91ddb58a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-26T20:05:41Z",
+      "side": 1,
+      "message": "Makes sense, then when we disable teardown on success or failure we would still pull the console logs. I\u0027ll wait for the tests.",
+      "revId": "110be99446c7a18a42658c44c42c51b530abff30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
