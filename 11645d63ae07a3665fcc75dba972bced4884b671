@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.11-vanilla",
       "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be9ad443_fd3b04ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-26T07:41:49Z",
+      "side": 1,
+      "message": "It\u0027s really curious that the very newest OCP 4.11 release is passing in dallas, just by not installing PAO.\nHowever, I have some questions here:\n- Right now, we are using OCP 4.10 operators for OCP 4.11 deployment, so in theory, PAO can be deployed as we are using OCP 4.10 operators.\n- If we remove PAO right now, example-cnf will not work then in OCP 4.11 until having NTO, won\u0027t it?\n- Also, I guess the idea should be to move to OCP 4.11 operators, but as shown in CILAB-571, PAO and SRIOV operator are not present. PAO issue is solved with this change, but what about SRIOV? Then, example-cnf, e.g., will not work too.",
+      "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
