@@ -122,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bc944ab_efffd908",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-27T17:23:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f0a63379_ed70e896",
+      "revId": "110be99446c7a18a42658c44c42c51b530abff30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d50b6a43_0cc45e91",
@@ -135,6 +153,24 @@
       "writtenOn": "2022-04-27T17:04:24Z",
       "side": 1,
       "message": "Maybe we could reuse the upload logs below as including `*.log` files?",
+      "revId": "110be99446c7a18a42658c44c42c51b530abff30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7aa1f8a_6bc2e60f",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-27T17:23:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d50b6a43_0cc45e91",
       "revId": "110be99446c7a18a42658c44c42c51b530abff30",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
