@@ -68,6 +68,23 @@
       "parentUuid": "be9ad443_fd3b04ba",
       "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "189fc1a2_4893c9d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T16:31:25Z",
+      "side": 1,
+      "message": "Thanks Manuel, LGTM\n\nWe will need to remove PAO from opm_mirror_list in the pipeline so we don\u0027t attempt to mirror, as it won\u0027t be available",
+      "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
