@@ -68,6 +68,24 @@
       "parentUuid": "63412929_47551811",
       "revId": "32c672b690e31dce75fae4b75a8d286786c53ad9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8f4508e_903aea7e",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T18:19:14Z",
+      "side": 1,
+      "message": "Good, let\u0027s verify it works as expected and I\u0027ll +2\n\nThanks Pierre!",
+      "parentUuid": "65489867_cd60bcf0",
+      "revId": "32c672b690e31dce75fae4b75a8d286786c53ad9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
