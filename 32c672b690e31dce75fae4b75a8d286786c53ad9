@@ -50,6 +50,24 @@
       "message": "Do we care about the conditional it had previously?\n\n  when:\n    - hostvars.localhost.job_id\n    - hostvars.localhost.dci_client_id\n    - hostvars.localhost.dci_api_secret\n    - hostvars.localhost.dci_cs_url",
       "revId": "32c672b690e31dce75fae4b75a8d286786c53ad9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65489867_cd60bcf0",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-27T18:09:22Z",
+      "side": 1,
+      "message": "I don\u0027t think so, we used these variables before in other part of the yaml without this check.",
+      "parentUuid": "63412929_47551811",
+      "revId": "32c672b690e31dce75fae4b75a8d286786c53ad9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
