@@ -16,6 +16,40 @@
       "message": "You were right Tony, it is much simpler now.",
       "revId": "32c672b690e31dce75fae4b75a8d286786c53ad9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d950744_026578a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T18:06:27Z",
+      "side": 1,
+      "message": ":) ",
+      "revId": "32c672b690e31dce75fae4b75a8d286786c53ad9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63412929_47551811",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T18:06:27Z",
+      "side": 1,
+      "message": "Do we care about the conditional it had previously?\n\n  when:\n    - hostvars.localhost.job_id\n    - hostvars.localhost.dci_client_id\n    - hostvars.localhost.dci_api_secret\n    - hostvars.localhost.dci_cs_url",
+      "revId": "32c672b690e31dce75fae4b75a8d286786c53ad9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
