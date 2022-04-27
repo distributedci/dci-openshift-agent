@@ -50,6 +50,24 @@
       "message": "LGTM, but I think you will need to do Test-Hints: sno in the commit so dci-ci-bot performs the test in sno",
       "revId": "312505e36b85b1dccbf9ff6b367f0171225ccff8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7b1ade2_638489bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-27T23:06:43Z",
+      "side": 1,
+      "message": "Thanks Tony, I see both SNO baremetal 4.11 and Standard OCP 4.10 jobs are fine, so I\u0027m merging this.",
+      "parentUuid": "05c09e7b_e119735d",
+      "revId": "312505e36b85b1dccbf9ff6b367f0171225ccff8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
