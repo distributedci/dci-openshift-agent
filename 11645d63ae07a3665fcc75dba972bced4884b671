@@ -85,6 +85,24 @@
       "message": "Thanks Manuel, LGTM\n\nWe will need to remove PAO from opm_mirror_list in the pipeline so we don\u0027t attempt to mirror, as it won\u0027t be available",
       "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86cd3d0c_e657200b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-27T18:02:13Z",
+      "side": 1,
+      "message": "Thanks Tony, I submitted https://github.com/dci-labs/dallas-pipelines/pull/336 for that. \nAlso clearing the NS in here https://github.com/dci-labs/service-configs/pull/53\nI did more changes to apply the same PerformanceProfiles, now just the installation part of PAO has a condition.",
+      "parentUuid": "189fc1a2_4893c9d9",
+      "revId": "11645d63ae07a3665fcc75dba972bced4884b671",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
