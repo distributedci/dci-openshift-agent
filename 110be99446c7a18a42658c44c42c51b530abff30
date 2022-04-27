@@ -68,6 +68,57 @@
       "message": "I see the console logs were collected in the get logs phase, the job failed but that\u0027s a 4.11 thing",
       "revId": "110be99446c7a18a42658c44c42c51b530abff30",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3052bfe5_041fed23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T17:04:24Z",
+      "side": 1,
+      "message": "I think you could reduce some of the tasks in this block, and move the block below the \"Setup job_logs directory\"\n\nAnd the block would only find the console logs and copy them to the job_logs directory. The rest should take care of creating the tmp dir, uploading the logs and deleting the temp dir, wdyt?",
+      "revId": "110be99446c7a18a42658c44c42c51b530abff30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0a63379_ed70e896",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T17:04:24Z",
+      "side": 1,
+      "message": "Can we reuse the job_logs dir created down below? it will require to move part of this block below that task",
+      "revId": "110be99446c7a18a42658c44c42c51b530abff30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d50b6a43_0cc45e91",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T17:04:24Z",
+      "side": 1,
+      "message": "Maybe we could reuse the upload logs below as including `*.log` files?",
+      "revId": "110be99446c7a18a42658c44c42c51b530abff30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
