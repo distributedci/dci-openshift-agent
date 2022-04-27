@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45a55e63_1d825daf",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T18:51:03Z",
+      "side": 1,
+      "message": "enable_perf_profile is a new variable that will allow us to *not* load the PAO, correct?\n\nIs it really needed? wouldn\u0027t the actual definition of the profile be enough to know whether it should be applied or not? i.e. performance_definition is defined?",
+      "revId": "d11973523d26ec29c81748671c09ecf1c55cfc2b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
