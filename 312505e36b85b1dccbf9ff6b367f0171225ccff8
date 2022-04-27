@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "312505e36b85b1dccbf9ff6b367f0171225ccff8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05c09e7b_e119735d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-27T22:37:04Z",
+      "side": 1,
+      "message": "LGTM, but I think you will need to do Test-Hints: sno in the commit so dci-ci-bot performs the test in sno",
+      "revId": "312505e36b85b1dccbf9ff6b367f0171225ccff8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
