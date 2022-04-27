@@ -16,6 +16,24 @@
       "message": "enable_perf_profile is a new variable that will allow us to *not* load the PAO, correct?\n\nIs it really needed? wouldn\u0027t the actual definition of the profile be enough to know whether it should be applied or not? i.e. performance_definition is defined?",
       "revId": "d11973523d26ec29c81748671c09ecf1c55cfc2b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54d9afa0_d607b455",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-04-27T19:20:01Z",
+      "side": 1,
+      "message": "Yes, I think that\u0027s better, I moved the condition of \"performance_definition is defined\" to the deploy-operators.yml that way, it won\u0027t even bother to run tasks from the roles/operator-performance-profile/tasks/apply-profile.yml play if is not defined.",
+      "parentUuid": "45a55e63_1d825daf",
+      "revId": "d11973523d26ec29c81748671c09ecf1c55cfc2b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
