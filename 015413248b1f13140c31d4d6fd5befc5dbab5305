@@ -33,6 +33,23 @@
       "message": "@Manuel, this should fix the issue we are having on hv2, with the update of the vbmc check",
       "revId": "015413248b1f13140c31d4d6fd5befc5dbab5305",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed6e751e_fbdb05fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-04-28T13:37:32Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "015413248b1f13140c31d4d6fd5befc5dbab5305",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
