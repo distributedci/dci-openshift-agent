@@ -85,6 +85,24 @@
       "message": "recheck",
       "revId": "312505e36b85b1dccbf9ff6b367f0171225ccff8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1161f32b_e3b85e1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-04-28T03:22:13Z",
+      "side": 1,
+      "message": "My bad, I was thinking that we needed to validate the change in virtualized SNO, but this should be valid for libvirt. As long as we have the +1 from libvirt we should be good",
+      "parentUuid": "c7b1ade2_638489bf",
+      "revId": "312505e36b85b1dccbf9ff6b367f0171225ccff8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
