@@ -36,6 +36,10 @@
 - name: Start nodes using vbmc
   command: "{{ vbmc_bin }} start {{ item.key }}"
   with_dict: "{{ vbmc_ports }}"
+  register: command_result
+  until: (command_result.rc == 0) or (command_result.rc == 1 and '"already running" in command_result.stderr')
+  retries: 5
+  delay: 5
 
 - name: Setting nodes power status using ipmitool
   command: "ipmitool -I lanplus -U {{ vbmc_user }} -P {{ vbmc_pass }} -H {{ vbmc_management_address }} -p {{ item.value }} chassis power on"
