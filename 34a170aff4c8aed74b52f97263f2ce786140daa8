@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "158b0db6_a68d287a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-28T16:00:04Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla ocp-4.8-upgrade openshift-vanilla:components\u003docp\u003d4.7.48 openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.37",
+      "revId": "34a170aff4c8aed74b52f97263f2ce786140daa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
