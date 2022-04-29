@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.7-vanilla ocp-4.8-upgrade openshift-vanilla:components\u003docp\u003d4.7.48 openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.37",
       "revId": "34a170aff4c8aed74b52f97263f2ce786140daa8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b1359bf_5061ead1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-04-29T01:51:39Z",
+      "side": 1,
+      "message": "Tested with success from ocp 4.7 to 4.8\n\n```\n┌─[21:49:43][pblanc][~/.../upgrade/4.8]\n└─➞ omg get csv -A | grep -c 4.8\n70\n┌─[21:49:49][pblanc][~/.../upgrade/4.8]\n└─➞ omg get csv -A | grep -c 4.7\n0\n```",
+      "revId": "34a170aff4c8aed74b52f97263f2ce786140daa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
