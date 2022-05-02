@@ -118,6 +118,23 @@
       "message": "recheck",
       "revId": "34a170aff4c8aed74b52f97263f2ce786140daa8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca7b61fb_c0ca70ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-02T16:53:36Z",
+      "side": 1,
+      "message": "LGTM! since this is not going to be validated in libvirt, I\u0027m going to change it to run in SNO just to get the +1 from dci-ci-bot and get this merged",
+      "revId": "34a170aff4c8aed74b52f97263f2ce786140daa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
