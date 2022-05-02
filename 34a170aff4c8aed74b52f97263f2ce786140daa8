@@ -84,6 +84,23 @@
       "message": "check dallas ocp-4.9-vanilla ocp-4.10-upgrade openshift-vanilla:components\u003docp\u003d4.9.28 openshift-vanilla-upgrade-4.10:components\u003docp\u003d4.10.10",
       "revId": "34a170aff4c8aed74b52f97263f2ce786140daa8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c8d2a91_bd99e30f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-02T14:33:55Z",
+      "side": 1,
+      "message": "Pierre, I think this is a good start to upgrade the installed operators, but also for reference I believe we should expand little by little and include a check to validate the installed operators were successfully upgraded, maybe at some point we\u0027ll have to handle case by case (SR-IOV checks, CNV checks, etc). During your test of ocp 4.8 -\u003e 4.9 upgrade, I observed the CNV operator remained like this:\n\n[kni@provisioner.cluster2.dfwt5g.lab ~]$ oc get csv -A | grep -v performance-addon-operator\nNAMESPACE                                          NAME                                        DISPLAY                      VERSION              REPLACES                                    PHASE      \nopenshift-cnv                                      kubevirt-hyperconverged-operator.v4.9.3     OpenShift Virtualization     4.9.3                kubevirt-hyperconverged-operator.v4.9.2     Replacing  \nopenshift-cnv                                      kubevirt-hyperconverged-operator.v4.9.4     OpenShift Virtualization     4.9.4                kubevirt-hyperconverged-operator.v4.9.3     Installing\n\nLet\u0027s see, once we start having workloads (VMs, CNF funtions) we might run more tests upgrading the operators and continue expanding these validations. \n",
+      "revId": "34a170aff4c8aed74b52f97263f2ce786140daa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
