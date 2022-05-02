@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa427d82_c3eed5e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-02T19:24:20Z",
+      "side": 1,
+      "message": "Overall it looks good, one minor thing and we could merge",
+      "revId": "8b668bb1ad6e7b4cfac3dcbc2aa8d12e050bd17a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3aeddce7_aecd9827",
+        "filename": "roles/redhat-tests/tasks/kubevirt-tests.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-02T19:24:20Z",
+      "side": 1,
+      "message": "Do we need a block for a single taks?",
+      "revId": "8b668bb1ad6e7b4cfac3dcbc2aa8d12e050bd17a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
