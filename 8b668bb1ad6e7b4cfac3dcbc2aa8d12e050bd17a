@@ -33,6 +33,24 @@
       "message": "Do we need a block for a single taks?",
       "revId": "8b668bb1ad6e7b4cfac3dcbc2aa8d12e050bd17a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd73478e_83657a69",
+        "filename": "roles/redhat-tests/tasks/kubevirt-tests.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-02T23:25:32Z",
+      "side": 1,
+      "message": "no needed.",
+      "parentUuid": "3aeddce7_aecd9827",
+      "revId": "8b668bb1ad6e7b4cfac3dcbc2aa8d12e050bd17a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
