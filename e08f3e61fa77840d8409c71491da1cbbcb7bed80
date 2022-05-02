@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45151aa0_3f299624",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-02T16:13:31Z",
+      "side": 1,
+      "message": "This is a very minor change but I realized my PR for assisted installer is running with this change already.  Which will cause problems in the virt environment until we delete the old VM\u0027s..  So I would like to merge this now and manually fix the virt environment.\n\nFrom then on we will create the same virt hosts in either libvirt/ipi or libvirt/assisted.\n\nThanks",
+      "revId": "e08f3e61fa77840d8409c71491da1cbbcb7bed80",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
