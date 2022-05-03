@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.7-vanilla ocp-4.8-upgrade openshift-vanilla:components\u003docp\u003d4.7.48 openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.37 openshift-vanilla-upgrade-4.8:ansible_extravars\u003dupdate_catalog_channel:false",
       "revId": "d648d7117135bb782281de32e4ff9b7d9233238f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9187950_d47488c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-03T22:22:06Z",
+      "side": 1,
+      "message": "This is a great idea, for those scenarios where we may jump to a following version one after another.",
+      "revId": "d648d7117135bb782281de32e4ff9b7d9233238f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
