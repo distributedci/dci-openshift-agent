@@ -7,6 +7,8 @@
 # Optional arguments:
 #   source: CatalogSource where to pull operator from (default: redhat-operators)
 #   source_ns: Namespace where the CatalogSource is (default: openshift-marketplace)
+#   operator_group_spec: OperatorGroupSpec is the spec for an OperatorGroup resource (default: {}, i.e make operator available in all namespaces)
+#     Use: targetNamespaces: [] to define the list of namespaces where the operator should be targeting
 #
 ---
 - name: Assert all required fields are present
@@ -33,9 +35,7 @@
       metadata:
         name: "{{ operator }}"
         namespace: "{{ namespace }}"
-      spec:
-        targetNamespaces:
-        - "{{ namespace }}"
+      spec: "{{ operator_spec | default(omit) }}"
 
 - name: Create subscription for OLM operator
   k8s:
