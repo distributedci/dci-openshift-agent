@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98b7d58d_a5de3a9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-03T18:08:42Z",
+      "side": 1,
+      "message": "I believe I need this change merged before I can begin testing my assisted installer PR.\n\nThanks",
+      "revId": "f4ff45ed801b9fd69f05608a81794fb2f92bb43c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
