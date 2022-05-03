@@ -62,8 +62,8 @@
   retries: 20
   delay: 30
   until:
-    - "csv.resources|length == 1"
+    - csv.resources | length == 1
     - "'status' in csv.resources[0]"
     - "'phase' in csv.resources[0].status"
-    - ("csv.resources[0].status.phase == 'Succeeded'" or "csv.resources[0].status.phase == 'Present'")
+    - csv.resources[0].status.phase == 'Succeeded' or csv.resources[0].status.phase == 'Present'
 ...
