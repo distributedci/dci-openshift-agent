@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.9-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "543ddf26a94266aa00c3f4a0e33298bc60fe7394",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "073a5851_f58f3786",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-03T21:26:32Z",
+      "side": 1,
+      "message": "hmm, ocp 4.9/4.10 vanilla pipelines do not have enable_cnv:true, now testing 4.8 vanilla to make sure this works",
+      "revId": "543ddf26a94266aa00c3f4a0e33298bc60fe7394",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
