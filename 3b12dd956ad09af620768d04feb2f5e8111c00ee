@@ -67,6 +67,23 @@
       "message": "Check has worked in the last job even if it fails at the end\nhttps://www.distributed-ci.io/jobs/18b41da7-4df8-44e1-a957-e465647d6736/jobStates#b05094a3-8f72-41b4-b8e7-68535c9b05ef:file438",
       "revId": "3b12dd956ad09af620768d04feb2f5e8111c00ee",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acebc8d1_babd22be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-03T13:46:38Z",
+      "side": 1,
+      "message": "yeah, those vcp jobs are not helping us now, I see the libvirt test passed, but just to play safe, let me test a vanilla job",
+      "revId": "3b12dd956ad09af620768d04feb2f5e8111c00ee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
