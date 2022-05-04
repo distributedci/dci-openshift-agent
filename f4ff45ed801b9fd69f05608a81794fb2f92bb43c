@@ -16,6 +16,23 @@
       "message": "I believe I need this change merged before I can begin testing my assisted installer PR.\n\nThanks",
       "revId": "f4ff45ed801b9fd69f05608a81794fb2f92bb43c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "966c458d_f8dbe643",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-05-04T12:56:53Z",
+      "side": 1,
+      "message": "you should also modify dci-check-change to support a new hint for assisted.",
+      "revId": "f4ff45ed801b9fd69f05608a81794fb2f92bb43c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
