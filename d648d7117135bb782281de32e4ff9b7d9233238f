@@ -50,6 +50,23 @@
       "message": "This is a great idea, for those scenarios where we may jump to a following version one after another.",
       "revId": "d648d7117135bb782281de32e4ff9b7d9233238f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77305624_d7dcaaee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-04T18:52:08Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vcp ocp-4.8-vcp-upgrade openshift-vcp:components\u003docp\u003d4.7.48 openshift-vcp:ansible_extravars\u003dcnf_test_suites:[] openshift-vcp-upgrade-4.8:components\u003docp\u003d4.8.37 openshift-vcp-upgrade-4.8:ansible_extravars\u003dupdate_catalog_channel:false",
+      "revId": "d648d7117135bb782281de32e4ff9b7d9233238f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
