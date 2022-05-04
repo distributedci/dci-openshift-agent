@@ -16,6 +16,24 @@
       "message": "Last job succeeded, but I don\u0027t see any log in the conformance test for virt. The job shows that there was an issue retrieving the sonobuoy tarball: https://www.distributed-ci.io/jobs/824ff7ec-5ecd-4daa-a5d8-ee50afe7894e/jobStates#093ea7f1-bb70-43b7-98ce-8972217ba0fd:file388",
       "revId": "6a543dec6ea853549abecf9b1d46e82362caee99",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0f34e48_154cc03a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-04T19:54:19Z",
+      "side": 1,
+      "message": "yeah, it seems like the collector pod needs some time to generate all the information. I tested a bit later and the tarball is downloaded. I have added a short delay. Testing again.",
+      "parentUuid": "a039e13d_020bd449",
+      "revId": "6a543dec6ea853549abecf9b1d46e82362caee99",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
