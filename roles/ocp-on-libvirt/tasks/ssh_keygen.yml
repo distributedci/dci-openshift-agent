@@ -14,11 +14,17 @@
     creates: "{{ ssh_key_path }}"
   when: ssh_key_stat_local.stat.exists == false
 
+- name: "Get remote user home directory"
+  user:
+    name: "{{ ansible_user }}"
+  register: user_home
+
 - name: "Ensure correct permissions on ~/.ssh/authorized_keys"
   file:
-    path: "{{ '~' | expanduser }}/.ssh/authorized_keys"
+    path: "{{ user_home.home }}/.ssh/authorized_keys"
     mode: 0644
 
 - name: "Cat out contents of public key"
   shell: "cat {{ ssh_key_path }}.pub"
   register: pubkey
+  delegate_to: localhost
