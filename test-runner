@@ -367,17 +367,24 @@ if [ -z "$KCFG" ]; then
     if [ -n "$VIRT" ]; then
         # Clear out any previous dns/dhcp config entries
         # libvirt/ipi and libvirt/assisted have conflicting dns/dhcp
+        sudo rm /etc/NetworkManager/dnsmasq.d/openshift.conf
+        sudo rm /etc/NetworkManager/dnsmasq.d/dnsmasq.dciokd.conf
+	
+	if [ ! -v "${PREFIX}" ] && [ -d "/etc/dci-openshift-agent/ocp_on_libvirt/${PREFIX#-p }" ]; then
+	    VIRT_INV="-i /etc/dci-openshift-agent/ocp_on_libvirt/${PREFIX#-p }"
+	fi
+
         cd "$VIRTDIR"
         if [ "$VIRT" = virt ]; then
-            setsid ansible-playbook -v libvirt_destroy.yml &
+            setsid ansible-playbook -v libvirt_destroy.yml ${VIRT_INV} &
             do_wait
-            setsid ansible-playbook -v libvirt_up.yml &
+            setsid ansible-playbook -v libvirt_up.yml ${VIRT_INV} &
             do_wait
         elif [ "$VIRT" = assisted ]; then
             FQDN=$(hostname -f)
             sed -e "s@FQDN@$FQDN@" < hosts.in > hosts
         fi
-        sudo cp hosts /etc/dci-openshift-agent/
+        sudo cp hosts /etc/dci-openshift-agent/${PREFIX/${PREFIX}/${PREFIX#-p }-}hosts
         cd "$DIR"
     fi
 
