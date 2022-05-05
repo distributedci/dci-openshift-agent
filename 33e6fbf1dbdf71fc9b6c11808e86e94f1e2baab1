@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "070c5b63_36c90417",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-05T15:57:20Z",
+      "side": 1,
+      "message": "httpd is not used in the jumpbox (dallas jumphost) instead what\u0027s used is a container listening in 8080 for cache and project files",
+      "revId": "33e6fbf1dbdf71fc9b6c11808e86e94f1e2baab1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
