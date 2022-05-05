@@ -118,6 +118,23 @@
       "message": "check dallas ocp-4.7-vcp ocp-4.8-vcp-upgrade openshift-vcp:components\u003docp\u003d4.7.48 openshift-vcp:ansible_extravars\u003dcnf_test_suites:[] openshift-vcp-upgrade-4.8:components\u003docp\u003d4.8.37 openshift-vcp-upgrade-4.8:ansible_extravars\u003dupdate_catalog_channel:false",
       "revId": "d648d7117135bb782281de32e4ff9b7d9233238f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cdfd91b_be1081eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-05T12:05:30Z",
+      "side": 1,
+      "message": "Last test didn\u0027t failed because of this change, I can see the catalogsource was not updated:\nhttps://www.distributed-ci.io/jobs/e1b468c7-4dc8-4019-8cca-9a2a0a8ca78e/jobStates#5f7425c9-50a6-4e37-9930-9a2074562d08:file42",
+      "revId": "d648d7117135bb782281de32e4ff9b7d9233238f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
