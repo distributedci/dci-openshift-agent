@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12c9c18b_79991c7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-06T14:05:22Z",
+      "side": 1,
+      "message": "I\u0027ve seen your changes on dallas-pipelines and I could see that it is similar to this one, so I\u0027ll accept it.",
+      "revId": "68c87191c5873e61f963e4b3f771e633876e9282",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
