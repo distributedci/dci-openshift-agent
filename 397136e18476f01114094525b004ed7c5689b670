@@ -67,6 +67,24 @@
       "message": "It is a known issue:\nhttps://github.com/ansible-collections/community.libvirt/issues/40\n\nWe can maybe use the *command* module with:\n\"virsh undefine --nvram {{ host[\u0027name\u0027] }}\"",
       "revId": "397136e18476f01114094525b004ed7c5689b670",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "037d9407_b8b4b581",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-09T14:13:18Z",
+      "side": 1,
+      "message": "This is what I need and it\u0027s in my assisted PR already but I didn\u0027t think about my PR overlapping with regular virt.  Sorry about that.",
+      "parentUuid": "5edde78a_0a79ff34",
+      "revId": "397136e18476f01114094525b004ed7c5689b670",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
