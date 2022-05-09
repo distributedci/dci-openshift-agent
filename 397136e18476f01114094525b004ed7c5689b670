@@ -85,6 +85,23 @@
       "parentUuid": "5edde78a_0a79ff34",
       "revId": "397136e18476f01114094525b004ed7c5689b670",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3cc1cf45_1cd0da18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-09T14:13:57Z",
+      "side": 1,
+      "message": "https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24446/40/roles/ocp-on-libvirt/tasks/libvirt_host_destroy.yml",
+      "revId": "397136e18476f01114094525b004ed7c5689b670",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
