@@ -50,6 +50,23 @@
       "message": "The fix didn\u0027t work.\n\nWith the fix:\n\n```\nTASK [ocp-on-libvirt : destroy node] *******************************************\nAn exception occurred during task execution. The error was: libvirt.libvirtError: Requested operation is not valid: domain is not running\nfatal: [localhost]: FAILED!\n```\n\nWithout the fix:\n```\nTASK [ocp-on-libvirt : Does node exist] ****************************************\nMonday 09 May 2022  08:09:08 +0000 (0:00:00.198)       0:00:04.204 ************\nok: [localhost] \u003d\u003e {\"changed\": false, \"status\": \"shutdown\"}\n\nTASK [ocp-on-libvirt : destroy node] *******************************************\nMonday 09 May 2022  08:09:08 +0000 (0:00:00.503)       0:00:04.707 ************\nskipping: [localhost] \u003d\u003e {\"changed\": false, \"skip_reason\": \"Conditional result was False\"}\n\nTASK [ocp-on-libvirt : undefine node] ******************************************\nMonday 09 May 2022  08:09:09 +0000 (0:00:00.197)       0:00:04.905 ************\nAn exception occurred during task execution. To see the full traceback, use -vvv. The error was: libvirt.libvirtError: Requested operation is not valid: cannot undefine domain with nvram\nfatal: [localhost]: FAILED! \u003d\u003e {\"changed\": false, \"msg\": \"Requested operation is not valid: cannot undefine domain with nvram\"}\n```",
       "revId": "397136e18476f01114094525b004ed7c5689b670",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5edde78a_0a79ff34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-09T13:18:09Z",
+      "side": 1,
+      "message": "It is a known issue:\nhttps://github.com/ansible-collections/community.libvirt/issues/40\n\nWe can maybe use the *command* module with:\n\"virsh undefine --nvram {{ host[\u0027name\u0027] }}\"",
+      "revId": "397136e18476f01114094525b004ed7c5689b670",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
