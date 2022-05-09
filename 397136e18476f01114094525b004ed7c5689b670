@@ -16,6 +16,23 @@
       "message": "If node status is \"shutdown\" and not \"running\", the node is not destroyed, and libvirt cleanup is failing, like here: https://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/24819 \n\nThat\u0027s why I remove the condition.",
       "revId": "397136e18476f01114094525b004ed7c5689b670",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b8af503_2cd93444",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-09T12:29:25Z",
+      "side": 1,
+      "message": "lgtm\nI\u0027ll will put a +2 after the libvirt tests.",
+      "revId": "397136e18476f01114094525b004ed7c5689b670",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
