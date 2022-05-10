@@ -162,8 +162,7 @@
     - opm_mirror_list is defined
     - opm_mirror_list | length
 
- ### Mirror must-gather images
-
+### Mirror must-gather images
 - name: "dci-openshift-agent : Mirror must gather images"
   include_role:
     name: mirror_images
