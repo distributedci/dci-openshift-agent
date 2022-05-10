@@ -4,6 +4,6 @@
   shell:
     cmd: >
       find {{ tmp_prune.path }} -type d -not -perm -u=w -exec chmod u+w {} \; &&
+      [ -e tmp_prune.path] && 
       rm -rf {{ tmp_prune.path }};
-
 ...
