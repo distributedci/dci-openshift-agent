@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "915a156b_9034c2dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-10T23:59:06Z",
+      "side": 1,
+      "message": "Thanks for reviewing, I\u0027ll keep testing, need to validate OCP 4.11 and SNO baremetal cases",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc6795c3_ce6e7377",
@@ -65,6 +82,24 @@
       "writtenOn": "2022-05-10T23:09:39Z",
       "side": 1,
       "message": "Wonder if this should be ported to the olm-operator, since a valid expectation is that the operator should be ready to operate after the installation, wdyt?\n\nOr this is something that is only expected from SNO?",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fad52acd_ebfe61f3",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-10T23:59:06Z",
+      "side": 1,
+      "message": "Tony, this is only needed in SNO, and right now I\u0027ve only seen it when installing PAO, other operators respond fine after installing them, so I think we can keep it here.",
+      "parentUuid": "bc6795c3_ce6e7377",
       "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
