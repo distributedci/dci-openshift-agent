@@ -170,8 +170,21 @@
     - opm_mirror_list is defined
     - opm_mirror_list | length
 
- ### Mirror must-gather images
+# Mirror Operators for offline mode
+- name: "dci-openshift-agent : Mirror Operators"
+  vars:
+    version_next: "{{ hostvars.localhost.version }}"
+    version: "{{ version_tmp.split('.')[0] }}.{{ version_tmp.split('.')[1] | int - 1 }}"
+    local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
+  include_role:
+    name: operators-mirror
+  when:
+    - dci_disconnected | default(false) | bool
+    - opm_mirror_list is defined
+    - opm_mirror_list | length
+    - upgrade_eus | default(false) | bool
 
+### Mirror must-gather images
 - name: "dci-openshift-agent : Mirror must gather images"
   include_role:
     name: mirror_images
