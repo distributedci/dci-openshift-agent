@@ -33,6 +33,40 @@
       "message": "This is to address last issue in CILAB-525 observed during daily job:\nhttps://distributed-ci.io/jobs/aaff5336-b354-4723-892d-b946cf02b3f5/jobStates",
       "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6375bdb1_ac19ce59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-10T23:09:39Z",
+      "side": 1,
+      "message": "I like the approach, it reminds me of a repo that was doing something similar to check when a mc was created and applied. While IMO this is something the mco should be doing, we know it has been quite difficult to ensure that\u0027s the case.\n\nI also like you\u0027re consolidating at least one piece of SNO in here, which is also good. Let\u0027s get it tested and see how it works",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc6795c3_ce6e7377",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-10T23:09:39Z",
+      "side": 1,
+      "message": "Wonder if this should be ported to the olm-operator, since a valid expectation is that the operator should be ready to operate after the installation, wdyt?\n\nOr this is something that is only expected from SNO?",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
