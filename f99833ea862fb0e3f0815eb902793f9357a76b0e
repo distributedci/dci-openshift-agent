@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a34a52f4_fe35105e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-10T19:51:42Z",
+      "side": 1,
+      "message": "This is to address last issue in CILAB-525 observed during daily job:\nhttps://distributed-ci.io/jobs/aaff5336-b354-4723-892d-b946cf02b3f5/jobStates",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
