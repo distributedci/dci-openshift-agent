@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0611c67_d524ffbf",
+        "filename": "tests/requirements.yml",
+        "patchSetId": 44
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-05-10T00:51:35Z",
+      "side": 1,
+      "message": "collections:\n  - name: community.general\n  - version: 3.8.6\n  - source: https://galaxy.ansible.com",
+      "revId": "5d9f8a61cc7d78306bbd093699d828db3876baac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
