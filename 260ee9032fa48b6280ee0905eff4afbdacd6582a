@@ -16,6 +16,24 @@
       "message": "Just for curiosity, does this change intends to fix this kind of issues I am seeing in some CRs when Zuul fails checking it? https://softwarefactory-project.io/zuul/t/local/build/2a40e73ebf464e1ebe9f0afb1a24dfd2 - (ERROR! Expecting requirements file to be a dict with the key \u0027collections\u0027 that contains a list of collections to install)",
       "revId": "260ee9032fa48b6280ee0905eff4afbdacd6582a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fa2adc5_bc1380ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-11T16:06:00Z",
+      "side": 1,
+      "message": "Yes, This PR resolves that issue.",
+      "parentUuid": "7df35026_a2ebae6b",
+      "revId": "260ee9032fa48b6280ee0905eff4afbdacd6582a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
