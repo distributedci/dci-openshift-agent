@@ -86,6 +86,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b32ac62f_5212fb99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-11T13:49:46Z",
+      "side": 1,
+      "message": "Last test Performance Profile was setup correctly, but job failed after with the known issue in OCP 4.11 - Error adding pod XXX to CNI network multus-cni-network. Testing SNO baremetal now",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc6795c3_ce6e7377",
