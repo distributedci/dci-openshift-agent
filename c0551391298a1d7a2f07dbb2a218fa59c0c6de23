@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "543d0b61_415cec5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-11T19:07:27Z",
+      "side": 1,
+      "message": "I\u0027d like to review this change with you, Nacho, because I\u0027d like to confirm that the changes in test-runner are not really bos2-related, it should be general.",
+      "revId": "c0551391298a1d7a2f07dbb2a218fa59c0c6de23",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7e34c55_b7cda281",
+        "filename": "test-runner",
+        "patchSetId": 14
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-11T19:07:27Z",
+      "side": 1,
+      "message": "This tabulation should be removed.",
+      "revId": "c0551391298a1d7a2f07dbb2a218fa59c0c6de23",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
