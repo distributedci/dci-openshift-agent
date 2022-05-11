@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "199d69bd_e04f17e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-11T18:29:25Z",
+      "side": 1,
+      "message": "SNO tests passed too, I only renamed two tasks in patchset 2, so I\u0027m just going to run one test to make sure all is ok.",
+      "revId": "b0331617e36d138202a355bdc830c04f647ac31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

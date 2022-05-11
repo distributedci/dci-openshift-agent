@@ -120,6 +120,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d99c004_beda4ee0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-11T18:29:25Z",
+      "side": 1,
+      "message": "Ramon, I was planning to do something generic initially when we discussed, but it started to get complicated, so I decided to focus on the Performance Profile for now, however I believe a generic way to catch any new rendered MC in the wait-mcp role will be a good idea at some point and at that point we can revisit the tasks here in the performance profile.",
+      "parentUuid": "0424074a_8516a3aa",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc6795c3_ce6e7377",
@@ -168,6 +186,30 @@
       "writtenOn": "2022-05-11T15:26:28Z",
       "side": 1,
       "message": "Should it be renamed to \"Wait for SNO node to be available\"? Because we are not applying PAO here anymore",
+      "range": {
+        "startLine": 53,
+        "startChar": 9,
+        "endLine": 53,
+        "endChar": 77
+      },
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14f801af_458ed601",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-11T18:29:25Z",
+      "side": 1,
+      "message": "Yes, good catch, I updated the task name in patchset 2. Thanks",
+      "parentUuid": "5bfb1abd_a0531fba",
       "range": {
         "startLine": 53,
         "startChar": 9,
