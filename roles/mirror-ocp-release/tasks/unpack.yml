@@ -1,0 +1,35 @@
+---
+- name: "Check if artifacts have already been unpacked"
+  stat:
+    path: "{{ dir }}/artifacts.done"
+    get_checksum: false
+  register: unpacked
+  when:
+    - not force  # we don't care to stat files if we're forcing
+
+- name: "Unarchive tarballs"
+  unarchive:
+    src: "{{ dir }}/{{ item }}"
+    dest: "{{ dir }}"
+    owner: "{{ owner }}"
+    group: "{{ group }}"
+    mode: "0755"
+    remote_src: true
+    exclude:
+      - README.md
+  become: true
+  loop: "{{ artifacts }}"
+  when:
+    - force or not unpacked.stat.exists
+
+- name: "Touch marker for tarballs unpacked"
+  file:
+    dest: "{{ dir }}/artifacts.done"
+    state: touch
+    owner: "{{ owner }}"
+    group: "{{ group }}"
+    mode: "0644"
+  become: true
+  when:
+    - force or not unpacked.stat.exists
+...
