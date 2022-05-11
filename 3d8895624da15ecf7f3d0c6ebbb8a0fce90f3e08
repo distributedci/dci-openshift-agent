@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9083e689_896a872e",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-11T16:29:18Z",
+      "side": 1,
+      "message": "no_proxy or no_proxy_list ?",
+      "revId": "3d8895624da15ecf7f3d0c6ebbb8a0fce90f3e08",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
