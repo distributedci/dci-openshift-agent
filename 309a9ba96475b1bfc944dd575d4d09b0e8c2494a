@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1160135_16b89df8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-11T17:12:10Z",
+      "side": 1,
+      "message": "If they are defined as env variables, maybe we can remove these followed options in each steps\n```\n...\n  environment:\n    http_proxy: \"{{ http_proxy }}\"\n    https_proxy: \"{{ https_proxy }}\"\n    no_proxy: \"{{ no_proxy_list }}\"\n...\n```\n",
+      "revId": "309a9ba96475b1bfc944dd575d4d09b0e8c2494a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
