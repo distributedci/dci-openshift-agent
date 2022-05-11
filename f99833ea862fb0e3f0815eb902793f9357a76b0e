@@ -103,6 +103,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0424074a_8516a3aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-11T15:26:28Z",
+      "side": 1,
+      "message": "I really like the change, but I am wondering something, Manuel: Should we do this check also in other tasks that updates the MCP? Because here we are only doing the timestamp check when we apply PAO, but I don\u0027t know if we should need to do it for all the workflows that ends in wait-mcp role.\nFor sure this will help, but yes, wondering if this can be generalized or if it is just related to PAO creation and then it will solve the issues we have with other tasks calling wait-mcp",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc6795c3_ce6e7377",
@@ -134,6 +151,29 @@
       "side": 1,
       "message": "Tony, this is only needed in SNO, and right now I\u0027ve only seen it when installing PAO, other operators respond fine after installing them, so I think we can keep it here.",
       "parentUuid": "bc6795c3_ce6e7377",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bfb1abd_a0531fba",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-11T15:26:28Z",
+      "side": 1,
+      "message": "Should it be renamed to \"Wait for SNO node to be available\"? Because we are not applying PAO here anymore",
+      "range": {
+        "startLine": 53,
+        "startChar": 9,
+        "endLine": 53,
+        "endChar": 77
+      },
       "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
