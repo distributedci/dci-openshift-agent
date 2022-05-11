@@ -34,6 +34,24 @@
       "parentUuid": "c1160135_16b89df8",
       "revId": "309a9ba96475b1bfc944dd575d4d09b0e8c2494a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54e09cac_18f8ba89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-05-11T17:50:24Z",
+      "side": 1,
+      "message": "I don\u0027t want to break partners that are setting these variables in their settings.yml.",
+      "parentUuid": "fd9eb6ed_4f4bd15f",
+      "revId": "309a9ba96475b1bfc944dd575d4d09b0e8c2494a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
