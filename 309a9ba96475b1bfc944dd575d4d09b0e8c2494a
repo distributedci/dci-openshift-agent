@@ -16,6 +16,24 @@
       "message": "If they are defined as env variables, maybe we can remove these followed options in each steps\n```\n...\n  environment:\n    http_proxy: \"{{ http_proxy }}\"\n    https_proxy: \"{{ https_proxy }}\"\n    no_proxy: \"{{ no_proxy_list }}\"\n...\n```\n",
       "revId": "309a9ba96475b1bfc944dd575d4d09b0e8c2494a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd9eb6ed_4f4bd15f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-11T17:41:37Z",
+      "side": 1,
+      "message": "Agree.\n\nAlso, in dci-openshift-app-agent, we don\u0027t even define the variables, we just print them checking the env vars: https://github.com/redhat-cip/dci-openshift-app-agent/blob/master/dci-openshift-app-agent.yml#L12. May we do the same here? (or do what we are doing here in the app-agent?)",
+      "parentUuid": "c1160135_16b89df8",
+      "revId": "309a9ba96475b1bfc944dd575d4d09b0e8c2494a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
