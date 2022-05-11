@@ -1,0 +1,39 @@
+---
+- name: "Read JSON stream from installer"
+  command: "{{ dir }}/openshift-install coreos print-stream-json"
+  register: json_stream
+  no_log: true
+
+- name: "Set image facts"
+  set_fact:
+    rhcos_images: "{{ rhcos_images | default({}) | combine({item.key: (json_stream.stdout | from_json | json_query(item.path))}) }}"
+  with_items:
+    - {'key': 'aws_location', 'path': 'architectures.x86_64.artifacts.aws.formats."vmdk.gz".disk.location'}
+    - {'key': 'aws_sha256', 'path': 'architectures.x86_64.artifacts.aws.formats."vmdk.gz".disk.sha256'}
+    - {'key': 'azure_location', 'path': 'architectures.x86_64.artifacts.azure.formats."vhd.gz".disk.location'}
+    - {'key': 'azure_sha256', 'path': 'architectures.x86_64.artifacts.azure.formats."vhd.gz".disk.sha256'}
+    - {'key': 'gcp_location', 'path': 'architectures.x86_64.artifacts.azure.formats."tar.gz".disk.location'}
+    - {'key': 'gcp_sha256', 'path': 'architectures.x86_64.artifacts.azure.formats."tar.gz".disk.sha256'}
+    - {'key': 'qemu_location', 'path': 'architectures.x86_64.artifacts.qemu.formats."qcow2.gz".disk.location'}
+    - {'key': 'qemu_sha256', 'path': 'architectures.x86_64.artifacts.qemu.formats."qcow2.gz".disk.sha256'}
+    - {'key': 'qemu_uncompressed_sha256', 'path': 'architectures.x86_64.artifacts.qemu.formats."qcow2.gz".disk."uncompressed-sha256"'}
+    - {'key': 'openstack_location', 'path': 'architectures.x86_64.artifacts.openstack.formats."qcow2.gz".disk.location'}
+    - {'key': 'openstack_sha256', 'path': 'architectures.x86_64.artifacts.openstack.formats."qcow2.gz".disk.sha256'}
+    - {'key': 'live_iso_location', 'path': 'architectures.x86_64.artifacts.metal.formats.iso.disk.location'}
+    - {'key': 'live_iso_sha256', 'path': 'architectures.x86_64.artifacts.metal.formats.iso.disk.sha256'}
+    - {'key': 'pxe_rootfs_location', 'path': 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.location'}
+    - {'key': 'pxe_rootfs_sha256', 'path': 'architectures.x86_64.artifacts.metal.formats.pxe.rootfs.sha256'}
+    - {'key': 'vmware_location', 'path': 'architectures.x86_64.artifacts.vmware.formats.ova.disk.location'}
+    - {'key': 'vmware_sha256', 'path': 'architectures.x86_64.artifacts.vmware.formats.ova.disk.sha256'}
+
+# NOTE: using uncompressed-sha256 for the bootstraposimage is not a mistake,
+# but needed on OCP versions prior to 4.8. The reason being, when the installer
+# retrieves the image, it will first uncompress it, and then verify the SHA,
+# and the SHA used for verification is the one in the URL.
+- name: "Set facts for *osimage URL overrides"
+  set_fact:
+    bootstraposimage: "{{ webserver_url }}/{{ rhcos_images['qemu_location'] | basename }}?sha256={{ rhcos_images['qemu_uncompressed_sha256'] }}"
+    clusterosimage: "{{ webserver_url }}/{{ rhcos_images['openstack_location'] | basename }}?sha256={{ rhcos_images['openstack_sha256'] }}"
+  when:
+    - webserver_url is defined
+...

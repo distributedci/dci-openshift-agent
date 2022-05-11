@@ -1,7 +1,18 @@
 ---
-cache_dir: /var/lib/dci-openshift-agent
-build: ga
-installer_extract_cmds:
-  - openshift-baremetal-install
-force_mirroring: false
+major_version: "{{ version.split('.')[:2] | join('.') }}"
+cache_dir: /var/lib/dci-openshift-agent/releases
+owner: "{{ ansible_user_uid }}"
+group: "{{ ansible_user_gid }}"
+force: false
+artifacts:
+  - opm-linux.tar.gz
+  - openshift-client-linux.tar.gz
+  - openshift-install-linux.tar.gz
+mirror_artifacts: true
+unpack_artifacts: true
+mirror_disk_images: true
+disk_images:
+  - qemu
+  - openstack
+mirror_container_images: true
 ...
