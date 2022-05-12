@@ -211,6 +211,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "04b2513a_6aad4e0b",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-12T18:09:00Z",
+      "side": 1,
+      "message": "Tests were completed, Tony if you are ok we can resolve this point.",
+      "parentUuid": "fad52acd_ebfe61f3",
+      "revId": "f99833ea862fb0e3f0815eb902793f9357a76b0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5bfb1abd_a0531fba",
         "filename": "plays/apply-pao-profile.yml",
         "patchSetId": 1
