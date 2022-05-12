@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b068447_26854bd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-12T16:12:14Z",
+      "side": 1,
+      "message": "Helps to specify the correct variable when matching from libvirt/ipi to libvirt/assisted.",
+      "revId": "972259824884a8a467288f7b413331ce7a20666b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
