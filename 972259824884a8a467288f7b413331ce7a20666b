@@ -16,6 +16,23 @@
       "message": "Helps to specify the correct variable when matching from libvirt/ipi to libvirt/assisted.",
       "revId": "972259824884a8a467288f7b413331ce7a20666b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82dab2d6_cab4b992",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-12T16:39:17Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "972259824884a8a467288f7b413331ce7a20666b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
