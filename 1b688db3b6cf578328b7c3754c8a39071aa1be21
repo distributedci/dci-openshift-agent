@@ -39,6 +39,52 @@
       },
       "revId": "1b688db3b6cf578328b7c3754c8a39071aa1be21",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11219c0b_4c7d06ab",
+        "filename": "test-runner",
+        "patchSetId": 15
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-12T11:27:21Z",
+      "side": 1,
+      "message": "I fear this definition is too BOS2-related, can we define a variable to be set in dci-openshift-agent config that takes care of the path to be used to find the inventory info?",
+      "range": {
+        "startLine": 374,
+        "startChar": 5,
+        "endLine": 374,
+        "endChar": 72
+      },
+      "revId": "1b688db3b6cf578328b7c3754c8a39071aa1be21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20abc5a2_ac97e0b6",
+        "filename": "test-runner",
+        "patchSetId": 15
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-12T11:27:21Z",
+      "side": 1,
+      "message": "Is there a simpler way of defining this?",
+      "range": {
+        "startLine": 387,
+        "startChar": 47,
+        "endLine": 387,
+        "endChar": 81
+      },
+      "revId": "1b688db3b6cf578328b7c3754c8a39071aa1be21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
