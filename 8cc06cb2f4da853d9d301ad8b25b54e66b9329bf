@@ -16,6 +16,23 @@
       "message": "Nice work! Why not split this in two changes 😊",
       "revId": "8cc06cb2f4da853d9d301ad8b25b54e66b9329bf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "900e3860_38412064",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-13T22:15:00Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla ocp-4.8-upgrade openshift-vanilla:components\u003docp\u003d4.7.48 openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.37 openshift-vanilla-upgrade-4.8:ansible_extravars\u003ddisable_operator_auto_approval:true",
+      "revId": "8cc06cb2f4da853d9d301ad8b25b54e66b9329bf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
