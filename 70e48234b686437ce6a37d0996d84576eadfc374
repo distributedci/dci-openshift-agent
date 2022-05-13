@@ -16,6 +16,46 @@
       "message": "check dallas ocp-4.7-vanilla ocp-4.8-upgrade openshift-vanilla:components\u003docp\u003d4.7.48 openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.37 openshift-vanilla-upgrade-4.8:ansible_extravars\u003ddisable_operator_auto_approval:true",
       "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67c913a2_7f44df14",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-13T22:47:43Z",
+      "side": 1,
+      "message": "We are still not using fully qualified collections, maybe just use k8s_info",
+      "range": {
+        "startLine": 219,
+        "startChar": 6,
+        "endLine": 219,
+        "endChar": 27
+      },
+      "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "591d3385_d31e3266",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-13T22:47:43Z",
+      "side": 1,
+      "message": "hello Manuel,\nI think that the approval of an operator upgrade should be at operator level. With this, we will approve the IP once the catalog is changed, so the effect may be similar to having approval set to automatic. \n\nWe may want to have more control on which operator and when to upgraded it. I found something interesting installing specific version of an operator. We may have a sync to see if we can re-use the current operator deployment roles to support the install and upgrades at same time.",
+      "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
