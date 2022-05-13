@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bf75616_e3b7dd59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-13T22:14:08Z",
+      "side": 1,
+      "message": "Nice work! Why not split this in two changes 😊",
+      "revId": "8cc06cb2f4da853d9d301ad8b25b54e66b9329bf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
