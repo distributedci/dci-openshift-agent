@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8b8fa4b_653a3509",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-13T23:37:15Z",
+      "side": 1,
+      "message": "I synced with Beto, we\u0027ll handle this in the respective operator roles, by default we\u0027ll set Automatic, unless we pass a variable to set them to Manual and we\u0027ll include a task to approve the installplan when they are set to Manual. I\u0027ll abandon this PR.",
+      "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67c913a2_7f44df14",
@@ -41,6 +58,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9d262b5_2264d479",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-13T23:37:15Z",
+      "side": 1,
+      "message": "Ok, well we have ansible-collection-community-kubernetes-1.1.1-1.noarch installed in the jumpbox, so I was using it, I know some hooks use it too, but no problem, I can use k8s and k8s_info to standardize tasks included in d-o-a",
+      "parentUuid": "67c913a2_7f44df14",
+      "range": {
+        "startLine": 219,
+        "startChar": 6,
+        "endLine": 219,
+        "endChar": 27
+      },
+      "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "591d3385_d31e3266",
@@ -54,6 +95,24 @@
       "writtenOn": "2022-05-13T22:47:43Z",
       "side": 1,
       "message": "hello Manuel,\nI think that the approval of an operator upgrade should be at operator level. With this, we will approve the IP once the catalog is changed, so the effect may be similar to having approval set to automatic. \n\nWe may want to have more control on which operator and when to upgraded it. I found something interesting installing specific version of an operator. We may have a sync to see if we can re-use the current operator deployment roles to support the install and upgrades at same time.",
+      "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8422be3d_d21f299a",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-13T23:37:15Z",
+      "side": 1,
+      "message": "I agree, we were talking about this the other day, and I was thinking we should set the installplan approval mode in the role where the operator is installed.",
+      "parentUuid": "591d3385_d31e3266",
       "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
