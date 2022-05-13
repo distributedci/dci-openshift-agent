@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "61624bc9_e3d60194",
+        "filename": "test-runner",
+        "patchSetId": 15
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-13T10:30:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b7eb0de7_bb8f82a8",
+      "range": {
+        "startLine": 370,
+        "startChar": 0,
+        "endLine": 371,
+        "endChar": 65
+      },
+      "revId": "1b688db3b6cf578328b7c3754c8a39071aa1be21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11219c0b_4c7d06ab",
@@ -64,6 +88,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "267e6a0d_324a6eb4",
+        "filename": "test-runner",
+        "patchSetId": 15
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-13T10:30:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11219c0b_4c7d06ab",
+      "range": {
+        "startLine": 374,
+        "startChar": 5,
+        "endLine": 374,
+        "endChar": 72
+      },
+      "revId": "1b688db3b6cf578328b7c3754c8a39071aa1be21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "20abc5a2_ac97e0b6",
@@ -77,6 +125,30 @@
       "writtenOn": "2022-05-12T11:27:21Z",
       "side": 1,
       "message": "Is there a simpler way of defining this?",
+      "range": {
+        "startLine": 387,
+        "startChar": 47,
+        "endLine": 387,
+        "endChar": 81
+      },
+      "revId": "1b688db3b6cf578328b7c3754c8a39071aa1be21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02db1c6c_ac36972c",
+        "filename": "test-runner",
+        "patchSetId": 15
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-13T10:30:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20abc5a2_ac97e0b6",
       "range": {
         "startLine": 387,
         "startChar": 47,
