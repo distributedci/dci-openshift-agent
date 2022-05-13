@@ -213,7 +213,77 @@
   async: 7200
   poll: 15
 
-- name: "Upgrader : Update disconnected catalogSources"
+- name: "upgrader : change operators installPlan to manual mode"
+  block:
+    - name: Get list of OLM operator subscriptions
+      community.kubernetes.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: Subscription
+      register: operators_list
+      no_log: true
+
+    - name: Disable Automatic installPlanApproval
+      k8s:
+        validate_certs: no
+        state: present
+        definition:
+          apiVersion: operators.coreos.com/v1alpha1
+          kind: Subscription
+          metadata:
+            name: "{{ operator.metadata.name }}"
+            namespace: "{{ operator.metadata.namespace }}"
+          spec:
+            installPlanApproval: "Manual"
+      when:
+        - operator.spec.installPlanApproval is undefined or
+          operator.spec.installPlanApproval == 'Automatic'
+      loop: "{{ operators_list.resources }}"
+      loop_control:
+        loop_var: operator
+        label: "{{ operator.metadata.name }"
+  when:
+    - disable_operator_auto_approval | default(false) | bool
+
+# Tasks for operators that require configuration changes before upgrading them
+- name: "upgrader : Apply SRIOV recommended settings before operator upgrade"
+  block:
+    - name: Make sure SRIOV operator webhook is disabled
+      community.kubernetes.k8s:
+        definition:
+          apiVersion: sriovnetwork.openshift.io/v1
+          kind: SriovOperatorConfig
+          metadata:
+            name: default
+            namespace: openshift-sriov-network-operator
+          spec:
+            enableOperatorWebhook: false
+
+    - name: Get list of SRIOV policies
+      community.kubernetes.k8s_info:
+        api: sriovnetwork.openshift.io/v1
+        kind: SriovNetworkNodePolicy
+        namespace: openshift-sriov-network-operator
+      register: sriov_policies
+      no_log: true
+
+    - name: Make sure SRIOV policies are not using linkType eth
+      command:
+        cmd: >
+          oc -n openshift-sriov-network-operator
+          patch sriovnetworknodepolicy/{{ policy.metadata.name }}
+          --type json --patch '[{ "op": "remove", "path": "/spec/linkType" }]'
+      when:
+        - policy.spec.linkType is defined
+        - policy.spec.linkType == 'eth'
+      loop: "{{ sriov_policies.resources }}"
+      loop_control:
+        loop_var: policy
+        label: "{{ policy.metadata.name }}"
+  when:
+    - enable_sriov | default(true) | bool
+    - apply_sriov_upgrade_settings | default(true) | bool
+
+- name: "upgrader : Update disconnected catalogSources"
   import_role:
     name: operators-catalog
   when:
@@ -221,6 +291,37 @@
   - opm_mirror_list is defined
   - opm_mirror_list | length
   - update_catalog_channel | default(true) | bool
+
+- name: "upgrader : Approve operators install plan"
+  block:
+    - name: Get list of all Install Plans
+      community.kubernetes.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: InstallPlan
+      register: installplan_list
+      no_log: true
+
+    - name: Approve installPlan
+      k8s:
+        validate_certs: no
+        state: present
+        definition:
+          apiVersion: operators.coreos.com/v1alpha1
+          kind: InstallPlan
+          metadata:
+            name: "{{ installplan.metadata.name }}"
+            namespace: "{{ installplan.metadata.namespace }}"
+          spec:
+            approved: true
+      when:
+        - installplan.spec.approval is defined
+        - installplan.spec.approval == 'Manual'
+      loop: "{{ installplan_list.resources }}"
+      loop_control:
+        loop_var: installplan
+        label: "{{ installplan.metadata.name }}"
+  when:
+    - disable_operator_auto_approval | default(false) | bool
 
 - name: "test_ upgrader: check if all cluster-operators are running correctly"
   shell:
