@@ -82,6 +82,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6143c60_7c7957a0",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-16T01:58:25Z",
+      "side": 1,
+      "message": "This one is tricky, the short version is we are using collections (https://github.com/redhat-cip/dci-openshift-agent/blob/master/dci-openshift-agent.spec#L24)\nThe long version is, we are not being consistent with the use of kubernetes modules, we are using in some places the built-in/core module and in some other places we\u0027re using the modules form the collections. I\u0027ve been relying more and more in collections because is newer, although not as new as I\u0027d like.\nSince the collection is a dependency since long ago, I think is best to use the collection everywhere. I\u0027ll create a card about this.",
+      "parentUuid": "b9d262b5_2264d479",
+      "range": {
+        "startLine": 219,
+        "startChar": 6,
+        "endLine": 219,
+        "endChar": 27
+      },
+      "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "591d3385_d31e3266",
@@ -113,6 +137,24 @@
       "side": 1,
       "message": "I agree, we were talking about this the other day, and I was thinking we should set the installplan approval mode in the role where the operator is installed.",
       "parentUuid": "591d3385_d31e3266",
+      "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c127807b_8f281003",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-16T01:58:25Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "8422be3d_d21f299a",
       "revId": "70e48234b686437ce6a37d0996d84576eadfc374",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
