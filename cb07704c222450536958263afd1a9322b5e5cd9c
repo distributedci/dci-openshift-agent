@@ -33,6 +33,57 @@
       "message": "check dallas ocp-4.7-vanilla ocp-4.8-upgrade openshift-vanilla:components\u003docp\u003d4.7.48 openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.8:components\u003docp\u003d4.8.37",
       "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e262d780_938ea0b3",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-16T02:15:49Z",
+      "side": 1,
+      "message": "nit: upper case in Upgrader",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c20d510c_00c6f06f",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-16T02:15:49Z",
+      "side": 1,
+      "message": "It may be  possible to patch using the k8s module, we should give it a try to:\n\n  - name: Make sure SRIOV operator webhook is disabled\n    community.kubernetes.k8s:\n      definition:\n        apiVersion: sriovnetwork.openshift.io/v1\n        kind: SriovNetworkNodePolicy\n        metadata:\n          name: \"{{ policy.metadata.name }}\"\n          namespace: openshift-sriov-network-operator\n        spec:\n          linkType: null\n    when:\n      - policy.spec.linkType is defined\n      - policy.spec.linkType \u003d\u003d \u0027eth\u0027\n    loop: \"{{ sriov_policies.resources }}\"\n    loop_control:\n      loop_var: policy\n      label: \"{{ policy.metadata.name }}\"",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "320a7d1e_5adb636f",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-16T02:15:49Z",
+      "side": 1,
+      "message": "I think we need to document these two variables in the settings.yml section of the README",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
