@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2534675_9f1b7f2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-16T16:42:47Z",
+      "side": 1,
+      "message": "\nI commented in the pre-run why your libvirt ci test run failed.",
+      "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdf4fd25_f02262ee",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-16T16:42:47Z",
+      "side": 1,
+      "message": "provision_cache_store is not defined by default.  This will cause the default libvirt CI workflow to fail.\n\nWhat do you think about using a tempdir if provision_cache_store is not defined?  The teardown playbooks would need to clean it up as well.",
+      "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d63b0a28_9af98faa",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-16T16:42:47Z",
+      "side": 1,
+      "message": "Are these defaults not meant to be useful?  Just to prevent errors from unset variables?",
+      "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
