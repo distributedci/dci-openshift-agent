@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1996627_f6d7ebb0",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-16T20:45:42Z",
+      "side": 1,
+      "message": "the role itself has a \"sane\" default of /var/lib/dci-openshift-agent/releases so omitting it should do the right thing when undefined.",
+      "parentUuid": "bdf4fd25_f02262ee",
+      "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d63b0a28_9af98faa",
         "filename": "plays/pre-run.yml",
         "patchSetId": 4
@@ -48,6 +66,24 @@
       "writtenOn": "2022-05-16T16:42:47Z",
       "side": 1,
       "message": "Are these defaults not meant to be useful?  Just to prevent errors from unset variables?",
+      "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d529c05_85a0482a",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-16T20:45:42Z",
+      "side": 1,
+      "message": "this is conditional upon the mirror_registry parameter, which is only true when in disconnected mode, and in disconnected mode we verify that these local_registry_* variables are defined (top of pre-run.yml)",
+      "parentUuid": "d63b0a28_9af98faa",
       "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
