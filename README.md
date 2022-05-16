@@ -281,6 +281,7 @@ which version of OCP to install.
 | force\_upgrade                     | False    | Boolean | False                                            | Force upgrade even if no version is available                  |
 | enable\_sriov                      | False    | Boolean | True                                             | Whether installing SR-IOV operator during the  operator-deployment step |
 | apply\_sriov\_upgrade\_settings    | False    | Boolean | True                                             | Whether to apply SR-IOV recommended settings before operator upgrade |
+| sriov\_installplan\_approval\_mode | False    | String  |                                                  | Install plan approval mode for the SR-IOV operator, set to `Manual` if non-automatic updates are desired |
 | dci\_workarounds                   | False    | List    | []                                               | List of workarounds to be considered in the execution. Each element of the list must be a String with the following format: bz<id> or gh-org-repo-<id> |
 | openshift\_secret                  | False    | Dict    | auths:                                           | Additional auths will be combined                              |
 |                                    |          |         |   quay.io/rhceph-dev:                            | You can also override the default auths provided by DCI        |
