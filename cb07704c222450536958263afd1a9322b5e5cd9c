@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b262fa55_eaca1832",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-16T17:38:42Z",
+      "side": 1,
+      "message": "Thanks!",
+      "parentUuid": "437ed214_4b18cf1c",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e262d780_938ea0b3",
@@ -65,6 +83,24 @@
       "writtenOn": "2022-05-16T02:15:49Z",
       "side": 1,
       "message": "nit: upper case in Upgrader",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97ab5f8d_9ec5675f",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-16T17:38:42Z",
+      "side": 1,
+      "message": "Thanks Tony, I saw all tasks in this play use lower case except one, so I changed the only task with \"Upgrader\" to \"upgrader\", if you prefer I can change all to use \"Upgrader\".",
+      "parentUuid": "e262d780_938ea0b3",
       "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "18783bb9_fceac14c",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-16T17:38:42Z",
+      "side": 1,
+      "message": "Yes, I didn\u0027t know we could use null, I prefer to use k8s modules",
+      "parentUuid": "c20d510c_00c6f06f",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "320a7d1e_5adb636f",
@@ -99,6 +153,24 @@
       "writtenOn": "2022-05-16T02:15:49Z",
       "side": 1,
       "message": "I think we need to document these two variables in the settings.yml section of the README",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d688331_86aaa435",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-16T17:38:42Z",
+      "side": 1,
+      "message": "Yes, I added them in the settings.yml table, but I think the upgrade deserves its own doc, I\u0027ll submit another PR later to work on that since there are more upgrade vars and steps coming.",
+      "parentUuid": "320a7d1e_5adb636f",
       "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
