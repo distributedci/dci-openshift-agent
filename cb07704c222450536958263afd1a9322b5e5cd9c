@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "437ed214_4b18cf1c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-16T10:20:59Z",
+      "side": 1,
+      "message": "I validated the patch on a connected environment\nhttps://www.distributed-ci.io/jobs/85dc6d9e-0f61-47ba-9a51-a95b07fb267a/jobStates#7bf87336-ca4d-4add-b378-053ec68f6987:file38",
+      "revId": "cb07704c222450536958263afd1a9322b5e5cd9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e262d780_938ea0b3",
