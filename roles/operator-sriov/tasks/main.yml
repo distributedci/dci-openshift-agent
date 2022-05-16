@@ -33,6 +33,7 @@
         name: sriov-network-operator
         source: "{{ opm_catalog_source_name }}"
         sourceNamespace: "{{ opm_catalog_source_namespace | default('openshift-marketplace') }}"
+        installPlanApproval: "{{ sriov_installplan_approval_mode | default('Automatic') }} "
 
 - name: "Get SRIOV InstallPlan details"
   k8s_info:
@@ -50,6 +51,23 @@
 - name: "Set SRIOV CSV name from IP"
   set_fact:
     sriov_csv_name: "{{ sriov_ip.resources[0].spec.clusterServiceVersionNames[0] }}"
+    sriov_ip_name: "{{ sriov_ip.resources[0].metadata.name }}"
+
+- name: "Approving InstallPlan of SRIOV"
+  community.kubernetes.k8s:
+    validate_certs: no
+    state: present
+    definition:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: InstallPlan
+      metadata:
+        name: "{{ sriov_ip_name }}"
+        namespace: openshift-sriov-network-operator
+      spec:
+        approved: true
+  when:
+    - sriov_installplan_approval_mode is defined
+    - sriov_installplan_approval_mode == 'Manual' or sriov_installplan_approval_mode == 'manual'
 
 - name: get CSVs in sriov-network-operator ns
   k8s_info:
