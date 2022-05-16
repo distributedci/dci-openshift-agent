@@ -95,6 +95,28 @@
       - ocp_version_maj|int == 4
       - ocp_version_min|int <= 10
 
+  - name: "deploy-operators : Install Eleasticsearch operator"
+    include_role:
+      name: olm-operator
+    vars:
+      operator: elasticsearch-operator
+      source: "{{ opm_catalog_source_name }}"
+      namespace: openshift-operators-redhat
+      ns_labels:
+        openshift.io/cluster-monitoring: "true"
+    when:
+      - hostvars.localhost.enable_elasticsearch|default(true)|bool
+
+  - name: "deploy-operators : Install Cluster-logging operator"
+    include_role:
+      name: olm-operator
+    vars:
+      operator: cluster-logging
+      source: "{{ opm_catalog_source_name }}"
+      namespace: openshift-logging
+    when:
+      - hostvars.localhost.enable_clusterlogging|default(true)|bool
+
   - name: "deploy-operators : Apply Performace Profile"
     include_tasks: apply-pao-profile.yml
     when:
