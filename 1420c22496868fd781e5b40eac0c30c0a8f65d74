@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79689d63_614c7cec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-16T11:27:14Z",
+      "side": 1,
+      "message": "The change is not working fine on hv2, inventory variable is configured using \"-i /\" and it should not be used. I\u0027ll check it",
+      "revId": "1420c22496868fd781e5b40eac0c30c0a8f65d74",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
