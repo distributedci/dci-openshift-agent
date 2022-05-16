@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "8d0dcbe466f4fb597a4dec7230fe4688e296fffc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0eaad960_60611a9e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-16T22:48:22Z",
+      "side": 1,
+      "message": "Thanks for starting this Beto, can we set the default to false here and set to true  only in VCP pipelines?",
+      "revId": "8d0dcbe466f4fb597a4dec7230fe4688e296fffc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d31a329_ea36265e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-16T22:48:22Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "8d0dcbe466f4fb597a4dec7230fe4688e296fffc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
