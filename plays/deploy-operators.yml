@@ -90,6 +90,7 @@
       namespace: openshift-performance-addon-operator
       ns_labels:
         openshift.io/cluster-monitoring: "true"
+      approval_mode: "{{ pao_installplan_approval_mode | default(omit) }}"
     when:
       - hostvars.localhost.enable_perf_addon|default(true)|bool
       - ocp_version_maj|int == 4

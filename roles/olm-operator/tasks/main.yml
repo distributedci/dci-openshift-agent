@@ -52,6 +52,43 @@
         name: "{{ operator }}"
         source: "{{ source }}"
         sourceNamespace: "{{ source_ns }}"
+        installPlanApproval: "{{ approval_mode | default(omit) }}"
+
+- name: Approve operator install plan
+  block:
+    - name: Get list of all Install Plans in the namespace
+      k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: InstallPlan
+        namespace: "{{ namespace }}"
+      register: installplan_list
+      no_log: true
+      until:
+        - "installplan_list.resources|length  >= 1"
+
+    - name: Approve installPlan
+      community.kubernetes.k8s:
+        validate_certs: no
+        state: present
+        definition:
+          apiVersion: operators.coreos.com/v1alpha1
+          kind: InstallPlan
+          metadata:
+            name: "{{ installplan.metadata.name }}"
+            namespace: "{{ namespace }}"
+          spec:
+            approved: true
+      when:
+        - operator in installplan.spec.clusterServiceVersionNames[0]
+        - installplan.spec.approval == 'Manual'
+        - not installplan.spec.approved | bool
+      loop: "{{ installplan_list.resources }}"
+      loop_control:
+        loop_var: installplan
+        label: "{{ installplan.metadata.name }}"
+  when:
+    - approval_mode is defined
+    - approval_mode == 'Manual' or approval_mode == 'manual'
 
 - name: Wait (up to 10m) for CSV to be ready
   k8s_info:
