@@ -121,6 +121,24 @@
       "parentUuid": "d06a9dc0_904ac79b",
       "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9e8e00d_6e070beb",
+        "filename": "test-runner",
+        "patchSetId": 21
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-17T10:38:35Z",
+      "side": 1,
+      "message": "@Fred, in that case, isn\u0027t it better to use a new variable instead of a standard location?\n\nIf we define the inventory in a standard location, instead of using a new variable as defined yesterday, I would say that:\n\n- Firstly, I think it would be better to use a location that does not belong to dci-openshift-agent, because the dci-openshift-agent files may be updated (dnf-automatic is activated in the jumphost) and we may lose the information. Something like /usr/share/ocp_on_libvirt_inventory\n- Then, we will have to modify the ocp_on_libvirt README to comment that this directory should be created in case you want to execute ocp_on_libvirt in cases like BOS2, to explain why we are defining this location in the test-runner\n- Finally, BOS2 playbooks have to be updated. Probably, including a crontab to copy the inventories in the well-known location and updated each X time\n\nMy impression is that this is more \"complicated\" in terms of things to modify, compared to defining a new variable. However, if it\u0027s the only way to do it, let\u0027s decide and go ahead with any option selected",
+      "parentUuid": "16e5d864_7e2c6dea",
+      "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
