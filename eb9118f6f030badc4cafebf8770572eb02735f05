@@ -157,6 +157,24 @@
       "parentUuid": "a9e8e00d_6e070beb",
       "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "051db0e0_04130bd2",
+        "filename": "test-runner",
+        "patchSetId": 21
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-17T12:15:43Z",
+      "side": 1,
+      "message": "In that case, how can we point to the \u003cBOS2 inventories path\u003e, if they are in a specific location, to use the argument \"-i \u003cBOS2 inventories path\u003e/${PREFIX#-p}\" ? Because CONFIG_DIR didn\u0027t work, as Nacho commented.",
+      "parentUuid": "f7670afd_58a7a13b",
+      "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
