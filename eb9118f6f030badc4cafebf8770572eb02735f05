@@ -103,6 +103,24 @@
       "parentUuid": "af4530d6_7f2f636f",
       "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16e5d864_7e2c6dea",
+        "filename": "test-runner",
+        "patchSetId": 21
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-05-17T09:54:08Z",
+      "side": 1,
+      "message": "Unfortunately, using CONFIG_DIR does not seem to be an option for us.\n\nWhen running dci-check-change and detecting a copy of the dci-openshift-agent repository in the working directory, the test-runner script sets CONFIG_DIR to PWD:\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/3c3c440613e2994a0e1793862985dbf5da186395/test-runner#L272\n\nEven if we decide to play along and add some code to copy the libvirt inventory to the current directory, we still need to know where to find the library of inventories.\n\nIf the problem is with having a new variable added to the config file, an alternative would be to force having the inventories in a stantard location.",
+      "parentUuid": "d06a9dc0_904ac79b",
+      "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
