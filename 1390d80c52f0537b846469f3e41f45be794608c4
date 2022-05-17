@@ -16,6 +16,29 @@
       "message": "recheck",
       "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f151f809_a1b50123",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-17T11:40:32Z",
+      "side": 1,
+      "message": "Hi Jorge, just for understanding, why has this role changed to be executed even in connected environments, as it is a mirroring-related role?\nAlso, I am asking this because I can see, on libvirt jobs, it is complaining with variables that seems not to be defined correctly, such as webserver_url, which should include a URL but it doesn\u0027t, according to the last libvirt job.",
+      "range": {
+        "startLine": 113,
+        "startChar": 10,
+        "endLine": 113,
+        "endChar": 28
+      },
+      "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
