@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2af9b6aa_3c54fd1c",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-05-17T15:05:12Z",
+      "side": 1,
+      "message": "I think you want | join(\u0027/\u0027)",
+      "revId": "6ab008516ddc1b30ea2764b97583069a7fb9e5ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
