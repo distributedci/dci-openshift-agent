@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "804bfcc7_23e6e8b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-17T18:11:24Z",
+      "side": 1,
+      "message": "Thanks Charles, yeah I was thinking that could be a problem. Will look for a fix.\nCheers",
+      "parentUuid": "b2326ea3_155bd5e6",
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "357370c8_78079d5c",
@@ -76,6 +94,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42a8ca87_57ac0d7a",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-17T18:11:24Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "357370c8_78079d5c",
+      "range": {
+        "startLine": 108,
+        "startChar": 27,
+        "endLine": 108,
+        "endChar": 47
+      },
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cf99a51a_d841444e",
@@ -89,6 +131,30 @@
       "writtenOn": "2022-05-17T10:23:05Z",
       "side": 1,
       "message": "same as above",
+      "range": {
+        "startLine": 118,
+        "startChar": 27,
+        "endLine": 118,
+        "endChar": 48
+      },
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53604f24_0121ce58",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-17T18:11:24Z",
+      "side": 1,
+      "message": "Thanks Ramón, I added those and others to the documentation.",
+      "parentUuid": "cf99a51a_d841444e",
       "range": {
         "startLine": 118,
         "startChar": 27,
