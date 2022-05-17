@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c95ef794_db0ef1d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-17T13:07:05Z",
+      "side": 1,
+      "message": "VZ ? No, just a new feature.",
+      "parentUuid": "2c7a1282_fd293e81",
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "357370c8_78079d5c",
