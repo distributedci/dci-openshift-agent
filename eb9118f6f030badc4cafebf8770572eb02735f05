@@ -85,6 +85,24 @@
       "message": "having a new variable doesn\u0027t look right for me. Why don\u0027t we use CONFIG_DIR like in the ctl?",
       "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d06a9dc0_904ac79b",
+        "filename": "test-runner",
+        "patchSetId": 21
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-05-17T08:09:35Z",
+      "side": 1,
+      "message": "Hi Fred,\nThanks for the suggestion.\nI\u0027m going to test using CONFIG_DIR, since I\u0027m concerned of the impact of having the same directory to store the inventories for the libvirt_up/destroy.yml and the dci-openshift-agent.yml playbooks.\nFor instance we may have problems if the d-o-a inventories are removed (stashed) when updating the lab\u0027s config repository (which includes the libvirt inventories).",
+      "parentUuid": "af4530d6_7f2f636f",
+      "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
