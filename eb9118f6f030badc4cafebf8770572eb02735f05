@@ -175,6 +175,24 @@
       "parentUuid": "f7670afd_58a7a13b",
       "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86c625ec_f90fdef1",
+        "filename": "test-runner",
+        "patchSetId": 21
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-05-17T12:52:56Z",
+      "side": 1,
+      "message": "The answer is in your question: if CONFIG_DIR doesn\u0027t work, we need to fix. What you are doing here is building a workaround instead of fixing the real issue.",
+      "parentUuid": "051db0e0_04130bd2",
+      "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
