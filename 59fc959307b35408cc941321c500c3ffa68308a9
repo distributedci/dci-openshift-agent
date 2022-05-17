@@ -16,6 +16,23 @@
       "message": "It looks fine overall, but I am lacking some context: why do you want to install ES RH operator? Because it is used on VZ side or just as an example?",
       "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2326ea3_155bd5e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-05-17T10:04:19Z",
+      "side": 1,
+      "message": "FYI, last job has failed because the \u0027Wait (up to 10m) for CSV to be ready\u0027 assumes that there is a dedicated namespace for the operator to install which is not the case with ES and PAO. Both are installed in the \u0027openshift-operators-redhat\u0027 Namespace so all the condition \u0027csv.resources | length \u003d\u003d 1\u0027 is not respected.",
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
