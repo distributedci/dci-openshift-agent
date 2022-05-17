@@ -33,6 +33,52 @@
       "message": "FYI, last job has failed because the \u0027Wait (up to 10m) for CSV to be ready\u0027 assumes that there is a dedicated namespace for the operator to install which is not the case with ES and PAO. Both are installed in the \u0027openshift-operators-redhat\u0027 Namespace so all the condition \u0027csv.resources | length \u003d\u003d 1\u0027 is not respected.",
       "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "357370c8_78079d5c",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-17T10:23:05Z",
+      "side": 1,
+      "message": "May we document this variable in the readme too?",
+      "range": {
+        "startLine": 108,
+        "startChar": 27,
+        "endLine": 108,
+        "endChar": 47
+      },
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf99a51a_d841444e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-17T10:23:05Z",
+      "side": 1,
+      "message": "same as above",
+      "range": {
+        "startLine": 118,
+        "startChar": 27,
+        "endLine": 118,
+        "endChar": 48
+      },
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
