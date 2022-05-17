@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "44ac1878_22c24a9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-17T13:28:47Z",
+      "side": 1,
+      "message": "I see what\u0027s going on with the webserver_url piece, and have a way to fix it now.",
+      "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f151f809_a1b50123",
@@ -31,6 +48,30 @@
       "writtenOn": "2022-05-17T11:40:32Z",
       "side": 1,
       "message": "Hi Jorge, just for understanding, why has this role changed to be executed even in connected environments, as it is a mirroring-related role?\nAlso, I am asking this because I can see, on libvirt jobs, it is complaining with variables that seems not to be defined correctly, such as webserver_url, which should include a URL but it doesn\u0027t, according to the last libvirt job.",
+      "range": {
+        "startLine": 113,
+        "startChar": 10,
+        "endLine": 113,
+        "endChar": 28
+      },
+      "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd766b14_76ecfc6f",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-17T13:28:47Z",
+      "side": 1,
+      "message": "Hi Ramon, with the current work for assisted installer we need a way to extract several pieces of information about the openshift release, for example: quay image, RHCOS images, etc.\nWe\u0027ve done this same thing in several pieces already, and it always come back to the same overall procedure. What I\u0027m doing here is re-purposing the mirror-ocp-release role to that automatically for us as it alreay exists in the pre-run step which is where we ultimately need it.\nThe idea is it won\u0027t mirror everything, in fact a lot of the re-work has to do with adding switches so you can only mirror the pieces you need, the only thing that will be downloaded every (new) release is the installer so we can surface the release data as facts to be consumed by all other pieces.",
+      "parentUuid": "f151f809_a1b50123",
       "range": {
         "startLine": 113,
         "startChar": 10,
