@@ -68,6 +68,23 @@
       "message": "BOS2 job on server10 did not pass in OCP installation: https://www.distributed-ci.io/jobs/cce06856-df03-4d99-b2e2-600031635e3f/jobStates, I\u0027ll retry in server02 (which has not been tested yet) to see if it is a problem that is repeated in other servers. I\u0027ll check the result tomorrow.",
       "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af4530d6_7f2f636f",
+        "filename": "test-runner",
+        "patchSetId": 21
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-05-17T07:16:09Z",
+      "side": 1,
+      "message": "having a new variable doesn\u0027t look right for me. Why don\u0027t we use CONFIG_DIR like in the ctl?",
+      "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
