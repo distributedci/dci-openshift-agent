@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c7a1282_fd293e81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-05-17T09:55:56Z",
+      "side": 1,
+      "message": "It looks fine overall, but I am lacking some context: why do you want to install ES RH operator? Because it is used on VZ side or just as an example?",
+      "revId": "59fc959307b35408cc941321c500c3ffa68308a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
