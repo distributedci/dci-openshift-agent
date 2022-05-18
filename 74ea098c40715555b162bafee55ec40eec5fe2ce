@@ -101,6 +101,23 @@
       "message": "check dallas ocp-4.9-vanilla",
       "revId": "74ea098c40715555b162bafee55ec40eec5fe2ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "108d5356_19e128fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-18T20:32:35Z",
+      "side": 1,
+      "message": "I need to rebase to include 24923 changes, but I\u0027ll wait until 24950 gets merged because that will impact this PR too. ",
+      "revId": "74ea098c40715555b162bafee55ec40eec5fe2ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
