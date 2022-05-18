@@ -80,6 +80,30 @@
       },
       "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "123b2bb4_9f1f70ca",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-18T09:17:45Z",
+      "side": 1,
+      "message": "Understood, thank you :) it seems that the libvirt job now is passing the mirror-ocp tasks but failing when extracting the installer. I\u0027ve scheduled a job in dallas to see how it goes there, because your job seems not to be scheduled yesterday",
+      "parentUuid": "cd766b14_76ecfc6f",
+      "range": {
+        "startLine": 113,
+        "startChar": 10,
+        "endLine": 113,
+        "endChar": 28
+      },
+      "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
