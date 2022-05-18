@@ -104,6 +104,30 @@
       },
       "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6193f5f_080fbe84",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-18T13:23:14Z",
+      "side": 1,
+      "message": "Yeah wasn\u0027t sure if that was due to my changes or not, may have been a transitory quay issue. The Dallas/disconnected test ran successfully but it never reported back it seems: https://www.distributed-ci.io/jobs/e256fe37-a225-4ed8-b8ab-e05da25ca54e/jobStates",
+      "parentUuid": "123b2bb4_9f1f70ca",
+      "range": {
+        "startLine": 113,
+        "startChar": 10,
+        "endLine": 113,
+        "endChar": 28
+      },
+      "revId": "1390d80c52f0537b846469f3e41f45be794608c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
