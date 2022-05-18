@@ -54,6 +54,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ba771bcf_a420c052",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-18T20:27:34Z",
+      "side": 1,
+      "message": "I think we don\u0027t need to add the supported values here, adding a reference to the section below (#deploying-operators) would be enough.\nAlso the default should be [] instead of \"\"",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "efe3bf7f_ea25895d",
         "filename": "README.md",
         "patchSetId": 5
@@ -65,6 +82,75 @@
       "writtenOn": "2022-05-18T19:30:17Z",
       "side": 1,
       "message": "I included the enable_sriov variable in a recent change: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24923/3/README.md#282",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f782741_5e167aef",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-18T20:27:34Z",
+      "side": 1,
+      "message": "Beto, you may want to rebase the change so Manny\u0027s changes are included",
+      "parentUuid": "efe3bf7f_ea25895d",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73a6f9b3_3963b4e2",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-18T20:27:34Z",
+      "side": 1,
+      "message": "nit: space between header and paragraph",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6db9d8ec_59275b23",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 449,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-18T20:27:34Z",
+      "side": 1,
+      "message": "nit: [table above](#etcdci-openshift-agentsettingsyml)",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dce9bba8_db4c2b58",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-18T20:27:34Z",
+      "side": 1,
+      "message": "Are these operators part of CNF?",
       "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
