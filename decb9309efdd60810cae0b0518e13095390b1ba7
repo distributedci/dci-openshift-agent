@@ -33,6 +33,57 @@
       "message": "Wow!  Great job!",
       "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b1f725a_7a8bdd84",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-18T19:30:17Z",
+      "side": 1,
+      "message": "Beto, just one minor thing below and a suggestion:\n ",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efe3bf7f_ea25895d",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-18T19:30:17Z",
+      "side": 1,
+      "message": "I included the enable_sriov variable in a recent change: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24923/3/README.md#282",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eee70f69_98d3b1d2",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-18T19:30:17Z",
+      "side": 1,
+      "message": "I was wondering if you can include a variable to set the operator installplan approval, as I did PR#24952, we can do that in another change too.",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
