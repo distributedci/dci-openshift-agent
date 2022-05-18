@@ -50,6 +50,23 @@
       "message": "The upgrade fail in the last step but not related to this change, the SR-IOV policies were updated as expected: \nhttps://www.distributed-ci.io/jobs/528fc2ef-a04b-4ca9-994e-934bfc843655/jobStates#d8e498f8-4397-4122-9e19-54e47a0b8023:file43",
       "revId": "3918c8447d9800763f7eaa4107c5760c220d223d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57f2f90a_64b1da65",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-18T09:19:18Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "3918c8447d9800763f7eaa4107c5760c220d223d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
