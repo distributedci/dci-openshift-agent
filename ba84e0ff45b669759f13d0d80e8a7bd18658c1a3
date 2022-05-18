@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a585e3a2_7b6f6dfb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-18T17:44:51Z",
+      "side": 1,
+      "message": "patch set 3 only fixes a merge conflict in the README after merging 24923",
+      "revId": "ba84e0ff45b669759f13d0d80e8a7bd18658c1a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
