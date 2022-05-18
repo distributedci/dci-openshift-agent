@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58a899bb_9bbf4a8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-18T21:36:05Z",
+      "side": 1,
+      "message": "Thanks Beto!",
+      "revId": "888c6b57323987a7c4a779859f0c84ad3e459e87",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
