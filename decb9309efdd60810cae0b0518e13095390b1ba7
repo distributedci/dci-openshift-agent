@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "83460e8a_43ffa860",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-18T21:55:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba771bcf_a420c052",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "efe3bf7f_ea25895d",
@@ -104,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1616847d_d07c7dd0",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-18T21:55:30Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5f782741_5e167aef",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "73a6f9b3_3963b4e2",
@@ -117,6 +153,24 @@
       "writtenOn": "2022-05-18T20:27:34Z",
       "side": 1,
       "message": "nit: space between header and paragraph",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8b8f309_fa12a79d",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-18T21:55:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "73a6f9b3_3963b4e2",
       "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -138,6 +192,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "27158c1a_a814267c",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 449,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-18T21:55:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6db9d8ec_59275b23",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dce9bba8_db4c2b58",
@@ -151,6 +223,24 @@
       "writtenOn": "2022-05-18T20:27:34Z",
       "side": 1,
       "message": "Are these operators part of CNF?",
+      "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c297e266_6026fc1f",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-18T21:55:30Z",
+      "side": 1,
+      "message": "No, I have reallocated the tasks",
+      "parentUuid": "dce9bba8_db4c2b58",
       "revId": "decb9309efdd60810cae0b0518e13095390b1ba7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
