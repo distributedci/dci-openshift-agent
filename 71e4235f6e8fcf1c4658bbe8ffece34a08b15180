@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f52494fb_220ea944",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-18T13:25:27Z",
+      "side": 1,
+      "message": "Nevermind omitting didn\u0027t do anything even remotely close to what I was expecting. I am sending a default in here to make use of the cache, a temp dir would ignore the cache completely.",
+      "parentUuid": "b1996627_f6d7ebb0",
+      "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d63b0a28_9af98faa",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "this is conditional upon the mirror_registry parameter, which is only true when in disconnected mode, and in disconnected mode we verify that these local_registry_* variables are defined (top of pre-run.yml)",
       "parentUuid": "d63b0a28_9af98faa",
+      "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8114c905_8a70aeca",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-18T13:25:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1d529c05_85a0482a",
       "revId": "71e4235f6e8fcf1c4658bbe8ffece34a08b15180",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
