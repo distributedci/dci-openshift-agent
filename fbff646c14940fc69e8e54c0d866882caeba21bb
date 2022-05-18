@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "fbff646c14940fc69e8e54c0d866882caeba21bb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "653310f7_e6e43ad5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-18T10:23:58Z",
+      "side": 1,
+      "message": "I\u0027ve executed a recheck to pass the libvirt job, but in any case, this change is related to mirroring in disconnected environments, so it should not be a problem.",
+      "revId": "fbff646c14940fc69e8e54c0d866882caeba21bb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
