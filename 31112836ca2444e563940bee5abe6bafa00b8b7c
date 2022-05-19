@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98ae58c2_0539e5bc",
+        "filename": "test-runner",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-05-19T09:59:28Z",
+      "side": 1,
+      "message": "I\u0027m not so sure about this line.\nWhy is the ansible.cfg supposed to have a path of the form:\n/var/lib/dci-openshift-agent/$conf?\nI\u0027d expect the paths in the file to point to /var/lib/dci-openshift-agent",
+      "revId": "31112836ca2444e563940bee5abe6bafa00b8b7c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
