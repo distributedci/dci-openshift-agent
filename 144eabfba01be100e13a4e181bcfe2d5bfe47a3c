@@ -169,6 +169,23 @@
       "message": "check --sno",
       "revId": "144eabfba01be100e13a4e181bcfe2d5bfe47a3c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e09bf92_a219bb2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-05-19T14:26:33Z",
+      "side": 1,
+      "message": "check --sno",
+      "revId": "144eabfba01be100e13a4e181bcfe2d5bfe47a3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
