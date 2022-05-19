@@ -16,6 +16,23 @@
       "message": "🚢 it",
       "revId": "e4faee1705393a95ee7148555e38a787674500a1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af08dadc_e9bb5472",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-19T15:08:26Z",
+      "side": 1,
+      "message": "Here is a gist showing that [\u0027failed\u0027] section is always present, both for failed and success jobs: https://gist.github.com/tkrishtop/6c1b29942a8a15f115bb5fc90df745e0 \n\nLet\u0027s see how it would go on libvirt (ansible 2.9.27, the same as in dallas).",
+      "revId": "e4faee1705393a95ee7148555e38a787674500a1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
