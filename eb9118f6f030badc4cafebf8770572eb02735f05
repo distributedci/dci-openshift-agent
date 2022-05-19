@@ -193,6 +193,24 @@
       "parentUuid": "051db0e0_04130bd2",
       "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd552caa_98e19fe0",
+        "filename": "test-runner",
+        "patchSetId": 21
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-05-19T15:02:37Z",
+      "side": 1,
+      "message": "So, this issue was addressed on 24998 which depends on this CR.\nIs it OK to set this comments as resolved?",
+      "parentUuid": "86c625ec_f90fdef1",
+      "revId": "eb9118f6f030badc4cafebf8770572eb02735f05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
