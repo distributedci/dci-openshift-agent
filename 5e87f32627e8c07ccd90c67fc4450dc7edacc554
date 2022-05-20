@@ -33,6 +33,23 @@
       "message": "Change is ready to be merged.",
       "revId": "5e87f32627e8c07ccd90c67fc4450dc7edacc554",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4fd7999_f66ed4c1",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 425,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-05-20T06:26:14Z",
+      "side": 1,
+      "message": "don\u0027t we keep the compatibility with the old repo if we need to test anything in 3.x?",
+      "revId": "5e87f32627e8c07ccd90c67fc4450dc7edacc554",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
