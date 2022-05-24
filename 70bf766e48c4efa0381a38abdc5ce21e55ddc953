@@ -33,6 +33,24 @@
       "message": "Okey, now I\u0027ve seen you\u0027ve put a default value for mcp_reason, anyway I\u0027d prefer to update d-o-a-a too and merge everything together\n\nAlso, example-cnf-config needs to be changed:\n\n```\ntestpmd/hooks/roles/mirror-rh-nfv/tasks/main.yml:    name: wait-mcp\ntestpmd/hooks/pre-run.yml:        name: wait-mcp\n\n```",
       "revId": "70bf766e48c4efa0381a38abdc5ce21e55ddc953",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "802e20a4_5648cd9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-24T15:11:34Z",
+      "side": 1,
+      "message": "Hi Ramon, I think you\u0027ve looked at the previous version :) In patch3, I do define a default value to make mcp_reason to be optional.\n\nHere is a change for d-o-a-a: https://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/25098 but we also need to update example-cnf-config etc.",
+      "parentUuid": "b867db21_46a6920f",
+      "revId": "70bf766e48c4efa0381a38abdc5ce21e55ddc953",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
