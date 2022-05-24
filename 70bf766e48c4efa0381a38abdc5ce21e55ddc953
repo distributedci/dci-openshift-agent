@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b867db21_46a6920f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-24T15:06:08Z",
+      "side": 1,
+      "message": "You also need to update dci-openshift-app-agent, if not the jobs will fail:\n\n```\nroles/preflight/tasks/mirroring.yml:        name: wait-mcp\nsamples/tnf_test_example/hooks/pre-run.yml:          name: wait-mcp\n```",
+      "revId": "70bf766e48c4efa0381a38abdc5ce21e55ddc953",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
