@@ -1,0 +1,9 @@
+Verified+1: dci-ci-bot <dci-ci-bot@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Code-Review+2: Tatiana Krishtop <tkrishto@redhat.com>
+Workflow+1: Pierre Blanc <pblanc@redhat.com>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Tue, 24 May 2022 16:36:52 +0000
+Reviewed-on: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25079
+Project: dci-openshift-agent
+Branch: refs/heads/master
