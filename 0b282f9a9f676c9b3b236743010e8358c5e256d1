@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3360c57c_3aecd3bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-24T12:12:11Z",
+      "side": 1,
+      "message": "I\u0027ll accept this change, as we are starting with SNO integration, the change was partially accepted some weeks ago (nobody disagrees) and it is not breaking sno_on_libvirt deployment after using dci-check-change.",
+      "revId": "0b282f9a9f676c9b3b236743010e8358c5e256d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
