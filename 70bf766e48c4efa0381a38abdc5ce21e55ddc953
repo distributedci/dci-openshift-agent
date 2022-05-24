@@ -69,6 +69,23 @@
       "parentUuid": "802e20a4_5648cd9c",
       "revId": "70bf766e48c4efa0381a38abdc5ce21e55ddc953",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "463328ed_9f630048",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-24T16:05:44Z",
+      "side": 1,
+      "message": "I ran the test but it\u0027s not that easy to trigger a workaround: https://www.distributed-ci.io/jobs/6abf1eb9-3e1b-493a-9dc9-af7535ba58c2/jobStates \n\nI would merge the CR, normally it shouldn\u0027t do any harm.",
+      "revId": "70bf766e48c4efa0381a38abdc5ce21e55ddc953",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
