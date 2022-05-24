@@ -1,0 +1,9 @@
+- name: "deploy-operators : Deploy {{ dci_operators.name }}"
+  include_role:
+    name: olm-operator
+  vars:
+    operator: "{{ dci_operators.name }}"
+    source: "{{ dci_operators.catalog_source }}"
+    namespace: "{{ dci_operators.namespace }}"
+    operator_group_spec: "{{ dci_operators.operator_group_spec | default(omit) }}"
+    ns_labels: "{{ dci_operators.ns_labels | default(omit) }}"
