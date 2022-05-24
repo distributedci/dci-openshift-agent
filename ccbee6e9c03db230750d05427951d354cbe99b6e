@@ -34,6 +34,24 @@
       "parentUuid": "44325fe6_47275df5",
       "revId": "ccbee6e9c03db230750d05427951d354cbe99b6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d27634f8_cfe808ed",
+        "filename": "roles/operators-mirror/handlers/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-24T16:11:09Z",
+      "side": 1,
+      "message": "Sure, thank you for the fix!",
+      "parentUuid": "ee8a8e92_ec00139b",
+      "revId": "ccbee6e9c03db230750d05427951d354cbe99b6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
