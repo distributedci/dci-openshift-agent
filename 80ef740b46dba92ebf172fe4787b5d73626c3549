@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "80ef740b46dba92ebf172fe4787b5d73626c3549",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f923db4f_2bbe5fed",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-24T21:37:08Z",
+      "side": 1,
+      "message": "I like the simplicity, but I wonder, for documentation sake, we should include at this level the component variables used inside the role, e.g. dci_gits_to_components, dev_gits_to_components and dci_rpms_to_components. That implies that we will have to rename the variables inside the role\n\nNot sure if is worth doing it or leave it as is, wdyt?",
+      "revId": "80ef740b46dba92ebf172fe4787b5d73626c3549",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
