@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "58464541_0e570632",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-25T12:35:37Z",
+      "side": 1,
+      "message": "Thanks for your comments, I\u0027ll address them shortly, ",
+      "revId": "80ef740b46dba92ebf172fe4787b5d73626c3549",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f923db4f_2bbe5fed",
@@ -49,6 +66,24 @@
       "side": 1,
       "message": "Maybe we can move default values to the common role and also include a README defining there these variables, I think it would be fine",
       "parentUuid": "f923db4f_2bbe5fed",
+      "revId": "80ef740b46dba92ebf172fe4787b5d73626c3549",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07c8a78f_3c265e74",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-25T12:35:37Z",
+      "side": 1,
+      "message": "I agree to include a README in the role.\n- Ramon: I also considered moving the vars for these tasks from from groups/all  groups/dev to this role, so I think it could be an option.\n- Tony: I\u0027ll ping you to have more details about your point to rename the variables, just to be sure I\u0027m getting the idea behind.",
+      "parentUuid": "60096ed7_0c120e07",
       "revId": "80ef740b46dba92ebf172fe4787b5d73626c3549",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
