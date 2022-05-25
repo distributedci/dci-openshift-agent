@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "71c9fd9d_99b870ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-25T22:00:24Z",
+      "side": 1,
+      "message": "Thanks for the feedback",
+      "parentUuid": "48f67abc_c29ca1f5",
+      "revId": "b878b679b993d25c80242cb556ba2c0c7d265961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "50c2240a_1f79e047",
@@ -35,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "39ff8d23_df6cbea0",
+        "filename": "plays/apply-sriov-config.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-25T22:00:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "50c2240a_1f79e047",
+      "revId": "b878b679b993d25c80242cb556ba2c0c7d265961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8c7279bd_a1ac7cb9",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-05-25T20:59:05Z",
       "side": 1,
       "message": "ditto",
+      "revId": "b878b679b993d25c80242cb556ba2c0c7d265961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "427c3f2a_c628ba18",
+        "filename": "plays/apply-sriov-config.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-25T22:00:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8c7279bd_a1ac7cb9",
       "revId": "b878b679b993d25c80242cb556ba2c0c7d265961",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
