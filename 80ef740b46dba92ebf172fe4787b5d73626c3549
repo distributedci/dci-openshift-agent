@@ -86,6 +86,24 @@
       "parentUuid": "60096ed7_0c120e07",
       "revId": "80ef740b46dba92ebf172fe4787b5d73626c3549",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1ac046b_6962f81c",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-25T18:56:29Z",
+      "side": 1,
+      "message": "I touched based with Tony, I made some changes in the role to use its own vars and get the values from pre-run play, also include the readme for the role with required variables.",
+      "parentUuid": "07c8a78f_3c265e74",
+      "revId": "80ef740b46dba92ebf172fe4787b5d73626c3549",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
