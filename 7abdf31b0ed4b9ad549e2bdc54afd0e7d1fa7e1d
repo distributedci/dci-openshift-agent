@@ -16,6 +16,69 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "7abdf31b0ed4b9ad549e2bdc54afd0e7d1fa7e1d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df5a455c_359d97dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-25T19:18:11Z",
+      "side": 1,
+      "message": "Thanks Manuel, just a couple of suggestions",
+      "revId": "7abdf31b0ed4b9ad549e2bdc54afd0e7d1fa7e1d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73ab9b26_685e6390",
+        "filename": "common-roles/include-components/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-25T19:18:11Z",
+      "side": 1,
+      "message": "Trailing space",
+      "range": {
+        "startLine": 1,
+        "startChar": 20,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "7abdf31b0ed4b9ad549e2bdc54afd0e7d1fa7e1d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0082091_495108e3",
+        "filename": "common-roles/include-components/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-25T19:18:11Z",
+      "side": 1,
+      "message": "Please add a space between paragraphs",
+      "range": {
+        "startLine": 3,
+        "startChar": 205,
+        "endLine": 3,
+        "endChar": 206
+      },
+      "revId": "7abdf31b0ed4b9ad549e2bdc54afd0e7d1fa7e1d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
