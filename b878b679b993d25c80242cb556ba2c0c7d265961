@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48f67abc_c29ca1f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T20:59:05Z",
+      "side": 1,
+      "message": "LGTM, one minor thing",
+      "revId": "b878b679b993d25c80242cb556ba2c0c7d265961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50c2240a_1f79e047",
+        "filename": "plays/apply-sriov-config.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T20:59:05Z",
+      "side": 1,
+      "message": "should we remove this commented line?",
+      "revId": "b878b679b993d25c80242cb556ba2c0c7d265961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c7279bd_a1ac7cb9",
+        "filename": "plays/apply-sriov-config.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T20:59:05Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "b878b679b993d25c80242cb556ba2c0c7d265961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
