@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52b98e9e_219b20b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T17:48:51Z",
+      "side": 1,
+      "message": "Thanks for doing this, we\u0027re removing a lot of duplication and making use of the olm-role as we should 😊 Have few questions and suggestions, but overall LGTM",
+      "revId": "436639643c98ae191c689215722e836882b03dfc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7483fc13_ab761689",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T17:48:51Z",
+      "side": 1,
+      "message": "The default is False, instead of True",
+      "revId": "436639643c98ae191c689215722e836882b03dfc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e05d2ff1_3bb86a60",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 480,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T17:48:51Z",
+      "side": 1,
+      "message": "It would be nice to include an example on how to add the operators to `opm_mirror_list` for these two operators to show how it is in a disconnected env, wdyt?\n\nnit: add a line between the code and the next paragraph",
+      "revId": "436639643c98ae191c689215722e836882b03dfc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d1a9944_04fc193c",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T17:48:51Z",
+      "side": 1,
+      "message": "No need to create a var if we\u0027re not using it",
+      "revId": "436639643c98ae191c689215722e836882b03dfc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89770e0c_0becdc0e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T17:48:51Z",
+      "side": 1,
+      "message": "nit: empty spaces at the end",
+      "revId": "436639643c98ae191c689215722e836882b03dfc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c75ab716_dd28b9cc",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-25T17:48:51Z",
+      "side": 1,
+      "message": "I think we should get rid of the operator-sriov role and just have one play file as apply-pao-profile.yaml since the role is only one plain file and nothing else, wdyt?",
+      "revId": "436639643c98ae191c689215722e836882b03dfc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
