@@ -33,6 +33,23 @@
       "message": "Although the job failed, the change worked fine, so LGTM",
       "revId": "07a5d5ac6182d3b99acd6687e6c69ad9066f0db2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c3b1462_64660ba1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-26T12:50:02Z",
+      "side": 1,
+      "message": "Thanks",
+      "revId": "07a5d5ac6182d3b99acd6687e6c69ad9066f0db2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
