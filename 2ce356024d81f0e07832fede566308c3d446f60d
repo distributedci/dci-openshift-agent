@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fcdf3be_2040bc91",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-26T17:34:14Z",
+      "side": 1,
+      "message": "Thanks for this",
+      "parentUuid": "6ec6a52d_1b02b2e0",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7a01536_586bbeef",
@@ -116,6 +134,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6bc5b94_31b27055",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-26T17:34:14Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5327ec20_e8ec6dbb",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d51b8112_96e87a4d",
@@ -135,6 +171,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "33c88823_04ef7226",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-26T17:34:14Z",
+      "side": 1,
+      "message": "That is interesting, as those are connected after the upgrade those should be automatically upgraded. I think once we install the the operator the first time, we should set the subscription to Manual.",
+      "parentUuid": "d51b8112_96e87a4d",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e9aebc4d_868e9803",
         "filename": "plays/upgrade.yml",
         "patchSetId": 1
@@ -146,6 +200,24 @@
       "writtenOn": "2022-05-26T13:08:28Z",
       "side": 1,
       "message": "This name reads strange to me, waht about: Start the upgrade on installed operators ?",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3b67b17_4404da03",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-26T17:34:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e9aebc4d_868e9803",
       "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
