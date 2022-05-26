@@ -18,6 +18,40 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8706ae86_beaa918b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-26T13:08:28Z",
+      "side": 1,
+      "message": "Great way to use json queries 😎\n\nrecheck",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ec6a52d_1b02b2e0",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-26T13:08:28Z",
+      "side": 1,
+      "message": "suggestion to make it easy to read:\n\n    vars:\n      subs_details: \u003e\n        resources[*].{\n          subcriptionName: metadata.name,\n          operatorName: spec.name,\n          namespace: metadata.namespace,\n          installedCSV: status.installedCSV,\n          installPlanApproval: spec.installPlanApproval\n        }",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7a01536_586bbeef",
@@ -37,6 +71,81 @@
         "endLine": 18,
         "endChar": 40
       },
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e74386fe_5689e30a",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-26T13:08:28Z",
+      "side": 1,
+      "message": "Changing to manual, prevents the operators to auto-update once the new catalog is in place. It is also the reason why those manual IP are deleted.\nLater it\u0027s switched back to automatic one by one because that way we can check on their state individually",
+      "parentUuid": "e7a01536_586bbeef",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 40
+      },
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5327ec20_e8ec6dbb",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-26T13:08:28Z",
+      "side": 1,
+      "message": "nit: use singular \"sub\" or \"subscription\", as you\u0027re looping through the elements at this point",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d51b8112_96e87a4d",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-26T13:08:28Z",
+      "side": 1,
+      "message": "Question, how are we going to deal with connected upgrades?",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9aebc4d_868e9803",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-05-26T13:08:28Z",
+      "side": 1,
+      "message": "This name reads strange to me, waht about: Start the upgrade on installed operators ?",
       "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
