@@ -33,6 +33,24 @@
       "message": "Forgot to mention about this one too, I think using singular as in \"sub\" is best, but no biggie if it remains like this, as it implies changing all the vars used in upgrade-csv.",
       "revId": "a48f5e268243347bfd048a14e19ac1151926d83c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1858dd3a_319eb2f9",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-26T22:31:11Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "c5a2b9ad_32f11cb9",
+      "revId": "a48f5e268243347bfd048a14e19ac1151926d83c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

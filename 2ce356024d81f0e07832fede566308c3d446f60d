@@ -207,6 +207,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ecf4c066_d9100273",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-26T22:31:11Z",
+      "side": 1,
+      "message": "I think that needs to happen just after installation, if the cluster is installed the operators can be upgraded at any time between the installation and the upgrade and if we need to have control for the upgrade those should be disabled after the first install. Will do that on a separate change.",
+      "parentUuid": "fa56381c_4b2578cc",
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e9aebc4d_868e9803",
         "filename": "plays/upgrade.yml",
         "patchSetId": 1
