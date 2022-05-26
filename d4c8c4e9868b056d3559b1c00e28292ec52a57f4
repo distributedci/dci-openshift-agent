@@ -86,6 +86,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "08e26bb3_16d79c8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-26T00:34:06Z",
+      "side": 1,
+      "message": "Thanks, all is working but there is a bug while the tasks loop on the gits_to_components list, is comparing each letter or the git paths and causing dozens of dummy tasks. I\u0027ll fix this",
+      "revId": "d4c8c4e9868b056d3559b1c00e28292ec52a57f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74d86873_d5ad3be5",
