@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "07a5d5ac6182d3b99acd6687e6c69ad9066f0db2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac4f9a44_a3e95cce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-26T09:58:15Z",
+      "side": 1,
+      "message": "Although the job failed, the change worked fine, so LGTM",
+      "revId": "07a5d5ac6182d3b99acd6687e6c69ad9066f0db2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
