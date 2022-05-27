@@ -4,9 +4,14 @@
   include_tasks: plays/log-dir.yml
   when: job_logs is undefined
 
+- name: Setting local registry URL
+  set_fact:
+    local_registry: '{{ dci_disconnected | default(False) | bool | ternary("%s:%s" % (local_registry_host, local_registry_port) , "") }}'
+
 - name: Get logs from OCP deployment
   environment:
     - DCI_MUST_GATHER_IMAGES: '{{ dci_must_gather_images | default(["registry.redhat.io/openshift4/ose-must-gather"]) | join(" ") }}'
+    - registry: '{{ local_registry | default("") }}'
   script: ./scripts/get-logs "{{ hostvars[groups['provisioner'][0]]['ansible_user'] }}@{{ groups['provisioner'][0] }}" "{{ job_logs.path }}" "{{ groups['masters'] }}"
   ignore_errors: true
 
