@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "628b6c30_b6a77b38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T18:04:51Z",
+      "side": 1,
+      "message": "excellent, just minor thing and I\u0027ll ad +2",
+      "revId": "b9c0078251e074d583a21a4bab9083f81716fac1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c60d4e6_ad758dfb",
+        "filename": "roles/olm-operator/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T18:04:51Z",
+      "side": 1,
+      "message": "I think you just need to update the description of the \"install_approval\" variable: \u0027Operator install plan approval mode, either Automatic or Manual (default)\u0027, the rest looks good!",
+      "revId": "b9c0078251e074d583a21a4bab9083f81716fac1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
