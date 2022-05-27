@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "742edf7a_0f496d09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:03:08Z",
+      "side": 1,
+      "message": "Thanks, just minor comments.",
+      "revId": "94b9a8732753b33531846673d48841ba9c8f2da2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "adc23941_86027896",
+        "filename": "roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:03:08Z",
+      "side": 1,
+      "message": "I\u0027m sorry, I\u0027m having troubles to understand this line :), I would like to suggest to update it with something like: \"install_approval: operator install plan approval mode, either Automatic or Manual (default). to start, then you can add more context if desired.\n\nAlso I was wondering if we should move all this comments to a README file in this role instead, the content is great, just put it in its own file, wdyt?",
+      "revId": "94b9a8732753b33531846673d48841ba9c8f2da2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
