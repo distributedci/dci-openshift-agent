@@ -117,6 +117,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7918ccb_0b6d6fe4",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-27T08:58:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e74386fe_5689e30a",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 40
+      },
+      "revId": "2ce356024d81f0e07832fede566308c3d446f60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5327ec20_e8ec6dbb",
