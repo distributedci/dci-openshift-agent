@@ -27,7 +27,7 @@ Choose one deployment method:
 
 ## A) Deploy with DCI from the SNO provisioner node
 
-Note: You can run steps 1, 2, and 3 manually if you prefer to do so. The steps are just to help you configure the provisioner host quickly. See the [hosts](https://github.com/redhat-cip/dci-openshift-agent/blob/master/samples/sno_on_libvirt/hosts) file as a example of the variables you need.
+Note: You can run steps 1, 2, and 3 manually if you prefer to do so. The steps are just to help you configure the provisioner host quickly. See the [hosts](https://github.com/redhat-cip/dci-openshift-agent/blob/master/samples/sno_on_libvirt/examples/hosts) file as a example of the variables you need.
 
 ### 1. Configuration
 
@@ -65,7 +65,7 @@ your-user@your-workstation ~$ cd samples/sno_on_libvirt/
 your-user@your-workstation ~$ ansible-playbook sno-on-libvirt.yml -e "@~/sno-node-settings.yml" -i /etc/ansible/hosts --vault-password-file ~/.vault_secret
 ```
 
-NOTE: The playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/hosts` to `/etc/dci-openshift-agent/hosts` which contains required variables, including a very important one: `install_type=sno` this will allow DCI agent to define which install to perform.
+NOTE: The playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/examples/hosts` to `/etc/dci-openshift-agent/hosts` which contains required variables, including a very important one: `install_type=sno` this will allow DCI agent to define which install to perform.
 
 ### 4. Source the credentials and run the main d-o-a playbook.
 
@@ -90,7 +90,7 @@ dci-openshift-agent-ctl -s -- -v
 
 ### 1. Inventory Notes
 
-If you run the playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/hosts` to `/etc/dci-openshift-agent/hosts`.
+If you run the playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/examples/hosts` to `/etc/dci-openshift-agent/hosts`.
 This inventory contains defaults values for the SNO/OCP cluster setup, and SNO plays will validate if they are provided:
 
 - pull secret
@@ -105,16 +105,12 @@ Additionally the following groups are defined:
 - master group and host entry
 - worker group (no need to add hosts to this group
 
-If you did not run sno-on-libvirt.yml playbook, you can copy the default inventory and adapt it to your setup, make sure you include the variables above.
+If you did not run sno-on-libvirt.yml playbook, you can use `deploy-sno-standalone.yml` playbook to both deploy the SNO VM and generate the final hosts file to be used in subsequent deployments. They are under the inventory folder.
+
+If you use the default inventory files, then you only need to provide the pullsecret variable. A basic pull secret can be obtained from the [Red Hat Console](https://console.redhat.com/openshift/downloads) under Token > pullsecret section. Note that you will need to append authentication data for other registries such as Quay.io to that basic pullsecret file.
 
 ```bash
-cp samples/sno_on_libvirt/hosts /etc/dci-openshift-agent/hosts
-```
-
-If you use the default inventory, then you only need to provide the pullsecret variable. A pull secret can be obtained from the [Red Hat Console](https://console.redhat.com/openshift/downloads) under Token > pullsecret section.
-
-```bash
-$ sudo vi /etc/dci-openshift-agent/hosts
+$ sudo vi ./inventory/hosts
 ...
 pullsecret="{{ lookup('file', '<PATH_TO_PULLSECRET>')|string }}"
 ...
@@ -138,8 +134,10 @@ cluster="dcisno"
 ```bash
 sudo su - dci-openshift-agent
 cd /usr/share/dci-openshift-agent
-ansible-playbook ~/samples/sno_on_libvirt/deploy-sno-standalone.yml -i /etc/dci-openshift-agent/hosts
+ansible-playbook ~/samples/sno_on_libvirt/deploy-sno-standalone.yml
 ```
+
+This generates, in this folder, a hosts file that can be used in subsequent deployments. By using the default inventories placed in inventory folder, you will obtain a hosts file like the one placed in `samples/sno_on_libvirt/examples/hosts`.
 
 ##  Access the GUI
 
@@ -189,3 +187,12 @@ cd ~/samples/sno_on_libvirt/
 ansible-playbook deploy-sno-standalone.yml -t cleanup
 ```
 
+## Generate a host file based on a template
+
+If you only want to generate the hosts file to be used in `dci-openshift-agent`, you can do the following. The hosts file will be saved in this folder.
+
+```bash
+sudo su - dci-openshift-agent
+cd ~/samples/sno_on_libvirt/
+ansible-playbook deploy-sno-standalone.yml -t dci_setup
+```
