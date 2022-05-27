@@ -1,0 +1,19 @@
+all:
+  vars:
+    cluster: dcisno
+    domain: example.com
+    extcidrnet: 192.168.126.0/24
+    sno_extnet_ip: ""
+    vm_pool_name: default
+    networks:
+      - name: "sno-{{ cluster }}"
+        forward_mode: nat
+    hosts:
+      - name: "sno-{{ cluster }}"
+        type: master
+        memory: 16384
+        vcpus: 8
+        disk_gb: 30
+        networks:
+          - name: sno-network
+            mac: 52:54:00:ee:42:e1
