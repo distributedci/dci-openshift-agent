@@ -1,0 +1,73 @@
+all:
+  vars:
+    prov_nic: eth0
+    pub_nic: eth1
+    provisionhost_user: dci
+    cluster: dcisno
+    domain: metalkube.org
+    masters_prov_nic: ens3
+    cluster_domain: "{{ cluster }}.{{ domain }}"
+    baremetal_net_ipv6: false
+    redfish_inspection: false
+    image_url: https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-GenericCloud-8-20220125.1.x86_64.qcow2
+    enable_conserver: true
+    networks:
+      - name: baremetal-sno
+        ip: 192.168.123.1
+        dhcp_start: 192.168.123.100
+        dhcp_end: 192.168.123.150
+        domain: "{{ cluster_domain }}"
+        bridge: baremetal-sno
+        forward_mode: nat
+        dns:
+          forwarders:
+            - domain: "apps.{{ cluster_domain }}"
+              addr: 127.0.0.1
+          hosts:
+            - ip: 192.168.123.5
+              hostnames:
+                - api
+      - name: provisioning-sno
+        bridge: provisioning-sno
+    hosts:
+      - name: dcisno-provisionhost
+        domain: "{{ cluster_domain }}"
+        users:
+          - name: "{{ provisionhost_user }}"
+            gecos: Admin User
+            groups: wheel
+            sudo: ALL=(ALL) NOPASSWD:ALL
+            lock_passwd: false
+        run_commands:
+          - "sudo -u {{ provisionhost_user }} ssh-keygen -t rsa -b 4096 -f ~{{ provisionhost_user }}/.ssh/id_rsa -N ''"
+          - dnf install epel-release -y
+        driver: kvm
+        memory: 16384
+        vcpus: 8
+        arch: x86_64
+        boot_dev: hd
+        cpu_mode: host-passthrough
+        image_src: "{{ image_url }}"
+        disk_size: 42G
+        disk_cache: unsafe
+        disk_bus: virtio_scsi
+        networks:
+          - name: provisioning-sno
+          - name: baremetal-sno
+      - name: dcisno-master-0
+        domain: "{{ cluster_domain }}"
+        users: []
+        run_commands: []
+        driver: kvm
+        memory: 16384
+        vcpus: 8
+        arch: x86_64
+        boot_dev: hd
+        cpu_mode: host-passthrough
+        image_src: "{{ image_url }}"
+        disk_size: 42G
+        disk_cache: unsafe
+        disk_bus: virtio_scsi
+        networks:
+          - name: provisioning-sno
+          - name: baremetal-sno
