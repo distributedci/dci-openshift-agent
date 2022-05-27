@@ -1,0 +1,17 @@
+[all:vars]
+{% raw %}dir="{{ ansible_user_dir }}/clusterconfigs"
+{% endraw %}
+domain="{{ domain }}"
+cluster="{{ cluster }}"
+extcidrnet="{{ extcidrnet }}"
+install_type=sno
+
+ansible_ssh_extra_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+
+[provisioner]
+{{ provisioner_hostname }} {% if provisioner_hostname == 'localhost' %}ansible_connection=local{% endif %} ansible_user={{ provisioner_username }}
+
+[masters]
+{{ hosts[0]["host_name"] }}.{{ cluster }}.{{ domain }} name={{ hosts[0]["host_name"] }} role=master ansible_user=core
+
+[workers]
