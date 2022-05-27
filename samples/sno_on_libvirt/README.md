@@ -27,7 +27,7 @@ Choose one deployment method:
 
 ## A) Deploy with DCI from the SNO provisioner node
 
-Note: You can run steps 1, 2, and 3 manually if you prefer to do so. The steps are just to help you configure the provisioner host quickly. See the [hosts](https://github.com/redhat-cip/dci-openshift-agent/blob/master/samples/sno_on_libvirt/hosts) file as a example of the variables you need.
+Note: You can run steps 1, 2, and 3 manually if you prefer to do so. The steps are just to help you configure the provisioner host quickly. See the [hosts](https://github.com/redhat-cip/dci-openshift-agent/blob/master/samples/sno_on_libvirt/inventory/hosts) file as a example of the variables you need.
 
 ### 1. Configuration
 
@@ -65,7 +65,7 @@ your-user@your-workstation ~$ cd samples/sno_on_libvirt/
 your-user@your-workstation ~$ ansible-playbook sno-on-libvirt.yml -e "@~/sno-node-settings.yml" -i /etc/ansible/hosts --vault-password-file ~/.vault_secret
 ```
 
-NOTE: The playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/hosts` to `/etc/dci-openshift-agent/hosts` which contains required variables, including a very important one: `install_type=sno` this will allow DCI agent to define which install to perform.
+NOTE: The playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/inventory/hosts` to `/etc/dci-openshift-agent/hosts` which contains required variables, including a very important one: `install_type=sno` this will allow DCI agent to define which install to perform.
 
 ### 4. Source the credentials and run the main d-o-a playbook.
 
@@ -90,7 +90,7 @@ dci-openshift-agent-ctl -s -- -v
 
 ### 1. Inventory Notes
 
-If you run the playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/hosts` to `/etc/dci-openshift-agent/hosts`.
+If you run the playbook sno-on-libvirt.yml, it copies the default inventory `samples/sno_on_libvirt/inventory/hosts` to `/etc/dci-openshift-agent/hosts`.
 This inventory contains defaults values for the SNO/OCP cluster setup, and SNO plays will validate if they are provided:
 
 - pull secret
@@ -108,7 +108,7 @@ Additionally the following groups are defined:
 If you did not run sno-on-libvirt.yml playbook, you can copy the default inventory and adapt it to your setup, make sure you include the variables above.
 
 ```bash
-cp samples/sno_on_libvirt/hosts /etc/dci-openshift-agent/hosts
+cp samples/sno_on_libvirt/inventory/hosts /etc/dci-openshift-agent/hosts
 ```
 
 If you use the default inventory, then you only need to provide the pullsecret variable. A pull secret can be obtained from the [Red Hat Console](https://console.redhat.com/openshift/downloads) under Token > pullsecret section.
