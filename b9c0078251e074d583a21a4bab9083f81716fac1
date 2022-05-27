@@ -33,6 +33,24 @@
       "message": "I think you just need to update the description of the \"install_approval\" variable: \u0027Operator install plan approval mode, either Automatic or Manual (default)\u0027, the rest looks good!",
       "revId": "b9c0078251e074d583a21a4bab9083f81716fac1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17084e78_66eeba8e",
+        "filename": "roles/olm-operator/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-27T18:11:55Z",
+      "side": 1,
+      "message": "😞 sorry about that, it is done.",
+      "parentUuid": "3c60d4e6_ad758dfb",
+      "revId": "b9c0078251e074d583a21a4bab9083f81716fac1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
