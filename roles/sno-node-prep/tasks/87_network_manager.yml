@@ -4,7 +4,7 @@
     content: |
       address=/api.{{ cluster }}.{{ domain }}/{{ sno_extnet_ip }}
       address=/.apps.{{ cluster }}.{{ domain }}/{{ sno_extnet_ip }}
-      address=/{{ hostvars[groups['masters'][0]]['name'] }}.{{ cluster }}.{{ domain }}/{{ sno_extnet_ip }}
+      address=/{{ hosts[0]['host_name'] }}.{{ cluster }}.{{ domain }}/{{ sno_extnet_ip }}
     dest: /etc/NetworkManager/dnsmasq.d/{{ vm_net_name }}.conf
     owner: root
     group: root
