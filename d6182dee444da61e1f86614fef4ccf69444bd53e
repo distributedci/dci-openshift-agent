@@ -37,6 +37,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "31069148_df3d678c",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-27T18:08:54Z",
+      "side": 1,
+      "message": "Instead of relying on the ICSP to know if the image may be available in the local registry, what about using the variables used during the mirroring to know that images were actually mirrored?\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/46284dcf30d777d4946ba0fa66a2b2a993b4d97d/plays/pre-run.yml#L174",
+      "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2f2a82ca_0d744ec2",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 1
