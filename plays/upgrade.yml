@@ -282,6 +282,12 @@
     mcp_wait_delay: 10
     mcp_reason: "Upgrade - after having operators running"
 
+- name: "upgrader : remove ovs-migration service and setup br-ex1 with new method"
+  include_tasks: upgrade-ovs-migration.yml
+  when:
+    - major is version("4.9", "==")
+    - hostvars.localhost.job_info.job.name == 'openshift-vcp' or hostvars.localhost.job_info.job.name == 'openshift-f5-spk'
+
 - block:
   - name: Set release_url
     set_fact:

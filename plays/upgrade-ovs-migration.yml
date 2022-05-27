@@ -1,0 +1,54 @@
+---
+- name: "Make sure machine config pools are paused"
+  community.kubernetes.k8s:
+    definition:
+      kind: MachineConfigPool
+      metadata:
+        name: "{{ item }}"
+      spec:
+        pause: true
+  loop:
+    - worker
+    - master
+
+# Bonding manifests were injected as MC during initial deployment
+- name: "Remove MC with VCP bonding and old OVS migration service"
+  community.kubernetes.k8s:
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+    name: "11-{{ item }}-bonding"
+    state: absent
+  loop:
+    - worker
+    - master
+
+# Bonding manifests were built during the job pre-run and are ready to be applied
+- name: "Add MC with VCP bonding and new method to use a secondary bridge for OVS"
+  community.kubernetes.k8s:
+    validate_certs: no
+    definition: "{{ lookup('file', customize_extramanifests_path + '/11_' + {{ item }} + '-bonding.yaml') }}"
+  loop:
+    - worker
+    - master
+
+# When we will do this in EUS 4.8 -> 4.10 upgrade, the workers will get upgraded to 4.9 - and we want that 
+- name: "Unpause machine config pools to apply all pending MCs"
+  community.kubernetes.k8s:
+    definition:
+      kind: MachineConfigPool
+      metadata:
+        name: "{{ item }}"
+      spec:
+        pause: false
+  vars:
+    - worker
+    - master
+
+- name: "Validate that nodes are Ready and MCPs are up to date"
+  include_role:
+    name: wait-mcp
+  vars:
+    mcp_wait_retries: 100
+    mcp_wait_delay: 30
+    mcp_reason: "Upgrade - after ovs-migration service"
+...
