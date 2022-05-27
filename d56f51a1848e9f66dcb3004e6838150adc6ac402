@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a63ec25b_1b8a3fca",
+        "filename": "roles/sno-installer/tasks/90_dci_setup.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T15:13:21Z",
+      "side": 1,
+      "message": "I think I understand how you are doing it after the presentation today. closing this.",
+      "parentUuid": "cdc17d1b_edce527d",
+      "revId": "d56f51a1848e9f66dcb3004e6838150adc6ac402",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "41717774_325c83fa",
