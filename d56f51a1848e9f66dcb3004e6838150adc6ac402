@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8834978a_3ba08d4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:30:31Z",
+      "side": 1,
+      "message": "Good work here, my main question is: if now there is a provisioning SNO-node VM, I think we need to update the inventory so it only uses it to run some installation commands and deploy the SNO-VM in the KVM host, we are not planning to run the SNO-VM inside the SNO-provisioning-VM right? ",
+      "revId": "d56f51a1848e9f66dcb3004e6838150adc6ac402",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdc17d1b_edce527d",
+        "filename": "roles/sno-installer/tasks/90_dci_setup.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:30:31Z",
+      "side": 1,
+      "message": "I think \u0027inventory_prefix\u0027 returns a / at the end that\u0027s why you didn\u0027t include it here, but can we include it, even if it shows twice? just to make it look more standard, something like this:  dest: \"{{ inventory_prefix}}/hosts\"",
+      "revId": "d56f51a1848e9f66dcb3004e6838150adc6ac402",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41717774_325c83fa",
+        "filename": "samples/sno_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:30:31Z",
+      "side": 1,
+      "message": "I like that you create a provision SNO VM, but just fyi we do not need provisioning  network here, you can leave if is simpler with the rest of the automation, but if is not much work and you do not use it for something else, let\u0027s remove the provisioning network from this VM",
+      "revId": "d56f51a1848e9f66dcb3004e6838150adc6ac402",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f438c3c4_095127c1",
+        "filename": "samples/sno_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:30:31Z",
+      "side": 1,
+      "message": "4 ~ 8GB should be fine for this VM, it does not run anything that consumes resources, just a dnsmasq service and openshift-installers.",
+      "revId": "d56f51a1848e9f66dcb3004e6838150adc6ac402",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "598c7575_b089ad0a",
+        "filename": "samples/sno_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:30:31Z",
+      "side": 1,
+      "message": "Same here about the provisioning network, unless you need it for something else let\u0027s leave it, otherwise we can remove.",
+      "revId": "d56f51a1848e9f66dcb3004e6838150adc6ac402",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
