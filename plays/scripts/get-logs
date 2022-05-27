@@ -122,10 +122,14 @@ else
         $rem oc get pods --all-namespaces -o wide > $dir/pods.txt
 
         # must-gather
-        # When a policy is defined, use the same mirror (local registry)
-        registry=$($rem oc get imageContentSourcePolicy image-policy-0 -o json 2>/dev/null |
+	if [ ! -n "${registry}" ]
+	then
+            # When a policy is defined, use the same mirror (local registry)
+            registry=$($rem oc get imageContentSourcePolicy image-policy-0 -o json 2>/dev/null |
                             jq -r '.spec.repositoryDigestMirrors[].mirrors[]' |
                             grep -Pom1 '(\w+[.:])+\d+')
+	fi
+
         for image in ${DCI_MUST_GATHER_IMAGES:-"registry.redhat.io/openshift4/ose-must-gather"}
         do
             if [[ -n "${registry}" ]]
