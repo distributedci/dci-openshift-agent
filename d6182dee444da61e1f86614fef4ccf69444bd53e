@@ -3,6 +3,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "e9f91cb7_27d59a97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:11:15Z",
+      "side": 1,
+      "message": "Nacho, interesting findings, please see minor comment below",
+      "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "5c1e1ed9_9c9f2f61",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 1
@@ -14,6 +31,23 @@
       "writtenOn": "2022-05-27T13:49:38Z",
       "side": 1,
       "message": "As we observe in the daily jobs, versions prior to 4.9 give default names to new ImageContentSourcePolicy objects using the format:\n\nimage-policy-%02d\n\nSo the first object would be named image-policy-00 and the looked for object image-policy-0 would not exist.\n\nBy removing the object name from oc-get we list all the objects but grep would take the first element of the list all the same.\n\nThe only scenario that worries me is if we had several alternate registries defined, but this does not seem to have been considered for the original solution either.",
+      "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f2a82ca_0d744ec2",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-05-27T14:11:15Z",
+      "side": 1,
+      "message": "Because now we are listing all ICSPs, I think we need to consider the updating this line to something like:\njq -r \u0027.items[].spec.repositoryDigestMirrors[].mirrors[]\u0027",
       "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
