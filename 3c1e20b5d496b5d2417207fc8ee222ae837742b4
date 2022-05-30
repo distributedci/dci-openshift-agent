@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9d5defe_d949e907",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-30T10:46:26Z",
+      "side": 1,
+      "message": "Nacho, try to add Tatiana\u0027s change ad depends-on: https://softwarefactory-project.io/r/c/dci-jobs/+/25167, in the same way that it is done in my change: https://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/25115, because we are experiencing the same issue in zuul",
+      "revId": "3c1e20b5d496b5d2417207fc8ee222ae837742b4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
