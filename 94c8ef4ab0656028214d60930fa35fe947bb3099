@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "be50c4c8_1847aa6e",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-31T17:30:54Z",
+      "side": 1,
+      "message": "No needed, that was part of the original file. Removed the no_log.",
+      "parentUuid": "c6732477_0b0b3c2c",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df5bd1a8_e1c73727",
@@ -65,6 +83,24 @@
       "writtenOn": "2022-05-31T13:57:41Z",
       "side": 1,
       "message": "You loop over ips and use the wrapper condition based on the loop variable, I\u0027m not sure that it would work fine for a list with more than one variable. Unfortunately, in the job this part was never triggered: https://www.distributed-ci.io/jobs/508700c9-5a0f-41b6-823c-510f095536a7/jobStates#027606cf-e7c7-489c-87b5-1de8a6fbc655:file61 \n\nI would suggest rewriting like this, just to be safe: https://ericsysmin.com/2019/06/20/how-to-loop-blocks-of-code-in-ansible/ \nBut I let you decide, maybe in the follow-up CR or later on.",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c97f1dcf_926054fa",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-31T17:30:54Z",
+      "side": 1,
+      "message": "I think that https://www.distributed-ci.io/jobs/508700c9-5a0f-41b6-823c-510f095536a7/jobStates#027606cf-e7c7-489c-87b5-1de8a6fbc655:file61 was actually run. there were 2 install plans on the list, one of them was approved. The unapproved one was deleted but the task is displayed by the UI as skipped when that was the case only for the second item. \n\n(item\u003dinstall-fg8jq) \u003d\u003e {\"ansible_loop_var\": \"ip\", \"changed\": true, \"ip\": {\"approved\": false, \"ipName\": \"install-fg8jq\"}, \"method\": \"delete\", \"result\": {\"apiVersion\": \"v1\", \"details\": {\"group\": \"operators.coreos.com\", \"kind\": \"installplans\", \"name\": \"install-fg8jq\", \"uid\": \"96e0ac37-b416-4656-8f25-166be23e94b9\"}\n\nWould like to keep it this way and see how it behaves. I am always expecting having 2 install plans, one for the original installation and a second one created when we change the catalogsource.",
+      "parentUuid": "df5bd1a8_e1c73727",
       "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cd3ceee_baf4eb26",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-31T17:30:54Z",
+      "side": 1,
+      "message": "Nice, thanks!",
+      "parentUuid": "21716232_36fa68fd",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1bc38bec_be7df2cb",
@@ -99,6 +153,24 @@
       "writtenOn": "2022-05-31T13:57:41Z",
       "side": 1,
       "message": "Since for the moment everything works only in disconnected environments, should we add this condition right here?",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07609174_0f14c17d",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-31T17:30:54Z",
+      "side": 1,
+      "message": "The plan is also to cover connected environments. This flag is more to have control in case during a deployment we do not want to wait for 1 hour to have the operators upgraded if is not really needed for our testing.",
+      "parentUuid": "1bc38bec_be7df2cb",
       "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
