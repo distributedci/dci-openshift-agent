@@ -16,6 +16,91 @@
       "message": "the tasks related to upgrade are working, just setting +1 in case somebody more wants to review",
       "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d2d9a34_e5f05ebe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-31T13:57:41Z",
+      "side": 1,
+      "message": "Hi Beto, I checked the job logs (https://www.distributed-ci.io/jobs/508700c9-5a0f-41b6-823c-510f095536a7/jobStates) and it seems like everything is fine. I only have some minor suggestions.",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6732477_0b0b3c2c",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-31T13:57:41Z",
+      "side": 1,
+      "message": "Hi Beto, just to understand - why do we need no_log option here?",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df5bd1a8_e1c73727",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-31T13:57:41Z",
+      "side": 1,
+      "message": "You loop over ips and use the wrapper condition based on the loop variable, I\u0027m not sure that it would work fine for a list with more than one variable. Unfortunately, in the job this part was never triggered: https://www.distributed-ci.io/jobs/508700c9-5a0f-41b6-823c-510f095536a7/jobStates#027606cf-e7c7-489c-87b5-1de8a6fbc655:file61 \n\nI would suggest rewriting like this, just to be safe: https://ericsysmin.com/2019/06/20/how-to-loop-blocks-of-code-in-ansible/ \nBut I let you decide, maybe in the follow-up CR or later on.",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21716232_36fa68fd",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-31T13:57:41Z",
+      "side": 1,
+      "message": "I think that could be replaced by `csv.resources[0].status.phase in [\u0027Succeeded\u0027, \u0027Present\u0027]`",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bc38bec_be7df2cb",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-05-31T13:57:41Z",
+      "side": 1,
+      "message": "Since for the moment everything works only in disconnected environments, should we add this condition right here?",
+      "revId": "94c8ef4ab0656028214d60930fa35fe947bb3099",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
