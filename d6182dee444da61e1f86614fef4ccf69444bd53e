@@ -107,6 +107,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c98f9c8c_b5db20b0",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-31T19:36:11Z",
+      "side": 1,
+      "message": "Hello Nacho , thank for this.\n\nI think that having ICSP do not guarantee that we mirrored the image, we may have changes there that we will need to change the parsing method later again. Should be ok to get rid of it.\n\nI see that the tests are failing. What about defining a new fact/var with the evaluation of images_mirrored \u003d  (dci_disconnected or dci_local_mirror) if true, then use the local_registry port/host in the script.",
+      "parentUuid": "a14665c1_67c2952a",
+      "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2f2a82ca_0d744ec2",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 1
