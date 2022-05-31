@@ -89,6 +89,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a14665c1_67c2952a",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-05-31T10:18:08Z",
+      "side": 1,
+      "message": "Beto, please check the current version. I\u0027m using the disconnected variables to infer the local registry URL.\n\nJust in my current version, I still rely on the ICSP in case we can\u0027t resolve the URL through the disconnected mode variables.\n\nDo you think this makes sense, or can we just remove the use of ICSP?",
+      "parentUuid": "ef669bdf_c7634532",
+      "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2f2a82ca_0d744ec2",
         "filename": "plays/scripts/get-logs",
         "patchSetId": 1
@@ -100,6 +118,24 @@
       "writtenOn": "2022-05-27T14:11:15Z",
       "side": 1,
       "message": "Because now we are listing all ICSPs, I think we need to consider the updating this line to something like:\njq -r \u0027.items[].spec.repositoryDigestMirrors[].mirrors[]\u0027",
+      "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0e23bbe_20d1ddb0",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-05-31T10:18:08Z",
+      "side": 1,
+      "message": "I believe you\u0027re right, Manny. Thanks.",
+      "parentUuid": "2f2a82ca_0d744ec2",
       "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
