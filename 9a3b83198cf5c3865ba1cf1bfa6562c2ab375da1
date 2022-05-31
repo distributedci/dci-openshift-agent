@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd62750c_be85bcaf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 46
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-31T13:34:54Z",
+      "side": 1,
+      "message": "Thank Ramon for your review, it is really appreciated.",
+      "revId": "9a3b83198cf5c3865ba1cf1bfa6562c2ab375da1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

@@ -58,6 +58,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6f279fb_a7b640ee",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-31T13:34:54Z",
+      "side": 1,
+      "message": "The EUS upgrade if like two successive upgrades but some tasks before and after are not needed. \nThe intermediate upgrade is call \"upgrader : Execute the intermediate upgrade\"\n\nAnyway, the upgrade process become more and more complex, and should be rewrite in a role.\n\nThis patch adds the first version of the EUS feature 😊\nMore patches will come after to improve it.",
+      "parentUuid": "aeaa25d0_0df32aa3",
+      "range": {
+        "startLine": 290,
+        "startChar": 0,
+        "endLine": 302,
+        "endChar": 38
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1e1d1114_1a538d29",
@@ -71,6 +95,30 @@
       "writtenOn": "2022-05-31T09:23:25Z",
       "side": 1,
       "message": "\"major\"",
+      "range": {
+        "startLine": 130,
+        "startChar": 14,
+        "endLine": 130,
+        "endChar": 18
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87079ff6_e652dfbc",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-31T13:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e1d1114_1a538d29",
       "range": {
         "startLine": 130,
         "startChar": 14,
@@ -104,6 +152,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "260e3c56_dc3699db",
+        "filename": "plays/upgrade-eus.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-31T13:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9761435_5800cf8e",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 42
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a3d1a96_8f2e1d21",
@@ -127,6 +199,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6c7363a_f140657e",
+        "filename": "plays/upgrade-eus.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-31T13:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a3d1a96_8f2e1d21",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 38
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0f2848f6_4ea328de",
@@ -140,6 +236,30 @@
       "writtenOn": "2022-05-31T09:23:25Z",
       "side": 1,
       "message": "in this case and possibly in other too, can we use k8s_info module instead?",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 33
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a064d2fe_a74838da",
+        "filename": "plays/upgrade-eus.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-31T13:34:54Z",
+      "side": 1,
+      "message": "Yes, in another patch 😊",
+      "parentUuid": "0f2848f6_4ea328de",
       "range": {
         "startLine": 94,
         "startChar": 0,
