@@ -50,6 +50,24 @@
       "message": "Hello Pierre, \n\nI think these tasks should be moved to the https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24837/46/plays/upgrade-eus.yml to have all related to this encapsulated.",
       "revId": "9a3b83198cf5c3865ba1cf1bfa6562c2ab375da1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09df6a8d_26126ef9",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-05-31T20:53:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a7f7b8b_f9be8a19",
+      "revId": "9a3b83198cf5c3865ba1cf1bfa6562c2ab375da1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
