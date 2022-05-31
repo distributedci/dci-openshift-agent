@@ -16,6 +16,138 @@
       "message": "check dallas ocp-4.8-vanilla ocp-4.10-upgrade openshift-vanilla:components\u003docp\u003d4.8.37 openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.10:components\u003docp\u003d4.10.10 openshift-vanilla-upgrade-4.10:ansible_extravars\u003dupgrade_eus:true",
       "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11f2bd1e_fb35d87a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 45
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-31T09:23:25Z",
+      "side": 1,
+      "message": "Some questions and comments from my side",
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aeaa25d0_0df32aa3",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-31T09:23:25Z",
+      "side": 1,
+      "message": "Just for curiosity, can we simplify this to only use one \"launch upgrade\" task? Maybe by using ternary operator in include_tasks, so that, if upgrade_eus is undefined, include_tasks will use plays/upgrade.yml, else plays/upgrade-eus.yml.\n\nAnother alternative could be to rename the title to say here we\u0027ll do the EUS upgrade, to have the reference on the job.",
+      "range": {
+        "startLine": 290,
+        "startChar": 0,
+        "endLine": 302,
+        "endChar": 38
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e1d1114_1a538d29",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-31T09:23:25Z",
+      "side": 1,
+      "message": "\"major\"",
+      "range": {
+        "startLine": 130,
+        "startChar": 14,
+        "endLine": 130,
+        "endChar": 18
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9761435_5800cf8e",
+        "filename": "plays/upgrade-eus.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-31T09:23:25Z",
+      "side": 1,
+      "message": "If they are defined in pre-run.yml, do we need to define them again here?",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 42
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a3d1a96_8f2e1d21",
+        "filename": "plays/upgrade-eus.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-31T09:23:25Z",
+      "side": 1,
+      "message": "If they are defined in the pre-run, do we need to define them again here?",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 38
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f2848f6_4ea328de",
+        "filename": "plays/upgrade-eus.yml",
+        "patchSetId": 45
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-05-31T09:23:25Z",
+      "side": 1,
+      "message": "in this case and possibly in other too, can we use k8s_info module instead?",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 33
+      },
+      "revId": "0630349b5c6b1f21ac0995689c1f98391e143359",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
