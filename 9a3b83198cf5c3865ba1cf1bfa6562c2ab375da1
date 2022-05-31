@@ -16,6 +16,40 @@
       "message": "Thank Ramon for your review, it is really appreciated.",
       "revId": "9a3b83198cf5c3865ba1cf1bfa6562c2ab375da1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a266261_c6e953ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 46
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-31T20:01:46Z",
+      "side": 1,
+      "message": "LGTM as a first approach to get EUS to EUS. Thanks for all the work",
+      "revId": "9a3b83198cf5c3865ba1cf1bfa6562c2ab375da1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a7f7b8b_f9be8a19",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-05-31T20:01:46Z",
+      "side": 1,
+      "message": "Hello Pierre, \n\nI think these tasks should be moved to the https://softwarefactory-project.io/r/c/dci-openshift-agent/+/24837/46/plays/upgrade-eus.yml to have all related to this encapsulated.",
+      "revId": "9a3b83198cf5c3865ba1cf1bfa6562c2ab375da1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
