@@ -16,6 +16,23 @@
       "message": "arg! buid-depends on dci-jobs project is not affecting the current CR 😭(",
       "revId": "f014667ee23feb94770c5d5876f877ea732fb723",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a98800d_bab7ec3b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-01T19:31:36Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "f014667ee23feb94770c5d5876f877ea732fb723",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
