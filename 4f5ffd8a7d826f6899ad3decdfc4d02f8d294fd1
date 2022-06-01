@@ -16,6 +16,23 @@
       "message": "I did a rollback to the patchset 46 with the mirroring in the pre-hook.\nUsing the mirror-ocp-release role from the provisionner causes issue due to some missing facts  (tested with delegate_to and delegate_facts).\n\nIt is ok to keep this part in the pre-run now, and it can be move during the rewrite of upgrade play.",
       "revId": "4f5ffd8a7d826f6899ad3decdfc4d02f8d294fd1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e844b7e_e9134fad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 49
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-01T11:58:09Z",
+      "side": 1,
+      "message": "check dallas ocp-4.8-vanilla ocp-4.10-upgrade openshift-vanilla:components\u003docp\u003d4.8.37 openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.10:components\u003docp\u003d4.10.10 openshift-vanilla-upgrade-4.10:ansible_extravars\u003dupgrade_eus:true",
+      "revId": "4f5ffd8a7d826f6899ad3decdfc4d02f8d294fd1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
