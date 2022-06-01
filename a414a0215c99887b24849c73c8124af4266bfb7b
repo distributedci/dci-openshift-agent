@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "969881d1_077e9ea3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-01T10:48:50Z",
+      "side": 1,
+      "message": "How we determine that the monitor upgrade has passed in this case? I don\u0027t see a specific procedure to fail if any condition is not met, for example.",
+      "revId": "a414a0215c99887b24849c73c8124af4266bfb7b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
