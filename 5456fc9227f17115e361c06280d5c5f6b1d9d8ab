@@ -16,6 +16,23 @@
       "message": "Let\u0027s have it tested to confirm it\u0027s working",
       "revId": "5456fc9227f17115e361c06280d5c5f6b1d9d8ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8b61bd7_89648689",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-01T12:14:52Z",
+      "side": 1,
+      "message": "check dallas ocp-4.8-vanilla",
+      "revId": "5456fc9227f17115e361c06280d5c5f6b1d9d8ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
