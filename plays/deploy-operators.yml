@@ -217,18 +217,64 @@
 ### End Storage Operators deployment
 
 ### Begin ACM Operator deployment
-- name: "deploy-operators : Install the ACM operator"
-  include_role:
-    name: olm-operator
+- name: "Deploy and configure the Advanced Cluster Manager"
   vars:
-    operator: advanced-cluster-management
-    source: "{{ opm_catalog_source_name }}"
-    namespace: advanced-cluster-management
-    operator_group_spec:
-      targetNamespaces:
-        - advanced-cluster-management
+    acm_namespace: open-cluster-management
+    acm_instance: multiclusterhub
+  block:
+
+    - name: "deploy-operators : Install the ACM operator"
+      include_role:
+        name: olm-operator
+      vars:
+        operator: advanced-cluster-management
+        source: "{{ opm_catalog_source_name }}"
+        namespace: "{{ acm_namespace }}"
+        operator_group_spec:
+          targetNamespaces:
+            - "{{ acm_namespace }}"
+
+    - name: "Deploy Multicluster Hub"
+      community.kubernetes.k8s:
+        definition:
+          apiVersion: operator.open-cluster-management.io/v1
+          kind: MultiClusterHub
+          metadata:
+            name: "{{ acm_instance }}"
+            namespace: "{{ acm_namespace }}"
+          spec:
+            availabilityConfig: "Basic"
+
+    - name: "Wait up to 15 mins for MCH to be ready"
+      community.kubernetes.k8s_info:
+        api: operator.open-cluster-management.io/v1
+        kind: MultiClusterHub
+        name: "{{ acm_instance }}"
+        namespace: "{{ acm_namespace }}"
+      register: mch
+      retries: 30
+      delay: 30
+      until:
+        - mch.resources | length == 1
+        - "'status' in mch.resources[0]"
+        - "'phase' in mch.resources[0].status"
+        - mch.resources[0].status.phase == 'Running'
+
+    - name: "Get the MCH route"
+      community.kubernetes.k8s_info:
+        api: route.openshift.io/v1
+        kind: Route
+        name: multicloud-console
+        namespace: "{{ acm_namespace }}"
+      register: mch_route
+
+    - name: "Advanced cluster Manager URL"
+      debug:
+        msg: "{{ mch_route.resources[0].status.ingress[0].host }}"
+
   when:
     - hostvars.localhost.enable_acm|default(true)|bool
+
 ### End ACM Operator deployment
 
 ### Custom operators deployments
