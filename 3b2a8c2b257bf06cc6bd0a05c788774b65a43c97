@@ -33,6 +33,23 @@
       "message": "OK now I am finally confident this won\u0027t break anything. Apparently I was rewriting a fact inside the role *not even via set_fact* but using register. Sometimes I don\u0027t like ansible that much.",
       "revId": "3b2a8c2b257bf06cc6bd0a05c788774b65a43c97",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc32bf27_502d92e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-06-02T16:19:02Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "3b2a8c2b257bf06cc6bd0a05c788774b65a43c97",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
