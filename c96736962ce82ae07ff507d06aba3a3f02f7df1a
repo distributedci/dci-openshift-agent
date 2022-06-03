@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "c96736962ce82ae07ff507d06aba3a3f02f7df1a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b14c6be_5ce1ba94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-03T10:56:42Z",
+      "side": 1,
+      "message": "Thanks Nacho for the change. Some things I\u0027d like to comment/ask:\n\n-I guess this is a temp change. When moving to BOS2, this will be removed, won\u0027t it?\n-As this is a code that is publicly available, I think we should avoid including names such as BOS2 here, but again, as I think this is temp, I don\u0027t know if there\u0027s a better way or not. Maybe other people can give their opinion too\n-Where is WORKAROUND_CILAB522 defined? Is it in the d-o-a config file in BOS2? I think we should document this, at least in BOS2 repo.",
+      "revId": "c96736962ce82ae07ff507d06aba3a3f02f7df1a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
