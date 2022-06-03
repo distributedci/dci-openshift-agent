@@ -37,6 +37,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3d882e1d_081a8450",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-06-03T18:29:38Z",
+      "side": 1,
+      "message": "Hi Beto, thank you for the CR, looks really cool! I\u0027d propose two suggestions, more like nice-to-have:\n1/ Move lines 226-277 into a separate file because it\u0027s more ACM-specific and would allow to reduce the size of deploy-operators.yml \n2/ Add automated \"verify the ACM installation\" part [1]\n-- confirm that the MultiClusterHub events log reports no issues\n-- check the pods to ensure that they are all running successfully\n\n[1] https://developers.redhat.com/blog/2020/07/23/installing-red-hat-advanced-cluster-management-acm-for-kubernetes#step_6__verify_the_acm_installation \n",
+      "revId": "2be77856a908e58b3fd41f90a36f9890592fea7e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e85db227_3d9021af",
         "filename": "plays/deploy-operators.yml",
         "patchSetId": 1
