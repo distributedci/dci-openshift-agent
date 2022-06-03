@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2c725a6_9dbdf0b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-06-03T22:00:50Z",
+      "side": 1,
+      "message": "I have created a separate for for the config part and a task to wait for the pods as you requested 😄, I think that the pods and CR checks are enough for verification. Thanks for the feedback.",
+      "parentUuid": "3d882e1d_081a8450",
+      "revId": "2be77856a908e58b3fd41f90a36f9890592fea7e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e85db227_3d9021af",
@@ -65,6 +83,24 @@
       "writtenOn": "2022-06-03T14:22:05Z",
       "side": 1,
       "message": "Is 15min a time you have seen in your tests or is it large value just to be sure?",
+      "revId": "2be77856a908e58b3fd41f90a36f9890592fea7e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd9ca86f_bb61e9da",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-06-03T22:00:50Z",
+      "side": 1,
+      "message": "The documentation says it should be ready in 10 mins, that is what I took on my CRC instance. In Dallas is taking like 3 mins 😊. I will reduce it to 10 mins.\n\nThanks, Charles",
+      "parentUuid": "e85db227_3d9021af",
       "revId": "2be77856a908e58b3fd41f90a36f9890592fea7e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
