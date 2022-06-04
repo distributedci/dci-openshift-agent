@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "a9ee1804b47a62c8edadcd1904e12ed49d5ec526",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f3132ef_c693f43d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-06-04T00:08:52Z",
+      "side": 1,
+      "message": "The relevant part for this change has passed in https://www.distributed-ci.io/jobs/47dc95ea-b26a-4798-aab6-f987839d8a33/jobStates \n\n",
+      "revId": "a9ee1804b47a62c8edadcd1904e12ed49d5ec526",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
