@@ -237,12 +237,35 @@
     - name: "configure-operators : Configure ACM operator"
       include_tasks: configure-acm.yml
   when:
-    - hostvars.localhost.enable_acm|default(true)|bool
+    - hostvars.localhost.enable_acm|default(false)|bool
     - opm_mirror_list is defined
     - opm_mirror_list | length
     - "'advanced-cluster-management' in opm_mirror_list"
 
 ### End ACM Operator deployment
+
+### Begin MTC Operator deployment
+
+- name: "deploy-operators : Deploy and configure the Migration Tookit for Containers"
+  include_role:
+    name: olm-operator
+  vars:
+    operator: mtc-operator
+    source: "{{ opm_catalog_source_name }}"
+    namespace: "openshift-migration"
+    ns_labels:
+      openshift.io/cluster-monitoring: "true"
+    operator_group_spec:
+      targetNamespaces:
+        - "openshift-migration"
+  when:
+    - hostvars.localhost.enable_mtc|default(false)|bool
+    - opm_mirror_list is defined
+    - opm_mirror_list | length
+    - "'mtc-operator' in opm_mirror_list"
+
+### End MTC Operator deployment
+
 
 ### Custom operators deployments
 - name: "deploy-operators : Deploy other operators playbook"
