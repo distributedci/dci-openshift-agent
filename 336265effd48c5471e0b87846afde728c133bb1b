@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b52d9a_9ccbd84e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-06T22:27:29Z",
+      "side": 1,
+      "message": "Nacho, From last patch set tests I see the must-gather logs from the test in the DCI labs look good, the ones from the libvirt tests were not pulled. Please see a couple of comments below:",
+      "revId": "336265effd48c5471e0b87846afde728c133bb1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e57e5384_4b3cbce4",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-06T22:27:29Z",
+      "side": 1,
+      "message": "In connected environments it seems that this task is not executed when local_registry is undefined, I wonder if it would complain again if you set a - registry: \u0027{{ local_registry | default(\"\") }}\u0027 -\u003e  https://www.distributed-ci.io/jobs/fd829dae-2245-4dae-8b40-5c4b7b0e336b/jobStates#46ce6158-1d2a-4365-a6d3-e1682a97b9ed:file8",
+      "revId": "336265effd48c5471e0b87846afde728c133bb1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2448ee41_012d13d2",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-06T22:27:29Z",
+      "side": 1,
+      "message": "I see the task: [Get logs from OCP deployment] prints the whole output of the script, and the ansible.log size is 12.04 MB, it\u0027s not related to your change but now that you are fixing this, I think we can add a nolog: true",
+      "revId": "336265effd48c5471e0b87846afde728c133bb1b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
