@@ -1,0 +1,7 @@
+---
+- name: "Delete pull secret file"
+  file:
+    path: "{{ dir }}/pull-secret.json"
+    state: absent
+  become: true
+...

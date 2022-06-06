@@ -9,6 +9,9 @@
 #   * version: An OpenShift version number e.g. 4.5.21
 #   * cache_dir: Base directory that will hold the OCP version binaries and OS
 #     images
+#   * release_url: The base URL where the release artifacts are stored
+#   * pull_secrets: Dictionary variable holding authentication information for
+#     container registry e.g. quay.io
 #   * force (default False): If passed as true, the role will re-download all
 #     the OCP release resources
 #   * mirror_artifacts (default True): Download tarball artifacts from the OCP
@@ -39,6 +42,7 @@
       - cache_dir | string
       - version | string
       - release_url | string
+      - pull_secrets is defined
 
 - name: "Validate optional webserver_url variable"
   assert:
@@ -68,7 +72,6 @@
       - registry_url is defined
       - registry_url | string
       - (registry_url | urlsplit('scheme')) == 'docker'
-      - pull_secrets is defined
   when:
     - mirror_container_images | bool
 
@@ -76,8 +79,8 @@
   debug:
     var: version
 
-- name: "Create directory structure"
-  include_tasks: dirs.yml
+- name: "Run pre"
+  include_tasks: pre.yml
 
 - name: "Download release resources"
   include_tasks: download.yml
@@ -86,6 +89,11 @@
 
 - name: "Unpack release artifacts"
   include_tasks: unpack.yml
+  vars:
+    dir: "{{ cache_dir }}/{{ version }}"
+
+- name: "Extract installer"
+  include_tasks: installer.yml
   vars:
     dir: "{{ cache_dir }}/{{ version }}"
 
@@ -114,4 +122,9 @@
     dir: "{{ cache_dir }}/{{ version }}"
   when:
     - mirror_container_images | bool
+
+- name: "Run post"
+  include_tasks: post.yml
+  vars:
+    dir: "{{ cache_dir }}/{{ version }}"
 ...
