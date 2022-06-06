@@ -16,4 +16,13 @@
     mode: "0775"
     state: directory
   become: true
+
+- name: "Write pull secret file used for mirroring"
+  copy:
+    dest: "{{ cache_dir }}/{{ version }}/pull-secret.json"
+    content: "{{ pull_secrets | to_nice_json }}"
+    owner: "{{ owner }}"
+    group: "{{ group }}"
+    mode: "0644"
+  become: true
 ...
