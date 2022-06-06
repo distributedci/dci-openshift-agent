@@ -67,6 +67,40 @@
       "message": "👍",
       "revId": "62a07b8359145efc1b4937bf60c08cca5ea449f0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4afaf0c1_84973fdb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-06T14:17:11Z",
+      "side": 1,
+      "message": "Thx Ramon !",
+      "revId": "62a07b8359145efc1b4937bf60c08cca5ea449f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94c2ad39_e7e4bf1c",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-06T14:17:11Z",
+      "side": 1,
+      "message": "maybe we can check if dci_pullsecret_file exists 😊",
+      "revId": "62a07b8359145efc1b4937bf60c08cca5ea449f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
