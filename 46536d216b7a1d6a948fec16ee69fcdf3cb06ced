@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dafd13c3_43de3b42",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-06T20:02:51Z",
+      "side": 1,
+      "message": "I think the default should be false. I don\u0027t think this is needed by everybody, and is very specific to \"someone\" trying to do migration. 😄",
+      "revId": "46536d216b7a1d6a948fec16ee69fcdf3cb06ced",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
