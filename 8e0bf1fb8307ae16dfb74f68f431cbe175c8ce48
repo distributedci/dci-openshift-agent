@@ -16,6 +16,57 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e63367c8_9aaf8ecd",
+        "filename": "roles/mirror-ocp-release/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-06T22:50:47Z",
+      "side": 1,
+      "message": "I think we could retain the openshift-client-linux-{{ version}}.tar.gz, see my comment on the download",
+      "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f8a7fcb_b03055ae",
+        "filename": "roles/mirror-ocp-release/tasks/download.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-06T22:50:47Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand this change, the artifacts had the openshift-clients, since we can obtain the installer from the oc client, then you could simply delete the download installer task and the other pieces will be in place, don\u0027t they?",
+      "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24c4cb7a_d7b3c2fe",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-06T22:50:47Z",
+      "side": 1,
+      "message": "I like this, we reuse oc to extract from itself the installer. This reduces the download of the installer and we save bits go-green!",
+      "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
