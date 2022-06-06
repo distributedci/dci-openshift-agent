@@ -101,6 +101,24 @@
       "message": "maybe we can check if dci_pullsecret_file exists 😊",
       "revId": "62a07b8359145efc1b4937bf60c08cca5ea449f0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d54d8611_0811b103",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-06T15:03:48Z",
+      "side": 1,
+      "message": "Oh, I just merged this, sorry, but anyway, dci_pullsecret_file always exists, it is defined in the pre-run, and mirror-ocp-release is called just after creating dci_pullsecret_file, so it\u0027s not a problem not to check it.",
+      "parentUuid": "94c2ad39_e7e4bf1c",
+      "revId": "62a07b8359145efc1b4937bf60c08cca5ea449f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
