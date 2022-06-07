@@ -21,6 +21,7 @@
             KUBECONFIG: "{{ kubeconfig_path }}"
       when: resource_to_check == "SriovNetworkNodeState"
   delegate_to: localhost
+  ignore_errors: yes
 
 # If reached this point, the check passed, so reinitialize retry_count for future executions,
 # as this is a shared role
