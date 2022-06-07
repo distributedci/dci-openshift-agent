@@ -50,6 +50,23 @@
       "message": "All good now",
       "revId": "45403514488eb7c281a1c260d6a040ddbce8c2b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f56f5f2c_9fb80bda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-07T18:09:00Z",
+      "side": 1,
+      "message": "That failure happened after cluster was installed, the relevant tasks for this change succeeded",
+      "revId": "45403514488eb7c281a1c260d6a040ddbce8c2b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
