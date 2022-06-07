@@ -33,6 +33,23 @@
       "message": "Let\u0027s see how the tests go, my debug job failed because of a problem with a worker in cluster1, not related to the change",
       "revId": "45403514488eb7c281a1c260d6a040ddbce8c2b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46e25a2b_b261c6d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-07T16:03:08Z",
+      "side": 1,
+      "message": "All good now",
+      "revId": "45403514488eb7c281a1c260d6a040ddbce8c2b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
