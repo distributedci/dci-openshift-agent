@@ -16,6 +16,23 @@
       "message": "I\u0027ve included a patchset to fix the problem that was happening in connected environments (libvirt) with dci_pullsecret_file variable",
       "revId": "ba48ba9cb8d68d67bfe0923c6221464f73989136",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ca8a6a1_c5e17860",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-07T09:01:00Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla",
+      "revId": "ba48ba9cb8d68d67bfe0923c6221464f73989136",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
