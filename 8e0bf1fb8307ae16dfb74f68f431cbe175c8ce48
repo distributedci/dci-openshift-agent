@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a82e5b98_f07b0ce1",
+        "filename": "roles/mirror-ocp-release/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-07T14:03:13Z",
+      "side": 1,
+      "message": "The reason is that the oc client will now download *always*, whereas you can opt to skip the opm tarball download. If you look in download.yml you\u0027ll see that openshift-client-linux has no when clause now.",
+      "parentUuid": "e63367c8_9aaf8ecd",
+      "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f8a7fcb_b03055ae",
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f842b237_cf76e84f",
+        "filename": "roles/mirror-ocp-release/tasks/download.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-07T14:03:13Z",
+      "side": 1,
+      "message": "Same comment as above: openshift-client-linux now is downloaded every time, since we need it to download the installer and we need the installer to build the release data fact",
+      "parentUuid": "2f8a7fcb_b03055ae",
+      "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "24c4cb7a_d7b3c2fe",
@@ -65,6 +101,24 @@
       "writtenOn": "2022-06-06T22:50:47Z",
       "side": 1,
       "message": "I like this, we reuse oc to extract from itself the installer. This reduces the download of the installer and we save bits go-green!",
+      "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c85cb7f_d9dd5a3e",
+        "filename": "roles/mirror-ocp-release/tasks/installer.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-07T14:03:13Z",
+      "side": 1,
+      "message": "it\u0027s a tradeoff actually, we still download the installer just not the same installer: openshift-baremetal-install is *just* slightly different by a few bytes but still yields the same",
+      "parentUuid": "24c4cb7a_d7b3c2fe",
       "revId": "8e0bf1fb8307ae16dfb74f68f431cbe175c8ce48",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "ba48ba9cb8d68d67bfe0923c6221464f73989136",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf931bcb_3f02719e",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-07T14:03:13Z",
+      "side": 1,
+      "message": "you don\u0027t need to set_fact at all, \"cache_dir\" is a variable passed to the role, bubbling it up as a fact only pollutes the fact dict",
+      "revId": "ba48ba9cb8d68d67bfe0923c6221464f73989136",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
