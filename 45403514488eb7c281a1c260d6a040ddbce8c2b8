@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "45403514488eb7c281a1c260d6a040ddbce8c2b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c7bce5a_37fabba0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-07T14:29:01Z",
+      "side": 1,
+      "message": "Let\u0027s see how the tests go, my debug job failed because of a problem with a worker in cluster1, not related to the change",
+      "revId": "45403514488eb7c281a1c260d6a040ddbce8c2b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
