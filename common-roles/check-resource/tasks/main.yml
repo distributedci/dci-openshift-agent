@@ -3,6 +3,10 @@
 # Wrapping the checks in a block to be able to use "delegate_to: localhost" clause
 - name: Do the check
   block:
+    - name: Debug kubeconfig_path
+      debug:
+        msg: "{{ kubeconfig_path }}"
+
     # Check MCP application
     - name: Check MCP application
       include_tasks:
