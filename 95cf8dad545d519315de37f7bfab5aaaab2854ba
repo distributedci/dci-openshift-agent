@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b41d63da_232c4886",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-06-09T08:46:57Z",
+      "side": 1,
+      "message": "Wow, Ramon, you did a good deal of work here.\n\nJust some comments from my side:",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed7e5418_f5ccdad9",
+        "filename": "roles/sno-installer/templates/hosts.j2",
+        "patchSetId": 17
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-06-09T08:46:57Z",
+      "side": 1,
+      "message": "I\u0027d suggest to change the name for the node from master-0 to sno-0 or, as we have it defined in the DNS settings, sno-dcisno:\n\nhttps://github.com/dci-labs/bos2-ci-config/blob/ef20382da3f3175253bf72ae171a7415c9a30832/files/dnsmasq.d/server02.conf#L16",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53235bce_bbb1d320",
+        "filename": "roles/sno-node-prep/tests/inventory-libvirt",
+        "patchSetId": 17
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-06-09T08:46:57Z",
+      "side": 1,
+      "message": "Same comment here. We should align with the DNS name we have set in the bos2-ci-config repo.",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a3c1bc2_84d2e131",
+        "filename": "samples/sno_on_libvirt/sno-on-libvirt.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-06-09T08:46:57Z",
+      "side": 1,
+      "message": "I take that at some point, we\u0027ll be setting the destination file with an optional prefix, won\u0027t we?",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
