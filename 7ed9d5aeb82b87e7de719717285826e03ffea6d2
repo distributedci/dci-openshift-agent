@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7398fa52_23748301",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-09T15:24:46Z",
+      "side": 1,
+      "message": "Thanks for your change.\nI did some tests with the actual version of your code, it not always works. I put a comment ;) ",
+      "revId": "7ed9d5aeb82b87e7de719717285826e03ffea6d2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "633ad343_366648e9",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-09T15:24:46Z",
+      "side": 1,
+      "message": "I suggest something simpler, like that: \n```\n...\n  delay: 5\n  until:\n    - index_sha.stdout | regex_search(\u0027^sha\u0027)\n...\n```",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 29
+      },
+      "revId": "7ed9d5aeb82b87e7de719717285826e03ffea6d2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
