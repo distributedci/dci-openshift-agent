@@ -12,6 +12,8 @@
   register: index_sha
   retries: 5
   delay: 5
+  failed_when:
+    - index_sha.stdout | search('^sha')
   until:
     - index_sha is not failed
 
