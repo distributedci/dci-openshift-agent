@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fe2984d_80717460",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-09T11:55:17Z",
+      "side": 1,
+      "message": "Thanks Nacho for your review, answering your questions below",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ed7e5418_f5ccdad9",
@@ -31,6 +48,24 @@
       "writtenOn": "2022-06-09T08:46:57Z",
       "side": 1,
       "message": "I\u0027d suggest to change the name for the node from master-0 to sno-0 or, as we have it defined in the DNS settings, sno-dcisno:\n\nhttps://github.com/dci-labs/bos2-ci-config/blob/ef20382da3f3175253bf72ae171a7415c9a30832/files/dnsmasq.d/server02.conf#L16",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3d2886e_1615f577",
+        "filename": "roles/sno-installer/templates/hosts.j2",
+        "patchSetId": 17
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-09T11:55:17Z",
+      "side": 1,
+      "message": "Yes, I have this in my pocket list, I have to harmonize this, I\u0027ll do it in my next change.",
+      "parentUuid": "ed7e5418_f5ccdad9",
       "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +87,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c15c6e77_8c04de7c",
+        "filename": "roles/sno-node-prep/tests/inventory-libvirt",
+        "patchSetId": 17
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-09T11:55:17Z",
+      "side": 1,
+      "message": "This is an example placed there to inform people how to build these files, this is not related to BOS2, so this one would not be changed.",
+      "parentUuid": "53235bce_bbb1d320",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9a3c1bc2_84d2e131",
@@ -65,6 +118,24 @@
       "writtenOn": "2022-06-09T08:46:57Z",
       "side": 1,
       "message": "I take that at some point, we\u0027ll be setting the destination file with an optional prefix, won\u0027t we?",
+      "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23dce1aa_bd5f2758",
+        "filename": "samples/sno_on_libvirt/sno-on-libvirt.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-09T11:55:17Z",
+      "side": 1,
+      "message": "This will not be used by BOS2, the playbook used by BOS2 will be deploy-sno-standalone.yml, so the prefix part does not affect here.",
+      "parentUuid": "9a3c1bc2_84d2e131",
       "revId": "95cf8dad545d519315de37f7bfab5aaaab2854ba",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
