@@ -68,7 +68,7 @@
         - worker_node_count|int <= 1
         - install_type is undefined or install_type != 'sno'
 
-    - name: "deploy-operators : Increase maxUnavailable count to n-1"
+    - name: "deploy-operators : Increase maxUnavailable count to n-2"
       vars:
         mcp_def: |
           apiVersion: machineconfiguration.openshift.io/v1
@@ -76,12 +76,12 @@
           metadata:
             name: worker
           spec:
-            maxUnavailable: {{ hostvars.localhost.groups['workers'] | length - 1 }}
+            maxUnavailable: {{ hostvars.localhost.groups['workers'] | length - 2 }}
       k8s:
         state: present
         definition: "{{ mcp_def }}"
       when:
-      - hostvars.localhost.groups['workers']|length > 1
+      - hostvars.localhost.groups['workers']|length > 2
 
     - name: "deploy-operators : Install Performace Addon Operator"
       include_role:
@@ -101,6 +101,7 @@
       include_tasks: apply-pao-profile.yml
       when:
         - performance_definition is defined
+        - performance_definition |  length
 
     - name: "deploy-operators : Install and configure SRIOV"
       block:
