@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8805d560_156ff0db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-10T13:23:44Z",
+      "side": 1,
+      "message": "test-runner is now working fine in hv2 and BOS2. In the case of hv2, the SNO VM already created is not being deleted, so the dci-check-change job there \"should\" pass.\n\nNow, the only thing we have to do is to fix BOS2 execution, because the SNO VM is not being deployed correctly: the very last step is failing and the OCP node is not detected by OCP.",
+      "revId": "8cdf2db45586413f617eb5e825ddd5f965c3b112",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
