@@ -101,6 +101,7 @@
       include_tasks: apply-pao-profile.yml
       when:
         - performance_definition is defined
+        - performance_definition |  length
 
     - name: "deploy-operators : Install and configure SRIOV"
       block:
