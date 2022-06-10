@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "f0e9cf9f02e64054ec0929fbb9cccc48b5e34c27",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b70b51f0_f77908c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-10T19:37:09Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla",
+      "revId": "f0e9cf9f02e64054ec0929fbb9cccc48b5e34c27",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
