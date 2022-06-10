@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8043010_ffe6df2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-10T16:12:29Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla openshift-vanilla:ansible_extravars\u003dperformance_definition:",
+      "revId": "a45bfe95df808f7c2f2c6a98202e3793005c08ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
