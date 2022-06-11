@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.10-vanilla openshift-vanilla:components\u003docp\u003d4.10.16",
       "revId": "5e244b5cf9d0ddabc7485aa16279cf7a80048017",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c146605_ed7f5a67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-11T22:10:56Z",
+      "side": 1,
+      "message": "Tested in Casa lab with three masters only, MC for workers is not validated because it has 0 nodes, instead the MC with masters is used.\nhttps://www.distributed-ci.io/jobs/6a994992-772d-43c7-ad84-97d15c79fdb7/jobStates#4329d949-30bb-4ae9-8c00-91b35d8689a9:file296",
+      "revId": "5e244b5cf9d0ddabc7485aa16279cf7a80048017",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
