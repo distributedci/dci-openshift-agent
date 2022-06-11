@@ -33,6 +33,23 @@
       "message": "recheck\ncheck dallas ocp-4.9-vanilla",
       "revId": "5e244b5cf9d0ddabc7485aa16279cf7a80048017",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fed7a377_a020862e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-11T17:18:47Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla openshift-vanilla:components\u003docp\u003d4.10.16",
+      "revId": "5e244b5cf9d0ddabc7485aa16279cf7a80048017",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
