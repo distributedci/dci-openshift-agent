@@ -50,6 +50,24 @@
       "message": "Is it to ensure that the PO is not empty? what happens if it is the case? it is just crashing?",
       "revId": "f0e9cf9f02e64054ec0929fbb9cccc48b5e34c27",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cfd02de6_2759cf61",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-13T16:11:14Z",
+      "side": 1,
+      "message": "The purpose is to easily disable the profile by setting an empty string.\n\nIf a wrong file or a bad formatted profile is sent then this change won\u0027t modify that behavior.",
+      "parentUuid": "416b7460_0306e5f6",
+      "revId": "f0e9cf9f02e64054ec0929fbb9cccc48b5e34c27",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
