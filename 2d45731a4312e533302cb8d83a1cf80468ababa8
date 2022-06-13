@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "301db121_1bbb634b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-13T10:22:35Z",
+      "side": 1,
+      "message": "As commented last week, change is working fine in hv2, but it is still not working on BOS2. That\u0027s the last step before completely moving to BOS2. I\u0027ll continue checking.",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
