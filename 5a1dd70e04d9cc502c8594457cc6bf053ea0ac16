@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54182b31_ae6e8dc0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-14T19:48:14Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "5a1dd70e04d9cc502c8594457cc6bf053ea0ac16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84a7b2c6_1b16a49e",
+        "filename": "plays/configure-acm.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-14T19:48:14Z",
+      "side": 1,
+      "message": "nit: Multicluster",
+      "revId": "5a1dd70e04d9cc502c8594457cc6bf053ea0ac16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbe4b1de_3d3511a8",
+        "filename": "plays/configure-acm.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-14T19:48:14Z",
+      "side": 1,
+      "message": "nit: CR",
+      "revId": "5a1dd70e04d9cc502c8594457cc6bf053ea0ac16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
