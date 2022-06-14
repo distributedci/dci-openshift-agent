@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "683bb50f4e84f75b0ee8d45f3a53f484ef9f113d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0289afaa_3111cc9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-14T21:10:48Z",
+      "side": 1,
+      "message": "The change LGTM, but have a question, why doing it in the post-run? why not right after install? Is more likely to not have this code executed if there\u0027s any issue after install, e.g. deploy-operators, tests, hooks.\n",
+      "revId": "683bb50f4e84f75b0ee8d45f3a53f484ef9f113d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
