@@ -16,6 +16,23 @@
       "message": "Nice !",
       "revId": "c1b92caa246692f45f385739062f9ed161fb3b03",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a40005c_43390e90",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-06-14T20:45:54Z",
+      "side": 1,
+      "message": "Thanks, will wait for a green job and give +2",
+      "revId": "c1b92caa246692f45f385739062f9ed161fb3b03",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
