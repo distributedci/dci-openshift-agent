@@ -53,6 +53,41 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "819f3e7f_444b6c8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-14T08:36:49Z",
+      "side": 1,
+      "message": "Thanks for your reviews, I\u0027ll address all of them in a new patchset.",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6c7429d_663d2e8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-14T08:36:49Z",
+      "side": 1,
+      "message": "I\u0027ve run it yesterday multiple times and the last CI job passed: [CI UNDER TEST] - dci-check-change https://www.distributed-ci.io/jobs/03d6f4e2-dee2-44ec-9223-6532c8060d88/jobStates https://www.distributed-ci.io/jobs/e43a42d4-2470-43f5-923e-400b41c2bd62/jobStates : SUCCESS tested on libvirt:sno\n\nLet\u0027s see with the latest update if this works fine (it should), then we can merge it.",
+      "parentUuid": "7f630559_5efab83e",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d37fae60_f7098b58",
@@ -70,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "021ad1e7_2f1e6813",
+        "filename": "roles/sno-installer/tests/inventory",
+        "patchSetId": 24
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-14T08:36:49Z",
+      "side": 1,
+      "message": "Done, thanks! I\u0027ve directly removed the tests folders on both roles to simplify.",
+      "parentUuid": "d37fae60_f7098b58",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7eb8a659_b794327c",
@@ -83,6 +136,24 @@
       "writtenOn": "2022-06-13T18:42:53Z",
       "side": 1,
       "message": "let\u0027s remove the extra space at the end of the line",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "463f6154_4b9bc1ee",
+        "filename": "samples/sno_on_libvirt/examples/hosts-baremetal",
+        "patchSetId": 24
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-14T08:36:49Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7eb8a659_b794327c",
       "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -124,6 +195,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "96819dc8_594ab932",
+        "filename": "samples/sno_on_libvirt/inventory/hosts",
+        "patchSetId": 24
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-14T08:36:49Z",
+      "side": 1,
+      "message": "As Nacho said, it is a replication of ocp_on_libvirt behavior, yes. This hosts file is used to run deploy-sno-standalone.yml. If you want a hosts file to run dci-openshift-agent afterwards, then you can generate it with generate-hosts-file.yml, and for this hosts file + libvirt_resources.yml file, the file generated is exactly the same than examples/hosts-libvirt.\nAnd yes, in case we want to execute sno_on_libvirt with a different inventory, then we can do it thanks to this new structure.",
+      "parentUuid": "a8de6a45_dde4df4f",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "fb016e1e_13a8f4d6",
         "filename": "samples/sno_on_libvirt/inventory/libvirt_resources.yml",
         "patchSetId": 24
@@ -141,6 +230,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "ad02fb17_828cda10",
+        "filename": "samples/sno_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-14T08:36:49Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "fb016e1e_13a8f4d6",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "f369a3ca_8c34aeb6",
         "filename": "samples/sno_on_libvirt/inventory/libvirt_resources.yml",
         "patchSetId": 24
@@ -152,6 +259,24 @@
       "writtenOn": "2022-06-13T18:42:53Z",
       "side": 1,
       "message": "just wondering if this array would allow to create multiple SNO nodes at the same time in the same run?",
+      "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95e66990_bc8bb493",
+        "filename": "samples/sno_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-14T08:36:49Z",
+      "side": 1,
+      "message": "Yep :) In that case, maybe we would need to do some more reviews, mainly regarding the usage of extcidrnet and sno_extnet_ip, but if needed, this can be done in a new change, yes.",
+      "parentUuid": "f369a3ca_8c34aeb6",
       "revId": "2d45731a4312e533302cb8d83a1cf80468ababa8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
