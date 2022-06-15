@@ -16,6 +16,24 @@
       "message": "I\u0027d suggest to use the `kernelVersion` in the name, instead of adding rcos_kernel, because that\u0027s already included in the canonical name, and we know this is a kernel version because of the type.",
       "revId": "93ecf7593a07a6ddbb56a55156e30a89296f9b2b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "834647e4_255d3e7d",
+        "filename": "plays/install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-15T18:34:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e3203fa0_2331a0f3",
+      "revId": "93ecf7593a07a6ddbb56a55156e30a89296f9b2b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
