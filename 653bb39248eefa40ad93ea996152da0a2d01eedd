@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "653bb39248eefa40ad93ea996152da0a2d01eedd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cac47144_a3dea6a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-15T08:32:47Z",
+      "side": 1,
+      "message": "Thanks Beto!",
+      "revId": "653bb39248eefa40ad93ea996152da0a2d01eedd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
