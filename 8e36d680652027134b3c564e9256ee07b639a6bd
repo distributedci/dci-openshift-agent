@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.8-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] ",
       "revId": "8e36d680652027134b3c564e9256ee07b639a6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "577e4fd3_f8a7b981",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-06-15T16:39:58Z",
+      "side": 1,
+      "message": "Job is green but still an issue in the new task",
+      "revId": "8e36d680652027134b3c564e9256ee07b639a6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
