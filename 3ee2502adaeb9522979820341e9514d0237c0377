@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6f2917f_042d7b14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-15T21:04:03Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll change to +2 after validating the component was created",
+      "revId": "3ee2502adaeb9522979820341e9514d0237c0377",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
