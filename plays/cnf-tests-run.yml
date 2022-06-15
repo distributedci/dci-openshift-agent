@@ -3,15 +3,34 @@
     command: date +%Y%m%d-%H%M%S
     register: date
 
-  - name: set cnf_tests_image_registry for offline env
-    set_fact:
-       cnf_tests_image_registry: '{{ local_registry_host }}:{{ local_registry_port }}'
-    when: cnf_tests_mode == "offline"
+  - name: "Mirror cnf-test images for offline testing"
+    vars:
+      local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
+      cnf_tests_image: "{{ ocp_version_major}}.{{ocp_version_minor}}"
+    block:
+
+      - name: "Mirror cnf-tests and dpdk images to local repo"
+        include_role:
+          name: mirror_images
+        vars:
+          images:
+            - quay.io/openshift-kni/cnf-tests:{{ cnf_tests_image }}
+            - quay.io/openshift-kni/dpdk:{{ cnf_tests_image }}
+          local_registry: "{{ v_host }}:{{ local_registry_port }}"
+          authfile: "{{ dci_pullsecret_file }}"
+
+      - name: set cnf_tests_image_registry for offline env
+        set_fact:
+          cnf_tests_image_registry: '{{ local_registry }}'
+
+    when:
+      - dci_disconnected | default(false) | bool
 
   - name: set cnf_tests_image_registry for online env
     set_fact:
        cnf_tests_image_registry: 'quay.io/openshift-kni'
-    when: cnf_tests_mode == "online"
+    when:
+      - not (dci_disconnected | default(false) | bool)
 
   - name: Run SCTP tests
     environment:
