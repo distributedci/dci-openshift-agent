@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab431dbd_a1d3bb09",
+        "filename": "plays/cnf-tests-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-17T19:45:30Z",
+      "side": 1,
+      "message": "can we take advantage of this change and split it multiline? e.g.\n\n    podman run\n    --rm\n    -e  KUBECONFIG\u003d/kubeconfig/kubeconfig\n    -e IMAGE_REGISTRY\u003d\"{{ cnf_tests_image_registry }}/\"\n    -e CNF_TESTS_IMAGE\u003dcnf-tests:{{ cnf_tests_image }}\n    -v {{ dci_cluster_configs_dir }}/:/kubeconfig:Z\n    -v {{ job_logs.path }}:/tests:Z\n    {{ cnf_tests_image_registry }}/cnf-tests:{{ cnf_tests_image }}\n    /usr/bin/test-run.sh\n    -ginkgo.focus\u003d\"sctp\"\n    --junit /tests/{{ date.stdout }}/sctp\n\nSame for the rest",
+      "revId": "69c0bcf14c415fb0d2b33f74c72ab017c370cf57",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8fd986ba_9ff8f607",
+        "filename": "plays/cnf-tests-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-17T19:45:30Z",
+      "side": 1,
+      "message": "This could be written like:\n\n    when:\n      - cnf_test_suites is defined\n      - \u0027\"sctp\" in ( cnf_test_suites | lower )\u0027",
+      "revId": "69c0bcf14c415fb0d2b33f74c72ab017c370cf57",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf907f15_6b96b3aa",
+        "filename": "plays/cnf-tests-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-17T19:45:30Z",
+      "side": 1,
+      "message": "Similarly:\n\n    when:\n      - cnf_test_suites is defined\n      - \u0027\"ptp\" in ( cnf_test_suites | lower )\u0027",
+      "revId": "69c0bcf14c415fb0d2b33f74c72ab017c370cf57",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17b63f82_99ff4863",
+        "filename": "plays/cnf-tests-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-17T19:45:30Z",
+      "side": 1,
+      "message": "Similarly:\n\n    when:\n      - cnf_test_suites is defined\n      - \u0027\"performance\" in ( cnf_test_suites | lower )\u0027",
+      "revId": "69c0bcf14c415fb0d2b33f74c72ab017c370cf57",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc2c8ffb_2aa37087",
+        "filename": "plays/cnf-tests-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-17T19:45:30Z",
+      "side": 1,
+      "message": "Similarly:\n\n    when:\n      - cnf_test_suites is defined\n      - \u0027\"dpdk\" in ( cnf_test_suites | lower )\u0027",
+      "revId": "69c0bcf14c415fb0d2b33f74c72ab017c370cf57",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
