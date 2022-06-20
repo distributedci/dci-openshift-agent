@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "3cb08493b923afce75864c431d180ee0d2924b97",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93215703_5f2f0070",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-20T12:45:55Z",
+      "side": 1,
+      "message": "I checked the last test, it used the fast channel.\n\n\n$ omg get clusterversion -o json | jq .spec.channel\n\"fast-4.8\"",
+      "revId": "3cb08493b923afce75864c431d180ee0d2924b97",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
