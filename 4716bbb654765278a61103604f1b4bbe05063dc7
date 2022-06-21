@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b99e727_a6363b27",
+        "filename": "roles/mirror-ocp-release/tasks/unpack.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-21T12:43:48Z",
+      "side": 1,
+      "message": "I\u0027ve realised about this extra whitespace",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 1
+      },
+      "revId": "4716bbb654765278a61103604f1b4bbe05063dc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
