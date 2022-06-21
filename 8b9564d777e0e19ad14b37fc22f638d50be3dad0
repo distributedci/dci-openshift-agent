@@ -16,6 +16,23 @@
       "message": "Hi Ramon and Beto, this CR is to group olm-issues by a major OCP version.",
       "revId": "8b9564d777e0e19ad14b37fc22f638d50be3dad0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fa07702_855e57e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-21T12:39:15Z",
+      "side": 1,
+      "message": "LGTM, thanks!",
+      "revId": "8b9564d777e0e19ad14b37fc22f638d50be3dad0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
