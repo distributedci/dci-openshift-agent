@@ -33,6 +33,24 @@
       "message": "Should we make use of this marker to avoid doing some tasks if present? Because right now it seems to be useless.",
       "revId": "e7d59417ac789bcef33e19fdd591e61bcae7b80d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fa572fc_3f4f76f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-21T12:33:30Z",
+      "side": 1,
+      "message": "The marker is use for doaa. If it doesn\u0027t exist it download again the client. \nAnd DOAA is presently not able to download development version of client, and it failed during the download of ocp 4.11",
+      "parentUuid": "37c03c12_e86b6569",
+      "revId": "e7d59417ac789bcef33e19fdd591e61bcae7b80d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
