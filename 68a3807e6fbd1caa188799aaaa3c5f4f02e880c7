@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38e560ac_99d98fdd",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-23T08:51:40Z",
+      "side": 1,
+      "message": "As we are updating this (I saw this didn\u0027t work as expected in the daily job), may we include, at the end of the name, the {{ operator_csv }} too? In this way, we know what operator is being checked.",
+      "range": {
+        "startLine": 68,
+        "startChar": 2,
+        "endLine": 68,
+        "endChar": 6
+      },
+      "revId": "68a3807e6fbd1caa188799aaaa3c5f4f02e880c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
