@@ -16,6 +16,57 @@
       "message": "check dallas ocp-4.8-vanilla ocp-4.9-upgrade openshift-vanilla-upgrade-4.9:components\u003docp\u003d4.9.29",
       "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82b0c761_165ebbf4",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-23T13:33:31Z",
+      "side": 1,
+      "message": "As far as I can remember, retrieving the upgrade graph doesn\u0027t take that long, in the case of a improperly configured disconnected environment this would take 50 minutes to fail. Leave a shorter retry loop here imho.",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2fed991_abd7ccf9",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-23T13:33:31Z",
+      "side": 1,
+      "message": "You\u0027re not checking that the pod condition is Ready here",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "071951cc_b0efa726",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-06-23T13:33:31Z",
+      "side": 1,
+      "message": "Same comment as the previous retry loop, this may take a long time to fail if the environment is not well configured",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
