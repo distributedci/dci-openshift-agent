@@ -16,6 +16,23 @@
       "message": "In my yesterday CR, I wanted to have the OCP version in the format \"4.11\", but got \"4\" using ocp_version_maj. Switching to ocp_version now.",
       "revId": "2d7f1c0867fd455333b8d129c3fde119294f3f09",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44439417_7ae92f24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-23T14:10:22Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2d7f1c0867fd455333b8d129c3fde119294f3f09",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
