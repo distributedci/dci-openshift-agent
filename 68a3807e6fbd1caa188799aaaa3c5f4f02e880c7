@@ -22,6 +22,30 @@
       },
       "revId": "68a3807e6fbd1caa188799aaaa3c5f4f02e880c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e5fc6a7_a6783f34",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-06-23T13:30:08Z",
+      "side": 1,
+      "message": "hi Ramon, good idea, added this info",
+      "parentUuid": "38e560ac_99d98fdd",
+      "range": {
+        "startLine": 68,
+        "startChar": 2,
+        "endLine": 68,
+        "endChar": 6
+      },
+      "revId": "68a3807e6fbd1caa188799aaaa3c5f4f02e880c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
