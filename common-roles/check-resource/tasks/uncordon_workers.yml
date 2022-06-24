@@ -1,0 +1,62 @@
+---
+- name: Check for workers with Scheduling disabled
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+  shell: >
+    {{ oc_tool_path }} get nodes --no-headers=true |
+    grep 'Ready,SchedulingDisabled' | grep worker | awk '{ print $1 }'
+  register: reg_disabled_nodes
+  delegate_to: localhost
+
+# Bugzilla report: https://bugzilla.redhat.com/show_bug.cgi?id=2053445
+# Sometimes after applying MCPs some nodes remain unschedulable.
+# This only applies to the workaround for resource_to_check == MachineConfigPool
+- name: Workaround for BZ-2053445 - force workers uncordon
+  block:
+    # The workaround should not be applied if we're dealing with a network problem here.
+    # To verify that network is doing fine, we check that all ovnkube-node-XXXX pods are running.
+    - name: Check the state of ovnkube-node-XXX pods
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
+      shell: >
+        {{ oc_tool_path }} get pods -n openshift-ovn-kubernetes --no-headers=true |
+        awk '! /Running/ && /ovnkube-node/'
+      register: bad_ovnkube_pods
+      delegate_to: localhost
+
+    - name: Fail when network is in a bad state
+      fail:
+        msg: "Failing because some of ovnkube-node-XXX pods are not in a running state"
+      when: bad_ovnkube_pods.stdout | length > 0
+  when: '"bz2062038" in dci_workarounds'
+
+- name: Uncordon workers if needed
+  block:
+    - name: Workaround - uncordon all ready workers with disabled scheduling
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
+      shell: >
+        {{ oc_tool_path }} adm uncordon {{ item }}
+      loop: "{{ reg_disabled_nodes.stdout.split('\n') }}"
+      delegate_to: localhost
+
+    # If nodes are not ready after this time, then the whole role will fail
+    - name: "Wait for workers to be ready - {{ check_reason | default('To define the location') }}"
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
+      shell: >
+        {{ oc_tool_path }} get nodes --no-headers=true | grep worker
+      register: nodes
+      until:
+        - '"SchedulingDisabled" not in nodes.stdout'
+        - '"NotReady" not in nodes.stdout'
+      retries: 60
+      delay: 10
+      delegate_to: localhost
+  when: reg_disabled_nodes.stdout | length > 0
+
+- name: Print current iteration
+  debug:
+    msg: Iteration number {{ retry_count }}, let's try a new attempt
+
+...
