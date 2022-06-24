@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2647e78a_623dd806",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-24T17:19:35Z",
+      "side": 1,
+      "message": "I saw the other changes and I\u0027m not sure what\u0027s the gain on this change, I see the code for SRIOV is few lines and I see in here the code growth considerably.  Is truly an advantage on this change? As to me this code is becoming more complex now than it used to be. Thanks!",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
