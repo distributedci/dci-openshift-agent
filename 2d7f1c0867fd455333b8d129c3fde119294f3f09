@@ -50,6 +50,23 @@
       "message": "lgtm, thanks",
       "revId": "2d7f1c0867fd455333b8d129c3fde119294f3f09",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89061960_8793dcae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-24T08:01:07Z",
+      "side": 1,
+      "message": "let\u0027s merge it, to have the correct naming in the jobs",
+      "revId": "2d7f1c0867fd455333b8d129c3fde119294f3f09",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
