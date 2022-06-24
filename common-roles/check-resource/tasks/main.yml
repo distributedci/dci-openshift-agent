@@ -1,0 +1,148 @@
+- name: "Check {{ resource_to_check }} resource"
+  block:
+    - name: Update the retry count
+      set_fact:
+        retry_count: "{{ retry_count | int + 1 }}"
+
+    - name: "Pause for {{ resource_to_check }} to be created"
+      pause:
+        seconds: 60
+
+    # MachineConfigPool check
+    - name: Get Machine config pools status
+      community.kubernetes.k8s_info:
+        api_version: machineconfiguration.openshift.io/v1
+        kind: MachineConfigPool
+        kubeconfig: "{{ kubeconfig_path }}"
+      register: reg_mcpool_status
+      vars:
+        status_query: "resources[*].status.conditions[?type=='Updated'].status"
+        update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
+      until:
+        - reg_mcpool_status.resources is defined
+        - update_status == ['True']
+      retries: "{{ check_wait_retries }}"
+      delay: "{{ check_wait_delay }}"
+      delegate_to: localhost
+      when: resource_to_check == "MachineConfigPool"
+
+    # SriovNetworkNodeState check
+    # Let's give it 60*10=600 seconds (10 minutes), SriovNetworkNodeState should be
+    # stable before that time under normal circumstances
+    - name: Wait till sriovnetworknodestate becomes ready
+      community.kubernetes.k8s_info:
+        api_version: sriovnetwork.openshift.io/v1
+        kind: SriovNetworkNodeState
+        kubeconfig: "{{ kubeconfig_path }}"
+      register: sriovnetnode
+      until: sriovnetnode.resources is defined and sriovnetnode.resources | selectattr('status.syncStatus', 'defined') | list | rejectattr('status.syncStatus', 'equalto', 'Succeeded') | list | count == 0
+      retries: "{{ check_wait_retries }}"
+      delay: "{{ check_wait_delay }}"
+      delegate_to: localhost
+      when: resource_to_check == "SriovNetworkNodeState"
+
+    # If reached this point, the check passed, so reinitialize retry_count for future executions,
+    # as this is a shared role
+    - name: Reinitialize the retry count
+      set_fact:
+        retry_count: 0
+
+  # If the last check failed, then move to the workaround
+  rescue:
+    - name: "Check {{ resource_to_check }} resource failed - no workaround applied"
+      fail:
+        msg: "No workaround is defined, so the job has to fail at this point"
+      when:
+        - '"bz2062038" not in dci_workarounds|default([])'
+        - '"bz2050394" not in dci_workarounds|default([])'
+
+    - name: Apply workaround
+      block:
+        # If retry_count > num_repetitions, we will not iterate more and make the job to fail
+        - name: Fail if the maximum number of retries have been reached
+          fail:
+            msg: Maximum number of retries without success have been reached ({{ num_repetitions }})
+          when: retry_count | int > num_repetitions
+
+        # If retry_count <= num_repetitions, then do the workaround - uncordon nodes that are in Ready,SchedulingDisabled status
+        - name: Check for workers with Scheduling disabled
+          environment:
+            KUBECONFIG: "{{ kubeconfig_path }}"
+          shell: >
+            {{ oc_tool_path }} get nodes --no-headers=true |
+            grep 'Ready,SchedulingDisabled' | grep worker | awk '{ print $1 }'
+          register: reg_disabled_nodes
+          delegate_to: localhost # may cause problems
+
+        # Bugzilla report: https://bugzilla.redhat.com/show_bug.cgi?id=2053445
+        # Sometimes after applying MCPs some nodes remain unschedulable.
+        # This only applies to the workaround for resource_to_check == MachineConfigPool
+        - name: Workaround for BZ-2053445 - force workers uncordon
+          block:
+            # The workaround should not be applied if we're dealing with a network problem here.
+            # To verify that network is doing fine, we check that all ovnkube-node-XXXX pods are running.
+            - name: Check the state of ovnkube-node-XXX pods
+              environment:
+                KUBECONFIG: "{{ kubeconfig_path }}"
+              shell: >
+                {{ oc_tool_path }} get pods -n openshift-ovn-kubernetes --no-headers=true |
+                awk '! /Running/ && /ovnkube-node/'
+              register: bad_ovnkube_pods
+              delegate_to: localhost
+
+            - name: Fail when network is in a bad state
+              fail:
+                msg: "Failing because some of ovnkube-node-XXX pods are not in a running state"
+              when: bad_ovnkube_pods.stdout | length > 0
+          when: resource_to_check == "MachineConfigPool"
+
+        - name: Uncordon workers if needed
+          block:
+            - name: Workaround - uncordon all ready workers with disabled scheduling
+              environment:
+                KUBECONFIG: "{{ kubeconfig_path }}"
+              shell: >
+                {{ oc_tool_path }} adm uncordon {{ item }}
+              loop: "{{ reg_disabled_nodes.stdout.split('\n') }}"
+              delegate_to: localhost
+
+            # If nodes are not ready after this time, then the whole role will fail
+            - name: "Wait for workers to be ready - {{ check_reason | default('To define the location') }}"
+              environment:
+                KUBECONFIG: "{{ kubeconfig_path }}"
+              shell: >
+                {{ oc_tool_path }} get nodes --no-headers=true | grep worker
+              register: nodes
+              until:
+                - '"SchedulingDisabled" not in nodes.stdout'
+                - '"NotReady" not in nodes.stdout'
+              retries: 60
+              delay: 10
+              delegate_to: localhost
+          when: reg_disabled_nodes.stdout | length > 0
+
+        - name: Print current iteration
+          debug:
+            msg: Iteration number {{ retry_count }}, let's try a new attempt
+
+        - name: Redefine vars to pass them again
+          set_fact:
+            r_check_wait_retries: "{{ check_wait_retries }}"
+            r_check_wait_delay: "{{ check_wait_delay }}"
+            r_check_reason: "{{ check_reason }}"
+            r_resource_to_check: "{{ resource_to_check }}"
+
+        - name: Try a new attempt of this role
+          include_role:
+            name: "check-resource"
+          vars:
+            check_wait_retries: "{{ r_check_wait_retries }}"
+            check_wait_delay: "{{ r_check_wait_delay }}"
+            check_reason: "{{ r_check_reason }}"
+            resource_to_check: "{{ r_resource_to_check }}"
+
+      when:
+        - dci_workarounds is defined
+        - '"bz2062038" in dci_workarounds or "bz2050394" in dci_workarounds'
+
+...

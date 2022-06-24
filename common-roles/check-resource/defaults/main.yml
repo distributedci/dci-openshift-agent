@@ -1,0 +1,5 @@
+---
+num_repetitions: 5
+resource_to_check: "MachineConfigPool"
+retry_count: 0
+...
