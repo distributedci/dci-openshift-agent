@@ -16,6 +16,24 @@
       "message": "I saw the other changes and I\u0027m not sure what\u0027s the gain on this change, I see the code for SRIOV is few lines and I see in here the code growth considerably.  Is truly an advantage on this change? As to me this code is becoming more complex now than it used to be. Thanks!",
       "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a507d2db_068d04f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-24T17:34:01Z",
+      "side": 1,
+      "message": "Hi Tony, thanks for your comment. We can review this next Monday, but mainly, the two objectives of this change are:\n\n- First of all, to use the same role to do the MCP check (done on d-o-a, d-o-a-a and example-cnf, mainly) and the SRIOV check (done on SPK and BigIP hooks), as the workaround is mostly the same but the only change is the resource to be checked\n- Secondly, to add retries to this role, which is currently done on check-sriov but not on wait-mcp, and it had happened that the workaround was applied, the check passed, but a new node moved to SchedulingDisabled after a while and the job failed in a further step of the job. With this, we managed to avoid this effect on BigIP/SPK.",
+      "parentUuid": "2647e78a_623dd806",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
