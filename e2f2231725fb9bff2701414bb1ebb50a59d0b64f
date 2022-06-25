@@ -34,6 +34,23 @@
       "parentUuid": "2647e78a_623dd806",
       "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be87f93e_edc7fefd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-06-25T12:41:43Z",
+      "side": 1,
+      "message": "Hi Ramon, I see that you\u0027re trying to add some sort of abstraction with resource_to_check, to treat SriovNetworkNodeState and MachineConfigPool in the same way. This abstraction doesn\u0027t seem to work - you have \"if SriovNetworkNodeState\" / \"if MachineConfigPool\" everywhere. Besides, that makes the code to be twice long than before and really confusing.\n\nWouldn\u0027t it be better to split the code into three different plays within the common role? Something like this:\n\ncommon-roles:\n- mcp_workaround.yml\n- sriov_workaround.yml\n- uncordon_workers.yml   \u003c-- to move the common part into the play apart and call it from mcp_workaround and sriov_workaround?",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
