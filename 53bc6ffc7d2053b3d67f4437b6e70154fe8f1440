@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbffff6d_b55d69f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-27T14:00:54Z",
+      "side": 1,
+      "message": "I\u0027ve changed the refactor by following Tatiana\u0027s advices, I hope the code is better organized how.",
+      "revId": "53bc6ffc7d2053b3d67f4437b6e70154fe8f1440",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

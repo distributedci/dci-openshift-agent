@@ -105,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "411d0410_360f90b0",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-27T14:00:54Z",
+      "side": 1,
+      "message": "I\u0027ve removed this in the new patchset, this pause was inherited from wait-mcp, buy maybe we can omit it, yes. Let\u0027s see how it goes.",
+      "parentUuid": "98c0d529_9a1e6755",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05bbe5f6_fbb4fd36",
@@ -118,6 +136,24 @@
       "writtenOn": "2022-06-27T13:30:04Z",
       "side": 1,
       "message": "Why do we need to run this on the jumphost and why this could cause problems?",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b1ad6e5_1a966fdc",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-27T14:00:54Z",
+      "side": 1,
+      "message": "The \"may cause problems\" comment, honestly, I don\u0027t know why. This, again, is inherited from wait-mcp and I\u0027ve removed that comment.\n\nThe reason of executing this on the jumphost is because wait-mcp has been called, up to now, from different stages in d-o-a and d-o-a-a, some of them running in the jumphost, but others in the provisionhost. So, to harmonize all the calls, we are forcing to run all this in the jumphost, to use the same reference for the kubeconfig, oc_tool_path and similar variables, in order to avoid problems with this. That\u0027s the main reason, and I\u0027ve followed that approach in this refactor too.",
+      "parentUuid": "05bbe5f6_fbb4fd36",
       "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -139,6 +175,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "637fcd28_13b48625",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-27T14:00:54Z",
+      "side": 1,
+      "message": "ditto",
+      "parentUuid": "6a202929_527ce196",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "445831c7_e7714da2",
@@ -152,6 +206,24 @@
       "writtenOn": "2022-06-27T13:30:04Z",
       "side": 1,
       "message": "Wow,\nI am surprised! I did not expect that was possible to do this in Ansible ^^",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a11e993_65748514",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-27T14:00:54Z",
+      "side": 1,
+      "message": "yes! in fact it is currently being used for BigIP and SPK and it has been working fine, so one of the benefits of this change is to also include this for the MCP workaround, as I said before.",
+      "parentUuid": "445831c7_e7714da2",
       "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
