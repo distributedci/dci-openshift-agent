@@ -84,6 +84,23 @@
       "message": "I\u0027ll start testing on SNO baremetal",
       "revId": "90b71eab67d9e657482ea2890acd4000d3494478",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3744b729_e6bd1fd8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-06-27T16:22:12Z",
+      "side": 1,
+      "message": "Removed release files for 4.8 and the openstack/qemu images from /opt/cache:\n\nThe files were properly downloaded:\nhttps://www.distributed-ci.io/jobs/38f27af8-0b84-4888-8cab-fb6ec3ae6204/jobStates#c244d62d-938b-450c-ad98-749d8eaa5a03:file93\nhttps://www.distributed-ci.io/jobs/38f27af8-0b84-4888-8cab-fb6ec3ae6204/jobStates#c244d62d-938b-450c-ad98-749d8eaa5a03:file94\nhttps://www.distributed-ci.io/jobs/38f27af8-0b84-4888-8cab-fb6ec3ae6204/jobStates#c244d62d-938b-450c-ad98-749d8eaa5a03:file95\n\nSame test in 4.9:\n\nhttps://www.distributed-ci.io/jobs/7998093b-18f8-40a4-b07f-d157be6d80f8/jobStates#403cf7fe-d634-44c5-bcb0-165892d16938:file93\nhttps://www.distributed-ci.io/jobs/7998093b-18f8-40a4-b07f-d157be6d80f8/jobStates#403cf7fe-d634-44c5-bcb0-165892d16938:file94\nhttps://www.distributed-ci.io/jobs/7998093b-18f8-40a4-b07f-d157be6d80f8/jobStates#403cf7fe-d634-44c5-bcb0-165892d16938:file95\n",
+      "revId": "90b71eab67d9e657482ea2890acd4000d3494478",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
