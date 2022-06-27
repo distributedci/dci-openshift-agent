@@ -69,6 +69,91 @@
       "parentUuid": "be87f93e_edc7fefd",
       "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "978ffe58_29e1b858",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-27T13:30:04Z",
+      "side": 1,
+      "message": "I have few questions on the delegate_host usage",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98c0d529_9a1e6755",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-27T13:30:04Z",
+      "side": 1,
+      "message": "This \u0027Pause task\u0027 looks like  a dirty patch in a role like this. Is it really necessary? The following check is covering it right?",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05bbe5f6_fbb4fd36",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-27T13:30:04Z",
+      "side": 1,
+      "message": "Why do we need to run this on the jumphost and why this could cause problems?",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a202929_527ce196",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-27T13:30:04Z",
+      "side": 1,
+      "message": "Same question in the other tasks",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "445831c7_e7714da2",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-27T13:30:04Z",
+      "side": 1,
+      "message": "Wow,\nI am surprised! I did not expect that was possible to do this in Ansible ^^",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
