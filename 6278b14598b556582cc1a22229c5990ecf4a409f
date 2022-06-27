@@ -67,6 +67,40 @@
       "message": "check dallas ocp-4.9-vanilla ocp-4.10-upgrade openshift-vanilla:components\u003docp\u003d4.9.29 openshift-vanilla-upgrade-4.10:components\u003docp\u003d4.10.10",
       "revId": "6278b14598b556582cc1a22229c5990ecf4a409f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1041a78b_9df8d471",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-27T13:49:31Z",
+      "side": 1,
+      "message": "why did you call it worker? I am confused now \u003e\u003c",
+      "revId": "6278b14598b556582cc1a22229c5990ecf4a409f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2764626c_4e300d41",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-27T13:49:31Z",
+      "side": 1,
+      "message": "Hum are we deleting the pod to speedup the process? Or otherwise the pod is not deleted?",
+      "revId": "6278b14598b556582cc1a22229c5990ecf4a409f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
