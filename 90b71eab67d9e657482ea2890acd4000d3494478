@@ -118,6 +118,23 @@
       "message": "Thanks Beto, from my side let\u0027s go with this fix, I\u0027m having troubles to deploy SNO, but that is not related to this PR, I\u0027ll address that in another PR.",
       "revId": "90b71eab67d9e657482ea2890acd4000d3494478",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07168edf_875563f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-06-27T16:28:43Z",
+      "side": 1,
+      "message": "Thanks!",
+      "revId": "90b71eab67d9e657482ea2890acd4000d3494478",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
