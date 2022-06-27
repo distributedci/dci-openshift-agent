@@ -50,6 +50,23 @@
       "message": "LGTM, I think this needs to be tested also in SNO",
       "revId": "90b71eab67d9e657482ea2890acd4000d3494478",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c53f4e56_6913d5ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-27T12:14:47Z",
+      "side": 1,
+      "message": "I agree with Tony, apart from this the change looks fine",
+      "revId": "90b71eab67d9e657482ea2890acd4000d3494478",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
