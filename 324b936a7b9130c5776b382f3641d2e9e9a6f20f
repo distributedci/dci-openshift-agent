@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vcp openshift-vcp:ansible_extravars\u003doperators_index:registry.dfwt5g.lab:4443/pruned/redhat-operator-index:4.10_20220627T214226617015 openshift-vcp:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "324b936a7b9130c5776b382f3641d2e9e9a6f20f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0f2efff_2edf3237",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-28T14:52:07Z",
+      "side": 1,
+      "message": "LGTM Thank you Beto :)",
+      "revId": "324b936a7b9130c5776b382f3641d2e9e9a6f20f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
