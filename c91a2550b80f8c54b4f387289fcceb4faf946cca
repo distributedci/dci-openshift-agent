@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e7bfd6e_b1ce439d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-28T11:44:32Z",
+      "side": 1,
+      "message": "Last job failed because I was wrongly passing variables to the second iteration of the wait play: https://www.distributed-ci.io/jobs/52789bb5-9c42-4d62-8772-c99c4f3800c4/jobStates#3f4974ff-9565-4c5c-98d2-91b5bff04b7a:file690, I\u0027ve fixed it and I\u0027ll propose a new patchset.\n\nAnyway, the check is working fine for both cases:\n\n- MCP check passed: https://www.distributed-ci.io/jobs/52789bb5-9c42-4d62-8772-c99c4f3800c4/jobStates#3f4974ff-9565-4c5c-98d2-91b5bff04b7a:file325\n- SRIOV check passed: https://www.distributed-ci.io/jobs/52789bb5-9c42-4d62-8772-c99c4f3800c4/jobStates#3f4974ff-9565-4c5c-98d2-91b5bff04b7a:file325\n\nWe only miss to make the retries work fine, and it should happen with the next patchset.",
+      "revId": "c91a2550b80f8c54b4f387289fcceb4faf946cca",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
