@@ -69,6 +69,74 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d14e164_c6a5642b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-28T21:00:55Z",
+      "side": 1,
+      "message": "I suggest to add a main.yml and from there call the required resource by name, from usability standpoint is easier to know what *resource* you want to *check* rather than knowing the inner of the role and calling a play called wait-mcp.yml or wait-sriov.yml\n\nBesides usability, by having main.yml you can include the playbooks you need and you can inject the KUBECONFIG env there and avoid repetition on every task.\n\nI get that you want to centralize similar tasks but I still think is too much complexity being added to the role, I think by splitting in different tasks it would be easier to follow the flow of a given checked resource. My 2¢",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15e4d6db_42300426",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-28T21:00:55Z",
+      "side": 1,
+      "message": "IMO, we can avoid some of the implementation details in this readme to make it easier to understand. My suggestion is to reword it with:\n\n    Role to wait for the deployment of a given resource; applying workarounds based on the `dci_workaround` list.\n    \n    Supported resources:\n\n        - MachineConfigPool\n        - SriovNEtworkNodeState\n\nThen we can go to the section of parameters",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11d2b1b9_9fb3fd45",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-28T21:00:55Z",
+      "side": 1,
+      "message": "Is this one truly required? since there\u0027s a default one could omit the value, right?",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c56e3043_1c651a83",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-28T21:00:55Z",
+      "side": 1,
+      "message": "ditto\n\n...\n\nAfter reviewing the code below, this var seems to be a counter, should it really be needed to expose this variable in the role?",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8a905b1_6d00c113",
@@ -88,6 +156,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9162f8c9_d776c324",
+        "filename": "common-roles/check-resource/tasks/uncordon_workers.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-28T21:00:55Z",
+      "side": 1,
+      "message": "If this applies only to the machineconfigpool resource, would it make sense to split this task into another only for that type of resource, similarly to wait-mcp and wait-sriov?",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dd4cc03e_9e091e31",
         "filename": "common-roles/check-resource/tasks/uncordon_workers.yml",
         "patchSetId": 4
@@ -99,6 +184,23 @@
       "writtenOn": "2022-06-28T19:02:23Z",
       "side": 1,
       "message": "I believe the name for the block is quite off: BZ number is not correct, and it\u0027s more \"verify the network state\" than \"force workers uncordon\"",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a0448af_a3b67d8f",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-28T21:00:55Z",
+      "side": 1,
+      "message": "What happens when retry_count is set to a different value than 1? This overrides whatever value has been set to the role?",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
