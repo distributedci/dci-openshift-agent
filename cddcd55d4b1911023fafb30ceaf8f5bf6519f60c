@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7d0d139_ed163272",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-06-28T19:02:23Z",
+      "side": 1,
+      "message": "Hi Ramon, I\u0027ve commented some minor issues, but feel free to ignore them if it\u0027s urgent for you to merge.",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8a905b1_6d00c113",
@@ -65,6 +82,57 @@
       "writtenOn": "2022-06-28T18:38:50Z",
       "side": 1,
       "message": "I think we have check\\_wait\\_delay twice if my eyes are not betraying me :)",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd4cc03e_9e091e31",
+        "filename": "common-roles/check-resource/tasks/uncordon_workers.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-06-28T19:02:23Z",
+      "side": 1,
+      "message": "I believe the name for the block is quite off: BZ number is not correct, and it\u0027s more \"verify the network state\" than \"force workers uncordon\"",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f05bb6e_1a928df6",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-06-28T19:02:23Z",
+      "side": 1,
+      "message": "since it\u0027s the same role, `include_tasks` should be probably enough here",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91aa657f_951e8f2a",
+        "filename": "common-roles/check-resource/tasks/wait-sriov.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-06-28T19:02:23Z",
+      "side": 1,
+      "message": "as above, include_tasks should be enough",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
