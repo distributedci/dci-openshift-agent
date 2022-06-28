@@ -158,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "57d72613_2954adea",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-28T12:26:13Z",
+      "side": 1,
+      "message": "I okay to harmonize, thank you for the explanation :)",
+      "parentUuid": "8b1ad6e5_1a966fdc",
+      "revId": "e2f2231725fb9bff2701414bb1ebb50a59d0b64f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a202929_527ce196",
