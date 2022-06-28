@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa22e07c_1b4538a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-28T17:39:30Z",
+      "side": 1,
+      "message": "\u003e Patch Set 4:\n\u003e \n\u003e - SUCCESS https://www.distributed-ci.io/jobs/56a927ae-7374-4613-b137-8fc1b2b5e01c/jobStates\n\u003e - SUCCESS https://www.distributed-ci.io/jobs/d49c65f4-4b3e-4637-aa7a-8751b6fd0473/jobStates\n\u003e - SUCCESS https://www.distributed-ci.io/jobs/daef821a-2b2a-4de8-bdb6-656bbc31d9bd/jobStates\n\u003e  from https://github.com/dci-labs/f5-spk-config/pull/57\n\nAll the pipelines tested worked fine, this is ready to be merged. I\u0027ll wait till tomorrow if you have any comment",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
