@@ -33,6 +33,40 @@
       "message": "\u003e Patch Set 4:\n\u003e \n\u003e - SUCCESS https://www.distributed-ci.io/jobs/56a927ae-7374-4613-b137-8fc1b2b5e01c/jobStates\n\u003e - SUCCESS https://www.distributed-ci.io/jobs/d49c65f4-4b3e-4637-aa7a-8751b6fd0473/jobStates\n\u003e - SUCCESS https://www.distributed-ci.io/jobs/daef821a-2b2a-4de8-bdb6-656bbc31d9bd/jobStates\n\u003e  from https://github.com/dci-labs/f5-spk-config/pull/57\n\nAll the pipelines tested worked fine, this is ready to be merged. I\u0027ll wait till tomorrow if you have any comment",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61c20ae5_a153298d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-28T18:38:50Z",
+      "side": 1,
+      "message": "I read initial comments about benefits and complexity, and I agree with some of that, on the other I might be biased to this change because I\u0027ve seen this in action in SPK and during the integration of f5 hooks, I like that we reuse code and benefit from it in all agents and hooks, now we can address sr-iov/mcp checks/workarounds in one place when needed, I see it as we moved it from SPK/BigIPs hooks to d-o-a and encapsulating it in a role. Maybe in the future we can improve it using more k8s than oc client, but from my side I think it\u0027s safe to merge. Just minor typo, I\u0027ll wait for the fix :)",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8a905b1_6d00c113",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-28T18:38:50Z",
+      "side": 1,
+      "message": "I think we have check\\_wait\\_delay twice if my eyes are not betraying me :)",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
