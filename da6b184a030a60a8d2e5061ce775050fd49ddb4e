@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3075476_15e18d1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-28T21:42:35Z",
+      "side": 1,
+      "message": "Thx Tony for you review !",
+      "revId": "da6b184a030a60a8d2e5061ce775050fd49ddb4e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "309726da_7dcc878b",
@@ -14,6 +31,24 @@
       "writtenOn": "2022-06-28T21:33:53Z",
       "side": 1,
       "message": "I may be missing something but sriov for install is set to true: \n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/deploy-operators.yml#L125\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/README.md?plain\u003d1#L306",
+      "revId": "da6b184a030a60a8d2e5061ce775050fd49ddb4e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83f0bac2_6cdd4ec6",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-28T21:42:35Z",
+      "side": 1,
+      "message": "Only when dci_prepare_cnf is true, it is false by default.\nWe have to fix the documentation :)",
+      "parentUuid": "309726da_7dcc878b",
       "revId": "da6b184a030a60a8d2e5061ce775050fd49ddb4e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
