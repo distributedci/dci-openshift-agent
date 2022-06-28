@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "03264fc7_968a42db",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-28T12:59:30Z",
+      "side": 1,
+      "message": "Your\u0027are right.\nWhen I get a job success, I reduce this value.",
+      "parentUuid": "82b0c761_165ebbf4",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b2fed991_abd7ccf9",
         "filename": "plays/upgrade.yml",
         "patchSetId": 10
@@ -48,6 +66,24 @@
       "writtenOn": "2022-06-23T13:33:31Z",
       "side": 1,
       "message": "You\u0027re not checking that the pod condition is Ready here",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82356f19_ab9496db",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-28T12:59:30Z",
+      "side": 1,
+      "message": "Yes it just monitor the creation, I will adjust that.",
+      "parentUuid": "b2fed991_abd7ccf9",
       "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },

@@ -86,6 +86,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b5c443f_d6871576",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-28T12:59:30Z",
+      "side": 1,
+      "message": "Yes it was a typo :)",
+      "parentUuid": "1041a78b_9df8d471",
+      "revId": "6278b14598b556582cc1a22229c5990ecf4a409f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2764626c_4e300d41",
@@ -99,6 +117,24 @@
       "writtenOn": "2022-06-27T13:49:31Z",
       "side": 1,
       "message": "Hum are we deleting the pod to speedup the process? Or otherwise the pod is not deleted?",
+      "revId": "6278b14598b556582cc1a22229c5990ecf4a409f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee48dc9e_fc735e9c",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-28T12:59:30Z",
+      "side": 1,
+      "message": "Yes, I suppose it is for speed up.\nI didn\u0027t do bench, but it can be interesting to do it to know what is the real benefit.",
+      "parentUuid": "2764626c_4e300d41",
       "revId": "6278b14598b556582cc1a22229c5990ecf4a409f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
