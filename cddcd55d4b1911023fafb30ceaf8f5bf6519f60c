@@ -86,6 +86,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a0d79a2_bebcdec0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Hi Tony, to do this: \"I suggest to add a main.yml and from there call the required resource by name, from usability standpoint is easier to know what *resource* you want to *check* rather than knowing the inner of the role and calling a play called wait-mcp.yml or wait-sriov.yml\", I had then to return to the previous definition I did, passing as parameter the type of resource we want to check. I\u0027ll do it, but maintaining the current structure.\n\nI\u0027ll also do the kubeconfig change, good catch!",
+      "parentUuid": "8d14e164_c6a5642b",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15e4d6db_42300426",
@@ -99,6 +117,24 @@
       "writtenOn": "2022-06-28T21:00:55Z",
       "side": 1,
       "message": "IMO, we can avoid some of the implementation details in this readme to make it easier to understand. My suggestion is to reword it with:\n\n    Role to wait for the deployment of a given resource; applying workarounds based on the `dci_workaround` list.\n    \n    Supported resources:\n\n        - MachineConfigPool\n        - SriovNEtworkNodeState\n\nThen we can go to the section of parameters",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "499f7ae4_2b92cb69",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15e4d6db_42300426",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -120,6 +156,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "11f39801_348bfa6d",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11d2b1b9_9fb3fd45",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c56e3043_1c651a83",
@@ -133,6 +187,24 @@
       "writtenOn": "2022-06-28T21:00:55Z",
       "side": 1,
       "message": "ditto\n\n...\n\nAfter reviewing the code below, this var seems to be a counter, should it really be needed to expose this variable in the role?",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49c3fb38_3e97710b",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c56e3043_1c651a83",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -154,6 +226,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "008a8721_6857b3ab",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Yes! My fault, fixed.",
+      "parentUuid": "d8a905b1_6d00c113",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9162f8c9_d776c324",
@@ -167,6 +257,24 @@
       "writtenOn": "2022-06-28T21:00:55Z",
       "side": 1,
       "message": "If this applies only to the machineconfigpool resource, would it make sense to split this task into another only for that type of resource, similarly to wait-mcp and wait-sriov?",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15ba3491_d01c2cab",
+        "filename": "common-roles/check-resource/tasks/uncordon_workers.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "I\u0027ve moved this code to a new file, but we are applying this if a specific workaround is defined, rather than doing it for MCP (I forgot to remove this comment after my second patchset).",
+      "parentUuid": "9162f8c9_d776c324",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -188,6 +296,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8e4e771_aec7405c",
+        "filename": "common-roles/check-resource/tasks/uncordon_workers.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd4cc03e_9e091e31",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a0448af_a3b67d8f",
@@ -201,6 +327,24 @@
       "writtenOn": "2022-06-28T21:00:55Z",
       "side": 1,
       "message": "What happens when retry_count is set to a different value than 1? This overrides whatever value has been set to the role?",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cea46785_04920415",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "This is, mainly, a lesson learned from BigIP/SPK. When we finish the application of the workaround, if this variable is not reinitialized (initial value is 1, which is the default value), a future call of the role (because, you know, wait-mcp and wait-sriov are called multiple times in a job) will use the current value of retry_count, instead of the initial one. So, with this, we are ensuring that, for future calls of the role, we always start with retry_count initial value, so that we always ensure that the maximum number of repetitions that will be executed will be num_repetitions.",
+      "parentUuid": "6a0448af_a3b67d8f",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -222,6 +366,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e211027f_f0efb5ab",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f05bb6e_1a928df6",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "91aa657f_951e8f2a",
@@ -235,6 +397,24 @@
       "writtenOn": "2022-06-28T19:02:23Z",
       "side": 1,
       "message": "as above, include_tasks should be enough",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b38e2c4_bdb3dab4",
+        "filename": "common-roles/check-resource/tasks/wait-sriov.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T10:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "91aa657f_951e8f2a",
       "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
