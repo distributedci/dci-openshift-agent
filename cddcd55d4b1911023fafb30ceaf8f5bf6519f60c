@@ -279,6 +279,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0777ef7_6f790e77",
+        "filename": "common-roles/check-resource/tasks/uncordon_workers.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T11:04:32Z",
+      "side": 1,
+      "message": "Just to update this: finally, this will apply for all the calls to uncordon_workers, because it was the behaviour we had when using wait-mcp role. So I\u0027ll keep this in the same way.",
+      "parentUuid": "15ba3491_d01c2cab",
+      "revId": "cddcd55d4b1911023fafb30ceaf8f5bf6519f60c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dd4cc03e_9e091e31",
