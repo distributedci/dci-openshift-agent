@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68e9e0a2_a9603a9a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T14:10:58Z",
+      "side": 1,
+      "message": "\u003e Patch Set 1:\n\u003e \n\u003e - SUCCESS https://www.distributed-ci.io/jobs/33afe7f1-ce13-4c71-a313-213937811592/jobStates\n\u003e  from https://github.com/dci-labs/dallas-pipelines/pull/391\n\nOCP 4.10 job passed with this check enabled, so it\u0027s ready for merging.",
+      "revId": "8e52c9e914f7c7826bee6460c440708b34d17c6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
