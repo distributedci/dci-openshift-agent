@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04eeee5a_53983123",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T14:22:03Z",
+      "side": 1,
+      "message": "Well, I am checking the current job I\u0027ve launched and it\u0027s calling correctly both checks:\n\n-wait-mcp - https://www.distributed-ci.io/jobs/06dfc9c1-b248-4dc5-89ce-d0c175a65d58/jobStates#85d375d2-c0eb-4c09-bb9e-bd1f2aa7ed05:file327\n-wait-sriov - https://www.distributed-ci.io/jobs/06dfc9c1-b248-4dc5-89ce-d0c175a65d58/jobStates#85d375d2-c0eb-4c09-bb9e-bd1f2aa7ed05:file491\n\n, so I\u0027ll merge this when d-o-a-a change is reviewed, I\u0027ll not wait for the job to finish.",
+      "revId": "7a9d7d5acd82e2029cc1be0461247ea00c1c9107",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0c4e35e5_30838a63",
