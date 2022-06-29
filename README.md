@@ -299,7 +299,7 @@ which version of OCP to install.
 | dci\_workarounds                   | False    | List    | []                                               | List of workarounds to be considered in the execution. Each element of the list must be a String with the following format: bz\<id> or gh-org-repo-\<id> |
 | openshift\_secret                  | False    | Dict    | auths:                                           | Additional auths will be combined                              |
 | operators_index                    | False    | String  | registry.redhat.io/redhat/redhat-operator-index:v<ocp_version>| Catalog index that contains the bundles for the operators that will be mirrored in disconnected environments |
-| opm_mirror_list                    | False    | String  | []                                               | List of operators to be mirrored in disconnected environments
+| opm_mirror_list                    | False    | String  | []                                               | List additional operators to be mirrored in disconnected environments. The package names of operators deployed using `dci_operators` must be included in this list. |
 | dci_operators                      | False    | List    | []                                               | List of additional operators or custom operators deployments. Please see the [Customizing the Operators installation](#customizing-the-operators-installation) section for more details|
 | enable_cnv                         | False    | Boolean   | False      | Deploy CNV and enable the HCO operator |
 | enable_elasticsearch               | False    | Boolean   | False      | Deploys the ElasticSearch Operator |
@@ -466,7 +466,7 @@ you can use this command line:
 
 The Agent manages the deployment of certain operators. At this time there is support for SRIOV, Performance Add On (PAO), HyperConverged Cluster Operator (HCO), ElasticSearch Operator, Cluster-Logging, and ACM (Advanced Cluster Management).
 
-In order to make the operators available in disconected environments is it important to configure the `opm_mirror_list` variable with the list of operators to mirror. The Agent will take care of mirroring the required images and dependencies.
+In order to make additional operators available in disconected environments is it important to configure the `opm_mirror_list` variable with the list of other operators to mirror. The Agent will take care of mirroring the required images and its dependencies.
 
 The variable `operators_index` is used to specify the catalog image containing information for the operators that may be deployed in the cluster. By default the index is the one located at registry.redhat.io and according to the OCP version installed but it can be overrided with a custom image. In conjuntion with `dci_operators` variable in allows the deployment of custom operators additionaly to those directly managed by the agent.
 
@@ -499,15 +499,24 @@ dci_operators:
       openshift.io/cluster-monitoring: "true"
 ```
 
-- In disconnected enviroments the catalog `mirrored-redhat-operators` contains the package manifests for the operators mirrored by defining the `opm_mirror_list` variable. An example of how to define this variable is shown below.
+- In disconnected enviroments, the catalog `mirrored-redhat-operators` will contain the package manifests for the operators that were mirrored by combining the items defined via `opm_mirror_list` plus to the ones activated for the deployment. For example, activating the `enable_acm` flag will automatically append to the list  the following operators required to deploy ACM to de ones added to the list.
 
 ```yaml
 opm_mirror_list:
-  - performance-addon-operator
-  - sriov-network-operator
-  - kubevirt-hyperconverged
-  - elasticsearch-operator
-  - cluster-logging
+  - skupper-operator
+  - servicemeshoperator
+  - serverless-operator
+```
+
+The list resulting list of operators to mirror is:
+
+```
+  - skupper-operator
+  - servicemeshoperator
+  - serverless-operator
+  - advanced-cluster-management
+  - redhat-oadp-operator
+  - multicluster-engine
 ```
 
 ## Interacting with your RHOCP Cluster
