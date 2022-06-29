@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "66c712ce_96140bce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-29T15:02:06Z",
+      "side": 1,
+      "message": "Just in case, in the job tested right now, the workaround was applied correctly: https://www.distributed-ci.io/jobs/06dfc9c1-b248-4dc5-89ce-d0c175a65d58/jobStates#85d375d2-c0eb-4c09-bb9e-bd1f2aa7ed05:file683",
+      "revId": "7a9d7d5acd82e2029cc1be0461247ea00c1c9107",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0c4e35e5_30838a63",
