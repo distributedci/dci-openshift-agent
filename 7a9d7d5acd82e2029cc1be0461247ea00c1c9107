@@ -50,6 +50,24 @@
       "message": "Pierre will be unhappy :P",
       "revId": "7a9d7d5acd82e2029cc1be0461247ea00c1c9107",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e5a581b5_aa08afb5",
+        "filename": "common-roles/check-resource/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-06-29T13:47:39Z",
+      "side": 1,
+      "message": "😂",
+      "parentUuid": "0c4e35e5_30838a63",
+      "revId": "7a9d7d5acd82e2029cc1be0461247ea00c1c9107",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
