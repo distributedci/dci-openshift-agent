@@ -85,6 +85,23 @@
       "parentUuid": "309726da_7dcc878b",
       "revId": "da6b184a030a60a8d2e5061ce775050fd49ddb4e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8b5e4de_870b2236",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-06-29T14:21:48Z",
+      "side": 1,
+      "message": "dci_prepare_cnf is already defined as \u0027false\u0027 by default in group_vars/all",
+      "revId": "da6b184a030a60a8d2e5061ce775050fd49ddb4e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
