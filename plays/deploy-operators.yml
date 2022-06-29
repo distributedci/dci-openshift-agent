@@ -240,7 +240,6 @@
     - hostvars.localhost.enable_acm|default(false)|bool
     - opm_mirror_list is defined
     - opm_mirror_list | length
-    - "'advanced-cluster-management' in opm_mirror_list"
 
 ### End ACM Operator deployment
 

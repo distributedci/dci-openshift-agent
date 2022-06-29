@@ -36,3 +36,24 @@ no_proxy_list: "{{ lookup('env','no_proxy') }}"
 dci_workarounds: []
 kubeconfig_path: "{{ dci_cluster_configs_dir }}/kubeconfig"
 oc_tool_path: "{{ dci_cluster_configs_dir }}/oc"
+# Lists of packages for each operator
+cnv_operator:
+  - kubevirt-hyperconverged
+elastic_search_operator:
+  - elasticsearch-operator
+cluster_logging_operator:
+  - cluster-logging
+mtc_operator:
+  - mtc_operator
+advanced_cluster_management:
+  - advanced-cluster-management
+  - redhat-oadp-operator
+  - multicluster-engine
+ocs_operator:
+  - ocs-operator
+local_storage_operator:
+  - local-storage-operator
+cnf_operators:
+  - sriov-network-operator
+  - performance-addon-operator
+...
