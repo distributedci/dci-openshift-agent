@@ -22,6 +22,30 @@
       },
       "revId": "e2ae36f6d7622afc1ff13f82b7e53e2e59d5b29f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f4de2e7_20c36aa3",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-30T15:17:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1d4d0ed9_f09188e3",
+      "range": {
+        "startLine": 40,
+        "startChar": 47,
+        "endLine": 40,
+        "endChar": 48
+      },
+      "revId": "e2ae36f6d7622afc1ff13f82b7e53e2e59d5b29f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
