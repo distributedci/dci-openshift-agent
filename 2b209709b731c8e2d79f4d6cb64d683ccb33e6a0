@@ -16,6 +16,23 @@
       "message": "Thx for your review Charles/Jorge !",
       "revId": "2b209709b731c8e2d79f4d6cb64d683ccb33e6a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a0c55c7_f60f48ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-06-30T17:46:08Z",
+      "side": 1,
+      "message": "check dallas ocp-4.9-vanilla ocp-4.10-upgrade openshift-vanilla:components\u003docp\u003d4.9.29 openshift-vanilla-upgrade-4.10:components\u003docp\u003d4.10.10",
+      "revId": "2b209709b731c8e2d79f4d6cb64d683ccb33e6a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
