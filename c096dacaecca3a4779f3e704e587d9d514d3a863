@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6ea6d2a_c7abf4f6",
+        "filename": "plays/obtain-mirror-list.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-06-30T14:15:04Z",
+      "side": 1,
+      "message": "I guess we need to define a default value for all these boolean values and document them in the readme, don\u0027t we? Because the debug job on libvirt failed because of this",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 21
+      },
+      "revId": "c096dacaecca3a4779f3e704e587d9d514d3a863",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
