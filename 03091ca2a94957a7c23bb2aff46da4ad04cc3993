@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a2ef649_6ab8842d",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-30T20:42:07Z",
+      "side": 1,
+      "message": "This is a list, not a string",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c417a85a_a27ce25d",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-30T20:42:07Z",
+      "side": 1,
+      "message": "Do you need to escape the underscores?",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d17be1d2_f6bb1ed0",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-30T20:42:07Z",
+      "side": 1,
+      "message": "nit: Could you create a list of the supported operators, next time we add one or remove one its easier for review, and also easier to read :)",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99ef9e7a_7cfd0970",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-30T20:42:07Z",
+      "side": 1,
+      "message": "This needs to be rewritten like this:\n\n    when: \u003e\n      (dci_prepare_cnf | bool) or\n      (enable_perf_addon | bool ) or\n      (enable_sriov | bool)",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3c6c754_2b755451",
+        "filename": "plays/obtain-mirror-list.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-30T20:42:07Z",
+      "side": 1,
+      "message": "If this appears to be the default value then you could set it in group_vars/all as well",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d64151c3_d01b1b08",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-30T20:42:07Z",
+      "side": 1,
+      "message": "You can avoid the comment by giving a better name to the task, e.g.  \"Get opm_mirror_list (operators to mirror)\"\n\nI wonder if the prefix \"dci-openshift-agent : \" needs to remain?",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "218a8809_ebc1d644",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-06-30T20:42:07Z",
+      "side": 1,
+      "message": "Similar as above, by giving a descriptive name you avoid the comment",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
