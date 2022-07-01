@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "997a6a32_dec3cce8",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-01T17:52:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4a2ef649_6ab8842d",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c417a85a_a27ce25d",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-06-30T20:42:07Z",
       "side": 1,
       "message": "Do you need to escape the underscores?",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "718f3cda_1e48ca28",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-01T17:52:54Z",
+      "side": 1,
+      "message": "no, just kept what was in place. It looks like in other readmes we are also escaping them",
+      "parentUuid": "c417a85a_a27ce25d",
       "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d7e4f8e_1ce6a819",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-01T17:52:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d17be1d2_f6bb1ed0",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "99ef9e7a_7cfd0970",
@@ -65,6 +119,24 @@
       "writtenOn": "2022-06-30T20:42:07Z",
       "side": 1,
       "message": "This needs to be rewritten like this:\n\n    when: \u003e\n      (dci_prepare_cnf | bool) or\n      (enable_perf_addon | bool ) or\n      (enable_sriov | bool)",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e8816d0_1f672ef5",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-01T17:52:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "99ef9e7a_7cfd0970",
       "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae5b6631_904b1c99",
+        "filename": "plays/obtain-mirror-list.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-01T17:52:54Z",
+      "side": 1,
+      "message": "It is not the default, it is only for disconnected mode.",
+      "parentUuid": "e3c6c754_2b755451",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d64151c3_d01b1b08",
@@ -103,6 +193,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bb3a5a4_1ca46864",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-01T17:52:54Z",
+      "side": 1,
+      "message": "removed the prefix",
+      "parentUuid": "d64151c3_d01b1b08",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "218a8809_ebc1d644",
@@ -116,6 +224,24 @@
       "writtenOn": "2022-06-30T20:42:07Z",
       "side": 1,
       "message": "Similar as above, by giving a descriptive name you avoid the comment",
+      "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "803c02ff_910f3095",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-01T17:52:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "218a8809_ebc1d644",
       "revId": "03091ca2a94957a7c23bb2aff46da4ad04cc3993",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
