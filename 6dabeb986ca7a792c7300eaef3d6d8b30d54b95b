@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a49ade2_9b18c67a",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-04T10:44:17Z",
+      "side": 1,
+      "message": "I guess that, since it is defined in group_vars/all, we don\u0027t need this",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 38
+      },
+      "revId": "6dabeb986ca7a792c7300eaef3d6d8b30d54b95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62ccfae5_7d2863bf",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-04T10:44:17Z",
+      "side": 1,
+      "message": "Is there any case in which we may need SRIOV but not PAO, or need PAO but not SRIOV? Because with the current, we are always forcing the usage of both of them.\n\nI\u0027m asking this because in this play, we are not using the booleans for PAO and SRIOV, and the individual operators for SRIOV and PAO are not defined in group_vars/all too (they\u0027re only defined for cnf_operators case, where both of them are used simultaneously). Just to be sure that we\u0027re doing what we expect.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "6dabeb986ca7a792c7300eaef3d6d8b30d54b95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
