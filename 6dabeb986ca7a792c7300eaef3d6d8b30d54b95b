@@ -93,6 +93,30 @@
       },
       "revId": "6dabeb986ca7a792c7300eaef3d6d8b30d54b95b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0236f691_79d3fb05",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-04T16:06:37Z",
+      "side": 1,
+      "message": "nevermind, also missed in group_vars",
+      "parentUuid": "ad5fecf8_75f8e6d7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "6dabeb986ca7a792c7300eaef3d6d8b30d54b95b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
