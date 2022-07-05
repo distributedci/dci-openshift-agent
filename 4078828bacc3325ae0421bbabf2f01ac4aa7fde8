@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9aaa1623_65b15098",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-05T06:55:30Z",
+      "side": 1,
+      "message": "From my side it\u0027s fine, let\u0027s see if the tests work completely.",
+      "revId": "4078828bacc3325ae0421bbabf2f01ac4aa7fde8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
