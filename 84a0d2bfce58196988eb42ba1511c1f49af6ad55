@@ -33,6 +33,23 @@
       "message": "LGTM",
       "revId": "84a0d2bfce58196988eb42ba1511c1f49af6ad55",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "effab001_b260e833",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-06T23:21:01Z",
+      "side": 1,
+      "message": "Can you merge this task with the one above and rename accordingly, you can loop the two files and reduce a task 😎",
+      "revId": "84a0d2bfce58196988eb42ba1511c1f49af6ad55",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
