@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ab8a560_4e0f93f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-06T20:54:12Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
+      "revId": "174865362ab7a380c7d2203405965ff033b7f311",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
