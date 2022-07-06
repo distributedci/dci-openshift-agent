@@ -16,6 +16,23 @@
       "message": "From my side it\u0027s fine, let\u0027s see if the tests work completely.",
       "revId": "4078828bacc3325ae0421bbabf2f01ac4aa7fde8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8270052_1f8ca665",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-06T11:29:44Z",
+      "side": 1,
+      "message": "Tests look fine from my side, but as I\u0027ve asked in the dallas-pipelines change, I wonder if we need to update the pipelines to use the new boolean variables before merging everything,",
+      "revId": "4078828bacc3325ae0421bbabf2f01ac4aa7fde8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
