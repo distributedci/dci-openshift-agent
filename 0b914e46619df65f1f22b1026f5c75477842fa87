@@ -50,6 +50,23 @@
       "message": "good idea, let\u0027s keep both files",
       "revId": "0b914e46619df65f1f22b1026f5c75477842fa87",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b503d19c_4c54a837",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-06T20:50:28Z",
+      "side": 1,
+      "message": "I think at this point the kubeadmin-password should be stored in \"{{ dci_cluster_configs_dir }}/auth/kubeadmin-password\"",
+      "revId": "0b914e46619df65f1f22b1026f5c75477842fa87",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
