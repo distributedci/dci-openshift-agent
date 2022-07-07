@@ -139,6 +139,24 @@
       "parentUuid": "cf9d5062_23acec44",
       "revId": "0b914e46619df65f1f22b1026f5c75477842fa87",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "879cdde8_b28caf73",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-07T17:41:03Z",
+      "side": 1,
+      "message": "Thank Manuel, my bad. I was trimming the path.",
+      "parentUuid": "1eed3f7a_54d33b7c",
+      "revId": "0b914e46619df65f1f22b1026f5c75477842fa87",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
