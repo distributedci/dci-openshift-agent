@@ -237,10 +237,11 @@
     - name: "configure-operators : Configure ACM operator"
       include_tasks: configure-acm.yml
   when:
-    - hostvars.localhost.enable_acm|default(false)|bool
-    - opm_mirror_list is defined
-    - opm_mirror_list | length
-    - "'advanced-cluster-management' in opm_mirror_list"
+    - hostvars.localhost.enable_acm | default(false) | bool
+    - not dci_disconnected | default(false) | bool or
+      ( opm_mirror_list is defined and
+        opm_mirror_list | length and
+        'advanced-cluster-management' in opm_mirror_list )
 
 ### End ACM Operator deployment
 
