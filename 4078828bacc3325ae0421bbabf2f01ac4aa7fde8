@@ -50,6 +50,23 @@
       "message": "LGTM, let\u0027s get it tested",
       "revId": "4078828bacc3325ae0421bbabf2f01ac4aa7fde8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f11e8614_c10cbb3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-07T03:25:11Z",
+      "side": 1,
+      "message": "\n\nTested the upgrade, no issues related to mirroring or operators deployments has been detected:\n\nhttps://www.distributed-ci.io/jobs/d699ea27-a928-49f6-8dde-8193433b0c99/jobStates - vcp-4.7\nhttps://www.distributed-ci.io/jobs/f74366b9-a6e3-4d63-ba5c-455f7c99d5d5/jobStates - vcp-upgrade-4.8\n\nChanges in the pipeline are enabling what is required according to the pipeline type: https://github.com/dci-labs/dallas-pipelines/pull/394",
+      "revId": "4078828bacc3325ae0421bbabf2f01ac4aa7fde8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
