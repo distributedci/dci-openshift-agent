@@ -121,6 +121,24 @@
       "parentUuid": "50ab1403_6ee52404",
       "revId": "0b914e46619df65f1f22b1026f5c75477842fa87",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1eed3f7a_54d33b7c",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-07T01:12:50Z",
+      "side": 1,
+      "message": "I do not know why does not work, from last test files are there:\n\n[dci-openshift-agent@server01 clusterconfigs-server09]$ ls -lZ\ntotal 119968\n-rw-r-----. 1 dci-openshift-agent dci-openshift-agent unconfined_u:object_r:var_lib_t:s0        23 Jul  6 20:40 kubeadmin-password\n-rw-r-----. 1 dci-openshift-agent dci-openshift-agent unconfined_u:object_r:var_lib_t:s0     12177 Jul  6 20:40 kubeconfig\n-rwxr-xr-x. 1 dci-openshift-agent dci-openshift-agent unconfined_u:object_r:var_lib_t:s0 122829960 Jul  6 20:40 oc\n[dci-openshift-agent@server01 clusterconfigs-server09]$ pwd\n/var/lib/dci-openshift-agent/clusterconfigs-server0",
+      "parentUuid": "cf9d5062_23acec44",
+      "revId": "0b914e46619df65f1f22b1026f5c75477842fa87",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
