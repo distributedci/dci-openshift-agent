@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "699f83fe_d2277a13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-07T19:45:17Z",
+      "side": 1,
+      "message": "Not sure what is the issue you are having, we installed it in disconnected several times. We are deprecating the use of the opm_mirror_list in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25390/12/plays/deploy-operators.yml that is ready to be merged.\n\n",
+      "revId": "33efdc77fac075d243231646b6d9e5ce7f6b277d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
