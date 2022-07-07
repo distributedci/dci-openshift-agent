@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9841453_fd14849b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-07T09:31:32Z",
+      "side": 1,
+      "message": "Hi Nacho, what does \u0027vsphere\u0027 install_type imply?",
+      "revId": "519dcbaf519a8d1b456a978c03855b1defc835c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
