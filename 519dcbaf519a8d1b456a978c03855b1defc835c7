@@ -16,6 +16,24 @@
       "message": "Hi Nacho, what does \u0027vsphere\u0027 install_type imply?",
       "revId": "519dcbaf519a8d1b456a978c03855b1defc835c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "612415b2_fdd00ae4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-07-08T08:34:38Z",
+      "side": 1,
+      "message": "I\u0027ll add this comment to the description of the CR.\n\nThis change is needed for our partner setting the lab on a vmware cluster instead of going baremetal.\n\nThe installation process is mostly the same as with a regular baremetal ipi, with the difference that the target cluster does not exist in advance. Instead, if you launch a manual installation, at some point the installer will prompt you for the platform type where you have to select \"vsphere\". The installer will prompt you then for some data related to the vCenter configuration and when launch, the installation will take care of instantiating the VMs and having them provisioned.\n\nThis means that, at least with the current solution, we can\u0027t go with the default install_type\u003dipi or the installer will try to pxe-boot a cluster that does not exist, so I\u0027m using install_type\u003dvsphere instead.\n\nThe problem is the mirror-ocp-release checks that the install_type is within a limited list of values and fails otherwise, so that\u0027s why this change is needed.",
+      "parentUuid": "b9841453_fd14849b",
+      "revId": "519dcbaf519a8d1b456a978c03855b1defc835c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
