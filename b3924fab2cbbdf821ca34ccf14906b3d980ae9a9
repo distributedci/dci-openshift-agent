@@ -33,6 +33,24 @@
       "message": "Looks great!!  I\u0027ll get my environment setup to test it as well.\n\nThanks!!",
       "revId": "b3924fab2cbbdf821ca34ccf14906b3d980ae9a9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81a44f36_dff216db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-07-08T17:09:38Z",
+      "side": 1,
+      "message": "here are the inventory changes I added to unify the directories, I feel like these should be in samples\n```\n    provision_cache_store: /var/cache/dci-openshift-agent\n    downloads_path: \"{{ provision_cache_store | default(ansible_env.HOME) }}\"\n    crucible_data_dir: /var/lib/crucible\n    assisted_installer_dir: \"{{ crucible_data_dir }}/ai\"\n    registry_dir: \"{{ crucible_data_dir }}/registry\"\n    vm_create_scripts_dir: \"{{ crucible_data_dir }}/vm_scripts\"\n    sushy_dir: \"{{ crucible_data_dir }}/sushy\"\n    http_dir: \"{{ crucible_data_dir }}/http\"\n    iso_download_dest_path: \"{{ http_dir }}/data\"\n    rootfs_directory: \"{{ iso_download_dest_path }}/pxe\"\n\n```",
+      "parentUuid": "46f87e49_a76fcade",
+      "revId": "b3924fab2cbbdf821ca34ccf14906b3d980ae9a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
