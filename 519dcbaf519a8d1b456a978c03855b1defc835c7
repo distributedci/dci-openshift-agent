@@ -34,6 +34,24 @@
       "parentUuid": "b9841453_fd14849b",
       "revId": "519dcbaf519a8d1b456a978c03855b1defc835c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a33c722_4c6b2e85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-11T09:32:25Z",
+      "side": 1,
+      "message": "Thanks Nacho, I supposed that, But I still have some questions. The main one is, is there any place in which install_type\u003d\u0027vsphere\u0027 is documented?",
+      "parentUuid": "612415b2_fdd00ae4",
+      "revId": "519dcbaf519a8d1b456a978c03855b1defc835c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
