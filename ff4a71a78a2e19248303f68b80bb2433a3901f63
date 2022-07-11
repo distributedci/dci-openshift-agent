@@ -16,6 +16,23 @@
       "message": "Thanks!",
       "revId": "ff4a71a78a2e19248303f68b80bb2433a3901f63",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c07a642c_5cfaa5c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-11T23:04:16Z",
+      "side": 1,
+      "message": "This issue is preventing the doaa from executing in BOS2. Example of the issue:\n\n$ sed -n -e \u0027s@.*changed:.*/clusterconfigs-\\([^\\\"]*\\)/kubeconfig.*@\\1@p\u0027 ~/.dci-queue/log/vpool/594\nserver06\nserver06",
+      "revId": "ff4a71a78a2e19248303f68b80bb2433a3901f63",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
