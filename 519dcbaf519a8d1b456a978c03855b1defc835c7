@@ -52,6 +52,24 @@
       "parentUuid": "612415b2_fdd00ae4",
       "revId": "519dcbaf519a8d1b456a978c03855b1defc835c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a82673a9_3282f033",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-11T09:43:18Z",
+      "side": 1,
+      "message": "Okey, I\u0027m answering myself: now I can see you\u0027ve been creating some hooks for the specific partner to match install_type \u003d vsphere.\n\nThen, I am wondering what happens, in this case, when the DCI job reaches the installing state. In the install play, there are different tasks depending on the install_type, but nothing related to vsphere. Is it needed some extra tasks there? Or nothing needed? That\u0027s why I was asking for documentation, because with this change, vsphere will appear in dci-openshift-agent code but there are no more references regarding this in the code",
+      "parentUuid": "8a33c722_4c6b2e85",
+      "revId": "519dcbaf519a8d1b456a978c03855b1defc835c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
