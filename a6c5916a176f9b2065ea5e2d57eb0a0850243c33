@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a03a2883_32a55a2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 65
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-12T12:02:03Z",
+      "side": 1,
+      "message": "Hi Bill, are you having issues with dci-check-change tests on BOS2 with assisted option? I can try to check what\u0027s going on and propose some changes if I find the issue, if you want",
+      "revId": "a6c5916a176f9b2065ea5e2d57eb0a0850243c33",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
