@@ -34,6 +34,24 @@
       "parentUuid": "a03a2883_32a55a2d",
       "revId": "a6c5916a176f9b2065ea5e2d57eb0a0850243c33",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f23512c_e1dd1990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 65
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-12T12:17:23Z",
+      "side": 1,
+      "message": "I have to check it, because the hosts file that we are generating have been reviewed for libvirt and sno modes, but not for assisted. Also, we are not executing ocp_on_libvirt and sno_on_libvirt without using localhost, so relying on the config that is provided in the hosts file used to call these samples instead (it was a requirement for BOS2). I\u0027ll take a look to that and I\u0027ll tell you",
+      "parentUuid": "e5de11a1_b359fc0a",
+      "revId": "a6c5916a176f9b2065ea5e2d57eb0a0850243c33",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
