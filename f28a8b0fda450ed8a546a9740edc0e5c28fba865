@@ -16,6 +16,29 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "f28a8b0fda450ed8a546a9740edc0e5c28fba865",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59bb8f01_8de59b8d",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-13T10:56:43Z",
+      "side": 1,
+      "message": "libvirt job is complaining about this task: https://www.distributed-ci.io/jobs/0f6732e5-20fa-46ce-ba68-daec3333026e/jobStates#d643e427-61a6-43ff-a3a9-b3eb1a7e5ce3:file9, it\u0027s complaining about local_registry_host undefined variable, even though it should be applying the second condition from the ternary. I think you\u0027ll need to recheck this and to reformulate it to avoid this issue, maybe testing locally before integrating here.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 137
+      },
+      "revId": "f28a8b0fda450ed8a546a9740edc0e5c28fba865",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
