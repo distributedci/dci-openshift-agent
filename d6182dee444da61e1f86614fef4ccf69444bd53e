@@ -123,6 +123,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "24eead17_790108e2",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-07-14T09:06:06Z",
+      "side": 1,
+      "message": "OK, Beto,\n\nSo I removed the part where we try to resolve the image url out of the ICSP so now we only rely on the local_registry if it\u0027s defined.\n\nI\u0027m checking the output of the latest jobs and they seem to work as expected.\n\nI hope this sets the CR ready for merging.",
+      "parentUuid": "c98f9c8c_b5db20b0",
+      "revId": "d6182dee444da61e1f86614fef4ccf69444bd53e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f2a82ca_0d744ec2",

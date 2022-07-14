@@ -39,6 +39,30 @@
       },
       "revId": "f28a8b0fda450ed8a546a9740edc0e5c28fba865",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49f0b37f_3a83cc36",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-07-14T09:06:06Z",
+      "side": 1,
+      "message": "Funny behavior.\n\nI ran some tests and it looks that local_registry_host is only assessed in advance of resolving the ternary if it\u0027s part or an operation:\n\n 2022-07-14 10:35:58 ⌚  fedora in ~\n○ → ansible localhost -m debug -a \"msg\u003d\u0027variable is {{ foo | default(False) | bool | ternary(foo, \\\"no\\\")  }}\u0027\"\nlocalhost | SUCCESS \u003d\u003e {\n    \"msg\": \"variable is no\"\n}\n\n 2022-07-14 10:36:12 ⌚  fedora in ~\n○ → ansible localhost -m debug -a \"msg\u003d\u0027variable is {{ foo | default(False) | bool | ternary(\\\"%s\\\" % foo, \\\"no\\\")  }}\u0027\"\nlocalhost | FAILED! \u003d\u003e {\n    \"msg\": \"The task includes an option with an undefined variable. The error was: \u0027foo\u0027 is undefined\"\n}\n\n 2022-07-14 10:37:04 ⌚  fedora in ~\n○ → ansible localhost -m debug -a \"msg\u003d\u0027variable is {{ foo | default(False) | bool | ternary(\\\"var: \\\" + foo, \\\"no\\\")  }}\u0027\"\nlocalhost | FAILED! \u003d\u003e {\n    \"msg\": \"The task includes an option with an undefined variable. The error was: \u0027foo\u0027 is undefined\"\n}",
+      "parentUuid": "59bb8f01_8de59b8d",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 137
+      },
+      "revId": "f28a8b0fda450ed8a546a9740edc0e5c28fba865",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
