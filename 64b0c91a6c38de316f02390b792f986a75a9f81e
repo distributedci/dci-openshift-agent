@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "64b0c91a6c38de316f02390b792f986a75a9f81e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9d3d241_69f1d980",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-15T15:57:57Z",
+      "side": 1,
+      "message": "Nacho, thanks for retaking this, I was looking at the results, and in the libvirt job, not all logs were uploaded, maybe not an issue with your patch but in the BOS2 lab, the task \"[Get logs from OCP deployment]\" shows this error: \"ssh: connect to host provisionhost port 22: No route to host\", it would be good to fix that and confirm your change is working well in connected envs.\n\nIn the dallas job the logs were pulled, so I think you change is fine for disconnected envs, but the task \"[Get logs from OCP deployment]\" prints the output of collected logs, in my previous feedback I had suggested to include \"nolog: true\" because it\u0027s a lot of stuff if possible, what do you think?",
+      "revId": "64b0c91a6c38de316f02390b792f986a75a9f81e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
