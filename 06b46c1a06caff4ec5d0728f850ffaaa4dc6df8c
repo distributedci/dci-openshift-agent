@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d74f8876_d5288c46",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-15T13:58:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03264fc7_968a42db",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b2fed991_abd7ccf9",
@@ -88,6 +106,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5655f09e_51e3ba94",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-15T13:58:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "82356f19_ab9496db",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "071951cc_b0efa726",
@@ -101,6 +137,24 @@
       "writtenOn": "2022-06-23T13:33:31Z",
       "side": 1,
       "message": "Same comment as the previous retry loop, this may take a long time to fail if the environment is not well configured",
+      "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8f472e4_2e22d935",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-15T13:58:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "071951cc_b0efa726",
       "revId": "06b46c1a06caff4ec5d0728f850ffaaa4dc6df8c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
