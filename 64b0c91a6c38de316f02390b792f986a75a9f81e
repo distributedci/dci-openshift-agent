@@ -33,6 +33,24 @@
       "message": "Nacho, thanks for retaking this, I was looking at the results, and in the libvirt job, not all logs were uploaded, maybe not an issue with your patch but in the BOS2 lab, the task \"[Get logs from OCP deployment]\" shows this error: \"ssh: connect to host provisionhost port 22: No route to host\", it would be good to fix that and confirm your change is working well in connected envs.\n\nIn the dallas job the logs were pulled, so I think you change is fine for disconnected envs, but the task \"[Get logs from OCP deployment]\" prints the output of collected logs, in my previous feedback I had suggested to include \"nolog: true\" because it\u0027s a lot of stuff if possible, what do you think?",
       "revId": "64b0c91a6c38de316f02390b792f986a75a9f81e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d25647d0_9e963b47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-18T03:28:38Z",
+      "side": 1,
+      "message": "Yeah, this doesn\u0027t seem related to this change.\n\nNot sure if what is missing for libvirt (https://github.com/dci-labs/bos2-ci-config/blob/main/files/ocp_on_libvirt/server02/server02-hosts) is the definition of the group [provisionhost] as it is for SNO (https://github.com/dci-labs/bos2-ci-config/blob/67700d50ada5826d17438b232a55458b3791a4c9/files/sno_on_libvirt/server02-sno/server02-sno-hosts#L4)\n\nRegards",
+      "parentUuid": "d9d3d241_69f1d980",
+      "revId": "64b0c91a6c38de316f02390b792f986a75a9f81e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
