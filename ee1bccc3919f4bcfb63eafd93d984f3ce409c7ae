@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d7abbb2_70f79e13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-18T16:28:55Z",
+      "side": 1,
+      "message": "Thanks for doing all this cleanup! only one question and the rest is nice-to-have but not required.",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e649a34_830ab199",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-18T16:28:55Z",
+      "side": 1,
+      "message": "Is this meant to be part of the change? or it was for testing purposes?",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fb03bd6_b00da4f3",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-18T16:28:55Z",
+      "side": 1,
+      "message": "nit:\n    name: version",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d6739a1_37083f62",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-18T16:28:55Z",
+      "side": 1,
+      "message": "nit: instead of nodes_status wouldn\u0027t it be upgrade_status?",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75ff6c47_4d5a1666",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-18T16:28:55Z",
+      "side": 1,
+      "message": "nit:\n    name: version",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5b9637b_802f7212",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-18T16:28:55Z",
+      "side": 1,
+      "message": "nit: nodes_status vs upgrade_status?",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
