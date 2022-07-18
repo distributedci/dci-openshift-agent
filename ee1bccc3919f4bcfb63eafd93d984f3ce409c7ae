@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8dcf043_5426626f",
+        "filename": "common-roles/check-resource/tasks/main.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-18T17:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e649a34_830ab199",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6fb03bd6_b00da4f3",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-07-18T16:28:55Z",
       "side": 1,
       "message": "nit:\n    name: version",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c4f11cf_7c63bd43",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-18T17:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6fb03bd6_b00da4f3",
       "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -69,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed9202e8_d2954696",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-18T17:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d6739a1_37083f62",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "75ff6c47_4d5a1666",
@@ -86,6 +140,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "595b9675_e9dda868",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-18T17:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "75ff6c47_4d5a1666",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a5b9637b_802f7212",
@@ -99,6 +171,24 @@
       "writtenOn": "2022-07-18T16:28:55Z",
       "side": 1,
       "message": "nit: nodes_status vs upgrade_status?",
+      "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "712ac950_71b4d1df",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-18T17:43:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a5b9637b_802f7212",
       "revId": "ee1bccc3919f4bcfb63eafd93d984f3ce409c7ae",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
