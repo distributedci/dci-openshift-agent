@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ad60724_6d441520",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-19T16:59:43Z",
+      "side": 1,
+      "message": "The last job in dallas failed because of the mac issue in the bonding on OCP 4.10 after PAO rebooted the node, but the patch worked, the baremetal repo was not cloned.\nhttps://www.distributed-ci.io/jobs/cf1e7de5-49a8-4f87-96ab-78bb2b623379/jobStates#133ede0b-9f6e-4d13-9bbd-7767ad8d335c:file107\nI\u0027m testing SNO on OCP 4.9 just to be sure all is ok",
+      "revId": "7f9a3b919d1e82eccbc618942b5020e04473e2a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
