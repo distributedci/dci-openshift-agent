@@ -33,6 +33,24 @@
       "message": "We need to test the sno scenario as well",
       "revId": "e37f7ddee12ffbb9a904e3b6a6fa563e98ccdd3d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bb2194e_7dbe4122",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-19T21:12:54Z",
+      "side": 1,
+      "message": "Thanks, testing of SNO for patch-set 3 in progress",
+      "parentUuid": "c4c5f205_d9168494",
+      "revId": "e37f7ddee12ffbb9a904e3b6a6fa563e98ccdd3d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
