@@ -52,6 +52,23 @@
       "parentUuid": "e5de11a1_b359fc0a",
       "revId": "a6c5916a176f9b2065ea5e2d57eb0a0850243c33",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74031f11_cc0c868b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 65
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-07-19T19:28:47Z",
+      "side": 1,
+      "message": "I have verified that this and my patch work with all three build releases, GA, RC, Dev.\n\nhttps://www.distributed-ci.io/jobs/e9e3785c-62e2-45de-879c-0f6998a39139/jobStates\nhttps://www.distributed-ci.io/jobs/2ff4dc71-7210-41d3-b4c1-35865e94cc6f/jobStates\nhttps://www.distributed-ci.io/jobs/efa2f463-d2f2-4abd-80b7-1c30fa508e86/jobStates",
+      "revId": "a6c5916a176f9b2065ea5e2d57eb0a0850243c33",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
