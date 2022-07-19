@@ -16,6 +16,46 @@
       "message": "check dallas ocp-4.8-vanilla ocp-4.9-upgrade openshift-vanilla:components\u003docp\u003d4.8.46 openshift-vanilla-upgrade-4.9:ansible_extravars\u003denable_cnv:true openshift-vanilla-upgrade-4.9:components\u003docp\u003d4.9.41",
       "revId": "39ef2d3c28cad5156924835a375898dcb2aaaaa1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e3f7991_8f120d8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-19T15:13:33Z",
+      "side": 1,
+      "message": "Two minor comments, following Tony\u0027s comment, rest looks fine",
+      "revId": "39ef2d3c28cad5156924835a375898dcb2aaaaa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba95a533_4c98ae5d",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-19T15:13:33Z",
+      "side": 1,
+      "message": "Same, missed `name: version` here?",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 162,
+        "endChar": 32
+      },
+      "revId": "39ef2d3c28cad5156924835a375898dcb2aaaaa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
