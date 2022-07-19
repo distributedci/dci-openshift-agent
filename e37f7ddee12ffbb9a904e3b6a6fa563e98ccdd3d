@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.9-vanilla",
       "revId": "e37f7ddee12ffbb9a904e3b6a6fa563e98ccdd3d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4c5f205_d9168494",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-19T20:36:56Z",
+      "side": 1,
+      "message": "We need to test the sno scenario as well",
+      "revId": "e37f7ddee12ffbb9a904e3b6a6fa563e98ccdd3d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
