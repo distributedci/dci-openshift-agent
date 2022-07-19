@@ -33,6 +33,24 @@
       "message": "The pre-run.yml play runs in localhost, it should be possible to reference the vars directly, i.e.\n\n    - install_type is undefined or install_type \u003d\u003d \"ipi\"\n\nNow I wonder why are we doing the long name on the rest of the references 😕",
       "revId": "7f9a3b919d1e82eccbc618942b5020e04473e2a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9e78495_9642f73c",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-19T18:08:18Z",
+      "side": 1,
+      "message": "I updated the PR to remove the full path of the variable install_type, I can do another change later and standarize the vars in the pre-run.yml to clean other references",
+      "parentUuid": "93db6917_81e26619",
+      "revId": "7f9a3b919d1e82eccbc618942b5020e04473e2a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
