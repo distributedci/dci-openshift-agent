@@ -87,6 +87,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdd83108_43727193",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-19T15:27:46Z",
+      "side": 1,
+      "message": "Retaking this, it seems somebody change it back recently, I\u0027ll resume testing\n[dciteam@jumphost ~]$  ls -ld /var/lib/dci-openshift-agent/\ndrwxr-xr-x. 13 dci-openshift-agent dci-openshift-agent 269 Jul 15 14:52 /var/lib/dci-openshift-agent/",
+      "parentUuid": "83a027c2_98b7cc32",
+      "revId": "087ee21fe8ac08aa81ed7620c03839350c99b397",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a6dabd5e_f125f00d",
@@ -100,6 +118,30 @@
       "writtenOn": "2022-07-12T11:59:11Z",
       "side": 1,
       "message": "whitespace",
+      "range": {
+        "startLine": 215,
+        "startChar": 7,
+        "endLine": 215,
+        "endChar": 8
+      },
+      "revId": "087ee21fe8ac08aa81ed7620c03839350c99b397",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b70212e6_d475b285",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-19T15:27:46Z",
+      "side": 1,
+      "message": "Thanks Ramon, fixed it in patch-set 2",
+      "parentUuid": "a6dabd5e_f125f00d",
       "range": {
         "startLine": 215,
         "startChar": 7,
