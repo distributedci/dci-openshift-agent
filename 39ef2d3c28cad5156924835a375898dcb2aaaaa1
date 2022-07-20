@@ -71,6 +71,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8740ddbc_9070e725",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-20T11:34:40Z",
+      "side": 1,
+      "message": "I was refering to this in fact. `name: version` missed here?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 32
+      },
+      "revId": "39ef2d3c28cad5156924835a375898dcb2aaaaa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ba95a533_4c98ae5d",
         "filename": "plays/upgrade.yml",
         "patchSetId": 25
@@ -106,6 +129,30 @@
       "side": 1,
       "message": "Are you sure ? 😄",
       "parentUuid": "ba95a533_4c98ae5d",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 162,
+        "endChar": 32
+      },
+      "revId": "39ef2d3c28cad5156924835a375898dcb2aaaaa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92c95974_255a648b",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-20T11:34:40Z",
+      "side": 1,
+      "message": "hehe true! I commented the wrong task",
+      "parentUuid": "31d6f7d3_db40b4f4",
       "range": {
         "startLine": 162,
         "startChar": 0,
