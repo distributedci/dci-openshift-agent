@@ -70,6 +70,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "09bbb57c_4e43697b",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-21T19:39:01Z",
+      "side": 1,
+      "message": "This is a great way to pass the local registry (if any) down to the script 🎉\n\nI think you could rewrite it like this, and avoid the disconnected part, as it\u0027s possible to have a local_registry even if is connected:\n\n    registry: \"{{ local_registry_host | default(\u0027\u0027) }}:{{ local_registry_port | default(\u0027\u0027) }}\"",
+      "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "d5c42109_a67091e7",
@@ -83,6 +100,40 @@
       "writtenOn": "2022-07-21T08:23:34Z",
       "side": 1,
       "message": "The solution was in this line.\n\nThe get-logs script must get the connection string to the target host passed as an argument.\n\nIn the original version of the code, we just took the inventory name of the provision host as resolved by the lookup group[\u0027provisioner\u0027][0].\n\nThis used to work on environments where you have a single cluster and a single provision host. so the inventory name \"provisionhost\" was resolved either through the hosts file, or through DNS by looking up the default domain.\n\nIn BOS2 we have 9 clusters so provision hosts need their domain to be explicitly defined. that\u0027s why we moved to use the ansible host name instead of the inventory host name.",
+      "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f58aa30e_0006c27e",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-21T19:39:01Z",
+      "side": 1,
+      "message": "Since we\u0027re passing the local registry from ansible, we don\u0027t need to calculate it any longer, this can be removed.",
+      "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb096ddf_c4da3396",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-21T19:39:01Z",
+      "side": 1,
+      "message": "Here the comparison would change as with an empty local_registry_* values a `:` (colon) would be passed, then something like this should be done\n\n    if [[ ${registry} !\u003d \u0027:\u0027 ]]; then",
       "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
