@@ -33,6 +33,24 @@
       "message": "LGTM, by the way Pierre, how was the kubeconfig issue finally fixed? :)",
       "revId": "d4d2c2f97dc23d9a3782db291e684088ab74ef26",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "280c4780_b83f2556",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 27
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-21T12:25:12Z",
+      "side": 1,
+      "message": "Thanks Ramon.\nIt was due to a duplicate name of facts. I just changed the fact\u0027s name on the upgrade play.\nThis debug task helped me to understand the issue:\nhttps://www.distributed-ci.io/jobs/dfae4be2-9ac5-471f-a631-e688d25755bc/jobStates#29ff111e-1d1e-4aa1-b9ac-a58e2c7987e5:file33",
+      "parentUuid": "a38e1ede_c53a7611",
+      "revId": "d4d2c2f97dc23d9a3782db291e684088ab74ef26",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
