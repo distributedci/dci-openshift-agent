@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44ffa30d_49e5a521",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-21T04:00:00Z",
+      "side": 1,
+      "message": "Nacho, I see logs were collected this time in libvirt too, so that\u0027s good, what was the solution? :)",
+      "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
