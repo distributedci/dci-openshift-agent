@@ -86,6 +86,24 @@
       "parentUuid": "e087e7e5_44f93de5",
       "revId": "db243b9969ce4bd597b3ce7e2959456678e56885",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe1f3fc4_b5b5622a",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-22T22:06:18Z",
+      "side": 1,
+      "message": "I see that now that you send the must-gather output to /dev/null is not as chatty as before, so no need for the no_log",
+      "parentUuid": "e6123914_e24f8f9f",
+      "revId": "db243b9969ce4bd597b3ce7e2959456678e56885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

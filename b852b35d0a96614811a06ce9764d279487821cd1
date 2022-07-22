@@ -16,6 +16,23 @@
       "message": "Alright, this seems to be in good shape now. I\u0027ve made few changes mostly to the play rather than the script. I\u0027ve also updated the commit to reflect the actual change.\n\nTo address the concern of the task being too chatty I\u0027ve quiet the must-gather stdout, stderr will be caught so we can troubleshoot better.\n\nTest in Dallas is now working, the script succeeds and the log is uploaded into the job:\n\n- https://www.distributed-ci.io/jobs/fa92a1be-a084-45d4-9bee-3d72c8cd3fb6/jobStates#5df7a2a3-0cec-4aff-aabb-a28f3b71659a:file9\n\nTest in libvirt (BOS2) is also working and the log is also uploaded into the job:\n\n- https://www.distributed-ci.io/jobs/4936181c-131e-4d9b-ac47-93900e8780ea/jobStates#52326c75-3590-4893-b066-127f129bab48:file7",
       "revId": "b852b35d0a96614811a06ce9764d279487821cd1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff41ed78_efa41f71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-22T22:06:18Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "b852b35d0a96614811a06ce9764d279487821cd1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
