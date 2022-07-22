@@ -33,6 +33,69 @@
       "message": "check --assisted",
       "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39a7bf80_fab84270",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 67
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-22T14:23:04Z",
+      "side": 1,
+      "message": "I\u0027ve left some comments here.\n\nAlso, after addressing all the changes, if you need to merge this change and https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25428/6, I\u0027d recommend you to omit \"Test-Hints: assisted\" so that it passes the dci-check-change job on libvirt mode, even though it\u0027s not executing assisted installer. This is because:\n\n- with this, we can confirm we are not breaking the standard installation we follow\n- with the current configuration we have, it will not pass the assisted installer on BOS2. We need to update test-runner and the tasks to adapt this new deployment to BOS2 characteristics (1 jumphost that can access to 9 servers in which we can deploy VMs to emulate these scenarios), and I\u0027ll need time for that, because this is more complex than expected for me. Also, I\u0027ll be on PTO next week... so that I\u0027ll not have enough time for giving you a solution for dci-check-change job in BOS2.\n\nSo, as I said, if you need to merge the change, just test without using \"Test-Hints: assisted\" and let\u0027s check the issues with dci-check-change in BOS2 in a separate change.",
+      "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "760a82e1_7f4899ba",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-22T14:23:04Z",
+      "side": 1,
+      "message": "In the original code right now, this is still \"pre-run\" tag, isn\u0027t it? So, we don\u0027t need to split \"launch pre-run\" here again, do we?",
+      "range": {
+        "startLine": 152,
+        "startChar": 6,
+        "endLine": 152,
+        "endChar": 13
+      },
+      "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfacbd5b_a5c8e286",
+        "filename": "samples/assisted/hosts.in",
+        "patchSetId": 67
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-22T14:23:04Z",
+      "side": 1,
+      "message": "Is this the hosts file that is always used when running assisted installer? because, for BOS2, we\u0027ll need to adapt this to the infrastructure we have there, which are 9 different servers in which we can create VMs to emulate this.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

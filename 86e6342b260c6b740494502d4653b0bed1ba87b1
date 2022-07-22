@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b351f136_b002d869",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-07-22T14:23:04Z",
+      "side": 1,
+      "message": "And is there any way of setting a `when` condition for this `import_playbook`? Something like `install_type is defined and install_type \u003d\u003d \u0027assisted\u0027`. Because I\u0027ve seen there are plenty of these conditions within plays/assisted-pre-run.yml and plays/assisted-install.yml, and maybe it would be easier to declare them once here in the main playbook and remove the other references in assisted installer plays.\n\nI\u0027m also a bit concerned about this because, by following this approach, I guess all the DCI jobs will run this import_playbook and try to execute the tasks included there, and if the install_type condition is missed in any task (and I\u0027ve seen there are tasks there that don\u0027t have that condition specified), the job will fail or do unexpected things.\n\nThat\u0027s why, if we can leave the condition just here, it would be better, I think.",
+      "parentUuid": "6654babe_a92b4853",
+      "revId": "86e6342b260c6b740494502d4653b0bed1ba87b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a4faa518_9d7205dc",
         "filename": "plays/assisted-install.yml",
         "patchSetId": 12
