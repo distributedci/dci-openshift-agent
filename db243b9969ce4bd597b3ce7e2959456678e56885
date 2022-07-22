@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "db243b9969ce4bd597b3ce7e2959456678e56885",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba72f348_092ac259",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-22T17:00:35Z",
+      "side": 1,
+      "message": "Last job failed but the log is hidden so is unclear why",
+      "revId": "db243b9969ce4bd597b3ce7e2959456678e56885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "257006af_73f5a8dc",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-22T17:00:35Z",
+      "side": 1,
+      "message": "Any reason why to hide the output?",
+      "revId": "db243b9969ce4bd597b3ce7e2959456678e56885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
