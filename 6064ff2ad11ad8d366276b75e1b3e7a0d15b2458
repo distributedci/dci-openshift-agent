@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "6064ff2ad11ad8d366276b75e1b3e7a0d15b2458",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b98fe8e_d2888db5",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-22T18:04:19Z",
+      "side": 1,
+      "message": "This is the reason of the failure:\n\n    The error was: \u0027ansible.vars.hostvars.HostVarsVars object\u0027 has no attribute \u0027ansible_host\n\nFrom the commit log, seems like the reason to do this is to avoid using inventory names and use hostnames so resolution is accurate. But, this is only available *IF* defined in the inventory. In Dallas we don\u0027t define ansible_hosts, we rely on the name of the host is the resolvable name of it, as compared with BOS2 where the inventory using ansible_host to define the resolvable FQDN.\n\nI\u0027ll submit a fix to allow them both",
+      "revId": "6064ff2ad11ad8d366276b75e1b3e7a0d15b2458",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
