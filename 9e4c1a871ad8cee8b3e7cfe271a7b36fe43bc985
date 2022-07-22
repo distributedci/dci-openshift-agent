@@ -117,6 +117,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f4383c8_b04b9c47",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-07-22T15:36:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b04aacc5_78912145",
+      "range": {
+        "startLine": 152,
+        "startChar": 6,
+        "endLine": 152,
+        "endChar": 13
+      },
+      "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dfacbd5b_a5c8e286",
