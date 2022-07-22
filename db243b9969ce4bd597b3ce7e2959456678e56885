@@ -68,6 +68,24 @@
       "parentUuid": "257006af_73f5a8dc",
       "revId": "db243b9969ce4bd597b3ce7e2959456678e56885",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6123914_e24f8f9f",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-07-22T17:31:28Z",
+      "side": 1,
+      "message": "Thanks for the clarification Manny, I\u0027ve enabled it back to understand what\u0027s going on, I\u0027m currently troubleshooting and is required",
+      "parentUuid": "e087e7e5_44f93de5",
+      "revId": "db243b9969ce4bd597b3ce7e2959456678e56885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
