@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb01a3b1_a7e4a0b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 67
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-07-22T15:34:51Z",
+      "side": 1,
+      "message": "Thanks Ramon, will remove the test hint",
+      "parentUuid": "39a7bf80_fab84270",
+      "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "760a82e1_7f4899ba",
@@ -77,6 +95,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b04aacc5_78912145",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-07-22T15:34:51Z",
+      "side": 1,
+      "message": "I think this is a typo, this sets the job status to \"running\", this was done at the very end of the pre-run block, it is now its own block with 1 task, I will update the name of the task",
+      "parentUuid": "760a82e1_7f4899ba",
+      "range": {
+        "startLine": 152,
+        "startChar": 6,
+        "endLine": 152,
+        "endChar": 13
+      },
+      "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dfacbd5b_a5c8e286",
         "filename": "samples/assisted/hosts.in",
         "patchSetId": 67
@@ -88,6 +130,30 @@
       "writtenOn": "2022-07-22T14:23:04Z",
       "side": 1,
       "message": "Is this the hosts file that is always used when running assisted installer? because, for BOS2, we\u0027ll need to adapt this to the infrastructure we have there, which are 9 different servers in which we can create VMs to emulate this.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "9e4c1a871ad8cee8b3e7cfe271a7b36fe43bc985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c2059df_650b97dc",
+        "filename": "samples/assisted/hosts.in",
+        "patchSetId": 67
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-07-22T15:34:51Z",
+      "side": 1,
+      "message": "yes this is the template we\u0027re using for testing a libvirt env with AI",
+      "parentUuid": "dfacbd5b_a5c8e286",
       "range": {
         "startLine": 1,
         "startChar": 0,
