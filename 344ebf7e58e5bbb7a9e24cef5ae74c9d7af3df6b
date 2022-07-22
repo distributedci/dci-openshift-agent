@@ -89,6 +89,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "a4522c5c_df81cf33",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-07-22T08:13:30Z",
+      "side": 1,
+      "message": "thanks for you suggestions, Tony. I\u0027m adding them to the code.",
+      "parentUuid": "09bbb57c_4e43697b",
+      "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "d5c42109_a67091e7",
         "filename": "plays/get-logs.yml",
         "patchSetId": 13
@@ -121,6 +139,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d7794ed_8172c02a",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-07-22T08:13:30Z",
+      "side": 1,
+      "message": "idem",
+      "parentUuid": "f58aa30e_0006c27e",
+      "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb096ddf_c4da3396",
@@ -134,6 +170,24 @@
       "writtenOn": "2022-07-21T19:39:01Z",
       "side": 1,
       "message": "Here the comparison would change as with an empty local_registry_* values a `:` (colon) would be passed, then something like this should be done\n\n    if [[ ${registry} !\u003d \u0027:\u0027 ]]; then",
+      "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7307af6a_56e7ca37",
+        "filename": "plays/scripts/get-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-07-22T08:13:30Z",
+      "side": 1,
+      "message": "idem",
+      "parentUuid": "bb096ddf_c4da3396",
       "revId": "344ebf7e58e5bbb7a9e24cef5ae74c9d7af3df6b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
