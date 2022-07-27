@@ -1,0 +1,26 @@
+---
+- name: Create hosts inventory file
+  hosts: provisioner
+  tasks:
+    - name: Generating hosts inventory file
+      template:
+        src: ./templates/hosts.j2
+        dest: "{{ inventory_prefix }}hosts"
+      vars:
+        input_prefix: "{{ lookup('env', 'PREFIX') }}"
+        inventory_prefix: "{{ (input_prefix | replace('-p ', '')) + '-' if input_prefix != '' else '' }}"
+      delegate_to: localhost
+    - name: Create cache_dir_base Directory
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+      loop:
+        - cache_dir_base
+        - assisted_installer_dir
+        - registry_dir
+        - vm_create_scripts_dir
+        - sushy_dir
+        - http_dir
+        - iso_download_dest_path
+        - rootfs_directory
