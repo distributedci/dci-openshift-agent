@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d4fba6e_b85fe685",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-07-27T13:14:01Z",
+      "side": 1,
+      "message": "I\u0027ve updated how we generate a working hosts file for assisted installs.  There will be an accompanying PR for dci-labs/bos2-ci-config.",
+      "revId": "031f475b9f09fe2a215edca363cc8d30a445fa67",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
