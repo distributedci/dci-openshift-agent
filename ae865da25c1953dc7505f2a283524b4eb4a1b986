@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f249941_8f345bf7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-07-27T18:04:45Z",
+      "side": 1,
+      "message": "This has happened with Ericsson, https://www.distributed-ci.io/jobs/d53c79f7-8a7c-46fa-93ab-2519b8cd0286/jobStates#073558c4-d039-4c8c-b247-da385439cf94:file279",
+      "revId": "ae865da25c1953dc7505f2a283524b4eb4a1b986",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
