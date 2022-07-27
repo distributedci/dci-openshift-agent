@@ -83,45 +83,45 @@ all:
 
     # HTTP Store Configuration
     # ISO name must include the `discovery` directory if you have a SuperMicro machine
-    discovery_iso_name: "discovery/{{ cluster_name }}/discovery-image.iso"
+    discovery_iso_name: "discovery/{{ '{{ cluster_name }}/discovery-image.iso' }}"
 
     # discovery_iso_server must be discoverable from all BMCs in order for them to mount the ISO hosted there.
     # It is usually necessary to specify different values for KVM nodes and/or physical BMCs if they are on different subnets.
-    discovery_iso_server: "http://{{ hostvars['http_store']['ansible_host'] }}"
+    discovery_iso_server: "http://{% raw %}{{ hostvars['http_store']['ansible_host'] }}{% endraw %}"
 
     ############################
     # Local File Configuration #
     ############################
 
-    repo_root_path: "{{ dci_cluster_configs_dir }}"
+    repo_root_path: "{{ '{{ dci_cluster_configs_dir }}' }}"
 
     # Directory in which created/updated artifacts are placed
-    fetched_dest: "{{ repo_root_path }}/fetched"
+    fetched_dest: "{{ '{{ repo_root_path }}/fetched' }}"
 
     # Configure possible paths for the pull secret
     # first one found will be used
     # note: paths should be absolute
     pull_secret_lookup_paths:
-      - "{{ fetched_dest }}/pull-secret.txt"
-      - "{{ repo_root_path }}/pull-secret.txt"
+      - "{{ '{{ fetched_dest }}/pull-secret.txt' }}"
+      - "{{ '{{ repo_root_path }}/pull-secret.txt' }}"
 
     # Configure possible paths for the ssh public key used for debugging
     # first one found will be used
     # note: paths should be absolute
     ssh_public_key_lookup_paths:
-      - "{{ fetched_dest }}/ssh_keys/{{ cluster_name }}.pub"
-      - "{{ repo_root_path }}/ssh_public_key.pub"
+      - "{{ '{{ fetched_dest }}/ssh_keys/{{ cluster_name }}.pub' }}"
+      - "{{ '{{ repo_root_path }}/ssh_public_key.pub' }}"
       - ~/.ssh/id_rsa.pub
 
     # Set the base directory to store ssh keys
-    ssh_key_dest_base_dir: "{{ dci_cluster_configs_dir }}"
+    ssh_key_dest_base_dir: "{{ '{{ dci_cluster_configs_dir }}' }}"
 
     # The retrieved cluster kubeconfig will be placed on the bastion host at the following location
-    kubeconfig_dest_dir: "{{ dci_cluster_configs_dir }}"
-    kubeconfig_dest_filename: "{{ dci_cluster_configs_dir }}/kubeconfig"
-    kubeadmin_dest_filename: "{{ cluster_name }}-kubeadmin.vault.yml"
+    kubeconfig_dest_dir: "{{ '{{ dci_cluster_configs_dir }}' }}"
+    kubeconfig_dest_filename: "{{ '{{ dci_cluster_configs_dir }}/kubeconfig' }}"
+    kubeadmin_dest_filename: "{{ '{{ cluster_name }}-kubeadmin.vault.yml' }}"
     # You can comment out the line below if you want the kubeadmin credentials to be stored in plain text
-    #kubeadmin_vault_password_file_path: "{{ repo_root_path }}/kubeadmin_vault_password_file"
+    #kubeadmin_vault_password_file_path: "{{ '{{ repo_root_path }}/kubeadmin_vault_password_file' }}"
 
     ############################
     #    LOGIC: DO NOT TOUCH   #
@@ -129,26 +129,26 @@ all:
     ############################
 
     # pull secret logic, no need to change. Configure above
-    #local_pull_secret_path: "{{ lookup('first_found', pull_secret_lookup_paths) }}"
-    #pull_secret: "{{ lookup('file', local_pull_secret_path) }}"
+    #local_pull_secret_path: "{% raw %}{{ lookup('first_found', pull_secret_lookup_paths) }}{% endraw %}"
+    #pull_secret: "{% raw %}{{ lookup('file', local_pull_secret_path) }}{% endraw %}"
 
     # cluster var is needed by DCI playbooks and roles.
-    cluster: "{{ cluster_name }}"
+    cluster: "{{ '{{ cluster_name }}' }}"
 
     # ssh key logic, no need to change. Configure above
-    local_ssh_public_key_path: "{{ lookup('first_found', ssh_public_key_lookup_paths) }}"
-    ssh_public_key: "{{ lookup('file', local_ssh_public_key_path) }}"
+    local_ssh_public_key_path: "{% raw %}{{ lookup('first_found', ssh_public_key_lookup_paths) }}{% endraw %}"
+    ssh_public_key: "{% raw %}{{ lookup('file', local_ssh_public_key_path) }}{% endraw %}"
 
     # provided mirror certificate logic, no need to change.
-    local_mirror_certificate_path: "{{ (setup_registry_service == true) | ternary(
+    local_mirror_certificate_path: "{% raw %}{{ (setup_registry_service == true) | ternary(
         fetched_dest + '/' + (hostvars['registry_host']['cert_file_prefix'] | default('registry')) + '.crt',
         repo_root_path + '/mirror_certificate.txt')
-      }}"
-    mirror_certificate: "{{ lookup('file', local_mirror_certificate_path) }}"
+      }}{% endraw %}"
+    mirror_certificate: "{% raw %}{{ lookup('file', local_mirror_certificate_path) }}{% endraw %}"
 
-    openshift_version: "{{ openshift_full_version.split('.')[:2] | join('.') }}"
+    openshift_version: "{% raw %}{{ openshift_full_version.split('.')[:2] | join('.') }}{% endraw %}"
 
-    is_valid_single_node_openshift_config: "{{ (groups['nodes'] | length == 1) and (groups['masters'] | length == 1) }}"
+    is_valid_single_node_openshift_config: "{% raw %}{{ (groups['nodes'] | length == 1) and (groups['masters'] | length == 1) }}{% endraw %}"
 
     ############################
     # ^^^^^^^^^^^^^^^^^^^^^^^^ #
@@ -160,26 +160,32 @@ all:
     bastions: # n.b. Currently only a single bastion is supported
       hosts:
         bastion:
-          ansible_host: @FQDN@ # Must be reachable from the Ansible control node
-          ansible_connection: local # if your are not running crucible from the bastion then remove this line
+          ansible_host: "{{ provisioner_hostname }}" # Must be reachable from the Ansible control node
+{% if provisioner_hostname == 'localhost' %}
+          ansible_connection: local
+{% endif %}
 
     # Configuration and access information for the pre-requisite services
     # TODO: document differences needed for already-deployed and auto-deployed
     services:
       hosts:
         assisted_installer:
-          ansible_host: @FQDN@
+          ansible_host: "{{ provisioner_hostname }}"
+{% if provisioner_hostname == 'localhost' %}
           ansible_connection: local
-          host: @FQDN@
+{% endif %}
+          host: "{{ provisioner_hostname }}"
           port: 8090 # Do not change
-          dns: @DNS@
+          dns: "{{ provisioner_dns }}"
 
         registry_host:
-          ansible_host: @FQDN@
+          ansible_host: "{{ provisioner_hostname }}"
+{% if provisioner_hostname == 'localhost' %}
           ansible_connection: local
+{% endif %}
           registry_port: 5000
-          registry_fqdn: @FQDN@
-          cert_common_name: "{{ registry_fqdn }}"
+          registry_fqdn: "{{ provisioner_hostname }}"
+          cert_common_name: "{{ '{{ registry_fqdn }}' }}"
           cert_country: US
           cert_locality: Westford
           cert_organization: DCI
@@ -187,14 +193,16 @@ all:
           cert_state: MA
 
           # Configure the following secret values in the inventory.vault.yml file
-          REGISTRY_HTTP_SECRET: "{{ VAULT_REGISTRY_HOST_REGISTRY_HTTP_SECRET | mandatory }}"
-          disconnected_registry_user: "{{ VAULT_REGISTRY_HOST_DISCONNECTED_REGISTRY_USER | mandatory }}"
-          disconnected_registry_password: "{{ VAULT_REGISTRY_HOST_DISCONNECTED_REGISTRY_PASSWORD | mandatory }}"
+          REGISTRY_HTTP_SECRET: "{{ '{{ VAULT_REGISTRY_HOST_REGISTRY_HTTP_SECRET | mandatory }}' }}"
+          disconnected_registry_user: "{{ '{{ VAULT_REGISTRY_HOST_DISCONNECTED_REGISTRY_USER | mandatory }}' }}"
+          disconnected_registry_password: "{{ '{{ VAULT_REGISTRY_HOST_DISCONNECTED_REGISTRY_PASSWORD | mandatory }}' }}"
 
         dns_host:
-          ansible_host: @FQDN@
+          ansible_host: "{{ provisioner_hostname }}"
+{% if provisioner_hostname == 'localhost' %}
           ansible_connection: local
-          upstream_dns: @DNS@ # an optional upstream dns server
+{% endif %}
+          upstream_dns: {{ provisioner_dns }} # an optional upstream dns server
           # The following are required for DHCP setup
           use_dhcp: true
           dhcp_range_first: 10.60.0.101
@@ -203,22 +211,29 @@ all:
           gateway: 10.60.0.190
 
         http_store:
-          ansible_host: @FQDN@
+          ansible_host: "{{ provisioner_hostname }}"
+{% if provisioner_hostname == 'localhost' %}
           ansible_connection: local
+{% endif %}
 
         tftp_host:
-          ansible_host: @FQDN@
+          ansible_host: "{{ provisioner_hostname }}"
+{% if provisioner_hostname == 'localhost' %}
+          ansible_connection: local
+{% endif %}
           tftp_directory: /var/lib/tftpboot/
 
         ntp_host:
-          ansible_host: @FQDN@
+          ansible_host: "{{ provisioner_hostname }}"
+{% if provisioner_hostname == 'localhost' %}
           ansible_connection: local
+{% endif %}
 
     vm_hosts:
       hosts:
         vm_host1: # Required for using "KVM" nodes, ignored if not.
           ansible_user: root
-          ansible_host: @FQDN@
+          ansible_host: "{{ provisioner_hostname }}"
           host_ip_keyword: ansible_host # the varname in the KVM node hostvars which contains the *IP* of the VM
           images_dir: /home/redhat/libvirt/images # directory where qcow images will be placed.
           vm_bridge_ip: 10.60.0.190 # IP for the bridge between VMs and machine network
@@ -227,15 +242,15 @@ all:
           network_config:
             interfaces:
               - type: linux-bridge
-                name: "{{ cluster_name }}-br"
+                name: "{{ '{{ cluster_name }}-br' }}"
                 addresses:
                   ipv4:
-                    - ip: "{{ vm_bridge_ip }}"
-                      prefix: "{{ machine_network_cidr | ipaddr('prefix') }}"
+                    - ip: "{{ '{{ vm_bridge_ip }}' }}"
+                      prefix: "{% raw %}{{ machine_network_cidr | ipaddr('prefix') }}{% endraw %}"
                 bridge:
                   stp: True
 
-          dns: @FQDN@ # DNS used by the bridge
+          dns: "{{ provisioner_hostname }}" # DNS used by the bridge
           # ssl cert configuration
           # sushy_fqdn: ... # use in case of different FQDN for the cert
           cert_vars_host_var_key: registry_host # Look up cert values from another host by name (excluding cert_common_name)
@@ -289,14 +304,14 @@ all:
       #       given host.
       vars:
         # Set the login information for any BMCs. Note that these will be SET on the vm_host virtual BMC.
-        bmc_user: "{{ VAULT_NODES_BMC_USER | mandatory }}"
-        bmc_password: "{{ VAULT_NODES_BMC_PASSWORD | mandatory }}"
+        bmc_user: "{{ '{{ VAULT_NODES_BMC_USER | mandatory }}' }}"
+        bmc_password: "{{ '{{ VAULT_NODES_BMC_PASSWORD | mandatory }}' }}"
       children:
         masters:
           vars:
             role: master
             vendor: KVM # this example is a virtual control plane
-            bmc_address: @FQDN@:8082
+            bmc_address: "{{ provisioner_hostname }}:8082"
             vm_host: vm_host1
             vm_spec:
               cpu_cores: 4
@@ -309,8 +324,8 @@ all:
 
               # # Uncomment to set custom BMC credentials for the node
               # # These variables must be set in the inventory.vault.yml file
-              # bmc_user: "{{ VAULT_NODES_SUPER1_BMC_USER | mandatory }}"
-              # bmc_password: "{{ VAULT_NODES_SUPER1_BMC_PASSWORD | mandatory }}"
+              # bmc_user: "{{ '{{ VAULT_NODES_SUPER1_BMC_USER | mandatory }}' }}"
+              # bmc_password: "{{ '{{ VAULT_NODES_SUPER1_BMC_PASSWORD | mandatory }}' }}"
 
             dciokd-master-1:
               ansible_host: 10.60.0.102
@@ -332,8 +347,8 @@ all:
 #
 #              # # Uncomment to set custom BMC credentials for the node
 #              # # These variables must be set in the inventory.vault.yml file
-#              # bmc_user: "{{ VAULT_NODES_WORKER1_BMC_USER | mandatory }}"
-#              # bmc_password: "{{ VAULT_NODES_WORKER1_BMC_PASSWORD | mandatory }}"
+#              # bmc_user: "{{ '{{ VAULT_NODES_WORKER1_BMC_USER | mandatory }}' }}"
+#              # bmc_password: "{{ '{{ VAULT_NODES_WORKER1_BMC_PASSWORD | mandatory }}' }}"
 #
 #              # # Uncomment to set an alternate installation disk device for the node
 #              # installation_disk_path: /dev/sdb
