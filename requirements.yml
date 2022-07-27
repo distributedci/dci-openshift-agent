@@ -7,7 +7,7 @@ roles:
     scm: git
 
 collections:
-  - name: community.kubernetes
+  - name: community.kubernetes==1.2.1
   - name: containers.podman
   - name: community.general
   - name: community.libvirt
