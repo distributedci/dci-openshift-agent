@@ -7,7 +7,6 @@
   become: true
 
 - name: "Get oc binary and KUBECONFIG auth/creds from provisioner node"
-  delegate_to: "{{ groups['provisioner'][0] }}"
   fetch:
     src: "{{ item }}"
     dest: "{{ dci_cluster_configs_dir }}/"
