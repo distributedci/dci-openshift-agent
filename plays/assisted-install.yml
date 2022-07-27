@@ -76,12 +76,12 @@
       rescue: *teardown_failure
 
 - name: Installing the cluster
-  hosts: bastion
+  hosts: assisted_installer
   gather_facts: False
   vars:
     - ASSISTED_INSTALLER_HOST: "{{ hostvars['assisted_installer']['host'] }}"
     - ASSISTED_INSTALLER_PORT: "{{ hostvars['assisted_installer']['port'] }}"
-    - CLUSTER_ID: "{{ cluster_id }}"
+    - CLUSTER_ID: "{{ cluster_id | default(hostvars['bastion']['cluster_id']) }}"
     - INGRESS_VIP: "{{ ingress_vip }}"
     - API_VIP: "{{ api_vip }}"
     - VIP_DHCP_ALLOCATION: "{{ vip_dhcp_allocation }}"
@@ -112,12 +112,12 @@
       rescue: *teardown_failure
 
 - name: Monitoring cluster installation
-  hosts: bastion
+  hosts: assisted_installer
   gather_facts: False
   vars:
     - ASSISTED_INSTALLER_HOST: "{{ hostvars['assisted_installer']['host'] }}"
     - ASSISTED_INSTALLER_PORT: "{{ hostvars['assisted_installer']['port'] }}"
-    - CLUSTER_ID: "{{ cluster_id }}"
+    - CLUSTER_ID: "{{ cluster_id | default(hostvars['bastion']['cluster_id']) }}"
   vars_files:
     - ../group_vars/all
   tasks:
