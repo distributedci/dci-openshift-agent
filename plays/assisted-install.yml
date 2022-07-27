@@ -137,11 +137,12 @@
         cluster: "{{ cluster_name }}"
 
 - name: Get kubeconfig
-  hosts: bastion
+  hosts: localhost
   vars:
     secure: false
     ASSISTED_INSTALLER_BASE_URL: "{{ secure | ternary('https', 'http') }}://{{ hostvars['assisted_installer']['host'] }}:{{ hostvars['assisted_installer']['port'] }}/api/assisted-install/v2"
-    URL_ASSISTED_INSTALLER_CLUSTER: "{{ ASSISTED_INSTALLER_BASE_URL }}/clusters/{{ cluster_id }}"
+    CLUSTER_ID: "{{ cluster_id | default(hostvars['bastion']['cluster_id']) }}"
+    URL_ASSISTED_INSTALLER_CLUSTER: "{{ ASSISTED_INSTALLER_BASE_URL }}/clusters/{{ CLUSTER_ID }}"
     kube_filename: "{{ kubeconfig_dest_filename | default(cluster_name + '-kubeconfig') }}"
     dest_dir: "{{ kubeconfig_dest_dir | default(ansible_env.HOME) }}"
     kubeconfig_path: "{{ dest_dir }}/{{ kube_filename }}"
@@ -159,7 +160,7 @@
           dest: "{{ kubeconfig_path }}"
           mode: 0664
 
-      - name: Get oc binary and KUBECONFIG from provisioner node
+      - name: Get oc binary from provisioner node
         delegate_to: "{{ groups['provisioner'] | first }}"
         fetch:
           src: "{{ item }}"
@@ -168,28 +169,11 @@
         loop:
         - "/usr/local/bin/oc"
 
-      - name: "Create .kube directory"
-        file:
-          path: "{{ ansible_env.HOME }}/.kube"
-          state: directory
-          mode: '0750'
-
-      - name: "Symlink kubeconfig to .kube/config"
-        file:
-          src: "{{ kubeconfig_path }}"
-          dest: "{{ ansible_env.HOME }}/.kube/config"
-          state: link
-
-      - name: Change file permissions
-        file:
-          path: "{{ item }}"
-          mode: '0755'
-        loop:
-        - "{{ dci_cluster_configs_dir }}/oc"
-
       - name: Perform simple connectivity check with oc
-        shell:
-          cmd: "oc explain pods"
+        environment:
+          KUBECONFIG: "{{ kubeconfig_path }}"
+        shell: |
+          {{ oc_tool_path }} explain pods
         register: result
         retries: 3
         delay: 10
@@ -198,8 +182,10 @@
       - name: Check status of cluster operators
         block:
           - name: Wait up to 20 mins for cluster to become functional
-            shell:
-              cmd: oc wait clusteroperators --all --for=condition=Available --timeout=20m
+            environment:
+              KUBECONFIG: "{{ kubeconfig_path }}"
+            shell: |
+              {{ oc_tool_path }} wait clusteroperators --all --for=condition=Available --timeout=20m
             register: result
             retries: 3
             delay: 10
@@ -222,8 +208,10 @@
         register: credentials
 
       - name: Login to add token to kubeconfig
-        shell:
-          cmd: "oc login -u {{ credentials.json.username }} -p '{{ credentials.json.password }}'"
+        environment:
+          KUBECONFIG: "{{ kubeconfig_path }}"
+        shell: |
+          {{ oc_tool_path }} login -u {{ credentials.json.username }} -p '{{ credentials.json.password }}'
 
       - name: Save credentials to file
         copy:
@@ -241,5 +229,19 @@
           kubeconfig_path: "{{ kubeconfig_path }}"
         delegate_to: "{{ groups['provisioner'] | first }}"
         delegate_facts: true
+
+      - name: Check if all cluster-operators are running correctly
+        environment:
+          KUBECONFIG: "{{ kubeconfig_path }}"
+        community.kubernetes.k8s_info:
+          kind: ClusterOperator
+        register: clusteroperator_info
+        vars:
+          status_query: "resources[*].status.conditions[?type=='Available'].status"
+          cluster_operators_available: "{{ clusteroperator_info | json_query(status_query) | flatten | unique }}"
+        retries: 6
+        delay: 10
+        until: cluster_operators_available == ['True']
+
       rescue: *teardown_failure
 ...
