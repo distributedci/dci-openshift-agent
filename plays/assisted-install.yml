@@ -1,6 +1,6 @@
 ---
 - name: Create cluster and generate Assisted Installer Discovery ISO
-  hosts: bastion
+  hosts: assisted_installer
   gather_facts: False
   vars:
     disconnected: "{{ use_local_mirror_registry | default(setup_registry_service | default(true)) }}"
