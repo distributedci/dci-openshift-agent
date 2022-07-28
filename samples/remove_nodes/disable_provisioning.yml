@@ -1,0 +1,12 @@
+---
+- name: Disable provisioning for baremetal and use a diff IP
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: metal3.io/v1alpha1
+      kind: Provisioning
+      metadata:
+        name: provisioning-configuration
+      spec:
+        provisioningIP: 172.22.0.4
+        provisioningNetwork: Disabled
+  register: provisioning_cr
