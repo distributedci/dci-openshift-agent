@@ -1,0 +1,126 @@
+---
+- name: "Removing worker node: {{ node }}"
+  debug:
+    msg: "Removing worker node {{ node }}"
+
+- name: Get Pods in node
+  community.kubernetes.k8s_info:
+    api_version: v1
+    kind: Pod
+    field_selectors:
+      - spec.nodeName={{ node }}
+  register: node_pods
+
+- name: Get list of StatefulSet pods in node
+  vars:
+    statefulset_query: 'resources[*].metadata.labels."statefulset.kubernetes.io/pod-name"'
+  set_fact:
+    statefulset_pods: "{{ node_pods | json_query(statefulset_query) }}"
+
+- name: Get StatefulSets
+  community.kubernetes.k8s_info:
+    api_version: apps/v1
+    kind: StatefulSet
+  register: statefulsets
+
+- name: StatefulSet replicas
+  set_fact:
+    statefulsets_replicas: "{{ statefulsets_replicas | default({}) | combine( { statefulset.metadata.name: statefulset.spec.replicas } ) }}"
+  loop: "{{ statefulsets.resources }}"
+  loop_control:
+    loop_var: statefulset
+    label: "{{ statefulset.metadata.name }}"
+
+- name: debug
+  debug:
+    var: item
+  loop:
+    - statefulsets_replicas
+    - statefulset_pods
+
+- name: Get worker nodes
+  community.kubernetes.k8s_info:
+    api_version: v1
+    kind: Node
+    label_selectors:
+      - node-role.kubernetes.io/worker=
+  register: worker_nodes
+
+- name: Set current worker nodes
+  set_fact:
+    current_nodes: "{{ worker_nodes.resources | json_query('[*].metadata.name') }}"
+
+- name: Proceed to remove worker
+  when: node in current_nodes
+  block:
+    - name: Cordon node
+      community.kubernetes.k8s:
+        definition:
+          apiVersion:
+          kind: Node
+          metadata:
+            name: "{{ node }}"
+          spec:
+            unschedulable: true
+      register: node_state
+
+    # TODO: find a way to evict pods in a node through k8s
+    - name: Evict the pods (drain)
+      shell:
+        cmd: >
+          oc adm drain
+          {{ node }}
+          --force
+          --delete-emptydir-data
+          --ignore-daemonsets
+
+    - name: Get BareMetalHost
+      community.kubernetes.k8s_info:
+        api_version: machine.openshift.io/v1beta1
+        namespace: openshift-machine-api
+        kind: BareMetalHost
+      register: bmh
+
+    - name: Delete BareMetalHost
+      community.kubernetes.k8s:
+        state: absent
+        definition:
+          apiVersion: metal3.io/v1alpha1
+          kind: BareMetalHost
+          metadata:
+            namespace: openshift-machine-api
+            name: "{{ node }}.{{ cluster_name }}.{{ cluster_domain }}"
+        wait: yes
+        wait_timeout: 1200
+
+    - name: Delete Node
+      community.kubernetes.k8s:
+        state: absent
+        definition:
+          apiVersion: v1
+          kind: Node
+          metadata:
+            name: "{{ node }}"
+
+    - name: Get Machine Set
+      community.kubernetes.k8s_info:
+        api_version: machine.openshift.io/v1beta1
+        namespace: openshift-machine-api
+        kind: MachineSet
+      register: machine_set
+
+    # k8s_scale is not working, errs with:
+    # Scale request failed: 415 Reason: Unsupported Media Type
+    - name: Reduce Machine Set replicas
+      vars:
+        ms_def: |
+          apiVersion: machine.openshift.io/v1beta1
+          kind: MachineSet
+          metadata:
+            name: {{ machine_set.resources[0].metadata.name }}
+            namespace: openshift-machine-api
+          spec:
+            replicas: {{ current_nodes | length - 1 }}
+      community.kubernetes.k8s:
+        definition: "{{ ms_def }}"
+      register: ms_scaled_down

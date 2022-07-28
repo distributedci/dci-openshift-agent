@@ -1,0 +1,55 @@
+---
+- name: Remove nodes from cluster
+  hosts: localhost
+  tasks:
+    - name: Validate node list
+      assert:
+        that:
+          - nodes_to_remove is defined
+          - nodes_to_remove | length
+
+    - name: "Get cluster version"
+      community.kubernetes.k8s_info:
+        api: config.openshift.io/v1
+        kind: ClusterVersion
+        name: version
+      register: cluster_version
+
+    - name: "Get cluster name"
+      community.kubernetes.k8s_info:
+        kind: ConfigMap
+        namespace: kube-system
+        name: cluster-config-v1
+      register: cluster_config
+
+    - name: "Set OCP name and version facts"
+      vars:
+        current_ver_query: "history[?state=='Completed'] | [0].version"
+        full_ver: "{{ cluster_version.resources[0].status | json_query(current_ver_query) }}"
+        current_ver: "{{ full_ver.split('-')[0] }}"
+        cluster_install_info: |-
+          {{ ( cluster_config.resources[0].data |
+          from_yaml )['install-config'] |
+          from_yaml }}
+      set_fact:
+        cluster_name: "{{ cluster_install_info.metadata.name }}"
+        cluster_domain: "{{ cluster_install_info.baseDomain }}"
+        ocp_version_full: "{{ full_ver }}"
+        ocp_version: "{{ current_ver.split('.')[0:2] | join('.') }}"
+        ocp_version_maj: "{{ current_ver.split('.')[0] }}"
+        ocp_version_min: "{{ current_ver.split('.')[1] }}"
+        ocp_version_patch: "{{ current_ver.split('.')[2] }}"
+      when:
+        - cluster_config | length
+        - cluster_version | length
+
+    # k8s_drain is only available in kubernetes.core.k8s_drain >= 2.2.0
+    - name: Remove selected nodes
+      include_tasks: delete_worker_node.yml
+      loop: "{{ nodes_to_remove }}"
+      loop_control:
+        loop_var: node
+#TODO: before removing a node, check if there is a pod part of a statefulset, if it's the last one, then continue
+
+    - name: Disable Provisioning
+      include_tasks: disable_provisioning.yml
