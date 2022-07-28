@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7fac075_3c6d3b23",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-28T21:04:35Z",
+      "side": 1,
+      "message": ". In connected environments, if defined it will enable an additional operators catalog.",
+      "range": {
+        "startLine": 301,
+        "startChar": 234,
+        "endLine": 301,
+        "endChar": 268
+      },
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86b3d597_4f4b81e6",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-28T21:04:35Z",
+      "side": 1,
+      "message": "\"deploy-operators : Enable and additional catalog\" ?",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96e47e10_64ebebf4",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-28T21:04:35Z",
+      "side": 1,
+      "message": "when connected?",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
