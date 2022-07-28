@@ -56,6 +56,23 @@
       "message": "when connected?",
       "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcff0cb5_cc2697d2",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-28T21:11:25Z",
+      "side": 1,
+      "message": "if you use a different variable name, that will allow to define and extra catalog for connected and disconnected environments. In disconnected, the user should guarantee that the related images are already mirrored.",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
