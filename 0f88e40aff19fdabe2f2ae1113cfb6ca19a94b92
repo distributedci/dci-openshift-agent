@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdc4bcc5_f275e935",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-29T14:15:24Z",
+      "side": 1,
+      "message": "Thanks Beto for your review, it is really appreciate.",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a7fac075_3c6d3b23",
@@ -43,6 +60,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1e582922_9770db81",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-29T14:15:24Z",
+      "side": 1,
+      "message": "The initial idea of the path was to update the current redhat-operators catalog.\nDo you think, it is better to add another one ?",
+      "parentUuid": "86b3d597_4f4b81e6",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "96e47e10_64ebebf4",
         "filename": "plays/deploy-operators.yml",
         "patchSetId": 3
@@ -71,6 +106,42 @@
       "writtenOn": "2022-07-28T21:11:25Z",
       "side": 1,
       "message": "if you use a different variable name, that will allow to define and extra catalog for connected and disconnected environments. In disconnected, the user should guarantee that the related images are already mirrored.",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6782522_68ff5066",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-29T14:15:24Z",
+      "side": 1,
+      "message": "Yes you\u0027re right",
+      "parentUuid": "96e47e10_64ebebf4",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1106e4e_571a1321",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-07-29T14:15:24Z",
+      "side": 1,
+      "message": "My initially idea was to create this patch only for connected environment, because disconnected have already a customization mechanism for catalog.\nThe usage of the same variable not add another variable which can confuse user.",
+      "parentUuid": "fcff0cb5_cc2697d2",
       "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
