@@ -94,6 +94,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8b1e1d5_428edd34",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-29T16:49:19Z",
+      "side": 1,
+      "message": "Nevermind, just checked the catalog of a connected env you can just override it with the one from a previous OCP version. Sorry for the noise, it looks good for me.",
+      "parentUuid": "5c3edb10_14e1bb4b",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "96e47e10_64ebebf4",
