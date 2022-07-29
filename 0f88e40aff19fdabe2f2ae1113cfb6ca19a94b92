@@ -78,6 +78,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5c3edb10_14e1bb4b",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-29T16:35:10Z",
+      "side": 1,
+      "message": "I am only a bit worried of overriding the original catalog with one that do not have all the operators required now or after the deployment. What about using the same variable but just create a catalog with a different name?. The cluster should be able to get operators from the original or this one.",
+      "parentUuid": "1e582922_9770db81",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "96e47e10_64ebebf4",
         "filename": "plays/deploy-operators.yml",
         "patchSetId": 3
@@ -142,6 +160,42 @@
       "side": 1,
       "message": "My initially idea was to create this patch only for connected environment, because disconnected have already a customization mechanism for catalog.\nThe usage of the same variable not add another variable which can confuse user.",
       "parentUuid": "fcff0cb5_cc2697d2",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8e7007f_5630ddb7",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-29T16:35:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d6782522_68ff5066",
+      "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98498837_8653741c",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-07-29T16:35:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a1106e4e_571a1321",
       "revId": "0f88e40aff19fdabe2f2ae1113cfb6ca19a94b92",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
