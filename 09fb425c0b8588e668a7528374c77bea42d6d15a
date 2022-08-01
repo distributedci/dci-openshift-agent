@@ -16,6 +16,23 @@
       "message": "Thx Beto for your recommendation.",
       "revId": "09fb425c0b8588e668a7528374c77bea42d6d15a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f62142c_25f3b0c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-01T12:22:55Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "09fb425c0b8588e668a7528374c77bea42d6d15a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
