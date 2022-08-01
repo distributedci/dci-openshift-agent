@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a7bd616_ba3535f3",
+        "filename": "samples/remove_nodes/remove_nodes.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-01T11:22:51Z",
+      "side": 1,
+      "message": "Just for curiosity, don\u0027t you need to re-enable provisioning after removing the nodes?",
+      "range": {
+        "startLine": 46,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 32
+      },
+      "revId": "3a83d1cc39bbc9c83927ddc6959bc18e1418b348",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
