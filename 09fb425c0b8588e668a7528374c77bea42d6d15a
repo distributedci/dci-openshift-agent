@@ -33,6 +33,23 @@
       "message": "LGTM",
       "revId": "09fb425c0b8588e668a7528374c77bea42d6d15a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "703a711a_1d74be1a",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-01T14:15:36Z",
+      "side": 1,
+      "message": "Not sure if it matters, but I think the use of parenthesis is needed to guarantee dci_disconnected is a bool, i.e.\n\n    not (dci_disconnected | default(false) | bool)",
+      "revId": "09fb425c0b8588e668a7528374c77bea42d6d15a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
