@@ -50,6 +50,24 @@
       "message": "Not sure if it matters, but I think the use of parenthesis is needed to guarantee dci_disconnected is a bool, i.e.\n\n    not (dci_disconnected | default(false) | bool)",
       "revId": "09fb425c0b8588e668a7528374c77bea42d6d15a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64b1bb99_2d3e7bba",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-02T12:51:18Z",
+      "side": 1,
+      "message": "I checked all scenarii, and parenthesis is not required 😊\n```\ntrue or on -\u003e skip\nstring true or on -\u003e skip\nfalse or off -\u003e no skip\nundef -\u003e no skip\nstring -\u003e no skip\n```\n\nThe *not* is applied at the end, not for the first element.",
+      "parentUuid": "703a711a_1d74be1a",
+      "revId": "09fb425c0b8588e668a7528374c77bea42d6d15a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
