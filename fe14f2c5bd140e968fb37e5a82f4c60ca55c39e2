@@ -16,6 +16,24 @@
       "message": "I\u0027m fine with the change, but isn\u0027t it better to directly set the condition:\n\n```\n      when:\n        - install_type is defined\n        - install_type \u003d\u003d \u0027assisted\u0027\n```\n\nOn dci-openshift-agent.yml, rather than on each block/task in assisted-install.yml and assisted-pre-run.yml plays? I mean, here: https://github.com/redhat-cip/dci-openshift-agent/blob/master/dci-openshift-agent.yml#L126, and here: https://github.com/redhat-cip/dci-openshift-agent/blob/master/dci-openshift-agent.yml#L209",
       "revId": "fe14f2c5bd140e968fb37e5a82f4c60ca55c39e2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52a667b7_87fb10b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-02T13:24:44Z",
+      "side": 1,
+      "message": "Omit my comment, I didn\u0027t know that import_playbook cannot include when conditions",
+      "parentUuid": "834f6d70_db30a23b",
+      "revId": "fe14f2c5bd140e968fb37e5a82f4c60ca55c39e2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
