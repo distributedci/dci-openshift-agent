@@ -67,6 +67,23 @@
       "message": "dallas tests are ok, thank you Jorge!",
       "revId": "6ee87b1d53fd97a922264d1773c70c7d669a25da",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "838350a8_28691e17",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-08-03T14:18:02Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla",
+      "revId": "6ee87b1d53fd97a922264d1773c70c7d669a25da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
