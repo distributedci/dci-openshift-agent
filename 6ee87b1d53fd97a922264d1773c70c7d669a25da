@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.9-vanilla",
       "revId": "6ee87b1d53fd97a922264d1773c70c7d669a25da",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "682a645f_6e6146d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-03T13:43:11Z",
+      "side": 1,
+      "message": "It\u0027s fine for me to merge it",
+      "revId": "6ee87b1d53fd97a922264d1773c70c7d669a25da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
