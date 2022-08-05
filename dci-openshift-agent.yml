@@ -33,6 +33,7 @@
         name: "{{ dci_name | default('') }}"
         configuration: "{{ dci_configuration | default('') }}"
         previous_job_id: "{{ dci_previous_job_id | default('') }}"
+        pipeline_id: "{{ dci_pipeline_id | default('') }}"
       register: job_info
       when: job_info is not defined
       no_log: true
