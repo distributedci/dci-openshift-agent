@@ -58,6 +58,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8d916bd_7f854de9",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-05T13:30:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64167f56_569c7163",
+      "range": {
+        "startLine": 9,
+        "startChar": 104,
+        "endLine": 9,
+        "endChar": 105
+      },
+      "revId": "c5aeaa2eadd1c19db521da29c5e4a22f89de9804",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1e896d84_f14c162b",
@@ -94,6 +118,54 @@
       "writtenOn": "2022-07-20T11:44:08Z",
       "side": 1,
       "message": "is upgrade_state the correct variable to be checked here?",
+      "range": {
+        "startLine": 29,
+        "startChar": 6,
+        "endLine": 29,
+        "endChar": 19
+      },
+      "revId": "c5aeaa2eadd1c19db521da29c5e4a22f89de9804",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee74c36d_d4d7efc8",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-05T13:30:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e896d84_f14c162b",
+      "range": {
+        "startLine": 29,
+        "startChar": 35,
+        "endLine": 29,
+        "endChar": 36
+      },
+      "revId": "c5aeaa2eadd1c19db521da29c5e4a22f89de9804",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aae02329_d9d87c48",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-05T13:30:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e67b0a8_88d52aa9",
       "range": {
         "startLine": 29,
         "startChar": 6,
