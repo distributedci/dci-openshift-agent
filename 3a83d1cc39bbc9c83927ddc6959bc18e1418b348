@@ -22,6 +22,30 @@
       },
       "revId": "3a83d1cc39bbc9c83927ddc6959bc18e1418b348",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ab88e1d_b3cbf398",
+        "filename": "samples/remove_nodes/remove_nodes.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-05T14:28:21Z",
+      "side": 1,
+      "message": "Ramon, good question, we actually do not want to enable right away because it would cause clashes with the other cluster (racing conditions, you might get a provisioning IP via DHCP from the initial cluster rather than from the new cluster), the only reason we want to enable this is to remove more nodes, but we\u0027ll have to disable provisioning in the new cluster. In a few words, we need to avoid having the two clusters with provisioning enabled at the same time.",
+      "parentUuid": "5a7bd616_ba3535f3",
+      "range": {
+        "startLine": 46,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 32
+      },
+      "revId": "3a83d1cc39bbc9c83927ddc6959bc18e1418b348",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
