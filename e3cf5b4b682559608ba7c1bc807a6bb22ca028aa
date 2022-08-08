@@ -22,6 +22,30 @@
       },
       "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de70f4d3_fcae2a69",
+        "filename": "group_vars/all",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-08-08T11:53:47Z",
+      "side": 1,
+      "message": "* dci_name is defined at the beginning of the file.\n* no problem the python lib is removing null values before doing the calls.",
+      "parentUuid": "d7f0c64e_6edbf594",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 17
+      },
+      "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
