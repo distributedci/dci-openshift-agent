@@ -33,6 +33,46 @@
       "message": "check dallas ocp-4.8-vanilla ocp-4.9-upgrade openshift-vanilla:components\u003docp\u003d4.8.46 openshift-vanilla-upgrade-4.9:ansible_extravars\u003denable_cnv:true openshift-vanilla-upgrade-4.9:components\u003docp\u003d4.9.41",
       "revId": "1f4805021621edfb65294f3f9f8dc1585f069c53",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7601ff95_bee9a41f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-08T11:34:59Z",
+      "side": 1,
+      "message": "It seems the debug jobs are failing because of `opm_catalog_source_name` variable not found, just to comment this.",
+      "revId": "1f4805021621edfb65294f3f9f8dc1585f069c53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "537e1294_4f3d36dd",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-08T11:34:59Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 28,
+        "startChar": 38,
+        "endLine": 28,
+        "endChar": 39
+      },
+      "revId": "1f4805021621edfb65294f3f9f8dc1585f069c53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
