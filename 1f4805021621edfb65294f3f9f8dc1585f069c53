@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9fb24cc_9aab4057",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-08T12:55:16Z",
+      "side": 1,
+      "message": "Yes it is due to the non execution of the pre-run play during the upgrade, I did a patch for that here: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25759",
+      "parentUuid": "7601ff95_bee9a41f",
+      "revId": "1f4805021621edfb65294f3f9f8dc1585f069c53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "537e1294_4f3d36dd",
