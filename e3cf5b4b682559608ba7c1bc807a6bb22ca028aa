@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04bfe4dc_588f22a4",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-08-08T18:25:53Z",
+      "side": 1,
+      "message": "that\u0027s not exposed in dci-ansible. we need to do it in another patch.",
+      "parentUuid": "3cef6ade_6454c4d0",
+      "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d7f0c64e_6edbf594",
@@ -95,6 +113,24 @@
       "writtenOn": "2022-08-08T17:44:01Z",
       "side": 1,
       "message": "emacs ? :D",
+      "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90a9a39e_f802306e",
+        "filename": "group_vars/all",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-08-08T18:25:53Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "0a71e979_c2c494f9",
       "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
