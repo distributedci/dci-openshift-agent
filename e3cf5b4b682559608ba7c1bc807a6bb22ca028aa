@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3cef6ade_6454c4d0",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-08-08T17:44:01Z",
+      "side": 1,
+      "message": "remoteci_id missing ?",
+      "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d7f0c64e_6edbf594",
         "filename": "group_vars/all",
         "patchSetId": 8
@@ -61,6 +78,23 @@
         "endLine": 40,
         "endChar": 17
       },
+      "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a71e979_c2c494f9",
+        "filename": "group_vars/all",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-08-08T17:44:01Z",
+      "side": 1,
+      "message": "emacs ? :D",
       "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
