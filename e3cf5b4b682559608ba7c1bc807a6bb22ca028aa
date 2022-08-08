@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7f0c64e_6edbf594",
+        "filename": "group_vars/all",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-08T11:40:58Z",
+      "side": 1,
+      "message": "Same observations than in CR25746\n- I guess `dci_name: null` is missed here\n- Also, regarding this kind of definition, may it be a problem to have these variables defined as null and don\u0027t have a check on dci-openshift-app-agent.yml that controls the values these variables can have?",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 17
+      },
+      "revId": "e3cf5b4b682559608ba7c1bc807a6bb22ca028aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
