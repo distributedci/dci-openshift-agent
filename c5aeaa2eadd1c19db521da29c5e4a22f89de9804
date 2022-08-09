@@ -176,6 +176,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bda9432_e6810345",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-09T13:22:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aae02329_d9d87c48",
+      "range": {
+        "startLine": 29,
+        "startChar": 6,
+        "endLine": 29,
+        "endChar": 19
+      },
+      "revId": "c5aeaa2eadd1c19db521da29c5e4a22f89de9804",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1ccef64b_4ecc4f50",
@@ -189,6 +213,30 @@
       "writtenOn": "2022-07-20T11:44:08Z",
       "side": 1,
       "message": "I\u0027m still wondering what happens if elapsed_time is higher than 7200 and upgrade_state is not completed.. Should the job fail?",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 31
+      },
+      "revId": "c5aeaa2eadd1c19db521da29c5e4a22f89de9804",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "800c879c_acc41d7f",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-09T13:22:58Z",
+      "side": 1,
+      "message": "Good catch, we will create another task to validate that.",
+      "parentUuid": "1ccef64b_4ecc4f50",
       "range": {
         "startLine": 30,
         "startChar": 0,

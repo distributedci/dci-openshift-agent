@@ -91,6 +91,30 @@
       },
       "revId": "1f4805021621edfb65294f3f9f8dc1585f069c53",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14dc5ce1_1c31fc0b",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-09T13:22:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "537e1294_4f3d36dd",
+      "range": {
+        "startLine": 28,
+        "startChar": 38,
+        "endLine": 28,
+        "endChar": 39
+      },
+      "revId": "1f4805021621edfb65294f3f9f8dc1585f069c53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
