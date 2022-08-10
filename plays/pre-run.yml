@@ -172,7 +172,9 @@
   - name: "Set version_inter from Graph"
     set_fact:
       version_inter: "{{ version_inter_graph.stdout }}"
-    when: version_inter_graph is defined
+    when:
+      - version_inter is undefined
+      - version_inter_graph is defined
 
   - name: Mirror release
     include_role:
