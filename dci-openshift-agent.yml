@@ -102,6 +102,19 @@
       when:
         - ocp_product_id is defined
 
+    - name: Test (deleteme)
+      vars:
+        versions:
+          - "4.11.4-2022-09-07-124828"
+          - "4.11.3"
+          - "4.10.31"
+          - "4.10.22-2022-07-06-084748"
+          - "4.9.47"
+          - "4.9.23"
+          - "4.9.9"
+      debug:
+        msg: "{{ versions | version_sort }}"
+
     - name: pre-run
       dci_job:
         id: "{{ job_id }}"
@@ -335,14 +348,6 @@
             local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
             local_repo: "{{ hostvars[groups['registry_host'][0]].local_repo }}"
           include_tasks: plays/upgrade.yml
-          when: upgrade_eus is undefined
-
-        - name: "dci-openshift-agent : Launch upgrade"
-          vars:
-            local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
-            local_repo: "{{ hostvars[groups['registry_host'][0]].local_repo }}"
-          include_tasks: plays/upgrade-eus.yml
-          when: upgrade_eus is defined
       when:
         - dci_main == 'upgrade'
 
