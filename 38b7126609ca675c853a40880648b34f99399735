@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f9be121_b5f701d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-10T09:30:11Z",
+      "side": 1,
+      "message": "\u003e Patch Set 5:\n\u003e \n\u003e - SUCCESS https://www.distributed-ci.io/jobs/07ff6897-1002-4112-a682-04f33cde883b/jobStates\n\u003e - SUCCESS https://www.distributed-ci.io/jobs/43c3b319-c346-41b9-abba-7be234b1e52d/jobStates\n\u003e  from https://softwarefactory-project.io/r/#/c/25183/\n\nThis debug job has not tested this change, but it has tested 25759. I think that, to include that change in this change, you need to use this change as base and create a new commit on top of it, instead of creating a different change. Anyway, I think 25759 can be merged, then we can rebase this one and retest.",
+      "revId": "38b7126609ca675c853a40880648b34f99399735",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
