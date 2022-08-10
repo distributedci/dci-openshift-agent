@@ -27,12 +27,12 @@
     msg: "Failed due to timeout"
   when:
     - upgrade_state != "Completed"
-    - elapsed_time | int >= 7200
+    - elapsed_time | int >= 9000
 
 - name: "Upgrader: Monitor upgrade"
   include_tasks: monitor-upgrade.yml
   when:
     - upgrade_state != "Completed"
-    - elapsed_time | int < 7200
+    - elapsed_time | int < 9000
 
 ...
