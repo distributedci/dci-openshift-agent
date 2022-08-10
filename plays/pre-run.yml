@@ -172,7 +172,9 @@
   - name: "Set version_inter from Graph"
     set_fact:
       version_inter: "{{ version_inter_graph.stdout }}"
-    when: version_inter_graph is defined
+    when:
+      - version_inter is undefined
+      - version_inter_graph is defined
 
   - name: Mirror release
     include_role:
@@ -183,7 +185,7 @@
       cache_dir: "{{ hostvars.localhost.provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
       webserver_url: "{{ hostvars.localhost.webserver_url | default(None) }}"
       registry_url: "docker://{{ local_registry_host | default('localhost') }}:{{ local_registry_port | default(0)  }}/{{ hostvars[groups['registry_host'][0]].local_repo | default('') }}"
-      pull_secrets: "{{ auths | default(pullsecret) }}"
+      auths_file: "{{ dci_pullsecret_file }}"
       force: "{{ (hostvars.localhost.dci_force_mirroring | default(false)) or (hostvars.localhost.build == 'candidate') | bool }}"
       install_type: "{{ hostvars.localhost.install_type | default('ipi') }}"
       sno_install_type: "{{ hostvars.localhost.sno_install_type | default('baremetal') }}"
