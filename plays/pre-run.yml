@@ -235,10 +235,9 @@
     local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
   include_role:
     name: operators-mirror
-  when:
-    - dci_disconnected | default(false) | bool
-    - mirror_list is defined
-    - mirror_list | length
+  when: >
+    ( dci_disconnected | default(false) | bool ) or
+    ( mirror_list is defined and mirror_list | length )
 
 - name: "Mirror Operators for EUS Upgrade"
   vars:
@@ -246,11 +245,10 @@
     local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
   include_role:
     name: operators-mirror
-  when:
-    - dci_disconnected | default(false) | bool
-    - mirror_list is defined
-    - mirror_list | length
-    - upgrade_eus | default(false) | bool
+  when: >
+    (( dci_disconnected | default(false) | bool ) or
+    ( mirror_list is defined and mirror_list | length )) and
+    ( upgrade_eus | default(false) | bool )
 
 - name: "Mirror must gather images"
   include_role:
