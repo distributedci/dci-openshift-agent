@@ -26,8 +26,10 @@
 - name: Configure CatalogSources for disconnected environments
   block:
     - name: "deploy-operators : Generate disconnected catalogSource"
-      import_role:
-        name: operators-catalog
+      block:
+        - name: "deploy-operators :Import operators-catalog role"
+          import_role:
+            name: operators-catalog
       when:
         - mirror_list is defined
         - mirror_list | length
