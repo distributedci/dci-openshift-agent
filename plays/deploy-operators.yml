@@ -9,11 +9,9 @@
 
 - name: Get oc version output
   environment:
-    KUBECONFIG: "{{ kubeconfig_path }}"
-  shell: |
-    {{ oc_tool_path }} version
+    KUBECONFIG: "{{ hostvars[groups['provisioner' | first]]['kubeconfig_path'] }}"
+  command: "oc version"
   register: oc_version_str
-  delegate_to: localhost
 
 - name: Get OCP version
   set_fact:
@@ -34,6 +32,7 @@
 
     - name: Disable default catalog sources for disconnected deployment
       community.kubernetes.k8s:
+        kubeconfig: "{{ hostvars[groups['provisioner'] | first]['kubeconfig_path'] }}"
         definition:
           apiVersion: config.openshift.io/v1
           kind: OperatorHub
@@ -56,6 +55,7 @@
     # Verify a minimum number of worker nodes are available
     - name: "deploy-operators : Get all nodes"
       community.kubernetes.k8s_info:
+        kubeconfig: "{{ hostvars[groups['provisioner'] | first]['kubeconfig_path'] }}"
         kind: Node
       register: nodes
 
@@ -83,12 +83,14 @@
             maxUnavailable: {{ hostvars.localhost.groups['workers'] | length - 1 }}
       community.kubernetes.k8s:
         state: present
+        kubeconfig: "{{ hostvars[groups['provisioner'] | first]['kubeconfig_path'] }}"
         definition: "{{ mcp_def }}"
       when:
         - hostvars.localhost.groups['workers']|length > 1
 
     - name: "deploy-operators : Update image catalog"
       community.kubernetes.k8s:
+        kubeconfig: "{{ hostvars[groups['provisioner'] | first]['kubeconfig_path'] }}"
         definition:
           apiVersion: operators.coreos.com/v1alpha1
           kind: CatalogSource
@@ -143,6 +145,7 @@
 
     - name: "deploy-operators : Reset maxUnavailable count to default value 1"
       community.kubernetes.k8s:
+        kubeconfig: "{{ hostvars[groups['provisioner'] | first]['kubeconfig_path'] }}"
         definition:
           kind: MachineConfigPool
           metadata:

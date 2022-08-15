@@ -57,4 +57,22 @@
     state: link
   when:
     - not kube_config.stat.exists
+
+- debug:
+    var: hostvars['localhost']['kubeconfig_path']
+
+- debug:
+    var: hostvars[groups['provisioner'] | first]['kubeconfig_path']
+
+- name: "Set the kubeconfig_path fact on the provisioner hosts"
+  delegate_to: "{{ groups['provisioner'] | first }}"
+  delegate_facts: true
+  set_fact:
+    kubeconfig_path: "{{ dir }}/auth/kubeconfig"
+
+- debug:
+    var: hostvars['localhost']['kubeconfig_path']
+
+- debug:
+    var: hostvars[groups['provisioner'] | first]['kubeconfig_path']
 ...
