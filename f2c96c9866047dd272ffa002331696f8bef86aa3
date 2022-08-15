@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "638b09d4_d14baaed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-15T16:24:43Z",
+      "side": 1,
+      "message": "Thanks, let\u0027s just wait for the libvirt job to finish successfully and I\u0027ll add a +2",
+      "revId": "f2c96c9866047dd272ffa002331696f8bef86aa3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
