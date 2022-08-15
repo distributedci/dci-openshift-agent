@@ -59,11 +59,19 @@
   set_fact:
     default_channel: "{{ packagemanifest | json_query(channels) | join('') | string }}"
 
+- name: "Print details"
+  debug:
+    msg:
+      - "Channel: {{ channel }}"
+      - "resources[*].status.channels[? name=='{{ channel | default ( default_channel ) }}' ].currentCSV | [0]"
+  ignore_errors: true
+
 - name: "Get operator's CSV for desired channel"
   vars:
     current_csv: "resources[*].status.channels[? name=='{{ channel | default ( default_channel ) }}' ].currentCSV | [0]"
   set_fact:
     operator_csv: "{{ packagemanifest | json_query(current_csv) | first  }}"
+  ignore_errors: true
 
 - name: "{{ ocp_version }} - {{ operator_csv }} - wait for CSV to be ready"
   community.kubernetes.k8s_info:
