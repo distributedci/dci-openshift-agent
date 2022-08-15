@@ -59,9 +59,13 @@
   set_fact:
     default_channel: "{{ packagemanifest | json_query(channels) | join('') | string }}"
 
+- name: "Set Desired channel"
+  set_fact:
+    desired_channel: "{{ ( channel | length ) | ternary ( channel, default_channel ) }}"
+
 - name: "Get operator's CSV for desired channel"
   vars:
-    current_csv: "resources[*].status.channels[? name=='{{ channel | default ( default_channel ) }}' ].currentCSV | [0]"
+    current_csv: "resources[*].status.channels[? name=='{{ desired_channel }}' ].currentCSV | [0]"
   set_fact:
     operator_csv: "{{ packagemanifest | json_query(current_csv) | first  }}"
 
