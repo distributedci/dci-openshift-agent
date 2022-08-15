@@ -50,6 +50,24 @@
       "message": "If the desired_channel is not used anywhere else, it could be added as a var in the next task\n\nnit: Remove the spaces in the ternary as it is a function, like default() or json_query(), e.g.\n\n    ternary(channel, default_channel)",
       "revId": "ba1e1aacb4e38698ea2133fdecd6b3fe4469288d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3175d88_37e793de",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-15T23:15:27Z",
+      "side": 1,
+      "message": "I decided to move the subscription a bit after with the specific selected channel, so it will be used by 2 tasks.\n\nRemoved spaces from the ternary function\n\nThanks",
+      "parentUuid": "5c9044cf_6056dec2",
+      "revId": "ba1e1aacb4e38698ea2133fdecd6b3fe4469288d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
