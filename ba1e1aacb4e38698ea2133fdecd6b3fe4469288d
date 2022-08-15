@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.7-vcp",
       "revId": "ba1e1aacb4e38698ea2133fdecd6b3fe4469288d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "100bbfc9_d3465815",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-15T22:12:24Z",
+      "side": 1,
+      "message": "Thanks for taking care of it, the changes look good to me, a couple of observations but this could be merged once tested as is.",
+      "revId": "ba1e1aacb4e38698ea2133fdecd6b3fe4469288d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c9044cf_6056dec2",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-15T22:12:24Z",
+      "side": 1,
+      "message": "If the desired_channel is not used anywhere else, it could be added as a var in the next task\n\nnit: Remove the spaces in the ternary as it is a function, like default() or json_query(), e.g.\n\n    ternary(channel, default_channel)",
+      "revId": "ba1e1aacb4e38698ea2133fdecd6b3fe4469288d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
