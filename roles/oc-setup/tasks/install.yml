@@ -35,26 +35,43 @@
     state: present
   become: true
 
-- name: "oc-setup : Create .kube directory"
-  delegate_to: "{{ groups['provisioner'][0] }}"
-  file:
-    path: "{{ ansible_env.HOME }}/.kube"
-    state: directory
-    mode: '0750'
+- name: "Provisioner Block"
+  delegate_to: "{{ groups['provisioner'] | first }}"
+  block:
+    - name: "oc-setup : Create .kube directory"
+      file:
+        path: "{{ ansible_env.HOME }}/.kube"
+        state: directory
+        mode: '0750'
 
-- name: "Check if .kube/config exists"
-  delegate_to: "{{ groups['provisioner'][0] }}"
-  stat:
-    path: "{{ ansible_env.HOME }}/.kube/config"
-    get_checksum: false
-  register: kube_config
+    - name: "Check if .kube/config exists"
+      stat:
+        path: "{{ ansible_env.HOME }}/.kube/config"
+        get_checksum: false
+      register: kube_config
 
-- name: "oc-setup : Symlink kubeconfig to .kube/config"
-  delegate_to: "{{ groups['provisioner'][0] }}"
-  file:
-    src: "{{ dir }}/auth/kubeconfig"
-    dest: "{{ ansible_env.HOME }}/.kube/config"
-    state: link
-  when:
-    - not kube_config.stat.exists
+    - name: "oc-setup : Symlink kubeconfig to .kube/config"
+      file:
+        src: "{{ dir }}/auth/kubeconfig"
+        dest: "{{ ansible_env.HOME }}/.kube/config"
+        state: link
+      when:
+        - not kube_config.stat.exists
+
+    - debug:
+        var: hostvars['localhost']['kubeconfig_path']
+
+    - debug:
+        var: hostvars[groups['provisioner'] | first]['kubeconfig_path']
+
+    - name: "Set the kubeconfig_path fact on the provisioner hosts"
+      delegate_facts: true
+      set_fact:
+        kubeconfig_path: "{{ dir }}/auth/kubeconfig"
+
+    - debug:
+        var: hostvars['localhost']['kubeconfig_path']
+
+    - debug:
+        var: hostvars[groups['provisioner'] | first]['kubeconfig_path']
 ...
