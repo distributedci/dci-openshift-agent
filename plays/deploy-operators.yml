@@ -41,6 +41,8 @@
             name: cluster
           spec:
             disableAllDefaultSources: true
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
   when:
     - dci_disconnected | default(false) | bool
 
@@ -57,6 +59,8 @@
     - name: "deploy-operators : Get all nodes"
       community.kubernetes.k8s_info:
         kind: Node
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
       register: nodes
 
     - name: "deploy-operators : Get worker node count"
@@ -84,6 +88,8 @@
       community.kubernetes.k8s:
         state: present
         definition: "{{ mcp_def }}"
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
       when:
         - hostvars.localhost.groups['workers']|length > 1
 
@@ -97,6 +103,8 @@
             namespace: openshift-marketplace
           spec:
             image: "{{ operators_index }}"
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
       when:
         - operators_index is defined
         - not dci_disconnected | default(false) | bool
@@ -149,6 +157,8 @@
             name: worker
           spec:
             maxUnavailable: 1
+      environment:
+        KUBECONFIG: "{{ kubeconfig_path }}"
 
   when: >
     (dci_prepare_cnf | bool) or
