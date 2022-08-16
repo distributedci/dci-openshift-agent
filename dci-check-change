@@ -231,11 +231,20 @@ if [ -d dci-openshift-agent ]; then
     BASEDIR=$PWD/dci-openshift-agent
 fi
 
+# if DCI_QUEUE_RESOURCE is specified as env var, then do not schedule the job - just execute it
 if [ -z "$NO_DCI_QUEUE" ] && [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
     if [ -n "$USE_PREFIX" ]; then
-        dci-queue schedule $DCI_QUEUE -- env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR -p @RESOURCE "$@" $OPTS
+        if [ -z "$DCI_QUEUE_RESOURCE" ]; then
+            dci-queue schedule $DCI_QUEUE -- env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR -p @RESOURCE "$@" $OPTS
+        else
+            env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR -p $DCI_QUEUE_RESOURCE "$@" $OPTS
+        fi
     else
-        dci-queue schedule $DCI_QUEUE -- env RES=@RESOURCE APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" $OPTS
+        if [ -z "$DCI_QUEUE_RESOURCE" ]; then
+            dci-queue schedule $DCI_QUEUE -- env RES=@RESOURCE APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" $OPTS
+        else
+            env RES=$DCI_QUEUE_RESOURCE APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" $OPTS
+        fi
     fi
 else
     env APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $NO_COMMENT $DIR "$@" $OPTS
