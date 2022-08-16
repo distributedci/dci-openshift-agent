@@ -16,6 +16,108 @@
       "message": "This was tested in Casa, OCS in external mode\nhttps://www.distributed-ci.io/jobs/5567e14a-2aa6-4195-ad94-654cb12a30f9/jobStates\nNow pending testing in BOS2 once 25813 is merged",
       "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0404bd35_a8ad305b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T23:13:02Z",
+      "side": 1,
+      "message": "Great work here! I have a few questions and some suggestions",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e72805a0_75366a68",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T23:13:02Z",
+      "side": 1,
+      "message": "Is there any reason as to why not validate certs?",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93a59e59_d7df4ef7",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T23:13:02Z",
+      "side": 1,
+      "message": "maybe\n    name: \"{{ node.name }}\"",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54df6bb1_3b2990a7",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T23:13:02Z",
+      "side": 1,
+      "message": "maybe:\n    \"{{ node.lso_label }}\"",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08a92d9a_fcb7eec7",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T23:13:02Z",
+      "side": 1,
+      "message": "I did not find any other reference to tags, maybe these are pieces left while testing?",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f8e4a4c_446f4ffb",
+        "filename": "roles/odf-setup/templates/openshift-storage-cluster.yml.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T23:13:02Z",
+      "side": 1,
+      "message": "We could reduce the length of the line with:\n\n    enable_object_gateway | default(false) | bool",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
