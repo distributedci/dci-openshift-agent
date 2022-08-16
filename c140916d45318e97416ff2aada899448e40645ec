@@ -105,6 +105,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "ac7d4582_15aea57d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-16T22:38:57Z",
+      "side": 1,
+      "message": "The previous job run on server07, the new storage is present.\n\n[dci-openshift-agent@server01 ~]$ for i in $(seq 1 6); do ssh -q -i .ssh/server07-provisioner_rsa core@192.168.16.7$i \"hostname; lsblk |grep sdb\"  ; done\nmaster-0\nmaster-1\nmaster-2\nworker-0\nsdb      8:16   0  150G  0 disk \nworker-1\nsdb      8:16   0  150G  0 disk \nworker-2\nsdb      8:16   0  150G  0 disk",
+      "revId": "c140916d45318e97416ff2aada899448e40645ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "e792660d_a0e82ae7",
         "filename": "roles/ocp-on-libvirt/tasks/libvirt_host_up.yml",
         "patchSetId": 2
