@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cea5fe36_99ed75df",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T22:39:40Z",
+      "side": 1,
+      "message": "If the code reaches this point then DCI_QUEUE must be set and dci-queue is installed.\n\nI think it\u0027s OK to consider DCI_QUEUE_RESOURCE. But, I think it should not be nested in here. If included, I think it should be at the level of DCI_QUEUE.",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2aa05245_af01d782",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T22:39:40Z",
+      "side": 1,
+      "message": "How is RES passed to test-runner?",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d6b28c4_e2aaf8a3",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T22:39:40Z",
+      "side": 1,
+      "message": "This comparison is a bit strange, why not using -n \"${PREFIX}\" ?",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "344ab94e_542f953d",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T22:39:40Z",
+      "side": 1,
+      "message": "If we don\u0027t know the resource maybe don\u0027t add the tag at all?",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
