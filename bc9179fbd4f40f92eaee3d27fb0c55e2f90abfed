@@ -16,6 +16,24 @@
       "message": "why delegate_to, just use hosts: localhost at the top",
       "revId": "bc9179fbd4f40f92eaee3d27fb0c55e2f90abfed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a2d4987_5a857b8a",
+        "filename": "samples/assisted_on_libvirt/generate-hosts-file.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-08-16T17:58:51Z",
+      "side": 1,
+      "message": "I copied this from the sno example.  I think it\u0027s safe to change.",
+      "parentUuid": "267a3130_08b58322",
+      "revId": "bc9179fbd4f40f92eaee3d27fb0c55e2f90abfed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
