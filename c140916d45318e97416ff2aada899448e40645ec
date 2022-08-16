@@ -54,6 +54,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "b6e0bd47_3096f87d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-16T20:49:08Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "c140916d45318e97416ff2aada899448e40645ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "e792660d_a0e82ae7",
         "filename": "roles/ocp-on-libvirt/tasks/libvirt_host_up.yml",
         "patchSetId": 2
