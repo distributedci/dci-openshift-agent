@@ -33,6 +33,40 @@
       "message": "Job used to test the ocp deployment https://www.distributed-ci.io/jobs/52f5d7e8-3cd1-42ef-b83d-7f1f5c7765c9/jobStates",
       "revId": "c140916d45318e97416ff2aada899448e40645ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f89ab0ea_c0849588",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-16T20:26:23Z",
+      "side": 1,
+      "message": "Looks good to me!",
+      "revId": "c140916d45318e97416ff2aada899448e40645ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e792660d_a0e82ae7",
+        "filename": "roles/ocp-on-libvirt/tasks/libvirt_host_up.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-16T20:26:23Z",
+      "side": 1,
+      "message": "Maybe in the future we can allow to do both in workers and masters",
+      "revId": "c140916d45318e97416ff2aada899448e40645ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
