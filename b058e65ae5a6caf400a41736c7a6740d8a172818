@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e30724e_8b409e85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-16T20:34:48Z",
+      "side": 1,
+      "message": "This was tested in Casa, OCS in external mode\nhttps://www.distributed-ci.io/jobs/5567e14a-2aa6-4195-ad94-654cb12a30f9/jobStates\nNow pending testing in BOS2 once 25813 is merged",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
