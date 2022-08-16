@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0433c943_a1f8728b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-16T08:22:09Z",
+      "side": 1,
+      "message": "Remember you need to define this disk2_size variable in this inventory file: https://github.com/redhat-cip/dci-openshift-agent/blob/master/samples/ocp_on_libvirt/inventory/libvirt_resources.yml, to use it in BOS2",
+      "revId": "0f15dd5516cae929fb0d33c3685688b238f97483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
