@@ -122,6 +122,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "7afebca3_ae857630",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-16T22:48:24Z",
+      "side": 1,
+      "message": "indeed 😎\n\n\n    $ grep -m1 \u0027disk2.qcow\u0027 ~/.dci-queue/log/vpool/845 | awk -F\\{ \u0027{printf \"{%s\", $2}\u0027 | jq .cmd\n    [\n      \"qemu-img\",\n      \"create\",\n      \"-f\",\n      \"qcow2\",\n      \"/var/lib/libvirt/images/worker-0-disk2.qcow2\",\n      \"150G\"\n    ]",
+      "revId": "c140916d45318e97416ff2aada899448e40645ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "e792660d_a0e82ae7",
         "filename": "roles/ocp-on-libvirt/tasks/libvirt_host_up.yml",
         "patchSetId": 2
