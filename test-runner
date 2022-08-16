@@ -415,7 +415,17 @@ if [ -z "$KCFG" ]; then
     export DCI_OPENSHIFT_AGENT_DIR="$PWD"
     export ANSIBLE_CONFIG="$PWD/ansible.cfg"
 
-    setsid $CMD $PREFIX -s -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\"]}" "$@" >& output &
+    if [ -n "$RES" ]; then
+        CLUSTER="$RES"
+    elif [ -n "${PREFIX#-p }" ]; then
+        CLUSTER="${PREFIX#-p }"
+    fi
+
+    if [ -n "$CLUSTER" ]; then
+        setsid $CMD $PREFIX -s -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\", \"resource:$CLUSTER\"]}" "$@" >& output &
+    else
+        setsid $CMD $PREFIX -s -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\"]}" "$@" >& output &
+    fi
 
     do_wait 1
 fi
@@ -476,14 +486,14 @@ if [ -s "$KUBECONFIG" ]; then
         if [ "$APP_NAME" != "none" ]; then
             APP_OPT="-e dci_config_dir=$PWD/samples/$APP_NAME"
         fi
-        setsid $PWD/dci-openshift-app-agent-ctl $PREFIX2 -s -d -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\"]}" $APP_OPT -e dci_name="$APP_NAME" "$@" &>> ../output &
+        setsid $PWD/dci-openshift-app-agent-ctl $PREFIX2 -s -d -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\", \"resource:$CLUSTER\"]}" $APP_OPT -e dci_name="$APP_NAME" "$@" &>> ../output &
         cd ..
     else
         unset CONFIG_DIR
         if [ "$APP_NAME" != "none" ]; then
             APP_OPT="-e dci_config_dir=/var/lib/dci-openshift-app-agent/samples/$APP_NAME"
         fi
-        setsid dci-openshift-app-agent-ctl $PREFIX2 -s -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\"]}" $APP_OPT -e dci_name="$APP_NAME" "$@" &>> output &
+        setsid dci-openshift-app-agent-ctl $PREFIX2 -s -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\", \"resource:$CLUSTER\"]}" $APP_OPT -e dci_name="$APP_NAME" "$@" &>> output &
     fi
 
     if [ -n "$KCFG" ]; then
