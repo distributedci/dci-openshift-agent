@@ -46,6 +46,30 @@
       },
       "revId": "6da58f6a72e7a7be2d4e5b8ca606a08cdb8cb424",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9afdda6e_5a3ba1f7",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-08-16T17:49:05Z",
+      "side": 1,
+      "message": "If this works then yes! 😊",
+      "parentUuid": "d8fa4804_11cb4850",
+      "range": {
+        "startLine": 151,
+        "startChar": 0,
+        "endLine": 153,
+        "endChar": 32
+      },
+      "revId": "6da58f6a72e7a7be2d4e5b8ca606a08cdb8cb424",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
