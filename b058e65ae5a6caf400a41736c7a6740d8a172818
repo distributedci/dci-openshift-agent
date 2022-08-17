@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "33c1e40c_9f98a681",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T08:37:53Z",
+      "side": 1,
+      "message": "Some minor questions from my side too, but the change is quite fine, thanks Manuel!",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e72805a0_75366a68",
@@ -88,6 +105,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "abf96042_4f42d508",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T08:37:53Z",
+      "side": 1,
+      "message": "Is this needed? Because they are defined in group_vars/all, in fact",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 29
+      },
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "08a92d9a_fcb7eec7",
         "filename": "roles/odf-setup/tasks/main.yml",
         "patchSetId": 2
@@ -99,6 +139,52 @@
       "writtenOn": "2022-08-16T23:13:02Z",
       "side": 1,
       "message": "I did not find any other reference to tags, maybe these are pieces left while testing?",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dafdf30f_c1c1efd7",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T08:37:53Z",
+      "side": 1,
+      "message": "Another tag reference, as Tony commented in his comment.",
+      "range": {
+        "startLine": 50,
+        "startChar": 2,
+        "endLine": 50,
+        "endChar": 6
+      },
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40182a3c_0ec07b2b",
+        "filename": "roles/odf-setup/tasks/openshift-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T08:37:53Z",
+      "side": 1,
+      "message": "is this correct? or do we only need \"\u003e\" to include the break line? just curious",
+      "range": {
+        "startLine": 20,
+        "startChar": 39,
+        "endLine": 20,
+        "endChar": 40
+      },
       "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
