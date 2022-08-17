@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c357649_7ebedfd6",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "Not really, maybe copy/paste when I got this from the online doc, I removed them.",
+      "parentUuid": "e72805a0_75366a68",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "93a59e59_d7df4ef7",
@@ -86,6 +104,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4f54ffb_b1dcadce",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "I tried this, but it seem it\u0027s not working that way, unless I\u0027m missing something, please see: https://privatebin.corp.redhat.com/?2d515919876165d6#GbW2KZHy2fnpXquTafBkyMf8ZaWfrcjEeficxtVBxheR",
+      "parentUuid": "93a59e59_d7df4ef7",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "54df6bb1_3b2990a7",
@@ -99,6 +135,24 @@
       "writtenOn": "2022-08-16T23:13:02Z",
       "side": 1,
       "message": "maybe:\n    \"{{ node.lso_label }}\"",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "353f9b72_6da26a04",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "Same as above, please see my tests in the link",
+      "parentUuid": "54df6bb1_3b2990a7",
       "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -150,6 +204,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f1dad93_83747520",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "Yes, before this odf-setup was a standalone role (no need of d-o-a to run it), so it has a few things we already check in the main agent, if you both are ok I\u0027ll leave it.",
+      "parentUuid": "abf96042_4f42d508",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 29
+      },
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08a92d9a_fcb7eec7",
@@ -167,6 +245,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8994b8f9_c6a13e3c",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "Yes, thanks for catching, before I had tags almost everywhere but I cleaned to include this role in d-o-a, I removed it.",
+      "parentUuid": "08a92d9a_fcb7eec7",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dafdf30f_c1c1efd7",
@@ -180,6 +276,30 @@
       "writtenOn": "2022-08-17T08:37:53Z",
       "side": 1,
       "message": "Another tag reference, as Tony commented in his comment.",
+      "range": {
+        "startLine": 50,
+        "startChar": 2,
+        "endLine": 50,
+        "endChar": 6
+      },
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74d85c8f_87ce99e8",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dafdf30f_c1c1efd7",
       "range": {
         "startLine": 50,
         "startChar": 2,
@@ -237,6 +357,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3431be28_0b50b3a0",
+        "filename": "roles/odf-setup/tasks/openshift-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "Thanks for the explanation.",
+      "parentUuid": "40182a3c_0ec07b2b",
+      "range": {
+        "startLine": 20,
+        "startChar": 39,
+        "endLine": 20,
+        "endChar": 40
+      },
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3f8e4a4c_446f4ffb",
@@ -250,6 +394,24 @@
       "writtenOn": "2022-08-16T23:13:02Z",
       "side": 1,
       "message": "We could reduce the length of the line with:\n\n    enable_object_gateway | default(false) | bool",
+      "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af039e8f_aa554a88",
+        "filename": "roles/odf-setup/templates/openshift-storage-cluster.yml.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-17T14:01:40Z",
+      "side": 1,
+      "message": "changed.",
+      "parentUuid": "3f8e4a4c_446f4ffb",
       "revId": "b058e65ae5a6caf400a41736c7a6740d8a172818",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
