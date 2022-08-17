@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8b0d7d7b_637d8d3e",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-17T17:43:59Z",
+      "side": 1,
+      "message": "\u003e It is supposed that the config related to dci-queue is applied up to this point\n\nCorrect, that means that it is expected to use dci-queue, that\u0027s why I mentioned that the DCI_QUEUE_RESOURCE validation should be at that level and not nested.\n\n\u003e also defining DCI_QUEUE with -p argument\n\nI think this adds more complexity 😕. For example, when using SUPPORTED_HINTS and ASSISTED_DCI_QUEUE and calling --assisted and -p, will result in overriding -p being ignored. See lines: 91, 130 and 228",
+      "parentUuid": "dfa2d98d_ccea7877",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2aa05245_af01d782",
         "filename": "test-runner",
         "patchSetId": 1
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "It is provided here: https://github.com/redhat-cip/dci-openshift-agent/blob/master/dci-check-change#L238, if USE_PREFIX is not set. So, that if-else block, is translated in the following way here:\n\nUSE_PREFIX is not set -\u003e RES is defined and PREFIX is not defined (which is related to this if clause)\nUSE_PREFIX is set -\u003e PREFIX is defined (passed as -p @RESOURCE) and RES is not defined (which is related to the elif clause that is below)",
       "parentUuid": "2aa05245_af01d782",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e25ff84e_f4ef3e11",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-17T17:43:59Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c98bd771_9d06a03b",
       "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -102,6 +138,24 @@
       "side": 1,
       "message": "Because, if PREFIX variable is defined, its content is something like \"-p serverXX\", and we need to remove the \"-p \" to extract the cluster name. So, we need to check if, by removing the \"-p \", we have a resource name present on PREFIX variable, just in case PREFIX \u003d \"-p \"",
       "parentUuid": "3d6b28c4_e2aaf8a3",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78d4459d_26ee626a",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-17T17:43:59Z",
+      "side": 1,
+      "message": "\u003e if PREFIX variable is defined, its content is something like ...\n\nExactly 😊. *if it\u0027s defined*, so you don\u0027t have to compare it that way, see line 383 or 394. If PREFIX has content ( -n \"${PREFIX}\" ) then you enter the conditional.\n\nOnce inside the conditional you will obtain the value the way you have it.",
+      "parentUuid": "64ee0264_eddc3be4",
       "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
