@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37163eb8_959d9eae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T08:55:23Z",
+      "side": 1,
+      "message": "I have some general comments here, but I\u0027ll continue checking the logic to find some other changes that are needed. I think we will need to discuss this in a call, because this change is not easy to be done.\n\n- In BOS2, we currently don\u0027t have more space to setup new VMs for new scenarios. We (Telco CI team) were discussing about it and we believe that, for the assisted use case, we will need to reuse the VMs that we are using for ocp_on_libvirt, and they have a specific configuration of IP addresses and MAC addresses that must be followed. This would impact in the creation of new config files in the bos2 repo that is under dci-labs org in github, and we would need to also check the impact on the files that are on dci-openshift-agent.\n- BOS2 does not have a dci-queue for assisted, it has one for ocp_on_libvirt and another for sno_on_libvirt. For assisted, as we would use the same VMs than for ocp_on_libvirt, it would use the same queue than ocp_on_libvirt. I think dci-check-change/test-runner must be updated to consider this\n- We need to review the SUPPORTED_HINTS and the inventory for assisted in BOS2 lab, because it\u0027s currently disabled in the d-o-a config generated on BOS2.\n- We need to check that the assisted role is not all executed in localhost, as the VMs in BOS2 are in different servers than the provisionhost.",
+      "revId": "3a5ed27c1c1a9b804dad968c128d688dbe86e28f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
