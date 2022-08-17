@@ -26,7 +26,7 @@ VIRT=
 DCI_QUEUE=
 SNO_DCI_QUEUE=
 SUPPORTED_HINTS=
-NO_DCI_QUEUE=
+NO_DCI_QUEUE=${SKIP_DCI_QUEUE:-}
 NO_COMMENT=
 
 if [ -r /etc/dci-openshift-agent/config ]; then
