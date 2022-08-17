@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "376e36fd_f56742f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T12:30:58Z",
+      "side": 1,
+      "message": "Change is working: https://www.distributed-ci.io/jobs/dbeaf1d8-08ca-481e-9252-e03e05e30e22/jobStates, you can see that resource:server04 tag is created, so that we know it\u0027s being used the server04.\nI\u0027ll leave testing the new changes and I\u0027ll try to check the manual stuff directly in BOS2 (e.g. testing a change in a particular cluster)",
+      "revId": "0d7090f015fde8b699caa71c99a97d4eb9d9b010",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

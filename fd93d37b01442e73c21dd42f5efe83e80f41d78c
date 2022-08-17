@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dfa2d98d_ccea7877",
+        "filename": "dci-check-change",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T12:30:58Z",
+      "side": 1,
+      "message": "It is supposed that the config related to dci-queue is applied up to this point, that\u0027s why we have the first if clause: `if [ -z \"$NO_DCI_QUEUE\" ] \u0026\u0026 [ -n \"$DCI_QUEUE\" ] \u0026\u0026 type -p dci-queue \u003e\u0026 /dev/null`\n\nI\u0027ve included some more documentation and I\u0027ve declared DCI_QUEUE_RESOURCE in the same way we are doing with `check` command, also defining DCI_QUEUE with -p argument. Is it better now?",
+      "parentUuid": "cea5fe36_99ed75df",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2aa05245_af01d782",
         "filename": "test-runner",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2022-08-16T22:39:40Z",
       "side": 1,
       "message": "How is RES passed to test-runner?",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c98bd771_9d06a03b",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T12:30:58Z",
+      "side": 1,
+      "message": "It is provided here: https://github.com/redhat-cip/dci-openshift-agent/blob/master/dci-check-change#L238, if USE_PREFIX is not set. So, that if-else block, is translated in the following way here:\n\nUSE_PREFIX is not set -\u003e RES is defined and PREFIX is not defined (which is related to this if clause)\nUSE_PREFIX is set -\u003e PREFIX is defined (passed as -p @RESOURCE) and RES is not defined (which is related to the elif clause that is below)",
+      "parentUuid": "2aa05245_af01d782",
       "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -54,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "64ee0264_eddc3be4",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T12:30:58Z",
+      "side": 1,
+      "message": "Because, if PREFIX variable is defined, its content is something like \"-p serverXX\", and we need to remove the \"-p \" to extract the cluster name. So, we need to check if, by removing the \"-p \", we have a resource name present on PREFIX variable, just in case PREFIX \u003d \"-p \"",
+      "parentUuid": "3d6b28c4_e2aaf8a3",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "344ab94e_542f953d",
         "filename": "test-runner",
         "patchSetId": 1
@@ -65,6 +119,24 @@
       "writtenOn": "2022-08-16T22:39:40Z",
       "side": 1,
       "message": "If we don\u0027t know the resource maybe don\u0027t add the tag at all?",
+      "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce2cad8b_843c13b9",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T12:30:58Z",
+      "side": 1,
+      "message": "I\u0027ve changed this, thanks!",
+      "parentUuid": "344ab94e_542f953d",
       "revId": "fd93d37b01442e73c21dd42f5efe83e80f41d78c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
