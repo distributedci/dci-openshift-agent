@@ -51,6 +51,23 @@
       "parentUuid": "ac4ae68b_b091e98f",
       "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e78229d7_f7a52097",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-08-17T19:23:49Z",
+      "side": 1,
+      "message": "I\u0027m trying to parse all of this but I\u0027m a little lost.  Can\u0027t you execute a job on a specific resource with the queue?  If not, wouldn\u0027t it make sense to enhance the queue command to support that?  Manual steps would be to create a new pool (could be called the same name as the resource) and move the resource from the pool it was in to the new pool.\n\nOr are you trying to do something different?",
+      "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
