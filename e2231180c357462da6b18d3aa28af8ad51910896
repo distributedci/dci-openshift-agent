@@ -33,6 +33,24 @@
       "message": "Thanks for the update and the info Ramón. I have more feedback related in the code.\n\nI really would love to have someone else\u0027s eyes on this change and chime in.\n\nAdditionally, I\u0027ve been thinking on this change. Seems to me like the end goal is to have a way to identify *where* a job was executed regardless of *how* it was executed (dci-pipeline, schedule, check, dci-check-change, etc)\n\nIf the statement above is true, then seems to me like an easier way to approach this is by adding a tag in the d-o-a (and later in d-o-a-a) thus avoiding this injection of tags from the outside. With that being said, I\u0027ve created a PoC in change: 25836\n\nIn this job: https://www.distributed-ci.io/jobs/6fdce9d4-0ff8-4473-8982-2497451d6d55/jobStates you can see the tag was added and that was called via dci-check-change:\n\n$ sudo journalctl -u ci | grep \u0027dci-check-change 25836\u0027                                                \nAug 17 13:14:45 server01.partnerci.bos2.lab ci.sh[4030702]: + exec /var/lib/dci-openshift-agent/gerrit/25836-bada18da41218272567c8e2f46bc4d2f.bootstrap/dci-openshift-agent/dci-check-change 25836\n\nwdyt?\n",
       "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b81810c5_1c1f42f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-17T18:50:33Z",
+      "side": 1,
+      "message": "I see this change is not only to identify the server that was used for a job but also to be able to reserve it and continue running jobs on top of it. Now that I have started using Bos2 more for dev/test I have had both needs (Thanks for this).\n\nI do not think that the part of running jobs on a specific cluster can be done in the agent. Maybe keep the part of the tag in the agent and the code related to the resource in the dci-check-change?",
+      "parentUuid": "ac4ae68b_b091e98f",
+      "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
