@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6bdd31e8_21923751",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-17T18:28:30Z",
+      "side": 1,
+      "message": "LGTM\n\nPretty sure you could do some magic to make it appear 😂",
+      "revId": "8c96cc288d56b89fbc9aef7809b724cf74616089",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
