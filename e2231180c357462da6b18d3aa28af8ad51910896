@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de87c5d7_945a26bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-17T16:41:24Z",
+      "side": 1,
+      "message": "Some more tests (remember we have already validated that automatic dci-check-change job launched by CI service includes correctly the DCI tag related to the server in which the job is executed and the resource is selected randomly from the pool):\n\n1. Testing an app-agent change (25823 patchset 1)\n\n```\n[dci-openshift-agent@server01 25823]$ pwd\n/var/lib/dci-openshift-agent/ramon/25823\n[dci-openshift-agent@server01 25823]$ /bin/bash /var/lib/dci-openshift-agent/ramon/25823/dci-check-change 25835 /var/lib/dci-openshift-agent/clusterconfigs-server06/kubeconfig\n```\n\nResult: https://www.distributed-ci.io/jobs/e5d97e12-4a52-4268-8858-234f6e498f76/jobStates\n\n- I was able to launch the app-agent in an already running cluster\n- Tag was correctly set to the reserved cluster\n\n2. Same example, but using hints to launch tnf_test_example (25823 patchset 2)\n\n```\n[dci-openshift-agent@server01 25823]$ pwd\n/var/lib/dci-openshift-agent/ramon/25823\n[dci-openshift-agent@server01 25823]$ /bin/bash /var/lib/dci-openshift-agent/ramon/25823/dci-check-change 25835 /var/lib/dci-openshift-agent/clusterconfigs-server06/kubeconfig\n```\n\nResult: https://www.distributed-ci.io/jobs/718df296-e9a7-482b-b167-ec88a989b96c/jobStates\n\n- I was able to launch the app-agent in an already running cluster\n- Tag was correctly set to the reserved cluster\n- Hint was launched correctly (tnf_test_example was launched)\n\n(in these two examples, if you check the change being tested, you\u0027ll see dci-check-change has voted on it: https://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/25835)\n\n3. Testing a dci-openshift-agent change (this one) in a reserved cluster (server06)\n\n```\n[dci-openshift-agent@server01 25823]$ pwd\n/var/lib/dci-openshift-agent/ramon/25823\n[dci-openshift-agent@server01 25823]$ env DCI_QUEUE_RESOURCE\u003dserver06 /bin/bash /var/lib/dci-openshift-agent/ramon/25823/dci-check-change 25823\n```\n\nResult: https://www.distributed-ci.io/jobs/2fd1820e-2b59-4bed-897e-1d759773845d/jobStates\n\n- Job was launched in the reserved cluster, removing the current OCP installation\n- Tag was correctly set to the reserved cluster\n\n(and also, dci-check-change will vote this change based on the result of that scheduled job)\n\nSo, from my side, everything is working fine and this change would be ready for merging.",
+      "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
