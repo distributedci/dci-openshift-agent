@@ -16,6 +16,23 @@
       "message": "LGTM\n\nPretty sure you could do some magic to make it appear 😂",
       "revId": "8c96cc288d56b89fbc9aef7809b724cf74616089",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18e5f2cd_baa1f810",
+        "filename": "docs/disconnected_en.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-17T18:56:26Z",
+      "side": 1,
+      "message": "Can we add an example of this file at the bottom of this file and a reference from here?\n\nadditionalTrustBundle: |\n    \u003cCONTENT FROM domain.crt certificate\u003e\nimageContentSources:\n- mirrors:\n  - registry.cluster1.example-cluster.com:5000/ocp4/openshift4\n  source: quay.io/openshift-release-dev/ocp-release\n- mirrors:\n  - registry.cluster1.example-cluster.com:5000/ocp4/openshift4\n  source: quay.io/openshift-release-dev/ocp-v4.0-art-dev",
+      "revId": "8c96cc288d56b89fbc9aef7809b724cf74616089",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
