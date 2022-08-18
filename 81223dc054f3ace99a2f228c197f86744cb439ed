@@ -50,6 +50,24 @@
       "message": "Can this be parametrized? or maybe calculated based on devices available? \nWhat will be the state of the cluster if there aren\u0027t enough devices for the replicas?",
       "revId": "81223dc054f3ace99a2f228c197f86744cb439ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "406ac8f9_0faceb3d",
+        "filename": "roles/odf-setup/templates/openshift-storage-cluster.yml.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-18T03:16:01Z",
+      "side": 1,
+      "message": "Thanks for checking Beto, patch-set 4 includes a variable to control the replica size (by default 3)",
+      "parentUuid": "04aa18a7_1573cf78",
+      "revId": "81223dc054f3ace99a2f228c197f86744cb439ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

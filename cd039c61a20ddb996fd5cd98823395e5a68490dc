@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21141b5b_a63ad116",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-18T03:16:01Z",
+      "side": 1,
+      "message": "Also patch-set 4 includes host variables for lso when running ocp_on_libvirt",
+      "revId": "cd039c61a20ddb996fd5cd98823395e5a68490dc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
