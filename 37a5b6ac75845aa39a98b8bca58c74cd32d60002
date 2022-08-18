@@ -16,6 +16,41 @@
       "message": "Thanks for simplifying this Tony, but I have a question. Comparing this change with https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25823, how do we force the execution of a job in a particular cluster? In my change, I defined DCI_CLUSTER_RESOURCE for that purpose, and I believe it can be used here too in the same way",
       "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5718362_ace376f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-18T16:38:31Z",
+      "side": 1,
+      "message": "Does the naming: SKIP_DCI_QUEUE makes sense? is there another proposal? this was a POC and I used what came to mind first, we could even use NO_DCI_QUEUE as well to avoid yet another var. Thoughts?",
+      "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e26635bc_43b829d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-18T16:38:31Z",
+      "side": 1,
+      "message": "I was able to test this in BOS2 this way:\n\n    env SKIP_DCI_QUEUE\u003d1 dci-check-change 25843 -p server08\n\nBefore that, the server08 was removed from the queue so I can use it without any other job being assigned to it.",
+      "parentUuid": "a0a438cb_c9dc8429",
+      "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
