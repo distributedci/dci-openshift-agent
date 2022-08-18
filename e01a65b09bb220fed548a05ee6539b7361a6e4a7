@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "e01a65b09bb220fed548a05ee6539b7361a6e4a7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11808695_fb44f522",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-18T22:35:49Z",
+      "side": 1,
+      "message": "looks good to me, I\u0027ll just wait for the libvirt job to finish to +2",
+      "revId": "e01a65b09bb220fed548a05ee6539b7361a6e4a7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
