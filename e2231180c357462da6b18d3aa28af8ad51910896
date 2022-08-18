@@ -104,6 +104,41 @@
       "parentUuid": "e78229d7_f7a52097",
       "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4a3a32f_8e843bfe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-18T10:52:35Z",
+      "side": 1,
+      "message": "Maybe we can do the same in these two CRs, yes, so I\u0027ll abandon this to focus on these two CRs, thanks Tony.",
+      "parentUuid": "0ee19348_2a1b9fd8",
+      "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f501153d_41a8bfc6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-18T10:52:35Z",
+      "side": 1,
+      "message": "As Tony has c",
+      "revId": "e2231180c357462da6b18d3aa28af8ad51910896",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
