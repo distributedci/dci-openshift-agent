@@ -16,6 +16,23 @@
       "message": "The failure in dallas with a vanilla pipeline is due to a different issue, solved in here: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25868 I\u0027ve added a dependency to that change",
       "revId": "93432ff77eba17bc07c39d365aaff730d0df841f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55ac6771_a3fecf61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-18T21:48:16Z",
+      "side": 1,
+      "message": "check dallas ocp-4.9-vanilla",
+      "revId": "93432ff77eba17bc07c39d365aaff730d0df841f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
