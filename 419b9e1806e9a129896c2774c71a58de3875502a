@@ -67,6 +67,23 @@
       "message": "dallas jobs are stuck, but should be safe to merge.",
       "revId": "419b9e1806e9a129896c2774c71a58de3875502a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb922e30_2296b103",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-18T19:21:50Z",
+      "side": 1,
+      "message": "check dallas ocp-4.9-vanilla",
+      "revId": "419b9e1806e9a129896c2774c71a58de3875502a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
