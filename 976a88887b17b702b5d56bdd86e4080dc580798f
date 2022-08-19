@@ -34,6 +34,24 @@
       "parentUuid": "d920df1d_a88d7c0c",
       "revId": "976a88887b17b702b5d56bdd86e4080dc580798f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6aaa1993_e9aa791e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-19T08:10:27Z",
+      "side": 1,
+      "message": "I think we can go on with \"cluster\". I used \"resource\" but it may be a different one, it doesn\u0027t mind. In fact, as we are retrieving the \"cluster\" variable, \"cluster\" seems to be an appropriate one. So, from my side, let\u0027s go on with it.",
+      "parentUuid": "bcef5db3_795d8e1c",
+      "revId": "976a88887b17b702b5d56bdd86e4080dc580798f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
