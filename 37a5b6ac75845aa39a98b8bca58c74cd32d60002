@@ -51,6 +51,42 @@
       "parentUuid": "a0a438cb_c9dc8429",
       "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d6da294_f9fdc3f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-19T08:17:21Z",
+      "side": 1,
+      "message": "I was thinking about this, and this command is true in case of using prefixes (which is the case of BOS2), but what about scenarios where prefixes are not being used? Should we consider them?\n\nAnd also, up to this point, may we add that info to the docs? So that everybody is aware of how to skip dci-queue and use a particular resource?",
+      "parentUuid": "e26635bc_43b829d1",
+      "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b3844c9_6ef2f844",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-19T08:17:21Z",
+      "side": 1,
+      "message": "As you are commenting this, yes, maybe we can reuse NO_DCI_QUEUE to avoid a new var.",
+      "parentUuid": "a5718362_ace376f6",
+      "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
