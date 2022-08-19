@@ -16,6 +16,23 @@
       "message": "rebased and removed depends on from commit\ncheck dallas ocp-4.8-vanilla",
       "revId": "a420d399406a05f204e8c64b762755f86a06cdf4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0abe9ca_56e1cab3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-19T12:56:31Z",
+      "side": 1,
+      "message": "check dallas ocp-4.8-vanilla",
+      "revId": "a420d399406a05f204e8c64b762755f86a06cdf4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
