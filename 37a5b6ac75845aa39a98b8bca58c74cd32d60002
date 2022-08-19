@@ -87,6 +87,42 @@
       "parentUuid": "a5718362_ace376f6",
       "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "940b4abb_5be09550",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-19T15:45:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2b3844c9_6ef2f844",
+      "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae80664a_ef73aa9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-19T15:45:00Z",
+      "side": 1,
+      "message": "This change was originated because in BOS2 dci-queue is installed. This way the queue is skipped. \n\ndci-check-change already supports its use where dci-queue is not installed, the job will be similarly executed directly through test-runner, in those cases the inventory is the one that takes care of running the job in the right place\n\nYes, we should document this, I\u0027m adding a line to add the description",
+      "parentUuid": "8d6da294_f9fdc3f2",
+      "revId": "37a5b6ac75845aa39a98b8bca58c74cd32d60002",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
