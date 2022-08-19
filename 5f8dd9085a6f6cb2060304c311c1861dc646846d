@@ -84,6 +84,23 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "5f8dd9085a6f6cb2060304c311c1861dc646846d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a046b6dc_c2874aab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-19T23:41:46Z",
+      "side": 1,
+      "message": "This is working, LGTM\nhttps://www.distributed-ci.io/jobs/9b4bb008-09ab-41f6-b299-1b0e11062b4e/jobStates#c84d16a2-5b93-4a2e-a4d1-f11f62412d34:file336\nhttps://www.distributed-ci.io/jobs/2c7ccd81-bbd5-49ae-aebe-2b3da9ffaca2/jobStates#292293c6-81c6-4b03-934b-1c7af7ca6067:file336",
+      "revId": "5f8dd9085a6f6cb2060304c311c1861dc646846d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
