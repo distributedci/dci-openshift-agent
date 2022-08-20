@@ -16,6 +16,23 @@
       "message": "LGTM, I\u0027ll +2 after the job is completed succesfully",
       "revId": "8a38975161637502ac80002316cc00d9639c4872",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a1c312a_09240a6d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-20T01:40:49Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "8a38975161637502ac80002316cc00d9639c4872",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
