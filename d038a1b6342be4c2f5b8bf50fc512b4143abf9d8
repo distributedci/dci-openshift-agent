@@ -50,6 +50,23 @@
       "message": "We need to activate dci_teardown flags to test this change, I\u0027ll do it",
       "revId": "d038a1b6342be4c2f5b8bf50fc512b4143abf9d8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36aa1e6f_fdb09996",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-22T09:48:37Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vcp openshift-vcp:ansible_extravars\u003dcnf_test_suites:[] openshift-vcp:ansible_extravars\u003ddci_teardown_on_failure:true openshift-vcp:ansible_extravars\u003ddci_teardown_on_success:true",
+      "revId": "d038a1b6342be4c2f5b8bf50fc512b4143abf9d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
