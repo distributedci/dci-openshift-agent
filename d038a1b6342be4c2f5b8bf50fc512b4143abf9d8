@@ -67,6 +67,23 @@
       "message": "check dallas ocp-4.7-vcp openshift-vcp:ansible_extravars\u003dcnf_test_suites:[] openshift-vcp:ansible_extravars\u003ddci_teardown_on_failure:true openshift-vcp:ansible_extravars\u003ddci_teardown_on_success:true",
       "revId": "d038a1b6342be4c2f5b8bf50fc512b4143abf9d8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9d3d259_1794dd4d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-22T13:16:20Z",
+      "side": 1,
+      "message": "\u003e Patch Set 1:\n\u003e \n\u003e - FAILURE https://www.distributed-ci.io/jobs/cc0f9f73-c089-41ec-a77b-9ac5aba3ddde/jobStates\n\u003e  from https://softwarefactory-project.io/r/#/c/25877/\n\nThe change is working fine. If you see the latest part, you will see SPK teardown is executed the first, while other SPK hooks are the last ones to be executed, so the reverse operation is working fine",
+      "revId": "d038a1b6342be4c2f5b8bf50fc512b4143abf9d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
