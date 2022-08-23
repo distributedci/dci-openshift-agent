@@ -84,6 +84,23 @@
       "message": "recheck",
       "revId": "40700ce81b873d89ca115dc2213dcc9be737d75b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "609303f0_1ecf791f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-23T21:38:42Z",
+      "side": 1,
+      "message": "There is a problem with the 4.11 deployment in libvirt most of the jobs in this PR do not managed to get the worker nodes provisioned, I reserved the server03 in vpool to troubleshoot\n\n[dci@provisionhost ~]$ oc version\nClient Version: 4.11.1\nKustomize Version: v4.5.4\nKubernetes Version: v1.24.0+4f0dd4d\n[dci@provisionhost ~]$ oc get nodes\nNAME       STATUS   ROLES    AGE   VERSION\nmaster-0   Ready    master   78m   v1.24.0+4f0dd4d\nmaster-1   Ready    master   78m   v1.24.0+4f0dd4d\nmaster-2   Ready    master   79m   v1.24.0+4f0dd4d\n[dci@provisionhost ~]$ oc get bmh -A \nNAMESPACE               NAME       STATE   CONSUMER                  ONLINE   ERROR   AGE\nopenshift-machine-api   master-0           server03-hflvg-master-0   true             90m\nopenshift-machine-api   master-1           server03-hflvg-master-1   true             90m\nopenshift-machine-api   master-2           server03-hflvg-master-2   true             90m\nopenshift-machine-api   worker-0                                     true             90m\nopenshift-machine-api   worker-1                                     true             90m\nopenshift-machine-api   worker-2                                     true             90m\n[dci@provisionhost ~]$ oc get machines -A \nNAMESPACE               NAME                            PHASE          TYPE   REGION   ZONE   AGE\nopenshift-machine-api   server03-hflvg-master-0         Provisioning                          90m\nopenshift-machine-api   server03-hflvg-master-1         Provisioning                          90m\nopenshift-machine-api   server03-hflvg-master-2         Provisioning                          90m\nopenshift-machine-api   server03-hflvg-worker-0-bntd6   Provisioning                          74m\nopenshift-machine-api   server03-hflvg-worker-0-gmmx2   Provisioning                          74m\nopenshift-machine-api   server03-hflvg-worker-0-lfff7   Provisioning                          74m\n\n",
+      "revId": "40700ce81b873d89ca115dc2213dcc9be737d75b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
