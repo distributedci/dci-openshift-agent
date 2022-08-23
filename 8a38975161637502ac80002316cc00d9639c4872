@@ -84,6 +84,23 @@
       "message": "recheck",
       "revId": "8a38975161637502ac80002316cc00d9639c4872",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a2547f3_7a2ecf25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-23T13:09:46Z",
+      "side": 1,
+      "message": "The problem here is that when the inventory is rendered, the variables passed with Test-Args-Hints are not passed when running \"ansible-playbook -v libvirt_up.yml\", so the LSO/OCS vars in the template are not included. Which makes sense because the vars are intended to be used when running the agents. I need t check the test-runner to see how to make it use these vars.",
+      "revId": "8a38975161637502ac80002316cc00d9639c4872",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
