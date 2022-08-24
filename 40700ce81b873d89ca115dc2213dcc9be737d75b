@@ -118,6 +118,23 @@
       "message": "recheck",
       "revId": "40700ce81b873d89ca115dc2213dcc9be737d75b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a00e56f0_11fc9686",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-24T04:44:45Z",
+      "side": 1,
+      "message": "Finally!\n\n[dci@provisionhost ~]$ oc version\nClient Version: 4.11.1\nKustomize Version: v4.5.4\nServer Version: 4.11.1\nKubernetes Version: v1.24.0+4f0dd4d\n[dci@provisionhost ~]$ oc get nodes\nNAME       STATUS   ROLES    AGE    VERSION\nmaster-0   Ready    master   133m   v1.24.0+4f0dd4d\nmaster-1   Ready    master   133m   v1.24.0+4f0dd4d\nmaster-2   Ready    master   133m   v1.24.0+4f0dd4d\nworker-0   Ready    worker   113m   v1.24.0+4f0dd4d\nworker-1   Ready    worker   113m   v1.24.0+4f0dd4d\nworker-2   Ready    worker   113m   v1.24.0+4f0dd4d",
+      "revId": "40700ce81b873d89ca115dc2213dcc9be737d75b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
