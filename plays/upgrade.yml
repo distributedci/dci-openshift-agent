@@ -169,7 +169,7 @@
     upgrade_status: "{{ cluster_version.resources[0].status | json_query(status_query) }}"
   until:
     - upgrade_status == ['True']
-  retries: 10
+  retries: 20
   delay: 60
 
 - name: "upgrader : Execute the upgrade"
