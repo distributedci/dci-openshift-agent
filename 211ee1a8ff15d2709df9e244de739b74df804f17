@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cd59a5d_bb66faa6",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-08-24T14:08:34Z",
+      "side": 1,
+      "message": "What about making no_log a variable that could be overridden if needed?",
+      "revId": "211ee1a8ff15d2709df9e244de739b74df804f17",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
