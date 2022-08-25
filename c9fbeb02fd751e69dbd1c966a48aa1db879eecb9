@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2e869b7_5513202f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-08-25T16:30:24Z",
+      "side": 1,
+      "message": "Yes in fact, I haven\u0027t merged this patch yet because there\u0027s precisely an issue with running in Dallas, I am trying to troubleshoot it at the moment.",
+      "parentUuid": "74f68072_3e3ef92f",
+      "revId": "c9fbeb02fd751e69dbd1c966a48aa1db879eecb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b34b8de7_97eba827",
@@ -31,6 +49,30 @@
       "writtenOn": "2022-08-25T07:44:08Z",
       "side": 1,
       "message": "I suppose this is for testing purposes and it will be deleted in the final patchset, won\u0027t it?",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 0
+      },
+      "revId": "c9fbeb02fd751e69dbd1c966a48aa1db879eecb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffdc42a4_e026c3ae",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-08-25T16:30:24Z",
+      "side": 1,
+      "message": "yes, will be removed",
+      "parentUuid": "b34b8de7_97eba827",
       "range": {
         "startLine": 26,
         "startChar": 0,
