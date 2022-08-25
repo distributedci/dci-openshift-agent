@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04e0b18a_2b9ac98a",
+        "filename": "roles/odf-setup/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-25T22:54:00Z",
+      "side": 1,
+      "message": "This was not the issue, the fix is in the latest patch",
+      "parentUuid": "e04994d6_76edba63",
+      "revId": "f048f7d2e0967ac467e5234c5f4905f5cf30ae5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "78147627_51b4cd4a",
@@ -82,6 +100,24 @@
       "writtenOn": "2022-08-25T15:26:37Z",
       "side": 1,
       "message": "This has to be changed to a dict instead of a string, e.g.\n\n    default_storageclass_annotation:\n      storageclass.kubernetes.io/is-default-class: \"true\"",
+      "revId": "f048f7d2e0967ac467e5234c5f4905f5cf30ae5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1092b4fe_01468648",
+        "filename": "roles/odf-setup/defaults/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-25T22:54:00Z",
+      "side": 1,
+      "message": "This was not the issue, the fix is in the latest patch",
+      "parentUuid": "78147627_51b4cd4a",
       "revId": "f048f7d2e0967ac467e5234c5f4905f5cf30ae5b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
