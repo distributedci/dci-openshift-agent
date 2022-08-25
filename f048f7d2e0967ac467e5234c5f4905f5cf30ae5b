@@ -33,6 +33,57 @@
       "message": "recheck",
       "revId": "f048f7d2e0967ac467e5234c5f4905f5cf30ae5b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c16159f_de84d381",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-25T15:26:37Z",
+      "side": 1,
+      "message": "This may help with the storageclass",
+      "revId": "f048f7d2e0967ac467e5234c5f4905f5cf30ae5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e04994d6_76edba63",
+        "filename": "roles/odf-setup/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-25T15:26:37Z",
+      "side": 1,
+      "message": "Use a dict instead:\n\n    default_storageclass_annotation:\n      storageclass.kubernetes.io/is-default-class: \"true\"",
+      "revId": "f048f7d2e0967ac467e5234c5f4905f5cf30ae5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78147627_51b4cd4a",
+        "filename": "roles/odf-setup/defaults/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-25T15:26:37Z",
+      "side": 1,
+      "message": "This has to be changed to a dict instead of a string, e.g.\n\n    default_storageclass_annotation:\n      storageclass.kubernetes.io/is-default-class: \"true\"",
+      "revId": "f048f7d2e0967ac467e5234c5f4905f5cf30ae5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
