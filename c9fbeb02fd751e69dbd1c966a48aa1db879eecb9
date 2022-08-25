@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74f68072_3e3ef92f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-25T07:44:08Z",
+      "side": 1,
+      "message": "One minor comment, and also I\u0027d like to remind that the patch should be tested in dallas too with a single vanilla pipeline, just to confirm it\u0027s not breaking the normal execution, as there are modifications in common roles used also in dallas.",
+      "revId": "c9fbeb02fd751e69dbd1c966a48aa1db879eecb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b34b8de7_97eba827",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-25T07:44:08Z",
+      "side": 1,
+      "message": "I suppose this is for testing purposes and it will be deleted in the final patchset, won\u0027t it?",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 0
+      },
+      "revId": "c9fbeb02fd751e69dbd1c966a48aa1db879eecb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
