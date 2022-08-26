@@ -16,6 +16,23 @@
       "message": "LGTM\n\nThanks Manuel!",
       "revId": "f06c98eb8b6214845c569836482f32ed786eccba",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "523d3cc3_f8efed27",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-26T03:08:47Z",
+      "side": 1,
+      "message": "Thanks Manuel\n\nHow do we confirm that it is able to provision volumes? Maybe we can create a couple of PVs?",
+      "revId": "f06c98eb8b6214845c569836482f32ed786eccba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
