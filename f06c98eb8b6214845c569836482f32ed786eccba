@@ -33,6 +33,24 @@
       "message": "Thanks Manuel\n\nHow do we confirm that it is able to provision volumes? Maybe we can create a couple of PVs?",
       "revId": "f06c98eb8b6214845c569836482f32ed786eccba",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a63153f0_c66c1ee2",
+        "filename": "roles/odf-setup/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-08-26T18:12:50Z",
+      "side": 1,
+      "message": "Thanks for checking Beto\nSure, good idea, I included some tests for OCS in patch set 12, PVCs from the RWO and RWX Storage Classes will be created and check if available.",
+      "parentUuid": "523d3cc3_f8efed27",
+      "revId": "f06c98eb8b6214845c569836482f32ed786eccba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
