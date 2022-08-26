@@ -101,6 +101,23 @@
       "message": "check dallas ocp-4.10-vanilla ocp-4.11-upgrade openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.11:ansible_extravars\u003dforce_upgrade:true",
       "revId": "a02ab42a6e98bb5613b634a024783d44f0fbb7f1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "746fef67_188ca17d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-08-26T14:53:30Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla ocp-4.11-upgrade openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.11:ansible_extravars\u003dforce_upgrade:true",
+      "revId": "a02ab42a6e98bb5613b634a024783d44f0fbb7f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
