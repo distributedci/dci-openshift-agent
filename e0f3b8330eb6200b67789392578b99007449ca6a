@@ -16,6 +16,46 @@
       "message": "recheck",
       "revId": "e0f3b8330eb6200b67789392578b99007449ca6a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bf9f60b_493221e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-26T09:09:20Z",
+      "side": 1,
+      "message": "One minor comment, I\u0027ve been reviewing the whole change and it looks fine, only needing to continue testing it",
+      "revId": "e0f3b8330eb6200b67789392578b99007449ca6a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16e0b1e9_cc5c8edb",
+        "filename": "docs/development.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-26T09:09:20Z",
+      "side": 1,
+      "message": "we need to include upgrade here, don\u0027t we?\nand also, I believe that the SUPPORTED_HINTS config var in BOS2, saved in `/etc/dci-openshift-agent/config`, must be updated to include upgrade (so a new change in bos2-ci-config repo should be added)",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 15
+      },
+      "revId": "e0f3b8330eb6200b67789392578b99007449ca6a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
