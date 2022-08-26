@@ -56,6 +56,30 @@
       },
       "revId": "e0f3b8330eb6200b67789392578b99007449ca6a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8afa629_4a8ed437",
+        "filename": "docs/development.md",
+        "patchSetId": 13
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-08-26T11:48:11Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "16e0b1e9_cc5c8edb",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 15
+      },
+      "revId": "e0f3b8330eb6200b67789392578b99007449ca6a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
