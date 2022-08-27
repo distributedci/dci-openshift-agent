@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f2fcbf8_3bd4795a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-27T01:15:20Z",
+      "side": 1,
+      "message": "Awesome job!, thanks Manuel. \n\nI deployed ACM on top of the cluster and it was able to create the required PVs. \n",
+      "revId": "7293e64fc55f816b544964aa574912dd41833e44",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
