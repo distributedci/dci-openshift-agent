@@ -14,7 +14,7 @@
 
 - name: "upgrader : Get target openshift version from job.components"
   set_fact:
-    version: "{{ item['name'] }}"
+    version: "{{ item['data']['version'] }}"
   with_items: "{{ hostvars.localhost.job_info.job.components }}"
   when: item["type"] == "ocp"
 
