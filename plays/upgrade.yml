@@ -8,7 +8,7 @@
 
 - name: "upgrader : Get version and build from localhost vars"
   set_fact:
-    version: "{{ hostvars.localhost.version_name }}"
+    version: "{{ hostvars.localhost.version }}"
     build: "{{ hostvars.localhost.build }}"
 
 - name: "upgrader : Print versions"
@@ -115,6 +115,8 @@
     vars:
       status_query: "conditions[?type=='RetrievedUpdates'].status"
       upgrade_status: "{{ cluster_version.resources[0].status | json_query(status_query) }}"
+    when:
+      - not force_upgrade | default(false) | bool
     until:
       - upgrade_status == ['True']
     retries: 10
