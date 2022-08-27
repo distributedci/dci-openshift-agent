@@ -14,7 +14,7 @@
 
 - name: "upgrader : Get target openshift version from job.components"
   set_fact:
-    version: "{{ item['name'] }}"
+    version: "{{ item['data']['version'] }}"
   with_items: "{{ hostvars.localhost.job_info.job.components }}"
   when: item["type"] == "ocp"
 
@@ -116,6 +116,8 @@
     vars:
       status_query: "conditions[?type=='RetrievedUpdates'].status"
       upgrade_status: "{{ cluster_version.resources[0].status | json_query(status_query) }}"
+    when:
+      - not force_upgrade | default(false) | bool
     until:
       - upgrade_status == ['True']
     retries: 10
