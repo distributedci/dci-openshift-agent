@@ -9,6 +9,7 @@
 - name: "upgrader : Get version and build from localhost vars"
   set_fact:
     version: "{{ hostvars.localhost.version_name }}"
+    version_url: "{{ hostvars.localhost.version_url }}"
     build: "{{ hostvars.localhost.build }}"
 
 - name: "upgrader : Print versions"
@@ -178,8 +179,7 @@
     upgrade_options: >-
       {{ force_upgrade | default |
          ternary(
-           '--to-image=quay.io/openshift-release-dev/ocp-release:'
-             + version + '-x86_64 --force --allow-explicit-upgrade',
+           '--to-image=' + version_url + ' --force --allow-explicit-upgrade',
            '--to '+ version ) }}
   command:
     chdir: "{{ '~' + ansible_user }}/clusterconfigs/auth"
