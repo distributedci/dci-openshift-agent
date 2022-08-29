@@ -205,7 +205,7 @@ fi
 
 # need to be after the first 2 arguments
 if [ -n "$UPGRADE" ]; then
-    OPTS+=(-e "dci_components_by_query=['type:ocp,tags:build:ga']")
+    OPTS+=(-e "dci_components_by_query=['type:ocp,tags:build:dev']")
 fi
 
 if [ -n "$VIRT" ]; then
