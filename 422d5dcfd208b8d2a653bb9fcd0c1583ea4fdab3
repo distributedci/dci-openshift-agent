@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95f73faf_1cc88801",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-29T11:17:32Z",
+      "side": 1,
+      "message": "Change looks fine for me, but I\u0027ll put +1 to let others vote too",
+      "revId": "422d5dcfd208b8d2a653bb9fcd0c1583ea4fdab3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
