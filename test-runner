@@ -215,11 +215,6 @@ if [ -n "$DCI_NAME" ]; then
     OPTS+=(-e dci_name=$DCI_NAME)
 fi
 
-# need to be after the first 2 arguments
-if [ -n "$UPGRADE" ]; then
-    OPTS+=(-e "dci_components_by_query=['type:ocp,tags:build:ga']")
-fi
-
 if [ -n "$VIRT" ]; then
     OPTS+=(-e dci_configuration=$VIRT)
 fi
