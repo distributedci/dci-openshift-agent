@@ -33,6 +33,23 @@
       "message": "let\u0027s wait for a job reaching the clusterversion refresh to confirm it\u0027s fine",
       "revId": "b598ec1b13459addffd7a098a9411e3126f83ad5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e73b243e_7ad97274",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-29T11:14:56Z",
+      "side": 1,
+      "message": "However, I\u0027ve seen that in this change: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25917, it is being included this one and it\u0027s working, but setting force_upgrade to false. The upgrade is working fine on libvirt, so that we can assume this would work too.",
+      "revId": "b598ec1b13459addffd7a098a9411e3126f83ad5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
