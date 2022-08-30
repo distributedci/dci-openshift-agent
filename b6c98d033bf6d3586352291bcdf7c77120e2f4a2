@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d6cff2b_49224307",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-30T11:33:41Z",
+      "side": 1,
+      "message": "Also, is it worth to test this change in BOS2 too? As upgrade is now enabled there",
+      "revId": "b6c98d033bf6d3586352291bcdf7c77120e2f4a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f84c3975_8298c7be",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-30T11:33:41Z",
+      "side": 1,
+      "message": "shouldn\u0027t it be:\n`dci_disconnected | default(false) | ternary(release_digest.content | default(), version)`\n?\nBecause current code uses version variable here.",
+      "range": {
+        "startLine": 147,
+        "startChar": 20,
+        "endLine": 147,
+        "endChar": 35
+      },
+      "revId": "b6c98d033bf6d3586352291bcdf7c77120e2f4a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b469c06d_a89c825f",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-30T11:33:41Z",
+      "side": 1,
+      "message": "I\u0027ve seen upgrade-process.yml, and the only reference to this variable is in \"upgrader : Patch clusterversion pointing to fast channel\" task, but only used if upgrade_eus is true (like in the previous task in this play).\nSo, what if upgrade_eus is false? I supposed that this target_version variable is included just to avoid issues with ternary variable, is it correct?",
+      "range": {
+        "startLine": 72,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 33
+      },
+      "revId": "b6c98d033bf6d3586352291bcdf7c77120e2f4a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
