@@ -132,6 +132,8 @@
       kind: ClusterVersion
       spec:
         channel: "fast-{{ major }}"
+  when:
+    - not force_upgrade | default(false) | bool
 
 - name: "upgrader : Get openshift-cluster-version pod name"
   community.kubernetes.k8s_info:
