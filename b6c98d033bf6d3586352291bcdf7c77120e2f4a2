@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f2c0337_079d89c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:06:05Z",
+      "side": 1,
+      "message": "Absolutely, while it has been tested in both (connected and disconnected) I\u0027ll be testing there as well",
+      "parentUuid": "8d6cff2b_49224307",
+      "revId": "b6c98d033bf6d3586352291bcdf7c77120e2f4a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f84c3975_8298c7be",
@@ -41,6 +59,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "63ffaf1b_9e02a77c",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:06:05Z",
+      "side": 1,
+      "message": "Nice catch, it is fixed in the next patch",
+      "parentUuid": "f84c3975_8298c7be",
+      "range": {
+        "startLine": 147,
+        "startChar": 20,
+        "endLine": 147,
+        "endChar": 35
+      },
+      "revId": "b6c98d033bf6d3586352291bcdf7c77120e2f4a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b469c06d_a89c825f",
@@ -54,6 +96,30 @@
       "writtenOn": "2022-08-30T11:33:41Z",
       "side": 1,
       "message": "I\u0027ve seen upgrade-process.yml, and the only reference to this variable is in \"upgrader : Patch clusterversion pointing to fast channel\" task, but only used if upgrade_eus is true (like in the previous task in this play).\nSo, what if upgrade_eus is false? I supposed that this target_version variable is included just to avoid issues with ternary variable, is it correct?",
+      "range": {
+        "startLine": 72,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 33
+      },
+      "revId": "b6c98d033bf6d3586352291bcdf7c77120e2f4a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "592d4061_451c7673",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:06:05Z",
+      "side": 1,
+      "message": "Correct, ternary is evaluated first and without it, the task would fail",
+      "parentUuid": "b469c06d_a89c825f",
       "range": {
         "startLine": 72,
         "startChar": 4,
