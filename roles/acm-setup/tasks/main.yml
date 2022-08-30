@@ -1,0 +1,302 @@
+---
+- name: "Get current subscriptions"
+  community.kubernetes.k8s_info:
+    api: operators.coreos.com/v1alpha1
+    kind: Subscription
+  register: current_subscriptions
+  retries: 5
+  delay: 5
+
+- name: "Fail if ACM subscription is not present"
+  vars:
+    subs_details: "resources[*].spec.name"
+    subscriptions: "{{ current_subscriptions | json_query(subs_details) }}"
+  fail:
+    msg: "No subscription was found for the ACM operator"
+  when: "'advanced-cluster-management' not in subscriptions"
+
+- name: Get multicluster-engine package manifest
+  community.kubernetes.k8s_info:
+    api: packages.operators.coreos.com/v1
+    kind: PackageManifest
+    name: "multicluster-engine"
+    namespace:  default
+  register: mch_packagemanifest
+  retries: 5
+  delay: 5
+  no_log: true
+  until:
+    - mch_packagemanifest.resources | length == 1
+
+- name: "Get multicluster-engine default channel and CSV"
+  vars:
+    channels: "resources[*].status.defaultChannel"
+    me_channels: "{{ mch_packagemanifest | json_query(channels) | join('') | string }}"
+    current_csv: "resources[*].status.channels[? name=='{{ me_channels }}' ].currentCSV | [0]"
+  set_fact:
+    me_channel: "{{ mch_packagemanifest | json_query(channels) | join('') | string }}"
+    me_csv: "{{ mch_packagemanifest | json_query(current_csv) | first }}"
+
+- name: Get OADP package manifest
+  community.kubernetes.k8s_info:
+    api: packages.operators.coreos.com/v1
+    kind: PackageManifest
+    name: "redhat-oadp-operator"
+    namespace:  default
+  register: oadp_packagemanifest
+  retries: 5
+  delay: 5
+  no_log: true
+  until:
+    - oadp_packagemanifest.resources | length == 1
+
+- name: "Get OADP default channel and CSV"
+  vars:
+    channels: "resources[*].status.defaultChannel"
+    oadp_channels: "{{ oadp_packagemanifest | json_query(channels) | join('') | string }}"
+    current_csv: "resources[*].status.channels[? name=='{{ oadp_channels }}' ].currentCSV | [0]"
+  set_fact:
+    oadp_channel: "{{ oadp_packagemanifest | json_query(channels) | join('') | string }}"
+    oadp_csv: "{{ oadp_packagemanifest | json_query(current_csv) | first  }}"
+
+# Deploy Multicluster Hub. It will trigger the install of multicluster-engine and OADP operators
+- name: "Deploy Multicluster Hub CR"
+  vars:
+    catalog_query: "resources[*].status.catalogSource"
+    catalog_source: "{{ oadp_packagemanifest | json_query(catalog_query) | join('') | string }}"
+    me_annotation:
+      channel: "{{ me_channel }}"
+      installPlanApproval: "Automatic"
+      name: "multicluster-engine"
+      source: "{{ catalog_source }}"
+      sourceNamespace: "openshift-marketplace"
+      startingCSV: "{{ me_csv }}"
+    oadp_annotation:
+      channel: "{{ oadp_channel }}"
+      installPlanApproval: "Automatic"
+      name: "redhat-oadp-operator"
+      source: "{{ catalog_source }}"
+      sourceNamespace: "openshift-marketplace"
+      startingCSV: "{{ oadp_csv }}"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: operator.open-cluster-management.io/v1
+      kind: MultiClusterHub
+      metadata:
+        annotations:
+          installer.open-cluster-management.io/mce-subscription-spec: "{{ me_annotation | to_json }}"
+          installer.open-cluster-management.io/oadp-subscription-spec: "{{ oadp_annotation | to_json }}"
+        name: "{{ mch_instance }}"
+        namespace: "{{ acm_namespace }}"
+      spec:
+        availabilityConfig: "{{ mch_availability }}"
+        disableHubSelfManagement: "{{ mch_disable_selfmanagement }}"
+
+- name: "Wait for pods to be Running"
+  community.kubernetes.k8s_info:
+    api_version: v1
+    kind: Pod
+    namespace: "{{ acm_namespace }}"
+  register: pod_list
+  until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
+  retries: 20
+  delay: 15
+
+- name: "Wait up to 20 mins for MCH to be ready"
+  community.kubernetes.k8s_info:
+    api: operator.open-cluster-management.io/v1
+    kind: MultiClusterHub
+    name: "{{ mch_instance }}"
+    namespace: "{{ acm_namespace }}"
+  register: mch
+  retries: 60
+  delay: 20
+  until:
+    - mch.resources | length == 1
+    - "'status' in mch.resources[0]"
+    - "'phase' in mch.resources[0].status"
+    - mch.resources[0].status.phase == 'Running'
+
+- name: "Get the MCH route"
+  community.kubernetes.k8s_info:
+    api: route.openshift.io/v1
+    kind: Route
+    name: multicloud-console
+    namespace: "{{ acm_namespace }}"
+  register: mch_route
+
+- name: "Advanced cluster Manager URL"
+  debug:
+    msg: "{{ mch_route.resources[0].status.ingress[0].host }}"
+
+- name: "Disable ClusterImageSet subscription when disconnected"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: operator.open-cluster-management.io/v1
+      kind: MultiClusterHub
+      metadata:
+        name: multiclusterhub
+        namespace: open-cluster-management
+      spec:
+        disableUpdateClusterImageSets: true
+
+- name: "Enable feature gate for Central Infrastructure Management service"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: hive.openshift.io/v1
+      kind: HiveConfig
+      metadata:
+        name: hive
+      spec:
+        targetNamespace: hive
+        logLevel: debug
+        featureGates:
+          custom:
+            enabled:
+            - AlphaAgentInstallStrategy
+          featureSet: Custom
+
+- name: "Wait for Hive pods to be Running"
+  community.kubernetes.k8s_info:
+    api_version: v1
+    kind: Pod
+    namespace: "hive"
+  register: pod_list
+  until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
+  retries: 20
+  delay: 15
+
+- name: "Update the provisioning resource to watch all Namespaces"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: metal3.io/v1alpha1
+      kind: Provisioning
+      metadata:
+        name: provisioning-configuration
+      spec:
+        watchAllNamespaces: true
+
+- name: "Check that a default storageclass exists"
+  k8s_info:
+    api_version: v1
+    kind: StorageClass
+  register: storage_class
+
+- name: "Fail when no default storage class is available"
+  vars:
+    query_default_sc: 'resources[*].metadata.annotations."storageclass.kubernetes.io/is-default-class"'
+    query_results: "{{ storage_class | json_query(query_default_sc) }}"
+  fail:
+    msg: "No default storage class was found"
+  when: "not('true' in query_results)"
+
+- name: "Pull data from Hub cluster"
+  include_tasks: acm-pull-data.yml
+  when:
+    - acm_disconnected | bool
+
+- name: "Inherit mirroring from hub"
+  set_fact:
+    inherit_mirroring: true
+  when:
+    - acm_registry_conf is defined
+    - acm_user_ca_bundle is defined
+    - acm_disconnected | bool
+
+- name: "Create a Config map with registry entries and CA bundle"
+  vars:
+    cm_def: |
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: mirror-registry-config-map
+        namespace: "multicluster-engine"
+        labels:
+          app: assisted-service
+      data:
+        registries.conf: |
+          {{ acm_registry_conf | indent(4) }}
+
+        ca-bundle.crt: |
+          {{ acm_user_ca_bundle | indent(4) }}
+  community.kubernetes.k8s:
+    state: present
+    definition: "{{ cm_def }}"
+    namespace: multicluster-engine
+  when:
+    - inherit_mirroring is defined
+    - inherit_mirroring | bool
+
+- name: "Create the Agent Service config instance"
+  vars:
+    agent_def: |
+      apiVersion: agent-install.openshift.io/v1beta1
+      kind: AgentServiceConfig
+      metadata:
+        name: agent
+        namespace: multicluster-engine
+      spec:
+        databaseStorage:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: "{{ db_volume_size }}"
+        filesystemStorage:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: "{{ fs_volume_size }}"
+        imageStorage:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: "{{ img_volume_size }}"
+        {% if inherit_mirroring is defined and inherit_mirroring | bool  %}
+        mirrorRegistryRef:
+          name: mirror-registry-config-map
+        {%endif%}
+  community.kubernetes.k8s:
+    state: present
+    definition: "{{ agent_def }}"
+
+- name: "A bit of delay for assisted-image pods to be created"
+  pause:
+    seconds: 5
+
+- name: "Wait for assisted-image-service pods to be Running"
+  community.kubernetes.k8s_info:
+    api_version: v1
+    kind: Pod
+    label_selectors:
+      - "app=assisted-image-service"
+    namespace: multicluster-engine
+  register: pod_list
+  until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
+  retries: 20
+  delay: 15
+
+- name: "Wait for assisted-service to be Running"
+  community.kubernetes.k8s_info:
+    api_version: v1
+    kind: Pod
+    label_selectors:
+      - "app=assisted-service"
+    namespace: multicluster-engine
+  register: pod_list
+  until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
+  retries: 20
+  delay: 15
+
+- name: "Validate the Service config volumes binding"
+  community.kubernetes.k8s_info:
+    api_version: v1
+    kind: PersistentVolumeClaim
+    namespace: "multicluster-engine"
+  register: volumes_list
+  until: volumes_list|json_query('resources[*].status.phase')|unique == ["Bound"]
+  retries: 20
+  delay: 15
+...
