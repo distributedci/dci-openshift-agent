@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mirror-registry-config-map
+  namespace: "{{ mch_namespace | default('multicluster-engine') }}"
+  labels:
+    app: assisted-service
+data:
+{% if acm_user_ca_bundle is defined %}
+  ca-bundle.crt: |
+    {{ acm_user_ca_bundle | indent(4) }}
+{%endif%}
+  
+  registries.conf: |
+    {{ acm_registry_conf | indent(4) }}
