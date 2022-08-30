@@ -1,4 +1,10 @@
 ---
+- name: "Setup Advanced Cluster Management"
+  include_role:
+    name: acm-setup
+  when:
+    - enable_acm | bool
+
 - name: Upload logs
   include_tasks: get-logs.yml
 ...
