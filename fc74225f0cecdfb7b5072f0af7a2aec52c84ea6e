@@ -16,6 +16,29 @@
       "message": "lgtm",
       "revId": "fc74225f0cecdfb7b5072f0af7a2aec52c84ea6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fd36e2c_f20781e7",
+        "filename": "test-runner",
+        "patchSetId": 6
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-30T11:37:37Z",
+      "side": 1,
+      "message": "By the way, if this is no longer needed, can it be deleted instead of commenting it?",
+      "range": {
+        "startLine": 206,
+        "startChar": 0,
+        "endLine": 209,
+        "endChar": 4
+      },
+      "revId": "fc74225f0cecdfb7b5072f0af7a2aec52c84ea6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
