@@ -1,4 +1,9 @@
 ---
+- name: "Setup Advanced Cluster Management"
+  include_role:
+    name: acm-setup
+  when:
+    - enable_acm | bool
 
 - name: Set outputs to be copied
   set_fact:
