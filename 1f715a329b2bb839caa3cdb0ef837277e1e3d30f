@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c0ad462_85660eb4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "Nice work Beto, I have quite a few comments, but is looking great",
+      "revId": "1f715a329b2bb839caa3cdb0ef837277e1e3d30f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

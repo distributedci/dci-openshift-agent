@@ -1,0 +1,220 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c11c9c51_2a6a5c52",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "typo?\n    1. Creating and configuring an Assisted installer instance",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90fdcf8b_24246535",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "If the AI config requires *at least* these variables why they are not Required in the table?",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d5d7391_7e55cf43",
+        "filename": "roles/acm-setup/tasks/acm-pull-data.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "You could avoid setting this fact and use vars in the task below",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "138c9941_6fbc45ec",
+        "filename": "roles/acm-setup/tasks/acm-pull-data.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "Where is this one used?",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be1f2f7c_0d60b7e4",
+        "filename": "roles/acm-setup/tasks/acm-pull-data.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "I think you could merge this task with the above and avoid defining registry_details if it\u0027s not used anywhere else",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "031c8168_ac5c36f0",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "Is there a reason why a block is needed here?",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80bd6e1f_ee47e725",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "You could reduce this task by defining the vars in the task below",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10ad16f9_fcc9cdf3",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "Now that this is a role you could define them as defaults",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba5670e2_30163e0a",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "You probably want to prepend your role variables like you did with ns and instance, e.g. mch_packagemanifest\n\nLikewise down where you get the oadp pkg",
+      "range": {
+        "startLine": 44,
+        "startChar": 12,
+        "endLine": 44,
+        "endChar": 27
+      },
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "339df104_4e7e3142",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "maybe merge the two set_fact tasks into one?\n\nSame goes for the oadp tasks down below",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07403380_9b592c5f",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "Do you know if the HiveConfig may have a status? that could be used to know if it\u0027s ready?",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b8274c8_25b4f691",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-30T22:04:07Z",
+      "side": 1,
+      "message": "I think this task is duplicated as is already in the acm-pull-data.yml",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
