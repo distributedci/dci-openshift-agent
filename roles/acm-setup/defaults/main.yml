@@ -1,0 +1,9 @@
+---
+db_volume_size: 40Gi
+fs_volume_size: 50Gi
+img_volume_size: 40Gi
+mch_disableHubSelfManagement: false
+mch_availabilityConfig: High
+mch_instance: multiclusterhub
+acm_namespace: open-cluster-management
+...
