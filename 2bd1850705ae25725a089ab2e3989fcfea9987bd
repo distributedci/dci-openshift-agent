@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13c60f49_a6cdb9b4",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c11c9c51_2a6a5c52",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "90fdcf8b_24246535",
@@ -35,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7cf3d2a7_ebb8dc1b",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "updated the verbiage",
+      "parentUuid": "90fdcf8b_24246535",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d5d7391_7e55cf43",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-08-30T22:04:07Z",
       "side": 1,
       "message": "You could avoid setting this fact and use vars in the task below",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d300d6a2_ace45fe8",
+        "filename": "roles/acm-setup/tasks/acm-pull-data.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d5d7391_7e55cf43",
       "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -75,6 +129,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15b7d918_ec6ee0a5",
+        "filename": "roles/acm-setup/tasks/acm-pull-data.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "Not needed in the server side, will use it in the acn-sno role. Removing it from here.",
+      "parentUuid": "138c9941_6fbc45ec",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "be1f2f7c_0d60b7e4",
@@ -88,6 +166,24 @@
       "writtenOn": "2022-08-30T22:04:07Z",
       "side": 1,
       "message": "I think you could merge this task with the above and avoid defining registry_details if it\u0027s not used anywhere else",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6170e20b_eb152bf1",
+        "filename": "roles/acm-setup/tasks/acm-pull-data.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be1f2f7c_0d60b7e4",
       "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -109,6 +205,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7625a8d0_e667e314",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "Just to group related task and readability",
+      "parentUuid": "031c8168_ac5c36f0",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "80bd6e1f_ee47e725",
@@ -126,6 +240,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "86a95bea_b99a4b55",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "80bd6e1f_ee47e725",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "10ad16f9_fcc9cdf3",
@@ -139,6 +271,24 @@
       "writtenOn": "2022-08-30T22:04:07Z",
       "side": 1,
       "message": "Now that this is a role you could define them as defaults",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84a48ce2_e77ba671",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "Will update this later, I am checking if the namespace must be the same used by ACM.\nWill move the to defaults or just have it hardcoded. Is not something that we control.",
+      "parentUuid": "10ad16f9_fcc9cdf3",
       "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -202,6 +352,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "85c84422_454fc03d",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "need to check",
+      "parentUuid": "07403380_9b592c5f",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1b8274c8_25b4f691",
         "filename": "roles/acm-setup/tasks/main.yml",
         "patchSetId": 3
@@ -213,6 +381,24 @@
       "writtenOn": "2022-08-30T22:04:07Z",
       "side": 1,
       "message": "I think this task is duplicated as is already in the acm-pull-data.yml",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0c4161e_07bf4d51",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-30T23:27:17Z",
+      "side": 1,
+      "message": "yeah, used during debugging.",
+      "parentUuid": "1b8274c8_25b4f691",
       "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
