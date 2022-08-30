@@ -261,8 +261,10 @@
           targetNamespaces:
             - "{{ acm_namespace }}"
 
-    - name: "configure-operators : Configure ACM operator"
-      include_tasks: configure-acm.yml
+    - name: "Setup Advanced Cluster Management"
+      include_role:
+        name: acm-setup
+
   when:
     - enable_acm | bool
 
