@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a16d8c8_dee651f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-31T14:10:09Z",
+      "side": 1,
+      "message": "I\u0027ve checked it manually and it looks really nice, thanks Tony :)",
+      "revId": "61cd8f6986ac1334bd34069dad5874dbfcf051d4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
