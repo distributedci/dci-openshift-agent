@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d22c405_002c37a4",
+        "filename": "docs/development.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-31T14:29:32Z",
+      "side": 1,
+      "message": "To be added to BOS2 config too.",
+      "range": {
+        "startLine": 136,
+        "startChar": 63,
+        "endLine": 136,
+        "endChar": 112
+      },
+      "revId": "2a3a9d1125487421afac00ce7792319fd68a2254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4950b7c7_807a84bd",
+        "filename": "test-runner",
+        "patchSetId": 7
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-31T14:29:32Z",
+      "side": 1,
+      "message": "shouldn\u0027t it be [--upgrade [--from-topic \u003ctopic\u003e] [--to-topic \u003ctopic\u003e]], as well as in dci-check-change?",
+      "range": {
+        "startLine": 126,
+        "startChar": 57,
+        "endLine": 126,
+        "endChar": 112
+      },
+      "revId": "2a3a9d1125487421afac00ce7792319fd68a2254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
