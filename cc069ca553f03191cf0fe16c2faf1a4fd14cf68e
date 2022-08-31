@@ -33,6 +33,23 @@
       "message": "LGTM, I see in the example that the tag \u0027install\u0027 has been added. We should try to launch an upgrade to see if the tag is correctly added",
       "revId": "cc069ca553f03191cf0fe16c2faf1a4fd14cf68e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "714482d0_5f6b3261",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-31T13:52:52Z",
+      "side": 1,
+      "message": "I agree with Charles, maybe we can try an upgrade test on libvirt to see if the tag is added to that job.",
+      "revId": "cc069ca553f03191cf0fe16c2faf1a4fd14cf68e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
