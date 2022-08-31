@@ -50,6 +50,24 @@
       "message": "I agree with Charles, maybe we can try an upgrade test on libvirt to see if the tag is added to that job.",
       "revId": "cc069ca553f03191cf0fe16c2faf1a4fd14cf68e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3941549_21a135f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-08-31T16:15:29Z",
+      "side": 1,
+      "message": "tested in upgrade too.",
+      "parentUuid": "714482d0_5f6b3261",
+      "revId": "cc069ca553f03191cf0fe16c2faf1a4fd14cf68e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
