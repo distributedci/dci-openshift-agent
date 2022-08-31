@@ -316,6 +316,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c323cf97_4a737dac",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-31T02:55:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba5670e2_30163e0a",
+      "range": {
+        "startLine": 44,
+        "startChar": 12,
+        "endLine": 44,
+        "endChar": 27
+      },
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "339df104_4e7e3142",
@@ -329,6 +353,24 @@
       "writtenOn": "2022-08-30T22:04:07Z",
       "side": 1,
       "message": "maybe merge the two set_fact tasks into one?\n\nSame goes for the oadp tasks down below",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "907b76c4_d41b0234",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-31T02:55:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "339df104_4e7e3142",
       "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -399,6 +441,24 @@
       "side": 1,
       "message": "yeah, used during debugging.",
       "parentUuid": "1b8274c8_25b4f691",
+      "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16e42a5a_c28ab392",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-08-31T02:55:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f0c4161e_07bf4d51",
       "revId": "2bd1850705ae25725a089ab2e3989fcfea9987bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
