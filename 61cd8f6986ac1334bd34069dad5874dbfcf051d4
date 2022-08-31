@@ -33,6 +33,24 @@
       "message": "I don\u0027t see the change in send-feedback. Is there something missing?",
       "revId": "61cd8f6986ac1334bd34069dad5874dbfcf051d4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc3ad6c2_286b353f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-31T15:34:08Z",
+      "side": 1,
+      "message": "send-feedback already supported the json body, but test-runner was not doing it properly, this change does that",
+      "parentUuid": "4f7f94a7_99c5348f",
+      "revId": "61cd8f6986ac1334bd34069dad5874dbfcf051d4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
