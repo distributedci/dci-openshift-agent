@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "cc069ca553f03191cf0fe16c2faf1a4fd14cf68e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1868243d_1a840e97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-08-31T08:11:54Z",
+      "side": 1,
+      "message": "LGTM, I see in the example that the tag \u0027install\u0027 has been added. We should try to launch an upgrade to see if the tag is correctly added",
+      "revId": "cc069ca553f03191cf0fe16c2faf1a4fd14cf68e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
