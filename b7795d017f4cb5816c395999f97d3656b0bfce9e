@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f6c73a1_80d111d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-08-31T12:51:25Z",
+      "side": 1,
+      "message": "I can see these two messages that appeared in the last upgrade job that has failed:\n\n-Unable to retrieve available updates: currently reconciling cluster version 4.8.37 not found in the \\\"fast-4.8\\\" channel\", \"reason\": \"VersionNotFound\"\n-Kubernetes 1.22 and therefore OpenShift 4.9 remove several APIs which require admin consideration. Please see the knowledge article https://access.redhat.com/articles/6329921 for details and instructions\n\nMaybe they can help to check what\u0027s going on, it seems it\u0027s something related to OCP versions higher than 4.9.",
+      "revId": "b7795d017f4cb5816c395999f97d3656b0bfce9e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
