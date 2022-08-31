@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "382b3c41f6a181b32e2ebdd7ba0262b57ed5f871",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "092f2cf9_98098663",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-08-31T23:19:41Z",
+      "side": 1,
+      "message": "Where is pull_url coming from?",
+      "revId": "382b3c41f6a181b32e2ebdd7ba0262b57ed5f871",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
