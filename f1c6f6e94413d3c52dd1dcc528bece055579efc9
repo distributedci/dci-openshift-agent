@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ac69b3b_b387bd45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-01T09:59:20Z",
+      "side": 1,
+      "message": "some minor comments from my side, but the change looks really nice, thanks Beto for all your effort here 😊",
+      "revId": "f1c6f6e94413d3c52dd1dcc528bece055579efc9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2c082c6_0b9491f1",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-01T09:59:20Z",
+      "side": 1,
+      "message": "May we need to update also some diagrams where the DCI workflow with the different stages are represented to include this new stage? Just thinking out loud :)",
+      "range": {
+        "startLine": 316,
+        "startChar": 8,
+        "endLine": 316,
+        "endChar": 29
+      },
+      "revId": "f1c6f6e94413d3c52dd1dcc528bece055579efc9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "578c5b47_3461a41a",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-01T09:59:20Z",
+      "side": 1,
+      "message": "Just for clarifying. Is this related to assisted installer OCP install type? Or it\u0027s related to ACM? Because if it\u0027s the first case, should it be only executed when install type is assisted installer (and I guess that some tasks below too)?",
+      "range": {
+        "startLine": 132,
+        "startChar": 33,
+        "endLine": 132,
+        "endChar": 51
+      },
+      "revId": "f1c6f6e94413d3c52dd1dcc528bece055579efc9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
