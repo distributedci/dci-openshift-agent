@@ -33,6 +33,24 @@
       "message": "Where is pull_url coming from?",
       "revId": "382b3c41f6a181b32e2ebdd7ba0262b57ed5f871",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df3e8d1d_7d2cf626",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-09-01T07:07:01Z",
+      "side": 1,
+      "message": "\u003e Where is pull_url coming from?\n\nThis is coming from the release.txt metadata that the feeder is extracting. For example: https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.11/release.txt",
+      "parentUuid": "092f2cf9_98098663",
+      "revId": "382b3c41f6a181b32e2ebdd7ba0262b57ed5f871",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
