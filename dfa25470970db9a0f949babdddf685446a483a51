@@ -16,6 +16,24 @@
       "message": "why?",
       "revId": "dfa25470970db9a0f949babdddf685446a483a51",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "792c2eb2_ca3ec22e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-09-01T18:26:22Z",
+      "side": 1,
+      "message": "It does then do the installs in parallel I believe.",
+      "parentUuid": "0e4d0213_944877d0",
+      "revId": "dfa25470970db9a0f949babdddf685446a483a51",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
