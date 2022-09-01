@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcab7896_4b4d67aa",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-01T21:22:41Z",
+      "side": 1,
+      "message": "Yes, will add it to my list once the this is complete.",
+      "parentUuid": "a2c082c6_0b9491f1",
+      "range": {
+        "startLine": 316,
+        "startChar": 8,
+        "endLine": 316,
+        "endChar": 29
+      },
+      "revId": "f1c6f6e94413d3c52dd1dcc528bece055579efc9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "57509b66_ba905201",
@@ -58,6 +82,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cf7ba04_55fdbd56",
+        "filename": "roles/acm-setup/defaults/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-01T21:22:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "57509b66_ba905201",
+      "revId": "f1c6f6e94413d3c52dd1dcc528bece055579efc9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "578c5b47_3461a41a",
@@ -71,6 +113,30 @@
       "writtenOn": "2022-09-01T09:59:20Z",
       "side": 1,
       "message": "Just for clarifying. Is this related to assisted installer OCP install type? Or it\u0027s related to ACM? Because if it\u0027s the first case, should it be only executed when install type is assisted installer (and I guess that some tasks below too)?",
+      "range": {
+        "startLine": 132,
+        "startChar": 33,
+        "endLine": 132,
+        "endChar": 51
+      },
+      "revId": "f1c6f6e94413d3c52dd1dcc528bece055579efc9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f2b6f5a_15a925a0",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-01T21:22:41Z",
+      "side": 1,
+      "message": "This is just for ACM, it uses Assisted Installer internally, Will rename the tasks for more clarity. Thanks!",
+      "parentUuid": "578c5b47_3461a41a",
       "range": {
         "startLine": 132,
         "startChar": 33,
