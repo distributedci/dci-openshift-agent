@@ -43,6 +43,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "57509b66_ba905201",
+        "filename": "roles/acm-setup/defaults/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-01T14:00:24Z",
+      "side": 1,
+      "message": "nit: can we have snake case for these variables 😜",
+      "revId": "f1c6f6e94413d3c52dd1dcc528bece055579efc9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "578c5b47_3461a41a",
         "filename": "roles/acm-setup/tasks/main.yml",
         "patchSetId": 12
