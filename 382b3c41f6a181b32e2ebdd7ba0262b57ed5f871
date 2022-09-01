@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b94d77fe_4f9dd711",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-01T16:08:13Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "382b3c41f6a181b32e2ebdd7ba0262b57ed5f871",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "092f2cf9_98098663",
@@ -49,6 +66,24 @@
       "side": 1,
       "message": "\u003e Where is pull_url coming from?\n\nThis is coming from the release.txt metadata that the feeder is extracting. For example: https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.11/release.txt",
       "parentUuid": "092f2cf9_98098663",
+      "revId": "382b3c41f6a181b32e2ebdd7ba0262b57ed5f871",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a2081e8_f51167c2",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-01T16:08:13Z",
+      "side": 1,
+      "message": "Oh I see, I was looking in the wrong place, the topic data instead of the component data and I wasn\u0027t able to find it. Thanks",
+      "parentUuid": "df3e8d1d_7d2cf626",
       "revId": "382b3c41f6a181b32e2ebdd7ba0262b57ed5f871",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
