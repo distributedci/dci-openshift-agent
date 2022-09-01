@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e8b3e18_b3d1e96f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-01T09:20:08Z",
+      "side": 1,
+      "message": "Continue asking, just for curiosity :) as I\u0027ve seen the libvirt job for the upgrade it\u0027s working, would it be possible to force an EUS upgrade in libvirt? maybe this change is needed to do that? https://softwarefactory-project.io/r/c/dci-openshift-agent/+/25969",
+      "revId": "2137044686c290b2bc8d3a2efb1b85e83050a6a1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
