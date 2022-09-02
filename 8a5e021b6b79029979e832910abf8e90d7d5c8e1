@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "867ae2f4_3172b4b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-02T09:16:34Z",
+      "side": 1,
+      "message": "Closing my open comments as they have already been addressed, and including a new one",
+      "revId": "8a5e021b6b79029979e832910abf8e90d7d5c8e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4a435b8_0ecd5b55",
+        "filename": "test-runner",
+        "patchSetId": 14
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-02T09:16:34Z",
+      "side": 1,
+      "message": "Some questions here:\n\n- Do we really need to check TO_TOPIC variable here? Because it\u0027s not used in the first d-o-a job, it is used in the second one for the upgrade.\n- Do we also have to look at UPGRADE_ARGS? Because it may happen that UPGRADE_ARGS doesn\u0027t include any reference to the component to be used. Should we consider that check instead? (to see if UPGRADE_ARGS contains something regarding components).",
+      "range": {
+        "startLine": 234,
+        "startChar": 26,
+        "endLine": 234,
+        "endChar": 70
+      },
+      "revId": "8a5e021b6b79029979e832910abf8e90d7d5c8e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
