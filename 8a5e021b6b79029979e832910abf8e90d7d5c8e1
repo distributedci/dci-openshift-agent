@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca915cb9_9f4f9605",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-02T17:14:56Z",
+      "side": 1,
+      "message": "I talked with Fred about this, we are aware this might not work in disconnected because the URLs from the component data point to external sources, but we\u0027ll address the disconnected part in another patch.",
+      "revId": "8a5e021b6b79029979e832910abf8e90d7d5c8e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "89f1782c_ee1ea5f3",
@@ -31,6 +48,24 @@
       "writtenOn": "2022-09-02T10:48:40Z",
       "side": 1,
       "message": "Just to clarify. What is the expected default action here, to run or to skip this task?",
+      "revId": "8a5e021b6b79029979e832910abf8e90d7d5c8e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a81cedf8_af3f706c",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-02T17:14:56Z",
+      "side": 1,
+      "message": "Nacho, this task will run when force_upgrade variable will be equals to false. Now in the test-runner we are passing force_upgrade\u003dtrue when is an upgrade, so that means that for upgrade tests in libvirt this tasks won\u0027t be executed.",
+      "parentUuid": "89f1782c_ee1ea5f3",
       "revId": "8a5e021b6b79029979e832910abf8e90d7d5c8e1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
