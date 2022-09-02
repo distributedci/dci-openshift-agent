@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "89f1782c_ee1ea5f3",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 14
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-02T10:48:40Z",
+      "side": 1,
+      "message": "Just to clarify. What is the expected default action here, to run or to skip this task?",
+      "revId": "8a5e021b6b79029979e832910abf8e90d7d5c8e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c4a435b8_0ecd5b55",
         "filename": "test-runner",
         "patchSetId": 14
