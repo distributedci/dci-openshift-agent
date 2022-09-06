@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19e28385_ce5c3425",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-06T22:09:59Z",
+      "side": 1,
+      "message": "Different commit comments were used to test this:\n\n- When `Test-Args-Hints: -e dci_topic\u003dOCP-4.13` was used it failed prior DCI job was created\n- When `Test-Args-Hints: -e dci_tags\u003d42` was used it failed right after the DCI job was created, this is what this change is fixing, as in the past this was not shown.\n\nLast commit message change was to allow the completion of the jobs.",
+      "revId": "5c0f6f117b14ee3ee31952fff2a95f5704d54349",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
