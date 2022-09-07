@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30722501_3f2f0993",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-07T15:25:52Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2d5e8eb602c43cf469771cba51520015beadfdd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7b78485_e541d702",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-07T15:25:52Z",
+      "side": 1,
+      "message": "nit:\n    - \"\u0027resources\u0027 in cluster_version_info\"\n    - cluster_version_info.resources | length",
+      "revId": "2d5e8eb602c43cf469771cba51520015beadfdd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
