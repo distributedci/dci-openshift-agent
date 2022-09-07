@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c95ef86c_2a4d4821",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-09-07T16:22:06Z",
+      "side": 1,
+      "message": "all errors on the Dallas lab appear unrelated to my changes, it attempts to pull an image from registry.redhat.io and it fails (this being a disconnected env) - this is an existing problem prior to my changes.",
+      "revId": "1ca9906ddb876247774c0324872ac753bf025734",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
