@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.5.0
+Version:       0.6.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -72,7 +72,7 @@ for role in $(ls); do
 done
 cd ..
 
-for plugin in action_plugins/*.py; do
+for plugin in {action,filter}_plugins/*.py; do
     install -p -D -m 644 $plugin %{buildroot}%{_datadir}/dci-openshift-agent/$plugin
 done
 
@@ -130,6 +130,7 @@ exit 0
 %{_datadir}/dci-openshift-agent/plays/scripts/*
 %{_datadir}/dci-openshift-agent/roles/*
 %{_datadir}/dci-openshift-agent/action_plugins/*
+%{_datadir}/dci-openshift-agent/filter_plugins/*
 
 %{_datadir}/dci-openshift-agent/group_vars/all
 
@@ -145,6 +146,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Wed Sep  7 2022 Tony Garcia <tonyg@redhat.com> 0.6.0-1
+- Add filter plugins
+
 * Thu Mar 24 2022 Frederic Lepied <flepied@redhat.com> 0.5.0-1
 - use dci-vault-client
 
