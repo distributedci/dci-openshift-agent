@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04f16fc7_f4d0f646",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-08T21:13:23Z",
+      "side": 1,
+      "message": "Actually... no need for this, the format is the right one as we want to leave yaml",
+      "parentUuid": "9cd56833_d0644aba",
+      "revId": "38e74e318b02ee5746340e5f34f313c4dd45890c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1f762540_03adaa59",
