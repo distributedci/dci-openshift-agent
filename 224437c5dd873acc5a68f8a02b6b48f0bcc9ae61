@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "224437c5dd873acc5a68f8a02b6b48f0bcc9ae61",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6624523_81dd4163",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-08T09:01:11Z",
+      "side": 1,
+      "message": "Let\u0027s wait for the debug job but it should pass, so that we can do the revert",
+      "revId": "224437c5dd873acc5a68f8a02b6b48f0bcc9ae61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
