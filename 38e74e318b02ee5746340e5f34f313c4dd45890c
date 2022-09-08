@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95828154_b61773ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-08T21:00:29Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "38e74e318b02ee5746340e5f34f313c4dd45890c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cd56833_d0644aba",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-08T21:00:29Z",
+      "side": 1,
+      "message": "It would be nice to have a better output, because this is yaml in a json, we did some of this in the app-agent, I think this should give us the right format on the file:\n\n    `{{ (ic.resources[0].data | from_yaml)[\u0027install-config\u0027] | from_yaml }}\u0027",
+      "revId": "38e74e318b02ee5746340e5f34f313c4dd45890c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f762540_03adaa59",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-08T21:00:29Z",
+      "side": 1,
+      "message": "Let\u0027s add a condition to only do this when ic has a resource, just in case other installs don\u0027t generate a cluster-config-v1",
+      "revId": "38e74e318b02ee5746340e5f34f313c4dd45890c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
