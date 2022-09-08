@@ -16,6 +16,23 @@
       "message": "all errors on the Dallas lab appear unrelated to my changes, it attempts to pull an image from registry.redhat.io and it fails (this being a disconnected env) - this is an existing problem prior to my changes.",
       "revId": "1ca9906ddb876247774c0324872ac753bf025734",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fc0a700_8a361294",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-08T19:23:40Z",
+      "side": 1,
+      "message": "check dallas ocp-4.8-vanilla",
+      "revId": "1ca9906ddb876247774c0324872ac753bf025734",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
