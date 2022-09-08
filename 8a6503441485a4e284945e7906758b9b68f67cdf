@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91117cd1_305646cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-09-08T09:01:27Z",
+      "side": 1,
+      "message": "I think it should be in dci-ansible and not in doa to have the filter available to all the agents.",
+      "revId": "8a6503441485a4e284945e7906758b9b68f67cdf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
