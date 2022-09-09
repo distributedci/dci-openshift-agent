@@ -69,6 +69,24 @@
       "parentUuid": "887e541b_3c951be4",
       "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10cdf9ff_8193560a",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-09T16:17:54Z",
+      "side": 1,
+      "message": "Nacho, not sure if you are having this issue. If you are trying to install operators in openshift-operators namespace, it already has an operator group assigned to it managed by OLM. if you create a new operator group those 2 will conflict and the CSVs will disappear until the issue is fixed.\n\nIn the role we are always creating an Operator group, that may enter in conflict with the one in openshift-operators. That should be the issue.\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/5ee83cfbd3c2310a263da824d73d5fa7376d08c2/common-roles/olm-operator/tasks/main.yml#L18",
+      "parentUuid": "a20a5ecf_c28fa562",
+      "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
