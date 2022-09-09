@@ -87,6 +87,24 @@
       "parentUuid": "a20a5ecf_c28fa562",
       "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6da7b1dc_7ba3a5c1",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-09T17:38:38Z",
+      "side": 1,
+      "message": "Nacho, I think is not a good practice to have multiple operators in one namespace, so I wonder what operators are you installing, and if they require that or it\u0027s just a test?\nIn the past most operators were installed in openshift-operators namespace and here it\u0027s explained what I mentioned about having Automatic and Manual operators in the same namespace.\nhttps://access.redhat.com/solutions/6389681",
+      "parentUuid": "10cdf9ff_8193560a",
+      "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
