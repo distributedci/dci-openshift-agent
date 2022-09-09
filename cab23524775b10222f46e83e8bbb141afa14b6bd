@@ -33,6 +33,24 @@
       "message": "It is known that if you have multiple operators in one namespace and at least one is in Manual mode, it will force all subscriptions to be Manual if they are set in Automatic.\nI see today we create the subscription, and by default sets the installPlanApproval to Automatic if we set none, then we wait for the CSV and then we patch to set to Manual. So under that logic if we install a second operator in the same namespace it will have the issue you are seeing Nacho, that is the new operator will have its initial subscription set to Automatic but the CSV will not show up because there is already a subscription in Manual mode from another operator. Afaik this should require to approve install plans with another tasks. I\u0027m curios to see the results of your tests with this patch using multiple operators in the same namespace.\n\nAlso I wonder now that you moved the Subscription patch to change the installplan to Manual just after creating the initial subscription, I wonder why not just have one task that creates the initial subscription with the desired installPlanApproval from the beginning?",
       "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69d1c0a6_1f71beb4",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-09T14:59:57Z",
+      "side": 1,
+      "message": "So, in other words, the problem seems to have been that the \"install_plan\" variable was not defined (set to \"Automatic\"), so the first operator subscription was properly created with install plan set to Automatic but, after the CSV is created, the install plan was patched and moved to \"Manual\", provided this is the default value for the variable \"install_plan\".\n\nSo, once the second operator is installed, it\u0027s set to manual, since there\u0027s a previous operator set to manual, right?\n\nI\u0027m not entirely sure this is what happened, since the first operator always shows as automatic, and it was the second one which showed as manual.\n\nOn the other hand, if we have the option to set the install plan to the value we want when we create the subscription, would there be a point on keeping the patching task? Or your point is that the install plan should forcefully be set to automatic when the subscription is created, even in later it\u0027s patched to manual?",
+      "parentUuid": "887e541b_3c951be4",
+      "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
