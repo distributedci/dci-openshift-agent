@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.8-vanilla",
       "revId": "1ca9906ddb876247774c0324872ac753bf025734",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27a14ac5_8bea611b",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-09T15:50:43Z",
+      "side": 1,
+      "message": "It seems like the change in the delegate is affecting the mirroring entries passed to the installer. Here we are defining a file that includes the mirroring for the operators but later the installers is using the default one.\n\nhttps://www.distributed-ci.io/jobs/9e7a5538-70ad-4100-8e8b-70443039848a/jobStates#7755105e-f604-4818-a34b-9759dbfd94a8:file198\n\nhttps://www.distributed-ci.io/jobs/9e7a5538-70ad-4100-8e8b-70443039848a/jobStates#0c23892f-9809-4911-a5a1-7ab728ae63a6:file40\n\n\nThanks!",
+      "revId": "1ca9906ddb876247774c0324872ac753bf025734",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
