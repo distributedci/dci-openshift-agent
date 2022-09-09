@@ -21,7 +21,7 @@
       apiVersion: operators.coreos.com/v1
       kind: OperatorGroup
       metadata:
-        name: "{{ operator }}"
+        name: "{{ operator_group_name | default(operator) }}"
         namespace: "{{ namespace }}"
       spec: "{{ operator_group_spec | default(omit) }}"
 
@@ -60,6 +60,23 @@
         source: "{{ source }}"
         sourceNamespace: "{{ source_ns }}"
 
+- name: "Patch subscription according to install_approval - Default: Manual"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: Subscription
+      metadata:
+        name: "{{ operator }}"
+        namespace: "{{ namespace }}"
+      spec:
+        installPlanApproval: "{{ install_approval | default('Manual') }}"
+        channel: "{{ desired_channel }}"
+        config:
+          resources: {}
+        name: "{{ operator }}"
+        source: "{{ source }}"
+        sourceNamespace: "{{ source_ns }}"
+
 - name: "Get Operator's CSV"
   block:
     - name: "Get operator's CSV for desired channel"
@@ -86,20 +103,3 @@
     - "'status' in csv.resources[0]"
     - "'phase' in csv.resources[0].status"
     - csv.resources[0].status.phase == 'Succeeded' or csv.resources[0].status.phase == 'Present'
-
-- name: "Patch subscription according to install_approval - Default: Manual"
-  community.kubernetes.k8s:
-    definition:
-      apiVersion: operators.coreos.com/v1alpha1
-      kind: Subscription
-      metadata:
-        name: "{{ operator }}"
-        namespace: "{{ namespace }}"
-      spec:
-        installPlanApproval: "{{ install_approval | default('Manual') }}"
-        channel: "{{ desired_channel }}"
-        config:
-          resources: {}
-        name: "{{ operator }}"
-        source: "{{ source }}"
-        sourceNamespace: "{{ source_ns }}"
