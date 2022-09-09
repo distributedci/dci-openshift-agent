@@ -105,6 +105,24 @@
       "parentUuid": "10cdf9ff_8193560a",
       "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a35dc084_b4ddeb91",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-09T20:48:25Z",
+      "side": 1,
+      "message": "Thanks for the references Manuel!!\n\nBeto and I were able to reproduce that behavior when using multiple operators in the same ns. Once any IPApproval in a sub is changed to Manual all the new IP will be Manual as well.\n\nUsing one operator per ns is the best option. Then, I recommend to document that in this change instead. And talk to the partner about it.\n\nIf the partner has a real need of having multiple operators in the same ns, it would be needed that all the operators have the same install mode, because that\u0027s defined in the operator group and only one is used per ns. In addition to that requirement, a change in the role would be needed to allow a custom operator group. Lastly the install_approval should be explicit and set to Automatic.\n\nhth",
+      "parentUuid": "6da7b1dc_7ba3a5c1",
+      "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
