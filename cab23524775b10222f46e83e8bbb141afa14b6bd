@@ -51,6 +51,24 @@
       "parentUuid": "887e541b_3c951be4",
       "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a20a5ecf_c28fa562",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-09T15:27:46Z",
+      "side": 1,
+      "message": "Is it a common practice to install multiple operators on the same namespace? \nI wasn\u0027t aware of that behavior about a subs affecting other subs in the same namespace.\n\nA was also thinking that intalling operators in the same namespace is not only going to give you headaches with the subscription but also with having 2 operator groups in the same namespace that is not allowed. \n\nIf we create the subscription as manual, we will have to check for the first IP to be created and approve it manually of not, the initial install will not start.",
+      "parentUuid": "887e541b_3c951be4",
+      "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
