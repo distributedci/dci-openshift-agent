@@ -104,7 +104,10 @@ finish() {
 
     # Workaround to delete any temporary directory created without u+w
     find "${DIR}" -type d -not -perm -u=w -exec chmod u+w {} \;
-    rm -rf $DIR
+
+# THIS IS NOT PART OF THE CHANGE BUT A WORKAROUND TO TROUBLESHOOT THE AGENT-CTL
+# EXITING WITH CODE 1 WITHOUT PRINTING ANY INFORMATION
+    #rm -rf $DIR
 
     exit $RET
 }
@@ -303,7 +306,10 @@ fi
 
 # find a config dir if any
 for conf in $(ls -d *config 2> /dev/null); do
-    settings="$(find $conf -name '*settings.yml')"
+# Added maxdepth so the script work identify settings files not in the repo
+# root which will cause the CONFIG_DIR variable to be updated, yet a failure
+# when the agent does not find a settings.yml file.
+    settings="$(find $conf -maxdepth 1 -name '*settings.yml')"
     if [ -n "$settings" ]; then
         sed -i -e "s@/var/lib/dci-openshift-agent/$conf/@$PWD/$conf/@g" $settings
         export CONFIG_DIR="$PWD/$conf"
