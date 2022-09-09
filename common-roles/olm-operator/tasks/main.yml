@@ -21,7 +21,7 @@
       apiVersion: operators.coreos.com/v1
       kind: OperatorGroup
       metadata:
-        name: "{{ operator }}"
+        name: "{{ operator_group_name | default(operator) }}"
         namespace: "{{ namespace }}"
       spec: "{{ operator_group_spec | default(omit) }}"
 
@@ -54,6 +54,7 @@
         namespace: "{{ namespace }}"
       spec:
         channel: "{{ desired_channel }}"
+        installPlanApproval: Automatic
         config:
           resources: {}
         name: "{{ operator }}"
