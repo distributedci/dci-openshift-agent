@@ -804,7 +804,8 @@ Enable the dnf-automatic.timer
     1. "Install" (`dci_main` is "install" or undefined)
         - Start OpenShift install: `/plays/install.yml`
         - Trigger partner install hook if needed: `/hooks/install.yml`.
-        - *tags: running, installing, hook-installing*
+        - *tags: running, installing, hook-installing, post-installing*
+        - Runs the post installation: `/plays/post-install.yml`
         - *runs on: provisioner*
 
     2. "Upgrading" (`dci_main` is "upgrade")
