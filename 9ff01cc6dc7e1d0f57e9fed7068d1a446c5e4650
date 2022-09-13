@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acecf04e_71a38de9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:20:47Z",
+      "side": 1,
+      "message": "two minor comments from my side",
+      "revId": "9ff01cc6dc7e1d0f57e9fed7068d1a446c5e4650",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5f4e889_d4c90cbe",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 22
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:20:47Z",
+      "side": 1,
+      "message": "typo: Without",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 6
+      },
+      "revId": "9ff01cc6dc7e1d0f57e9fed7068d1a446c5e4650",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "306f4f31_01744bb5",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:20:47Z",
+      "side": 1,
+      "message": "if it\u0027s executed \"when disconnected\", do we need acm_disconnected check here?",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 64
+      },
+      "revId": "9ff01cc6dc7e1d0f57e9fed7068d1a446c5e4650",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
