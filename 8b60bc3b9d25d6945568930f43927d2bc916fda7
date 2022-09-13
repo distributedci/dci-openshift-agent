@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37bbefd1_675a6821",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:57:44Z",
+      "side": 1,
+      "message": "Really impressive change, thanks Beto. For the moment, leaving some minor comments that I guess they are easy to address. I\u0027ll be waiting for some tests before giving a vote.",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fc61bcf_e0c967d6",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:57:44Z",
+      "side": 1,
+      "message": "here we use version, in defaults file we use the SHA",
+      "range": {
+        "startLine": 35,
+        "startChar": 85,
+        "endLine": 35,
+        "endChar": 99
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48bec26a_c43b2202",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:57:44Z",
+      "side": 1,
+      "message": "the variable in defaults file is set to 23 and not to /23",
+      "range": {
+        "startLine": 36,
+        "startChar": 44,
+        "endLine": 36,
+        "endChar": 47
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "831f9c5a_c54b01e9",
+        "filename": "roles/acm-sno/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:57:44Z",
+      "side": 1,
+      "message": "they aren\u0027t included in the README table",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 23
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf62686d_8d9b150a",
+        "filename": "roles/acm-sno/tasks/monitor-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-13T13:57:44Z",
+      "side": 1,
+      "message": "percentage max value is not 100%? I was curious about it after checking the conditions you\u0027ve defined",
+      "range": {
+        "startLine": 46,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 39
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
