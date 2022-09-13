@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9202fa71_77f3cdae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-13T21:26:34Z",
+      "side": 1,
+      "message": "Thanks for all the hard work here, now start to make sense to me all these pieces",
+      "revId": "720c35f654280a525ee08473f54661930e2816b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bbbcc9c_89f8d8ec",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 24
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-13T21:26:34Z",
+      "side": 1,
+      "message": "Minor wording: maybe \"Creating a multicluster engine\" or \"Creation of a multicluster engine\" ?",
+      "revId": "720c35f654280a525ee08473f54661930e2816b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56ae6660_ba2d4198",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 24
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-13T21:26:34Z",
+      "side": 1,
+      "message": "Beto, can we add here if a SC with RWO mode will be enough or do we need RWX?",
+      "revId": "720c35f654280a525ee08473f54661930e2816b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
