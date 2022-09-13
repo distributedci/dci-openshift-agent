@@ -1,0 +1,33 @@
+---
+- name: "Setup Advanced Cluster Management"
+  include_role:
+    name: acm-setup
+  vars:
+    hub_disconnected: "{{ dci_disconnected | default(false) | bool }}"
+  when:
+    - enable_acm | bool
+
+- name: "acm-sno : Deploy SNO nodes"
+  include_role:
+    name: acm-sno
+  vars:
+    acm_ocp_version: "{{ sno_instance.ocp_version }}"
+    acm_release_image: "{{ sno_instance.release_image }}"
+    acm_force_deploy: "{{ sno_instance.force_deploy }}"
+    acm_cluster_name: "{{ sno_instance.cluster_name }}"
+    acm_base_domain: "{{ sno_instance.base_domain }}"
+    acm_bmc_address: "{{ sno_instance.bmc_address }}"
+    acm_boot_mac_address: "{{ sno_instance.boot_mac_address }}"
+    acm_machine_cidr: "{{ sno_instance.machine_cidr }}"
+    acm_bmc_user: "{{ sno_instance.bmc_user }}"
+    acm_bmc_pass: "{{ sno_instance.bmc_pass }}"
+    acm_iso_url: "{{ sno_instance.iso_url }}"
+    acm_root_fs_url: "{{ sno_instance.root_fs_url }}"
+    acm_disconnected: "{{ sno_instance.disconnected }}"
+  loop: "{{ sno_instances }}"
+  loop_control:
+    loop_var: sno_instance
+    label: "{{ sno_instance.cluster_name }}"
+  when:
+    - "{{ sno_instances | default([]) | length   }}"
+...
