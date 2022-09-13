@@ -20,6 +20,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "67ee4eab_32898ca2",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-13T20:46:14Z",
+      "side": 1,
+      "message": "In the example below it reads \"acm_boot_mac_address\", so I think there we are missing acm_ prefix in the variable",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89778f71_84cfa5d7",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-13T20:46:14Z",
+      "side": 1,
+      "message": "Can we add what DU stands for? I read distributed unit right?",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2fc61bcf_e0c967d6",
         "filename": "roles/acm-sno/README.md",
         "patchSetId": 2
@@ -89,6 +123,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8d4078d4_180fd8a0",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-13T20:46:14Z",
+      "side": 1,
+      "message": "Question: Is this resource only available in disconnected clusters? or how do we know that a cluster is disconnected to perform this task?",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cf62686d_8d9b150a",
         "filename": "roles/acm-sno/tasks/monitor-install.yml",
         "patchSetId": 2
@@ -106,6 +157,23 @@
         "endLine": 46,
         "endChar": 39
       },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e59bccf1_da4d345c",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-13T20:46:14Z",
+      "side": 1,
+      "message": "Question: Is this a sort of validation to confirm ACM is installed and we can proceed to deploy with ACM?",
       "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
