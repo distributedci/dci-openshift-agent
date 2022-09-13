@@ -1,0 +1,17 @@
+---
+# - name: "Pre-run validations"
+#   include_tasks: pre-run.yml
+
+# - name: "Install a new cluster"
+#   include_tasks: create-cluster.yml
+
+- name: "Monitor: Install elapsed time"
+  set_fact:
+    elapsed_time: 0
+
+- name: "Monitor: Installation progress"
+  include_tasks: monitor-install.yml
+
+- name: "Get spoke cluster credentials"
+  include_tasks: get-credentials.yml
+...
