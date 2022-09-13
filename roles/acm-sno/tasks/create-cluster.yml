@@ -1,0 +1,276 @@
+---
+- name: "Validate parameters"
+  assert:
+    that: "{{ item }} is defined"
+    fail_msg: "The parameter {{ item }} is required"
+  with_items:
+      - acm_bmc_user
+      - acm_bmc_address
+      - acm_boot_mac_address
+      - acm_machine_cidr
+
+- name: "Check cluster namespace"
+  community.kubernetes.k8s_info:
+    kind: namespace
+    name: "{{ acm_cluster_name }}"
+  register: acm_cluster_ns
+
+- name: "Fail if a cluster namespace already exists"
+  fail:
+   msg:
+     - "A namespace for the specified cluster name {{ acm_cluster_name }} already exist"
+     - "Set acm_force_deploy:true to delete it"
+  when:
+   - acm_cluster_ns.resources | length == 1
+   - not acm_force_deploy | bool
+
+- name: "Delete current cluster"
+  include_tasks: delete-cluster.yml
+  when:
+    - acm_force_deploy | bool
+
+- name: "Create a managed cluster namespace"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: v1
+      kind: Namespace
+      metadata:
+        name: "{{ acm_cluster_name }}"
+
+- name: "Pull data from Hub cluster"
+  include_tasks: acm-pull-data.yml
+
+- name: "Set pull secret for Assisted installer and Cluster deployment"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: v1
+      kind: Secret
+      metadata:
+        name: "pullsecret-{{ acm_cluster_name }}"
+        namespace: "{{ acm_cluster_name }}"
+      data:
+        .dockerconfigjson: "{{ acm_pull_secret }}"
+      type: kubernetes.io/dockerconfigjson
+
+- name: "Disable ClusterImageSet subscription (disconnected)"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: operator.open-cluster-management.io/v1
+      kind: MultiClusterHub
+      metadata:
+        name: multiclusterhub
+        namespace: open-cluster-management
+      spec:
+        disableUpdateClusterImageSets: true
+
+- name: "BMC credentials"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: v1
+      data:
+        username: "{{ acm_bmc_user | b64encode }}"
+        password: "{{ acm_bmc_pass | b64encode }}"
+      kind: Secret
+      metadata:
+        name: "bmc-{{ acm_cluster_name }}"
+        namespace: "{{ acm_cluster_name }}"
+      type: Opaque
+
+- name: "Update the Agent Service Config CR with the OS images"
+  vars:
+    rhcos_version: "{{ acm_ocp_version.split('.')[:2] | join('.') }}"
+    os_images:
+      openshiftVersion: "{{ acm_ocp_version }}"
+      version: "{{ rhcos_version }}"
+      url: "{{ acm_iso_url }}"
+      rootFSUrl: "{{ acm_root_fs_url }}"
+      cpuArchitecture: x86_64
+  shell: >
+    set -o pipefail &&
+    oc get AgentServiceConfig agent -o json
+    | jq '.spec.osImages += [ {{ os_images | to_json }} ]'
+    | oc apply -f -
+
+- name: "Define Random ClusterImageSet name"
+  set_fact:
+    img_release: "{{ lookup('password', '/dev/null length=15 chars=ascii_lowercase,digits') }}"
+
+- name: "Create the ClusterImageSet"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: hive.openshift.io/v1
+      kind: ClusterImageSet
+      metadata:
+        labels:
+          channel: stable
+          visible: 'true'
+        name: "img-{{ img_release }}"
+        namespace: open-cluster-management
+      spec:
+        releaseImage: "{{ acm_release_image }}"
+
+# Keeping some placeholders related to IPv6 configuration
+- name: "Create the Agent cluster install"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: extensions.hive.openshift.io/v1beta1
+      kind: AgentClusterInstall
+      metadata:
+        name: "{{ acm_cluster_name }}"
+        namespace: "{{ acm_cluster_name }}"
+      spec:
+        clusterDeploymentRef:
+          name: "{{ acm_cluster_name }}"
+        imageSetRef:
+          name: "img-{{ img_release }}"
+        networking:
+          clusterNetwork:
+            - cidr: "{{ acm_cluster_network_cidr }}"
+              hostPrefix: "{{ acm_cluster_network_host_prefix }}"
+            # - cidr: "fd01::/48"
+            #   hostPrefix: 64
+          machineNetwork:
+            - cidr: "{{ acm_machine_cidr }}"
+            # - cidr: "2600:52:7:16::/64"
+          serviceNetwork:
+            - "{{ acm_service_network_cidr }}"
+            # - "fd02::/112"
+        provisionRequirements:
+          controlPlaneAgents: 1
+          workerAgents: 0
+        sshPublicKey: "{{ acm_ssh_key }}"
+
+- name: "Request the cluster deployment"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: hive.openshift.io/v1
+      kind: ClusterDeployment
+      metadata:
+        name: "{{ acm_cluster_name }}"
+        namespace: "{{ acm_cluster_name }}"
+      spec:
+        clusterName: "{{ acm_cluster_name }}"
+        baseDomain: "{{ acm_base_domain }}"
+        controlPlaneConfig:
+          servingCertificates: {}
+        installed: false
+        clusterInstallRef:
+          group: extensions.hive.openshift.io
+          kind: AgentClusterInstall
+          name: "{{ acm_cluster_name }}"
+          version: v1beta1
+        platform:
+          agentBareMetal:
+            agentSelector:
+              matchLabels:
+                cluster-name: "{{ acm_cluster_name }}"
+        pullSecretRef:
+          name: "pullsecret-{{ acm_cluster_name }}"
+
+- name: "Create KlusterletAddonConfig"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: agent.open-cluster-management.io/v1
+      kind: KlusterletAddonConfig
+      metadata:
+        name: "{{ acm_cluster_name }}"
+        namespace: "{{ acm_cluster_name }}"
+      spec:
+        clusterName: "{{ acm_cluster_name }}"
+        clusterNamespace: "{{ acm_cluster_name }}"
+        clusterLabels:
+          cloud: auto-detect
+          vendor: auto-detect
+        applicationManager:
+          enabled: false
+        certPolicyController:
+          enabled: false
+        iamPolicyController:
+          enabled: false
+        policyController:
+          enabled: false
+        searchCollector:
+          enabled: false
+
+- name: "Create ManagedCluster"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: cluster.open-cluster-management.io/v1
+      kind: ManagedCluster
+      metadata:
+        name: "{{ acm_cluster_name }}"
+        namespace: "{{ acm_cluster_name }}"
+      spec:
+        hubAcceptsClient: true
+
+- name: "Create the InfraEnv"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: agent-install.openshift.io/v1beta1
+      kind: InfraEnv
+      metadata:
+        labels:
+          agentclusterinstalls.extensions.hive.openshift.io/location: "{{ acm_cluster_location }}"
+          networkType: dhcp
+        name: "{{ acm_cluster_name }}-infra"
+        namespace: "{{ acm_cluster_name }}"
+      spec:
+        clusterRef:
+          name: "{{ acm_cluster_name }}"
+          namespace: "{{ acm_cluster_name }}"
+        agentLabels:
+          agentclusterinstalls.extensions.hive.openshift.io/location: "{{ acm_cluster_location }}"
+        cpuArchitecture: x86_64
+        nmStateConfigLabelSelector:
+          matchLabels:
+            infraenvs.agent-install.openshift.io: "{{ acm_cluster_name }}"
+        pullSecretRef:
+          name: "pullsecret-{{ acm_cluster_name }}"
+        sshAuthorizedKey: "{{ acm_ssh_key }}"
+
+- name: "Wait for the boot ISO creation"
+  community.kubernetes.k8s_info:
+    api: agent-install.openshift.io/v1beta1
+    kind: InfraEnv
+    name: "{{ acm_cluster_name }}-infra"
+    namespace: "{{ acm_cluster_name }}"
+  register: infraenv_status
+  until: infraenv_status | json_query('resources[0].status.conditions[0].reason') == 'ImageCreated' and
+         infraenv_status | json_query('resources[0].status.conditions[0].status') == 'True'
+  retries: 15
+  delay: 6
+
+- name: "Create BareMetalHost"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: metal3.io/v1alpha1
+      kind: BareMetalHost
+      metadata:
+        annotations:
+          inspect.metal3.io: disabled
+          bmac.agent-install.openshift.io/hostname: "{{ acm_cluster_name }}"
+          bmac.agent-install.openshift.io/role: master
+        labels:
+          infraenvs.agent-install.openshift.io: "{{ acm_cluster_name }}-infra"
+        name: "{{ acm_cluster_name }}"
+        namespace: "{{ acm_cluster_name }}"
+      spec:
+        automatedCleaningMode: disabled
+        bmc:
+          address: "{{ acm_bmc_address }}"
+          credentialsName: "bmc-{{ acm_cluster_name }}"
+          disableCertificateVerification: true
+        bootMACAddress: "{{ acm_boot_mac_address }}"
+        online: true
+
+- name: "Wait for the Host Provisioning"
+  community.kubernetes.k8s_info:
+    api: metal3.io/v1alpha1
+    kind: BareMetalHost
+    name: "{{ acm_cluster_name }}"
+    namespace: "{{ acm_cluster_name }}"
+  register: bmh_status
+  until: bmh_status | json_query('resources[0].status.provisioning.state') == 'provisioned'
+  retries: 20
+  delay: 15
+...
