@@ -36,6 +36,7 @@ There are some benefits of running the DCI OCP Agent:
     - [Storing secrets](#storing-secrets)
   - [Starting the DCI OCP Agent](#starting-the-dci-ocp-agent)
   - [Deploying Operators](#deploying-operators)
+  - [Deploying SNO instances using the Advanced Cluster Management Operator in DCI](#deploying-sno-instances-using-the-advanced-cluster-management-operator-in-dci)
   - [Interacting with your RHOCP Cluster](#interacting-with-your-rhocp-cluster)
   - [Troubleshooting common issues](#troubleshooting-common-issues)
     - [Troubleshooting basic configuration](#troubleshooting-basic-configuration)
@@ -314,7 +315,7 @@ which version of OCP to install.
 | enable_lso                         | False    | Boolean   | False      | Deploys the Local Storage Operator |
 | enable_acm                         | False    | Boolean   | False      | Deploys the [ACM](https://www.redhat.com/en/technologies/management/advanced-cluster-management) Operator|
 | operator_skip_upgrade              | False    | List   | []      | List of operators to skip during the upgrade |
-
+| sno_instances                      | False    | List      | []         | List with details of the SNO instances that will be deployed of ACM is present in the current cluster. See [Deploying SNO instances using the ACM operator in DCI](#deploying-sno-instances-using-the-advanced-cluster-management-operator-in-dci) |
 
 Example:
 
@@ -476,11 +477,9 @@ The Agent manages the deployment of certain operators. At this time there is sup
 - Local Storage
 - Advanced Cluster Management (ACM)
 
-In order to make additional operators available in disconected environments is it important to configure the `opm_mirror_list` variable with the list of other operators to mirror. The Agent will take care of mirroring the required images and its dependencies.
+In order to make additional operators available in disconnected environments is it important to configure the `opm_mirror_list` variable with the list of other operators to mirror. The Agent will take care of mirroring the required images and its dependencies.
 
-The variable `operators_index` is used to specify the catalog image containing information for the operators that may be deployed in the cluster. By default the index is the one located at registry.redhat.io and according to the OCP version installed but it can be overrided with a custom image. In conjuntion with `dci_operators` variable in allows the deployment of custom operators additionaly to those directly managed by the agent.
-
-```console
+The variable `operators_index` is used to specify the catalog image containing information for the operators that may be deployed in the cluster. By default the index is the one located at registry.redhat.io and according to the OCP version installed but it can be overridden with a custom image. In conjunction with `dci_operators` variable in allows the deployment of custom operators additionally to those directly managed by the agent.
 
 Please see the [settings table](#etcdci-openshift-agentsettingsyml) for the variables names to control the Operators installation.
 
@@ -528,6 +527,29 @@ The resulting list of operators to mirror is:
   - redhat-oadp-operator
   - multicluster-engine
 ```
+
+## Deploying SNO instances using the Advanced Cluster Management Operator in DCI
+
+The dci-openshift-agent integrates the [acm-setup](roles/acm-setup/README.md) and [acm-sno](roles/acm-sno/README.md) roles to allow the deployment of SNO instances. If the ACM operator is deployed, it will be configured to deploy the SNO instances defined via using the `sno_instances` variable. As shown below:
+
+```yaml
+sno_instances:
+  - ocp_version: "4.9.6"
+    release_image: <registry>:4443/ocp4/openshift4:4.9.6
+    force_deploy: true
+    cluster_name: sno1
+    base_domain: <mydomain>.lab
+    bmc_address: 192.168.10.48
+    boot_mac_address: 3c:fd:3e:c2:0f:c4
+    machine_cidr: 192.168.82.0/24
+    bmc_user: REDACTED
+    bmc_pass: REDACTED
+    iso_url: "http://<WEBSERVER>/pub/projects/sno/rhcos-4.9.0-x86_64-live.x86_64.iso"
+    root_fs_url: "http://<WEBSERVER>/pub/projects/sno/rhcos-4.9.0-x86_64-live-rootfs.x86_64.img"
+    disconnected: true
+```
+
+For more details about the specific requirement of each role, please review the corresponding role's documentation.
 
 ## Interacting with your RHOCP Cluster
 
@@ -808,7 +830,8 @@ Enable the dnf-automatic.timer
     1. "Install" (`dci_main` is "install" or undefined)
         - Start OpenShift install: `/plays/install.yml`
         - Trigger partner install hook if needed: `/hooks/install.yml`.
-        - *tags: running, installing, hook-installing*
+        - *tags: running, installing, hook-installing, post-installing*
+        - Runs the post installation: `/plays/post-install.yml`
         - *runs on: provisioner*
 
     2. "Upgrading" (`dci_main` is "upgrade")
