@@ -52,6 +52,24 @@
       "parentUuid": "c8279ec3_c01b0daa",
       "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f31f7959_7df78b98",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T15:13:59Z",
+      "side": 1,
+      "message": "Good catch, but unfortunately ocp_version may not be a good fit for this. \n\nDuring the installation, we are inspecting the package to detect the default channel and assign it explicitly to the subscription. https://github.com/redhat-cip/dci-openshift-agent/blob/ccdc8a449101993bd058848d5ec8aa5bcd696f6f/common-roles/olm-operator/tasks/main.yml#L43 \n\nHere we should do the same, inspect the packagemanifest and obtain the new channel (we already do that for the new target CSV).\n\n$ oc get subs -A -o\u003dcustom-columns\u003dNAME:.metadata.name,CHANNEL:.spec.channel\nNAME                                                                              CHANNEL\nkubevirt-hyperconverged                                                           stable\ncluster-logging                                                                   stable\nmtc-operator                                                                      release-v1.7\nredhat-oadp-operator-stable-1.0-mirrored-redhat-operators-openshift-marketplace   stable-1.0\nelasticsearch-operator                                                            stable\nperformance-addon-operator                                                        4.10\nsriov-network-operator                                                            stable",
+      "parentUuid": "c8279ec3_c01b0daa",
+      "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
