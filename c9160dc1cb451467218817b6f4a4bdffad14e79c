@@ -16,6 +16,23 @@
       "message": "Very interesting work here Beto, just a few questions, and minor typos for now. Thanks!",
       "revId": "c9160dc1cb451467218817b6f4a4bdffad14e79c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "784e9d59_a80474b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T21:12:54Z",
+      "side": 1,
+      "message": "Thanks for your comments, I have updated the code based on your feedback. \n\nI had decided to keep both roles in a single change, so I am moving the work to https://softwarefactory-project.io/r/c/dci-openshift-agent/+/26118",
+      "revId": "c9160dc1cb451467218817b6f4a4bdffad14e79c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
