@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "408ca75d_78fba443",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-14T14:20:18Z",
+      "side": 1,
+      "message": "Hi Nacho, is it guaranteed that the ocp_version channel will always be present? I remember an issue in the past when operators were unavailable for the latest OCP versions.",
+      "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
