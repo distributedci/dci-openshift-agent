@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc8f8d71_c265442e",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T21:09:04Z",
+      "side": 1,
+      "message": "thanks, fixed",
+      "parentUuid": "67ee4eab_32898ca2",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "89778f71_84cfa5d7",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-09-13T20:46:14Z",
       "side": 1,
       "message": "Can we add what DU stands for? I read distributed unit right?",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26785ed1_af8dc39a",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T21:09:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "89778f71_84cfa5d7",
       "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -212,6 +248,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c6b8adb6_e8af31b8",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T21:09:04Z",
+      "side": 1,
+      "message": "we need to do this to avoid ACM Hub trying to update from a the releases that can be deployed from https://github.com/stolostron/acm-hive-openshift-releases. \n\nAs we are going to create custom clusterImageSets for our deployment the sync is not needed.\n\nI will move this task to the acm-setup role",
+      "parentUuid": "8d4078d4_180fd8a0",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cf62686d_8d9b150a",
         "filename": "roles/acm-sno/tasks/monitor-install.yml",
         "patchSetId": 2
@@ -270,6 +324,24 @@
       "writtenOn": "2022-09-13T20:46:14Z",
       "side": 1,
       "message": "Question: Is this a sort of validation to confirm ACM is installed and we can proceed to deploy with ACM?",
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ab2d415_782c34f0",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T21:09:04Z",
+      "side": 1,
+      "message": "yes, if no CRDs, most of the tasks below will fail.",
+      "parentUuid": "e59bccf1_da4d345c",
       "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
