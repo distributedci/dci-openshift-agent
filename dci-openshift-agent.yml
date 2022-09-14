@@ -465,6 +465,7 @@
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
+
   tasks:
     - block:
         - name: Run the success hook
