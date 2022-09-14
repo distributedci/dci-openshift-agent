@@ -75,6 +75,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "961342cd_3309568c",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T19:42:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fc61bcf_e0c967d6",
+      "range": {
+        "startLine": 35,
+        "startChar": 85,
+        "endLine": 35,
+        "endChar": 99
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "48bec26a_c43b2202",
@@ -98,6 +122,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cefaeb75_44232361",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T19:42:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48bec26a_c43b2202",
+      "range": {
+        "startLine": 36,
+        "startChar": 44,
+        "endLine": 36,
+        "endChar": 47
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "831f9c5a_c54b01e9",
@@ -111,6 +159,30 @@
       "writtenOn": "2022-09-13T13:57:44Z",
       "side": 1,
       "message": "they aren\u0027t included in the README table",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 23
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65bc600a_84ce3eae",
+        "filename": "roles/acm-sno/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T19:42:09Z",
+      "side": 1,
+      "message": "good catch, thanks!",
+      "parentUuid": "831f9c5a_c54b01e9",
       "range": {
         "startLine": 6,
         "startChar": 0,
@@ -151,6 +223,30 @@
       "writtenOn": "2022-09-13T13:57:44Z",
       "side": 1,
       "message": "percentage max value is not 100%? I was curious about it after checking the conditions you\u0027ve defined",
+      "range": {
+        "startLine": 46,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 39
+      },
+      "revId": "8b60bc3b9d25d6945568930f43927d2bc916fda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae1af552_8d7c1e78",
+        "filename": "roles/acm-sno/tasks/monitor-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-14T19:42:09Z",
+      "side": 1,
+      "message": "if I evaluate \u003c\u003d100 it will fall in an infinite loop because will never reach more than 100. I think !\u003d100 should work too.",
+      "parentUuid": "cf62686d_8d9b150a",
       "range": {
         "startLine": 46,
         "startChar": 6,
