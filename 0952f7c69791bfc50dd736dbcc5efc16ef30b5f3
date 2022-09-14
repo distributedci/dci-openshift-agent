@@ -34,6 +34,24 @@
       "parentUuid": "408ca75d_78fba443",
       "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abce05d8_ce5133fc",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-14T15:05:01Z",
+      "side": 1,
+      "message": "We could first check if the channel is here, and if not, use the default one.",
+      "parentUuid": "c8279ec3_c01b0daa",
+      "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
