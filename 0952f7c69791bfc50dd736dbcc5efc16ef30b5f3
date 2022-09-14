@@ -16,6 +16,24 @@
       "message": "Hi Nacho, is it guaranteed that the ocp_version channel will always be present? I remember an issue in the past when operators were unavailable for the latest OCP versions.",
       "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8279ec3_c01b0daa",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-09-14T14:45:21Z",
+      "side": 1,
+      "message": "I agree. I remember we removed this field and let it blank so it will get the default channel.",
+      "parentUuid": "408ca75d_78fba443",
+      "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
