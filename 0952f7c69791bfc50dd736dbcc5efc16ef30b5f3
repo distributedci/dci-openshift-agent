@@ -70,6 +70,24 @@
       "parentUuid": "c8279ec3_c01b0daa",
       "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8005e3e5_8360bd34",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-15T04:23:07Z",
+      "side": 1,
+      "message": "Actually, we get the new channel in here in line 17.",
+      "parentUuid": "f31f7959_7df78b98",
+      "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
