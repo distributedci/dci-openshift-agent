@@ -84,6 +84,24 @@
       "message": "Thanks I had similar issue, I had to run this to make it work:\ndnf -y install ansible --enablerepo\u003dansible-2.9-for-rhel-8-x86_64-rpms --disablerepo\u003depel\nbut even better if we do not have to disable a repo.",
       "revId": "6d4451d19c54b906b1f20f5758ce61ebcefd799d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d56a844c_a810bd66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-09-15T17:05:06Z",
+      "side": 1,
+      "message": "You shouldn\u0027t have to disable epel with this patch",
+      "parentUuid": "fb1298c4_c7bdffc4",
+      "revId": "6d4451d19c54b906b1f20f5758ce61ebcefd799d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
