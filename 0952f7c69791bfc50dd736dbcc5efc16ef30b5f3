@@ -88,6 +88,24 @@
       "parentUuid": "f31f7959_7df78b98",
       "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0472b1a_e0bca5b5",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-15T08:02:52Z",
+      "side": 1,
+      "message": "Thanks for the explanation Beto, so the idea is to replace `ocp_version` with `default_channel`?",
+      "parentUuid": "8005e3e5_8360bd34",
+      "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
