@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "683d03fb_225a5583",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-09-15T14:37:20Z",
+      "side": 1,
+      "message": "I will so some test installs with the old package and this package\n\n1 - Can I reproduce the issue seen in dci chat where dnf installed newest ansible with agent\n2 - If I can reproduce will this change prevent said behavior\n3 - try installing latest version of ansible first, then install agent, does it offer to downgrade ansible or simply fail?",
+      "revId": "6d4451d19c54b906b1f20f5758ce61ebcefd799d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
