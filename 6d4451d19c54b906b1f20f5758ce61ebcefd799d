@@ -102,6 +102,23 @@
       "parentUuid": "fb1298c4_c7bdffc4",
       "revId": "6d4451d19c54b906b1f20f5758ce61ebcefd799d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8b869bc_bd9a7ac1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-09-15T20:21:44Z",
+      "side": 1,
+      "message": "this is good anyway as the agent is using the new filter from dci-ansible 0.3.0",
+      "revId": "6d4451d19c54b906b1f20f5758ce61ebcefd799d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
