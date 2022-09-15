@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ceb64177_127e4802",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-15T09:32:19Z",
+      "side": 1,
+      "message": "Thanks for gathering everything here Beto, now it\u0027s easier to follow. Leaving one minor comment regarding one of the topics we were discussing in the ACM SNO change",
+      "revId": "fe5d78a27857c75cf69f7e1c22f302c80151e2db",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0939bc14_a0d6d009",
+        "filename": "roles/acm-sno/tasks/monitor-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-15T09:32:19Z",
+      "side": 1,
+      "message": "Hi Beto, when discussing about the percentage, I was also referring to this statement. Shouldn\u0027t it be percentage \u003c 100? The others (!\u003d 100) are fine for me",
+      "range": {
+        "startLine": 37,
+        "startChar": 10,
+        "endLine": 37,
+        "endChar": 44
+      },
+      "revId": "fe5d78a27857c75cf69f7e1c22f302c80151e2db",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
