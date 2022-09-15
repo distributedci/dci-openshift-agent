@@ -33,6 +33,23 @@
       "message": "The job is green, thanks Nacho!",
       "revId": "903bc264ce4f67706e9c4f3e8fb0997df5741069",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0716c7f6_3d0b8b72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-15T17:38:27Z",
+      "side": 1,
+      "message": "The job is green but no operators upgrades was tested.",
+      "revId": "903bc264ce4f67706e9c4f3e8fb0997df5741069",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
