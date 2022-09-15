@@ -106,6 +106,24 @@
       "parentUuid": "8005e3e5_8360bd34",
       "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "223965fe_7f313313",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-15T09:58:29Z",
+      "side": 1,
+      "message": "Hi,\n\nThanks for the help.\n\nTatiana why right to suspect ocp_version may not be available. While this variable is defined in the installation, in the upgrade the most similar variable is \"major\", which is set to the same value.\n\nBeto, thanks for your expertise and advise. I\u0027ll do as you suggest.",
+      "parentUuid": "d0472b1a_e0bca5b5",
+      "revId": "0952f7c69791bfc50dd736dbcc5efc16ef30b5f3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
