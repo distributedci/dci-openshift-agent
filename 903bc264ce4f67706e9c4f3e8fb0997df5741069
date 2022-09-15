@@ -16,6 +16,23 @@
       "message": "LGTM, will let\u0027s wait for a successful test",
       "revId": "903bc264ce4f67706e9c4f3e8fb0997df5741069",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e291aef_9389f868",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-15T16:17:05Z",
+      "side": 1,
+      "message": "The job is green, thanks Nacho!",
+      "revId": "903bc264ce4f67706e9c4f3e8fb0997df5741069",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
