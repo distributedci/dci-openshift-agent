@@ -16,6 +16,23 @@
       "message": "Not sure why the previous job tried to upgrade from 4.7 to 4.10. \nTrying again",
       "revId": "ec2358478a8fc8caccdeeddc2b2377e91ceeb233",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b346c5f7_a0e926af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-18T19:33:59Z",
+      "side": 1,
+      "message": "Worked as expected in: https://www.distributed-ci.io/jobs/50e47928-2147-4f0b-8422-195d72da061d/jobStates#8b4e3783-bd44-476d-8ea3-92e51c7a3cfb:file136",
+      "revId": "ec2358478a8fc8caccdeeddc2b2377e91ceeb233",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
