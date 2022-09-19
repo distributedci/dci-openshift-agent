@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "184d3c74_f9d17a5a",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-19T21:57:01Z",
+      "side": 1,
+      "message": "I see the job failed twice here when using libvirt, trying to delete the ClusterImageSets, which is odd because the hub_disconnected variable is not true, so none of tasks in the block should be executed. And the task fails because the cis_list variable is not defined, so I wonder if we should add a condition in this task to run only if \"cis_list\" is defined and not empty.",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
