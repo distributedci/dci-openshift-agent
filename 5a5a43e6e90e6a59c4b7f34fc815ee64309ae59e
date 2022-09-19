@@ -16,6 +16,23 @@
       "message": "Hi Nacho, I remember that during yesterday tests you were also asking to rearrange the tasks. Should we replicate it here?",
       "revId": "5a5a43e6e90e6a59c4b7f34fc815ee64309ae59e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fee6b87_43726faf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-19T17:46:32Z",
+      "side": 1,
+      "message": "Hi Nacho, you patch worked: https://www.distributed-ci.io/jobs/5e8562e4-afbe-421d-973b-fab5f0ab8769/jobStates#72d2e973-6f5f-43db-9b06-ee4632ed3e62:file29\nThank you for fixing the issue!",
+      "revId": "5a5a43e6e90e6a59c4b7f34fc815ee64309ae59e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
