@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2cc77816_c9ce79ba",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 42
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-09-19T17:46:01Z",
+      "side": 1,
+      "message": "environment is not a array 😊",
+      "range": {
+        "startLine": 187,
+        "startChar": 0,
+        "endLine": 189,
+        "endChar": 38
+      },
+      "revId": "03225250bb9b0bedd94099bb7464b87e5f6bd9df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5780912f_e8253787",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 42
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-09-19T17:46:01Z",
+      "side": 1,
+      "message": "not sure it will work for release candidate, the name for RC include date",
+      "range": {
+        "startLine": 197,
+        "startChar": 0,
+        "endLine": 203,
+        "endChar": 33
+      },
+      "revId": "03225250bb9b0bedd94099bb7464b87e5f6bd9df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
