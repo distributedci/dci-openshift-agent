@@ -24,6 +24,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "61126ab9_30a4ed07",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 42
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-19T19:13:40Z",
+      "side": 1,
+      "message": "It also works as a list, but I\u0027ve switched to a dict 😜",
+      "parentUuid": "2cc77816_c9ce79ba",
+      "range": {
+        "startLine": 187,
+        "startChar": 0,
+        "endLine": 189,
+        "endChar": 38
+      },
+      "revId": "03225250bb9b0bedd94099bb7464b87e5f6bd9df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5780912f_e8253787",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-09-19T17:46:01Z",
       "side": 1,
       "message": "not sure it will work for release candidate, the name for RC include date",
+      "range": {
+        "startLine": 197,
+        "startChar": 0,
+        "endLine": 203,
+        "endChar": 33
+      },
+      "revId": "03225250bb9b0bedd94099bb7464b87e5f6bd9df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8b584c2_c995089d",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 42
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-19T19:13:40Z",
+      "side": 1,
+      "message": "It will, I\u0027m adding documentation for that.",
+      "parentUuid": "5780912f_e8253787",
       "range": {
         "startLine": 197,
         "startChar": 0,
