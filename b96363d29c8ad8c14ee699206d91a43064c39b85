@@ -34,6 +34,24 @@
       "parentUuid": "54e2dd8b_82b57b70",
       "revId": "b96363d29c8ad8c14ee699206d91a43064c39b85",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "160ac663_393f4bed",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-20T22:11:40Z",
+      "side": 1,
+      "message": "I see, think you mean dci_prepare_cnf[1], and yes, that will set back PAO, as you said might be possible but we\u0027ll have to do more changes in the other play.\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/deploy-operators.yml#L44-L48",
+      "parentUuid": "4d08529c_ee6d7764",
+      "revId": "b96363d29c8ad8c14ee699206d91a43064c39b85",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
