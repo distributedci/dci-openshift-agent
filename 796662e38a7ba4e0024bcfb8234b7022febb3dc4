@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a66c9ae_4a615b37",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-20T17:22:24Z",
+      "side": 1,
+      "message": "👌",
+      "revId": "796662e38a7ba4e0024bcfb8234b7022febb3dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
