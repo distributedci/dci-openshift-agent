@@ -52,6 +52,24 @@
       "parentUuid": "4d08529c_ee6d7764",
       "revId": "b96363d29c8ad8c14ee699206d91a43064c39b85",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4399eed5_d755b417",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-20T22:14:58Z",
+      "side": 1,
+      "message": "Manuel, actually that is a great idea. But instead of using prepare_cnf 4.11+, se should start using enable_sriov. Thanks!!",
+      "parentUuid": "4d08529c_ee6d7764",
+      "revId": "b96363d29c8ad8c14ee699206d91a43064c39b85",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
