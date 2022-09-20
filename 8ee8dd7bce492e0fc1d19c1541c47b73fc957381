@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcd98da0_db7714e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-20T22:02:44Z",
+      "side": 1,
+      "message": "PAO is been removed from the mirror_list: https://www.distributed-ci.io/jobs/c40e241e-6295-42eb-a64c-ddfe41bff828/jobStates#f3e3a7a9-dfd6-463c-bab6-e8d3c0b60375:file158\n\nThe type of catalog is now FBC using configs/ as endpoint https://www.distributed-ci.io/jobs/c40e241e-6295-42eb-a64c-ddfe41bff828/jobStates#f3e3a7a9-dfd6-463c-bab6-e8d3c0b60375:file207 that should work with OLM in 4.12\n",
+      "revId": "8ee8dd7bce492e0fc1d19c1541c47b73fc957381",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
