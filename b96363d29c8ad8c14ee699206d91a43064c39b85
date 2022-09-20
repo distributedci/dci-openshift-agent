@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54e2dd8b_82b57b70",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-20T22:02:39Z",
+      "side": 1,
+      "message": "Good findings Beto, I was wondering if instead of removing PAO from the list with this task, we should set enable_perf_addon:false in the OCP \u003e\u003d 4.11 pipelines, then we\u0027ll avoid to include it from the beginning in the mirror_list. wdyt?",
+      "revId": "b96363d29c8ad8c14ee699206d91a43064c39b85",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
