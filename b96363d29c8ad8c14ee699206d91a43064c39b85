@@ -16,6 +16,24 @@
       "message": "Good findings Beto, I was wondering if instead of removing PAO from the list with this task, we should set enable_perf_addon:false in the OCP \u003e\u003d 4.11 pipelines, then we\u0027ll avoid to include it from the beginning in the mirror_list. wdyt?",
       "revId": "b96363d29c8ad8c14ee699206d91a43064c39b85",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d08529c_ee6d7764",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-20T22:05:45Z",
+      "side": 1,
+      "message": "Manuel, that will not work because in vanilla pipelines we are using enable_cnf:true and that will automatically include PAO :(\n\nWe need to check how to refactor the block that is activated when we enable_cnf during the operators deployments",
+      "parentUuid": "54e2dd8b_82b57b70",
+      "revId": "b96363d29c8ad8c14ee699206d91a43064c39b85",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
