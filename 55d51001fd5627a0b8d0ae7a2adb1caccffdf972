@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "599f910d_33394d3a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-20T17:11:19Z",
+      "side": 1,
+      "message": "Looks good to me, maybe increase a little bit the retries just in case takes more than 20 secs for the API stabilize",
+      "revId": "55d51001fd5627a0b8d0ae7a2adb1caccffdf972",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
