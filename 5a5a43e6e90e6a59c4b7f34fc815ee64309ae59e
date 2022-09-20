@@ -33,6 +33,24 @@
       "message": "Hi Nacho, you patch worked: https://www.distributed-ci.io/jobs/5e8562e4-afbe-421d-973b-fab5f0ab8769/jobStates#72d2e973-6f5f-43db-9b06-ee4632ed3e62:file29\nThank you for fixing the issue!",
       "revId": "5a5a43e6e90e6a59c4b7f34fc815ee64309ae59e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfce767c_b77a35d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-20T08:05:07Z",
+      "side": 1,
+      "message": "No, rearranging should not be needed.\n\nThat was actually our first approach, so we put the \"patch\" task before the \"wait for csv created\" ones, in order to force the approval was set to automatic.\n\nBut this original order was set like that knowingly and must remain as it is.\n\nThe current discussion is whether the default value in the \"patch\" task for the approval should be manual or automatic.",
+      "parentUuid": "0a953a6c_b87d35eb",
+      "revId": "5a5a43e6e90e6a59c4b7f34fc815ee64309ae59e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
