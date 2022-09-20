@@ -61,6 +61,12 @@
   set_fact:
     mirror_list: "{{ mirror_list | unique | select | list }}"
 
+- name: "Remove PAO from mirroring in OCP 4.11 and newer"
+  set_fact:
+    mirror_list: "{{ mirror_list | reject('search', 'performance-addon-operator') }}"
+  when:
+    - version is version("4.11", ">=")
+
 - name: "Operators to be mirrored"
   debug:
     msg: "{{ mirror_list }}"
