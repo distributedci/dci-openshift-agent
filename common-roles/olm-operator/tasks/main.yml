@@ -15,6 +15,40 @@
         name: "{{ namespace }}"
         labels: "{{ ns_labels | default(omit) }}"
 
+- name: "Workaround for PodSecurity Policies in 4.12"
+  block:
+    - name: "Get cluster version"
+      community.kubernetes.k8s_info:
+        api: config.openshift.io/v1
+        kind: ClusterVersion
+        name: version
+      register: cluster_version
+
+    - name: "Set OCP name and version facts"
+      vars:
+        current_ver_query: "history[?state=='Completed'] | [0].version"
+        full_ver: "{{ cluster_version.resources[0].status | json_query(current_ver_query) }}"
+        current_ver: "{{ full_ver.split('-')[0] }}"
+      set_fact:
+        ocp_version: "{{ current_ver.split('.')[0:2] | join('.') }}"
+      when:
+        - cluster_version | length
+
+    - name: "Labeling namespace for PodSecurity requirements"
+      community.kubernetes.k8s:
+        definition:
+          apiVersion: v1
+          kind: Namespace
+          metadata:
+            name: "{{ namespace }}"
+            labels:
+              pod-security.kubernetes.io/enforce: privileged
+              pod-security.kubernetes.io/enforce-version: latest
+      when:
+      - ocp_version is version("4.12", "=")
+  when:
+    - '"cilab-619" in dci_workarounds|default([])'
+
 - name: Create OperatorGroup for OLM operator
   community.kubernetes.k8s:
     definition:
