@@ -16,6 +16,24 @@
       "message": "Nice work-around Beto, I was thinking if we can reuse the oc version calculated in the deploy operators play[1] but I think you wanted to keep this encapsulated in the same role to avoid dependencies right?\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/deploy-operators.yml#L10-L21",
       "revId": "d2d11313ff575123c8bcd1d0157461089211d32f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b2b803f_b1b3a861",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-21T22:00:35Z",
+      "side": 1,
+      "message": "I think what Beto wanted to do is to remove the task that was set_fact in line 27 and move it all to the labeling, like the example below to keep it independent\n\n    - name: \"Labeling namespace to cover PodSecurity requirements\"\n      vars:\n        current_ver_query: \"history[?state\u003d\u003d\u0027Completed\u0027] | [0].version\"\n        full_ver: \"{{ cluster_version.resources[0].status | json_query(current_ver_query) }}\"\n        current_ver: \"{{ full_ver.split(\u0027-\u0027)[0] }}\"\n      ...\n      when: current_ver is version(\"4.12.0\" \"\u003e\u003d\")",
+      "parentUuid": "2c2be767_edd2200c",
+      "revId": "d2d11313ff575123c8bcd1d0157461089211d32f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
