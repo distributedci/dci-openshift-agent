@@ -33,6 +33,24 @@
       "message": "Let\u0027s move this to build-catalog-index, right after the temp directory is created, this way we avoid downloading opm multiple times if we fallback into older versions\n\nCould you also remove the download of opm in mirror-ocp-release? iirc, this is the only place where we use it",
       "revId": "2f8dc395963aef0a33298b5c084a42f4fdbdcb81",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65fc4692_69c7eb4e",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-21T22:39:32Z",
+      "side": 1,
+      "message": "Moved the download.\n\nLets remove the other cluster\u0027s version opm in a separated change.",
+      "parentUuid": "4d96ae06_24c9e259",
+      "revId": "2f8dc395963aef0a33298b5c084a42f4fdbdcb81",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
