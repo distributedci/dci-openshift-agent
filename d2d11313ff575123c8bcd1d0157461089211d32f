@@ -34,6 +34,24 @@
       "parentUuid": "2c2be767_edd2200c",
       "revId": "d2d11313ff575123c8bcd1d0157461089211d32f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80e34693_1a842b54",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-21T22:21:05Z",
+      "side": 1,
+      "message": "Hello Manuel. Yes, do not want external dependencies and the block can be easily removed.",
+      "parentUuid": "2c2be767_edd2200c",
+      "revId": "d2d11313ff575123c8bcd1d0157461089211d32f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
