@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c2be767_edd2200c",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-09-21T20:02:01Z",
+      "side": 1,
+      "message": "Nice work-around Beto, I was thinking if we can reuse the oc version calculated in the deploy operators play[1] but I think you wanted to keep this encapsulated in the same role to avoid dependencies right?\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/deploy-operators.yml#L10-L21",
+      "revId": "d2d11313ff575123c8bcd1d0157461089211d32f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
