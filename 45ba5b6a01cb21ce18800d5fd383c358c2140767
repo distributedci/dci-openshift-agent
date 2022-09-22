@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "45ba5b6a01cb21ce18800d5fd383c358c2140767",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99a86b93_e8b24523",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-22T08:31:00Z",
+      "side": 1,
+      "message": "OCP 4.7 is working, so previous versions to OCP 4.11 should work. I\u0027ll also run a job in OCP 4.11 just in case to confirm it\u0027s working, but from my side, the change is fine.",
+      "revId": "45ba5b6a01cb21ce18800d5fd383c358c2140767",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
