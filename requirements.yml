@@ -1,0 +1,14 @@
+---
+
+roles:
+  - src: https://softwarefactory-project.io/r/ansible-role-dci-sync-registry
+  - src: https://softwarefactory-project.io/r/ansible-role-dci-podman
+  - src: https://softwarefactory-project.io/r/ansible-role-dci-ocp-imagesideload
+  - src: https://softwarefactory-project.io/r/ansible-role-dci-cvp
+
+collections:
+  - name: community.kubernetes
+  - name: containers.podman
+  - name: community.general
+  - name: community.libvirt
+  - name: ansible.posix
