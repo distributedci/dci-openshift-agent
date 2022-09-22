@@ -33,6 +33,24 @@
       "message": "check dallas ocp-4.10-vanilla ocp-4.12-upgrade openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]    openshift-vanilla-upgrade-4.12:ansible_extravars\u003duprade_eus:true openshift-vanilla-upgrade-4.12:ansible_extravars\u003dforce_upgrade:true openshift-vanilla-upgrade-4.12:ansible_extravars\u003dversion_inter:4.11.4",
       "revId": "73c072df15db9883cbd0413b70fcf88c45c4fd2f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85d1ffcd_32da5068",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 47
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-22T03:19:12Z",
+      "side": 1,
+      "message": "Hello Pierre, I haven\u0027t checked this in deep. Just a couple of comments: \n - I think there is a typo in \"uprade_eus\"\n - To avoid having issues with the sriov operator, maybe have it disable overriding enable_sriov variable during the install and the upgrade. We can deal with those a bit later. Perhaps there are no upgrade paths available to the intermediate version.\n - We may need to add a way to skip the upgrade of some operators on demand\n\nCheers",
+      "parentUuid": "09c10ab8_df1e9419",
+      "revId": "73c072df15db9883cbd0413b70fcf88c45c4fd2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
