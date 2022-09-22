@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "20571879923e3eb8e4ac35451134556712a2b7c3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b33a670a_3c3bae83",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-22T16:46:55Z",
+      "side": 1,
+      "message": "I think this would be better in the build-catalog-index.yml as opm, wdyt?",
+      "revId": "20571879923e3eb8e4ac35451134556712a2b7c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
