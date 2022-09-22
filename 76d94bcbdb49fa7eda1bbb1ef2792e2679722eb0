@@ -33,6 +33,40 @@
       "message": "check dallas ocp-4.10-vanilla ocp-4.12-upgrade openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]    openshift-vanilla-upgrade-4.12:ansible_extravars\u003dupgrade_eus:true openshift-vanilla-upgrade-4.12:ansible_extravars\u003dforce_upgrade:true openshift-vanilla-upgrade-4.12:ansible_extravars\u003dversion_inter:4.11.4",
       "revId": "76d94bcbdb49fa7eda1bbb1ef2792e2679722eb0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bdc9cb2_bb6c6b4b",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 48
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-22T14:17:12Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we set this variables as facts, since we\u0027re using them in more than one task?",
+      "revId": "76d94bcbdb49fa7eda1bbb1ef2792e2679722eb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de9f5d16_349d2fcd",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 48
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-22T14:17:12Z",
+      "side": 1,
+      "message": "Just for my understanding.\nThe point behind deactivating the upgrade in the worker nodes is so we skip the intermediate version and jump straight to the target version, or the worker nodes are not meant to be updated at all?",
+      "revId": "76d94bcbdb49fa7eda1bbb1ef2792e2679722eb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
