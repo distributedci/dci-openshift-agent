@@ -289,7 +289,7 @@ if [ "$VIRT" = "no-check" ] || { [ -d dci-openshift-agent -o -d dci-openshift-ap
     if [ "$VIRT" = "no-check" ]; then
         NUMBER_CODE_FILES=0
     else
-        NUMBER_CODE_FILES=$(cd dci-openshift-*agent; git diff-tree --no-commit-id --name-only -r HEAD|egrep '(ansible.cfg|group_vars/all|plays/scripts/get-logs|dci-check-change|test-runner|send-feedback|extract-dependencies|dci-openshift-(app-)?agent-ctl|\.(yml|j2|py))'|wc -l)
+        NUMBER_CODE_FILES=$((for d in dci-openshift-*agent; do cd $d; git diff-tree --no-commit-id --name-only -r HEAD; done)|egrep '(ansible.cfg|group_vars/all|plays/scripts/get-logs|dci-check-change|test-runner|send-feedback|extract-dependencies|dci-openshift-(app-)?agent-ctl|\.(yml|j2|py))'|grep -v 'requirements.yml'|wc -l)
     fi
     if [ "$NUMBER_CODE_FILES" -eq 0 ]; then
         PID=
