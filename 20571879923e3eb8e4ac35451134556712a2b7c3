@@ -37,6 +37,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ae307a90_cc54c543",
+        "filename": "roles/operators-mirror/tasks/build-catalog-index.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-22T16:59:17Z",
+      "side": 1,
+      "message": "Hi Beto, I remember Pierre had some download issues and had to change get_url to wget:\n\nhttps://github.com/redhat-cip/dci-openshift-app-agent/blame/ac530af7a917b978e72f24830d7b1f5307db4294/roles/preflight/tasks/prepare_download_preflight_binary.yml#L17\n\nbecause of this bug: https://github.com/ansible/ansible/issues/68843\n\nNot sure if that\u0027s the same for unarchive.",
+      "revId": "20571879923e3eb8e4ac35451134556712a2b7c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b33a670a_3c3bae83",
         "filename": "roles/operators-mirror/tasks/mirror.yml",
         "patchSetId": 5
