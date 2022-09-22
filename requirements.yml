@@ -1,0 +1,14 @@
+---
+
+roles:
+  - src: https://github.com/redhat-cip/ansible-role-dci-sync-registry
+#  - src: https://github.com/redhat-cip/ansible-role-dci-podman
+#  - src: https://github.com/redhat-cip/ansible-role-dci-ocp-imagesideload
+  - src: https://github.com/redhat-cip/ansible-role-dci-cvp
+
+collections:
+  - name: community.kubernetes
+  - name: containers.podman
+  - name: community.general
+  - name: community.libvirt
+  - name: ansible.posix
