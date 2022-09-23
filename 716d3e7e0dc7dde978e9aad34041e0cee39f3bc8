@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65046e45_838e0a19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:53:38Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "716d3e7e0dc7dde978e9aad34041e0cee39f3bc8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "543d93c2_6d2a328e",
+        "filename": "Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:53:38Z",
+      "side": 1,
+      "message": "nit: The for statements can be split in multi-lines to make it easier to read, e.g.\n\n    for hook in hooks/*.yml; do \\\n    install -p -D -m 644 $$hook  $(BUILDROOT)$(SYSCONFDIR)/dci-openshift-agent/$$hook; \\\n    done",
+      "revId": "716d3e7e0dc7dde978e9aad34041e0cee39f3bc8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
