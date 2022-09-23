@@ -52,6 +52,193 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "86a9501c_64a5d6c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Great job here Beto, most of my comments are suggestions on typos or wordking, couple of comments on code.",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55f42d1c_ceb9aa69",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 804,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Could you please include in here a one-line description of the play, e.g.\n    - Runs the post installation: `/plays/post-install.yml`",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93bf3173_0f924fa8",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "dci_main is now always defined, it was added recently in groups_vars/all",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e811695_fab23845",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Typo: Creating should say Creation",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0d2fe3b_a7a99c8d",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "suggestion: ACM has been installed\nshould say: ACM will be installed",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ac5edc4_59a8278c",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "suggestion: and Channels subscription will be removed\nshould say: and removes the Channel subscriptions",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44767399_d8f0f42d",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "True must be true (lowercase)",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e087b61_fb695c72",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "typo: configures and ACM\nshould say: configures an ACM",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d4d5a9e_668a2b44",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "typo: that mirror and OCP\nshould say: that mirrors an OCP\n\nAnd maybe for third-party include also local, i.e. to a third-party or local registry\nSame for the line below",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd51d475_ea58bc96",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Typo: testing in top OCP\nshould say: testing on top of OCP",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90f36779_7f96beff",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "This is to validate the operator is installed? should we check the csv as well? is the sub enough for most cases?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "184d3c74_f9d17a5a",
@@ -65,6 +252,472 @@
       "writtenOn": "2022-09-19T21:57:01Z",
       "side": 1,
       "message": "I see the job failed twice here when using libvirt, trying to delete the ClusterImageSets, which is odd because the hub_disconnected variable is not true, so none of tasks in the block should be executed. And the task fails because the cis_list variable is not defined, so I wonder if we should add a condition in this task to run only if \"cis_list\" is defined and not empty.",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf5b4164_0d7c906b",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "I tend to forget that a block only appends to each of its tasks the conditional or the modifiers to it (vars, delegate_to, etc) so you\u0027re right Manuel, we should add another conditional because the vars are evaluated even when the task is not executed.\n\n    when: \n      - cis_list is defined\n      - cis_list | legth\n\nAnother way to avoid this is by moving everything in the block to another task and then the conditional won\u0027t get into the tasks and will effectively skip them",
+      "parentUuid": "184d3c74_f9d17a5a",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cf27353_e4adf6ab",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "This is only in disconnected mode, right? if so can you add that in here?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8a54021_2388cedd",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "I think this \u003cTAB\u003e is a typo",
+      "range": {
+        "startLine": 39,
+        "startChar": 89,
+        "endLine": 39,
+        "endChar": 91
+      },
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b55b79e_b2c54a1d",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "suggestion: for cluster services internal communication\nshould say: for internal communication of cluster services",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b35b051_34fb772a",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "suggestion: is is allocated\nshould say: it is allocated",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7641dff1_a09180f9",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Is any specific info that may be useful in here about it?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68eccd72_a7d94208",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "suggestion: will no inherit \nshould say: will not inherit",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4b3effb_ee356fc2",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "I think this should be renamed to ## Limitations\nAs I did not see any issue with it :P",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c57d61c6_28dce0d2",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "I don\u0027t think this is a limitation or disadvantage, this role is acm-sno, and only works with SNO 😊",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6b6e48d_9550cd70",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "```yaml ?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "664c99aa_a636c739",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "```Shell ?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02f70152_afc61cec",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "suggestion: testing in top OCP\nshould say: testing on top of OCP",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a97a2379_a371b293",
+        "filename": "roles/acm-sno/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Any particular reason why is this version? should it be latest GA?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a1ad2db_fcbdcdef",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Should this task, the check cluster ns and the failure be moved to main.yml, before calling this create-cluster.yml play?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3718db6a_1e0363aa",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "This can omit this, do the validation where needed, see my comments where it\u0027s used",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1272ddee_2c81a240",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Would something like this work to patch the ASC? this suggestion makes use of the vars, it just uses k8s module:\n\n    vars:\n      ...\n      as_def:\n        spec:\n          osImages: \"{{ asg.resources[0].spec.osImages + [os_images] }}\"\n    community.kubernetes.k8s:\n      state: present\n      definition: \"{{ as_def }}\"\n      namespace: multicluster-engine\n    when: (asg.resources | length \u003d\u003d 1)",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43eb4895_7a323dc5",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "(asg.resources | length \u003d\u003d 1)",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc7ab040_5ee594d3",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "(asg.resources | length !\u003d 1)",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfdf6d02_1e751e58",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "You can add wait in the k8s_info below to avoid this delay",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fc87494_87a78e97",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Nit: You can add wait as is implemented for Pods:\n\n    wait: true",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72a21682_16333504",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Nit: Could also add the fields you care in a specific state, e.g.\n\n    field_selectors:\n      - status.phase\u003dRunning",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13ce2693_782f9407",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "nit: do it multi-line with a list:\n\n    - infraenv_status | json_query(\u0027resources[0].status.conditions[0].reason\u0027) \u003d\u003d \u0027ImageCreated\u0027\n    - infraenv_status | json_query(\u0027resources[0].status.conditions[0].status\u0027) \u003d\u003d \u0027True\u0027",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ea63f6a_0fc765bd",
+        "filename": "roles/acm-sno/tasks/delete-cluster.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Great work here!!! 👌",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e69ac06_9e4df1ac",
+        "filename": "roles/acm-sno/tasks/get-credentials.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Are we deleting these temp dirs?\nShould we upload the creds to the job?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a4b0214_c0d7f0d1",
+        "filename": "roles/acm-sno/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Should the commented code be included?",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd408823_deb7436c",
+        "filename": "roles/acm-sno/tasks/monitor-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Since you\u0027re extracting the value you could omit the json_query altoghether thus the below is equivalent:\n\n    completion_percentage: \"{{ install_status.resources[0].status.progress.totalPercentage }}\"\n    state_info: \"{{ install_status.resources[0].status.debugInfo.state }}\"",
+      "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10e19e5d_22940ed1",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Is this comment required as code or can be removed?",
       "revId": "bb7bcaae58df74f5a160928f0bbb0cabefb03256",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

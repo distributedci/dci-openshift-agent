@@ -63,6 +63,30 @@
       },
       "revId": "fe5d78a27857c75cf69f7e1c22f302c80151e2db",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10c1bf21_539ca910",
+        "filename": "roles/acm-sno/tasks/monitor-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-23T21:02:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da1dcbeb_6eb95ec7",
+      "range": {
+        "startLine": 37,
+        "startChar": 10,
+        "endLine": 37,
+        "endChar": 44
+      },
+      "revId": "fe5d78a27857c75cf69f7e1c22f302c80151e2db",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
