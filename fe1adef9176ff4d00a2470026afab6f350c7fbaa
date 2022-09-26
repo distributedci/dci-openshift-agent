@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1dae1a1_1fbdaa26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-26T19:15:13Z",
+      "side": 1,
+      "message": "LGTM, I\u0027d suggest to test it in BOS2 with hints, adding PAO and not upgrading it",
+      "revId": "fe1adef9176ff4d00a2470026afab6f350c7fbaa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f1f50c9_e4d00c65",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-26T19:15:13Z",
+      "side": 1,
+      "message": "typo: to be skip\nshould read: to skip",
+      "revId": "fe1adef9176ff4d00a2470026afab6f350c7fbaa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
