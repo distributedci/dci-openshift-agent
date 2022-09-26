@@ -34,6 +34,24 @@
       "parentUuid": "8c209e46_187c0504",
       "revId": "ccaf4bd2365a68c2e635a3777a4017e79a6466d3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "464c5a68_3cab3373",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-26T09:53:54Z",
+      "side": 1,
+      "message": "Reviewed with Fred, dci-rpm-build jobs in Zuul are checking this, so it\u0027s working fine",
+      "parentUuid": "8c209e46_187c0504",
+      "revId": "ccaf4bd2365a68c2e635a3777a4017e79a6466d3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
