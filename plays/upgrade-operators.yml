@@ -21,6 +21,14 @@
   retries: 5
   delay: 5
 
+- name: "Skip operators to be upgraded"
+  set_fact:
+    subscriptions: "{{ subscriptions | reject('search', item) | list }}"
+  loop: "{{ operator_skip_upgrade | default([]) }}"
+  when:
+    - operator_skip_upgrade is defined
+    - operator_skip_upgrade | length
+
 - name: "Change install plans to manual"
   community.kubernetes.k8s:
     definition:
@@ -36,6 +44,8 @@
   loop_control:
     loop_var: sub
     label: "{{ sub.subcriptionName }}"
+  when:
+    - subscriptions | length
 
 - name: "upgrader : Update disconnected catalogSources"
   import_role:
