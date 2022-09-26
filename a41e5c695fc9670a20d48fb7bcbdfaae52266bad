@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfbf19b5_24c1c2f2",
+        "filename": "test-runner",
+        "patchSetId": 11
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-26T21:59:48Z",
+      "side": 1,
+      "message": "nit: multi-line makes it easier to read:\n\n    if [ \"$VIRT\" \u003d \"no-check\" ] ||\n       { [ -d dci-openshift-agent -o \\\n           -d dci-openshift-app-agent ] \u0026\u0026\n         [ $(ls|grep -E \"$PROJECTS\"|wc -l) -eq 1 ];\n       } ||\n       { [ -d dci-openshift-agent -a \\\n           -d dci-openshift-app-agent ] \u0026\u0026\n         [ $(ls|grep -E \"$PROJECTS\"|wc -l) -eq 2 ];\n       }; then",
+      "revId": "a41e5c695fc9670a20d48fb7bcbdfaae52266bad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55e5571d_019522bf",
+        "filename": "test-runner",
+        "patchSetId": 11
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-26T21:59:48Z",
+      "side": 1,
+      "message": "nit: multi-line suggestion\n\n\n    CODE_FILES_REGEX\u003d\u0027ansible.cfg|group_vars/all|plays/scripts/get-logs|dci-check-change|test-runner|send-feedback|extract-dependencies|dci-openshift-(app-)?agent-ctl|\\.(yml|j2|py)\u0027\n    NUMBER_CODE_FILES\u003d$(\n        (for d in dci-openshift-*agent; do\n             cd $d\n             git diff-tree --no-commit-id --name-only -r HEAD\n             cd ..\n         done\n        ) |\n        grep -E \"(${CODE_FILES_REGEX})\" |\n        grep -v \u0027requirements.yml\u0027 |\n        wc -l\n    )\n\nAlso, there seems to be an issue when both dci-openshift-agent and dci-openshift-app-agent are in the directory, because the for loop will get into the first directory and then try to go to the other directory while inside, I\u0027ve added a cd .. that should take care of that",
+      "revId": "a41e5c695fc9670a20d48fb7bcbdfaae52266bad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
