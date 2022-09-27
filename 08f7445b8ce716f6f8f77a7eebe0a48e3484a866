@@ -26,6 +26,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ca219a39_26330dd1",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-27T07:58:57Z",
+      "side": 1,
+      "message": "Hi Beto, it\u0027s possible to write a bit shorter:\n\n\u003e when: operator_skip_upgrade | default([]) | length",
+      "revId": "08f7445b8ce716f6f8f77a7eebe0a48e3484a866",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac3b09a2_baa4e707",
         "filename": "plays/upgrade-operators.yml",
         "patchSetId": 3
