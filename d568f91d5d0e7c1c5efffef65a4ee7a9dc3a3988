@@ -33,6 +33,24 @@
       "message": "Hi, Beto.\n\nDo you have any idea on why this step is needed?\n\nThe way I see it, and considering your change, we create a list of operators that must be upgraded. Then we set them to manual install approval, just to move them back to automatic some 5 tasks later.\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/6b63c13652f93b9a1053f4857da3944878f8f3ce/plays/upgrade-csv.yml#L63\n\nMeanwhile, the operators that must not be upgrade may retain their install plan approval set to automatic.\n\n(Sorry if it\u0027s not strictly related to your change).",
       "revId": "d568f91d5d0e7c1c5efffef65a4ee7a9dc3a3988",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8831dc9b_ed43d3fe",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-27T13:06:40Z",
+      "side": 1,
+      "message": "Hello Nacho, yeah... this question is more about the logic to upgrade the operators. Let me explain before merging this.\n\nWhen you apply an updated catalog (having a new operator\u0027s version) and you have the subscriptions set to \"Automatic\" update, those will immediately start upgrading until reaching the latest version available. That may work in most cases, but in our case, we need to have visibility about the transition across multiple CSVs, on which version an operator may be stuck during the upgrade, etc. \n\nSo the logic that was used for this is: \n\nDuring installation: \n - We set the install plans to manual to avoid unexpected upgrades - That may not happen in air-gapped environments. \n\nDuring the upgrade:\n - The Install plan for all the installed operators is set to Manual (just in case) \n - An upgraded catalog is applied\n - Some Manual IPs will be created but not approved, so those are removed\n - The process to upgrade each operator in a controlled way starts\n - The Subscription is set to Automatic again the CSVs can be upgraded multiple times until reaching the desired version based on the information that we obtained from the new package.\n - In the end, the original install plan mode is restored for the operator\n\n\nHope this is clear, ping me on IM if you have any questions.",
+      "parentUuid": "3d81d25d_fa9d55e4",
+      "revId": "d568f91d5d0e7c1c5efffef65a4ee7a9dc3a3988",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
