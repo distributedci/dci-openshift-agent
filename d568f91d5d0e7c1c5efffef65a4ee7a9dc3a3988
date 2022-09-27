@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebff6309_00bb8952",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-27T12:50:55Z",
+      "side": 1,
+      "message": "Thank you Beto, LGTM, the change works fine for an empty list to skip.",
+      "revId": "d568f91d5d0e7c1c5efffef65a4ee7a9dc3a3988",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d81d25d_fa9d55e4",
