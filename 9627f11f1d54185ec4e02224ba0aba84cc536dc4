@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "242cd47e_8be99db4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "Thanks for doing this, should be quite useful for all the different places we\u0027re using this same logic",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a969ba8_35d56fa7",
+        "filename": "common-roles/fbc-catalog/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "I see these args are used in all the opm commands, in such case it should be stated in here that these are global flags and not flags for individual commands",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1d3f0d9_df0f14f9",
+        "filename": "common-roles/fbc-catalog/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "There seems to be a typo in here, not sure what it should say:  that ber re-tagged\n\nAlso, it seems like there are more outputs than this, one could argue that any set_fact is an output :P But I don\u0027t think we should document every one of them.\n\nI like you\u0027re documenting these as it brings to light those variables that are used but are meant only for the role. I wish ansible would let you clean some of them after the role is completed.",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bab8bfc8_a90d4fb6",
+        "filename": "common-roles/fbc-catalog/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "Suggestion:  must be by its SHA.\nShould say: must include its Digest (SHA256 of the image).",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc3d195a_c4887725",
+        "filename": "common-roles/fbc-catalog/tasks/add-bundle.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "How you going to deal with the tools (skopeo, jq, etc)? are these going to be installed or they are a requisite to use the role?",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8d97a2e_19899ee9",
+        "filename": "common-roles/fbc-catalog/tasks/add-bundle.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "Being the only time to use jq, I\u0027d rather suggest to do the filtering on your side",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03aaecbf_d69ca280",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "nit:\n    - fbc_bundles is defined\n    - fbc_bundles | type_debug \u003d\u003d \"list\"",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1774d08d_b9a4b510",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "Seems to me like fbc_target_registry is a single value, from the example: fbc_target_registry: registry.dfwt5g.lab:4443/preflight/my_index\n\nNot sure what\u0027s the purpose of this task",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7260cf8c_b37ffb9b",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "You want the notify in the last task that uses the directory, even when the dir is deleted until the end",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b98d054_5491b31a",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-27T21:17:55Z",
+      "side": 1,
+      "message": "nit: you could use here \u003e to do multiline folded and avoid escaping the newlines",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
