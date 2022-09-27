@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59b50788_7628df2d",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-27T07:17:29Z",
+      "side": 1,
+      "message": "With the two conditions we have, I believe we don\u0027t need to set up a default value here",
+      "range": {
+        "startLine": 27,
+        "startChar": 34,
+        "endLine": 27,
+        "endChar": 47
+      },
+      "revId": "08f7445b8ce716f6f8f77a7eebe0a48e3484a866",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac3b09a2_baa4e707",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-27T07:17:29Z",
+      "side": 1,
+      "message": "Just curiosity, but is it normal that the task is not skipped? (but also, there\u0027s no output there, so it\u0027s like it didn\u0027t do anything, which is the behavior expected): https://www.distributed-ci.io/jobs/4da41d07-4ac5-43ba-bc63-c01244efca61/jobStates#bc1acc98-d8db-4907-95e7-da5e88099fb4:file117",
+      "range": {
+        "startLine": 48,
+        "startChar": 4,
+        "endLine": 48,
+        "endChar": 28
+      },
+      "revId": "08f7445b8ce716f6f8f77a7eebe0a48e3484a866",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
