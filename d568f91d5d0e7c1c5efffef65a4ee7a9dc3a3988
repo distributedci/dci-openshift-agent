@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d81d25d_fa9d55e4",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-27T11:11:25Z",
+      "side": 1,
+      "message": "Hi, Beto.\n\nDo you have any idea on why this step is needed?\n\nThe way I see it, and considering your change, we create a list of operators that must be upgraded. Then we set them to manual install approval, just to move them back to automatic some 5 tasks later.\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/6b63c13652f93b9a1053f4857da3944878f8f3ce/plays/upgrade-csv.yml#L63\n\nMeanwhile, the operators that must not be upgrade may retain their install plan approval set to automatic.\n\n(Sorry if it\u0027s not strictly related to your change).",
+      "revId": "d568f91d5d0e7c1c5efffef65a4ee7a9dc3a3988",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
