@@ -16,6 +16,138 @@
       "message": "check dallas ocp-4.12-vanilla openshift-vanilla:components\u003docp\u003d4.12.0-ec.3",
       "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ddf80aa_08545b48",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-28T08:44:27Z",
+      "side": 1,
+      "message": "Thanks Beto for starting this. I\u0027ve done a quick review of the overall change, taking a look into the differences between this change and preflight/tnf_test_example code.",
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc6a0955_d922a0c5",
+        "filename": "common-roles/fbc-catalog/files/catalog.Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-28T08:44:27Z",
+      "side": 1,
+      "message": "In preflight and tnf_test_example, we use:\n`FROM registry.redhat.io/openshift4/ose-operator-registry:v4.11`\nIsn\u0027t it a problem to use a different one? just to confirm",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 42
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c66d0410_943550a5",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-28T08:44:27Z",
+      "side": 1,
+      "message": "space",
+      "range": {
+        "startLine": 19,
+        "startChar": 55,
+        "endLine": 19,
+        "endChar": 56
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b6e30c7_c3b0ea7a",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-28T08:44:27Z",
+      "side": 1,
+      "message": "tab",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 8
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7c87e53_2a1e24e6",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-28T08:44:27Z",
+      "side": 1,
+      "message": "Should we move this to fbc-catalog role? it is a common task that is also present on preflight and tnf_test_example",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 46
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a7a62f1_d8420e45",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-28T08:44:27Z",
+      "side": 1,
+      "message": "Reading the commit msg, I understand that this code is just to debug the FBC catalog creation with SRIOV operator? So, would it be removed after validating it?",
+      "range": {
+        "startLine": 232,
+        "startChar": 9,
+        "endLine": 232,
+        "endChar": 46
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
