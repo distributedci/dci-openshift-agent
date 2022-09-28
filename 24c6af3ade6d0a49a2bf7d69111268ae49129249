@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.10-vanilla openshift-vanilla:ansible_tags\u003djob,dci,pre-run,success",
       "revId": "24c6af3ade6d0a49a2bf7d69111268ae49129249",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cfad8a91_31aea532",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-28T22:41:56Z",
+      "side": 1,
+      "message": "We need to figure out a way to know if a \"candidate\" is from an OCP already released.\n\nFor a released OCP version, e.g. 4.11. Each new z-stream has one or more RC[0] and its GA[1], even when the build is a \"candidate\" the OCP major.minor is GA and an operator, e.g. SRIOV must be already released. In that case we don\u0027t want to build it from upstream.\n\nIn other terms, we only want to build from non-GA OCPs, currently 4.12.\n\nI think we could achieve this by checking the z-stream version and only build when is 0, wdyt? i.e.\n\n    - dci_disconnected | default(false) | bool\n    - build in (\"dev\", \"candidate\")\n    - version.split(\"-\")[0].split(\".\")[2] \u003d\u003d 0\n\n[0] https://www.distributed-ci.io/topics/ef28aab9-d05e-4b93-bc97-f939f70ed300/components/097d4296-b1ce-412e-b1d4-a5f8d9018eca\n[1]https://www.distributed-ci.io/topics/ef28aab9-d05e-4b93-bc97-f939f70ed300/components/a1dd05c3-968d-4625-a74e-b9022a89f7c5",
+      "revId": "24c6af3ade6d0a49a2bf7d69111268ae49129249",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
