@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "613bd113_e3a3da5e",
+        "filename": "common-roles/fbc-catalog/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a969ba8_35d56fa7",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d1d3f0d9_df0f14f9",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-09-27T21:17:55Z",
       "side": 1,
       "message": "There seems to be a typo in here, not sure what it should say:  that ber re-tagged\n\nAlso, it seems like there are more outputs than this, one could argue that any set_fact is an output :P But I don\u0027t think we should document every one of them.\n\nI like you\u0027re documenting these as it brings to light those variables that are used but are meant only for the role. I wish ansible would let you clean some of them after the role is completed.",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2bb7869_e504914f",
+        "filename": "common-roles/fbc-catalog/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Removed this part. The role user will know the image tat and van use it later as needed.",
+      "parentUuid": "d1d3f0d9_df0f14f9",
       "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -69,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3383bcb_cf0cf426",
+        "filename": "common-roles/fbc-catalog/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bab8bfc8_a90d4fb6",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dc3d195a_c4887725",
@@ -82,6 +136,24 @@
       "writtenOn": "2022-09-27T21:17:55Z",
       "side": 1,
       "message": "How you going to deal with the tools (skopeo, jq, etc)? are these going to be installed or they are a requisite to use the role?",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f544f59_607cf3a3",
+        "filename": "common-roles/fbc-catalog/tasks/add-bundle.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Added them as requisites.",
+      "parentUuid": "dc3d195a_c4887725",
       "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -103,6 +175,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7622518d_e7f1ff8b",
+        "filename": "common-roles/fbc-catalog/tasks/add-bundle.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b8d97a2e_19899ee9",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "03aaecbf_d69ca280",
@@ -116,6 +206,24 @@
       "writtenOn": "2022-09-27T21:17:55Z",
       "side": 1,
       "message": "nit:\n    - fbc_bundles is defined\n    - fbc_bundles | type_debug \u003d\u003d \"list\"",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a69e190_eed6aace",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03aaecbf_d69ca280",
       "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -137,6 +245,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "18138621_9bd7100f",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1774d08d_b9a4b510",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7260cf8c_b37ffb9b",
@@ -154,6 +280,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b050ef0d_b5ce7e79",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7260cf8c_b37ffb9b",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1b98d054_5491b31a",
@@ -167,6 +311,24 @@
       "writtenOn": "2022-09-27T21:17:55Z",
       "side": 1,
       "message": "nit: you could use here \u003e to do multiline folded and avoid escaping the newlines",
+      "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c003de8_5b20c63b",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b98d054_5491b31a",
       "revId": "9627f11f1d54185ec4e02224ba0aba84cc536dc4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

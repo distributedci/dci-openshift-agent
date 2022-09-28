@@ -58,6 +58,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "75deb203_e2f1724e",
+        "filename": "common-roles/fbc-catalog/files/catalog.Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "There is no problem using one or the other. quay.io/operator-framework/opm is smaller and the size of the index will be like 10x smaller than using operator-framework/opm. \n\nI was planning to update preflight and tnf-test but one we merge this that we will have the in all the places.\n\nThanks",
+      "parentUuid": "dc6a0955_d922a0c5",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 42
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c66d0410_943550a5",
@@ -129,6 +153,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a5a1e7d5_bc0ad3c0",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "yes that is a common task, but I think that the role user should be able to decide if that is pushed/tagged to somewhere or not. Having the push inside the role will require to pass credentials for the target registry.\n\nLet me see how that looks in other places and decide.\n\nThanks",
+      "parentUuid": "e7c87e53_2a1e24e6",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 46
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2a7a62f1_d8420e45",
         "filename": "plays/pre-run.yml",
         "patchSetId": 3
@@ -140,6 +188,30 @@
       "writtenOn": "2022-09-28T08:44:27Z",
       "side": 1,
       "message": "Reading the commit msg, I understand that this code is just to debug the FBC catalog creation with SRIOV operator? So, would it be removed after validating it?",
+      "range": {
+        "startLine": 232,
+        "startChar": 9,
+        "endLine": 232,
+        "endChar": 46
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16996f8a_1a49b1c4",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:45:49Z",
+      "side": 1,
+      "message": "It won\u0027t be removed. At this stage the plan is to start testing \"SRIOV\" in 4.12 from upstream. Samething will happen for other operators that can be needed in future that need to be tested with a dev version of OCP.",
+      "parentUuid": "2a7a62f1_d8420e45",
       "range": {
         "startLine": 232,
         "startChar": 9,
