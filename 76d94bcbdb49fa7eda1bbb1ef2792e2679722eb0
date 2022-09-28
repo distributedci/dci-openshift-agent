@@ -256,6 +256,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "af97418c_a0238b4f",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 48
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-28T16:35:00Z",
+      "side": 1,
+      "message": "Doing it this way to avoid defining so many facts",
+      "parentUuid": "2bdc9cb2_bb6c6b4b",
+      "revId": "76d94bcbdb49fa7eda1bbb1ef2792e2679722eb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "de9f5d16_349d2fcd",
@@ -287,6 +305,24 @@
       "side": 1,
       "message": "Yes that\u0027s correct, the workers are not upgraded to the intermediate version.",
       "parentUuid": "de9f5d16_349d2fcd",
+      "revId": "76d94bcbdb49fa7eda1bbb1ef2792e2679722eb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a241baf_38aa985a",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 48
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-09-28T16:35:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cbf3a478_36a24997",
       "revId": "76d94bcbdb49fa7eda1bbb1ef2792e2679722eb0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
