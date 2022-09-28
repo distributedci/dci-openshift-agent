@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd462315_ce5f4f59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-28T19:56:32Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla openshift-vanilla:components\u003docp\u003d4.12.0-ec.3 openshift-vanilla:ansible_tags\u003djob,dci,pre-run,success",
+      "revId": "24c6af3ade6d0a49a2bf7d69111268ae49129249",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
