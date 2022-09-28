@@ -33,6 +33,24 @@
       "message": "Thanks Nacho for the change. Some things I\u0027d like to comment/ask:\n\n-I guess this is a temp change. When moving to BOS2, this will be removed, won\u0027t it?\n-As this is a code that is publicly available, I think we should avoid including names such as BOS2 here, but again, as I think this is temp, I don\u0027t know if there\u0027s a better way or not. Maybe other people can give their opinion too\n-Where is WORKAROUND_CILAB522 defined? Is it in the d-o-a config file in BOS2? I think we should document this, at least in BOS2 repo.",
       "revId": "c96736962ce82ae07ff507d06aba3a3f02f7df1a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45b0da03_6c192324",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-28T08:14:11Z",
+      "side": 1,
+      "message": "I\u0027ll answer in the same order.\n\n1. Yup, the idea is that once BOS2 is approved, we\u0027ll revert this code, enable voting in the lab (DO_CODE\u003d1) and disable voting in HV2.\n\n2. Good point about not publishing the name of the lab. I\u0027ll have that fixed.\n\n3. Yup, it\u0027s defined in the config file of the agent. I can add a comment in the BOS2 repo readme file.",
+      "parentUuid": "4b14c6be_5ce1ba94",
+      "revId": "c96736962ce82ae07ff507d06aba3a3f02f7df1a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
