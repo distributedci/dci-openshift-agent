@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "0c77dbb8afc40a17504278101e95a4892964acab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1c29444_d2ccd552",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-29T08:35:24Z",
+      "side": 1,
+      "message": "\u003e Patch Set 5:\n\u003e \n\u003e - SUCCESS https://www.distributed-ci.io/jobs/44bb3f1a-c60e-46f8-b880-81d78f41dbde/jobStates\n\u003e  from https://github.com/dci-labs/dallas-pipelines/pull/508\n\nI think that, with this job, we have validated what we wanted to check, haven\u0027t we?",
+      "revId": "0c77dbb8afc40a17504278101e95a4892964acab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
