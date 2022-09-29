@@ -33,6 +33,24 @@
       "message": "\u003e Patch Set 5:\n\u003e \n\u003e - SUCCESS https://www.distributed-ci.io/jobs/44bb3f1a-c60e-46f8-b880-81d78f41dbde/jobStates\n\u003e  from https://github.com/dci-labs/dallas-pipelines/pull/508\n\nI think that, with this job, we have validated what we wanted to check, haven\u0027t we?",
       "revId": "0c77dbb8afc40a17504278101e95a4892964acab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0dcdb06a_30addbb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-29T17:17:53Z",
+      "side": 1,
+      "message": "We have validated that the 2 roles work. Next is to move the sno-acm to the install stage of DOA to have it as an additional method to deploy clusters. \n\nIt will require obtaining all the required arguments for the role during the pre-run stage.",
+      "parentUuid": "e1c29444_d2ccd552",
+      "revId": "0c77dbb8afc40a17504278101e95a4892964acab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
