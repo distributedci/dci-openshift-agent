@@ -82,6 +82,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb2a5d69_4903f543",
+        "filename": "common-roles/fbc-catalog/files/catalog.Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-29T08:39:41Z",
+      "side": 1,
+      "message": "Cool, I figured it out, but just wanted to confirm it :)",
+      "parentUuid": "75deb203_e2f1724e",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 42
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c66d0410_943550a5",
@@ -212,6 +236,30 @@
       "side": 1,
       "message": "It won\u0027t be removed. At this stage the plan is to start testing \"SRIOV\" in 4.12 from upstream. Samething will happen for other operators that can be needed in future that need to be tested with a dev version of OCP.",
       "parentUuid": "2a7a62f1_d8420e45",
+      "range": {
+        "startLine": 232,
+        "startChar": 9,
+        "endLine": 232,
+        "endChar": 46
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cedd9d2e_00eb49ae",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-09-29T08:39:41Z",
+      "side": 1,
+      "message": "Okey, now I got it, I forgot the SRIOV stuff in OCP 4.12. But then, it makes me wonder a new question: should we only execute this in OCP 4.12? or at least to set a comment there to explain that this is for SRIOV in 4.12.",
+      "parentUuid": "16996f8a_1a49b1c4",
       "range": {
         "startLine": 232,
         "startChar": 9,
