@@ -268,6 +268,30 @@
       },
       "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21622a95_f47e30af",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-09-29T17:23:11Z",
+      "side": 1,
+      "message": "This will be for all the non-GA OCP versions. This time is for SRIOV only, but could be for other operators on future OCP releases still in Dev.\n\nFor other operators we may have a different method to build/obtain the bundle, in that case, we will need a new block to generate it, and then pass use it to make the index.",
+      "parentUuid": "cedd9d2e_00eb49ae",
+      "range": {
+        "startLine": 232,
+        "startChar": 9,
+        "endLine": 232,
+        "endChar": 46
+      },
+      "revId": "32abf25edb64f6f26f8cce7c5ab08adb8177e26b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
