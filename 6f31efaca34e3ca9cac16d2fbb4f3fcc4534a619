@@ -16,6 +16,24 @@
       "message": "This problem should be fixed by 26220: test-runner: manage settings files correctly | https://softwarefactory-project.io/r/c/dci-openshift-agent/+/26220",
       "revId": "6f31efaca34e3ca9cac16d2fbb4f3fcc4534a619",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "585feeec_a51a963e",
+        "filename": "test-runner",
+        "patchSetId": 8
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-29T08:19:19Z",
+      "side": 1,
+      "message": "Thanks,\n\nI removed the changes in test-runner and left the code ready for merge.",
+      "parentUuid": "f929bef2_36ab0b2b",
+      "revId": "6f31efaca34e3ca9cac16d2fbb4f3fcc4534a619",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

@@ -123,6 +123,24 @@
       "parentUuid": "6da7b1dc_7ba3a5c1",
       "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b193c26_a0ebcfab",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-09-29T08:19:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a35dc084_b4ddeb91",
+      "revId": "cab23524775b10222f46e83e8bbb141afa14b6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
