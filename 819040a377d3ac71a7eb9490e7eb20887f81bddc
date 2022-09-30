@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla openshift-vanilla:components\u003docp\u003d4.12.0-ec.3",
       "revId": "819040a377d3ac71a7eb9490e7eb20887f81bddc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "004086e9_5898c7e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-09-30T11:33:49Z",
+      "side": 1,
+      "message": "Hi Beto, I didn\u0027t check the code yet, just tested on 4.7.59 and it\u0027s failing. The details are in CR 26236, the error is not clear for me, I restarted the tests.",
+      "revId": "819040a377d3ac71a7eb9490e7eb20887f81bddc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
