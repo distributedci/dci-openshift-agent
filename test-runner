@@ -577,10 +577,12 @@ if [ -s "$KUBECONFIG" ]; then
         fi
         cd dci-openshift-app-agent
         ln -s /etc/dci-openshift-app-agent/dcirc.sh .
-        ln -s /etc/dci-openshift-app-agent/*-settings.yml /etc/dci-openshift-app-agent/*hosts . || :
-        export CONFIG_DIR="$PWD"
-        if [ -d "$PWD/samples/$APP_NAME" ]; then
-            APP_OPT="-e dci_config_dir=$PWD/samples/$APP_NAME"
+        if [ -z "$CONFIG_DIR" ]; then
+            ln -s /etc/dci-openshift-app-agent/*-settings.yml /etc/dci-openshift-app-agent/*hosts . || :
+            export CONFIG_DIR="$PWD"
+            if [ -n "$APP_NAME" ] && [ -d "$PWD/samples/$APP_NAME" ]; then
+                APP_OPT="-e dci_config_dir=$PWD/samples/$APP_NAME"
+            fi
         fi
         setsid $PWD/dci-openshift-app-agent-ctl $PREFIX2 -s -d -v -- -v "${OPTS[@]}" -e "{${PIPELINE_ARG}\"dci_url\": \"$URL\", \"dci_tags\": [\"debug\", \"$TAG\", \"$QUEUEID\"]}" $APP_OPT -e dci_name="$APP_NAME" "$@" &>> ../output &
         cd ..
