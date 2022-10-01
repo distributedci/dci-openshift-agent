@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f629b312_95a78ff9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-01T00:40:55Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla openshift-vanilla:components\u003docp\u003d4.12.0-ec.3",
+      "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
