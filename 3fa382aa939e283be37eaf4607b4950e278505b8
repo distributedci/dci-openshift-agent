@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0461afd5_24917c8d",
+        "filename": "common-roles/fbc-catalog/tasks/add-bundle.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-03T21:24:56Z",
+      "side": 1,
+      "message": "Removed it",
+      "parentUuid": "67e111a9_b18f65a6",
+      "revId": "3fa382aa939e283be37eaf4607b4950e278505b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05664a87_40b2c828",
@@ -35,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b83255c_2c9953c3",
+        "filename": "common-roles/fbc-catalog/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-03T21:24:56Z",
+      "side": 1,
+      "message": "should be fbc_index_image",
+      "parentUuid": "05664a87_40b2c828",
+      "revId": "3fa382aa939e283be37eaf4607b4950e278505b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "03bb65e8_d918f8a1",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-10-03T21:15:12Z",
       "side": 1,
       "message": "Doc says this one should be fbc_target_registry",
+      "revId": "3fa382aa939e283be37eaf4607b4950e278505b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6653157_dbc04a82",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-03T21:24:56Z",
+      "side": 1,
+      "message": "fixed to fbc_index_image",
+      "parentUuid": "03bb65e8_d918f8a1",
       "revId": "3fa382aa939e283be37eaf4607b4950e278505b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

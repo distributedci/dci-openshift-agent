@@ -56,6 +56,30 @@
       },
       "revId": "819040a377d3ac71a7eb9490e7eb20887f81bddc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8c2c630_cc4b6c51",
+        "filename": "common-roles/fbc-catalog/files/catalog.Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-03T21:24:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb41cb12_f77549fb",
+      "range": {
+        "startLine": 6,
+        "startChar": 57,
+        "endLine": 6,
+        "endChar": 58
+      },
+      "revId": "819040a377d3ac71a7eb9490e7eb20887f81bddc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
