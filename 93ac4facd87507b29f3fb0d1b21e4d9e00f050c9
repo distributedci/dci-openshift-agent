@@ -33,6 +33,57 @@
       "message": "I believe this role is working fine.",
       "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "544b87a4_ef68aba0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-10-03T11:59:18Z",
+      "side": 1,
+      "message": "Hi Beto,\n\nthanks for the change, I didn\u0027t check everything, just two minor details.\n\nSorry for asking for more tests but since there is a rework of authfiles, could we also test on the open-access registry? \n\nI remember that in the past we had to do a fix for such a case:\nhttps://github.com/redhat-cip/dci-openshift-app-agent/blob/master/roles/preflight/tasks/test_check_if_container_certified.yml#L15-L20 \n\n\u003e Test-Hints: sno\nDepends-On: I8977a55ee5dacdc37e5fe55b893e05067f017337\nTest-Args-Hints: -e {\"preflight_operators_to_certify\":[{\"bundle_image\":\"prod.harbor.keysight.digital/loadcore/keysight-websocket-service-bundle:latest\",\"index_image\":\"prod.harbor.keysight.digital/loadcore/loadcore-catalog:latest\"}]} -e partner_creds\u003d/opt/cache/partner_config.json -e pyxis_apikey_path\u003d/opt/cache/pyxis-apikey.txt",
+      "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07d2c0bc_97fe2e81",
+        "filename": "common-roles/fbc-catalog/files/catalog.Dockerfile",
+        "patchSetId": 10
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-10-03T11:59:18Z",
+      "side": 1,
+      "message": "Do we risk getting a lot of spam by exposing email to open access? Maybe let\u0027s replace it with something like \"DCI team\"?",
+      "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc9dbb0e_9c25139a",
+        "filename": "common-roles/fbc-catalog/tasks/add-bundle.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-10-03T11:59:18Z",
+      "side": 1,
+      "message": "How do we manage authentication for skopeo? Or `docker://{{ bundle }}` is already a local public image at this point?",
+      "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
