@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a072e5de_fb7f74f7",
+        "filename": "common-roles/fbc-catalog/files/catalog.Dockerfile",
+        "patchSetId": 10
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-03T17:31:15Z",
+      "side": 1,
+      "message": "Good catch!",
+      "parentUuid": "07d2c0bc_97fe2e81",
+      "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fc9dbb0e_9c25139a",
@@ -82,6 +100,24 @@
       "writtenOn": "2022-10-03T11:59:18Z",
       "side": 1,
       "message": "How do we manage authentication for skopeo? Or `docker://{{ bundle }}` is already a local public image at this point?",
+      "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5744b1b1_9d6264d7",
+        "filename": "common-roles/fbc-catalog/tasks/add-bundle.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-03T17:31:15Z",
+      "side": 1,
+      "message": "Skopeo is able to read from DOCKER_CONFIG. As it is passed at role level, we should see issues there.\n\nhttps://docs.docker.com/engine/reference/commandline/cli/#environment-variables\n\nhttps://github.com/containers/image/pull/1056https://github.com/containers/image/pull/1056",
+      "parentUuid": "fc9dbb0e_9c25139a",
       "revId": "93ac4facd87507b29f3fb0d1b21e4d9e00f050c9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
