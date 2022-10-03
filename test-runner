@@ -477,7 +477,8 @@ if [ -z "$KCFG" ]; then
 
         # converts a PREFIX of type "-p prefix" to "prefix-"
         INVENTORY_PREFIX="${PREFIX/${PREFIX}/${PREFIX#-p }-}"
-        sudo cp ${INVENTORY_PREFIX}hosts ${CONFIG_DIR:-/etc/dci-openshift-agent}/${INVENTORY_PREFIX}hosts
+        echo sudo cp ${INVENTORY_PREFIX}hosts ${CONFIG_DIR:-/etc/dci-openshift-agent}/${INVENTORY_PREFIX}hosts
+	exit
         cd "$DIR"
     fi
 
