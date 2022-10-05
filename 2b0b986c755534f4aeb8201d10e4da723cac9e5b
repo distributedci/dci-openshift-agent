@@ -67,6 +67,23 @@
       "message": "Upgrade ran on a different server than the one that was used for the initial install\n\n\nInstall: https://www.distributed-ci.io/jobs/9148d933-9535-407c-9247-3c5d6d6eaaed/jobStates\n\nUpgrade: https://www.distributed-ci.io/jobs/f90817d0-4fa8-45a7-aaa9-b63b6fd42f00/jobStates?sort\u003ddate",
       "revId": "2b0b986c755534f4aeb8201d10e4da723cac9e5b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfd6c387_33176155",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-05T22:42:29Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "2b0b986c755534f4aeb8201d10e4da723cac9e5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
