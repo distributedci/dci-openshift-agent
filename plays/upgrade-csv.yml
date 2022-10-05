@@ -90,7 +90,7 @@
         name: "{{ operator_csv }}"
       register: csv
       retries: 120
-      delay: 30
+      delay: 40
       until:
         - csv.resources | length == 1
         - "'status' in csv.resources[0]"
