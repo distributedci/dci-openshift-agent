@@ -22,4 +22,11 @@
     name:
       - "python{% if ansible_python.version.major == 3 %}3{% endif %}-openshift"
     state: installed
+
+- name: "Install python3-crypto from alternate repo"
+  yum:
+    name: "https://trunk.rdoproject.org/rhel8-master/deps/latest/Packages/python3-crypto-2.6.1-18.el8ost.x86_64.rpm"
+    state: present
+    disable_gpg_check: yes
+  become: true
 ...
