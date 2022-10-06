@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "329decc4_9110a9b3",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-06T21:58:20Z",
+      "side": 1,
+      "message": "Can the variable be added to the vars table?",
+      "revId": "c6826897ed88259e4727c22cc953667a17ffc396",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
