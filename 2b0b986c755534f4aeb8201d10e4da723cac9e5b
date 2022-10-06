@@ -118,6 +118,23 @@
       "message": "Libvirt job worked, it was interesting to see that, in this case, kubevirt was upgraded in 3374 seconds, and in currenty daily jobs, the threshold is around 3800 seconds. Let\u0027s see the behavior in dallas.",
       "revId": "2b0b986c755534f4aeb8201d10e4da723cac9e5b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7787614_0cd6eb29",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-06T14:05:38Z",
+      "side": 1,
+      "message": "\u003e Patch Set 3:\n\u003e \n\u003e - SUCCESS https://www.distributed-ci.io/jobs/4acbb396-ed20-4119-b257-f86f9d2bc7b6/jobStates\n\u003e - SUCCESS https://www.distributed-ci.io/jobs/54e00717-cfe2-4690-814d-ed7669634e77/jobStates\n\u003e  from https://softwarefactory-project.io/r/#/c/26305/\n\nWow, I\u0027ve been checking this and it is quite curious that the upgrade has not taken the expected CSV versions for 4.8, so that the operators have not been upgraded... but anyway, I believe this change can help us to mitigate the issue (today it has happened again), so from my side, I think it\u0027s safe to merge.",
+      "revId": "2b0b986c755534f4aeb8201d10e4da723cac9e5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
