@@ -51,6 +51,24 @@
       "parentUuid": "329decc4_9110a9b3",
       "revId": "c6826897ed88259e4727c22cc953667a17ffc396",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49052a91_c72aee43",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-07T20:12:07Z",
+      "side": 1,
+      "message": "I struggled with the naming and the location for the doc. I decided using dci_ in the name because is something that will be mostly useful to us, specifically to allow more than one cluster in the same network. I also avoided adding it in the table because is a variable that is meant for the inventory and the table is  for settings.\n\nRegardless of the name I\u0027m convinced that this is an inventory variable and this is the best place so far. Maybe we need to add a section to fully document inventory variables in a another change.",
+      "parentUuid": "e13c26d1_eb4a9484",
+      "revId": "c6826897ed88259e4727c22cc953667a17ffc396",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
