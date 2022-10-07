@@ -33,6 +33,24 @@
       "message": "Can the variable be added to the vars table?",
       "revId": "c6826897ed88259e4727c22cc953667a17ffc396",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e13c26d1_eb4a9484",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-10-07T18:23:18Z",
+      "side": 1,
+      "message": "From my opinion we could keep it in the inventory section only, but since it\u0027s a dci_var and not a baremetal_deploy maybe makes sense to add it to the table. I\u0027ll leave it to you to decide, I\u0027m ok with this. Thanks",
+      "parentUuid": "329decc4_9110a9b3",
+      "revId": "c6826897ed88259e4727c22cc953667a17ffc396",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
