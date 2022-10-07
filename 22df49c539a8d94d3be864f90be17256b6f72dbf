@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09250cd5_be6f4b17",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-07T20:40:34Z",
+      "side": 1,
+      "message": "Is this one still needed?",
+      "revId": "22df49c539a8d94d3be864f90be17256b6f72dbf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
