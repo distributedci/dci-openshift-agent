@@ -24,4 +24,7 @@
   until: downloaded is not failed
   when:
     - force or not target.stat.exists
+
+- name: "Apply new SELinux file context to file"
+  command: restorecon -R "{{ dir }}/{{ uri | basename }}"
 ...
