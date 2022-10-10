@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.11-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] example-cnf",
       "revId": "46c6cabb792ab41d5b276dda840476c0f0de6fc6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06b1cb49_a0d76c41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-10-10T18:54:07Z",
+      "side": 1,
+      "message": "Thank you Ramon, it works: https://www.distributed-ci.io/jobs/1a93f2b6-e720-4b97-abee-a0d68ab19de4/jobStates?sort\u003ddate\u0026task\u003d748e59da-0f81-43c7-836b-02fd4a40ee33\n\nI think we could delete a rescue block and then immediately merge. ",
+      "revId": "46c6cabb792ab41d5b276dda840476c0f0de6fc6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c547de1a_10c37453",
+        "filename": "common-roles/check-resource/tasks/verify_network_state.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-10-10T18:54:07Z",
+      "side": 1,
+      "message": "It seems like with the new implementation we don\u0027t even need a rescue block anymore, it could be safely deleted.",
+      "revId": "46c6cabb792ab41d5b276dda840476c0f0de6fc6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
