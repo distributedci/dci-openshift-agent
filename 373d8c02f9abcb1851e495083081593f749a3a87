@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c90b54d_ceba9c87",
+        "filename": "common-roles/check-resource/tasks/verify_network_state.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-10-10T10:12:58Z",
+      "side": 1,
+      "message": "Hi Ramon, maybe we could rewrite this part using k8s_info module\n\n```\n- name: \"Wait until all pods in openshift-ovn-kubernetes namespace are running\"\n  k8s_info:\n    kind: Pod\n    namespace: \"openshift-ovn-kubernetes\"\n  register: ovn_pods\n  until: ovn_pods | json_query(\u0027resources[*].status.phase\u0027) | unique \u003d\u003d [\"Running\"]\n  retries: 6\n  delay: 30\n```",
+      "revId": "373d8c02f9abcb1851e495083081593f749a3a87",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
