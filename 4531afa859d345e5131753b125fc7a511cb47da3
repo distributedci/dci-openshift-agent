@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "79f9bf6a_1be38078",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-10T18:31:28Z",
+      "side": 1,
+      "message": "I\u0027m not convinced that this is decoupling them. Operators are still coupled through dci_prepare_cnf. However, this change is a good step into that direction.\n\nI\u0027d rewrite this message to reflect that.",
+      "revId": "4531afa859d345e5131753b125fc7a511cb47da3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "3bce8e01_a6a4faae",
