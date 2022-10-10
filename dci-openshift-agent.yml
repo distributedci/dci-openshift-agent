@@ -106,6 +106,25 @@
         id: "{{ job_id }}"
         status: "pre-run"
 
+    - name: "Requirements for ACM install_type"
+      block:
+        - name: "Read HUB_KUBECONFIG path from env vars"
+          set_fact:
+            hub_kubeconfig_path: "{{ lookup('env','HUB_KUBECONFIG') }}"
+          when: hub_kubeconfig_path is not defined
+
+        - name: "Check if HUB_KUBECONFIG path exists"
+          stat:
+            path: "{{ hub_kubeconfig_path }}"
+          register: hub_kubeconfig
+
+        - name: "Fail if hub_kubeconfig NOT found"
+          fail:
+            msg: "hub_kubeconfig not found at {{ hub_kubeconfig_path }}"
+          when: not hub_kubeconfig.stat.exists
+      when:
+        - install_type == 'acm'
+
 # Step 1a : pre run
 - name: 'Launch pre-run'
   hosts: localhost
@@ -125,8 +144,16 @@
 
         - name: Run the pre-run
           include_tasks: plays/pre-run.yml
-      when:
-        - install_type is not defined or install_type != 'assisted'
+          when:
+            - (install_type is not defined or install_type != 'assisted')
+            - (install_type is not defined or install_type != 'acm')
+
+        - name: "ACM pre-run"
+          include_tasks: plays/acm-pre-run.yml
+          when:
+            - install_type is defined
+            - install_type == 'acm'
+
       rescue: &teardown_error
         - name: Run the teardown error handler
           block:
@@ -178,7 +205,9 @@
           loop: "{{ dci_config_dirs }}"
           loop_control:
             loop_var: hookdir
-
+      when:
+        - (install_type is not defined or install_type != 'assisted')
+        - (install_type is not defined or install_type != 'acm')
       rescue: *teardown_error
 
 # Step 1c : Set status to "running"
@@ -215,6 +244,9 @@
           loop: "{{ dci_config_dirs }}"
           loop_control:
             loop_var: hookdir
+      when:
+        - (install_type is not defined or install_type != 'assisted')
+        - (install_type is not defined or install_type != 'acm')
 
       rescue: *teardown_error
 
@@ -233,9 +265,16 @@
         - name: "dci-openshift-agent : Launch install"
           include_tasks: plays/install.yml
 
-      when:
-        - dci_main == 'install'
-        - install_type is not defined or install_type != 'assisted'
+          when:
+            - dci_main == 'install'
+            - install_type is not defined or install_type != 'assisted'
+            - install_type is not defined or install_type != 'acm'
+
+        - name: "ACM pre-run"
+          include_tasks: plays/acm-install.yml
+          when:
+            - install_type is defined
+            - install_type == 'acm'
 
       rescue: &teardown_failure
         - name: Run the teardown failure handler
