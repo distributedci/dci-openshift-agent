@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "649bca2c_1e973d8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-10T23:39:24Z",
+      "side": 1,
+      "message": "That tool looks cool, hope that helps. Thanks Tony.\n\nAlso, we still need to get the SHA of the bundle image and pass it to the fbc-catalog role. I already had something in draft for this. Added them as recommendation in the corresponding section. \n",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94c4f752_755cd719",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-10T23:39:24Z",
+      "side": 1,
+      "message": "vars:\n    base_version: \"{{ version.split(\u0027.\u0027)[0] }}.{{ version.split(\u0027.\u0027)[1] }}\"\n    index_image: \"{{ local_registry_host }}:{{ local_registry_port }}/telcoci/upstream/sriov-operator-catalog:{{ base_version }}\"\n    sriov_bundle: \"{{ local_registry_host }}:{{ local_registry_port }}/telcoci/upstream/sriov-operator-bundle\"\n    sriov_bundle_tag: \"{{ local_registry_host }}:{{ local_registry_port }}/telcoci/upstream/sriov-operator-bundle:{{ base_version }}",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71dee1f4_859821b4",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-10T23:39:24Z",
+      "side": 1,
+      "message": "- name: \"Get bundle image SHA256\"\n          shell:\n            cmd: \u003e\n              skopeo inspect\n              --authfile {{ dci_pullsecret_file }}\n              docker://{{ sriov_bundle_tag }} | jq -r \u0027.Digest\u0027\n          register: bundle_sha\n          retries: 5\n          delay: 5\n          until:\n            - bundle_sha.stdout | regex_search(\u0027^sha\u0027)",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc2ddce7_68e92dbc",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-10T23:39:24Z",
+      "side": 1,
+      "message": "- name: \"Create FBC catalog\"\n      include_role:\n        name: fbc-catalog\n      vars:\n        fbc_index_image:  \"{{ index_image }}\"\n        fbc_bundles:\n          - \"{{ sriov_bundle }}@{{ bundle_sha.stdout }}\"\n        fbc_opm_args: \"--skip-tls-verify\u003dfalse\"",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
