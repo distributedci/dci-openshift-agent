@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.11-vanilla tnf-test-cnf openshift-vanilla:ansible_extravars\u003denable_sriov:false",
       "revId": "4531afa859d345e5131753b125fc7a511cb47da3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00b61cbf_5dd7bade",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-10T19:03:24Z",
+      "side": 1,
+      "message": "We may want to check that PAO CRD is present. The CRD is name should be  the same in PAO and NTO.\n\noc get crd|grep -i Performance\nperformanceprofiles.performance.openshift.io",
+      "revId": "4531afa859d345e5131753b125fc7a511cb47da3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
