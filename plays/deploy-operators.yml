@@ -112,11 +112,6 @@
         - ocp_version_maj|int == 4
         - ocp_version_min|int <= 10
 
-    - name: "configure-operators : Apply Performance Profile"
-      include_tasks: apply-pao-profile.yml
-      when:
-        - performance_definition is defined
-
     - name: "deploy-operators : Install and configure SRIOV"
       block:
         - name: "deploy-operators : Install SRIOV operator"
@@ -151,6 +146,11 @@
     (dci_prepare_cnf | bool) or
     (enable_perf_addon | bool ) or
     (enable_sriov | bool)
+
+- name: "configure-operators : Apply Performance Profile"
+  include_tasks: apply-pao-profile.yml
+  when:
+    - performance_definition is defined
 
 ### End CNF
 
