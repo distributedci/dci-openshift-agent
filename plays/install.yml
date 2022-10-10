@@ -5,7 +5,7 @@
   vars:
     ip: "{{ ansible_default_ipv4.address }}/{{ ansible_default_ipv4.netmask }}"
   when:
-    - (extcidrnet is not defined or extcidrnet|length < 1)
+  - (extcidrnet is not defined or extcidrnet|length < 1)
 
 - name: "installer : Get version and build from localhost vars"
   set_fact:
@@ -76,6 +76,28 @@
     - install_type is defined
     - install_type == 'sno'
 
+- name: "Deploy an SNO node via ACM in Dallas"
+  vars:
+    acm_ocp_version: "{{ hostvars.localhost.version }}"
+    acm_release_image: "{{ hostvars.localhost.acm_release_image }}"
+    acm_force_deploy: "{{ acm_force_deploy }}"
+    cluster_name: "{{ acm_cluster_name }}"
+    base_domain: "{{ acm_base_domain }}"
+    bmc_address: "{{ acm_bmc_address }}"
+    boot_mac_address: "{{ acm_boot_mac_address }}"
+    machine_cidr: "{{ acm_machine_cidr }}"
+    bmc_user: "{{ acm_bmc_user }}"
+    bmc_pass: "{{ acm_bmc_pass }}"
+    acm_iso_url: "{{ hostvars.localhost.acm_metal_iso_location }}"
+    acm_root_fs_url: "{{ hostvars.localhost.acm_rootfs_url }}"
+    acm_disconnected: "{{ dci_disconnected | default(False) | bool }}"
+  include_role:
+    name: acm-sno
+  when:
+    - install_type is defined
+    - install_type == 'acm'
+    - acm_cluster_type == 'sno'
+
 - name: UPI Installer tasks
   block:
   - name: "installer : Run UPI installer"
@@ -144,26 +166,4 @@
         - "'id' in kernel_component.component"
   ignore_errors: yes
   delegate_to: localhost
-
-- name: Disable provisioning
-  block:
-    - name: Get provisioning
-      community.kubernetes.k8s_info:
-        api_version: metal3.io/v1alpha1
-        kind: Provisioning
-        name: provisioning-configuration
-      register: provisioning_cr
-
-    - name: Disable provisioning
-      community.kubernetes.k8s:
-        definition:
-          apiVersion: metal3.io/v1alpha1
-          kind: Provisioning
-          metadata:
-            name: provisioning-configuration
-          spec:
-            provisioningNetwork: Disabled
-      when:
-        - provisioning_cr.resources | length
-  when:
-    - dci_disable_provisioning | default(false) | bool
+...
