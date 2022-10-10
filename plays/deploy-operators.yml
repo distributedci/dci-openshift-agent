@@ -65,7 +65,8 @@
         msg: "Not enough worker nodes ({{ worker_node_count }}) to perform required tasks"
       when:
         - worker_node_count | int <= 1
-        - install_type is undefined or install_type != 'sno'
+        - install_type != 'sno'
+        - install_type != 'acm'
 
     - name: "deploy-operators : Increase maxUnavailable count to n-1"
       vars:
