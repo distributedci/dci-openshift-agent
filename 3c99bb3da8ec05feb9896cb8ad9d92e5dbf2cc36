@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e63824b_26a21c0e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-11T02:17:10Z",
+      "side": 1,
+      "message": "Thanks Beto and please, don´t be shy, push your changes as a new patchset and that would be easier 😄, at least for me :P",
+      "parentUuid": "649bca2c_1e973d8c",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "94c4f752_755cd719",
