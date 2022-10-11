@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c981ca3_02ad0fe5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-11T11:06:20Z",
+      "side": 1,
+      "message": "check dallas ocp-4.11-vanilla tnf-test-cnf openshift-vanilla:ansible_extravars\u003denable_sriov:false",
+      "revId": "8794d2a9bf286771f4e8a9efd3a83388b02b76ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
