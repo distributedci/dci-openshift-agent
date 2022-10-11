@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5daa9561_cf475b90",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-11T16:00:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "94c4f752_755cd719",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "19a1cd7e_462ef43e",
@@ -66,6 +84,24 @@
       "writtenOn": "2022-10-11T01:55:46Z",
       "side": 1,
       "message": "- name: \"Build SRIOV bundle image\"\n          shell: \u003e\n            podman build .\n            -f bundleci.Dockerfile\n            -t {{ sriov_bundle_tag }}\n          args:\n            chdir: \"{{ bundle_tmp_dir }}/sriov-network-operator\"",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc35cc17_d8f07c3d",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-11T16:00:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19a1cd7e_462ef43e",
       "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -87,6 +123,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a74af252_c5a3d5d3",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-11T16:00:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a505e9f3_65a2d753",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "71dee1f4_859821b4",
@@ -100,6 +154,24 @@
       "writtenOn": "2022-10-10T23:39:24Z",
       "side": 1,
       "message": "- name: \"Get bundle image SHA256\"\n          shell:\n            cmd: \u003e\n              skopeo inspect\n              --authfile {{ dci_pullsecret_file }}\n              docker://{{ sriov_bundle_tag }} | jq -r \u0027.Digest\u0027\n          register: bundle_sha\n          retries: 5\n          delay: 5\n          until:\n            - bundle_sha.stdout | regex_search(\u0027^sha\u0027)",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b397ef4_9142364f",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-11T16:00:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71dee1f4_859821b4",
       "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
