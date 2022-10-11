@@ -50,6 +50,24 @@
       "message": "It seems like with the new implementation we don\u0027t even need a rescue block anymore, it could be safely deleted.",
       "revId": "46c6cabb792ab41d5b276dda840476c0f0de6fc6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "429cc3ec_2b2d2ebc",
+        "filename": "common-roles/check-resource/tasks/verify_network_state.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-11T09:57:40Z",
+      "side": 1,
+      "message": "The rescue is just to have the same failed taks name, so that analyze-job will directly set the same CILAB issue, but if this doesn\u0027t mind, I can remove the rescue, in the end it\u0027s useless.",
+      "parentUuid": "c547de1a_10c37453",
+      "revId": "46c6cabb792ab41d5b276dda840476c0f0de6fc6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
