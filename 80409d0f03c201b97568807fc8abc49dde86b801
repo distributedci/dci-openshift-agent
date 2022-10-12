@@ -16,6 +16,23 @@
       "message": "I guess it just takes long in older version of OCP right? I hope latest versions of the operator upgrade faster",
       "revId": "80409d0f03c201b97568807fc8abc49dde86b801",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc41b566_b5b8615b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-12T20:04:51Z",
+      "side": 1,
+      "message": "Do we know how many upgrades it has to perform to get to the latest available version?",
+      "revId": "80409d0f03c201b97568807fc8abc49dde86b801",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
