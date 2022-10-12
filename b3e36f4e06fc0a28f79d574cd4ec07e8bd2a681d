@@ -16,6 +16,23 @@
       "message": "LGTM 🎉",
       "revId": "b3e36f4e06fc0a28f79d574cd4ec07e8bd2a681d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a406159f_667b3e02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-12T17:34:03Z",
+      "side": 1,
+      "message": "err, the workaround conditional needs to be removed too https://github.com/redhat-cip/dci-openshift-agent/blob/e24bc55e06f1a7853d7d4502ab793b6c563fee89/plays/pre-run.yml#L276",
+      "revId": "b3e36f4e06fc0a28f79d574cd4ec07e8bd2a681d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
