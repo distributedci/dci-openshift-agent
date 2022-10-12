@@ -191,6 +191,24 @@
       "message": "- name: \"Create FBC catalog\"\n      include_role:\n        name: fbc-catalog\n      vars:\n        fbc_index_image:  \"{{ index_image }}\"\n        fbc_bundles:\n          - \"{{ sriov_bundle }}@{{ bundle_sha.stdout }}\"\n        fbc_opm_args: \"--skip-tls-verify\u003dfalse\"",
       "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77f2682f_e7894e1b",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-12T17:31:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc2ddce7_68e92dbc",
+      "revId": "3c99bb3da8ec05feb9896cb8ad9d92e5dbf2cc36",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
