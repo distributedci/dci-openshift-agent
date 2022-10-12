@@ -33,6 +33,42 @@
       "message": "Do we know how many upgrades it has to perform to get to the latest available version?",
       "revId": "80409d0f03c201b97568807fc8abc49dde86b801",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b24e762_5157b385",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-12T20:14:25Z",
+      "side": 1,
+      "message": "yes, it has to be upgraded 3 times",
+      "parentUuid": "bc41b566_b5b8615b",
+      "revId": "80409d0f03c201b97568807fc8abc49dde86b801",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa37aa90_0bcc244e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-12T20:14:25Z",
+      "side": 1,
+      "message": "yeah, this is because it is been upgrade 3 times",
+      "parentUuid": "77ea574a_5bffb77f",
+      "revId": "80409d0f03c201b97568807fc8abc49dde86b801",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
