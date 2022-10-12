@@ -15,7 +15,6 @@
     - ts_ocp_version_maj|int == 4
     - ts_ocp_version_min|int >= 7
 
-
 - name: "test_ redhat-tests: Run the openshift CNI tests (disconnected) only for OCP 4.8+"
   shell:
     cmd: >
@@ -25,9 +24,9 @@
      -v {{ ts_registry_auth }}:/auths.json:z
      -e KUBECONFIG=/tests/kubeconfig
      {{ ts_e2e_image }}:{{ ts_ocp_version_maj }}.{{ ts_ocp_version_min }}
-     /bin/bash -c "openshift-tests images --to-repository {{ ts_registry }}/conformance-test
+     /bin/bash -c "openshift-tests images --to-repository {{ ts_registry }}/{{ registry_namespace }}/conformance-test
      | oc image mirror --insecure=true -a /auths.json -f - --keep-manifest-list=true --continue-on-error=true --skip-missing=true
-     && openshift-tests run openshift/network/third-party --from-repository {{ ts_registry }}/conformance-test
+     && openshift-tests run openshift/network/third-party --from-repository {{ ts_registry }}/{{ registry_namespace }}/conformance-test
      --provider='{\"type\":\"baremetal\",\"disconnected\":true}' --junit-dir /logs > /logs/cni_tests_results.log"
   ignore_errors: yes
   when:

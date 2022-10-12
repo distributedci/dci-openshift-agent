@@ -303,7 +303,7 @@
     name: mirror_images
   vars:
     images: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
-    local_registry: "{{ local_registry_host }}:{{ local_registry_port }}"
+    local_registry: "{{ local_registry_host }}:{{ local_registry_port }}/{{ registry_namespace }}"
     authfile: "{{ dci_pullsecret_file }}"
   when: >
     (dci_disconnected | default(false) | bool) or

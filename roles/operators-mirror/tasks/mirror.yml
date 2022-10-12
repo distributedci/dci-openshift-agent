@@ -26,7 +26,7 @@
       set -x;
       {{ tmp_prune.path }}/oc adm catalog mirror
       {{ local_registry }}{{ opm_local_registry_path }}@{{ index_sha.stdout }}
-      {{ local_registry }} -a {{ dci_pullsecret_file }} --insecure
+      {{ local_registry }}/{{ registry_namespace }} -a {{ dci_pullsecret_file }} --insecure
       --index-filter-by-os="linux/amd64"
       --to-manifests={{ dci_cluster_configs_dir }}/{{ manifests_dir }}
       --path=/configs/:{{ tmp_index.path }} 2>&1

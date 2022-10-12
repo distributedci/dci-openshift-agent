@@ -126,7 +126,7 @@ else
         do
             if [[ -n "${registry}" ]] && [[ "${registry}" != ":" ]]
             then
-                image="${registry}/${image#*/}"
+                image="${registry}/{{ registry_namespace }}/${image#*/}"
             fi
 
             must_gather_opts="${must_gather_opts} --image=${image}"

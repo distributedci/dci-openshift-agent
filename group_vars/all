@@ -81,7 +81,7 @@ sriov_operators:
   - sriov-network-operator
 performance_addon_operators:
   - performance-addon-operator
-
+registry_namespace: telcoci
 ...
 
 # Local Variables:

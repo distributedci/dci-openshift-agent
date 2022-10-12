@@ -44,14 +44,14 @@
           replace:
             path: "{{ tmp_vct_dir.path }}/kubevirt-conformance.yaml"
             regexp: "{{ ts_kubevirt_conformance_image }}"
-            replace: "{{ ts_registry }}/kubevirt/conformance:{{ ts_kubevirt_conformance_version }}"
+            replace: "{{ ts_registry }}/{{ registry_namespace }}/kubevirt/conformance:{{ ts_kubevirt_conformance_version }}"
 
         - name: "test_ redhat-tests: Mirror sonobuoy images"
           include_role:
             name: mirror_images
           vars:
             images: "{{ ts_kubevirt_images }}"
-            local_registry: "{{ ts_registry }}"
+            local_registry: "{{ ts_registry }}/{{ registry_namespace }}"
             authfile: "{{ ts_registry_auth }}"
 
         - name: "test_ redhat-tests: Run the sonobuoy conformance tests (disconnected)"
@@ -61,11 +61,11 @@
             cmd: >
               ./sonobuoy
               run
-              --sonobuoy-image={{ ts_registry }}/sonobuoy/sonobuoy:{{ ts_sonobuoy_version }}
+              --sonobuoy-image={{ ts_registry }}/{{ registry_namespace }}/sonobuoy/sonobuoy:{{ ts_sonobuoy_version }}
               --wait
               --mode quick
               --skip-preflight
-              --plugin-env kubevirt-conformance.CONTAINER_PREFIX={{ ts_registry }}/kubevirt
+              --plugin-env kubevirt-conformance.CONTAINER_PREFIX={{ ts_registry }}/{{ registry_namespace }}/kubevirt
               --plugin-env kubevirt-conformance.CONTAINER_TAG={{ ts_kubevirt_conformance_version }}
               --plugin kubevirt-conformance.yaml
             chdir: "{{ tmp_vct_dir.path }}"
