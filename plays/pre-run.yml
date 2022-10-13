@@ -339,4 +339,11 @@
   when: hostvars.localhost.cluster is defined
   become: true
 
+- name: Storage service test (during upgrade only)
+  include_role:
+    name: storage-tester
+  when:
+    - dci_main is defined
+    - dci_main == 'upgrade'
+    - storage_upgrade_tester | default(false) | bool
 ...
