@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "2d4991bb6ca35f254cae20dad36fc7074bf64e69",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f01b1eec_1bd03356",
+        "filename": "roles/operators-mirror/defaults/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-10-13T07:38:41Z",
+      "side": 1,
+      "message": "Is it correct to have \"telcoci\" hardcoded here instead of using the new variable?",
+      "revId": "2d4991bb6ca35f254cae20dad36fc7074bf64e69",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
