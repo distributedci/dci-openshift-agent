@@ -20,6 +20,108 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c207c504_f590a5b1",
+        "filename": "plays/failure.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "It would be better to have a way to specify a behavior through variables rather than telling what task file to use. Otherwise we are not using a role, we\u0027re using a task file from a role. This way we lose some of the advantages of a role, like handlers, defaults, vars, etc.\n\nFor example in main there must be a way to know if you want to call gathering-logs and then skip everything else and go from there to gathering-logs.yml",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24547722_633eae75",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "Same comment as in the gathering-logs.yml",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf762065_2f9520ce",
+        "filename": "roles/storage-tester/files/junit-report.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "The name should change to be more generic, maybe StorageUpgradeRWO?\n\nSame applies to the rest and any other reference to Trident 😄",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3aaaa534_6b074ad0",
+        "filename": "roles/storage-tester/scripts/storage-tester-ROX.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "It would be nice to use the same oc bin that is used in the job. Perhaps, passing an env var to the script, e.g.\n\n    default_oc\u003d$(type -p oc)\n    OC\u003d${OC_TOOL_PATH:-${default_oc}}\n\n(Same applies to all the other storage-tester scritps)",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7eaf9898_893947ee",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "Let\u0027s remove trident references from all the tasks",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65a2a6d0_18d192fe",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "Here you can pass the oc_tool_path e.g.\n\n    OC_TOOL_PATH: \"{{ oc_tool_path }}\"\n\nSame to any other place where it\u0027s being called",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "48b45ea7_f96f44be",
         "filename": "roles/storage-tester/tasks/main.yml",
         "patchSetId": 6
@@ -31,6 +133,23 @@
       "writtenOn": "2022-10-13T18:09:14Z",
       "side": 1,
       "message": "I know that is is very specific for our upgrade, but just in case. \n\nCan we validate that the storageclass provided actually exists? \n\nI think you can check the driver capabilities using something like this\n\n oc get sc -o\u003djsonpath\u003d\u0027{.items[1].parameters}\u0027 | jq .\n{\n  \"backendType\": \"ontap-nas\",\n  \"clones\": \"true\",\n  \"encryption\": \"false\",\n  \"provisioningType\": \"thin\",\n  \"snapshots\": \"true\"\n}",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67a553ea_daf2b0b3",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "You could omit all the kubeconfigs in here by passing it via the include_role, e.g.\n\n    include_role:\n      name: storage-tester\n      apply:\n        ENVIRONMENT: \"{{ kubeconfig_path }}\"",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -54,6 +173,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "98331ff3_67ea8152",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "This is an interesting situation. \n\nIf we want to treat this role as it should, i.e. working independently, we must obtain the ocp version, so this is good, but I\u0027d suggest a diff name to avoid modifying the already defined ocp_version.\n\nAnother option is to use what we know is coming from the agent and ocp_version comes from there already. So we could omit obtaining that version in here.",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4db32e7e_46ff1837",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "Is this tmp file ever deleted?",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ce0800b2_67e95b51",
         "filename": "roles/storage-tester/tasks/main.yml",
         "patchSetId": 6
@@ -65,6 +218,40 @@
       "writtenOn": "2022-10-13T18:09:14Z",
       "side": 1,
       "message": "Maybe rename the dir to \"templates\" and just use the item.",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c2bdcce_b6e812a0",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "where is tester-upgrade path coming from?",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "594086eb_c459de82",
+        "filename": "roles/storage-tester/tasks/teardown.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-13T21:57:06Z",
+      "side": 1,
+      "message": "avoid this by passing it via apply in the include_role",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
