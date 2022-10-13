@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e612334_afbfbb4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-13T08:37:21Z",
+      "side": 1,
+      "message": "Can we test OCP 4.12 with tnf-test-cnf and example-cnf pipelines to validate that CNF jobs are not broken?",
+      "revId": "c85677135e4fa4b3f5d51ae909d737f4390d8584",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
