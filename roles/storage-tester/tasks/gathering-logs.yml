@@ -1,0 +1,36 @@
+---
+- name: "Setup job_logs directory"
+  include_tasks: log-dir.yml
+  when: job_logs is undefined
+
+- name: "Run gather-trident-upgrade-RWO script"
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+    REGISTRY: "{{ local_registry_host }}:{{ local_registry_port }}"
+  shell: "{{ role_path }}/scripts/storage-tester-ROX.sh {{ job_logs.path }}/junit-storage-upgrade.xml | tee {{ job_logs.path }}/gather-storage-upgrade-tester-RWO.log"
+  register: upgrade_tester_result_rwo
+  retries: 5
+  delay: 5
+  until: upgrade_tester_result_rwo.rc == 0
+  delegate_to: localhost
+
+- name: "Run gather-trident-upgrade-ROX script"
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+  shell: "{{ role_path }}/scripts/trident-tester-ROX.sh {{ job_logs.path }}/junit-storage-upgrade.xml | tee {{ job_logs.path }}/gather-storage-upgrade-tester-ROX.log"
+  register: upgrade_tester_result_rox
+  retries: 5
+  delay: 5
+  until: upgrade_tester_result_rox.rc == 0
+  delegate_to: localhost
+
+- name: "Run gather-trident-upgrade-RWX script"
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+    REGISTRY: "{{ local_registry_host }}:{{ local_registry_port }}"
+  shell: "{{ role_path }}/scripts/trident-tester-RWX.sh {{ job_logs.path }}/junit-storage-upgrade.xml | tee {{ job_logs.path }}/gather-storage-upgrade-tester-RWX.log"
+  register: upgrade_tester_result_rwx
+  retries: 5
+  delay: 5
+  until: upgrade_tester_result_rwx.rc == 0
+  delegate_to: localhost
