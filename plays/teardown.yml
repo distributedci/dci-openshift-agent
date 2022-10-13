@@ -1,1 +1,9 @@
 ---
+- name: "Teardown for storage service tester"
+  include_role:
+    name: storage-tester
+    tasks_from: teardown.yml
+  when:
+    - dci_main is defined
+    - dci_main == 'upgrade'
+    - storage_upgrade_tester | default(false) | bool
