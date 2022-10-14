@@ -56,6 +56,30 @@
       },
       "revId": "2d9fd632bd1559fd1a2d06f5421c3b8c42dc5ee5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6fd0b82_e8b56c92",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-14T13:07:00Z",
+      "side": 1,
+      "message": "I think that for the operators deployments we need to consider this as a workaround, I am expecting that the new operators for 4.12 will be relased with new security contexts to cover the restricted policy in PSA. \n\nFor the workloads where we have some control or know about required permissions we should apply policies according its needs. Maybe we can start labeling namespaces with \"baseline\" and update accordingly.\n\nWe can have sync and agreed about the actions.",
+      "parentUuid": "8babe429_e99a63c6",
+      "range": {
+        "startLine": 18,
+        "startChar": 9,
+        "endLine": 18,
+        "endChar": 52
+      },
+      "revId": "2d9fd632bd1559fd1a2d06f5421c3b8c42dc5ee5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
