@@ -20,6 +20,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "39ddeefc_86d091da",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-14T07:28:09Z",
+      "side": 1,
+      "message": "Typo: If it is not defined",
+      "range": {
+        "startLine": 302,
+        "startChar": 201,
+        "endLine": 302,
+        "endChar": 218
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c207c504_f590a5b1",
         "filename": "plays/failure.yml",
         "patchSetId": 6
@@ -48,6 +71,98 @@
       "writtenOn": "2022-10-13T21:57:06Z",
       "side": 1,
       "message": "Same comment as in the gathering-logs.yml",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6eb99b6e_6df270bf",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-14T07:28:09Z",
+      "side": 1,
+      "message": "Should we use a more updated doc?",
+      "range": {
+        "startLine": 5,
+        "startChar": 115,
+        "endLine": 5,
+        "endChar": 118
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f441f4eb_266cdec7",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-14T07:28:09Z",
+      "side": 1,
+      "message": "Typo: Three test scenarios (and remove final whitespace)",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d534c11_ef1c5466",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-14T07:28:09Z",
+      "side": 1,
+      "message": "remove whitespace",
+      "range": {
+        "startLine": 9,
+        "startChar": 175,
+        "endLine": 9,
+        "endChar": 176
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9eef9a36_698f93a0",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-14T07:28:09Z",
+      "side": 1,
+      "message": "remove whitespace",
+      "range": {
+        "startLine": 18,
+        "startChar": 128,
+        "endLine": 18,
+        "endChar": 129
+      },
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
