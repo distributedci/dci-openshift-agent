@@ -39,9 +39,7 @@
               pod-security.kubernetes.io/enforce: privileged
               pod-security.kubernetes.io/enforce-version: latest
       when:
-        - current_ver is version("4.12.0", ">=")
-  when:
-    - '"cilab-619" in dci_workarounds|default([])'
+        - current_ver is version("4.11.0", ">=")
 
 - name: Create OperatorGroup for OLM operator
   community.kubernetes.k8s:
