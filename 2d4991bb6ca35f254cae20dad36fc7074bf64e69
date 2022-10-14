@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d977a79_4d78f7cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-14T06:55:47Z",
+      "side": 1,
+      "message": "I believe you\u0027re aware of this, but take into account that dci-openshift-app-agent will also need this new organization.",
+      "revId": "2d4991bb6ca35f254cae20dad36fc7074bf64e69",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f01b1eec_1bd03356",
