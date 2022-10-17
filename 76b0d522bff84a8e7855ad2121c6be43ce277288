@@ -480,6 +480,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fe0f413_82240506",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T13:07:43Z",
+      "side": 1,
+      "message": "In fact after several tests, I have realized that the \u0027parameters\u0027 field seems specific to Trident.\nIn fact there are some standard metadata that show if the capabilities of the SC but Trident did not implement then with the standard, the parameters field looks like a homemade solution",
+      "parentUuid": "6a680d7a_66eee03f",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67a553ea_daf2b0b3",
@@ -493,6 +511,24 @@
       "writtenOn": "2022-10-13T21:57:06Z",
       "side": 1,
       "message": "You could omit all the kubeconfigs in here by passing it via the include_role, e.g.\n\n    include_role:\n      name: storage-tester\n      apply:\n        ENVIRONMENT: \"{{ kubeconfig_path }}\"",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "571c7fff_9d16977f",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T13:07:43Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "67a553ea_daf2b0b3",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -544,6 +580,24 @@
       "writtenOn": "2022-10-13T21:57:06Z",
       "side": 1,
       "message": "Is this tmp file ever deleted?",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc4f8050_abbaca1b",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T13:07:43Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4db32e7e_46ff1837",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },

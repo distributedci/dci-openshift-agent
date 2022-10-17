@@ -86,6 +86,30 @@
       },
       "revId": "aa66aaa481e126aee3fd66a91f9f2acead66c5ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54a835a2_41bf5a35",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T13:07:43Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7acf4785_e05efa79",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 12,
+        "endChar": 13
+      },
+      "revId": "aa66aaa481e126aee3fd66a91f9f2acead66c5ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
