@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58da9f88_8da2f111",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-17T22:50:32Z",
+      "side": 1,
+      "message": "Thanks for all the effort so far.",
+      "revId": "73810eb3957803880f911c1b7240793e2aded3ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1f8c0aa_d3a630af",
+        "filename": "plays/success.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-17T22:50:32Z",
+      "side": 1,
+      "message": "I\u0027d expect that doing apply: environment: KUBECONFIG... should also work here",
+      "revId": "73810eb3957803880f911c1b7240793e2aded3ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d91168c7_e856c8d3",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-17T22:50:32Z",
+      "side": 1,
+      "message": "Sneaky trident references in these tasks 😄",
+      "revId": "73810eb3957803880f911c1b7240793e2aded3ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "047fca5d_b5588711",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-17T22:50:32Z",
+      "side": 1,
+      "message": "you could save some lines of KUBECONFIG if passed from the role call\n\nSame for anything that\u0027s required in your scripts, e.g. REGISTRY and OC_PATH",
+      "revId": "73810eb3957803880f911c1b7240793e2aded3ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
