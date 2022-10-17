@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "47c8f2b4_3182afea",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "39ddeefc_86d091da",
+      "range": {
+        "startLine": 302,
+        "startChar": 201,
+        "endLine": 302,
+        "endChar": 218
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c207c504_f590a5b1",
@@ -75,6 +99,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69e70fb0_2b15d263",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "24547722_633eae75",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6eb99b6e_6df270bf",
@@ -88,6 +130,30 @@
       "writtenOn": "2022-10-14T07:28:09Z",
       "side": 1,
       "message": "Should we use a more updated doc?",
+      "range": {
+        "startLine": 5,
+        "startChar": 115,
+        "endLine": 5,
+        "endChar": 118
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fde8c6df_be210e32",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "6eb99b6e_6df270bf",
       "range": {
         "startLine": 5,
         "startChar": 115,
@@ -121,6 +187,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "172d9652_022d5f8d",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f441f4eb_266cdec7",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2d534c11_ef1c5466",
@@ -134,6 +224,30 @@
       "writtenOn": "2022-10-14T07:28:09Z",
       "side": 1,
       "message": "remove whitespace",
+      "range": {
+        "startLine": 9,
+        "startChar": 175,
+        "endLine": 9,
+        "endChar": 176
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e58dd42_610fa9c8",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2d534c11_ef1c5466",
       "range": {
         "startLine": 9,
         "startChar": 175,
@@ -167,6 +281,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b45e2d5_09388fba",
+        "filename": "roles/storage-tester/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9eef9a36_698f93a0",
+      "range": {
+        "startLine": 18,
+        "startChar": 128,
+        "endLine": 18,
+        "endChar": 129
+      },
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bf762065_2f9520ce",
@@ -180,6 +318,24 @@
       "writtenOn": "2022-10-13T21:57:06Z",
       "side": 1,
       "message": "The name should change to be more generic, maybe StorageUpgradeRWO?\n\nSame applies to the rest and any other reference to Trident 😄",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7d1e364_4f4def44",
+        "filename": "roles/storage-tester/files/junit-report.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Yes I forgot to refactor this file",
+      "parentUuid": "bf762065_2f9520ce",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -201,6 +357,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04900160_e92a5445",
+        "filename": "roles/storage-tester/scripts/storage-tester-ROX.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "\u003e It would be nice to use the same oc bin that is used in the job. Perhaps, passing an env var to the script, e.g.\n\u003e \n\u003e     default_oc\u003d$(type -p oc)\n\u003e     OC\u003d${OC_TOOL_PATH:-${default_oc}}\n\u003e \n\u003e (Same applies to all the other storage-tester scritps)\n\nGood point! I will use the ENV variable :)",
+      "parentUuid": "3aaaa534_6b074ad0",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7eaf9898_893947ee",
@@ -214,6 +388,24 @@
       "writtenOn": "2022-10-13T21:57:06Z",
       "side": 1,
       "message": "Let\u0027s remove trident references from all the tasks",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf1d84ed_e987e6e7",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7eaf9898_893947ee",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -235,6 +427,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a72d2cc4_c42f7d78",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "65a2a6d0_18d192fe",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "48b45ea7_f96f44be",
@@ -248,6 +458,24 @@
       "writtenOn": "2022-10-13T18:09:14Z",
       "side": 1,
       "message": "I know that is is very specific for our upgrade, but just in case. \n\nCan we validate that the storageclass provided actually exists? \n\nI think you can check the driver capabilities using something like this\n\n oc get sc -o\u003djsonpath\u003d\u0027{.items[1].parameters}\u0027 | jq .\n{\n  \"backendType\": \"ontap-nas\",\n  \"clones\": \"true\",\n  \"encryption\": \"false\",\n  \"provisioningType\": \"thin\",\n  \"snapshots\": \"true\"\n}",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a680d7a_66eee03f",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Very interesting! I was looking for this info from the cmd line! Thank you very much!",
+      "parentUuid": "48b45ea7_f96f44be",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -354,6 +582,42 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "61846031_bf377c10",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "This is an error, I have fixed it",
+      "parentUuid": "3c2bdcce_b6e812a0",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abd1c373_a29dec37",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "ce0800b2_67e95b51",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "594086eb_c459de82",
@@ -367,6 +631,24 @@
       "writtenOn": "2022-10-13T21:57:06Z",
       "side": 1,
       "message": "avoid this by passing it via apply in the include_role",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8554153_05573748",
+        "filename": "roles/storage-tester/tasks/teardown.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "594086eb_c459de82",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },

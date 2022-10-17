@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1be64d4_ed4458eb",
+        "filename": "roles/storage-tester/files/junit-report.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-17T09:58:57Z",
+      "side": 1,
+      "message": "it\u0027s the standard formatting of an XML file",
+      "parentUuid": "9af2abab_45cc8f3a",
+      "range": {
+        "startLine": 3,
+        "startChar": 114,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "aa66aaa481e126aee3fd66a91f9f2acead66c5ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7acf4785_e05efa79",
