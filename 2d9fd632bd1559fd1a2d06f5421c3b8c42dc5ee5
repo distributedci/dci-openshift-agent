@@ -97,6 +97,30 @@
       },
       "revId": "2d9fd632bd1559fd1a2d06f5421c3b8c42dc5ee5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0027ebe_e21c0ef2",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-17T08:13:28Z",
+      "side": 1,
+      "message": "Sorry, with removed, I mean renamed :) it would be something like \"Workaround for PodSecurity Policies in 4.11 and higher\"",
+      "parentUuid": "b6fd0b82_e8b56c92",
+      "range": {
+        "startLine": 18,
+        "startChar": 9,
+        "endLine": 18,
+        "endChar": 52
+      },
+      "revId": "2d9fd632bd1559fd1a2d06f5421c3b8c42dc5ee5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
