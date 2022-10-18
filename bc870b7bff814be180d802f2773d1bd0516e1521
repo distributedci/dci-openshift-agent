@@ -16,6 +16,23 @@
       "message": "Ready to be merged!",
       "revId": "bc870b7bff814be180d802f2773d1bd0516e1521",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02e927b2_1d800bc4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-18T18:28:46Z",
+      "side": 1,
+      "message": "When looking at logs on the last success job, I found two logs empty, do you know why?\n\ngather-storage-upgrade-tester-ROX.log 0\ngather-storage-upgrade-tester-RWX.log 0\ngather-storage-upgrade-tester-RWO.log 2.1 kB\n\nhttps://www.distributed-ci.io/jobs/812e60e7-56c4-4365-ab7e-3996a94bf124/files\n\n\nThis is a good candidate to test it in the upgrade process of bos2. You have to enable it via hints, e.g.\n\nTest-Upgrade-Hints: yes\nTest-Args-Hints: -e enable_lso\u003dtrue -e enable_ocs\u003dtrue -e dci_teardown_on_success:false\n\nI\u0027ll +2 once it comes successfully from that test",
+      "revId": "bc870b7bff814be180d802f2773d1bd0516e1521",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
