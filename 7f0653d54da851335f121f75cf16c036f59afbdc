@@ -33,6 +33,23 @@
       "message": "Hello Tony and Beto, I deactivate building bundles from the upstream by default. That would unblock the testing of the TRex application. \n\nIf needed, the upstream build could easily be activated with \u0027cilab-820\u0027 in dci_workarounds.\n\nThe change is tested, and the error \"Failed at Create SriovNetworkNodePolicy\" is gone: https://www.distributed-ci.io/jobs/e168dc99-8a59-4ac5-ae60-a9e12c1304ea/jobStates?sort\u003ddate\nWe\u0027re back to the TRex app issue.\n\nThanks.",
       "revId": "7f0653d54da851335f121f75cf16c036f59afbdc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97bbdc8c_444e8332",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-18T13:28:49Z",
+      "side": 1,
+      "message": "Yeah, let\u0027s go with this, we can enable at will and we can test one or the other.",
+      "revId": "7f0653d54da851335f121f75cf16c036f59afbdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
