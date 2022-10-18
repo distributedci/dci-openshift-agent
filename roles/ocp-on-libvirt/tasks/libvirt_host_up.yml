@@ -43,6 +43,13 @@
     dest: "/tmp/vm-{{ host['name'] }}/meta-data"
   when: node_exists.failed
 
+- name: "Clean previous iso files"
+  file:
+    path: /tmp/vm-{{ host['name'] }}.iso
+    state: absent
+  become: "{{ libvirt_become }}"
+  when: node_exists.failed
+
 - name: "Generate ci data cd image for cloud-init when cloud config is defined"
   command: |
     mkisofs -o /tmp/vm-{{ host['name'] }}.iso -V cidata -r -J
