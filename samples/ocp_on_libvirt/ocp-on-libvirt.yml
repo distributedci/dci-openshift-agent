@@ -60,6 +60,14 @@
         state: present
         disable_gpg_check: true
 
+    - name: Install python3-openshift from codeready repos for rhel9
+      become: true
+      dnf:
+        name: python3-openshift
+        enablerepo: "codeready-builder-for-rhel-9-{{ ansible_architecture }}-rpms"
+      when:
+        - ansible_distribution_major_version == "9"
+
     - name: Install DCI Release
       tags:
         - setup
