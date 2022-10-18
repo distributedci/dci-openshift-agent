@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] example-cnf",
       "revId": "7f0653d54da851335f121f75cf16c036f59afbdc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "867cf334_96c8227a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-10-18T12:58:37Z",
+      "side": 1,
+      "message": "Hello Tony and Beto, I deactivate building bundles from the upstream by default. That would unblock the testing of the TRex application. \n\nIf needed, the upstream build could easily be activated with \u0027cilab-820\u0027 in dci_workarounds.\n\nThe change is tested, and the error \"Failed at Create SriovNetworkNodePolicy\" is gone: https://www.distributed-ci.io/jobs/e168dc99-8a59-4ac5-ae60-a9e12c1304ea/jobStates?sort\u003ddate\nWe\u0027re back to the TRex app issue.\n\nThanks.",
+      "revId": "7f0653d54da851335f121f75cf16c036f59afbdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
