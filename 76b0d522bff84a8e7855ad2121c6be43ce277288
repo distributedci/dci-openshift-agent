@@ -567,6 +567,42 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dea5705e_5809e02f",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-18T08:33:16Z",
+      "side": 1,
+      "message": "I have changed the variable name to avoid collision.",
+      "parentUuid": "17918762_9d0c08d2",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2976a58f_c0862059",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-18T08:33:16Z",
+      "side": 1,
+      "message": "I have changed the variable name to avoid collision.",
+      "parentUuid": "98331ff3_67ea8152",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4db32e7e_46ff1837",
@@ -720,6 +756,24 @@
       "writtenOn": "2022-10-13T18:09:14Z",
       "side": 1,
       "message": "How do we guarantee that those images were already mirrored? can those be mirrored as part of the role (to make it self-sufficient) or add it as a pre-requisite?",
+      "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e1a0dca_8d4a8624",
+        "filename": "roles/storage-tester/template/tester-cronjob-rox.yaml.j2",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-18T08:33:16Z",
+      "side": 1,
+      "message": "Good catch! I did not think about that!\nI have added the mirroring of this image in a previous patch",
+      "parentUuid": "bc4f4431_6eb3d48f",
       "revId": "76b0d522bff84a8e7855ad2121c6be43ce277288",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
