@@ -8,6 +8,7 @@
           - libvirt-devel
           - "python{% if ansible_python.version.major == 3 %}3{% endif %}-setuptools"
           - "python{% if ansible_python.version.major == 3 %}3{% endif %}-pip"
+          - "python{% if ansible_python.version.major == 3 %}3{% endif %}-devel"
           - ipmitool
           - psmisc
         state: latest
