@@ -12,13 +12,15 @@
   retries: 10
   delay: 5
   until:
-    - packagemanifest.resources | length == 1
+    - packagemanifest.resources | length >= 1
 
 - name: "Get new operator's default channel name"
-  vars:
-    channels: "resources[*].status.defaultChannel"
   set_fact:
-    default_channel: "{{ packagemanifest | json_query(channels) | join('') | string }}"
+    default_channel: "{{ pkg_rsc.status.defaultChannel }}"
+  loop: "{{ packagemanifest.resources }}"
+  loop_control:
+    loop_var: pkg_rsc
+  when: pkg_rsc.metadata.label.catalog == sub.source
 
 - name: "Get operator's CSV for desired channel"
   vars:
