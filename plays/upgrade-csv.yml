@@ -6,8 +6,11 @@
   community.kubernetes.k8s_info:
     api: packages.operators.coreos.com/v1
     kind: PackageManifest
-    name: "{{ sub.operatorName }}"
     namespace:  default
+    field_selectors:
+      - metadata.name="{{ sub.operatorName }}"
+    label_selectors:
+      - catalog = "{{ sub.source }}"
   register: packagemanifest
   retries: 10
   delay: 5
@@ -15,10 +18,8 @@
     - packagemanifest.resources | length == 1
 
 - name: "Get new operator's default channel name"
-  vars:
-    channels: "resources[*].status.defaultChannel"
   set_fact:
-    default_channel: "{{ packagemanifest | json_query(channels) | join('') | string }}"
+    default_channel: "{{ packagemanifest.resources[0].status.defaultChannel }}"
 
 - name: "Get operator's CSV for desired channel"
   vars:

@@ -14,7 +14,8 @@
         operatorName: spec.name,
         namespace: metadata.namespace,
         installedCSV: status.installedCSV,
-        installPlanApproval: spec.installPlanApproval
+        installPlanApproval: spec.installPlanApproval,
+        source: spec.source
       }
   set_fact:
     subscriptions: "{{ current_subscriptions | json_query(subs_details) }}"
