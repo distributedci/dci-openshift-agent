@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34551c16_e2812fde",
+        "filename": "roles/storage-tester/tasks/main.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-10-19T22:10:31Z",
+      "side": 1,
+      "message": "I think last failure is because the cron jobs in the j2 expect the image is on a registry from a disconnected env, maybe adding a some sort of validation with a ternary function can help in those templates.",
+      "revId": "a9b96ff2a5467e9f1f3fc9e4c79777d7ac328968",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
