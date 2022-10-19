@@ -34,6 +34,23 @@
       "parentUuid": "2120be07_c24da0a9",
       "revId": "597d63d8c97f3616a6424bd874026a3d4bfbd702",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54f0a2cf_debd3277",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-10-19T18:10:02Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla fake-cnf",
+      "revId": "597d63d8c97f3616a6424bd874026a3d4bfbd702",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
