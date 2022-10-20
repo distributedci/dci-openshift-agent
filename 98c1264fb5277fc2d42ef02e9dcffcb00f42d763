@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8fdc96c_b9f1bcd6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-10-20T20:59:34Z",
+      "side": 1,
+      "message": "The last patchset fixed my issue.\nThx Manny.",
+      "revId": "98c1264fb5277fc2d42ef02e9dcffcb00f42d763",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
