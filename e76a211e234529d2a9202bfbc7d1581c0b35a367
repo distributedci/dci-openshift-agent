@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bffdb922_5962cf74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-20T11:37:11Z",
+      "side": 1,
+      "message": "Last libvirt job passed but the logs were not gathered because some misalignments with environment variables in connected environments.",
+      "revId": "e76a211e234529d2a9202bfbc7d1581c0b35a367",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75c2a18c_473205d9",
+        "filename": "plays/failure.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-20T11:37:11Z",
+      "side": 1,
+      "message": "don\u0027t you use any environment variable here?",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "e76a211e234529d2a9202bfbc7d1581c0b35a367",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02da4678_deb8867d",
+        "filename": "plays/success.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-20T11:37:11Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 71
+      },
+      "revId": "e76a211e234529d2a9202bfbc7d1581c0b35a367",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "076684d8_9e2eaaa6",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 21
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-20T11:37:11Z",
+      "side": 1,
+      "message": "You have to recheck this for connected environment",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 71
+      },
+      "revId": "e76a211e234529d2a9202bfbc7d1581c0b35a367",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
