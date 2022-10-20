@@ -16,6 +16,23 @@
       "message": "LGTM, tested on my lab",
       "revId": "fb5c244a149481827836dc8b09d0a9b30c96bd41",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bf16e48_9f7bafda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-10-20T20:43:20Z",
+      "side": 1,
+      "message": "it failed if no domain is configured\nhttps://www.distributed-ci.io/jobs/d459d2e3-29ce-4378-9a86-74919660e894/jobStates?sort\u003ddate\u0026task\u003d931392ef-047b-45dc-a7f0-28314d89d4ee",
+      "revId": "fb5c244a149481827836dc8b09d0a9b30c96bd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
