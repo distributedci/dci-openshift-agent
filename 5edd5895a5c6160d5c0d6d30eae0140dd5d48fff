@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d1bd088_93d602d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-20T16:32:51Z",
+      "side": 1,
+      "message": "Something happened in the libvirt job with `gather-storage-upgrade-tester-ROX.log`, it is almost empty :/\n\n```\n\u003e\u003e\u003e Quick gathering object info in the Namespace of test\n```\n\nI found the issue, reporting it, we hope it\u0027s the last one",
+      "revId": "5edd5895a5c6160d5c0d6d30eae0140dd5d48fff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7765a5d_8b8eea4d",
+        "filename": "roles/storage-tester/scripts/storage-tester-ROX.sh",
+        "patchSetId": 24
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-20T16:32:51Z",
+      "side": 1,
+      "message": "oh, you\u0027re missing $OC_PATH here, libvirt job was failing in this script because it was not able to find oc command",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 2
+      },
+      "revId": "5edd5895a5c6160d5c0d6d30eae0140dd5d48fff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
