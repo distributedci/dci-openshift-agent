@@ -39,6 +39,30 @@
       },
       "revId": "5edd5895a5c6160d5c0d6d30eae0140dd5d48fff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c7a65ae_626a65f0",
+        "filename": "roles/storage-tester/scripts/storage-tester-ROX.sh",
+        "patchSetId": 24
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-10-20T20:10:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d7765a5d_8b8eea4d",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 2
+      },
+      "revId": "5edd5895a5c6160d5c0d6d30eae0140dd5d48fff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
