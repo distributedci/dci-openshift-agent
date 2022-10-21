@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "f2a7b98ce8ef162758926d1dd676a1bcc481758b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "316cfaaf_6fc8ca41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-21T07:42:56Z",
+      "side": 1,
+      "message": "By the way, in BOS2 vpool, we have six servers reserved. Maybe we should clean the list of reserved servers before merging?",
+      "revId": "f2a7b98ce8ef162758926d1dd676a1bcc481758b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
