@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cef93dc0_576d531d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-21T10:42:03Z",
+      "side": 1,
+      "message": "I\u0027m fine for me with the change, but the results on libvirt are a bit strange: some resources were not created, the calculation was not made at all... so, I don\u0027t know if it\u0027s enough with this, we merge and we correct libvirt in a next patch, or if we review it here.\nI\u0027ll let Tony decide, as he proposed to do the tests on libvirt",
+      "parentUuid": "74222294_fc5a1624",
+      "revId": "bc870b7bff814be180d802f2773d1bd0516e1521",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4477cfae_cf66f582",
         "filename": "roles/storage-tester/tasks/gathering-logs.yml",
         "patchSetId": 13
