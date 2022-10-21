@@ -50,6 +50,24 @@
       "message": "With this we\u0027ll end up having inventories like:\n\n[provisioner]\nprovisionhost.ansible.fqdn ansible_host\u003dprovisionhost.ansible.fqdn name\u003dprovisionhost...\n\nI still don\u0027t see in which scenario we could have an inventory with a value for \"name\" different than the inventory host (possibly this comes from a time where ansible_host was not defined so the inventory host had to be the IP or FQDN for the host), yet, wouldn\u0027t it make more sense to set the web url to use the value from \"ansible_host\". Even if the value is not defined in the inventory, this variable would be created regardless of the source of this information (a DNS name, a hostname defined in the SSH config file...). The only problem I foresee is if the ansible_host is resolved through the jumpbox local /etc/hosts/file.",
       "revId": "98c1264fb5277fc2d42ef02e9dcffcb00f42d763",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eac7efbe_10d706ec",
+        "filename": "roles/ocp-on-libvirt/templates/hosts.j2",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-10-21T16:08:24Z",
+      "side": 1,
+      "message": "Thanks for the feedback Nacho, yesterday we validated in BOS2 where we have do_dns_config to True by default the domain was included with the new patch, because domains are defined in the DNS, and in Pierre\u0027s lab where he does not have a domain it adds nothing because do_dns_config results to False. \nI agree with you that to build the web url there could be better ways to do it, using other info from the inventory, but for now that is on the install role of the baremetal_deploy repo, so for now I decided to add a work-around here to see how it works, it other things break I\u0027ll consider to submit a patch upstream.",
+      "parentUuid": "34a96059_59ce48da",
+      "revId": "98c1264fb5277fc2d42ef02e9dcffcb00f42d763",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
