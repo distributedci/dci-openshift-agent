@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcca4ee0_cffed580",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-24T07:17:18Z",
+      "side": 1,
+      "message": "Again, change is fine, but there are still some pods that are not deployed correctly in libvirt during the upgrade",
+      "revId": "8d5eb281a6cee924e5b373b985e69de6c8f5a000",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
