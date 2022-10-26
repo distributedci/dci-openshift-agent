@@ -33,6 +33,108 @@
       "message": "recheck",
       "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e04a6ed8_86fee3dd",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-26T00:19:34Z",
+      "side": 1,
+      "message": "This was executed with assisted, any reason why this condition was added now? maybe a bad copy/paste?",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea943368_566b2878",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-26T00:19:34Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e24ae38d_3ede2177",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-26T00:19:34Z",
+      "side": 1,
+      "message": "This is going to skip ipi and others. We might need to either define a default for intall_type or do a diff validation\n\nSame for the rest below",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77672ca9_9cc61628",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-26T00:19:34Z",
+      "side": 1,
+      "message": "let\u0027s remove lab references",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b39ed247_92a6d202",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-26T00:19:34Z",
+      "side": 1,
+      "message": "sno or acm??",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1e1409a_1ecfb31f",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-26T00:19:34Z",
+      "side": 1,
+      "message": "Wondering if it may be worth to look at https://docs.ansible.com/ansible/latest/collections/ansible/posix/selinux_module.html",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
