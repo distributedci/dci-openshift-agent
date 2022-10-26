@@ -35,6 +35,46 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e0566e1_22e15f94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 31
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-26T10:16:36Z",
+      "side": 1,
+      "message": "Two minor comments from my side, I think Tony has commented the most important issues right now.",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9bd3220_32bae82a",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-26T10:16:36Z",
+      "side": 1,
+      "message": "is this variable documented somewhere? (don\u0027t know, just asking in case we need to report it properly)",
+      "range": {
+        "startLine": 111,
+        "startChar": 22,
+        "endLine": 111,
+        "endChar": 36
+      },
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e04a6ed8_86fee3dd",
@@ -116,6 +156,29 @@
       "writtenOn": "2022-10-26T00:19:34Z",
       "side": 1,
       "message": "sno or acm??",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ff329e4_dd889403",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-10-26T10:16:36Z",
+      "side": 1,
+      "message": "maybe no_log: true to avoid displaying the content? (but I don\u0027t remember if copy module shows the content in the ansible log, maybe it\u0027s not needed, but just to confirm).",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 30
+      },
       "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
