@@ -16,6 +16,24 @@
       "message": "Should this mode be 0640 instead? (o-r)\n\nYou will need to either make the value octal or quote it so it does not translate the int to oct, I see it did that in the last dci-ci-bot job:\n\n$ grep -A3 \"Generating hosts inventory file\" /var/lib/dci-openshift-agent/.dci-queue/log/vpool/1605 | grep -Po \u0027mode[^,]+\u0027\nmode\": \"01204\"\n\necho $(( 01204 ))\n644",
       "revId": "94254fab1a948606cee8c7b27c20bb1786a53f0d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab1ea584_9b0582c9",
+        "filename": "roles/ocp-on-libvirt/tasks/dci_setup.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-10-28T23:20:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0161f852_1eab59ba",
+      "revId": "94254fab1a948606cee8c7b27c20bb1786a53f0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
