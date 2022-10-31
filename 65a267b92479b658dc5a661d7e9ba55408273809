@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c68395f_e1340ee1",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-31T18:16:46Z",
+      "side": 1,
+      "message": "nice, thanks",
+      "parentUuid": "3aa1ad0a_c1e5fa03",
+      "revId": "65a267b92479b658dc5a661d7e9ba55408273809",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8458cea4_43af8572",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-10-31T17:38:58Z",
       "side": 1,
       "message": "Do we need a retry here? since we\u0027re doing it in a file and not pulling via opm render if there\u0027s a failure we should fail immediately",
+      "revId": "65a267b92479b658dc5a661d7e9ba55408273809",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b3ece01_1460bed5",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-31T18:16:46Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "8458cea4_43af8572",
       "revId": "65a267b92479b658dc5a661d7e9ba55408273809",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
