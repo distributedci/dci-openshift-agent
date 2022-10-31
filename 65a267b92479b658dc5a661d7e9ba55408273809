@@ -16,6 +16,57 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "65a267b92479b658dc5a661d7e9ba55408273809",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3aa1ad0a_c1e5fa03",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-31T17:38:58Z",
+      "side": 1,
+      "message": "nit: can do it multi-line without cat\n\n    jq \u0027select( .package \u003d\u003d \"{{ operator_name }}\" or .name \u003d\u003d \"{{ operator_name }}\")\u0027\n    {{ tmp_prune.path }}/index-packages\n    \u003e\u003e {{ tmp_prune.path }}/configs/index.json",
+      "revId": "65a267b92479b658dc5a661d7e9ba55408273809",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8458cea4_43af8572",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-31T17:38:58Z",
+      "side": 1,
+      "message": "Do we need a retry here? since we\u0027re doing it in a file and not pulling via opm render if there\u0027s a failure we should fail immediately",
+      "revId": "65a267b92479b658dc5a661d7e9ba55408273809",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70ec0e92_b9af48b6",
+        "filename": "roles/operators-mirror/tasks/index-prune.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-10-31T17:38:58Z",
+      "side": 1,
+      "message": "Do we gain anything with retries in here?",
+      "revId": "65a267b92479b658dc5a661d7e9ba55408273809",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
