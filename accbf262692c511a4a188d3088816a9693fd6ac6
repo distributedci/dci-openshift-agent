@@ -92,6 +92,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc5ad880_5c7a9d4e",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-31T19:46:43Z",
+      "side": 1,
+      "message": "yeah, actually will run it also in ACM.",
+      "parentUuid": "e04a6ed8_86fee3dd",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea943368_566b2878",
@@ -105,6 +123,24 @@
       "writtenOn": "2022-10-26T00:19:34Z",
       "side": 1,
       "message": "ditto",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f119c78_397caa34",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-31T19:46:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ea943368_566b2878",
       "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -143,6 +179,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e06389c_21f3d4aa",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-31T19:46:43Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "77672ca9_9cc61628",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b39ed247_92a6d202",
@@ -156,6 +210,24 @@
       "writtenOn": "2022-10-26T00:19:34Z",
       "side": 1,
       "message": "sno or acm??",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cdfd985_0aeaad42",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-31T19:46:43Z",
+      "side": 1,
+      "message": "SNO, considering that later we may have acm_cluster_type \u003d\u003d \"multinode\"",
+      "parentUuid": "b39ed247_92a6d202",
       "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -196,6 +268,24 @@
       "writtenOn": "2022-10-26T00:19:34Z",
       "side": 1,
       "message": "Wondering if it may be worth to look at https://docs.ansible.com/ansible/latest/collections/ansible/posix/selinux_module.html",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17d995b4_df3bb662",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-10-31T19:46:43Z",
+      "side": 1,
+      "message": "\u003e Wondering if it may be worth to look at https://docs.ansible.com/ansible/latest/collections/ansible/posix/selinux_module.html\n\nThe module can be used only to enable/disable a specific mode of selinux",
+      "parentUuid": "b1e1409a_1ecfb31f",
       "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
