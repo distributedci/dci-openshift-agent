@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59aecaf8_8093f6d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 33
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-02T22:14:28Z",
+      "side": 1,
+      "message": "Upgrade is failing because something\u0027s wrong in the logic if the upgrade is finished. It needs more investigation.",
+      "revId": "50655c78b88e30a9927a6a92f55901bfad0ae390",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
