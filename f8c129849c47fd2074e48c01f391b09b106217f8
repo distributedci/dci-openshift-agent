@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2811fcc_c34659a1",
+        "filename": "dev-ansible.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-03T08:26:49Z",
+      "side": 0,
+      "message": "This file (when it is filled properly) is used in the --dev mode in the dci-openshift-agent-ctl. I see this mode is not well documented in the README, I will update the doc later.",
+      "revId": "f8c129849c47fd2074e48c01f391b09b106217f8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
