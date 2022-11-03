@@ -16,6 +16,23 @@
       "message": "Upgrade is failing because something\u0027s wrong in the logic if the upgrade is finished. It needs more investigation.",
       "revId": "50655c78b88e30a9927a6a92f55901bfad0ae390",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a78be99c_b4514c64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 33
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-03T14:19:56Z",
+      "side": 1,
+      "message": "Trying to run the upgrade without the storage tester",
+      "revId": "50655c78b88e30a9927a6a92f55901bfad0ae390",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
