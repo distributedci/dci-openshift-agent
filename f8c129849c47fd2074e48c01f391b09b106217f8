@@ -16,6 +16,24 @@
       "message": "This file (when it is filled properly) is used in the --dev mode in the dci-openshift-agent-ctl. I see this mode is not well documented in the README, I will update the doc later.",
       "revId": "f8c129849c47fd2074e48c01f391b09b106217f8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbe01a47_386264dc",
+        "filename": "dev-ansible.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 0,
+      "message": "The dev-ansible.cfg file has already been added to .gitignore, just had to remove it from the work tree, you\u0027re still able to use it for your local development but it won\u0027t be tracked. I have instead opted to rename the file to keep it as an example.",
+      "parentUuid": "b2811fcc_c34659a1",
+      "revId": "f8c129849c47fd2074e48c01f391b09b106217f8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

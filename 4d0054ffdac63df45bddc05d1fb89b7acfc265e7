@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3c04e27_12ca4fa1",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77d4ffad_2c25fd50",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bc074e1_a09a5e56",
@@ -54,6 +78,30 @@
       "writtenOn": "2022-11-03T09:12:48Z",
       "side": 1,
       "message": "Assisted Installer, upper case",
+      "range": {
+        "startLine": 65,
+        "startChar": 44,
+        "endLine": 65,
+        "endChar": 62
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "333c9a2c_296f079c",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3bc074e1_a09a5e56",
       "range": {
         "startLine": 65,
         "startChar": 44,
@@ -87,6 +135,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f14e258_7c625e14",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23585d2a_c30a1ec5",
+      "range": {
+        "startLine": 73,
+        "startChar": 36,
+        "endLine": 73,
+        "endChar": 54
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1de33572_28b28010",
@@ -100,6 +172,30 @@
       "writtenOn": "2022-11-03T09:12:48Z",
       "side": 1,
       "message": "ISO",
+      "range": {
+        "startLine": 74,
+        "startChar": 52,
+        "endLine": 74,
+        "endChar": 55
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c51e605_b3a62ed3",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1de33572_28b28010",
       "range": {
         "startLine": 74,
         "startChar": 52,
@@ -133,6 +229,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1761180_7a494773",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc9a9286_8f1d9909",
+      "range": {
+        "startLine": 75,
+        "startChar": 16,
+        "endLine": 75,
+        "endChar": 34
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8158343_f3baa46e",
@@ -156,6 +276,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8abb9d0_7a442931",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a8158343_f3baa46e",
+      "range": {
+        "startLine": 84,
+        "startChar": 71,
+        "endLine": 84,
+        "endChar": 73
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "def11797_902f683d",
@@ -169,6 +313,30 @@
       "writtenOn": "2022-11-03T09:12:48Z",
       "side": 1,
       "message": "maybe a link here to the file?",
+      "range": {
+        "startLine": 87,
+        "startChar": 1,
+        "endLine": 87,
+        "endChar": 26
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25ea5030_4dc44071",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Where would this link point to? Github URL ?",
+      "parentUuid": "def11797_902f683d",
       "range": {
         "startLine": 87,
         "startChar": 1,
@@ -225,6 +393,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3880730_fbabce17",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f7e1e02_adf19266",
+      "range": {
+        "startLine": 105,
+        "startChar": 36,
+        "endLine": 105,
+        "endChar": 54
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7c810a2e_93c9eb3b",
@@ -238,6 +430,30 @@
       "writtenOn": "2022-11-03T09:12:48Z",
       "side": 1,
       "message": "Assisted Installer, upper case",
+      "range": {
+        "startLine": 113,
+        "startChar": 60,
+        "endLine": 113,
+        "endChar": 78
+      },
+      "revId": "4d0054ffdac63df45bddc05d1fb89b7acfc265e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05abd474_cc4054c0",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-03T16:54:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7c810a2e_93c9eb3b",
       "range": {
         "startLine": 113,
         "startChar": 60,
