@@ -16,6 +16,23 @@
       "message": "Jorge, thanks for starting this, the other day I tested AI in a libvirt lab and I had to look at the plays and scripts to figure out. From my notes, I came up with a 10 command howto for a libvirt lab, do you think we could include something like that here:\n\n[dci-openshift-agent@pctt-hv5 ~]$ cd samples/assisted/\n[dci-openshift-agent@pctt-hv5 ~]$ FQDN\u003d$(hostname -f)\n[dci-openshift-agent@pctt-hv5 ~]$ DNS\u003d$(nmcli dev show | awk \u0027/IP4.DNS/ { print $2; exit }\u0027)\n[dci-openshift-agent@pctt-hv5 ~]$ sed -e \"s/@FQDN@/$FQDN/; s/@DNS@/$DNS/\" \u003c hosts.in \u003e hosts\n[dci-openshift-agent@pctt-hv5 ~]$ sudo cp hosts /etc/dci-openshift-agent/\n[dci-openshift-agent@pctt-hv5 ~]$ dci-openshift-agent-ctl -s -- -e install_type\u003dassisted\n[dci-openshift-agent@pctt-hv5 ~]$ export KUBECONFIG\u003d/var/lib/dci-openshift-agent/clusterconfigs-dciokd/kubeconfig                                                                                       \n[dci-openshift-agent@pctt-hv5 ~]$ oc get nodes\nNAME              STATUS   ROLES           AGE   VERSION\ndciokd-master-0   Ready    master,worker   15m   v1.24.0+dc5a2fd\ndciokd-master-1   Ready    master,worker   33m   v1.24.0+dc5a2fd\ndciokd-master-2   Ready    master,worker   33m   v1.24.0+dc5a2fd\n[dci-openshift-agent@pctt-hv5 ~]$ oc version\nClient Version: 4.11.9\nKustomize Version: v4.5.4\nServer Version: 4.11.9\nKubernetes Version: v1.24.0+dc5a2fd\n",
       "revId": "6e866b34421edb9f4b475ca6384ecd29398a40c2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7914f832_646aec49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-11-03T19:30:42Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "6e866b34421edb9f4b475ca6384ecd29398a40c2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
