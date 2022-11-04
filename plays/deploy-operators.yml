@@ -7,19 +7,6 @@
   set_fact:
     opm_catalog_source_name: "{{ opm_catalog_source_name | default('redhat-operators') }}"
 
-- name: Get oc version output
-  shell: |
-    oc version
-  register: oc_version_str
-
-- name: Get OCP version
-  set_fact:
-    ocp_version: "{{ '.'.join(item.split(':')[1].strip().split('.')[0:2]) }}"
-    ocp_version_maj: "{{ item.split(':')[1].strip().split('.')[0] }}"
-    ocp_version_min: "{{ item.split(':')[1].strip().split('.')[1] }}"
-  when: "'Server Version' in item"
-  loop: "{{ oc_version_str.stdout_lines }}"
-
 - name: Configure CatalogSources for disconnected environments
   block:
     - name: "deploy-operators : Generate disconnected catalogSource"
@@ -97,19 +84,31 @@
         - operators_index is defined
         - not dci_disconnected | default(false) | bool
 
+    - name: "Get cluster version"
+      community.kubernetes.k8s_info:
+        api: config.openshift.io/v1
+        kind: ClusterVersion
+        name: version
+      register: cluster_version
+
     - name: "deploy-operators : Install Performance Addon Operator"
-      include_role:
-        name: olm-operator
       vars:
-        operator: performance-addon-operator
-        source: "{{ opm_catalog_source_name }}"
-        namespace: openshift-performance-addon-operator
-        ns_labels:
-          openshift.io/cluster-monitoring: "true"
+        current_ver_query: "history[?state=='Completed'] | [0].version"
+        full_ver: "{{ cluster_version.resources[0].status | json_query(current_ver_query) }}"
+        current_ver: "{{ full_ver.split('-')[0] }}"
+      block:
+        - name: "deploy-operators : Install Performance Addon Operator"
+          include_role:
+            name: olm-operator
+          vars:
+            operator: performance-addon-operator
+            source: "{{ opm_catalog_source_name }}"
+            namespace: openshift-performance-addon-operator
+            ns_labels:
+              openshift.io/cluster-monitoring: "true"
       when:
         - enable_perf_addon | bool
-        - ocp_version_maj|int == 4
-        - ocp_version_min|int <= 10
+        - current_ver is version("4.10.0", "<=")
 
     - name: "deploy-operators : Install and configure SRIOV"
       block:

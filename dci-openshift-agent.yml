@@ -283,7 +283,7 @@
 
 # Step 3a-2 : deploy operators, run on the provisioner so OC is automatically set
 - name: 'Deploy operators to OCP cluster'
-  hosts: provisioner
+  hosts: localhost
   tags:
     - running
     - operator-deployment
