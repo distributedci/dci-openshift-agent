@@ -33,6 +33,24 @@
       "message": "I think for this we won\u0027t be able to test in our envs. Can we get a paste from a run in an env that actually has 2 catalogs available?",
       "revId": "4004e1bd89e1d505b4dfb03d954d31541438b1a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64b59136_dbe129c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2022-11-04T14:11:34Z",
+      "side": 1,
+      "message": "I\u0027m trying to produce that from the NM lab, but we haven\u0027t been able to run new deployments yet in the cluster due to the networking issues.",
+      "parentUuid": "bb8acae9_f4fe7107",
+      "revId": "4004e1bd89e1d505b4dfb03d954d31541438b1a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
