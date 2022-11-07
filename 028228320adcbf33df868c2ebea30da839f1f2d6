@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fb6a6e24_1cd8dfb9",
+        "filename": "roles/oc-setup/tasks/config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-07T22:27:31Z",
+      "side": 1,
+      "message": "Should be available now, we will need to install before using it though 👌",
+      "parentUuid": "3f4121dc_d4fe5886",
+      "revId": "028228320adcbf33df868c2ebea30da839f1f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cb986c0d_65bb96b1",
         "filename": "roles/oc-setup/tasks/install.yml",
         "patchSetId": 2
