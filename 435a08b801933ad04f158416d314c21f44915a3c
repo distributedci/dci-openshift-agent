@@ -50,6 +50,24 @@
       "message": "I am pretty sure this didn\u0027t work at the include_role level, that\u0027s why it was done at the task level: https://github.com/ansible/ansible/issues/39185\n\nIf it\u0027s working for you, it\u0027s probably because we\u0027re \"cheating\" and symlinking the default `~/.kube/config` file and is just magically working even if the KUBECONFIG env var is missing.\n\nDid you try removing the env var altogether?",
       "revId": "435a08b801933ad04f158416d314c21f44915a3c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79820874_d9eef433",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-07T23:18:26Z",
+      "side": 1,
+      "message": "We are not using the method described in the link (just defining the env variable at the role level). We are using apply\n\n    apply:\n      environment:\n        - KUBECONFIG: \"{{ kubeconfig_path }}\"\n\nThe role has been delegated to localhosts, so the tasks we are cheating with .kube/config should not be considered. Also there are tasks happening in main before we set the .kube stuff.\n\nI did local testing unsetting the kubeconfig (noting worked) and setting them with apply/env at role level and the var is propagated to all the tasks.\n\nOne of the motivations for this change is to start being explicit about the kubeconfig in use instead of rely on the KUBECONFIG var injected by the installer on the provisioners or by the symlink to kube/config.",
+      "parentUuid": "6287ede4_3afe772e",
+      "revId": "435a08b801933ad04f158416d314c21f44915a3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
