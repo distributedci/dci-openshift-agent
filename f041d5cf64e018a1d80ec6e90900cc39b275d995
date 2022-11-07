@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "810af5f9_59cfeef1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-07T14:21:31Z",
+      "side": 1,
+      "message": "Before merging we need to remove the tests in dci-pipeline: https://github.com/redhat-cip/dci-pipeline/search?q\u003docp_component_id\u0026type\u003dcode",
+      "revId": "f041d5cf64e018a1d80ec6e90900cc39b275d995",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
