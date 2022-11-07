@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "435a08b801933ad04f158416d314c21f44915a3c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a52652be_988a81d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-07T22:54:15Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll +2 once it comes successfully from dallas",
+      "revId": "435a08b801933ad04f158416d314c21f44915a3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
