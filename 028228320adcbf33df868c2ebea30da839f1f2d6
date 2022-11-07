@@ -71,6 +71,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8ba7564_eeabfb4b",
+        "filename": "roles/oc-setup/tasks/config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-07T22:32:30Z",
+      "side": 1,
+      "message": "Ok, fixed after EPEL has been enabled",
+      "parentUuid": "3f4121dc_d4fe5886",
+      "revId": "028228320adcbf33df868c2ebea30da839f1f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cb986c0d_65bb96b1",
@@ -84,6 +102,24 @@
       "writtenOn": "2022-11-07T22:08:16Z",
       "side": 1,
       "message": "Let\u0027s get rid of this one 😎",
+      "revId": "028228320adcbf33df868c2ebea30da839f1f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9180d69c_8f1be16c",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-07T22:32:30Z",
+      "side": 1,
+      "message": "replaced httpd-tools with python2-passlib",
+      "parentUuid": "cb986c0d_65bb96b1",
       "revId": "028228320adcbf33df868c2ebea30da839f1f2d6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
