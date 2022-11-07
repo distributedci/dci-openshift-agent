@@ -33,6 +33,23 @@
       "message": "LGTM, I\u0027ll +2 once it comes successfully from dallas",
       "revId": "435a08b801933ad04f158416d314c21f44915a3c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6287ede4_3afe772e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-11-07T22:54:40Z",
+      "side": 1,
+      "message": "I am pretty sure this didn\u0027t work at the include_role level, that\u0027s why it was done at the task level: https://github.com/ansible/ansible/issues/39185\n\nIf it\u0027s working for you, it\u0027s probably because we\u0027re \"cheating\" and symlinking the default `~/.kube/config` file and is just magically working even if the KUBECONFIG env var is missing.\n\nDid you try removing the env var altogether?",
+      "revId": "435a08b801933ad04f158416d314c21f44915a3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
