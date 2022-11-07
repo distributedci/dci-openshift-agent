@@ -33,6 +33,23 @@
       "message": "thx Beto! can we just do a quick check on OCP \u003c 4.12 to confirm it\u0027s working fine?",
       "revId": "2487d860e2ab950326e131db7b5e9ec36fc56313",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "846de262_8a4a0f02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-07T14:40:38Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2487d860e2ab950326e131db7b5e9ec36fc56313",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
