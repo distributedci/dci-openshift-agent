@@ -16,6 +16,23 @@
       "message": "Already tested in: https://www.distributed-ci.io/jobs/9429ba5f-1270-478a-a12f-d2a4f6d15a62/jobStates?sort\u003ddate",
       "revId": "4248ba90da5f58252f996996d2a5ed9a653c6d43",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d8bb6f9_a7b09b5f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-07T17:32:48Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "4248ba90da5f58252f996996d2a5ed9a653c6d43",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
