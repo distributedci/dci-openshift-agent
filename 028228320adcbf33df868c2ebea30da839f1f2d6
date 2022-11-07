@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.7-vanilla",
       "revId": "028228320adcbf33df868c2ebea30da839f1f2d6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f49325d_894202db",
+        "filename": "roles/oc-setup/tasks/config.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-07T22:08:16Z",
+      "side": 1,
+      "message": "This is great idea, let\u0027s take advantage of htpass module and use it instead:\n\n    - name: Create http auth file\n      htpasswd:\n        path: \"{{ dci_cluster_configs_dir }}/users.htpasswd\"\n        name: \"{{ item.user }}\"\n        password: \"{{ item.password }}\"\n        mode: 0640\n      loop:\n        - user: admin\n          password: \"{{ admin_pass }}\"\n        - user: nonadmin\n          password: \"{{ nonadmin_pass }}\"",
+      "revId": "028228320adcbf33df868c2ebea30da839f1f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb986c0d_65bb96b1",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-07T22:08:16Z",
+      "side": 1,
+      "message": "Let\u0027s get rid of this one 😎",
+      "revId": "028228320adcbf33df868c2ebea30da839f1f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
