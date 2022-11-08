@@ -33,6 +33,24 @@
       "message": "LGTM, thanks. Could you please run job in Dallas that finish after the the pre-run. Just to confirm the image\u0027s labels?",
       "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5005d67_67b896dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-08T23:01:06Z",
+      "side": 1,
+      "message": "sure, good idea",
+      "parentUuid": "bdc4bdfe_7d839f37",
+      "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
