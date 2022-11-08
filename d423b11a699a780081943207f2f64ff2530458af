@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b94d29fc_0b720fb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-08T18:58:26Z",
+      "side": 1,
+      "message": "Good idea, we should update the correspinding READMEs with this new variables.",
+      "revId": "d423b11a699a780081943207f2f64ff2530458af",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
