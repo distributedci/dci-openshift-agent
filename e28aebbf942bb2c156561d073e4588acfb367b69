@@ -33,6 +33,24 @@
       "message": "I see you removed PATCHSET since it wasn\u0027t being used.  It dosn\u0027t look like REVID is used either.",
       "revId": "e28aebbf942bb2c156561d073e4588acfb367b69",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42cdef61_a5e62940",
+        "filename": "extract-dependencies",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-08T13:59:58Z",
+      "side": 1,
+      "message": "REVID is used here: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/26617/1/extract-dependencies#110",
+      "parentUuid": "180a62b8_82d8e846",
+      "revId": "e28aebbf942bb2c156561d073e4588acfb367b69",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
