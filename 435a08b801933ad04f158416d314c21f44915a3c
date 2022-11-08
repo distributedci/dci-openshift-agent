@@ -85,6 +85,23 @@
       "message": "recheck",
       "revId": "435a08b801933ad04f158416d314c21f44915a3c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf36cbc8_1611ac53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-08T00:15:10Z",
+      "side": 1,
+      "message": "Also we have been using apply environment at role level for other variables:\n\nhttps://github.com/redhat-cip/dci-openshift-app-agent/blob/6fef1161c3b813ae4e158307527907d0309fee8e/samples/tnf_test_example/hooks/prepare_operator.yml#L23\n\nhttps://github.com/redhat-cip/dci-openshift-app-agent/blob/6fef1161c3b813ae4e158307527907d0309fee8e/roles/preflight/tasks/mirroring.yml#L38",
+      "revId": "435a08b801933ad04f158416d314c21f44915a3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
