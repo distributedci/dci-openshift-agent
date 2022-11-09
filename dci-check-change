@@ -31,6 +31,7 @@ NO_COMMENT=
 UPGRADE=
 UPGRADE_ARGS=
 APP_NAME=
+APP_ARGS=
 
 if [ -r /etc/dci-openshift-agent/config ]; then
     . /etc/dci-openshift-agent/config
@@ -274,6 +275,11 @@ if [[ app =~ $SUPPORTED_HINTS ]]; then
     APP_NAME=$(sed -n -e "s/^\s*Test-App-Hints:\s*//pi" <<< $DESC)
 fi
 
+# process Test-App-Args-Hints
+if [[ app-args =~ $SUPPORTED_HINTS ]]; then
+    APP_ARGS=$(sed -n -e "s/^\s*Test-App-Args-Hints:\s*//pi" <<< $DESC)
+fi
+
 # take test-runner from the local dir
 if [ -d dci-openshift-agent ]; then
     BASEDIR=$PWD/dci-openshift-agent
@@ -281,12 +287,12 @@ fi
 
 if [ -z "$NO_DCI_QUEUE" ] && [ -n "$DCI_QUEUE" ] && type -p dci-queue >& /dev/null; then
     if [ -n "$USE_PREFIX" ]; then
-        dci-queue schedule $DCI_QUEUE -- env UPGRADE_ARGS="$UPGRADE_ARGS" APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $UPGRADE $NO_COMMENT $DIR -p @RESOURCE "$@" $OPTS
+        dci-queue schedule $DCI_QUEUE -- env UPGRADE_ARGS="$UPGRADE_ARGS" APP_NAME=$APP_NAME APP_ARGS="$APP_ARGS" $BASEDIR/test-runner $VIRT $UPGRADE $NO_COMMENT $DIR -p @RESOURCE "$@" $OPTS
     else
-        dci-queue schedule $DCI_QUEUE -- env UPGRADE_ARGS="$UPGRADE_ARGS"  RES=@RESOURCE APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $UPGRADE $NO_COMMENT $DIR "$@" $OPTS
+        dci-queue schedule $DCI_QUEUE -- env UPGRADE_ARGS="$UPGRADE_ARGS"  RES=@RESOURCE APP_NAME=$APP_NAME APP_ARGS="$APP_ARGS" $BASEDIR/test-runner $VIRT $UPGRADE $NO_COMMENT $DIR "$@" $OPTS
     fi
 else
-    env UPGRADE_ARGS="$UPGRADE_ARGS" APP_NAME=$APP_NAME $BASEDIR/test-runner $VIRT $UPGRADE $NO_COMMENT $DIR "$@" $OPTS
+    env UPGRADE_ARGS="$UPGRADE_ARGS" APP_NAME=$APP_NAME APP_ARGS="$APP_ARGS" $BASEDIR/test-runner $VIRT $UPGRADE $NO_COMMENT $DIR "$@" $OPTS
 fi
 
 # dci-check-change ends here
