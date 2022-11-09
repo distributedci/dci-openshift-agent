@@ -141,18 +141,20 @@ parameters to pass to `dci-check-change` for the upgrade command
 line. You can also specify the topics by using
 `Test-Upgrade-From-Topic-Hints` and `Test-Upgrade-To-Topic-Hints`.
 
+`Test-Upgrade-Hint: yes` can also be used to force an upgrade job after
+the installation.
+
 `Test-App-Hints:` can also be used to change the default app to be
 used (`basic_example`). If `none` is specified in `Test-App-Hints:`,
 the configuration is taken from the system.
 
-`Test-Upgrade-Hint: yes` can also be used to force an upgrade job after
-the installation.
+`Test-App-Args-Hints:` can also be used to provide extra arguments to pass to `dci-check-change` for the job launching the app that is deployed in the OCP cluster.
 
 Hints need to be activated in the `SUPPORTED_HINTS` variable in
 `/etc/dci-openshift-agent/config` like this:
 
 ```console
-SUPPORTED_HINTS="sno|assisted|libvirt|no-check|args|app|upgrade|upgrade-args|upgrade-from-topic|upgrade-to-topic"
+SUPPORTED_HINTS="sno|assisted|libvirt|no-check|args|app|app-args|upgrade|upgrade-args|upgrade-from-topic|upgrade-to-topic"
 ```
 
 ## Continuous integration
