@@ -75,6 +75,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdb87d4c_31560b24",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-09T21:25:28Z",
+      "side": 1,
+      "message": "I have added it to docs/acm.md",
+      "parentUuid": "c9bd3220_32bae82a",
+      "range": {
+        "startLine": 111,
+        "startChar": 22,
+        "endLine": 111,
+        "endChar": 36
+      },
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e04a6ed8_86fee3dd",
@@ -162,6 +186,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c28eaee_57454d77",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-09T21:25:28Z",
+      "side": 1,
+      "message": "I have re-wrote the conditionals and defined a default install_type.",
+      "parentUuid": "e24ae38d_3ede2177",
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "77672ca9_9cc61628",
@@ -245,6 +287,30 @@
       "writtenOn": "2022-10-26T10:16:36Z",
       "side": 1,
       "message": "maybe no_log: true to avoid displaying the content? (but I don\u0027t remember if copy module shows the content in the ansible log, maybe it\u0027s not needed, but just to confirm).",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 30
+      },
+      "revId": "accbf262692c511a4a188d3088816a9693fd6ac6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c40ee225_4d8a233f",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-09T21:25:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3ff329e4_dd889403",
       "range": {
         "startLine": 37,
         "startChar": 0,
