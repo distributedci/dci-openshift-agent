@@ -68,6 +68,24 @@
       "message": "Hi Tony, just to understand: why fbc_expiration_time and opm_expire_time have different default values? They\u0027re both for the catalog expiration in quay, if I got it right.\n\nfbc_expiration_time | 5h | The amount of time to set for the expiration label\nopm_expire_time  | 24h | Set the time used for the expiration label in the operator-mirror catalog\n\n",
       "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9ea14b3_d1ba6f72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-09T13:59:18Z",
+      "side": 1,
+      "message": "Correct, both are for image expiration in quay and both are for catalogs.\n\nThe difference is that fbc is used for generic catalogs while operator-mirror catalog is for the main catalog in the cluster. Ideally operator-mirror would use fbc catalog but that would add a dependency of a role into another role.\n\nFor our current use, we keep longer time the catalog in the cluster (operator-mirror) and shorter time for catalogs using fbc, e.g. preflight",
+      "parentUuid": "53e6a5ab_21c8c8f8",
+      "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
