@@ -104,6 +104,46 @@
       "parentUuid": "c9ea14b3_d1ba6f72",
       "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d26e7734_b96fd9e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-09T17:54:12Z",
+      "side": 1,
+      "message": "one super-minor suggestion, rest looks fine!",
+      "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e131876c_ae5e49b7",
+        "filename": "roles/operators-mirror/defaults/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-09T17:54:12Z",
+      "side": 1,
+      "message": "if these are role variables, shouldn\u0027t they be documented in operators-mirror README instead of in d-o-a README? as well as done for fbc-catalog",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
