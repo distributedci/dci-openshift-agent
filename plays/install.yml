@@ -106,6 +106,21 @@
       environment:
         - KUBECONFIG: "{{ kubeconfig_path }}"
 
+- name: Get oc version output
+  environment:
+    - KUBECONFIG: "{{ kubeconfig_path }}"
+  shell: |
+    oc version
+  register: oc_version_str
+
+- name: Get OCP version
+  set_fact:
+    ocp_version: "{{ '.'.join(item.split(':')[1].strip().split('.')[0:2]) }}"
+    ocp_version_maj: "{{ item.split(':')[1].strip().split('.')[0] }}"
+    ocp_version_min: "{{ item.split(':')[1].strip().split('.')[1] }}"
+  when: "'Server Version' in item"
+  loop: "{{ oc_version_str.stdout_lines }}"
+
 - name: "installer : Apply node labels"
   include_role:
     name: label-nodes
