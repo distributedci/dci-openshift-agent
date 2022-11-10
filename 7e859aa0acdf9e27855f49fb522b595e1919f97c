@@ -16,6 +16,24 @@
       "message": "From the last failure, I see now this task runs in the bastion, so we\u0027ll need to specify the path of the oc command, we have a similar task in the tests.yml play  https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/tests.yml#L7-L12 or if you prefer the k8s way: \nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/deploy-operators.yml#L82-L87",
       "revId": "7e859aa0acdf9e27855f49fb522b595e1919f97c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43786753_15bf5097",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-11-10T20:24:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4134b9f5_c998e5be",
+      "revId": "7e859aa0acdf9e27855f49fb522b595e1919f97c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
