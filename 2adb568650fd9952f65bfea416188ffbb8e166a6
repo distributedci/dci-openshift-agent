@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce2a44a3_ac9ea59d",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-10T22:29:55Z",
+      "side": 1,
+      "message": "Can we modify this a bit, to avoid confusion with ACM 😄 Thanks!",
+      "revId": "2adb568650fd9952f65bfea416188ffbb8e166a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6731bc3b_ce90984b",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-10T22:29:55Z",
+      "side": 1,
+      "message": "Since we are running everything from localhost (jumphost), I don\u0027t think there\u0027s any value updating the oc binary in the provisioner if we are not using it any longer, thoughts?",
+      "revId": "2adb568650fd9952f65bfea416188ffbb8e166a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
