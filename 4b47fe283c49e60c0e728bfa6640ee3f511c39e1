@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59bd9db8_260e72b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-10T23:12:55Z",
+      "side": 1,
+      "message": "Sync with Pierre about this. We should change the pause for something to confirm that the PAO is ready instead of pausing.",
+      "revId": "4b47fe283c49e60c0e728bfa6640ee3f511c39e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f0bfaec0_56bd599d",
