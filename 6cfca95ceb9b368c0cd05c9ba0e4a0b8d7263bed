@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "6cfca95ceb9b368c0cd05c9ba0e4a0b8d7263bed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01ac6ec0_fcf9c4ce",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-10T01:52:16Z",
+      "side": 1,
+      "message": "I think you mean to add the pause before the previous task.\n\nIsn\u0027t the check-resource role suitable for this? \n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/54037095ebbd9a7e6583b8a5374102cd277ca1a3/plays/upgrade-process.yml#L187",
+      "revId": "6cfca95ceb9b368c0cd05c9ba0e4a0b8d7263bed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
