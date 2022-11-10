@@ -144,6 +144,30 @@
       },
       "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "937927a9_37f8ae17",
+        "filename": "roles/operators-mirror/defaults/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-10T13:46:58Z",
+      "side": 1,
+      "message": "Ideally yes, but there\u0027s no README for the role, so far we have been documenting thing sin the README of the doa, that would be a nice addition for another change",
+      "parentUuid": "e131876c_ae5e49b7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "8f7a1799251ebfddfab918232add5c368d32c050",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
