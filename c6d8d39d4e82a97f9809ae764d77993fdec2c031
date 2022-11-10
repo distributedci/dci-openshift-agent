@@ -16,6 +16,46 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "c6d8d39d4e82a97f9809ae764d77993fdec2c031",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "341caee8_9509513d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 55
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-10T07:30:49Z",
+      "side": 1,
+      "message": "Thanks Beto for all this impressive work here! Just a minor suggestion, rest looks good for me overall",
+      "revId": "c6d8d39d4e82a97f9809ae764d77993fdec2c031",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de8f484d_df8a2cf0",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 55
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-10T07:30:49Z",
+      "side": 1,
+      "message": "Probably to add ACM here too?",
+      "range": {
+        "startLine": 246,
+        "startChar": 17,
+        "endLine": 246,
+        "endChar": 28
+      },
+      "revId": "c6d8d39d4e82a97f9809ae764d77993fdec2c031",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
