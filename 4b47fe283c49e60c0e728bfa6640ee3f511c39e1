@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0bfaec0_56bd599d",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-10T21:41:23Z",
+      "side": 1,
+      "message": "I think it is better to move the wait that requires the ocp_version\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/a85e061b216b65d1794df3a26074588b835b2ed6/plays/apply-pao-profile.yml#L7 to this block. As it is more related to the operator being ready. \n\nAnd it will be even better if we found a way to validate that the PAO endpoint is ready. That can be later.",
+      "revId": "4b47fe283c49e60c0e728bfa6640ee3f511c39e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
