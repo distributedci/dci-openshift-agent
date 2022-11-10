@@ -33,6 +33,24 @@
       "message": "I think you mean to add the pause before the previous task.\n\nIsn\u0027t the check-resource role suitable for this? \n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/54037095ebbd9a7e6583b8a5374102cd277ca1a3/plays/upgrade-process.yml#L187",
       "revId": "6cfca95ceb9b368c0cd05c9ba0e4a0b8d7263bed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b31a4c8b_179d8c5e",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-10T07:18:21Z",
+      "side": 1,
+      "message": "I think the place for this task is correct, according to what Manny said: \"this pause adds some extra time so the MCP check tasks start when MCs start doing the nodes changes\". So, this task is prior to MCP check, which is done in check-resource. Is it correct?\n\nMaybe we can add this pause within the check-resource role, just at the beginning, but just doing it in case a parameter (seconds to wait) is provided, then we don\u0027t need to wait in all the times we call check-resource, what do you think?",
+      "parentUuid": "01ac6ec0_fcf9c4ce",
+      "revId": "6cfca95ceb9b368c0cd05c9ba0e4a0b8d7263bed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
