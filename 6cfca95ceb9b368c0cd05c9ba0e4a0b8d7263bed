@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "247f561e_ea2e2557",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-11T09:19:27Z",
+      "side": 1,
+      "message": "I\u0027ll merge this, because I\u0027ve seen CILAB-875 is really blocking OCP 4.12 right now.",
+      "revId": "6cfca95ceb9b368c0cd05c9ba0e4a0b8d7263bed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01ac6ec0_fcf9c4ce",
