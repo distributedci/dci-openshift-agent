@@ -16,6 +16,46 @@
       "message": "LGTM, let\u0027s get it tested, we could use hints to do that in the CI",
       "revId": "a9a1b1f4c8427cee5af49193986bf93d8765c137",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "224352a3_07f15b16",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-11T09:16:20Z",
+      "side": 1,
+      "message": "I also agree with Tony that we can test it by running an upgrade in BOS2 using hints",
+      "revId": "a9a1b1f4c8427cee5af49193986bf93d8765c137",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ff82ac7_32ce9312",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-11T09:16:20Z",
+      "side": 1,
+      "message": "community.kubernetes.k8s",
+      "range": {
+        "startLine": 22,
+        "startChar": 4,
+        "endLine": 22,
+        "endChar": 7
+      },
+      "revId": "a9a1b1f4c8427cee5af49193986bf93d8765c137",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

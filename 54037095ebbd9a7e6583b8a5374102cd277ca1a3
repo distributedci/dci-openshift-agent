@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca40e0cb_b2a17996",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-11T09:16:20Z",
+      "side": 0,
+      "message": "don\u0027t we need this code anymore?",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 8
+      },
+      "revId": "54037095ebbd9a7e6583b8a5374102cd277ca1a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
