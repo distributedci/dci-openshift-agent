@@ -16,6 +16,23 @@
       "message": "Looks like dci-diff-jobs is not installed in BOS2, can we test it quickly in Dallas to see if it\u0027s working fine?\nAlso,if the command fails, the file should not be generated, I think.",
       "revId": "bb8cc6050b875319005b5d7a06d598eae73874d5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5f35c19_bfdff1e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-12T09:55:34Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "bb8cc6050b875319005b5d7a06d598eae73874d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
