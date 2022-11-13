@@ -69,6 +69,24 @@
       "parentUuid": "6731bc3b_ce90984b",
       "revId": "2adb568650fd9952f65bfea416188ffbb8e166a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7de112be_fbf830b4",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-13T22:16:47Z",
+      "side": 1,
+      "message": "In my case I like to have the oc binary in the prov node that matches the cluster version, but I\u0027m not against to stop updating it.",
+      "parentUuid": "3403ee9c_0a7cced6",
+      "revId": "2adb568650fd9952f65bfea416188ffbb8e166a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

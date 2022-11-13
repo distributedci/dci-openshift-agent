@@ -22,6 +22,30 @@
       },
       "revId": "54037095ebbd9a7e6583b8a5374102cd277ca1a3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95138af9_16133d05",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-13T22:16:47Z",
+      "side": 0,
+      "message": "I remember we didn\u0027t use to have this at one point, but I personally liked we were updating the clients too, however now that we are moving these operations to the bastion it\u0027s not really needed anymore. I vote for leaving it, but it most of you are ok to remove, then let\u0027s remove it.",
+      "parentUuid": "ca40e0cb_b2a17996",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 8
+      },
+      "revId": "54037095ebbd9a7e6583b8a5374102cd277ca1a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
