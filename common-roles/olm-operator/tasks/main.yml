@@ -86,20 +86,59 @@
       fail:
         msg: "Operator's CSV not found in the specified channel, check if channel: {{ desired_channel }} is valid"
 
-- name: "{{ ocp_version }} - {{ operator_csv }} - wait for CSV to be ready"
-  community.kubernetes.k8s_info:
-    api: operators.coreos.com/v1alpha1
-    namespace: "{{ namespace }}"
-    kind: ClusterServiceVersion
-    name: "{{ operator_csv }}"
-  register: csv
-  retries: 20
-  delay: 30
-  until:
-    - csv.resources | length == 1
-    - "'status' in csv.resources[0]"
-    - "'phase' in csv.resources[0].status"
-    - csv.resources[0].status.phase == 'Succeeded' or csv.resources[0].status.phase == 'Present'
+- name: "Operator installation"
+  block:
+    - name: "{{ ocp_version }} - {{ operator_csv }} - wait for CSV to be ready"
+      community.kubernetes.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        namespace: "{{ namespace }}"
+        kind: ClusterServiceVersion
+        name: "{{ operator_csv }}"
+      register: csv
+      retries: 20
+      delay: 30
+      until:
+        - csv.resources | length == 1
+        - "'status' in csv.resources[0]"
+        - "'phase' in csv.resources[0].status"
+        - csv.resources[0].status.phase == 'Succeeded' or
+          csv.resources[0].status.phase == 'Present'
+  rescue:
+    - name: "Catalog sources information"
+      community.kubernetes.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+      register: catalog_info
+
+    - name: "Subscriptions information"
+      community.kubernetes.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: Subscription
+        namespace: "{{ namespace }}"
+      register: subs_info
+
+    - name: "Install plans information"
+      community.kubernetes.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: InstallPlan
+        namespace: "{{ namespace }}"
+      register: ip_info
+
+    - name: "Print catalog information"
+      debug:
+        msg: "{{ catalog_info.resources }}"
+
+    - name: "Print Subscription information"
+      debug:
+        msg: "{{ subs_info.resources }}"
+
+    - name: "Print InstallPlan information"
+      debug:
+        msg: "{{ ip_info.resources }}"
+
+    - name: "Issues during operator installation"
+      fail:
+        msg: "There where issues during the operator deployment. See debug info in the above tasks"
 
 - name: "Patch subscription according to install_approval - Default: Manual"
   community.kubernetes.k8s:
