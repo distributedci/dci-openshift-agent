@@ -46,6 +46,30 @@
       },
       "revId": "54037095ebbd9a7e6583b8a5374102cd277ca1a3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb536184_96553475",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-14T20:44:31Z",
+      "side": 0,
+      "message": "That task was in place in a previous patch but after some discussion, we agreed that it could be removed as we are moving most of the work to the jump host.\n\nPart of the idea is to remove unneeded requirements for a task. An upgrade only requires access to the kubeconfig and access to the updated packages, In our case, we have a dedicated provisioner but may not be guaranteed that a server is still available by the time we do an upgrade.",
+      "parentUuid": "95138af9_16133d05",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 8
+      },
+      "revId": "54037095ebbd9a7e6583b8a5374102cd277ca1a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
