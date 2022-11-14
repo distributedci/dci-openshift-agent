@@ -1,5 +1,5 @@
 ---
-- name: "Setup Advanced Cluster Management"
+- name: "Setup ACM"
   include_role:
     name: acm-setup
   vars:
