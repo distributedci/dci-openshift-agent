@@ -67,9 +67,6 @@ ocs_install_type=
 # with ceph-external-cluster-details-exporter.py script
 external_ceph_data='JSON_PAYLOAD'
 
-# (Required) when enable_lso=true List of disk devices per node to use for LSO
-# comma separated, all servers must have the same
-local_storage_devices='["/dev/sdX", "/dev/sdY", "/dev/sdZ"]'
 
 # (Optional) when enable_ocs=true name of the storageclass to set as default
 ocs_default_storage_class=ocs-storagecluster-cephfs
@@ -101,7 +98,6 @@ File: /etc/dci-openshift-agent/hosts
 enable_lso=true
 enable_ocs=true
 ocs_install_type=internal
-local_storage_devices='["/dev/sdb", "/dev/sdc", "/dev/sdd"]'
 
 [ocs_nodes:children]
 masters
