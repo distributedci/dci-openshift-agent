@@ -17,10 +17,29 @@
     - groups['ocs_nodes'] is defined
     - hostvars[node].lso_label is defined
 
+- name: Deploying DaemonSet to gather disk-id on nodes
+  community.kubernetes.k8s:
+    definition: "{{ lookup('file', 'ocs-disk-gatherer.yml') }}"
+    state: present
+    wait: true
+
+- name: Gathering result from DaemonSet
+  shell:
+    cmd: >
+      sleep 90 ; 
+      oc logs --selector name=ocs-disk-gatherer --tail=-1 --since=10m --namespace default
+  register: disk_id
+
 - name: Configure Local Storage Volumes
   community.kubernetes.k8s:
     definition: "{{ lookup('template', 'local-storage-block.yml.j2') }}"
   register: local_storage_volcrd
+
+- name: Remove DaemonSet ocs-disk-gatherer
+  community.kubernetes.k8s:
+    definition: "{{ lookup('file', 'ocs-disk-gatherer.yml') }}"
+    state: absent
+    wait: true
 
 - name: Set Default Storage Class for LSO
   block:

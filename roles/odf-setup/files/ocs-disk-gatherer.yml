@@ -1,0 +1,54 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ocs-disk-gatherer
+  namespace: default
+  labels:
+    k8s-app: ocs-disk-gatherer
+spec:
+  selector:
+    matchLabels:
+      name: ocs-disk-gatherer
+  template:
+    metadata:
+      labels:
+        name: ocs-disk-gatherer
+    spec:
+      nodeSelector:
+        cluster.ocs.openshift.io/openshift-storage: ''
+      tolerations:
+      - key: "node.ocs.openshift.io/storage"
+        operator: Equal
+        value: "true"
+      containers:
+      - name: collector
+        image: registry.access.redhat.com/ubi8/ubi
+        imagePullPolicy: IfNotPresent
+        command:
+        - /bin/sh
+        - -c
+        - |
+          #!/bin/bash
+          while true;
+          echo "# NODE:${MY_NODE_NAME}";
+          do
+          for disk in $(readlink -f $(ls -1 /dev/disk/by-id/* | egrep -v 'DVD|dm|ceph|luks|part|lvm') | sort|uniq); do
+            DISKNAME=$(basename $disk)
+            echo " - $(ls -l /dev/disk/by-id/*|grep "$DISKNAME" | head -n1 | awk '{print $9}')";
+          done;
+          sleep '600';
+          done;
+        volumeMounts:
+          - mountPath: /dev/disk
+            name: dev-disk
+        env:
+        - name: MY_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+      securityContext: {}
+      volumes:
+      - name: dev-disk
+        hostPath:
+          path: /dev/disk
