@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd31c47c_b1ce7efa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-15T15:02:13Z",
+      "side": 1,
+      "message": "replica_size\u003d2 is just an old settings, I am removing it.\nI realize I am not explaining why I am doing this in the CR message:\n\nWhen doing an upgrade, nodes are rebooting, and the config of the local storage operator is broken by this reboot.\nAccording to this BZ, we should only use disk-id when using the local-storage operator, that\u0027s why this change.",
+      "parentUuid": "dfb73542_bff97483",
+      "revId": "ad7356b256e7380eaf8607d8412fe84dbe50d5b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "374d011a_b81c3c72",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-11-15T14:50:44Z",
       "side": 1,
       "message": "I think you will need {{ oc_tool_path }} instead of oc, or even better explore using community.kubernetes.k8s_log to get the logs?",
+      "revId": "ad7356b256e7380eaf8607d8412fe84dbe50d5b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d40cd0fc_c139036e",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-15T15:02:13Z",
+      "side": 1,
+      "message": "The advantages here of using shell cmd is to quickly get only the info needed instead of having a list of data that must be processed before being used.",
+      "parentUuid": "cff4237a_d7977a07",
       "revId": "ad7356b256e7380eaf8607d8412fe84dbe50d5b9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
