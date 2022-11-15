@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e44a52a3_4414bba1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-15T03:33:42Z",
+      "side": 1,
+      "message": "The workers are labeled properly. But one of the workers is not in good shape after the applying the configuration.\n\n$ KUBECONFIG\u003d$(pwd)/clusterconfigs-server03/kubeconfig oc get nodes --show-labels | grep worker\ndciokd-worker-0   Ready      worker   84m    v1.24.6+5157800   beta.kubernetes.io/arch\u003damd64,beta.kubernetes.io/os\u003dlinux,feature.node.kubernetes.io/network-sriov.capable\u003dtrue,kubernetes.io/arch\u003damd64,kubernetes.io/hostname\u003ddciokd-worker-0,kubernetes.io/os\u003dlinux,node-role.kubernetes.io/worker\u003d,node.openshift.io/os_id\u003drhcos\ndciokd-worker-1   Ready      worker   84m    v1.24.6+5157800   beta.kubernetes.io/arch\u003damd64,beta.kubernetes.io/os\u003dlinux,feature.node.kubernetes.io/network-sriov.capable\u003dtrue,kubernetes.io/arch\u003damd64,kubernetes.io/hostname\u003ddciokd-worker-1,kubernetes.io/os\u003dlinux,node-role.kubernetes.io/worker\u003d,node.openshift.io/os_id\u003drhcos\ndciokd-worker-2   NotReady   worker   74m    v1.24.6+5157800   beta.kubernetes.io/arch\u003damd64,beta.kubernetes.io/os\u003dlinux,feature.node.kubernetes.io/network-sriov.capable\u003dtrue,kubernetes.io/arch\u003damd64,kubernetes.io/hostname\u003ddciokd-worker-2,kubernetes.io/os\u003dlinux,node-role.kubernetes.io/worker\u003d,node.openshift.io/os_id\u003drhcos\n\n",
+      "revId": "ef5a90ee10b01ca39fe8e5d40e0380cb59cb879d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
