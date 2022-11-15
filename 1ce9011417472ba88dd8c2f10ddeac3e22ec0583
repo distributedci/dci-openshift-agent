@@ -1,0 +1,164 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fb4cc21_6e40281a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 56
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "Excellent work Beto! just minor things to clarify and polish before merging",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d8ed807_f768e439",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "should we remove \"hostvars.localhost\" since this runs in localhost?",
+      "range": {
+        "startLine": 149,
+        "startChar": 32,
+        "endLine": 149,
+        "endChar": 50
+      },
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed031f9a_cf3a6591",
+        "filename": "docs/acm.md",
+        "patchSetId": 56
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "I think here should read \"not all operators\" instead of \"all not operators\" :)",
+      "range": {
+        "startLine": 41,
+        "startChar": 216,
+        "endLine": 41,
+        "endChar": 223
+      },
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0dc90c5d_23404e2a",
+        "filename": "docs/acm.md",
+        "patchSetId": 56
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "I think there is an extra \"\u003e\" at the end of the line \"created\u003e.\"",
+      "range": {
+        "startLine": 51,
+        "startChar": 78,
+        "endLine": 51,
+        "endChar": 86
+      },
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b262881_7b8e95d5",
+        "filename": "docs/acm.md",
+        "patchSetId": 56
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "\"complete\" instead of \"completed\"",
+      "range": {
+        "startLine": 57,
+        "startChar": 125,
+        "endLine": 57,
+        "endChar": 134
+      },
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71caa302_8e4d2583",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "I see a few references to variables in this block with prefix \"hostvars.localhost\", but the acm-pre-run.yaml runs in localhost, then should we remove the prefix?",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "955b3d2c_6cb65265",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "same comment as above",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "243ecfec_627699e4",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

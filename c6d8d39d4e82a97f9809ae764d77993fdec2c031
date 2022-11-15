@@ -56,6 +56,30 @@
       },
       "revId": "c6d8d39d4e82a97f9809ae764d77993fdec2c031",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31816a3c_c1350f4b",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 55
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-15T03:46:48Z",
+      "side": 1,
+      "message": "I see Beto is setting now \u0027Launch [IPI/SNO/UPI/ACM] install\u0027 in step 3a-1",
+      "parentUuid": "de8f484d_df8a2cf0",
+      "range": {
+        "startLine": 246,
+        "startChar": 17,
+        "endLine": 246,
+        "endChar": 28
+      },
+      "revId": "c6d8d39d4e82a97f9809ae764d77993fdec2c031",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
