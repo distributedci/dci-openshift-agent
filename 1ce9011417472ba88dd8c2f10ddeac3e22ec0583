@@ -18,6 +18,40 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "733d9faf_3250e1e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 56
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "Hi Beto, great CR, thank you! Added some minor comments, nothing crucial, do not hesitate to ignore them.",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11d37968_d2346cd6",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "we could do it a bit shorter:\n\nwhen:\n  - install_type not in [\u0027assisted\u0027, \u0027acm\u0027]",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7d8ed807_f768e439",
@@ -37,6 +71,23 @@
         "endLine": 149,
         "endChar": 50
       },
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d273ec7_d43c2066",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "we could rewrite it a bit shorter:\n\n\u003e install_type | default(\u0027\u0027) not in [\u0027assisted\u0027, \u0027acm\u0027]",
       "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -112,6 +163,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b8cbd7e8_a23c006d",
+        "filename": "group_vars/all",
+        "patchSetId": 56
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "ok, so install_type is always defined, and we remove the check if it\u0027s defined or not from dci-openshift-agent.yml",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0bfeb7f_7f30d797",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "why do we use 0600 for kubeconfig and 0640 for credentials? Will they be read by another user?",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "71caa302_8e4d2583",
         "filename": "plays/acm-pre-run.yml",
         "patchSetId": 56
@@ -123,6 +208,23 @@
       "writtenOn": "2022-11-15T03:46:48Z",
       "side": 1,
       "message": "I see a few references to variables in this block with prefix \"hostvars.localhost\", but the acm-pre-run.yaml runs in localhost, then should we remove the prefix?",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff230fd3_95f27882",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "we\u0027re setting quite a lot variables during the installation, should we unset them to be empty after the installation, to avoid possible collisions?",
       "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -157,6 +259,40 @@
       "writtenOn": "2022-11-15T03:46:48Z",
       "side": 1,
       "message": "ditto",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e8296c9_723cb1a3",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "install_type not in [\u0027assisted\u0027, \u0027acm\u0027]",
+      "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd489e44_967608c4",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 1,
+      "message": "it would be nice to add a comment of this part of code does, jic if somebody would need to debug it one day.",
       "revId": "1ce9011417472ba88dd8c2f10ddeac3e22ec0583",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

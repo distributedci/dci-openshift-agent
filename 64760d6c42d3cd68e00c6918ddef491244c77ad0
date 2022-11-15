@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75fda30c_75d1a44d",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 56
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-15T12:59:39Z",
+      "side": 0,
+      "message": "is install_type always defined? I see that we verify it below",
+      "revId": "64760d6c42d3cd68e00c6918ddef491244c77ad0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
