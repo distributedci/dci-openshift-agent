@@ -67,7 +67,8 @@ ocs_install_type=
 # with ceph-external-cluster-details-exporter.py script
 external_ceph_data='JSON_PAYLOAD'
 
-# (Required) when enable_lso=true List of disk devices per node to use for LSO
+# (Optional) when enable_lso=true List of disk devices per node to use for LSO
+# If not specified, it will use all the local disks available
 # comma separated, all servers must have the same
 local_storage_devices='["/dev/sdX", "/dev/sdY", "/dev/sdZ"]'
 
