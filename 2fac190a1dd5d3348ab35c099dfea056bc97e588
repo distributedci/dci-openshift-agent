@@ -33,6 +33,24 @@
       "message": "Hi Beto, thank you, LGTM, let\u0027s merge it to get the first debug information.\n\nFor the future, I\u0027d propose to use a template to create a log file and dump all the debug information in-there.\nWe could also probably add more logs in that file as a next step: https://docs.openshift.com/container-platform/4.11/support/troubleshooting/troubleshooting-operator-issues.html#gathering-operator-logs_troubleshooting-operator-issues",
       "revId": "2fac190a1dd5d3348ab35c099dfea056bc97e588",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3d6ce6a_8e4d37f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-15T22:28:02Z",
+      "side": 1,
+      "message": "Thanks, Tatiana. In this case, I didn\u0027t want to introduce dependencies in the jobs_logs directory or the OC commands on the oml-role. But yeah, we can adapt it if we need more debug information.",
+      "parentUuid": "b93fb869_83d35886",
+      "revId": "2fac190a1dd5d3348ab35c099dfea056bc97e588",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
