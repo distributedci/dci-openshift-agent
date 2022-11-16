@@ -104,6 +104,24 @@
       "parentUuid": "c863978f_477a7c5b",
       "revId": "f972d51804fe36953761979811e5f2c04f892690",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "179c78e0_6e733d6e",
+        "filename": "roles/odf-setup/files/ocs-disk-gatherer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-16T09:32:36Z",
+      "side": 1,
+      "message": "I have added a logic of filtering with the jinja template, it should do the trick. Testing it",
+      "parentUuid": "7029ea93_cdd26cc5",
+      "revId": "f972d51804fe36953761979811e5f2c04f892690",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
