@@ -16,6 +16,23 @@
       "message": "Thanks for the feedback, highly appreciated! ",
       "revId": "f1b51a5bfe190838340e07b318cf955700a7cc8f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7485d7ac_0cb9f6cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 57
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-16T07:35:23Z",
+      "side": 1,
+      "message": "LGTM. Before giving +2, do we need to revalidate everything before merging? ",
+      "revId": "f1b51a5bfe190838340e07b318cf955700a7cc8f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
