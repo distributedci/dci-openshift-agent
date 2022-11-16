@@ -33,6 +33,23 @@
       "message": "Extending the block to cover other installation tasks",
       "revId": "e1e25e4bb5b68075304bcff36ad4a53c227da7d9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9253359d_8b949876",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-16T00:24:54Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "e1e25e4bb5b68075304bcff36ad4a53c227da7d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
