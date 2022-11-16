@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ba664ad_dc86dae8",
+        "filename": "roles/odf-setup/files/ocs-disk-gatherer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-16T09:25:23Z",
+      "side": 1,
+      "message": "In fact, I have done something similar when I have tested locally on 4.12 ^^",
+      "parentUuid": "39065cc2_58f38cbb",
+      "revId": "f972d51804fe36953761979811e5f2c04f892690",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ad31d518_68755c7d",
@@ -35,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c643b958_e8c99d05",
+        "filename": "roles/odf-setup/files/ocs-disk-gatherer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-16T09:25:23Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ad31d518_68755c7d",
+      "revId": "f972d51804fe36953761979811e5f2c04f892690",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c863978f_477a7c5b",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-11-16T00:23:54Z",
       "side": 1,
       "message": "I see that in this version you are removing the information about the disk name and the nodes. I think those lines are important to identify the disk that will be agreggated to the OCS cluster. In libvirt only /dev/sd[b-d] are dedicated for storage. The /dev/sda is used for the OS, I do not think all the disks need to be passed to be configured as volumes.\n\nSo I think that passing to the role the devices as is set now (/dev/sdx) is required and then the role will \"auto-magically\" discover the IDs only for those specific devices.",
+      "revId": "f972d51804fe36953761979811e5f2c04f892690",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7029ea93_cdd26cc5",
+        "filename": "roles/odf-setup/files/ocs-disk-gatherer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-16T09:25:23Z",
+      "side": 1,
+      "message": "I see your point but I don\u0027t like the middle ground solution which is very specific to the libvirt setup.\nIn fact, the local_storage_devices variable should be specific on every node instead of assuming that all nodes have the same disk name.\nI will try to do a compromise by setting local_storage_devices variable as optional.",
+      "parentUuid": "c863978f_477a7c5b",
       "revId": "f972d51804fe36953761979811e5f2c04f892690",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
