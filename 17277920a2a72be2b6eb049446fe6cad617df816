@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4b42ad3_99665c53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-16T22:51:05Z",
+      "side": 1,
+      "message": "CS are created properly\n\n$ oc get catalogsource -A\nNAMESPACE               NAME                     DISPLAY                  TYPE   PUBLISHER   AGE\nopenshift-marketplace   certified-operators      Certified Operators      grpc   Red Hat     47m\nopenshift-marketplace   community-operators      Community Operators      grpc   Red Hat     47m\nopenshift-marketplace   ibm-operator-catalog     ibm-operator-catalog     grpc   grpc        20m\nopenshift-marketplace   redhat-marketplace       Red Hat Marketplace      grpc   Red Hat     47m\nopenshift-marketplace   redhat-operators         Red Hat Operators        grpc   Red Hat     47m\nopenshift-marketplace   simple-demo-operator     simple-demo-operator     grpc   grpc        20m\nopenshift-marketplace   sriov-operator-catalog   sriov-operator-catalog   grpc   grpc        20m",
+      "revId": "17277920a2a72be2b6eb049446fe6cad617df816",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
