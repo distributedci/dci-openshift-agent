@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39065cc2_58f38cbb",
+        "filename": "roles/odf-setup/files/ocs-disk-gatherer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-16T00:23:54Z",
+      "side": 1,
+      "message": "Maybe deploy to a different namespace and have that one prepared with the labels required for PSA in 4.12.\n\nThey have the extended version of this: https://raw.githubusercontent.com/dmoessne/ocs-disk-gather/master/ocs-disk-gatherer-own-project.yaml",
+      "revId": "f972d51804fe36953761979811e5f2c04f892690",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad31d518_68755c7d",
+        "filename": "roles/odf-setup/files/ocs-disk-gatherer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-16T00:23:54Z",
+      "side": 1,
+      "message": "This one will need to be mirrored for disconnected",
+      "revId": "f972d51804fe36953761979811e5f2c04f892690",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c863978f_477a7c5b",
+        "filename": "roles/odf-setup/files/ocs-disk-gatherer.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-16T00:23:54Z",
+      "side": 1,
+      "message": "I see that in this version you are removing the information about the disk name and the nodes. I think those lines are important to identify the disk that will be agreggated to the OCS cluster. In libvirt only /dev/sd[b-d] are dedicated for storage. The /dev/sda is used for the OS, I do not think all the disks need to be passed to be configured as volumes.\n\nSo I think that passing to the role the devices as is set now (/dev/sdx) is required and then the role will \"auto-magically\" discover the IDs only for those specific devices.",
+      "revId": "f972d51804fe36953761979811e5f2c04f892690",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
