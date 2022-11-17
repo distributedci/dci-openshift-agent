@@ -34,6 +34,41 @@
       "parentUuid": "48b96957_99a73921",
       "revId": "958d53ee92fd5db32aec61613a93d0fad1d8a3df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d967c4e_25f338e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-17T22:10:44Z",
+      "side": 1,
+      "message": "thanks for the clarification",
+      "parentUuid": "173444f1_c0cbca9f",
+      "revId": "958d53ee92fd5db32aec61613a93d0fad1d8a3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45263871_6a5b279d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-17T22:10:44Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "958d53ee92fd5db32aec61613a93d0fad1d8a3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
