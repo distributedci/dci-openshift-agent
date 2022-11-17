@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4dff8f71_745a7f9c",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-17T10:47:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "374d011a_b81c3c72",
+      "revId": "ad7356b256e7380eaf8607d8412fe84dbe50d5b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cff4237a_d7977a07",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "The advantages here of using shell cmd is to quickly get only the info needed instead of having a list of data that must be processed before being used.",
       "parentUuid": "cff4237a_d7977a07",
+      "revId": "ad7356b256e7380eaf8607d8412fe84dbe50d5b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4033fce_ad6fdbd9",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-17T10:47:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d40cd0fc_c139036e",
       "revId": "ad7356b256e7380eaf8607d8412fe84dbe50d5b9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

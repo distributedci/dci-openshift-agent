@@ -34,6 +34,24 @@
       "parentUuid": "37a29fe2_f4c64ec3",
       "revId": "387340a0360e5ee1904ddb8e8b694e9a60f13982",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8456e042_99230b60",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-17T10:47:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6def5ec4_1bdc3e6d",
+      "revId": "387340a0360e5ee1904ddb8e8b694e9a60f13982",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
