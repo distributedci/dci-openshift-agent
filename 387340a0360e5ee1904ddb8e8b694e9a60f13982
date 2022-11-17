@@ -16,6 +16,24 @@
       "message": "Would it be possible to create a config map with the data instead of pulling it from the logs?",
       "revId": "387340a0360e5ee1904ddb8e8b694e9a60f13982",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6def5ec4_1bdc3e6d",
+        "filename": "roles/odf-setup/tasks/local-storage-operator.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-17T07:46:55Z",
+      "side": 1,
+      "message": "It was just a way of testing the template rendering, it is irrelevant now, I will remove this.",
+      "parentUuid": "37a29fe2_f4c64ec3",
+      "revId": "387340a0360e5ee1904ddb8e8b694e9a60f13982",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
