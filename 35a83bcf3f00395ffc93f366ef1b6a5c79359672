@@ -16,6 +16,23 @@
       "message": "LGTM, let\u0027s wait for a test Dallas",
       "revId": "35a83bcf3f00395ffc93f366ef1b6a5c79359672",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8ace69d_461e16ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T22:19:20Z",
+      "side": 1,
+      "message": "check dallas ocp-4.11-vanilla",
+      "revId": "35a83bcf3f00395ffc93f366ef1b6a5c79359672",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
