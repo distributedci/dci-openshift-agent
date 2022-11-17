@@ -320,7 +320,7 @@ API version to use when deploying HCO operator: hco.kubevirt.io/cnv_api_version
 | enable_lso                      | False    | Boolean | False                                                          | Deploys the Local Storage Operator.
 | enable_acm                      | False    | Boolean | False                                                          | Deploys the [ACM](https://www.redhat.com/en/technologies/management/advanced-cluster-management) Operator.
 | operator_skip_upgrade           | False    | List    | []                                                             | List of operators to skip during the upgrade.
-| additional_catalogs             | False    | List    | []                                                             | List additional index images that will used to set up additional operators catalogs.
+| custom_catalogs                 | False    | List    | []                                                             | List of custom catalogs to install alongside default catalog sources.
 
 Example:
 
@@ -486,10 +486,10 @@ In order to make additional operators available in disconnected environments is 
 
 The variable `operators_index` is used to specify the catalog image containing information for the operators that may be deployed in the cluster. By default the index is the one located at registry.redhat.io and according to the OCP version installed but it can be overridden with a custom image. In conjunction with `dci_operators` variable in allows the deployment of custom operators additionally to those directly managed by the agent.
 
-Additional catalogs can be configured for the cluster in order to allow the installation of operators not available in the one defined by `operators_index`. Set the `additional_catalogs` variable with the references to the catalog images. For example:
+Additional catalogs can be configured for the cluster to provide another source to install operators. Set the `custom_catalogs` variable with the references to the catalog images. For example:
 
 ```yaml
-additional_catalogs:
+custom_catalogs:
   - quay.io/telcoci/sriov-operator-catalog:latest
   - quay.io/telcoci/simple-demo-operator:v0.0.3
   - quay.io/telcoci/nfv-example-cnf-catalog:v0.2.9
