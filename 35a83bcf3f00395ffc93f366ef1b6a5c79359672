@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b8662dd_23c5bdf7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-17T22:13:38Z",
+      "side": 1,
+      "message": "LGTM, let\u0027s wait for a test Dallas",
+      "revId": "35a83bcf3f00395ffc93f366ef1b6a5c79359672",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
