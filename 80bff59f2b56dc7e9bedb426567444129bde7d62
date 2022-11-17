@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "030a3d13_ae5980fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-17T09:28:31Z",
+      "side": 1,
+      "message": "I\u0027ll wait for the execution before voting, in the meanwhile just leaving a minor comment",
+      "revId": "80bff59f2b56dc7e9bedb426567444129bde7d62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c4040d0_7259b8a4",
+        "filename": "roles/odf-setup/templates/ocs-disk-gatherer.yml.j2",
+        "patchSetId": 12
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-17T09:28:31Z",
+      "side": 1,
+      "message": "Just for readability purposes, I\u0027d put apiVersion and kind fields at the beginning, in the same way than for the other resources created",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 32
+      },
+      "revId": "80bff59f2b56dc7e9bedb426567444129bde7d62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
