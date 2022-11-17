@@ -33,6 +33,24 @@
       "message": "I see last job complained about oc file not found, I think your patch d-o-a 26729 should help here to get the client before.",
       "revId": "742e40cb37f6b72e54353c4eb0435df8e7e83b3a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "633727d5_24c46d06",
+        "filename": "roles/mirror-catalog/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:23:24Z",
+      "side": 1,
+      "message": "yes, the other one will be needed first",
+      "parentUuid": "e8a5be32_ed413ec0",
+      "revId": "742e40cb37f6b72e54353c4eb0435df8e7e83b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
