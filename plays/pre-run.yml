@@ -273,6 +273,7 @@
     - dci_disconnected | default(false) | bool
     - version.split("-")[0].split(".")[2] | int == 0
     - ("build:dev" in tags) or ("build:candidate" in tags)
+    - build_upstream | default(true) | bool
 
 - name: "Mirror Operators for offline mode"
   vars:
