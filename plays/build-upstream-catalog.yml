@@ -1,9 +1,10 @@
 - name: "Build custom index from upstream for OCP Dev/Candidate versions"
   vars:
     base_version: "{{ version.split('.')[0] }}.{{ version.split('.')[1] }}"
-    index_image: "{{ local_registry_host }}:{{ local_registry_port }}/telcoci/upstream/sriov-operator-catalog:{{ base_version }}"
+    sriov_catalog: "{{ local_registry_host }}:{{ local_registry_port }}/telcoci/upstream/sriov-operator-catalog:{{ base_version }}"
     sriov_bundle: "{{ local_registry_host }}:{{ local_registry_port }}/telcoci/upstream/sriov-operator-bundle"
-    sriov_bundle_tag: "{{ local_registry_host }}:{{ local_registry_port }}/telcoci/upstream/sriov-operator-bundle:{{ base_version }}"
+  when:
+    - enable_sriov | bool
   block:
     # Blocks to build other operators bundles may be required
     - name: "Building SRIOV bundle"
@@ -42,14 +43,14 @@
           shell: >
             podman build .
             -f bundleci.Dockerfile
-            -t {{ sriov_bundle_tag }}
+            -t {{ sriov_bundle }}:{{ base_version }}
           args:
             chdir: "{{ bundle_tmp_dir }}/sriov-network-operator"
 
         - name: "Push the new bundle image to registry"
           shell:
             cmd: >
-              podman push {{ sriov_bundle_tag }}
+              podman push {{ sriov_bundle }}:{{ base_version }}
               --authfile {{ dci_pullsecret_file }}
 
         - name: "Get bundle image SHA256"
@@ -57,7 +58,7 @@
             cmd: >
               skopeo inspect
               --authfile {{ dci_pullsecret_file }}
-              docker://{{ sriov_bundle_tag }} | jq -r '.Digest'
+              docker://{{ sriov_bundle }}:{{ base_version }} | jq -r '.Digest'
           register: bundle_sha
           retries: 5
           delay: 5
@@ -73,7 +74,7 @@
       include_role:
         name: fbc-catalog
       vars:
-        fbc_index_image: "{{ index_image }}"
+        fbc_index_image: "{{ sriov_catalog }}"
         fbc_bundles:
           - "{{ sriov_bundle }}@{{ bundle_sha.stdout }}"
         fbc_opm_args: "--skip-tls-verify=false"
@@ -81,20 +82,17 @@
     - name: "Push the catalog image to registry"
       shell:
         cmd: >
-          podman push {{ index_image }}
+          podman push {{ sriov_catalog }}
           --authfile {{ dci_pullsecret_file }}
 
-    - name: "Remove local bundle image"
+    - name: "Remove local images"
       shell:
         cmd: >
-          podman rmi -f "{{ sriov_bundle_tag }}"
+          podman rmi -f
+          {{ sriov_bundle }}:{{ base_version }}
+          {{ sriov_catalog }}
 
-    - name: "Remove local index image"
-      shell:
-        cmd: >
-          podman rmi -f "{{ index_image }}"
-
-    - name: "Override the source index image for mirroring"
+    - name: "Set the upstream sriov catalog image and version"
       set_fact:
-        operators_index: "{{ index_image }}"
+        upstream_sriov_catalog: "{{ sriov_catalog }}"
 ...

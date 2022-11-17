@@ -1,0 +1,11 @@
+---
+kind: ImageContentSourcePolicy
+metadata:
+  name: "{{ (mc_catalog | basename).split(':')[0] }}"
+spec:
+  repositoryDigestMirrors:
+{% for key, value in mc_mirrors.items() %}
+  - mirrors:
+    - {{ value }}
+    source: {{ key }}
+{% endfor %}
