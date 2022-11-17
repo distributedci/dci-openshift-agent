@@ -1,0 +1,429 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e924f46_14a8b269",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 63
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Could you please remove those PRs, there\u0027s no need to include them in the commit and also those are not public",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc9ccb03_a6dbf15e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 63
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Is this still the case?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb13d6b1_45a6151f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 63
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Great work here Beto, adding some suggestions",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a89d52dd_01b25313",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "The previous \"when\" statement was for the block, not only for the pre-run, with this change the \"Setup job_logs directory\" is always going to be executed, is this your intention?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a14a5c46_f49211b4",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "No need to default install_type, since by default is ipi",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a3e286c_e5874cae",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Does ACM needs a provisioner? I think this could be executed in the jumphost/localhost but I guess that would imply its own play..\n\nWould it make it easier that way, running from localhost?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72791bee_de2a4f94",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Are the virtual lab docs coming later?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f7ce29c_39aa9b63",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "typo, use instead: \"A node\"",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e25f779_62c7cf8c",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "vCPU?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad7327e4_8ee63b24",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Use relative paths for the docs instead, e.g. ../roles/acm-setup/README.md and ../roles/acm-sno/README.md",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44c6bebe_2d1f4ed2",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Please remove this repo as is private, you could add a snippet instead",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69a11f93_cc344c13",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "This repo is also private, provide a snippet if possible",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df197654_da278ef9",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78226da2_8c5be8fd",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "instead of dashboard use Web UI",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ac552c2_eb8fd574",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "spacing and use Web UI instead of dashboard",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bea0348d_ae16edc5",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Could you add a section with some warnings, for example to me the most important part is related to kubeconfigs.\n\nIf someone deployed the cluster hub with dci and later they want to deploy acm on it, the \u003cdci_cluster_config_dir\u003e/kubeconfig will be replaced with the kubeconfig of the spoken cluster.  It is important they make a copy or keep the job of the deployment to get the copy of the cluster hub kubeconfig.",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e75c2e2_f6d60a1c",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "This could be simplified if we run the install in the jumphost 😄",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16496c69_69291f8f",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Can you do multiline here too? could be something like:\n\n    hub_webserver: \u003e\n      {{ cluster_install_info.platform.baremetal.bootstrapOSImage |\n        urlsplit(\u0027scheme\u0027) }}://\n      {{ cluster_install_info.platform.baremetal.bootstrapOSImage |\n        urlsplit(\u0027netloc\u0027) }}",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a83918ab_164fc2eb",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "why this one is false?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5aa06bf5_a9598bc5",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "no need to default",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd15db99_633ec61a",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "😢",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ca860b2_92a34aa4",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "No need for the default",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fc7e761_bd6fb317",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "Is this multi-line working? I think it should be written:\n\n    when: \u003e\n      (install_type \u003d\u003d \u0027sno\u0027 and sno_install_type \u003d\u003d \u0027baremetal) or\n      (install_type \u003d\u003d \u0027acm\u0027)",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd755664_093943c7",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47f7c602_63a74d53",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-17T23:20:50Z",
+      "side": 1,
+      "message": "I didn\u0027t realize we are using parenthesis instead of brackets, I wonder if it considers this a set and not a list",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
