@@ -16,6 +16,24 @@
       "message": "I thought the effect without the else \"\" was the same. What is doing that? adding an space? ",
       "revId": "958d53ee92fd5db32aec61613a93d0fad1d8a3df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "173444f1_c0cbca9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-11-17T22:01:08Z",
+      "side": 1,
+      "message": "Without the `else` I have this error message:\n\n``` AnsibleUndefinedVariable: the inline if-expression on line 55 evaluated to false and no else section was defined. ```",
+      "parentUuid": "48b96957_99a73921",
+      "revId": "958d53ee92fd5db32aec61613a93d0fad1d8a3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
