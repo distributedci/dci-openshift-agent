@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1ad936f_9d95683b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-18T16:00:39Z",
+      "side": 1,
+      "message": "I\u0027ll continue on Monday, I managed to pass the correct arguments to dci-openshift-app-agent-ctl, but then, I\u0027m dealing with two issues:\n\n- If I specify -d argument, d-o-a-a-ctl overrides the CONFIG_DIR and uses an incorrect one. Theoretically fixed by not using -d in one of the executions of d-o-a-a-ctl\n- If using prefixes, in d-o-a-a-ctl, it doesn\u0027t only take a settings file based on the prefix, but it also takes a hosts file based on the prefix, and this does not exist in BOS2. I need to manually copy-pasting the prefix for the parameters I am passing.",
+      "revId": "6afd9406fa99894c6ea1a26972cb920ea45ff573",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
