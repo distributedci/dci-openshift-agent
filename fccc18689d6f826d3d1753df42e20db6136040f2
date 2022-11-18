@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "05552569_f3727b23",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 63
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e924f46_14a8b269",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc9ccb03_a6dbf15e",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "Is this still the case?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d230f3c_93ee0c16",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 63
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "yes, I think that it will require moving to sushi-tools and adding support for IEFI",
+      "parentUuid": "bc9ccb03_a6dbf15e",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -69,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb27c58c_8d6ebfc0",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "yes, at this time that is only needed by the UPI pre-run, but at some time may be needed by the other installers. No big deal, is just a task to create a directory",
+      "parentUuid": "a89d52dd_01b25313",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a14a5c46_f49211b4",
@@ -82,6 +136,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "No need to default install_type, since by default is ipi",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ccfe67e8_28a9d524",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a14a5c46_f49211b4",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -103,6 +175,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "591b1c7b_2bf9d72a",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "it is the same from the provisioner or localhost, and I want to keep the \"rescue: \u0026teardown_failure\". Do not want to start creating plays in parallel to the tasks already in place for DOA if possible.",
+      "parentUuid": "2a3e286c_e5874cae",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "72791bee_de2a4f94",
@@ -116,6 +206,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "Are the virtual lab docs coming later?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5812a3e_e21d0dac",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "remnants of a copy/paste",
+      "parentUuid": "72791bee_de2a4f94",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -137,6 +245,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "71fe2ab8_29d596d2",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f7ce29c_39aa9b63",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3e25f779_62c7cf8c",
@@ -150,6 +276,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "vCPU?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a154a074_9ce71d07",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e25f779_62c7cf8c",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -171,6 +315,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20f1234a_ae996935",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad7327e4_8ee63b24",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44c6bebe_2d1f4ed2",
@@ -184,6 +346,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "Please remove this repo as is private, you could add a snippet instead",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dda48512_b56a1df9",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44c6bebe_2d1f4ed2",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -205,6 +385,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "55291d00_e147ce12",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69a11f93_cc344c13",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df197654_da278ef9",
@@ -218,6 +416,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "ditto",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c19e8802_0c757e08",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df197654_da278ef9",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -239,6 +455,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb93621c_54c7b629",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "78226da2_8c5be8fd",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3ac552c2_eb8fd574",
@@ -252,6 +486,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "spacing and use Web UI instead of dashboard",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "beda8d36_9f278542",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3ac552c2_eb8fd574",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -273,6 +525,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd83ec68_ca18faaa",
+        "filename": "docs/acm.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "The kubeconfig of the original cluster is left untouched, it will be kept in cluster_configs path defined in its inventory.\n\nFor the new spoke cluster, the kubeconfig is uploaded to DCI and also saved in the cluster_configs directory path defined for the spoke cluster.\n\nUpdated the docs",
+      "parentUuid": "bea0348d_ae16edc5",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e75c2e2_f6d60a1c",
@@ -286,6 +556,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "This could be simplified if we run the install in the jumphost 😄",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8221d711_32c98fb1",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "hehe, yeah. For the next iteration.",
+      "parentUuid": "0e75c2e2_f6d60a1c",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -307,6 +595,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2aad1df_54a77367",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16496c69_69291f8f",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a83918ab_164fc2eb",
@@ -320,6 +626,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "why this one is false?",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba8e0176_b8450333",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "In disconnected the mirror-ocp-release uses the cache directory, if the artifacts are already there is no need to re-download. We already have the release.txt cached.\n\nIn connected, we force the execution just execute the tasks that grab the release file to get the URLs for the required ISOs/img files",
+      "parentUuid": "a83918ab_164fc2eb",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -341,6 +665,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b437876_c95342bf",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aa06bf5_a9598bc5",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cd15db99_633ec61a",
@@ -354,6 +696,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "😢",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f758c7b3_378554cb",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "I hear you",
+      "parentUuid": "cd15db99_633ec61a",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -375,6 +735,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "41a4e8ee_77774b72",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ca860b2_92a34aa4",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2fc7e761_bd6fb317",
@@ -388,6 +766,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "Is this multi-line working? I think it should be written:\n\n    when: \u003e\n      (install_type \u003d\u003d \u0027sno\u0027 and sno_install_type \u003d\u003d \u0027baremetal) or\n      (install_type \u003d\u003d \u0027acm\u0027)",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e676789d_1143c384",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Well, those have been working. Tested it multiple times.",
+      "parentUuid": "2fc7e761_bd6fb317",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -409,6 +805,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "39f35214_5e2bb86f",
+        "filename": "roles/mirror-ocp-release/tasks/images.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd755664_093943c7",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "47f7c602_63a74d53",
@@ -422,6 +836,24 @@
       "writtenOn": "2022-11-17T23:20:50Z",
       "side": 1,
       "message": "I didn\u0027t realize we are using parenthesis instead of brackets, I wonder if it considers this a set and not a list",
+      "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d79e16f8_34b0f515",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 63
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-18T01:19:25Z",
+      "side": 1,
+      "message": "hehehe, miracles!",
+      "parentUuid": "47f7c602_63a74d53",
       "revId": "fccc18689d6f826d3d1753df42e20db6136040f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
