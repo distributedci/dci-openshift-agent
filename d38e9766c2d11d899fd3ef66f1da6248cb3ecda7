@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "33cfdd1b_e497ab8d",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-18T22:58:33Z",
+      "side": 1,
+      "message": "Yeah that\u0027s a good idea, we will need another operator to see how that would look like, I\u0027ll leave it as is but to make that change when we have another one",
+      "parentUuid": "50fe5a82_cd38b497",
+      "revId": "d38e9766c2d11d899fd3ef66f1da6248cb3ecda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "70299bbd_f829da4a",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-11-18T21:34:02Z",
       "side": 1,
       "message": "Maybe add a recommendation about having the latest stable versions installed. Old version may have missing features.",
+      "revId": "d38e9766c2d11d899fd3ef66f1da6248cb3ecda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39f386d3_2f444014",
+        "filename": "roles/mirror-catalog/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-18T22:58:33Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "70299bbd_f829da4a",
       "revId": "d38e9766c2d11d899fd3ef66f1da6248cb3ecda7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -75,6 +111,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b86153a1_553799a9",
+        "filename": "roles/mirror-catalog/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-18T22:58:33Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "8a06277e_d3a6160d",
+      "range": {
+        "startLine": 17,
+        "startChar": 14,
+        "endLine": 17,
+        "endChar": 25
+      },
+      "revId": "d38e9766c2d11d899fd3ef66f1da6248cb3ecda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "38a97bf1_5e8584ca",
@@ -88,6 +148,30 @@
       "writtenOn": "2022-11-18T21:34:02Z",
       "side": 1,
       "message": "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz",
+      "range": {
+        "startLine": 20,
+        "startChar": 7,
+        "endLine": 20,
+        "endChar": 112
+      },
+      "revId": "d38e9766c2d11d899fd3ef66f1da6248cb3ecda7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0551ca37_b3451040",
+        "filename": "roles/mirror-catalog/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-18T22:58:33Z",
+      "side": 1,
+      "message": "Using the documentation so others can install it the way they want :)",
+      "parentUuid": "38a97bf1_5e8584ca",
       "range": {
         "startLine": 20,
         "startChar": 7,
