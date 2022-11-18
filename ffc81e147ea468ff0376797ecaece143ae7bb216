@@ -50,6 +50,23 @@
       "message": "let\u0027s check final result in dallas",
       "revId": "ffc81e147ea468ff0376797ecaece143ae7bb216",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "219a4c1f_c07bdf25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-18T15:23:19Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "ffc81e147ea468ff0376797ecaece143ae7bb216",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
