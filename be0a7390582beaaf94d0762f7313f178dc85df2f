@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "317982d5_4604b65e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 42
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-22T22:19:19Z",
+      "side": 1,
+      "message": "\nI took a look to the upgrade issues and documented the findings here: https://issues.redhat.com/browse/CILAB-900 \n\nWill do a re-check to see if the issue happens again. ",
+      "revId": "be0a7390582beaaf94d0762f7313f178dc85df2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
