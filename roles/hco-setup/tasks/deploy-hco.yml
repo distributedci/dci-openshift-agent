@@ -1,13 +1,4 @@
 ---
-# this may happen at 2.4.
-- name: set API version for <= 2.4
-  when:
-    - cnv_version is defined
-    - cnv_version is version('2.4', '<=')
-  set_fact:
-      api_version: v1alpha1
-  changed_when: false
-
 - name: install hco
   community.kubernetes.k8s:
     definition:
