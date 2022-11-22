@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b16cb7d3_2a40aed3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-22T12:16:07Z",
+      "side": 1,
+      "message": "Hi Bill, we have a story to remove deprecated API from d-o-a and move to GA whenever possible. \n\nhco.kubevirt.io/v1alpha1 is deprecated since OCP-4.8, here is a link, page 24: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/pdf/openshift_virtualization/openshift_container_platform-4.8-openshift_virtualization-en-us.pdf \n\nDo you know how to test the HCO installation, to ensure that we didn\u0027t break anything? ",
+      "revId": "45faec4a9c71f9d63dfd916e875087a3c50e3221",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
