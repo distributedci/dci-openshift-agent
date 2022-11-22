@@ -34,6 +34,24 @@
       "parentUuid": "b16cb7d3_2a40aed3",
       "revId": "45faec4a9c71f9d63dfd916e875087a3c50e3221",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f21efe4b_ca0810d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-22T14:26:39Z",
+      "side": 1,
+      "message": "Great, thank you for the testing hint! Do you know if we could move from v1beta1 to GA v1 as well?",
+      "parentUuid": "88346b27_49fa5efd",
+      "revId": "45faec4a9c71f9d63dfd916e875087a3c50e3221",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
