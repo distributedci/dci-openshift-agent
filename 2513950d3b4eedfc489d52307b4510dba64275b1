@@ -33,6 +33,24 @@
       "message": "Now that you are fixing this, I think the question sounds odd, Maybe we wanted to say \u0027Where can you find some documentation...?\" wdyt?",
       "revId": "2513950d3b4eedfc489d52307b4510dba64275b1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "211b6ff9_ef1de6f7",
+        "filename": "docs/support.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-22T23:02:53Z",
+      "side": 1,
+      "message": "Sure 😄 I mainly focused in the formatting, but let me fix that in the next patchset",
+      "parentUuid": "43eaa5d2_45b34463",
+      "revId": "2513950d3b4eedfc489d52307b4510dba64275b1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
