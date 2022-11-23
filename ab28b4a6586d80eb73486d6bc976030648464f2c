@@ -33,6 +33,23 @@
       "message": "It seems that the change is working fine and not breaking the current logic, as d-o-a-a change with default config was launched correctly",
       "revId": "ab28b4a6586d80eb73486d6bc976030648464f2c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c71b7f2_3cb2c692",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-23T10:26:05Z",
+      "side": 1,
+      "message": "The change is tested in BOS2, it seems safe to merge. Thank you Ramon!",
+      "revId": "ab28b4a6586d80eb73486d6bc976030648464f2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
