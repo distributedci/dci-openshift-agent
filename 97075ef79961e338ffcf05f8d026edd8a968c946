@@ -16,6 +16,23 @@
       "message": "LGTM, waiting a successful test to put a +2 :)",
       "revId": "97075ef79961e338ffcf05f8d026edd8a968c946",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c953b20_257a67e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-23T16:34:02Z",
+      "side": 1,
+      "message": "lgtm",
+      "revId": "97075ef79961e338ffcf05f8d026edd8a968c946",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
