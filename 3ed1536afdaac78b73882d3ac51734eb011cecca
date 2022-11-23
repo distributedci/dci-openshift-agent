@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "3ed1536afdaac78b73882d3ac51734eb011cecca",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a204869_ff91dbd3",
+        "filename": "plays/install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-23T20:59:36Z",
+      "side": 1,
+      "message": "I\u0027m thinking that we should do some retries in here, just in case, wdyt?",
+      "revId": "3ed1536afdaac78b73882d3ac51734eb011cecca",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
