@@ -33,6 +33,46 @@
       "message": "This change looks good for me in disconnected mode, for connected we may need to address other issues to support build from upstream like: \n- Registry port may not be mandatory\n- Pull secrets for target_repo + quay.io/openshift-release-dev\n- The target repo needs support for nested registries or we can allow to override the target repository build images\n\nLet\u0027s see the test in 4.10 and the one on libvirt using custom_catalogs. \n\nThanks!",
       "revId": "2254077f75344157524da95dcccb9726a11607ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7cb65d85_52b2fcf4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-23T08:11:03Z",
+      "side": 1,
+      "message": "I\u0027m not an expert on this topic but overall looks fine, only one typo I\u0027ve seen",
+      "revId": "2254077f75344157524da95dcccb9726a11607ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b32f290_7517953a",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 22
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-23T08:11:03Z",
+      "side": 1,
+      "message": "typo: to",
+      "range": {
+        "startLine": 39,
+        "startChar": 37,
+        "endLine": 39,
+        "endChar": 38
+      },
+      "revId": "2254077f75344157524da95dcccb9726a11607ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
