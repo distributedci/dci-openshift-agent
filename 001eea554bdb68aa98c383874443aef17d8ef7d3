@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3dfa622_9fc63120",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-24T20:38:17Z",
+      "side": 1,
+      "message": "you are right it was taking precedence on over the inventory in the CI. Details in  https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#ansible-variable-precedence",
+      "parentUuid": "ae48b9a9_60bfe8fb",
+      "revId": "001eea554bdb68aa98c383874443aef17d8ef7d3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4bbc47d_634cdfdf",
