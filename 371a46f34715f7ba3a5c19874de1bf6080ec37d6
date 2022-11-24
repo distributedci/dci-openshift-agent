@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "371a46f34715f7ba3a5c19874de1bf6080ec37d6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f5ffe90_a5e55493",
+        "filename": "test-runner",
+        "patchSetId": 6
+      },
+      "lineNbr": 600,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-24T21:41:22Z",
+      "side": 1,
+      "message": "I don\u0027t understand why we need to do that. Doesn\u0027t seem logic.",
+      "revId": "371a46f34715f7ba3a5c19874de1bf6080ec37d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
