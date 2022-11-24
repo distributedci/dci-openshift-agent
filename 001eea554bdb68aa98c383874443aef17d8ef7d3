@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b15c36_9d9d3b13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T16:33:42Z",
+      "side": 1,
+      "message": "Fred, \n\nFrom this job output, I suspect the real problem is that the install_type is a fact only accessible to localhost and not the provisioner, because in the error below[1] it\u0027s calling the node-prep role, and that could only happen if install_type is undefined or install_type \u003d\u003d \u0027ipi\u0027, and in your case is equals to \"sno\", but is not getting it, so we might need to change the \"install_type\" vars in the conditions of plays/install.yml to \"hostvars.localhost.install_type\" because the install.yml play runs in the provisioner. \n\n[1] https://www.distributed-ci.io/jobs/43a16721-3e22-42e7-b486-11971f95675a/jobStates?sort\u003ddate\u0026task\u003d73c94b41-adb3-4a35-8694-5154a7b1d008\n[2] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/install.yml#L59",
+      "revId": "001eea554bdb68aa98c383874443aef17d8ef7d3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4bbc47d_634cdfdf",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T16:33:42Z",
+      "side": 1,
+      "message": "we need sno here too, then the plays/install.yaml will call the sno-node-prep and sno-installer roles",
+      "revId": "001eea554bdb68aa98c383874443aef17d8ef7d3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
