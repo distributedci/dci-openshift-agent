@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad6ef1f1_a2e4b357",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T20:29:40Z",
+      "side": 1,
+      "message": "LGTM, this time should work",
+      "revId": "841ec0a919d086068b4f285f12698e2885502ad9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df944d9e_8659f098",
+        "filename": "test-runner",
+        "patchSetId": 7
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T20:29:40Z",
+      "side": 1,
+      "message": "just for the history, the default install_type\u003dipi in https://github.com/redhat-cip/dci-openshift-agent/blob/master/group_vars/all#L15 was causing us issues,",
+      "revId": "841ec0a919d086068b4f285f12698e2885502ad9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
