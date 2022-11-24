@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "538a429d7135bf233aa9a13a68c77ad5cc580e08",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8f060be_33d92545",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 46
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-11-24T10:43:39Z",
+      "side": 1,
+      "message": "Finally ready to be merged, results on ROX and RWX are not relevant because the ODF install does not support it.",
+      "revId": "538a429d7135bf233aa9a13a68c77ad5cc580e08",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
