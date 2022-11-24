@@ -16,6 +16,23 @@
       "message": "If a test with cnv is working (in 4.7), I\u0027ll give you a +2",
       "revId": "b1ac30a2a840a33cef9aedad76ff194e00c92830",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9815b2a_7ef6b21f",
+        "filename": "roles/hco-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-24T19:49:17Z",
+      "side": 1,
+      "message": "Hello Tatiana, starting this\n\nWe are not allowing the configuration of the api_version for any other resource. In this case, we should use the oc_version var https://github.com/redhat-cip/dci-openshift-agent/blob/ef7f33957e196ac6845a4bc8e445cb8678444e77/plays/deploy-operators.yml#L16-L18 and set the api_version as v1beta1 for \u003c\u003d4.7.\n\nAs we are going to remediate other blocks/APIs, what about having a task where we define the xyz_api_version that is deprecated but still available in the OCP version that we are testing\n\n```\n- name: \"Deprecated APIs \u003c\u003d4.7\"\n  set facts:\n    cnv_api_version: v1beta1\n    acm_api_version: v1beta1\n    hco_api_version: v1alpha\n  when:\n    - ocp_version is version(\"4.8\", \"\u003c\") \n```\n\nThen we select the proper one as you are doing here.",
+      "revId": "b1ac30a2a840a33cef9aedad76ff194e00c92830",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
