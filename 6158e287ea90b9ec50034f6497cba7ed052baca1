@@ -50,6 +50,69 @@
       "message": "check dallas ocp-4.10-vcp",
       "revId": "6158e287ea90b9ec50034f6497cba7ed052baca1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c474eb8_08678351",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-24T14:49:21Z",
+      "side": 1,
+      "message": "some comments from my side",
+      "revId": "6158e287ea90b9ec50034f6497cba7ed052baca1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f37d494a_709a9db3",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-24T14:49:21Z",
+      "side": 1,
+      "message": "this is true because it is in group_vars/all, isn\u0027t it? so, can we remove this condition?",
+      "range": {
+        "startLine": 8,
+        "startChar": 8,
+        "endLine": 8,
+        "endChar": 33
+      },
+      "revId": "6158e287ea90b9ec50034f6497cba7ed052baca1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22f39ded_481122e8",
+        "filename": "roles/hco-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-24T14:49:21Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 20,
+        "startChar": 5,
+        "endLine": 20,
+        "endChar": 31
+      },
+      "revId": "6158e287ea90b9ec50034f6497cba7ed052baca1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

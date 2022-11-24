@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c262c6c8_9f112c23",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-24T14:49:21Z",
+      "side": 0,
+      "message": "here, the registry host and port are extracted from hub_registry variable. Is it save to delete these two lines?",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 68
+      },
+      "revId": "97075ef79961e338ffcf05f8d026edd8a968c946",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
