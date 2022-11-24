@@ -33,6 +33,24 @@
       "message": "we need sno here too, then the plays/install.yaml will call the sno-node-prep and sno-installer roles",
       "revId": "001eea554bdb68aa98c383874443aef17d8ef7d3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "193b3a9d_25695d43",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-24T17:48:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a4bbc47d_634cdfdf",
+      "revId": "001eea554bdb68aa98c383874443aef17d8ef7d3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
