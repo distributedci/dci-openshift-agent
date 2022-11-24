@@ -97,4 +97,7 @@
     - name: "Override the source index image for mirroring"
       set_fact:
         operators_index: "{{ index_image }}"
+
+  when: enable_sriov | bool
+
 ...
