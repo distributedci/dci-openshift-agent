@@ -14,6 +14,8 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+set -x
+
 PID2=
 RET=1
 PIPELINE_ARG=
@@ -261,8 +263,6 @@ if [ -n "$GERRIT_SSH_ID" ]; then
 fi
 
 trap finish 0
-
-set -x
 
 QUEUEID="queue-id:${DCI_QUEUE_JOBID:=noqueue.$$}"
 CHANGEID=$(basename "$DIR")
