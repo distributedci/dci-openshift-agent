@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "7a9cd954_4c1e0fc3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-24T20:16:00Z",
+      "side": 1,
+      "message": "yeah, the only problem is with opm. In our case, we manually copied the pull secrets to .docker/configs.json some time ago as workaround. Then we found that we can set DOCKER_CONFIG variable pointing to a different path. That was applied to other tasks but missed here.\n\nThe other thing is that once you log in to a registry, the credentials are cached, so you do not see authentication issues unless you explicitly logout from the registry.",
+      "parentUuid": "66da4656_6ed6613e",
+      "revId": "054fb691a28125c6b566a9202b5fcbc4cf9fe023",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "f30d94eb_abf51081",
         "filename": "plays/assisted-pre-run.yml",
         "patchSetId": 3
@@ -31,6 +49,24 @@
       "writtenOn": "2022-11-24T20:04:42Z",
       "side": 1,
       "message": "I think the hostvars.localhost is reduntant, since this play runs already in the localhost, but it\u0027s not big deal",
+      "revId": "054fb691a28125c6b566a9202b5fcbc4cf9fe023",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de1e9f10_e6fdebff",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-24T20:16:00Z",
+      "side": 1,
+      "message": "yeah, wanted to keep it that way as all the other variables in the file are using the same pattern.",
+      "parentUuid": "f30d94eb_abf51081",
       "revId": "054fb691a28125c6b566a9202b5fcbc4cf9fe023",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
