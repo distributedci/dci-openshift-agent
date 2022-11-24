@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "983528e7_3ab450f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T15:15:44Z",
+      "side": 1,
+      "message": "could you please clarify why do we need baremetal_deploy repo for SNO?",
+      "revId": "5d8278b194c7152044e0d29283ca86761e631cdb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
