@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "e977c2bbc3ec17dd2fb3a1c81d18cef1e4998c1a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "665ca9dd_98c4dff2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-24T14:52:04Z",
+      "side": 1,
+      "message": "LGTM, but as I said, as I\u0027m not an expert on this, I\u0027d prefer that some other people votes too",
+      "revId": "e977c2bbc3ec17dd2fb3a1c81d18cef1e4998c1a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
