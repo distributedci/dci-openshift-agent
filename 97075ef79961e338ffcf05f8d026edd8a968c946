@@ -22,6 +22,30 @@
       },
       "revId": "97075ef79961e338ffcf05f8d026edd8a968c946",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60d316c9_17cfa4ca",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-24T19:36:26Z",
+      "side": 0,
+      "message": "It was meant to be used below (line 87), but since local_registry is already defined, then is not needed any longer",
+      "parentUuid": "c262c6c8_9f112c23",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 68
+      },
+      "revId": "97075ef79961e338ffcf05f8d026edd8a968c946",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
