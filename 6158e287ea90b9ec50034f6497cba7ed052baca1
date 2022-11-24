@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.11-vanilla",
       "revId": "6158e287ea90b9ec50034f6497cba7ed052baca1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59d8fe4e_c2659985",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T03:21:24Z",
+      "side": 1,
+      "message": "interesting use of conditions and variables",
+      "revId": "6158e287ea90b9ec50034f6497cba7ed052baca1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
