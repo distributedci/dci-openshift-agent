@@ -38,6 +38,41 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "191ceb9b_0ba3a8b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T20:19:34Z",
+      "side": 1,
+      "message": "Ack, thanks for the clarification",
+      "parentUuid": "7a9cd954_4c1e0fc3",
+      "revId": "054fb691a28125c6b566a9202b5fcbc4cf9fe023",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fccddbd9_67179a35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T20:19:34Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "054fb691a28125c6b566a9202b5fcbc4cf9fe023",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "f30d94eb_abf51081",
         "filename": "plays/assisted-pre-run.yml",
         "patchSetId": 3
