@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66da4656_6ed6613e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T20:04:42Z",
+      "side": 1,
+      "message": "Beto looks good tome, just one question, if I get this correctly only means certain tools will use DOCKER_CONFIG, the rest should continue using the pull-secret creds directly? ",
+      "revId": "054fb691a28125c6b566a9202b5fcbc4cf9fe023",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f30d94eb_abf51081",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-24T20:04:42Z",
+      "side": 1,
+      "message": "I think the hostvars.localhost is reduntant, since this play runs already in the localhost, but it\u0027s not big deal",
+      "revId": "054fb691a28125c6b566a9202b5fcbc4cf9fe023",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
