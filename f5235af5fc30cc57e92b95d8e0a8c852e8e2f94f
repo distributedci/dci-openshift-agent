@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a92a09c_42ae9ed9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-25T12:04:11Z",
+      "side": 1,
+      "message": "I\u0027ll recheck after finishing the debug job from https://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/26740 to check if it\u0027s not breaking anything in the default execution",
+      "revId": "f5235af5fc30cc57e92b95d8e0a8c852e8e2f94f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
