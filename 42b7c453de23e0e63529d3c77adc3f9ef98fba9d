@@ -22,6 +22,30 @@
       },
       "revId": "42b7c453de23e0e63529d3c77adc3f9ef98fba9d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b1120e6_e31d18ed",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-11-25T15:19:33Z",
+      "side": 1,
+      "message": "Yes, good idea, I renamed the task",
+      "parentUuid": "968aad9a_5de0d848",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 44
+      },
+      "revId": "42b7c453de23e0e63529d3c77adc3f9ef98fba9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
