@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "968aad9a_5de0d848",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-25T10:19:48Z",
+      "side": 1,
+      "message": "Should we change this task name to avoid using the word \"workaround\"?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 44
+      },
+      "revId": "42b7c453de23e0e63529d3c77adc3f9ef98fba9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
