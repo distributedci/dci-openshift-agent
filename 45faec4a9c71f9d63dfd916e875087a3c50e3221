@@ -69,6 +69,24 @@
       "message": "should we use cnv_api_version instead of api_version? to make it less generic. Also we need to add an entry in the doc.",
       "revId": "45faec4a9c71f9d63dfd916e875087a3c50e3221",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a562184_69480cb5",
+        "filename": "roles/hco-setup/tasks/deploy-hco.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-25T08:53:31Z",
+      "side": 1,
+      "message": "thank you Fred, added docs and changed the variable name.",
+      "parentUuid": "627885a5_521dd163",
+      "revId": "45faec4a9c71f9d63dfd916e875087a3c50e3221",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

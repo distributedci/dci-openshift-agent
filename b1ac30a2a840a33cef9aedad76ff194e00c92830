@@ -51,6 +51,24 @@
       "parentUuid": "f9815b2a_7ef6b21f",
       "revId": "b1ac30a2a840a33cef9aedad76ff194e00c92830",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "70d548a9_ca760b35",
+        "filename": "roles/hco-setup/tasks/deploy-hco.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2022-11-25T08:53:31Z",
+      "side": 1,
+      "message": "hco.kubevirt.io/v1beta1 is still not deprecated (and v1 is not available yet), but I\u0027ll keep the idea in mind to use it for the next API.",
+      "parentUuid": "bc09f8ec_c3a0bd42",
+      "revId": "b1ac30a2a840a33cef9aedad76ff194e00c92830",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
