@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2ff9444_074a870b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-25T09:59:07Z",
+      "side": 1,
+      "message": "Hi Beto, I see your change is more or less related to mine\u0027s here: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/26805, but I think both can be kept, because in your case you\u0027re activating or not the whole execution of the build-upstream-catalog play, and in my case I\u0027m controlling if SRIOV-related tasks within that play (which is the only case right now, but there may be more in the future as build-upstream-catalog is general-purpose) are activated or not. I was also doing this because I needed to deactivate the upstream catalog for some tests but I saw your change. What do you think?",
+      "revId": "0dce2daec7bc7301630030dc0e96c63213769ef0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
