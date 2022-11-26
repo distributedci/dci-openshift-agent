@@ -16,6 +16,40 @@
       "message": "Main reason of this change is to validate https://issues.redhat.com/browse/OCPBUGS-3083, because it looks like our deployment is hitting kernel taint # 65536 in one of the master nodes because of a workload deployed in OCP 4.12 that is not launched in 4.11, and the only one that comes up to my mind was the upstream SRIOV operator. So, I\u0027d like not to pollute the job in case enable_sriov is set to false, then not running the tasks in build-upstream-catalog play.",
       "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e5adeba_5118987f",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-26T23:05:20Z",
+      "side": 1,
+      "message": "This is considered in 26726",
+      "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dec05bf0_6883387d",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-26T23:05:20Z",
+      "side": 1,
+      "message": "I\u0027m not sure enable_sriov is defined with a default value, could you point me to where this is done? Unless I\u0027m missing somethinkg it shouldn\u0027t be set to any default value.",
+      "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
