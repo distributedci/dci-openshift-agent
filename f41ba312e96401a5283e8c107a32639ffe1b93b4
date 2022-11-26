@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91e13e7f_157d54ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-26T22:50:34Z",
+      "side": 1,
+      "message": "I see your point. I like that the registry to use will be the same as the one used in the cluster to upgrade.",
+      "revId": "f41ba312e96401a5283e8c107a32639ffe1b93b4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a75ada4_61265bca",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-26T22:50:34Z",
+      "side": 1,
+      "message": "perhaps: cluster_iscp.resources",
+      "revId": "f41ba312e96401a5283e8c107a32639ffe1b93b4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
