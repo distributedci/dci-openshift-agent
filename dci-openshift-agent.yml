@@ -335,7 +335,7 @@
 
 # Step 3a-3 : hook installing
 - name: 'Launch hook install'
-  hosts: provisioner
+  hosts: localhost
   tags:
     - running
     - hook-installing
@@ -372,15 +372,13 @@
 
 # Step 3b-2 : hook upgrading
 - name: 'Launch hook upgrade'
-  hosts: provisioner
+  hosts: localhost
   tags:
     - running
     - hook-upgrading
   tasks:
     - block:
         - name: "dci-openshift-agent : Launch partner upgrade"
-          vars:
-            local_repo: "{{ hostvars[groups['registry_host'][0]].local_repo }}"
           include_tasks: '{{ hookdir }}/hooks/upgrade.yml'
           loop: "{{ dci_config_dirs }}"
           loop_control:
