@@ -254,8 +254,8 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
-        - name: "dci-openshift-agent : Launch install"
-          include_tasks: plays/install.yml
+        - name: "dci-openshift-agent : Launch {{ install_type }} install"
+          include_tasks: "plays/{{ install_type }}install.yml"
           when:
             - dci_main == 'install'
             - install_type in ['ipi', 'upi', 'sno']
