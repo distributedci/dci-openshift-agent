@@ -16,6 +16,24 @@
       "message": "I\u0027m not sure why these additions, these vars are not used in this block",
       "revId": "f8dcc28f4d1c639618058194ab4af9507ce3cf60",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75d7bb25_3f8b0731",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-27T07:31:31Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not sure why these additions, these vars are not used in this block\n\nI just did a rebase without taking any risk. Feel free to correct it.",
+      "parentUuid": "0e1b46c2_3f690057",
+      "revId": "f8dcc28f4d1c639618058194ab4af9507ce3cf60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
