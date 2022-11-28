@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "be36b642_8317d993",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-28T13:27:38Z",
+      "side": 1,
+      "message": "\u003e can this fit in the \"Launch {{ install_type }} install\" task? (bad thing is that it uses a kubeconfig and a tag, so maybe it\u0027s hard to generalize).\n\nyes that\u0027s why I didn\u0027t do it.",
+      "parentUuid": "d4a902d3_26a626f0",
+      "range": {
+        "startLine": 263,
+        "startChar": 0,
+        "endLine": 272,
+        "endChar": 35
+      },
+      "revId": "ea520f64126f188e3b6ba36da78945953df6843b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b438e61f_f6808292",
         "filename": "plays/deploy-operators.yml",
         "patchSetId": 3
@@ -54,6 +78,30 @@
       "writtenOn": "2022-11-28T12:35:51Z",
       "side": 1,
       "message": "I know that this is not related to this change, but it doesn\u0027t make any sense for me that install_type has to be different to \u0027acm\u0027 if we want to run acm-setup. Am I missing something here?",
+      "range": {
+        "startLine": 313,
+        "startChar": 6,
+        "endLine": 313,
+        "endChar": 27
+      },
+      "revId": "ea520f64126f188e3b6ba36da78945953df6843b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "902bbf40_58ff5419",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-28T13:27:38Z",
+      "side": 1,
+      "message": "\u003e I know that this is not related to this change, but it doesn\u0027t make any sense for me that install_type has to be different to \u0027acm\u0027 if we want to run acm-setup. Am I missing something here?\n\nI agree it is preventing from doing nested acm but I let that to Beto.",
+      "parentUuid": "b438e61f_f6808292",
       "range": {
         "startLine": 313,
         "startChar": 6,
