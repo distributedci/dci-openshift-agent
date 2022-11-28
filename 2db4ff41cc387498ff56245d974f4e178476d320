@@ -16,6 +16,23 @@
       "message": "Can someone check and put a review on this one?",
       "revId": "2db4ff41cc387498ff56245d974f4e178476d320",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "300ccd76_c669c3c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 47
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-28T12:38:53Z",
+      "side": 1,
+      "message": "Giving you my +2 Charles, I waited some time in case somebody more wants to review, but I think it\u0027s safe to merge",
+      "revId": "2db4ff41cc387498ff56245d974f4e178476d320",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
