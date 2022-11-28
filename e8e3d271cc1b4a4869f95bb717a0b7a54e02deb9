@@ -86,6 +86,24 @@
       "parentUuid": "dec05bf0_6883387d",
       "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e20123a_c096128a",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-28T13:14:24Z",
+      "side": 1,
+      "message": "Thanks, I didn\u0027t find it in that change, but I see that the main purpose of this change is already included there 👍",
+      "parentUuid": "c70e424c_cee50020",
+      "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
