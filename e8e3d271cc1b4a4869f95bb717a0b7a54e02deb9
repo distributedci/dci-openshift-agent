@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3f9df3a_4fe94350",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-28T12:18:12Z",
+      "side": 1,
+      "message": "Oh, that\u0027s true, then I\u0027ll close this patch, yours is more complete in the end and I just wanted this small change to test OCP 4.12 without SRIOV for a BZ.",
+      "parentUuid": "8e5adeba_5118987f",
+      "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dec05bf0_6883387d",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-11-26T23:05:20Z",
       "side": 1,
       "message": "I\u0027m not sure enable_sriov is defined with a default value, could you point me to where this is done? Unless I\u0027m missing somethinkg it shouldn\u0027t be set to any default value.",
+      "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c70e424c_cee50020",
+        "filename": "plays/pre-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-28T12:18:12Z",
+      "side": 1,
+      "message": "Just FYI, also for 26726 - yes, it has a default value in group_vars/all (default to false)",
+      "parentUuid": "dec05bf0_6883387d",
       "revId": "e8e3d271cc1b4a4869f95bb717a0b7a54e02deb9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
