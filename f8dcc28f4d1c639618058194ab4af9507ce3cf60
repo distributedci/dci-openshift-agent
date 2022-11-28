@@ -34,6 +34,24 @@
       "parentUuid": "0e1b46c2_3f690057",
       "revId": "f8dcc28f4d1c639618058194ab4af9507ce3cf60",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bf4482b_23f42150",
+        "filename": "plays/build-upstream-catalog.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-28T13:43:40Z",
+      "side": 1,
+      "message": "Gotcha 👍",
+      "parentUuid": "75d7bb25_3f8b0731",
+      "revId": "f8dcc28f4d1c639618058194ab4af9507ce3cf60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
