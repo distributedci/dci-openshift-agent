@@ -33,6 +33,23 @@
       "message": "LGTM, let\u0027s make sure we test it with a pipeline that uses both an ocp and a cnf stage",
       "revId": "bc520d838c861926589e38020c481b0c8dc41852",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09247439_f66d4868",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-29T12:34:36Z",
+      "side": 1,
+      "message": "LGTM, validated with a cnf job",
+      "revId": "bc520d838c861926589e38020c481b0c8dc41852",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
