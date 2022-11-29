@@ -16,6 +16,23 @@
       "message": "I can see that the registry is correctly retrieved, but the job is failing in trident. For me, it should not be related to the change, but anyway, it\u0027s better to confirm it before merging.",
       "revId": "3bbf01f77d868b6e43ba5a82afb7ce5ee8e75a28",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc26b8bc_28373b6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-29T18:45:08Z",
+      "side": 1,
+      "message": "LGTM, thanks",
+      "revId": "3bbf01f77d868b6e43ba5a82afb7ce5ee8e75a28",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
