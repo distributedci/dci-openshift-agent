@@ -134,6 +134,30 @@
       },
       "revId": "ea520f64126f188e3b6ba36da78945953df6843b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "290e7d3e_ff0d38c6",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-11-29T07:28:51Z",
+      "side": 1,
+      "message": "\u003e Weird, I do not see that condition in the current code. https://github.com/redhat-cip/dci-openshift-agent/blob/9fbe28b9b73d59b9cb812ab3b71bfffb80ec0825/plays/post-install.yml#L8\n\nYes but the include code was with this when clause: https://github.com/redhat-cip/dci-openshift-agent/blob/9fbe28b9b73d59b9cb812ab3b71bfffb80ec0825/dci-openshift-agent.yml#L367 that I added to be consistent.",
+      "parentUuid": "6a1f1ddb_435936ad",
+      "range": {
+        "startLine": 313,
+        "startChar": 6,
+        "endLine": 313,
+        "endChar": 27
+      },
+      "revId": "ea520f64126f188e3b6ba36da78945953df6843b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
