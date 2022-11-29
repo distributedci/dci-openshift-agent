@@ -110,6 +110,30 @@
       },
       "revId": "ea520f64126f188e3b6ba36da78945953df6843b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a1f1ddb_435936ad",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-29T01:08:57Z",
+      "side": 1,
+      "message": "Weird, I do not see that condition in the current code. https://github.com/redhat-cip/dci-openshift-agent/blob/9fbe28b9b73d59b9cb812ab3b71bfffb80ec0825/plays/post-install.yml#L8",
+      "parentUuid": "902bbf40_58ff5419",
+      "range": {
+        "startLine": 313,
+        "startChar": 6,
+        "endLine": 313,
+        "endChar": 27
+      },
+      "revId": "ea520f64126f188e3b6ba36da78945953df6843b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
