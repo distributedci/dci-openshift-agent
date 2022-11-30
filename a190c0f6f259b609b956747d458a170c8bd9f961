@@ -75,6 +75,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "505504e2_f20c45c1",
+        "filename": "common-roles/catalog-source/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-30T19:31:38Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b9d9a97d_7183f3b7",
+      "range": {
+        "startLine": 11,
+        "startChar": 30,
+        "endLine": 11,
+        "endChar": 37
+      },
+      "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "54bc9980_689bb506",
@@ -98,6 +122,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fdda624_5ca2eb65",
+        "filename": "common-roles/catalog-source/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-30T19:31:38Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "54bc9980_689bb506",
+      "range": {
+        "startLine": 6,
+        "startChar": 8,
+        "endLine": 6,
+        "endChar": 29
+      },
+      "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "29864adb_e5555806",
@@ -111,6 +159,30 @@
       "writtenOn": "2022-11-30T09:25:24Z",
       "side": 1,
       "message": "last test is complaining in operators-mirror : Basic facts task, is it related to the change on this file?",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a57c8540_94491016",
+        "filename": "roles/operators-mirror/defaults/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-11-30T19:31:38Z",
+      "side": 1,
+      "message": "Yes, there are some vars defined inside a role that are used by another role. Will try to get rid of those vars and move the to group_vars/all",
+      "parentUuid": "29864adb_e5555806",
       "range": {
         "startLine": 1,
         "startChar": 2,
