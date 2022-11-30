@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb98b124_e10087fe",
+        "filename": "common-roles/catalog-source/tasks/main.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-11-30T22:54:34Z",
+      "side": 1,
+      "message": "I think you want to check first if it is defined. Otherwise, it will fail, but not because of the assertion, but because the var is undefined.",
+      "revId": "a7858dd9b7f32162a9182cd3d87e3815febe77f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
