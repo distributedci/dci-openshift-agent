@@ -16,6 +16,92 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79b3118d_8bb94e08",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-30T09:25:24Z",
+      "side": 1,
+      "message": "Overall looks nice, just some suggestions",
+      "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b9d9a97d_7183f3b7",
+        "filename": "common-roles/catalog-source/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-30T09:25:24Z",
+      "side": 1,
+      "message": "It is \"Third party\" currently",
+      "range": {
+        "startLine": 11,
+        "startChar": 30,
+        "endLine": 11,
+        "endChar": 37
+      },
+      "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54bc9980_689bb506",
+        "filename": "common-roles/catalog-source/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-30T09:25:24Z",
+      "side": 1,
+      "message": "if there\u0027s a default value for this, do we need to check it here?",
+      "range": {
+        "startLine": 6,
+        "startChar": 8,
+        "endLine": 6,
+        "endChar": 29
+      },
+      "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29864adb_e5555806",
+        "filename": "roles/operators-mirror/defaults/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-11-30T09:25:24Z",
+      "side": 1,
+      "message": "last test is complaining in operators-mirror : Basic facts task, is it related to the change on this file?",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "a190c0f6f259b609b956747d458a170c8bd9f961",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
