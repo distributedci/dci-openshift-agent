@@ -1,6 +1,14 @@
 ---
+
+- include_tasks: track_git_repo.yml
+  loop: "{{ dev_gits_to_components | flatten }}"
+
 - include_tasks: track_git_repo.yml
   loop: "{{ gits_to_components | flatten }}"
+  when: |
+    item|regex_replace('^(?:.*/(.+)|.*/([^/]+))$', '\\1') is not in
+    ( dev_gits_to_components |
+    map('regex_replace', '^(?:.*/(.+)|.*/([^/]+))$', '\\1') | list)
 
 - name: Gather the package facts
   package_facts:
@@ -10,8 +18,8 @@
   loop: "{{ rpms_to_components | flatten }}"
   when:
     - item is not in
-      ( gits_to_components |
-      map('regex_replace', '^(.*)/$', '\\1') |
-      map('regex_replace', '^.*/(.*)$', '\\1') | list)
+      ( gits_to_components|flatten + dev_gits_to_components|flatten |
+      map('regex_replace', '^(?:.*/(.+)|.*/([^/]+))$', '\\1') | list)
     - item in ansible_facts.packages
+
 ...
