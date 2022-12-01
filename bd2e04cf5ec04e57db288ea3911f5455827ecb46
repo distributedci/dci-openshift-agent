@@ -75,6 +75,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e9b5fbd_574d6c6f",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-01T02:41:03Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "697c6ae6_67fc0575",
+      "range": {
+        "startLine": 308,
+        "startChar": 21,
+        "endLine": 308,
+        "endChar": 40
+      },
+      "revId": "bd2e04cf5ec04e57db288ea3911f5455827ecb46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a4ba8e5_223f86a9",
@@ -88,6 +112,24 @@
       "writtenOn": "2022-12-01T00:59:12Z",
       "side": 1,
       "message": "I think this is the last thing to get rid of the operators-mirror role. If you want to keep the fall back I think moving this include to pre-run before calling operators-mirror will do the trick.\n\nThe facts defined in the role are planned to be moved to the `set dci variables` in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/26870",
+      "revId": "bd2e04cf5ec04e57db288ea3911f5455827ecb46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3e8be06_e22164fb",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-01T02:41:03Z",
+      "side": 1,
+      "message": "Agreed, but I want to do that in another change. Since this role is still called by ACM and AI I\u0027ll have to make sure I move it to the right place so those installers can use it as well.",
+      "parentUuid": "6a4ba8e5_223f86a9",
       "revId": "bd2e04cf5ec04e57db288ea3911f5455827ecb46",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
