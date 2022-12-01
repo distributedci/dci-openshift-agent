@@ -16,6 +16,23 @@
       "message": "For testing during the upgrade, the change is minimal. In order to save some time I think that can merge and use the daily upgrade for the test 😊",
       "revId": "b32abf95cb78f773ed863bc249aecf42c97ba75d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38d7fd12_5418654d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-01T11:14:55Z",
+      "side": 1,
+      "message": "LGTM, but leaving some time for others to vote too, also in case the upgrade is tested finally",
+      "revId": "b32abf95cb78f773ed863bc249aecf42c97ba75d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
