@@ -16,6 +16,23 @@
       "message": "check libvirt --assisted",
       "revId": "b6a919bfa3543d68fc3fa09c57b1f4cba5fc3d2c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e766e03f_97f3672b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-12-01T14:52:03Z",
+      "side": 1,
+      "message": "sorry, I kill the job running in bos2 by mistake. let me relaunch it.",
+      "revId": "b6a919bfa3543d68fc3fa09c57b1f4cba5fc3d2c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
