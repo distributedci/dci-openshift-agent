@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfe3b25e_c9e5eaee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-01T11:12:27Z",
+      "side": 1,
+      "message": "I believe script module copies the script in the target host and then runs the script. As it\u0027s localhost, it should not be an issue. We can see it in the last job. So fine for me",
+      "revId": "0ac692d92d8b8eaac69ecbb651d4446124be7328",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
