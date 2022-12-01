@@ -33,6 +33,63 @@
       "message": "check dallas ocp-4.11-vanilla",
       "revId": "bd2e04cf5ec04e57db288ea3911f5455827ecb46",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "072e40c7_d41d08a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-01T00:59:12Z",
+      "side": 1,
+      "message": "Great work on this refactoring and getting rid of a role with multiple responsibilities\nThanks!\n\n",
+      "revId": "bd2e04cf5ec04e57db288ea3911f5455827ecb46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "697c6ae6_67fc0575",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-01T00:59:12Z",
+      "side": 1,
+      "message": "version fact is defined at localhost and pre-run runs at localhost. No need this.",
+      "range": {
+        "startLine": 308,
+        "startChar": 21,
+        "endLine": 308,
+        "endChar": 40
+      },
+      "revId": "bd2e04cf5ec04e57db288ea3911f5455827ecb46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a4ba8e5_223f86a9",
+        "filename": "roles/operators-mirror/tasks/mirror.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-01T00:59:12Z",
+      "side": 1,
+      "message": "I think this is the last thing to get rid of the operators-mirror role. If you want to keep the fall back I think moving this include to pre-run before calling operators-mirror will do the trick.\n\nThe facts defined in the role are planned to be moved to the `set dci variables` in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/26870",
+      "revId": "bd2e04cf5ec04e57db288ea3911f5455827ecb46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
