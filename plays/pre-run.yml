@@ -265,9 +265,8 @@
 - name: Include installed software as components
   vars:
     rpms_to_components: "{{ dci_rpms_to_components }}"
-    gits_to_components:
-      - "{{ dci_gits_to_components }}"
-      - "{{ dev_gits_to_components }}"
+    gits_to_components: "{{ dci_gits_to_components }}"
+    dev_gits_to_components: "{{ dev_gits_to_components }}"
   include_role:
     name: include-components
 
