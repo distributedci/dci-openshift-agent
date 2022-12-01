@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe949e7d_2dcc4957",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-01T00:12:06Z",
+      "side": 1,
+      "message": "For testing during the upgrade, the change is minimal. In order to save some time I think that can merge and use the daily upgrade for the test 😊",
+      "revId": "b32abf95cb78f773ed863bc249aecf42c97ba75d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
