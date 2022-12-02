@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af09d8e4_bfdcefb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-12-02T16:18:48Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-trident ocp-4.8-trident-upgrade openshift-netapp-trident:ansible_extravars\u003ddci_teardown_on_success:false",
+      "revId": "aa00dbdb60dc4ea0e4318e4aee4e3fc6eb961dc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
