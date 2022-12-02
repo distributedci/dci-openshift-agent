@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.7-trident ocp-4.8-trident-upgrade openshift-netapp-trident:ansible_extravars\u003ddci_teardown_on_success:false",
       "revId": "aa00dbdb60dc4ea0e4318e4aee4e3fc6eb961dc7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e7efcbf_d660b7c8",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-02T17:38:45Z",
+      "side": 1,
+      "message": "I\u0027m a bit puzzled by this, seems to me like the indentation was right, I counted 2 spaces, now it has just 1",
+      "revId": "aa00dbdb60dc4ea0e4318e4aee4e3fc6eb961dc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
