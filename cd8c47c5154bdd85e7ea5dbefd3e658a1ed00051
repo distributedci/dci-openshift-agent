@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "480cdf45_dd0a472b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-02T17:50:14Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll +2 on a run in dallas",
+      "revId": "cd8c47c5154bdd85e7ea5dbefd3e658a1ed00051",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
