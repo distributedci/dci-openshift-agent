@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f837c55_d491b704",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-12-02T01:21:22Z",
+      "side": 1,
+      "message": "If we run a job with DOA installed from source, we can\u0027t create components based from package information.\n\nhttps://www.distributed-ci.io/jobs/b18501d6-859c-4732-afce-2cf0d63cd201/jobStates?sort\u003ddate\n\nThis patch skips this step in this case. ",
+      "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
