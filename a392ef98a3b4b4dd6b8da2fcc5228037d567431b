@@ -87,6 +87,23 @@
       "message": "I forgot to send my other comment :D",
       "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57e37ce4_3cb61ebe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-12-02T20:59:03Z",
+      "side": 1,
+      "message": "@thx Manny.\nYes, we had to think how we can get these component versions",
+      "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
