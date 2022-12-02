@@ -52,6 +52,41 @@
       "parentUuid": "238eb253_44e6aa7e",
       "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d5ec7c6_72cb53b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-02T19:24:45Z",
+      "side": 1,
+      "message": "Yes we\u0027ll have to figure out something new for d-o-a installed from source, because it won\u0027t be only d-o-a, some other components we install from source won\u0027t be added too.\nIt does not have to be in this patch, but eventually we\u0027ll have to work on it.",
+      "parentUuid": "0fd0b7ef_294b1b22",
+      "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b54200d8_dbde5bde",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-02T19:24:45Z",
+      "side": 1,
+      "message": "I forgot to send my other comment :D",
+      "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
