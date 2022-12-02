@@ -34,6 +34,24 @@
       "parentUuid": "7f837c55_d491b704",
       "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fd0b7ef_294b1b22",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2022-12-02T18:03:04Z",
+      "side": 1,
+      "message": "You\u0027re right, and we need these components ! But unfortunately it not exists a way to get the version of these components when they are installing by sources .\nWe should maybe add a \"--version\" option to all the scripts to get the version easier.",
+      "parentUuid": "238eb253_44e6aa7e",
+      "revId": "a392ef98a3b4b4dd6b8da2fcc5228037d567431b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
