@@ -16,6 +16,23 @@
       "message": "LGTM again, and now the job is also passing",
       "revId": "301dd76a821e7f7c09e442efc6cc868a3d3bc072",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44d7f72e_c3744d9e",
+        "filename": "plays/failure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-02T14:16:07Z",
+      "side": 1,
+      "message": "It is possible to be connected and have a local registry. When disconnected, it\u0027s required a local registry, in connected it\u0027s optional to have a registry.\n\nThis conditional only allows local registry in disconnected.\n\nPlease use local_registry instead of local_registry_host and local_registry_port, local_registry takes care of making the port truly optional",
+      "revId": "301dd76a821e7f7c09e442efc6cc868a3d3bc072",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
