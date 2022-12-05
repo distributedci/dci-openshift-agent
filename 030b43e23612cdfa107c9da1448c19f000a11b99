@@ -16,6 +16,23 @@
       "message": "Nice, LGTM!\nThanks Manuel",
       "revId": "030b43e23612cdfa107c9da1448c19f000a11b99",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95d662a3_ddff3c13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-05T18:42:08Z",
+      "side": 1,
+      "message": "Thanks!",
+      "revId": "030b43e23612cdfa107c9da1448c19f000a11b99",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
