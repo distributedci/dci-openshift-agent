@@ -33,6 +33,24 @@
       "message": "I\u0027m a bit puzzled by this, seems to me like the indentation was right, I counted 2 spaces, now it has just 1",
       "revId": "aa00dbdb60dc4ea0e4318e4aee4e3fc6eb961dc7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a8aaecf_583a5be9",
+        "filename": "roles/storage-tester/tasks/gathering-logs.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-12-05T08:22:11Z",
+      "side": 1,
+      "message": "That was a mistake, even if it does not change the behavior, let me fix this.",
+      "parentUuid": "9e7efcbf_d660b7c8",
+      "revId": "aa00dbdb60dc4ea0e4318e4aee4e3fc6eb961dc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
