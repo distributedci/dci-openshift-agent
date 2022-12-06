@@ -16,6 +16,23 @@
       "message": "ICSP are applied as expected\n\n$ oc get imagecontentsourcepolicies|grep redhat\nredhat-operator-index-0   2m35s\n\nsh-4.4# cat /etc/containers/registries.conf|grep perfor  \n  location \u003d \"registry.redhat.io/openshift4/performance-addon-operator-bundle-registry-container-rhel8\"\n    location \u003d \"registry.dfwt5g.lab:4443/openshift4/performance-addon-operator-bundle-registry-container-rhel8\"\n  location \u003d \"registry.redhat.io/openshift4/performance-addon-rhel8-operator\"\n    location \u003d \"registry.dfwt5g.lab:4443/openshift4/performance-addon-rhel8-operator\"\n",
       "revId": "17b8e4efa6423c7c32a9ee7e446984360e4d35ec",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "600c76ea_812af1c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-06T14:58:21Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "17b8e4efa6423c7c32a9ee7e446984360e4d35ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
