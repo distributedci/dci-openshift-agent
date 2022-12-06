@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-vanilla",
       "revId": "6f58b9243cb7087b37dc340454d916b7a6063d29",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0b550e5_dd4f9066",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-06T23:54:40Z",
+      "side": 1,
+      "message": "Components created: https://www.distributed-ci.io/jobs/47f5301d-4ee7-4f5e-bc24-5919ee511e7a/jobStates?sort\u003ddate\u0026task\u003d259d1951-0078-479a-b90c-9a7930a29599\n\nThanks for the quick hot-fix!",
+      "revId": "6f58b9243cb7087b37dc340454d916b7a6063d29",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
