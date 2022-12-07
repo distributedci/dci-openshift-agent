@@ -1,0 +1,13 @@
+- name: "Mirror Defined Catalogs"
+  include_role:
+    name: mirror-catalog
+  vars:
+    mc_oc_tool_path: "{{ oc_tool_path }}"
+    mc_catalog: "{{ catalog }}"
+    mc_registry: "{{ local_registry }}"
+    mc_pullsecret: "{{ dci_pullsecret_file }}"
+
+- name: "Append to list of ImageContentSourcePolicy files"
+  set_fact:
+    icsp_files: "{{ icsp_files | default([]) + [mc_icsp_file.path] }}"
+  when: mc_icsp_file is defined
