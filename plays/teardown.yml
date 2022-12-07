@@ -1,4 +1,12 @@
 ---
+
+- name: "Remove temp pull secret"
+  file:
+    path: "{{ dci_pullsecret_file }}"
+    state: absent
+  when:
+    - dci_pullsecret_file is defined
+
 - name: "Remove docker auths directory"
   file:
     path: "{{ docker_conf.path }}"
