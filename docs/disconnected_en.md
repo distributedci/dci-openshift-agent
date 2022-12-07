@@ -24,7 +24,15 @@ them available to the disconnected environment.
 ## Configurations
 
 First you have to set the 'dci_disconnected' option to 'True' in the settings
-file `/etc/dci-openshift-agent/settings.yml`.
+file `/etc/dci-openshift-agent/settings.yml` and add the local_repo option to specify the name of the repository to create in your registry.
+
+```YAML
+---
+...
+dci_disconnected: True
+local_repo: ocp4/openshift4
+...
+```
 
 All the configuration needs to be done in the ansible hosts file
 `/etc/dci-openshift-agent/hosts`.
@@ -58,7 +66,6 @@ pctt-hv1 ansible_user=dci-openshift-agent
 #   an existing disconnected registry.
 disconnected_registry_auths_file=/opt/cache/pctt-hv1-auths.json
 disconnected_registry_mirrors_file=/opt/cache/pctt-hv1-trust-bundle.yml
-local_repo=ocp4/openshift4
 # The following mirror entries are the default ones. If you want to add more mirror
 #   you can uncomment this parameter and add it here.
 #registry_source_mirrors=["quay.io/openshift-release-dev/ocp-v4.0-art-dev", "registry.svc.ci.openshift.org/ocp/release", "quay.io/openshift-release-dev/ocp-release"]
@@ -81,7 +88,6 @@ Group                   | Variable | Required      | Type   | Description
 [registry_host:vars] | disconnected_registry_auths_file | Optional | String | File that contains extra auth tokens to include in the pull-secret. This file will be generated if it doesn't exist. And only required if pullsecret_file var not provided)
 [registry_host:vars] | disconnected_registry_mirrors_file | True | String | File that contains the addition trust bundle and image content sources for the local registry. The contents of this file will be appended to the install-config.yml file
 [registry_host:vars] | registry_dir | True | String | Folder where to store the openshift container images
-[registry_host:vars] | local_repo | True | String | Specify the name of the repository to create in your registry
 [registry_host:vars] | registry_source_mirrors | False | String | List of the mirror entries pointing to the registry_host
 
 ## Deploying the registry (Optional)
