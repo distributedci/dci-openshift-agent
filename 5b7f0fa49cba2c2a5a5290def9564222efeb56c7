@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8daf72bf_54868774",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-08T23:07:14Z",
+      "side": 1,
+      "message": "At least the ocp_minor is changing during the prune, that will be decreased during teh fall back. So, I prefer to do not touch the original facts that may be used by other tasks.",
+      "parentUuid": "f23a7fad_a36fb6c4",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b63a6a86_7a71c8d7",
         "filename": "plays/build-catalog.yml",
         "patchSetId": 9
@@ -48,6 +66,24 @@
       "writtenOn": "2022-12-08T22:11:34Z",
       "side": 1,
       "message": "can we have here like:\n    ocp_major: \"{{ ocp_version_maj }}\"",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b68782a8_0599bca1",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-08T23:07:14Z",
+      "side": 1,
+      "message": "It was doing that, but as this play is called recursively the ocp_major was always assigned to the original fact and during the fallback, it is required to decrease the value of ocp_minor. That is why I decided to move them out of the vars section.",
+      "parentUuid": "b63a6a86_7a71c8d7",
       "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -75,6 +111,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "548c5e0b_3390724d",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-08T23:07:14Z",
+      "side": 1,
+      "message": "gotcha!",
+      "parentUuid": "63e16e24_823458b3",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 58
+      },
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "53f24abb_c1bab060",
@@ -88,6 +148,24 @@
       "writtenOn": "2022-12-08T22:11:34Z",
       "side": 1,
       "message": "I assume these are required because when calling itself they were missing?",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9540d97_e7219dab",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-08T23:07:14Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "53f24abb_c1bab060",
       "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -117,6 +195,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3e36ba2e_fa7d0b26",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-08T23:07:14Z",
+      "side": 1,
+      "message": "the major and minor values are not required by prepare-operators.yml directly, but those are needed by build-catalog. Yeah, I updated the change to get data from the fact defined by the component.\n\nI have encountered feelings regarding using \"known values\" vs current values provided by the cluster. That also helps to make the agent stages more independent.\n\nWe need to create another change to get rid of all the blocks that are obtained cluster information in multiple places.",
+      "parentUuid": "df7711d9_159e3513",
+      "range": {
+        "startLine": 172,
+        "startChar": 0,
+        "endLine": 187,
+        "endChar": 54
+      },
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3f21759a_6ae5f796",
         "filename": "roles/mirror-catalog/tasks/main.yml",
         "patchSetId": 9
@@ -128,6 +230,24 @@
       "writtenOn": "2022-12-08T22:11:34Z",
       "side": 1,
       "message": "Could you help me understand this removal?",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2524c2e0_e7c864d4",
+        "filename": "roles/mirror-catalog/tasks/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-08T23:07:14Z",
+      "side": 1,
+      "message": "using --path /configs/:\u003csome_path\u003e we are only allowing support for catalogs in FBC format. The configs/ endpoint is only available in FBC, for SQLLites it is index.db/. We may have some that are not already migrated. \n\nNot been explicit about the path allows oc to detect the kind of catalog based on the image labels and act accordingly.",
+      "parentUuid": "3f21759a_6ae5f796",
       "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
