@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "434f5130_b409080d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-08T15:10:39Z",
+      "side": 1,
+      "message": "Thanks for the fix. This looks good to me.\n\nIn https://softwarefactory-project.io/r/c/dci-openshift-agent/+/26948 We are moving this logic after the cluster deployment then shouldn\u0027t be an issue any more but it will be good to have the prefix there. I will include it as part of the change.\n\nCheers",
+      "revId": "297de042b514b200bf482d9f0cdefdbb0540def1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
