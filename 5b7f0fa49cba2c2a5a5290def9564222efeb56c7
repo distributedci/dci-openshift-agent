@@ -1,0 +1,135 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49d109a6_1e7734c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-08T22:11:34Z",
+      "side": 1,
+      "message": "Are we missing assisted-pre-run.yml here?\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/assisted-pre-run.yml#L259-L288\n",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f23a7fad_a36fb6c4",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-08T22:11:34Z",
+      "side": 1,
+      "message": "Can we not have these here and instead use them below?",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b63a6a86_7a71c8d7",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-08T22:11:34Z",
+      "side": 1,
+      "message": "can we have here like:\n    ocp_major: \"{{ ocp_version_maj }}\"",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63e16e24_823458b3",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-08T22:11:34Z",
+      "side": 1,
+      "message": "This task was moved to a different place as it was, it is required to be before the get-mirror-list.yml as it will set the upstream_sriov that will avoid adding sriov into the mirror list",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 58
+      },
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53f24abb_c1bab060",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-08T22:11:34Z",
+      "side": 1,
+      "message": "I assume these are required because when calling itself they were missing?",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df7711d9_159e3513",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-08T22:11:34Z",
+      "side": 1,
+      "message": "Do we really need to get the new cluster version? since the version to upgrade is in the component, we could keep using that without the need to extract it from the cluster again.\n\nI\u0027m certain we don\u0027t need ocp_version_maj and ocp_version_min since we\u0027re introducing prepare-operators.yml in this change and those variables are not used in prepare-operators.yml",
+      "range": {
+        "startLine": 172,
+        "startChar": 0,
+        "endLine": 187,
+        "endChar": 54
+      },
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f21759a_6ae5f796",
+        "filename": "roles/mirror-catalog/tasks/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-08T22:11:34Z",
+      "side": 1,
+      "message": "Could you help me understand this removal?",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
