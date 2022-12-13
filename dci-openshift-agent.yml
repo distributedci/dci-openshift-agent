@@ -199,6 +199,13 @@
   when:
     - install_type == 'assisted'
 
+- import_playbook: '{{ hookdir }}/hooks/network-pre-run.yml'
+  when:
+    - network_setup | default(false) | bool
+  tags:
+    - pre-run
+    - network-setup
+
 # Step 1b : hook pre run
 - name: 'Launch hook pre-run'
   hosts: localhost
