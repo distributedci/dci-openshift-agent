@@ -67,6 +67,23 @@
       "message": "recheck",
       "revId": "d2f47264e156497528aedaeecaa273a22b271e7a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50abe23d_2e6ba7d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-13T02:34:34Z",
+      "side": 1,
+      "message": "holding the merge",
+      "revId": "d2f47264e156497528aedaeecaa273a22b271e7a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
