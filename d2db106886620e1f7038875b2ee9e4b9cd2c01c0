@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3835517b_adca4423",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-13T02:58:27Z",
+      "side": 1,
+      "message": "This is working as expected. During the provisioning of 4.12 the BMC is not responding. That is still under investigation\n\nThanks for the fix Tony!",
+      "revId": "d2db106886620e1f7038875b2ee9e4b9cd2c01c0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
