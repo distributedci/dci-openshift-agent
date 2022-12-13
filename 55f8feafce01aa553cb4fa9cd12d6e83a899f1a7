@@ -16,6 +16,24 @@
       "message": "I wonder if we should formalize the step? i.e. add tags, hosts, and envs ?\n\nOhh, I remember there was a limitation with the arista module, is this the reason of the import in here?",
       "revId": "55f8feafce01aa553cb4fa9cd12d6e83a899f1a7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "168bef58_3cbeffec",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-13T00:30:17Z",
+      "side": 1,
+      "message": "Correct, this is a step to setup network appliances, in our case Arista switches. this CR will depend on other changes[1] and some pipelines variables. I agree that more doc will be helpful to understand it, I can add tags, no need for env vars yet, we\u0027ll use some vaulted variables, and the host will depend on each use case, but it definitely be a group of network appliances, we cannot delegate this to localhost. : / \n\nI\u0027ll keep improving and run some test\n\n[1]\nhttps://github.com/dci-labs/inventories/pull/113\nhttps://github.com/dci-labs/dallas-config/pull/31",
+      "parentUuid": "ed37844c_8cdd8bff",
+      "revId": "55f8feafce01aa553cb4fa9cd12d6e83a899f1a7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
