@@ -327,6 +327,7 @@ API version to use when deploying HCO operator: hco.kubevirt.io/cnv_api_version
 | enable_acm                      | False    | Boolean | False                                                          | Deploys the [ACM](https://www.redhat.com/en/technologies/management/advanced-cluster-management) Operator.
 | operator_skip_upgrade           | False    | List    | []                                                             | List of operators to skip during the upgrade.
 | custom_catalogs                 | False    | List    | []                                                             | List of custom catalogs to install alongside default catalog sources.
+| network_setup                   | False    | Boolean | False                                                          | Enable pre-run step to execute playbook to setup network appliances
 
 Example:
 
