@@ -33,6 +33,24 @@
       "message": "typo, should be --dest-authfile",
       "revId": "0453aa91dd45278268590c8e8d8e88627ec55663",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ed16371_40c6410f",
+        "filename": "common-roles/mirror_images/tasks/mirror-images.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-12-13T07:58:31Z",
+      "side": 1,
+      "message": "That was the trap!\nWith inspect, there is only one registry involved so there is only one authfile possible. --dest_authfile is not available in skopeo inspect :)",
+      "parentUuid": "1bbd384c_701132b5",
+      "revId": "0453aa91dd45278268590c8e8d8e88627ec55663",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
