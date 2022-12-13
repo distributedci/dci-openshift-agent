@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e57c566_1bf583e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-13T20:02:16Z",
+      "side": 1,
+      "message": "with patch-set 1 and 2, the job fails because the hooks variable is undefined, so I need to use a file that exist in the import playbook, but this file needs to be very generic so it can import/include other playbooks to setup the appliance and provided by users using hooks.",
+      "revId": "c5db7b55d7d6441d2b004d4dd328b5102d8bdaf4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
