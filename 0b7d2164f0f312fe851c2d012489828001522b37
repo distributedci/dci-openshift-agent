@@ -33,6 +33,69 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbca396b_271fe17c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-13T11:24:07Z",
+      "side": 1,
+      "message": "Thanks for the impressive change Beto. Honestly, it was hard for me to follow the changes, so please apologies for my brief review, but there are some things that I\u0027d like to comment just for clarification",
+      "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a50052c_d9255f13",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-13T11:24:07Z",
+      "side": 1,
+      "message": "May we update the name of this task? Or maybe to create a new set_fact task to include ocp_major/minor def?",
+      "range": {
+        "startLine": 7,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 64
+      },
+      "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77726ecf_ad60a7fc",
+        "filename": "plays/get-cluster-pullsecret.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-13T11:24:07Z",
+      "side": 1,
+      "message": "General comment here: as this play is called from different points, isn\u0027t \"hub\" word really specific for ACM use case? Should it be generalized?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
