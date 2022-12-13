@@ -1,0 +1,9 @@
+---
+- name: Main playbook to perform network appliance configurations
+  hosts: network_appliance
+  gather_facts: false
+
+  tasks:
+    - name: Include Network Appliance Hook
+      include_tasks: "{{ hookdir }}/hooks/pre-run.yml"
+...
