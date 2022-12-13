@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed37844c_8cdd8bff",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-13T00:18:35Z",
+      "side": 1,
+      "message": "I wonder if we should formalize the step? i.e. add tags, hosts, and envs ?\n\nOhh, I remember there was a limitation with the arista module, is this the reason of the import in here?",
+      "revId": "55f8feafce01aa553cb4fa9cd12d6e83a899f1a7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
