@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "08d7d4a3_1dc85385",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-12-13T10:28:23Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla fake-cnf",
+      "revId": "0453aa91dd45278268590c8e8d8e88627ec55663",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1bbd384c_701132b5",
