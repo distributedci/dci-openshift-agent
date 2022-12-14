@@ -1,7 +1,7 @@
 # DCI OpenShift Agent
 
 `dci-openshift-agent` provides Red Hat OpenShift Container Platform (RHOCP) in
-Red Hat Distributed CI service.
+Red Hat Distributed CI service
 
 There are some benefits of running the DCI OCP Agent:
 
