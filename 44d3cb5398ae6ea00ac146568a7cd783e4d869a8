@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "44d3cb5398ae6ea00ac146568a7cd783e4d869a8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c105d7dc_0f12a6c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-12-14T20:26:16Z",
+      "side": 1,
+      "message": "BOS2 CI isn\u0027t yet fully configured for AI support, but here\u0027s a run on my own PCTT https://www.distributed-ci.io/jobs/b1f11b5d-885b-4ae2-9792-d395a9c73d4c/jobStates?sort\u003ddate",
+      "revId": "44d3cb5398ae6ea00ac146568a7cd783e4d869a8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
