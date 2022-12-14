@@ -3,8 +3,8 @@
   include_role:
     name: mirror_images
   vars:
-    images: ['registry.redhat.io/rhel8/support-tools']
-    authfile: "{{ dci_pullsecret_file }}"
+    mi_images: ['registry.redhat.io/rhel8/support-tools']
+    mi_authfile: "{{ dci_pullsecret_file }}"
   when:
     - dci_disconnected | default(false) | bool
 

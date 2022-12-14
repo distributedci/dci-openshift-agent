@@ -3,9 +3,9 @@
   include_role:
     name: mirror_images
   vars:
-    images: ['registry.access.redhat.com/ubi8/ubi']
-    local_registry: "{{ dci_local_registry }}"
-    authfile: "{{ dci_pullsecret_file }}"
+    mi_images: ['registry.access.redhat.com/ubi8/ubi']
+    mi_local_registry: "{{ dci_local_registry }}"
+    mi_authfile: "{{ dci_pullsecret_file }}"
   when:
     - dci_disconnected | default(false) | bool
 

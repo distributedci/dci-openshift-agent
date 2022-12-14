@@ -50,9 +50,9 @@
           include_role:
             name: mirror_images
           vars:
-            images: "{{ ts_kubevirt_images }}"
-            local_registry: "{{ ts_registry }}"
-            authfile: "{{ ts_registry_auth }}"
+            mi_images: "{{ ts_kubevirt_images }}"
+            mi_local_registry: "{{ ts_registry }}"
+            mi_authfile: "{{ ts_registry_auth }}"
 
         - name: "test_ redhat-tests: Run the sonobuoy conformance tests (disconnected)"
           environment:
