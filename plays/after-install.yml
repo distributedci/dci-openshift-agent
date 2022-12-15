@@ -1,5 +1,4 @@
 ---
-
 - name: Check if all cluster-operators are running correctly
   community.kubernetes.k8s_info:
     kind: ClusterOperator
@@ -27,10 +26,6 @@
 - name: "installer : Setup openshift access in jumphost"
   include_role:
     name: oc-setup
-    apply:
-      delegate_to: localhost
-      environment:
-        - KUBECONFIG: "{{ kubeconfig_path }}"
 
 - name: "installer : Apply node labels"
   include_role:

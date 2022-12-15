@@ -45,6 +45,4 @@
   import_role:
     name: installer
 
-- include_tasks: after-install.yml
-
 ...

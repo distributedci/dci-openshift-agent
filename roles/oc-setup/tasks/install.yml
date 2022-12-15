@@ -7,14 +7,13 @@
   become: true
 
 - name: "Get oc binary and KUBECONFIG auth/creds from provisioner node"
-  delegate_to: "{{ groups['provisioner'][0] }}"
   fetch:
     src: "{{ item }}"
     dest: "{{ dci_cluster_configs_dir }}/"
     flat: true
   loop:
-  - "{{ dir }}/auth/kubeconfig"
-  - "{{ dir }}/auth/kubeadmin-password"
+    - "{{ dir }}/auth/kubeconfig"
+    - "{{ dir }}/auth/kubeadmin-password"
 
 - name: "Get cluster install-config"
   community.kubernetes.k8s_info:
