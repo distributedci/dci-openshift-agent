@@ -16,6 +16,23 @@
       "message": "LGTM, IPI should be tested in libvirt, we need to add SNO and I\u0027m afraid we don\u0027t have a way to test UPI",
       "revId": "7d3308b1064f53a5f6ad3215b5029b77bce6dfaf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2ea1deb_a6972a0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-15T23:26:05Z",
+      "side": 1,
+      "message": "Files are there, this is odd :/\n\u003e \n[dci-openshift-agent@server01 ~]$ ssh dci@provisionhost.server05.partnerci.bos2.lab                                                                        \n[dci@provisionhost ~]$ pwd\n/home/dci\n[dci@provisionhost ~]$ ls clusterconfigs/auth/\nkubeadmin-password  kubeconfig",
+      "revId": "7d3308b1064f53a5f6ad3215b5029b77bce6dfaf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
