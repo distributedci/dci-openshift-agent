@@ -324,11 +324,24 @@
           ignore_unreachable: true
 
 # Step 3a-1
+- import_playbook: plays/after-install.yml
+  when:
+    - dci_main == 'install'
+    - install_type in ['ipi', 'upi', 'sno']
+  tags:
+    - running
+    - installing
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+
+# Step 3a-2
 - import_playbook: plays/assisted-install.yml
   when:
     - install_type == 'assisted'
 
-# Step 3a-2 : deploy operators, run on the provisioner so OC is automatically set
+# Step 3a-3 : deploy operators, run on the provisioner so OC is automatically set
 - name: 'Deploy operators to OCP cluster'
   hosts: localhost
   tags:
@@ -347,7 +360,7 @@
 
       rescue: *teardown_failure
 
-# Step 3a-3 : hook installing
+# Step 3a-4 : hook installing
 - name: 'Launch hook install'
   hosts: localhost
   tags:

@@ -1,102 +1,101 @@
 ---
+- name: Create cluster and generate Assisted Installer Discovery ISO
+  hosts: localhost
+  tasks:
 
-- name: Check if all cluster-operators are running correctly
-  community.kubernetes.k8s_info:
-    kind: ClusterOperator
-  register: clusteroperator_info
-  vars:
-    status_query: "resources[*].status.conditions[?type=='Available'].status"
-    cluster_operators_available: "{{ clusteroperator_info | json_query(status_query) | flatten | unique }}"
-  retries: 6
-  delay: 10
-  until: cluster_operators_available == ['True']
-
-- name: "installer : Patch clusterversion pointing to fast channel"
-  vars:
-    base_version: "{{ version.split('.')[0] }}.{{ version.split('.')[1] }}"
-  community.kubernetes.k8s:
-    state: present
-    name: version
-    definition:
-      kind: ClusterVersion
-      spec:
-        channel: "fast-{{ base_version }}"
-  retries: 6
-  delay: 10
-
-- name: "installer : Setup openshift access in jumphost"
-  include_role:
-    name: oc-setup
-    apply:
-      delegate_to: localhost
-      environment:
-        - KUBECONFIG: "{{ kubeconfig_path }}"
-
-- name: "installer : Apply node labels"
-  include_role:
-    name: label-nodes
-  vars:
-    label_loop: "{{ groups['masters'] + groups['workers'] }}"
-    label_item: "{{ hostvars }}"
-
-- name: Upload the rhcos_kernel component if possible
-  block:
-    - name: Get nodes information
+    - name: Check if all cluster-operators are running correctly
       community.kubernetes.k8s_info:
-        kubeconfig: "{{ kubeconfig_path }}"
-        kind: Node
-      register: nodes_info
-
-    - name: Create component with the rhcos kernel used
+        kind: ClusterOperator
+      register: clusteroperator_info
       vars:
-        - kernel_version: "{{ nodes_info.resources[0].status.nodeInfo.kernelVersion }}"
-      environment:
-        - DCI_CLIENT_ID: "{{ hostvars.localhost.dci_client_id }}"
-        - DCI_API_SECRET: "{{ hostvars.localhost.dci_api_secret }}"
-        - DCI_CS_URL: "{{ hostvars.localhost.dci_cs_url }}"
-      dci_component:
-        name: "{{ kernel_version }}"
-        canonical_project_name: "rhcos_kernel {{ kernel_version }}"
-        team_id: "{{ hostvars.localhost.job_info['job']['team_id'] }}"
-        topic_id: "{{ hostvars.localhost.job_info['job']['topic_id'] }}"
-        type: kernel
-        state: present
-      register: kernel_component
+        status_query: "resources[*].status.conditions[?type=='Available'].status"
+        cluster_operators_available: "{{ clusteroperator_info | json_query(status_query) | flatten | unique }}"
+      retries: 6
+      delay: 10
+      until: cluster_operators_available == ['True']
 
-    - name: Attach kernel component to the job
-      dci_job_component:
-        component_id: "{{ kernel_component.component.id }}"
-        job_id: "{{ hostvars.localhost.job_id }}"
-      register: job_component_result
-      until: job_component_result is not failed
-      retries: 5
-      delay: 20
-      when:
-        - "'component' in kernel_component"
-        - "'id' in kernel_component.component"
-  ignore_errors: yes
-  delegate_to: localhost
-
-- name: Disable provisioning
-  block:
-    - name: Get provisioning
-      community.kubernetes.k8s_info:
-        api_version: metal3.io/v1alpha1
-        kind: Provisioning
-        name: provisioning-configuration
-      register: provisioning_cr
-    - name: Disable provisioning
+    - name: "installer : Patch clusterversion pointing to fast channel"
+      vars:
+        base_version: "{{ version.split('.')[0] }}.{{ version.split('.')[1] }}"
       community.kubernetes.k8s:
+        state: present
+        name: version
         definition:
-          apiVersion: metal3.io/v1alpha1
-          kind: Provisioning
-          metadata:
-            name: provisioning-configuration
+          kind: ClusterVersion
           spec:
-            provisioningNetwork: Disabled
+            channel: "fast-{{ base_version }}"
+      retries: 6
+      delay: 10
+
+    - name: "installer : Setup openshift access in jumphost"
+      include_role:
+        name: oc-setup
+
+    - name: "installer : Apply node labels"
+      include_role:
+        name: label-nodes
+      vars:
+        label_loop: "{{ groups['masters'] + groups['workers'] }}"
+        label_item: "{{ hostvars }}"
+
+    - name: Upload the rhcos_kernel component if possible
+      block:
+        - name: Get nodes information
+          community.kubernetes.k8s_info:
+            kubeconfig: "{{ kubeconfig_path }}"
+            kind: Node
+          register: nodes_info
+
+        - name: Create component with the rhcos kernel used
+          vars:
+            - kernel_version: "{{ nodes_info.resources[0].status.nodeInfo.kernelVersion }}"
+          environment:
+            - DCI_CLIENT_ID: "{{ hostvars.localhost.dci_client_id }}"
+            - DCI_API_SECRET: "{{ hostvars.localhost.dci_api_secret }}"
+            - DCI_CS_URL: "{{ hostvars.localhost.dci_cs_url }}"
+          dci_component:
+            name: "{{ kernel_version }}"
+            canonical_project_name: "rhcos_kernel {{ kernel_version }}"
+            team_id: "{{ hostvars.localhost.job_info['job']['team_id'] }}"
+            topic_id: "{{ hostvars.localhost.job_info['job']['topic_id'] }}"
+            type: kernel
+            state: present
+          register: kernel_component
+
+        - name: Attach kernel component to the job
+          dci_job_component:
+            component_id: "{{ kernel_component.component.id }}"
+            job_id: "{{ hostvars.localhost.job_id }}"
+          register: job_component_result
+          until: job_component_result is not failed
+          retries: 5
+          delay: 20
+          when:
+            - "'component' in kernel_component"
+            - "'id' in kernel_component.component"
+      ignore_errors: yes
+      delegate_to: localhost
+
+    - name: Disable provisioning
+      block:
+        - name: Get provisioning
+          community.kubernetes.k8s_info:
+            api_version: metal3.io/v1alpha1
+            kind: Provisioning
+            name: provisioning-configuration
+          register: provisioning_cr
+        - name: Disable provisioning
+          community.kubernetes.k8s:
+            definition:
+              apiVersion: metal3.io/v1alpha1
+              kind: Provisioning
+              metadata:
+                name: provisioning-configuration
+              spec:
+                provisioningNetwork: Disabled
+          when:
+            - provisioning_cr.resources | length
       when:
-        - provisioning_cr.resources | length
-  when:
-    - dci_disable_provisioning | default(false) | bool
+        - dci_disable_provisioning | default(false) | bool
 
 ...
