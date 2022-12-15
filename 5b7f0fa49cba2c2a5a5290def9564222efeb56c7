@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eadcf5cc_5d2a9105",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-15T23:57:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "8daf72bf_54868774",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b63a6a86_7a71c8d7",
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "It was doing that, but as this play is called recursively the ocp_major was always assigned to the original fact and during the fallback, it is required to decrease the value of ocp_minor. That is why I decided to move them out of the vars section.",
       "parentUuid": "b63a6a86_7a71c8d7",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "647d8d59_0345254f",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-15T23:57:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b68782a8_0599bca1",
       "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -234,6 +270,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "375e2e4d_e2a59740",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-15T23:57:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3e36ba2e_fa7d0b26",
+      "range": {
+        "startLine": 172,
+        "startChar": 0,
+        "endLine": 187,
+        "endChar": 54
+      },
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3f21759a_6ae5f796",
@@ -265,6 +325,24 @@
       "side": 1,
       "message": "using --path /configs/:\u003csome_path\u003e we are only allowing support for catalogs in FBC format. The configs/ endpoint is only available in FBC, for SQLLites it is index.db/. We may have some that are not already migrated. \n\nNot been explicit about the path allows oc to detect the kind of catalog based on the image labels and act accordingly.",
       "parentUuid": "3f21759a_6ae5f796",
+      "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0db9cdbf_a196774c",
+        "filename": "roles/mirror-catalog/tasks/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-15T23:57:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2524c2e0_e7c864d4",
       "revId": "5b7f0fa49cba2c2a5a5290def9564222efeb56c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

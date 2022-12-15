@@ -75,6 +75,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "27e6b5b4_2aff7cd1",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-15T23:57:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a50052c_d9255f13",
+      "range": {
+        "startLine": 7,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 64
+      },
+      "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "77726ecf_ad60a7fc",
@@ -88,6 +112,30 @@
       "writtenOn": "2022-12-13T11:24:07Z",
       "side": 1,
       "message": "General comment here: as this play is called from different points, isn\u0027t \"hub\" word really specific for ACM use case? Should it be generalized?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46c3a9c6_2eb98e44",
+        "filename": "plays/get-cluster-pullsecret.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-15T23:57:06Z",
+      "side": 1,
+      "message": "This should be used only in ACM",
+      "parentUuid": "77726ecf_ad60a7fc",
       "range": {
         "startLine": 1,
         "startChar": 0,

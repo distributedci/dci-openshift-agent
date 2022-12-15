@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e8d9b3c_22eb8766",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-15T23:57:06Z",
+      "side": 1,
+      "message": "LGTM, thanks for the explanations, all the effort and the tests. Let\u0027s rebase and see how this looks like",
+      "revId": "ee36c0afb80893a54cfcd2f0ba3b0ad3b8acfb92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
