@@ -45,6 +45,23 @@
   import_role:
     name: installer
 
-- include_tasks: after-install.yml
+- name: "Create .kube directory"
+  file:
+    path: "{{ ansible_env.HOME }}/.kube"
+    state: directory
+    mode: '0750'
 
+- name: "Check if .kube/config exists"
+  stat:
+    path: "{{ ansible_env.HOME }}/.kube/config"
+    get_checksum: false
+  register: kube_config
+
+- name: "Symlink kubeconfig to .kube/config"
+  file:
+    src: "{{ dir }}/auth/kubeconfig"
+    dest: "{{ ansible_env.HOME }}/.kube/config"
+    state: link
+  when:
+    - not kube_config.stat.exists
 ...
