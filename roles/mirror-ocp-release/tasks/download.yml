@@ -18,12 +18,12 @@
 - name: "Download release file"
   include_tasks: fetch.yml
   vars:
-    uri: "{{ release_url | regex_replace('\\/$', '') }}/{{ version }}/release.txt"
+    uri: "{{ mor_release_url | regex_replace('\\/$', '') }}/{{ mor_version }}/release.txt"
 
 - name: "Get release digest"
   shell: >
     set -o pipefail &&
-    grep '^Digest:' {{ dir }}/release.txt
+    grep '^Digest:' {{ mor_cache_dir }}/{{ mor_version }}/release.txt
     | tr -s ' '
     | cut -d ' ' -f 2
   register: release_digest
@@ -39,15 +39,14 @@
 - name: "Download client tools"
   include_tasks: fetch.yml
   vars:
-    uri: "{{ release_url | regex_replace('\\/$', '') }}/{{ version }}/openshift-client-linux-{{ version }}.tar.gz"
+    uri: "{{ mor_release_url | regex_replace('\\/$', '') }}/{{ mor_version }}/openshift-client-linux-{{ mor_version }}.tar.gz"
 
 - name: "Download extra release artifacts"
   include_tasks: fetch.yml
   vars:
-    uri: "{{ release_url | regex_replace('\\/$', '') }}/{{ version }}/{{ item }}"
-  loop: "{{ artifacts }}"
+    uri: "{{ mor_release_url | regex_replace('\\/$', '') }}/{{ mor_version }}/{{ item }}"
+  loop: "{{ mor_artifacts }}"
   when:
-    - mirror_artifacts | bool
+    - mor_mirror_artifacts | bool
     - build != "nightly"
-
 ...
