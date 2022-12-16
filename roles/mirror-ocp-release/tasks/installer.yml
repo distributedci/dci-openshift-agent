@@ -3,35 +3,34 @@
   shell:
     cmd: >
       sed -n 's/Pull From:\s*\(.*\)/\1/p'
-      {{ dir }}/release.txt | tr -d '[[:blank:]]'
-    warn: false  # runner complains about using sed
+      {{ mor_cache_dir }}/{{ mor_version }}/release.txt | tr -d '[[:blank:]]'
   register: release_image
   changed_when: false
 
 - name: "Check if installer has been extracted"
   stat:
-    path: "{{ dir }}/{{ installer }}"
+    path: "{{ mor_cache_dir }}/{{ mor_version }}/{{ mor_installer }}"
     get_checksum: false
   register: target
   when:
-    - not force  # we don't care to stat files if we're forcing
+    - not mor_force  # we don't care to stat files if we're forcing
 
 - name: "Extract installer command from container image"
   command: >
-    {{ dir }}/oc adm release extract
-    --registry-config={{ auths_file }}
-    --command={{ installer }}
-    --to={{ dir }}
+    {{ mor_cache_dir }}/{{ mor_version }}/oc adm release extract
+    --registry-config={{ mor_auths_file }}
+    --command={{ mor_installer }}
+    --to={{ mor_cache_dir }}/{{ mor_version }}
     {{ release_image.stdout }}
   when:
-    - force or not target.stat.exists
+    - mor_force or not target.stat.exists
 
 - name: "Make installer command readable from HTTP"
   file:
-    path: "{{ dir }}/{{ installer }}"
+    path: "{{ mor_cache_dir }}/{{ mor_version }}/{{ mor_installer }}"
     state: file
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    owner: "{{ mor_owner }}"
+    group: "{{ mor_group }}"
     mode: "0755"
     setype: "httpd_sys_content_t"
 ...
