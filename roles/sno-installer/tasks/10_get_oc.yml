@@ -89,10 +89,10 @@
 
 - name: "Fetch release.txt"
   get_url:
-    url: "{{ release_url }}/{{ version }}/release.txt"
-    dest: "{{ cache_dir }}/{{ version }}"
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
+    url: "{{ rm_release_url }}/{{ rm_version }}/release.txt"
+    dest: "{{ rm_cache_dir }}/{{ rm_version }}"
+    owner: "{{ rm_owner }}"
+    group: "{{ rm_owner }}"
     mode: "0644"
     timeout: 120
   retries: 5

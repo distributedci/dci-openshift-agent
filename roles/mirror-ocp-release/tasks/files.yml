@@ -20,18 +20,18 @@
   copy:
     dest: "{{ dir }}/release.dig"
     content: "{{ release_digest.stdout }}"
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    owner: "{{ rm_owner }}"
+    group: "{{ rm_group }}"
     mode: "0644"
     setype: httpd_sys_content_t
   become: true
 
 - name: "Download and refresh channel upgrade graph"
   get_url:
-    url: "https://api.openshift.com/api/upgrades_info/v1/graph?channel=fast-{{ major_version }}&arch=amd64"
-    dest: "{{ cache_dir }}/graph-{{ major_version }}"
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    url: "https://api.openshift.com/api/upgrades_info/v1/graph?channel=fast-{{ rm_base_version }}&arch=amd64"
+    dest: "{{ rm_cache_dir }}/graph-{{ rm_base_version }}"
+    owner: "{{ rm_owner }}"
+    group: "{{ rm_group }}"
     mode: "0644"
     timeout: 1200
     setype: "httpd_sys_content_t"
@@ -46,40 +46,40 @@
 - name: "Write mirrored image content source policy"
   copy:
     dest: "{{ dir }}/imagecontentsourcepolicy.yaml"
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    owner: "{{ rm_owner }}"
+    group: "{{ rm_group }}"
     mode: "0644"
     setype: httpd_sys_content_t
     content: |
       apiVersion: operator.openshift.io/v1alpha1
       kind: ImageContentSourcePolicy
       metadata:
-        name: release-{{ version }}
+        name: release-{{ rm_version }}
       spec:
         repositoryDigestMirrors:
         - mirrors:
-          - {{ registry_url | urlsplit('netloc') }}{{ registry_url | urlsplit('path') }}
+          - {{ rm_registry_url | urlsplit('netloc') }}{{ rm_registry_url | urlsplit('path') }}
           source: quay.io/openshift-release-dev/ocp-release
         - mirrors:
-          - {{ registry_url | urlsplit('netloc') }}{{ registry_url | urlsplit('path') }}
+          - {{ rm_registry_url | urlsplit('netloc') }}{{ rm_registry_url | urlsplit('path') }}
           source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
         - mirrors:
-          - {{ registry_url | urlsplit('netloc') }}{{ registry_url | urlsplit('path') }}
+          - {{ rm_registry_url | urlsplit('netloc') }}{{ rm_registry_url | urlsplit('path') }}
           source: registry.svc.ci.openshift.org/ocp/release
   become: true
 
 - name: "Write signature config map"
   copy:
     dest: "{{ dir }}/signature.yaml"
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    owner: "{{ rm_owner }}"
+    group: "{{ rm_group }}"
     mode: "0644"
     setype: httpd_sys_content_t
     content: |
       apiVersion: v1
       kind: ConfigMap
       metadata:
-        name: signature-{{ version }}
+        name: signature-{{ rm_version }}
         namespace: openshift-config-managed
         labels:
           release.openshift.io/verification-signatures: ""
