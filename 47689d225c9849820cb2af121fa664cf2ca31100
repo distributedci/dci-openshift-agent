@@ -16,6 +16,24 @@
       "message": "SNO with AI that sounds cool! I guess this is all virtual media or is there is PXE involved?",
       "revId": "47689d225c9849820cb2af121fa664cf2ca31100",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "225377b7_b1c88829",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2022-12-16T19:04:05Z",
+      "side": 1,
+      "message": "Still all virtual media Manu, we haven\u0027t done the work for PXE support in AI but once it\u0027s done it _should_ be transparent",
+      "parentUuid": "b5f89704_15064722",
+      "revId": "47689d225c9849820cb2af121fa664cf2ca31100",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
