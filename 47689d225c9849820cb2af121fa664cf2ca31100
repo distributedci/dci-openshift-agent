@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5f89704_15064722",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-16T01:16:35Z",
+      "side": 1,
+      "message": "SNO with AI that sounds cool! I guess this is all virtual media or is there is PXE involved?",
+      "revId": "47689d225c9849820cb2af121fa664cf2ca31100",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
