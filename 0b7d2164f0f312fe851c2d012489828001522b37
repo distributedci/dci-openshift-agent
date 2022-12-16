@@ -99,6 +99,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "62c0514a_6097dd51",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-16T00:02:54Z",
+      "side": 1,
+      "message": "Thanks, updated the task name",
+      "parentUuid": "1a50052c_d9255f13",
+      "range": {
+        "startLine": 7,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 64
+      },
+      "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "77726ecf_ad60a7fc",
@@ -135,6 +159,30 @@
       "writtenOn": "2022-12-15T23:57:06Z",
       "side": 1,
       "message": "This should be used only in ACM",
+      "parentUuid": "77726ecf_ad60a7fc",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "0b7d2164f0f312fe851c2d012489828001522b37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "049a0a41_eb9d57ca",
+        "filename": "plays/get-cluster-pullsecret.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-16T00:02:54Z",
+      "side": 1,
+      "message": "The idea is to generalize that process for all the installers. At this time some issues with how we manage the pullsecret is blocking us. So that will be a separate change.\n\nAt this time, this play will be used only for ACM install types",
       "parentUuid": "77726ecf_ad60a7fc",
       "range": {
         "startLine": 1,
