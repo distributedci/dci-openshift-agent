@@ -33,6 +33,24 @@
       "message": "Files are there, this is odd :/\n\u003e \n[dci-openshift-agent@server01 ~]$ ssh dci@provisionhost.server05.partnerci.bos2.lab                                                                        \n[dci@provisionhost ~]$ pwd\n/home/dci\n[dci@provisionhost ~]$ ls clusterconfigs/auth/\nkubeadmin-password  kubeconfig",
       "revId": "7d3308b1064f53a5f6ad3215b5029b77bce6dfaf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4070415_4e47b73c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2022-12-16T01:52:00Z",
+      "side": 1,
+      "message": "I see the problem, the install step is launched on the provisioner node[1], then each of the IPI, SNO, UPI installers calls the after-install.yml[2] which imports the role oc-setup and delegates to localhost[3], that\u0027s why we have another delegate to provisioner in the oc-setup role when fetching the files[4]\n\n[1]  https://github.com/redhat-cip/dci-openshift-agent/blob/master/dci-openshift-agent.yml#L261\n[2] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/ipi-install.yml#L48\n[3] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/after-install.yml#L31\n[4] https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/oc-setup/tasks/install.yml#L10\n\nI think we can reduce some of the extra delegates by moving the oc-setup to its own step in the entry point play. I\u0027ll run some tests.",
+      "parentUuid": "f2ea1deb_a6972a0a",
+      "revId": "7d3308b1064f53a5f6ad3215b5029b77bce6dfaf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
