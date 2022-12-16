@@ -5,30 +5,30 @@
     get_checksum: false
   register: container_images_done
   when:
-    - not force  # we don't care to stat files if we're forcing
+    - not rm_force  # we don't care to stat files if we're forcing
 
 - name: "Mirror release images to local registry"
   command: >
     {{ dir }}/oc adm release mirror
-    --registry-config={{ auths_file }}
+    --registry-config={{ rm_auths_file }}
     --from={{ ocp_release_data['container_image'] | quote }}
-    --to-release-image={{ registry_url | urlsplit('netloc') }}{{ registry_url | urlsplit('path') }}:{{ version }}
-    --to={{ registry_url | urlsplit('netloc') | quote }}{{ registry_url | urlsplit('path') | quote }}
+    --to-release-image={{ rm_registry_url | urlsplit('netloc') }}{{ rm_registry_url | urlsplit('path') }}:{{ rm_version }}
+    --to={{ rm_registry_url | urlsplit('netloc') | quote }}{{ rm_registry_url | urlsplit('path') | quote }}
   retries: 3
   delay: 10
   register: result
   until: result.rc == 0
   when:
-    - force or not container_images_done.stat.exists
+    - rm_force or not container_images_done.stat.exists
 
 - name: "Marker for container images mirrored"
   file:
-    dest: "{{ cache_dir }}/{{ version }}/container_images.done"
+    dest: "{{ rm_cache_dir }}/{{ rm_version }}/container_images.done"
     state: touch
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    owner: "{{ rm_owner }}"
+    group: "{{ rm_group }}"
     mode: "0644"
   become: true
   when:
-    - force or not container_images_done.stat.exists
+    - rm_force or not container_images_done.stat.exists
 ...
