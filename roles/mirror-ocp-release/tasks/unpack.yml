@@ -5,16 +5,16 @@
     get_checksum: false
   register: unpacked
   when:
-    - not force  # we don't care to stat files if we're forcing
+    - not mor_force  # we don't care to stat files if we're forcing
 
 - name: "Get client tools tarball"
   block:
     - name: "Unarchive client tarball"
       unarchive:
-        src: "{{ dir }}/openshift-client-linux-{{ version }}.tar.gz"
+        src: "{{ dir }}/openshift-client-linux-{{ mor_version }}.tar.gz"
         dest: "{{ dir }}"
-        owner: "{{ owner }}"
-        group: "{{ group }}"
+        owner: "{{ mor_owner }}"
+        group: "{{ mor_group }}"
         mode: "0755"
         remote_src: true
         exclude:
@@ -24,49 +24,49 @@
       file:
         state: touch
         dest: "{{ dir }}/client_tools.done"
-        owner: "{{ owner }}"
-        group: "{{ group }}"
+        owner: "{{ mor_owner }}"
+        group: "{{ mor_group }}"
         mode: "0644"
   become: true
   when:
-    - force or not unpacked.stat.exists
+    - mor_force or not unpacked.stat.exists
 
 - name: "Process extra artifacts"
   block:
-    - name: "Check if extra artifacts have already been unpacked"
+    - name: "Check if extra mor_artifacts have already been unpacked"
       stat:
-        path: "{{ dir }}/artifacts.done"
+        path: "{{ dir }}/mor_artifacts.done"
         get_checksum: false
       register: unpacked
       when:
-        - not force  # we don't care to stat files if we're forcing
+        - not mor_force  # we don't care to stat files if we're forcing
 
     - name: "Unarchive extra artifact tarballs"
       unarchive:
         src: "{{ dir }}/{{ item }}"
         dest: "{{ dir }}"
-        owner: "{{ owner }}"
-        group: "{{ group }}"
+        owner: "{{ mor_owner }}"
+        group: "{{ mor_group }}"
         mode: "0755"
         remote_src: true
         exclude:
           - README.md
       become: true
-      loop: "{{ artifacts }}"
+      loop: "{{ mor_artifacts }}"
       when:
-        - force or not unpacked.stat.exists
+        - mor_force or not unpacked.stat.exists
 
-    - name: "Touch marker for extra artifacts unpacked"
+    - name: "Touch marker for extra mor_artifacts unpacked"
       file:
-        dest: "{{ dir }}/artifacts.done"
+        dest: "{{ dir }}/mor_artifacts.done"
         state: touch
-        owner: "{{ owner }}"
-        group: "{{ group }}"
+        owner: "{{ mor_owner }}"
+        group: "{{ mor_group }}"
         mode: "0644"
       become: true
       when:
-        - force or not unpacked.stat.exists
+        - mor_force or not unpacked.stat.exists
   when:
-    - mirror_artifacts | bool
-    - unpack_artifacts | bool
+    - mor_mirror_artifacts | bool
+    - mor_unpack_artifacts | bool
 ...

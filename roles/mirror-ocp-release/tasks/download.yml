@@ -2,7 +2,7 @@
 - name: "Download release file"
   include_tasks: fetch.yml
   vars:
-    uri: "{{ release_url | regex_replace('\\/$', '') }}/release.txt"
+    uri: "{{ mor_release_url | regex_replace('\\/$', '') }}/release.txt"
 
 - name: "Get release digest"
   shell: >
@@ -21,13 +21,13 @@
 - name: "Download client tools"
   include_tasks: fetch.yml
   vars:
-    uri: "{{ release_url | regex_replace('\\/$', '') }}/openshift-client-linux-{{ version }}.tar.gz"
+    uri: "{{ mor_release_url | regex_replace('\\/$', '') }}/openshift-client-linux-{{ mor_version }}.tar.gz"
 
 - name: "Download extra release artifacts"
   include_tasks: fetch.yml
   vars:
-    uri: "{{ release_url | regex_replace('\\/$', '') }}/{{ item }}"
-  loop: "{{ artifacts }}"
+    uri: "{{ mor_release_url | regex_replace('\\/$', '') }}/{{ item }}"
+  loop: "{{ mor_artifacts }}"
   when:
-    - mirror_artifacts | bool
+    - mor_mirror_artifacts | bool
 ...
