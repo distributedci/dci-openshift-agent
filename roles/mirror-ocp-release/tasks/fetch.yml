@@ -5,14 +5,14 @@
     get_checksum: false
   register: target
   when:
-    - not force  # we don't care to stat files if we're forcing
+    - not mor_force  # we don't care to stat files if we're forcing
 
 - name: "Fetch {{ uri | basename }}"
   get_url:
     url: "{{ uri }}"
     dest: "{{ dir }}"
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    owner: "{{ mor_owner }}"
+    group: "{{ mor_group }}"
     mode: "0644"
     timeout: 1200
     setype: "{{ setype | default('httpd_sys_content_t') }}"
@@ -23,7 +23,7 @@
   register: downloaded
   until: downloaded is not failed
   when:
-    - force or not target.stat.exists
+    - mor_force or not target.stat.exists
 
 - name: "Apply new SELinux file context to file"
   command: /usr/sbin/restorecon -R "{{ dir }}/{{ uri | basename }}"
