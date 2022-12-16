@@ -72,18 +72,19 @@
       include_role:
         name: mirror-ocp-release
       vars:
-        release_url: "{{ url }}"
-        webserver_url: "{{ hub_webserver | default(None) }}"
-        cache_dir: "{{  provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
-        registry_url: "{{ hub_registry }}"
-        auths_file: "{{ hub_tmp_pull_secret }}"
-        force: false
-        mirror_artifacts: "{{ dci_disconnected | default(False) | bool }}"
-        unpack_artifacts: "{{ dci_disconnected | default(False) | bool }}"
-        install_type: "{{ install_type }}"
-        mirror_disk_images: "{{ dci_disconnected | default(False) | bool }}"
-        mirror_container_images: "{{ dci_disconnected | default(False) | bool }}"
-        write_custom_config: false
+        rm_version: "{{ version }}"
+        rm_release_url: "{{ url }}"
+        rm_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
+        rm_webserver_url: "{{ webserver_url | default(None) }}"
+        rm_registry_url: "{{ hub_registry }}"
+        rm_auths_file: "{{ dci_pullsecret_file }}"
+        rm_force: false
+        rm_install_type: "{{ install_type }}"
+        rm_mirror_artifacts: "{{ dci_disconnected | default(False) | bool }}"
+        rm_unpack_artifacts: "{{ dci_disconnected | default(False) | bool }}"
+        rm_mirror_disk_images: "{{ dci_disconnected | default(False) | bool }}"
+        rm_mirror_container_images: "{{ dci_disconnected | default(False) | bool }}"
+        rm_write_custom_config: false
 
     - name: "Set facts for install via ACM - disconnected"
       set_fact:
@@ -118,22 +119,23 @@
 
 - name: "Get OCP release artifacts"
   block:
-    - name: "Get OCP release artifacts"
+    - name: Mirror release
       include_role:
         name: mirror-ocp-release
       vars:
-        release_url: "{{ url }}"
-        webserver_url: "{{ hub_webserver | default(None) }}"
-        cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
-        registry_url: "{{ hub_registry }}"
-        auths_file: "{{ hub_tmp_pull_secret }}"
-        force: true
-        mirror_artifacts: false
-        unpack_artifacts: false
-        install_type: "{{ install_type }}"
-        mirror_disk_images: false
-        mirror_container_images: false
-        write_custom_config: false
+        rm_version: "{{ version }}"
+        rm_release_url: "{{ url }}"
+        rm_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
+        rm_webserver_url: "{{ webserver_url | default(None) }}"
+        rm_registry_url: "{{ hub_registry }}"
+        rm_auths_file: "{{ dci_pullsecret_file }}"
+        rm_force: true
+        rm_install_type: "{{ install_type }}"
+        rm_mirror_artifacts: false
+        rm_unpack_artifacts: false
+        rm_mirror_disk_images: false
+        rm_mirror_container_images: false
+        rm_write_custom_config: false
 
     - name: "Set facts for install via ACM - connected"
       set_fact:

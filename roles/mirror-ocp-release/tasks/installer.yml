@@ -4,34 +4,33 @@
     cmd: >
       sed -n 's/Pull From:\s*\(.*\)/\1/p'
       {{ dir }}/release.txt | tr -d '[[:blank:]]'
-    warn: false  # runner complains about using sed
   register: release_image
   changed_when: false
 
 - name: "Check if installer has been extracted"
   stat:
-    path: "{{ dir }}/{{ installer }}"
+    path: "{{ dir }}/{{ rm_installer }}"
     get_checksum: false
   register: target
   when:
-    - not force  # we don't care to stat files if we're forcing
+    - not rm_force  # we don't care to stat files if we're forcing
 
 - name: "Extract installer command from container image"
   command: >
     {{ dir }}/oc adm release extract
-    --registry-config={{ auths_file }}
-    --command={{ installer }}
+    --registry-config={{ rm_auths_file }}
+    --command={{ rm_installer }}
     --to={{ dir }}
     {{ release_image.stdout }}
   when:
-    - force or not target.stat.exists
+    - rm_force or not target.stat.exists
 
 - name: "Make installer command readable from HTTP"
   file:
-    path: "{{ dir }}/{{ installer }}"
+    path: "{{ dir }}/{{ rm_installer }}"
     state: file
-    owner: "{{ owner }}"
-    group: "{{ group }}"
+    owner: "{{ rm_owner }}"
+    group: "{{ rm_group }}"
     mode: "0755"
     setype: "httpd_sys_content_t"
 ...

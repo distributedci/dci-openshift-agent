@@ -1,0 +1,43 @@
+---
+- name: "Get list of images"
+  set_fact:
+    mr_images: "{{ mr_images | default([]) }}"
+
+- name: "Add images for IPI rm_installer"
+  set_fact:
+    mr_images: "{{ mr_images + rm_vsphere }}"
+  when:
+    - rm_install_type == 'ipi'
+
+- name: "Add images for IPI rm_installer"
+  set_fact:
+    mr_images: "{{ mr_images + rm_ipi }}"
+  when:
+    - rm_install_type == 'vsphere'
+
+- name: "Add images for rm_acm"
+  set_fact:
+    mr_images: "{{ mr_images + rm_acm }}"
+  when:
+    - rm_install_type == 'acm'
+
+- name: "Add images for SNO"
+  set_fact:
+    mr_images: "{{ mr_images + rm_sno }}"
+  when:
+    - rm_install_type == 'sno'
+
+- name: "Add images for Assisted rm_installer"
+  set_fact:
+    mr_images: "{{ mr_images + rm_assisted_installer }}"
+  when:
+    - rm_install_type == 'assisted'
+
+- name: "Cleanup images list"
+  set_fact:
+    mr_images: "{{ mr_images | unique | select | list }}"
+
+- name: "Images to be mirrored"
+  debug:
+    msg: "{{ mr_images }}"
+...
