@@ -16,6 +16,24 @@
       "message": "LGTM, I\u0027ve seen applying PAO in 4.12 with SPK goes a little over to the hour, but we\u0027ll see worse case we change it to 2 retries.",
       "revId": "7c9e789274f3d3e02a2c53fc227ceedea92a7c50",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92bc8030_0cb2a641",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-16T23:36:06Z",
+      "side": 1,
+      "message": "I expect it to be enough, 1 retry should add an extra hour to the initial 60*60, we will see.",
+      "parentUuid": "ac775571_1988b383",
+      "revId": "7c9e789274f3d3e02a2c53fc227ceedea92a7c50",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
