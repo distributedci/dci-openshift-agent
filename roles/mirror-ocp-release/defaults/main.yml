@@ -1,17 +1,32 @@
 ---
-major_version: "{{ version.split('.')[:2] | join('.') }}"
-cache_dir: /var/lib/dci-openshift-agent/releases
-install_type: ipi
-sno_install_type: baremetal
-owner: "{{ ansible_user_uid }}"
-group: "{{ ansible_user_gid }}"
-force: false
-installer: openshift-baremetal-install
-artifacts:
+rm_base_version: "{{ rm_version.split('.')[:2] | join('.') }}"
+rm_cache_dir: "/var/lib/dci-openshift-agent/releases"
+rm_install_type: "ipi"
+rm_owner: "{{ ansible_user_uid }}"
+rm_group: "{{ ansible_user_gid }}"
+rm_force: false
+rm_installer: openshift-baremetal-install
+rm_artifacts:
   - "opm-linux-{{ version }}.tar.gz"
-mirror_artifacts: true
-unpack_artifacts: true
-mirror_disk_images: true
-mirror_container_images: true
-write_custom_config: true
+rm_mirror_artifacts: true
+rm_unpack_artifacts: true
+rm_mirror_disk_images: true
+rm_mirror_container_images: true
+rm_write_custom_config: true
+# Required images according install type
+rm_ipi:
+ - openstack
+ - qemu
+rm_vsphere:
+ - openstack
+ - qemu
+rm_sno:
+ - metal_pxe_rootfs
+ - metal_iso
+rm_acm:
+ - metal_pxe_rootfs
+ - metal_iso
+rm_assisted_installer:
+ - metal_pxe_rootfs
+ - metal_iso
 ...
