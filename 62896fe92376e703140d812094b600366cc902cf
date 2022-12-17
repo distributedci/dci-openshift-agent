@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "755433a8_32ddcb5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 62
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-12-17T15:49:32Z",
+      "side": 1,
+      "message": "check libvirt --assisted",
+      "revId": "62896fe92376e703140d812094b600366cc902cf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
