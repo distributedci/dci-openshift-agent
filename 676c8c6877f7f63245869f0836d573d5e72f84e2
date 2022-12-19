@@ -33,6 +33,57 @@
       "message": "check libvirt --assisted",
       "revId": "676c8c6877f7f63245869f0836d573d5e72f84e2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "364119a2_189c01b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 65
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-19T22:17:58Z",
+      "side": 1,
+      "message": "hello Bill, thanks for this. \n\nJust a couple of things. Also, could you enable the operators deployment. Adding something like  \"-e enable_elasticsearch\u003dtrue\" to the test hints just to see how the operators deployment behaves? \n\nThanks!",
+      "revId": "676c8c6877f7f63245869f0836d573d5e72f84e2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f845b50_4532686b",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 65
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-19T22:17:58Z",
+      "side": 1,
+      "message": "I think this can be removed, we already removed the equivalent code for the other installers: https://github.com/redhat-cip/dci-openshift-agent/blob/681aaf99a152b13932c7bf0c2dccd69202db5a22/roles/oc-setup/tasks/install.yml#L15-L17 \n\nWe are using the latest version of the openshift clients, those are been installed during the jumphost configuration (https://www.distributed-ci.io/jobs/115b7b70-61d5-4599-bf19-55c39441f859/jobStates?sort\u003ddate\u0026task\u003d2263239a-c113-4750-a341-367885d2c83b). Some old version of \"oc\" do not support some of the actions that we need for operators mirroring.\n\nSome of the tasks in this play after the install are already considered in the oc-setup role. We may want to just use that role at some time.",
+      "revId": "676c8c6877f7f63245869f0836d573d5e72f84e2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "009a2508_ed5992b4",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 65
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-19T22:17:58Z",
+      "side": 1,
+      "message": "I see in the job that the it was just 1 retry before failing. May want to add more time.",
+      "revId": "676c8c6877f7f63245869f0836d573d5e72f84e2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
