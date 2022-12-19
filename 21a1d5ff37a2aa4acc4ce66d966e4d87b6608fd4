@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "162ba70a_734bb016",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-19T20:01:19Z",
+      "side": 1,
+      "message": "Previous job was to validate that the index fallback is working",
+      "revId": "21a1d5ff37a2aa4acc4ce66d966e4d87b6608fd4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
