@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "23aea570_e405abb3",
+        "filename": "roles/ocp-on-libvirt/tasks/dns_setup.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-12-19T19:02:45Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "51233d9a_96e3ec04",
+      "revId": "9224435f6e774829c47b6afe519ef8ea7be5ebe9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1f4d0d95_b09f00e9",
