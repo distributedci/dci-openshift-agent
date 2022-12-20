@@ -328,7 +328,7 @@
   when:
     - install_type == 'assisted'
 
-# Step 3a-2 : deploy operators, run on the provisioner so OC is automatically set
+# Step 3a-2 : deploy operators
 - name: 'Deploy operators to OCP cluster'
   hosts: localhost
   tags:
@@ -341,6 +341,7 @@
     KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
+        - include_tasks: plays/check-cluster-health.yml
         - include_tasks: plays/deploy-operators.yml
       when:
       - dci_main == 'install'
@@ -360,6 +361,7 @@
     KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
+        - include_tasks: plays/check-cluster-health.yml
         - name: "dci-openshift-agent : Launch partner install"
           include_tasks: '{{ hookdir }}/hooks/install.yml'
           loop: "{{ dci_config_dirs }}"
@@ -367,6 +369,7 @@
             loop_var: hookdir
       when:
         - dci_main == 'install'
+
       rescue: *teardown_failure
 
 # Step 3b-1 : upgrading
@@ -382,6 +385,7 @@
     KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
+        - include_tasks: plays/check-cluster-health.yml
         - name: "dci-openshift-agent : Launch upgrade"
           include_tasks: plays/upgrade.yml
       when:
@@ -395,14 +399,19 @@
   tags:
     - running
     - hook-upgrading
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+    KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
-    - block:
+    - block: 
+        - include_tasks: plays/check-cluster-health.yml
         - name: "dci-openshift-agent : Launch partner upgrade"
           include_tasks: '{{ hookdir }}/hooks/upgrade.yml'
           loop: "{{ dci_config_dirs }}"
           loop_control:
             loop_var: hookdir
-
       when:
         - dci_main == 'upgrade'
 
@@ -419,16 +428,17 @@
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
+    KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
 
+        - include_tasks: plays/check-cluster-health.yml
         - name: "Setup job_logs directory"
           include_tasks: plays/log-dir.yml
           when: job_logs is undefined
 
         - name: "Launch Red Hat tests"
           include_tasks: plays/tests.yml
-
       when:
         - install_type != 'acm'
 
@@ -445,9 +455,10 @@
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
+    KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
-
+        - include_tasks: plays/check-cluster-health.yml
         - name: "Setup job_logs directory"
           include_tasks: plays/log-dir.yml
           when: job_logs is undefined
@@ -458,7 +469,7 @@
           loop: "{{ dci_config_dirs }}"
           loop_control:
             loop_var: hookdir
-
+        - include_tasks: plays/check-cluster-health.yml
       rescue: *teardown_failure
 
     - name: post-run
@@ -477,6 +488,7 @@
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
+    KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
 
@@ -509,6 +521,7 @@
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
+    KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
         - name: Run the success hook
