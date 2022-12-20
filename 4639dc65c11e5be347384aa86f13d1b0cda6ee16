@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1cd5189_751a22bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 67
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-20T16:34:01Z",
+      "side": 1,
+      "message": "Sorry Bill, I detected something that may be wrong before merging",
+      "revId": "4639dc65c11e5be347384aa86f13d1b0cda6ee16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41f0cb4a_772454e9",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-20T16:34:01Z",
+      "side": 1,
+      "message": "may it be \"assisted\"?",
+      "range": {
+        "startLine": 277,
+        "startChar": 21,
+        "endLine": 277,
+        "endChar": 30
+      },
+      "revId": "4639dc65c11e5be347384aa86f13d1b0cda6ee16",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
