@@ -16,6 +16,278 @@
       "message": "recheck",
       "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80edbb93_6d0c9c3b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "Nice job, few typoes but is looking good",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8bc8f31_a3f40a8d",
+        "filename": "roles/mirror-ocp-release/tasks/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "There\u0027s no default for this var",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fbfd599_898f87df",
+        "filename": "roles/mirror-ocp-release/tasks/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "The example is a bit confusing because seems like quay.io is a valid value",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80a6f8af_5f8ad6f6",
+        "filename": "roles/mirror-ocp-release/tasks/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "The description is incorrect",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d61a9e75_9dd56fe6",
+        "filename": "roles/mirror-ocp-release/tasks/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "Please add the options",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1264359d_4d5b8b72",
+        "filename": "roles/mirror-ocp-release/tasks/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "Could you please add another example with other values and omit anything that\u0027s optional",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1111908_46665c2a",
+        "filename": "roles/mirror-ocp-release/tasks/dirs.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "mor_version?",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a494cfcf_0adbd2ad",
+        "filename": "roles/mirror-ocp-release/tasks/image-list.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "typo: for vsphere installer",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9df4fcc4_10a35ee3",
+        "filename": "roles/mirror-ocp-release/tasks/image-list.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "typo: mor_install_type \u003d\u003d \u0027vsphere\u0027",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88e8fdf9_e9f45725",
+        "filename": "roles/mirror-ocp-release/tasks/image-list.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "typo: mor_install_type \u003d\u003d \u0027ipi\u0027",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec0851f4_a869333f",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "wouldn\u0027t make sense to avoid passing the dir var in this and the tasks below? Instead, use either mor_cache_dir and mor_version in the tasks included",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b961813b_32967296",
+        "filename": "roles/mirror-ocp-release/tasks/main.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "no need to change the name of this task",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f0e3fb9_83f0d525",
+        "filename": "roles/mirror-ocp-release/tasks/unpack.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "Let\u0027s not change the name of this task",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "914e7e0d_f3313497",
+        "filename": "roles/mirror-ocp-release/tasks/unpack.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "This is a typo, it\u0027s not a variable is the name of the \"lock/done\" file",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fffb4e29_b0233e01",
+        "filename": "roles/mirror-ocp-release/tasks/unpack.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "Another \"sed\" mistake, let\u0027s not change the name of the task 😄",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06f38387_f3b49be7",
+        "filename": "roles/mirror-ocp-release/tasks/unpack.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-20T23:26:09Z",
+      "side": 1,
+      "message": "not a variable",
+      "revId": "8548a51ade57b0e8da6bff8ede780f01195e4800",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
