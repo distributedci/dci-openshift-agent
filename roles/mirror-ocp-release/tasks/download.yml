@@ -1,4 +1,15 @@
 ---
+- name: "Check base page"
+  ansible.builtin.uri:
+    url: "{{ release_url }}"
+    return_content: true
+  register: base_page
+  retries: 60
+  delay: 10
+  until: "'Extracting tools' not in base_page.content"
+  when:
+    - build == "nightly"
+
 - name: "Download release file"
   include_tasks: fetch.yml
   vars:
