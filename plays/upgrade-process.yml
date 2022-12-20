@@ -176,22 +176,4 @@
   include_tasks: upgrade-operators.yml
   when:
     - upgrade_operators | default(true) | bool
-
-- name: "test_ upgrader: check if all cluster-operators are running correctly"
-  community.kubernetes.k8s_info:
-    kind: ClusterOperator
-  register: clusteroperator_info
-  vars:
-    status_query: "resources[*].status.conditions[?type=='Degraded'].status"
-    cluster_operators_degraded: "{{ clusteroperator_info | json_query(status_query) | flatten | unique }}"
-  failed_when: cluster_operators_degraded == ['True']
-
-- name: "Validate that nodes are Ready and MCPs are up to date"
-  include_role:
-    name: check-resource
-  vars:
-    resource_to_check: "MachineConfigPool"
-    check_wait_retries: 100
-    check_wait_delay: 10
-    check_reason: "Upgrade - after having operators running"
 ...
