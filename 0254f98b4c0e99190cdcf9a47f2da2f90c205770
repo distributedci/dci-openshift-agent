@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0eb963a7_38971849",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-12-20T14:02:27Z",
+      "side": 1,
+      "message": "Can you test this on a disconnected env?",
+      "revId": "0254f98b4c0e99190cdcf9a47f2da2f90c205770",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57ff5119_a7871ebc",
+        "filename": "roles/mirror-ocp-release/tasks/download.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2022-12-20T14:02:27Z",
+      "side": 1,
+      "message": "I am sorry but I don\u0027t understand how this task is handling the nightly builds",
+      "revId": "0254f98b4c0e99190cdcf9a47f2da2f90c205770",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
