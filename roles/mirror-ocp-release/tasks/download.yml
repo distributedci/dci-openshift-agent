@@ -1,4 +1,20 @@
 ---
+
+# Web page is built on the fly for openshift-release-artifacts located builds.
+# During 30 minutes, we will try to retrieve the release.txt by making a request every 10 seconds.
+# We reproduce the behavior of the HTML page (which refreshes the page every 5 seconds)
+# We look at the "Extracting tools" keywords in the content of the HTML page.
+- name: "Check base page"
+  ansible.builtin.uri:
+    url: "{{ release_url }}"
+    return_content: true
+  register: base_page
+  retries: 180
+  delay: 10
+  until: "'Extracting tools' not in base_page.content"
+  when:
+    - release_url.startswith("https://openshift-release-artifacts.apps")
+
 - name: "Download release file"
   include_tasks: fetch.yml
   vars:
@@ -17,6 +33,8 @@
   include_tasks: fetch.yml
   vars:
     uri: "https://mirror.openshift.com/pub/openshift-v4/signatures/openshift/release/{{ release_digest.stdout | replace(':', '=') }}/signature-1"
+  when:
+    - build != "nightly"
 
 - name: "Download client tools"
   include_tasks: fetch.yml
@@ -30,4 +48,6 @@
   loop: "{{ artifacts }}"
   when:
     - mirror_artifacts | bool
+    - build != "nightly"
+
 ...
