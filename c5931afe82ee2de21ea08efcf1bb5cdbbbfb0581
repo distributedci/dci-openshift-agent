@@ -39,6 +39,30 @@
       },
       "revId": "c5931afe82ee2de21ea08efcf1bb5cdbbbfb0581",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85cea3e2_29b0e885",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-20T16:26:39Z",
+      "side": 1,
+      "message": "I considered that. The problem is that MCG is only available starting 4.9 and I do not want to add conditionals to group_vars. The other option is to have a different set of operators for OCS for 4.9 and newer defined in group_vars.",
+      "parentUuid": "a360b1f9_25d5e9e1",
+      "range": {
+        "startLine": 63,
+        "startChar": 35,
+        "endLine": 63,
+        "endChar": 53
+      },
+      "revId": "c5931afe82ee2de21ea08efcf1bb5cdbbbfb0581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
