@@ -33,6 +33,46 @@
       "message": "check dallas ocp-4.10-acm-hub",
       "revId": "0fa4380c5fa84ba35374b5dece2db00a43cf607f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffb137cd_71874ed6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-20T15:58:37Z",
+      "side": 1,
+      "message": "I think everything is mostly fine, just one question to confirm in the sno-installer change",
+      "revId": "0fa4380c5fa84ba35374b5dece2db00a43cf607f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2cd46684_7c1033ee",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-20T15:58:37Z",
+      "side": 1,
+      "message": "where are these rm_X variables defined?",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 95,
+        "endChar": 27
+      },
+      "revId": "0fa4380c5fa84ba35374b5dece2db00a43cf607f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
