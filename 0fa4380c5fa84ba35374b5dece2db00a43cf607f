@@ -73,6 +73,30 @@
       },
       "revId": "0fa4380c5fa84ba35374b5dece2db00a43cf607f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e24058d_42a0c4a7",
+        "filename": "roles/sno-installer/tasks/10_get_oc.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-20T19:24:13Z",
+      "side": 1,
+      "message": "Thanks, I shouldn\u0027t have modified that. Good catch!",
+      "parentUuid": "2cd46684_7c1033ee",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 95,
+        "endChar": 27
+      },
+      "revId": "0fa4380c5fa84ba35374b5dece2db00a43cf607f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
