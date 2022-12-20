@@ -33,6 +33,24 @@
       "message": "I am sorry but I don\u0027t understand how this task is handling the nightly builds",
       "revId": "0254f98b4c0e99190cdcf9a47f2da2f90c205770",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "692f8bda_a5ba7329",
+        "filename": "roles/mirror-ocp-release/tasks/download.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2022-12-20T14:14:56Z",
+      "side": 1,
+      "message": "Nightly build url are built on the fly. It\u0027s really weird, but you need to query the parent dir, wait until the files are copied (\"Extracting tool ...\") then refresh the page.",
+      "parentUuid": "57ff5119_a7871ebc",
+      "revId": "0254f98b4c0e99190cdcf9a47f2da2f90c205770",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
