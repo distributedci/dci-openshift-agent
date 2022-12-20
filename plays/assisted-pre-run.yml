@@ -135,7 +135,7 @@
           tasks_from: prerequisites.yml
         vars:
           release_image_remote: "{{ ocp_release_data['container_image'].split('@')[0] }}"
-          release_url: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp{{ '-dev-preview' if hostvars.localhost.build == 'dev' else '' }}"
+          release_url: "{{ '/'.join(hostvars.localhost.url.split('/')[:-1]) }}"
       rescue: &teardown_error
         - name: Run the teardown error handler
           block:
