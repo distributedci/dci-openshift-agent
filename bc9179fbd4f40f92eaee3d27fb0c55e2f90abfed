@@ -34,6 +34,24 @@
       "parentUuid": "267a3130_08b58322",
       "revId": "bc9179fbd4f40f92eaee3d27fb0c55e2f90abfed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "174eb36a_3021ad8f",
+        "filename": "samples/assisted_on_libvirt/generate-hosts-file.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-12-20T13:19:43Z",
+      "side": 1,
+      "message": "Now that we do actions on both localhost(jumphost) and the provisioner(vm_host) it makes sense to use delegate_to.",
+      "parentUuid": "8a2d4987_5a857b8a",
+      "revId": "bc9179fbd4f40f92eaee3d27fb0c55e2f90abfed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
