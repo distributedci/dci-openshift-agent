@@ -67,6 +67,23 @@
       "message": "libvirt job worked:\n\ndci-check-change : SUCCESS tested on libvirt:virt\nlibvirt -\u003e success: https://www.distributed-ci.io/jobs/7692c66c-23c5-484f-b60a-071a466dd03e/jobStates\nbasic_example -\u003e success: https://www.distributed-ci.io/jobs/8b9aa643-bbc8-4fc7-b135-5e89847fc5b7/jobStates\n\nassisted job worked:\n\ndci-check-change : SUCCESS tested on libvirt:assisted\nassisted -\u003e success: https://www.distributed-ci.io/jobs/3ebe6ed6-0857-4831-9094-e6e96f02ebd9/jobStates\nbasic_example -\u003e success: https://www.distributed-ci.io/jobs/f15464b8-8ba4-4b66-a245-dacd99b78c42/jobStates\n\nnow testing with sno to conclude with this",
       "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a145c2d8_669cc1ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T17:16:36Z",
+      "side": 1,
+      "message": "check libvirt --sno",
+      "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
