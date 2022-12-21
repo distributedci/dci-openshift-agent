@@ -16,6 +16,23 @@
       "message": "After finishing the libvirt check, I\u0027ll force the test in sno and assisted to confirm it\u0027s working fine",
       "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "beaa340d_99b9e486",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T16:26:18Z",
+      "side": 1,
+      "message": "check libvirt --asisted",
+      "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
