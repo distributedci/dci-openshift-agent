@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ead9d8be_6f7cf212",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T09:14:56Z",
+      "side": 1,
+      "message": "LGTM, but I\u0027d prefer other eyes confirm that everything is fine too, as there are a lot of files changed",
+      "revId": "a8cc2389c8b0342e95d099fda2ec8932c1136e10",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
