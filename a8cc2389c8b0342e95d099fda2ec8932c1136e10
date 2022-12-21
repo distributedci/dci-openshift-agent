@@ -16,6 +16,23 @@
       "message": "LGTM, but I\u0027d prefer other eyes confirm that everything is fine too, as there are a lot of files changed",
       "revId": "a8cc2389c8b0342e95d099fda2ec8932c1136e10",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "231a6fe1_9b6fc390",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-21T18:09:54Z",
+      "side": 1,
+      "message": "check dallas  ocp-4.10-vanilla",
+      "revId": "a8cc2389c8b0342e95d099fda2ec8932c1136e10",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
