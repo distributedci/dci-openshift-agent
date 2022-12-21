@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9798eab3_2bdbbede",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-12-21T11:31:02Z",
+      "side": 1,
+      "message": "check dallas ocp-4.11-vanilla openshift-vanilla:ansible_extravars\u003dforce_mirroring:true",
+      "revId": "1d578b373c7b264d821f43d0b63db734978339ea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
