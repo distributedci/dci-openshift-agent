@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36ecd509_48727302",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2022-12-21T18:03:42Z",
+      "side": 1,
+      "message": "LGTM - once this merges I will experiment with having assisted use this too.",
+      "revId": "ef6ae7e0be86398338054fd292705c96863c284f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
