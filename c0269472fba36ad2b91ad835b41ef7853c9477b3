@@ -118,6 +118,23 @@
       "message": "sno job worked too: https://www.distributed-ci.io/jobs/f8218f09-30fe-4cb6-8881-28675096c962/jobStates, but failed in basic_example, anyway not related to this change. I\u0027ll do a recheck to have a libvirt job working to have +1 from dci-ci-bot",
       "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe25434e_0d55590c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T17:57:16Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
