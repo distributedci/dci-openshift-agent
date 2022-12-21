@@ -18,6 +18,40 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "faf261c3_3c7f547e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-21T16:57:58Z",
+      "side": 1,
+      "message": "This is a great validation for each step.\n\nFor the KUBECONFIG addition in some plays, we need to check how the hooks or plays are using it, most likely there\u0027s a use of kubeconfig_path somewhere that should be removed, e.g. https://github.com/dci-labs/f5-spk-config/blob/master/hooks/tests.yml#L22-L24",
+      "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30897f98_c35cfdcf",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-21T16:57:58Z",
+      "side": 1,
+      "message": "Please add a name to the task",
+      "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2a97c01e_7aff8154",
@@ -37,6 +71,23 @@
         "endLine": 472,
         "endChar": 55
       },
+      "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27a0094f_54c50b38",
+        "filename": "plays/check-cluster-health.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-21T16:57:58Z",
+      "side": 1,
+      "message": "nit: Can we use control-plane where possible? e.g.\n    - name: \"Check that control-plane nodes are ready\"",
       "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
