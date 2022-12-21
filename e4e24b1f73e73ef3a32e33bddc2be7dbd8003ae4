@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9035426_718e9d6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T09:28:52Z",
+      "side": 1,
+      "message": "Some comments below.",
+      "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a97c01e_7aff8154",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T09:28:52Z",
+      "side": 1,
+      "message": "I understand this is done here to run the check after the partner tests.\nIn previous stages, we run the check at the beginning of the stage and at the beginning of the next stage (so, in the end, it\u0027s run at the end of the stage).\nBut now, my question is: there may be some stages that are not executed (e.g. upgrade or hooks), so that we are running the check probably multiple times without any task in the middle (e.g. https://www.distributed-ci.io/jobs/649e9433-80e3-4808-b08a-8bf167052b05/jobStates?sort\u003ddate\u0026task\u003d22390226-541e-42d1-9be7-f9a3735fd875). Do we expect this? I think that, as a first integration, it\u0027s fine, but maybe something in which we can think in the future to improve this",
+      "range": {
+        "startLine": 472,
+        "startChar": 10,
+        "endLine": 472,
+        "endChar": 55
+      },
+      "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cf1d13f_66142c61",
+        "filename": "plays/check-cluster-health.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T09:28:52Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 54,
+        "startChar": 7,
+        "endLine": 54,
+        "endChar": 8
+      },
+      "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2050dcc8_fa5bdc38",
+        "filename": "plays/check-cluster-health.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-21T09:28:52Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 56,
+        "startChar": 7,
+        "endLine": 56,
+        "endChar": 8
+      },
+      "revId": "e4e24b1f73e73ef3a32e33bddc2be7dbd8003ae4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
