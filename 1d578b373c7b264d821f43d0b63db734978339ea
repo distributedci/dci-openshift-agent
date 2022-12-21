@@ -50,6 +50,24 @@
       "message": "Can we add \"candidate\", that\u0027s also available",
       "revId": "1d578b373c7b264d821f43d0b63db734978339ea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0e1b1e6_17e7fb5e",
+        "filename": "roles/sno-node-prep/tasks/10_validation.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2022-12-21T22:23:37Z",
+      "side": 1,
+      "message": "this is rewritten in dci-openshift-agent.yml line 91",
+      "parentUuid": "d90d8cac_7c69f5ea",
+      "revId": "1d578b373c7b264d821f43d0b63db734978339ea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
