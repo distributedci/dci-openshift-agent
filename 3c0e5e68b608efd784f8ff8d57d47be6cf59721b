@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed67f94e_54e5f853",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-22T09:52:29Z",
+      "side": 1,
+      "message": "one whitespace was missed",
+      "revId": "3c0e5e68b608efd784f8ff8d57d47be6cf59721b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0440bf28_7ec1dbac",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-22T09:52:29Z",
+      "side": 1,
+      "message": "missed whitespace",
+      "range": {
+        "startLine": 412,
+        "startChar": 12,
+        "endLine": 412,
+        "endChar": 13
+      },
+      "revId": "3c0e5e68b608efd784f8ff8d57d47be6cf59721b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
