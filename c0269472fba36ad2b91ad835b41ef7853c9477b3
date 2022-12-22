@@ -135,6 +135,23 @@
       "message": "recheck",
       "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ecb7c6d_a2787f80",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-22T15:45:30Z",
+      "side": 1,
+      "message": "I\u0027ll merge this as it\u0027s working and we\u0027ve commented about this in the daily meeting",
+      "revId": "c0269472fba36ad2b91ad835b41ef7853c9477b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
