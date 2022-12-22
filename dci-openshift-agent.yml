@@ -274,12 +274,63 @@
             - dci_main == 'install'
             - install_type in ['ipi', 'upi', 'sno']
 
+      rescue: &teardown_failure
+        - name: Run the teardown failure handler
+          block:
+            - name: failure
+              dci_job:
+                id: "{{ hostvars.localhost.job_id }}"
+                status: "failure"
+              delegate_to: localhost
+              tags: [dci]
+
+            - name: Run the failure process for partners
+              include_tasks: "{{ hookdir }}/hooks/failure.yml"
+              loop: "{{ dci_config_dirs }}"
+              loop_control:
+                loop_var: hookdir
+              ignore_errors: true
+
+            - block:
+                - name: Run the teardown hooks
+                  include_tasks: "{{ hookdir }}/hooks/teardown.yml"
+                  loop: "{{ dci_config_dirs | reverse | list }}"
+                  loop_control:
+                    loop_var: hookdir
+
+                - name: Run the teardown play
+                  include_tasks: plays/teardown.yml
+              when: dci_teardown_on_failure|bool
+              delegate_to: localhost
+              ignore_unreachable: true
+              ignore_errors: true
+
+          always:
+            - name: Run the failure process
+              include_tasks: plays/failure.yml
+
+          delegate_to: localhost
+          ignore_unreachable: true
+
+# Step 3a-1 : installing
+- name: 'Launch ACM install'
+  hosts: localhost
+  tags:
+    - running
+    - installing
+    - acm
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
         - name: "ACM Installation"
           include_tasks:
             file: plays/acm-install.yml
             apply:
               environment:
-                KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
+                KUBECONFIG: "{{ hub_kubeconfig_path }}"
               tags:
                 - acm-install
           when:
