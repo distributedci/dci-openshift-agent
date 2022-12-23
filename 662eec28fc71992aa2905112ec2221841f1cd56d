@@ -33,6 +33,23 @@
       "message": "LGTM",
       "revId": "662eec28fc71992aa2905112ec2221841f1cd56d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6af43a07_23f62487",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-23T10:48:33Z",
+      "side": 1,
+      "message": "I\u0027ll merge since ocp and cnf jobs are working",
+      "revId": "662eec28fc71992aa2905112ec2221841f1cd56d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
