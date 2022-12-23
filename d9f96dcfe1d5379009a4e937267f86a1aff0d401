@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bb0f41e_4ec1a740",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-23T00:41:44Z",
+      "side": 1,
+      "message": "LGTM, let\u0027s run  a vanilla job in dallas to confirm",
+      "revId": "d9f96dcfe1d5379009a4e937267f86a1aff0d401",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
