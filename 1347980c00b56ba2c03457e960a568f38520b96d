@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6499002_0a34d220",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-23T00:59:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "93101cb9_5e5d59c2",
+      "revId": "1347980c00b56ba2c03457e960a568f38520b96d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "40d234be_0c048aee",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-12-23T00:55:03Z",
       "side": 1,
       "message": "same here",
+      "revId": "1347980c00b56ba2c03457e960a568f38520b96d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bdee04c_8ab04d1c",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-23T00:59:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "40d234be_0c048aee",
       "revId": "1347980c00b56ba2c03457e960a568f38520b96d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
