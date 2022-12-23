@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8132e19e_dfe306f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2022-12-23T14:54:57Z",
+      "side": 1,
+      "message": "Rebased again, this should be good to merge. Waiting for +2",
+      "revId": "a0af76f7d78464e7c5ca3eb399c7508e06a36ad2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
