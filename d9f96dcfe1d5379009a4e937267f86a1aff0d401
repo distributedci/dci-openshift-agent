@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "d9f96dcfe1d5379009a4e937267f86a1aff0d401",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76cb0851_448064d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2022-12-23T09:13:50Z",
+      "side": 1,
+      "message": "Thanks Beto! I think it\u0027s safe to merge this.",
+      "revId": "d9f96dcfe1d5379009a4e937267f86a1aff0d401",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
