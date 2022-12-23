@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93101cb9_5e5d59c2",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-23T00:55:03Z",
+      "side": 1,
+      "message": "I think this one has to be only mor_cache_dir as outside is called with only that",
+      "revId": "1347980c00b56ba2c03457e960a568f38520b96d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40d234be_0c048aee",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2022-12-23T00:55:03Z",
+      "side": 1,
+      "message": "same here",
+      "revId": "1347980c00b56ba2c03457e960a568f38520b96d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
