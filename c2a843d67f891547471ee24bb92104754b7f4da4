@@ -67,6 +67,24 @@
       "message": "This is failing because it\u0027s trying to pull down the oc binary\n\nhttps://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.11.0-0.nightly-2022-12-22-231705/openshift-client-linux.tar.gz\n\nBut the client tarball is named with the nightly version in it:\n\nhttps://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.11.0-0.nightly-2022-12-22-231705/openshift-client-linux-4.11.0-0.nightly-2022-12-22-231705.tar.gz\n\nThis is part of the Populate Mirror Registry role so I don\u0027t think this is specific to Assisted installer?",
       "revId": "c2a843d67f891547471ee24bb92104754b7f4da4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b91d6ef5_c85224cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-03T18:16:17Z",
+      "side": 1,
+      "message": "Thanks for the clarification Bill, yes, I think this is related to assisted installer repo not able to use nightlies, by default it expects the binary to be named \"openshift-client-linux.tar.gz\": https://github.com/redhat-partner-solutions/crucible/blob/main/roles/populate_mirror_registry/defaults/main.yml#L21\n\nWe should test this change with GA versions only, which I see something related in the commit, but maybe we are missing something else, I\u0027ll see if specifying the ocp component can get better results.",
+      "parentUuid": "72938019_c57bbd92",
+      "revId": "c2a843d67f891547471ee24bb92104754b7f4da4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
