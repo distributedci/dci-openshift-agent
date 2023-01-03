@@ -39,6 +39,30 @@
       },
       "revId": "a0af76f7d78464e7c5ca3eb399c7508e06a36ad2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc241730_68dbce91",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-03T15:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ff20d18_3982de9e",
+      "range": {
+        "startLine": 358,
+        "startChar": 0,
+        "endLine": 362,
+        "endChar": 69
+      },
+      "revId": "a0af76f7d78464e7c5ca3eb399c7508e06a36ad2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
