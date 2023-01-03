@@ -33,6 +33,23 @@
       "message": "Thanks for retaking this Beto.\n\nI think the last failure is because of 27041 was still not merged, and the url for assisted did not match https://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.11.0-0.nightly-2022-12-22-231705/openshift-client-linux-4.11.0-0.nightly-2022-12-22-231705.tar.gz\n\nI\u0027ll re-run to check",
       "revId": "c2a843d67f891547471ee24bb92104754b7f4da4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "affa6e54_1fb651be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-03T17:53:56Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "c2a843d67f891547471ee24bb92104754b7f4da4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
