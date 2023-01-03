@@ -21,6 +21,22 @@
   when:
     - force or not container_images_done.stat.exists
 
+- name: Generate ImageContentSourcePolicy
+  cmd: >
+    echo -e {{ result.stdout }} |
+    sed -n '/apiVersion/,source/p'
+  register: icsp_release
+
+- name: "Write mirrored image content source policy"
+  content:
+    dest: "{{ dir }}/imagecontentsourcepolicy.yaml"
+    owner: "{{ owner }}"
+    group: "{{ group }}"
+    mode: "0644"
+    setype: httpd_sys_content_t
+    content: "{{ icsp_release.stdout }}"
+  become: true
+
 - name: "Marker for container images mirrored"
   file:
     dest: "{{ cache_dir }}/{{ version }}/container_images.done"
