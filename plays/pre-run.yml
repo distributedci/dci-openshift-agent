@@ -269,11 +269,16 @@
         src: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_mirrors_file }}"
         dest: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
 
-    - name: Override disconnected_registry_mirrors_file
-      set_fact:
-        disconnected_registry_mirrors_file: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
-      delegate_facts: true
-      delegate_to: "{{ groups['registry_host'][0] if 'registry_host' in groups else 'registry_host' }}"
+    - name: Add mirrors to trust bundle
+      blockinfile:
+        path: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
+        block: >
+          {{ lookup('file', dci_cluster_configs_dir + '/imagecontentsourcepolicy.yaml') |
+             from_yaml |
+             json_query('spec.repositoryDigestMirrors') |
+             to_yaml
+          }}
+        marker: "# ImageContentSourcePolicies from mirror-ocp-release"
   when:
     - dci_disconnected | default(false) | bool
 
