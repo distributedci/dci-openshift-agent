@@ -37,6 +37,12 @@
     bootstraposimage: "{{ hostvars.localhost.bootstraposimage }}"
   when: hostvars.localhost.bootstraposimage is defined
 
+- name: Override disconnected_registry_mirrors_file
+  set_fact:
+    disconnected_registry_mirrors_file: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
+  when:
+    - dci_disconnected | default(false) | bool
+
 - name: "installer : Node preparation"
   import_role:
     name: node-prep
