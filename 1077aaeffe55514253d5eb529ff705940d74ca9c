@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vcp ",
       "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf6674a4_cf70463c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-04T08:41:59Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vcp",
+      "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
