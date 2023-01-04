@@ -33,6 +33,24 @@
       "message": "LGTM, let\u0027s wait for the debug job that is currently running on dallas but it should work",
       "revId": "4148deada8f591d04294ae27803dc19bfc5103eb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd8b42b2_b4486b40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-04T15:20:36Z",
+      "side": 1,
+      "message": "Thanks Ramon, I\u0027ll update the commit to test in sno and I\u0027ll merge if all goes fine.",
+      "parentUuid": "f2b83205_02ee4f42",
+      "revId": "4148deada8f591d04294ae27803dc19bfc5103eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
