@@ -39,6 +39,30 @@
       },
       "revId": "897abca0fc18b458d6ec2110da3dbf8600be38dc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88a4314f_7d0a921f",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-04T14:02:22Z",
+      "side": 1,
+      "message": "Is an inventory variable, that\u0027s why is not easily spotted 😊",
+      "parentUuid": "051325f9_b7610c21",
+      "range": {
+        "startLine": 276,
+        "startChar": 28,
+        "endLine": 276,
+        "endChar": 31
+      },
+      "revId": "897abca0fc18b458d6ec2110da3dbf8600be38dc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
