@@ -50,6 +50,23 @@
       "message": "LGTM, let\u0027s wait for the OCP 4.7 job but it should be fine",
       "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7fe6526_fb5bdbf7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-04T15:11:48Z",
+      "side": 1,
+      "message": "check dallas ocp-4.7-vcp openshift-vcp:ansible_extravars\u003dtest_deploy_vm:true",
+      "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
