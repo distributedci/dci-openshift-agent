@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "706950348babb2b657c239bd973289c6c7809993",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76369545_dc6a24d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-04T08:31:07Z",
+      "side": 1,
+      "message": "LGTM, this should help to alleviate the issue with the operators not being installed correctly, thanks Beto!",
+      "revId": "706950348babb2b657c239bd973289c6c7809993",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
