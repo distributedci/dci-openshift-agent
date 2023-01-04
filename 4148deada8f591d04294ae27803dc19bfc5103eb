@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "4148deada8f591d04294ae27803dc19bfc5103eb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2b83205_02ee4f42",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-04T08:24:46Z",
+      "side": 1,
+      "message": "LGTM, let\u0027s wait for the debug job that is currently running on dallas but it should work",
+      "revId": "4148deada8f591d04294ae27803dc19bfc5103eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
