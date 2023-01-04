@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.7-vcp",
       "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d52c987a_59150a48",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-04T08:56:00Z",
+      "side": 1,
+      "message": "LGTM, let\u0027s wait for the OCP 4.7 job but it should be fine",
+      "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
