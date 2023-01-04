@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a1d9c3f_083ccec5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-04T19:01:11Z",
+      "side": 1,
+      "message": "Opted for always mirroring, if the images are already in place it shouldn\u0027t take that long to complete, just few secs",
+      "parentUuid": "4ddba074_6c182425",
+      "revId": "897abca0fc18b458d6ec2110da3dbf8600be38dc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "051325f9_b7610c21",
