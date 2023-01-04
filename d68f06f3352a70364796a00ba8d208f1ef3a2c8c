@@ -16,6 +16,23 @@
       "message": "FYI, last job failure is getting fixed by Fred in 27102",
       "revId": "d68f06f3352a70364796a00ba8d208f1ef3a2c8c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ccab203f_a99686ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-04T18:57:00Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "d68f06f3352a70364796a00ba8d208f1ef3a2c8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
