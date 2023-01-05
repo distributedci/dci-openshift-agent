@@ -136,7 +136,7 @@
         vars:
           downloads_path: "{{ ansible_env.HOME }}"
           release_image_remote: "{{ ocp_release_data['container_image'].split('@')[0] }}"
-          release_url: "{{ '/'.join(url.split('/')[:-1]) }}"
+          config_file_path: "{{ dci_cluster_configs_dir }}"
       rescue: &teardown_error
         - name: Run the teardown error handler
           block:
