@@ -84,6 +84,23 @@
       "message": "check dallas ocp-4.10-vcp openshift-vcp:ansible_extravars\u003dtest_deploy_vm:true",
       "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63b75b4f_0a3417e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-05T07:41:07Z",
+      "side": 1,
+      "message": "Version v1 works fine for 4.10, but does not exist yet for 4.7. Continue testing.",
+      "revId": "1077aaeffe55514253d5eb529ff705940d74ca9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
