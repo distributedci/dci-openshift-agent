@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3f5ee99_4c90d8b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-05T17:41:20Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vcp openshift-vcp:ansible_extravars\u003dtest_deploy_vm:true",
+      "revId": "9a75111ee3ac5a70126ab724b6140df296b70354",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
