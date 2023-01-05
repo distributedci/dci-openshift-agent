@@ -140,7 +140,7 @@ do_wait() {
 BASEDIR=$(cd $(dirname $0); pwd)
 
 if [ $# -lt 1 ]; then
-    echo "Usage: $0 (--virt|--sno|--assisted|--no-check) [--upgrade [--from-topic <topic>] [--to-topic <topic>]] (-n) <change directory> [<kubeconfig path>] [-p <prefix>] [-p2 <prefix>] [<options for agents>]" 1>&2
+    echo "Usage: $0 (--virt|--sno|--assisted|--sno-ai|--no-check) [--upgrade [--from-topic <topic>] [--to-topic <topic>]] (-n) <change directory> [<kubeconfig path>] [-p <prefix>] [-p2 <prefix>] [<options for agents>]" 1>&2
     exit 1
 fi
 
@@ -173,6 +173,11 @@ elif [ "$1" = "--sno" ]; then
     VIRT="sno"
     DCI_NAME=${DCI_NAME:-"sno"}
     INSTALL_OPT="-e install_type=sno"
+    shift
+elif [ "$1" = "--sno-ai" ]; then
+    VIRT="assisted"
+    DCI_NAME=${DCI_NAME:-"sno-ai"}
+    INSTALL_OPT="-e install_type=assisted"
     shift
 elif [ "$1" = "--assisted" ]; then
     VIRT="assisted"
@@ -357,6 +362,8 @@ if [ -d dci-openshift-agent ]; then
     if [ "$VIRT" = virt ]; then
         VIRTDIR="$PWD"/dci-openshift-agent/samples/ocp_on_libvirt
     elif [ "$VIRT" = sno ]; then
+        VIRTDIR="$PWD"/dci-openshift-agent/samples/sno_on_libvirt
+    elif [ "$VIRT" = sno-ai ]; then
         VIRTDIR="$PWD"/dci-openshift-agent/samples/sno_on_libvirt
     elif [ "$VIRT" = assisted ]; then
         VIRTDIR="$PWD"/dci-openshift-agent/samples/assisted_on_libvirt
