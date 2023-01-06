@@ -16,6 +16,57 @@
       "message": "LGTM",
       "revId": "96b9180ccd19182935a4adc7c561efc427415cb0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f6f93ec_080ded43",
+        "filename": "docs/ocp_versioning.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-06T18:18:54Z",
+      "side": 1,
+      "message": "I think we need to update it here as well, to be 4 releases: ga/stable, rc, ec and nightly.\n\nIt would be nice to add the link to the pub doc about this: https://mirror.openshift.com/pub/openshift-v4/OpenShift_Release_Types.pdf",
+      "revId": "96b9180ccd19182935a4adc7c561efc427415cb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f31b880c_da55c2dc",
+        "filename": "docs/ocp_versioning.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-06T18:18:54Z",
+      "side": 1,
+      "message": "This also needs to be updated to add nightly",
+      "revId": "96b9180ccd19182935a4adc7c561efc427415cb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2368ad3_dc3e9097",
+        "filename": "docs/ocp_versioning.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-06T18:18:54Z",
+      "side": 1,
+      "message": "I think the links are backwards, the base is *.openshiftapps.com and the registry is registry.ci.openshift.org/ocp and quay.io/openshift-release-dev/ocp-v4.0-art-dev\n\nThe release has those registries for the images: https://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.12.0-0.nightly-2023-01-04-203333/release.txt",
+      "revId": "96b9180ccd19182935a4adc7c561efc427415cb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
