@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.7-vcp openshift-vcp:ansible_extravars\u003dtest_deploy_vm:true",
       "revId": "cb5bc49f3a1a4e96a1c2352f76d4a57cbc4b3879",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "997ccd87_1d8e1351",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-06T07:48:20Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vcp openshift-vcp:ansible_extravars\u003dtest_deploy_vm:true",
+      "revId": "cb5bc49f3a1a4e96a1c2352f76d4a57cbc4b3879",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
