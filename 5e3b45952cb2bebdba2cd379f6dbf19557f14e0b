@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e31614e3_680fefab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-06T16:30:35Z",
+      "side": 1,
+      "message": "Looks good to me, just minor typo and I wonder if there is any reason to remove the table of contents 😞? ",
+      "revId": "5e3b45952cb2bebdba2cd379f6dbf19557f14e0b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd646185_c39a803d",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-06T16:30:35Z",
+      "side": 1,
+      "message": "typo: should read \"job definition\"",
+      "revId": "5e3b45952cb2bebdba2cd379f6dbf19557f14e0b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
