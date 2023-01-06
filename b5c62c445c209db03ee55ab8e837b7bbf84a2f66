@@ -34,6 +34,24 @@
       "parentUuid": "3b0906e6_a69e5f50",
       "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52e19e87_2b712fcc",
+        "filename": "test-runner",
+        "patchSetId": 4
+      },
+      "lineNbr": 503,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-01-06T19:17:39Z",
+      "side": 1,
+      "message": "Ahh ok.  so the inventory being used from the queue determines if it\u0027s regular assisted or sno assisted.  very nice.",
+      "parentUuid": "45e55705_6c5d37b2",
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
