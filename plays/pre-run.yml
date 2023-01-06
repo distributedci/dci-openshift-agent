@@ -14,7 +14,7 @@
 - name: Set pullsecret from job_info - Connected
   set_fact:
     pullsecret: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
-  no_log: true
+  #REMOVE no_log: true
   when:
     - not (dci_disconnected | default(false) | bool)
 
@@ -67,7 +67,7 @@
     - name: "Set dci_pullsecret_file fact"
       set_fact:
         dci_pullsecret_file: "{{ pullsecret_file }}"
-      no_log: true
+      #REMOVE no_log: true
   when:
     - pullsecret_file is defined
     - pullfile.stat.exists | bool
@@ -118,7 +118,7 @@
     - name: "Set dci_pullsecret_file fact if pullsecret_file is not present"
       set_fact:
         dci_pullsecret_file: "{{ hostvars.localhost.provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}/pull-secret.txt"
-      no_log: true
+      #REMOVE no_log: true
   when:
     - not (dci_disconnected | default(false) | bool)
     - pullsecret_file is undefined
@@ -128,7 +128,7 @@
     name: mirror-ocp-release
   vars:
     version: "{{ hostvars.localhost.version }}"
-    release_url: "{{ '/'.join(hostvars.localhost.url.split('/')[:-1]) }}"
+    pull_url: "{{ version_pull_url }}"
     cache_dir: "{{ hostvars.localhost.provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
     webserver_url: "{{ hostvars.localhost.webserver_url | default(None) }}"
     registry_url: "docker://{{ local_registry }}/{{ hostvars[groups['registry_host'][0]].local_repo | default('') }}"
@@ -212,7 +212,7 @@
       name: mirror-ocp-release
     vars:
       version: "{{ version_inter }}"
-      release_url: "{{ '/'.join(hostvars.localhost.url.split('/')[:-1]) }}"
+      pull_url: "{{ image_inter }}"
       cache_dir: "{{ hostvars.localhost.provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
       webserver_url: "{{ hostvars.localhost.webserver_url | default(None) }}"
       registry_url: "docker://{{ local_registry }}/{{ hostvars[groups['registry_host'][0]].local_repo | default('') }}"
