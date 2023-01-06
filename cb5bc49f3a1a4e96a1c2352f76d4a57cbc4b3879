@@ -84,6 +84,24 @@
       "message": "I see the VM deployment has also worked on 4.8 (even it fails after in the job) but in the 4.10, no VM deployment tested, only the hco deployment. I think it is worth checking this before merging.",
       "revId": "cb5bc49f3a1a4e96a1c2352f76d4a57cbc4b3879",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e343a4c3_88c68e5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-06T10:04:59Z",
+      "side": 1,
+      "message": "Hi Charles, I think you clicked on the wrong link.\nHere it is for ocp-4.10: \n\ntest_ Create the test VirtualMachineInstance\n\nhttps://www.distributed-ci.io/jobs/5274b9c2-f5aa-4a38-b5b8-224d0609a07c/jobStates?sort\u003ddate\u0026task\u003dc2aac945-8f31-4a51-9581-e76f34e5dff4",
+      "parentUuid": "9fbe06d5_d3cdfb5e",
+      "revId": "cb5bc49f3a1a4e96a1c2352f76d4a57cbc4b3879",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
