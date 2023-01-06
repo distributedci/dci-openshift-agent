@@ -35,7 +35,7 @@
         --registry-config={{ pullsecret_file | quote }}
         --command={{ item.installer_binary }}
         --to={{ cache_dir }}/{{ version }}
-        {{ release_image.stdout }}
+        {{ pull_url }}
       when:
         - not item.stat.exists
       loop: "{{ extracted_cmds.results }}"  # loop over the results registered previously
