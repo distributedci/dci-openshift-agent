@@ -93,6 +93,7 @@
   ansible.builtin.uri:
     url: "{{ release_url }}/{{ version }}"
     return_content: true
+    status_code: 200, 503
   register: base_page
   retries: 180
   delay: 10
