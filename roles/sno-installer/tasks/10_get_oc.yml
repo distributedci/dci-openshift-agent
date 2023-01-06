@@ -95,10 +95,16 @@
   ansible.builtin.uri:
     url: "{{ release_url }}/{{ version }}"
     return_content: true
+    status_code:
+      - 200
+      - 503
+      - -1
   register: base_page
   retries: 180
   delay: 10
-  until: "'Extracting tools' not in base_page.content"
+  until:
+    - base_page.content is defined
+    -  "'Extracting tools' not in base_page.content"
   when:
     - release_url.startswith("https://openshift-release-artifacts.apps")
     - not release_txt.stat.exists or force_mirroring
