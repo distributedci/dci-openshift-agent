@@ -39,7 +39,8 @@ identified:
 |---------------|-------------------|---------------------------------------------------------------|---------------------------------------------------|
 | Stable        | `build:ga`        | mirror.openshift.com/pub/openshift-v4/clients/ocp             | quay.io/openshift-release-dev/ocp-release         |
 | Candidate     | `build:candidate` | mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview | quay.io/openshift-release-dev/ocp-release         |
-| Nightly/Dev   | `build:dev`       | mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview | quay.io/openshift-release-dev/ocp-release-nightly |
+| Dev           | `build:dev`       | mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview | quay.io/openshift-release-dev/ocp-release-nightly |
+| Nightly       | `build:nightly`   | registry.ci.openshift.org                                     | openshiftapps.com |
 
 The DCI OCP agent fetches the `release.txt` file from the OCP mirror and then
 parses it to figure out the SHA256 for the image to pull from Quay. This way
