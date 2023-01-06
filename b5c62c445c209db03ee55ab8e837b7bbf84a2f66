@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b0906e6_a69e5f50",
+        "filename": "test-runner",
+        "patchSetId": 4
+      },
+      "lineNbr": 503,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-01-06T16:57:03Z",
+      "side": 1,
+      "message": "I think you need some additional code here to generate the sno-ai inventory file.",
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
