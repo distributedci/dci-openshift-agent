@@ -67,6 +67,23 @@
       "message": "Ready for review.\n\nThe idea is to use v1alpha3 for 4.7 and the stable GA v1 for all other versions. \n\nTested:\n1/ 4.7: https://www.distributed-ci.io/jobs/90e28063-b30a-429a-90a4-10c420fc9488/jobStates\n2/ 4.10: https://www.distributed-ci.io/jobs/5274b9c2-f5aa-4a38-b5b8-224d0609a07c/jobStates",
       "revId": "cb5bc49f3a1a4e96a1c2352f76d4a57cbc4b3879",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fbe06d5_d3cdfb5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-01-06T08:22:29Z",
+      "side": 1,
+      "message": "I see the VM deployment has also worked on 4.8 (even it fails after in the job) but in the 4.10, no VM deployment tested, only the hco deployment. I think it is worth checking this before merging.",
+      "revId": "cb5bc49f3a1a4e96a1c2352f76d4a57cbc4b3879",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
