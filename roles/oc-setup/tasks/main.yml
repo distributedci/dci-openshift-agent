@@ -4,19 +4,6 @@
   tags:
     - install
 
-- name: "test_ Check inventory to match ocp cluster config"
-  community.kubernetes.k8s_info:
-    api_version: v1
-    kind: node
-    name: "{{ hostvars[item].name }}"
-  register: node
-  until: "'resources' in node and node.resources != []"
-  retries: 30
-  delay: 30
-  with_items: "{{ groups['masters'] + groups['workers'] }}"
-  tags:
-    - check
-
 - name: "Configure clients in jumphost"
   include_tasks: config.yml
   tags:
