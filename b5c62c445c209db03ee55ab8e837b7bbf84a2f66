@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "01a1521f_f4ac0c77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:54:00Z",
+      "side": 1,
+      "message": "and also in sno hint, I forgot. So three green jobs before merging + do the requested updates",
+      "parentUuid": "36fd4512_84d3e4a0",
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fe4805c6_08c079cd",
