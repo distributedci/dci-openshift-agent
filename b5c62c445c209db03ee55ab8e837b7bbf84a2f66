@@ -1,6 +1,161 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "36fd4512_84d3e4a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "Before merging this change, we should have a green job in both assisted and sno-ai hints.\n\nnit: It would be better to have the build-depends added in the bos2-ci-config change instead of here, as this would be eventually merged and we would expose publicly a repo that is private.",
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe4805c6_08c079cd",
+        "filename": "dci-check-change",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "What do you think about using a new variable for sno-ai (in case we have other environments using different queues for each case), and then we set the variable in BOS2 -\u003e /etc/dci-openshift-agent/config, in the same way we\u0027re doing right now for ASSISTED_DCI_QUEUE? This would require changes in https://github.com/dci-labs/bos2-ci-config/pull/50 too, but it\u0027s just to follow the same approach in both AI cases",
+      "range": {
+        "startLine": 97,
+        "startChar": 20,
+        "endLine": 97,
+        "endChar": 33
+      },
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "889466de_8ccc3e0b",
+        "filename": "dci-check-change",
+        "patchSetId": 4
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "same as above",
+      "range": {
+        "startLine": 246,
+        "startChar": 0,
+        "endLine": 247,
+        "endChar": 34
+      },
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cf39a88_b6eb5e0b",
+        "filename": "test-runner",
+        "patchSetId": 4
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "this has to be sno-ai",
+      "range": {
+        "startLine": 183,
+        "startChar": 10,
+        "endLine": 183,
+        "endChar": 18
+      },
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17b2e87d_9d655194",
+        "filename": "test-runner",
+        "patchSetId": 4
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "sno-ai case needs to be added here too",
+      "range": {
+        "startLine": 366,
+        "startChar": 4,
+        "endLine": 366,
+        "endChar": 8
+      },
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f01bd35_94a321f9",
+        "filename": "test-runner",
+        "patchSetId": 4
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "sno-ai case needs to be added here too",
+      "range": {
+        "startLine": 381,
+        "startChar": 4,
+        "endLine": 381,
+        "endChar": 8
+      },
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b803811_471cd84e",
+        "filename": "test-runner",
+        "patchSetId": 4
+      },
+      "lineNbr": 484,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "this variable, SAMPLE_PROJECT, is the one that selects the proper directory from `bos2-ci-config/files/XXX_on_libvirt/serverYY`, and here, we use the $VIRT variable to retrieve XXX.\n\nIn the case of VIRT \u003d virt, the inventories are under `bos2-ci-config/files/ocp_on_libvirt`, that\u0027s why we have this kind of ternary operation here, because in the other cases (sno and assisted), the inventories are in sno_on_libvirt and assisted_on_libvirt folders.\n\nIn your case, you\u0027ll need to have this into account. Currently, the folder in BOS2 is called `sno_assisted_on_libvirt`, and VIRT should be `sno-ai` based on this change. There\u0027s a mismatch between `sno-ai` and `sno_assisted`, so there are two possible solutions: 1) rename BOS2 folder to `sno-ai_on_libvirt`, or 2) do something similar to `ocp_on_libvirt` and `virt`, but now we\u0027ll probably need to include a switch to define SAMPLE_PROJECT variable as there are more than 1 different case.",
+      "range": {
+        "startLine": 484,
+        "startChar": 12,
+        "endLine": 484,
+        "endChar": 26
+      },
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3b0906e6_a69e5f50",
@@ -50,6 +205,24 @@
       "side": 1,
       "message": "Ahh ok.  so the inventory being used from the queue determines if it\u0027s regular assisted or sno assisted.  very nice.",
       "parentUuid": "45e55705_6c5d37b2",
+      "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d981821b_1403a0f9",
+        "filename": "test-runner",
+        "patchSetId": 4
+      },
+      "lineNbr": 503,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T11:52:53Z",
+      "side": 1,
+      "message": "Bill\u0027s first comment is right, you\u0027ll need some code here, I\u0027ll explain above",
+      "parentUuid": "52e19e87_2b712fcc",
       "revId": "b5c62c445c209db03ee55ab8e837b7bbf84a2f66",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
