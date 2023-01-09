@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c9676f3_89cfd160",
+        "filename": "roles/mirror-ocp-release/tasks/download.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-09T10:36:02Z",
+      "side": 1,
+      "message": "libvirt job is complaining about this. Maybe we need an \"or\" instead of an \"and\"?",
+      "range": {
+        "startLine": 14,
+        "startChar": 2,
+        "endLine": 14,
+        "endChar": 13
+      },
+      "revId": "ec2430ea7f20d20326c0fd3bb2f9439488bf7b85",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
