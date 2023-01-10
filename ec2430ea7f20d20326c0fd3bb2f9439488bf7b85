@@ -70,6 +70,30 @@
       },
       "revId": "ec2430ea7f20d20326c0fd3bb2f9439488bf7b85",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "374b35a7_3bb53e3c",
+        "filename": "roles/mirror-ocp-release/tasks/download.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-10T14:54:49Z",
+      "side": 1,
+      "message": "I checked and \"200, 503\" is changed to a list in the module, so we are good 👍",
+      "parentUuid": "25ce2eb1_3356d0d9",
+      "range": {
+        "startLine": 14,
+        "startChar": 2,
+        "endLine": 14,
+        "endChar": 13
+      },
+      "revId": "ec2430ea7f20d20326c0fd3bb2f9439488bf7b85",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
