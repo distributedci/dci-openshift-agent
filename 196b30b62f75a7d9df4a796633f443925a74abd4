@@ -16,6 +16,23 @@
       "message": "Last build failed because of the extraction that is not completed yet, not a syntax issue.",
       "revId": "196b30b62f75a7d9df4a796633f443925a74abd4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c5e099a_ce23ea21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-10T14:39:11Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "196b30b62f75a7d9df4a796633f443925a74abd4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
