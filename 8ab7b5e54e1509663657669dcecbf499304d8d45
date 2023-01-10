@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6359afca_79fd9f0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-10T18:48:37Z",
+      "side": 1,
+      "message": "Ready for review. All non-GA APIs are now listed here, to make it easy to track their eventual deprecation.",
+      "revId": "8ab7b5e54e1509663657669dcecbf499304d8d45",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

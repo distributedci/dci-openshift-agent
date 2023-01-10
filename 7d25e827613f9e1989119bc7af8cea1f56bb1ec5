@@ -16,6 +16,24 @@
       "message": "Looks good, just any reason to use the branch \"437ce92d4e048e5dd355e40a15094dcae73a1310\" in the URL? can we use main? https://github.com/kubevirt/hyperconverged-cluster-operator/blob/main/docs/cluster-configuration.md#storage-resource-configurations-example ? :)\nThanks!",
       "revId": "7d25e827613f9e1989119bc7af8cea1f56bb1ec5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "618711be_5f945cac",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 512,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-10T18:48:37Z",
+      "side": 1,
+      "message": "Thank you Manny, nice catch, thanks, fixed that!",
+      "parentUuid": "f9b43746_ad4e65a1",
+      "revId": "7d25e827613f9e1989119bc7af8cea1f56bb1ec5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
