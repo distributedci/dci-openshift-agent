@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcc8d8f4_25a96d74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-10T23:01:29Z",
+      "side": 1,
+      "message": "I\u0027ve verified -1 works (timeout) but I\u0027ve added another conditional (until) as there is no content in a timeout",
+      "revId": "04edbacf6cc3f6c4e28070b32bad9013357d9eea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
