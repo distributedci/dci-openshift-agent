@@ -504,6 +504,16 @@ you will need to specify an intermediate version, for example: `version_inter=4.
 candidate version, then you could do that by doing: `version_inter=4.11.5-*`, please note the addition to `-*` this will
 help to include candidate versions in the search.
 
+
+## Non-GA versions of API
+
+| API                     | Why it is used   |
+| ----------------------- | ---------------- |
+| hco.kubevirt.io/v1beta1                    | On Jan 2023, [v1beta1 is the latest version for HyperConverged Cluster Operator](https://github.com/kubevirt/hyperconverged-cluster-operator/blob/437ce92d4e048e5dd355e40a15094dcae73a1310/docs/cluster-configuration.md#storage-resource-configurations-example). |
+| metal3.io/v1alpha1                         | On Jan 2023, [v1alpha1 is the latest version for Provisioning API](https://docs.openshift.com/container-platform/4.11/rest_api/provisioning_apis/baremetalhost-metal3-io-v1alpha1.html).      |
+| operators.coreos.com/v1alpha1              | On Jan 2023, v1alpha1 is the latest version for OperatorHub APIs: [CatalogSource, Subscription, CSV, and InstallPlan](https://docs.openshift.com/container-platform/4.11/rest_api/operatorhub_apis/operatorhub-apis-index.html).                |
+
+
 ## Troubleshooting common issues
 
 - [Basic configuration](#troubleshooting-basic-configuration)
