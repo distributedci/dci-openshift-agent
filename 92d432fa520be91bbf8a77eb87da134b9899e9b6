@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "316375d8_87189ba5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-10T14:51:59Z",
+      "side": 1,
+      "message": "I think the change is fine. Can we test assisted on libvirt to confirm it\u0027s working fine there?",
+      "revId": "92d432fa520be91bbf8a77eb87da134b9899e9b6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
