@@ -16,6 +16,23 @@
       "message": "Ready for review. All non-GA APIs are now listed here, to make it easy to track their eventual deprecation.",
       "revId": "8ab7b5e54e1509663657669dcecbf499304d8d45",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "721e23ff_e0397440",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-10T19:07:01Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "8ab7b5e54e1509663657669dcecbf499304d8d45",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
