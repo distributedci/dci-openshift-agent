@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6997a191_4c736095",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-10T23:42:15Z",
+      "side": 1,
+      "message": "Is there another place where ACM-SNO would upload these two files to the job?",
+      "revId": "76d4fafc12a04d270f3803050ee4069b48031a78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44108149_7e962aa0",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-10T23:42:15Z",
+      "side": 1,
+      "message": "Are we sure this is the file (kubeadmin-password) used and not an encrypted one?",
+      "revId": "76d4fafc12a04d270f3803050ee4069b48031a78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8c371c2_af521edd",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-10T23:42:15Z",
+      "side": 1,
+      "message": "Any reason why to move this check in here?\nSince the following tasks are only uploading config files I\u0027d prefer to leave this check in the same place as it was before, it also helps to avoid breaking tags",
+      "revId": "76d4fafc12a04d270f3803050ee4069b48031a78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
