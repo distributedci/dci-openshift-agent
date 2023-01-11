@@ -201,7 +201,7 @@ host are:
 
 ## Pipelines
 
-To configure your DCI job pipelines, you need to install `dci-pipeline`. Instructions at [dci-pipeline documentation](../dci-pipeline/).
+To configure your DCI job pipelines, you need to install `dci-pipeline`. Instructions at [dci-pipeline documentation](https://github.com/redhat-cip/dci-pipeline).
 
 Here is an example of a pipeline job definition for `dci-openshift-agent`:
 
@@ -369,7 +369,7 @@ the [disconnected doc](docs/disconnected_en.md) for more details.
 ## Storing secrets
 
 You can store secrets in an encrypted manner in your pipelines and YAML inventories by using `dci-vault` to
-generate your encrypted secrets. Details in the [python-dciclient documentation](../python-dciclient/).
+generate your encrypted secrets. Details in the [python-dciclient documentation](https://github.com/redhat-cip/python-dciclient).
 
 ## Deploying operators
 
