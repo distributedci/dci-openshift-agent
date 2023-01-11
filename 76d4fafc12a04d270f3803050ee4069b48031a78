@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74fa4e36_e4203ceb",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-11T00:59:02Z",
+      "side": 1,
+      "message": "yes, during oc-setup as it is for other installers",
+      "parentUuid": "6997a191_4c736095",
+      "revId": "76d4fafc12a04d270f3803050ee4069b48031a78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44108149_7e962aa0",
@@ -35,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f49b683_aedcc1c4",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-11T00:59:02Z",
+      "side": 1,
+      "message": "yes, those that file is not encrypted",
+      "parentUuid": "44108149_7e962aa0",
+      "revId": "76d4fafc12a04d270f3803050ee4069b48031a78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8c371c2_af521edd",
@@ -48,6 +84,24 @@
       "writtenOn": "2023-01-10T23:42:15Z",
       "side": 1,
       "message": "Any reason why to move this check in here?\nSince the following tasks are only uploading config files I\u0027d prefer to leave this check in the same place as it was before, it also helps to avoid breaking tags",
+      "revId": "76d4fafc12a04d270f3803050ee4069b48031a78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9ec5f95_244e7c5a",
+        "filename": "roles/oc-setup/tasks/install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-11T00:59:02Z",
+      "side": 1,
+      "message": "Nothing special. I have moved the validation to where it was before",
+      "parentUuid": "d8c371c2_af521edd",
       "revId": "76d4fafc12a04d270f3803050ee4069b48031a78",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
