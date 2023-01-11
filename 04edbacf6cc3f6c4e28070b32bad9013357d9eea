@@ -50,6 +50,24 @@
       "message": "what does -1 mean? timeout?",
       "revId": "04edbacf6cc3f6c4e28070b32bad9013357d9eea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3ed9525_c110780d",
+        "filename": "roles/mirror-ocp-release/tasks/download.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-11T08:51:08Z",
+      "side": 1,
+      "message": "yes it is, Tony confirmed it in previous comments. By the way, @Tony, I\u0027d add a comment in the task just to remind that -1 is timeout, if possible",
+      "parentUuid": "9b52d770_0528a4a2",
+      "revId": "04edbacf6cc3f6c4e28070b32bad9013357d9eea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
