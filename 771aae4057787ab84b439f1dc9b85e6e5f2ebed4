@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "771aae4057787ab84b439f1dc9b85e6e5f2ebed4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9ad3a35_27f684f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-12T14:43:10Z",
+      "side": 1,
+      "message": "I need some help here, because SNO is complaining about not having permissions to download registry.ci.openshift.org/ocp/release@sha256:6bc7de62f81b1d91ce9507fb35d83aa786f011760976f41d5432bbedb7d722bd -\u003e https://www.distributed-ci.io/jobs/4da3bd6d-df35-4a02-b2db-9800c9d4d459/jobStates?sort\u003ddate\u0026task\u003d7a5ed406-0434-4dd6-8913-9cd938212c05\n\nI have just included in /opt/cache/pull-secret.txt file the auth to access registry.ci.openshift.org, and not working. In the last job, I\u0027ve included all the entries we have in dallas pull-secret.txt and again, not working. Am I missing something?",
+      "revId": "771aae4057787ab84b439f1dc9b85e6e5f2ebed4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
