@@ -16,6 +16,41 @@
       "message": "Did you check this worked on all of our supported versions? I believe extract command was introduced in... 4.8 maybe?",
       "revId": "7ea60c2001fcaa094f572f02d3e56dff4510443f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a4b1bd4_490f203c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-12T17:41:02Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla",
+      "revId": "7ea60c2001fcaa094f572f02d3e56dff4510443f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "353696d8_d4465583",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-12T17:41:02Z",
+      "side": 1,
+      "message": "Good point, I\u0027m using a stable version of oc to extract the artifacts, it is supported.",
+      "parentUuid": "f685ec88_889856f2",
+      "revId": "7ea60c2001fcaa094f572f02d3e56dff4510443f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
