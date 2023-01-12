@@ -34,6 +34,24 @@
       "parentUuid": "f18803b7_0a245aad",
       "revId": "4ccac06646970b3898cee366687fedd92106a44b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95ff995a_d5357129",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-12T15:09:21Z",
+      "side": 1,
+      "message": "It\u0027s curious but the very same task in assisted is working (https://www.distributed-ci.io/jobs/990c6ac7-eb08-4a51-852e-c800be127166/jobStates?sort\u003ddate\u0026task\u003d0762c64c-5f8f-4991-abd2-a2399a25a7e5) but not working in sno-ai (https://www.distributed-ci.io/jobs/9622a6cb-9f46-4a75-9b24-86c1edff6213/jobStates?sort\u003ddate\u0026task\u003d19552b3c-27ce-465c-91e0-441b91138c7e)\n\nFor the issue in assisted regarding crucible, it was an issue with opm client, all related to nightly builds, now should be fine, I think",
+      "parentUuid": "c119312e_0a4b51df",
+      "revId": "4ccac06646970b3898cee366687fedd92106a44b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
