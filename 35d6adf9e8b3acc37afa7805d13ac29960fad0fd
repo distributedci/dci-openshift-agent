@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "35d6adf9e8b3acc37afa7805d13ac29960fad0fd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "525e947e_bf1a1b75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-12T19:59:19Z",
+      "side": 1,
+      "message": "LGTM, If possible let\u0027s run an SNO job in BOS2. ",
+      "revId": "35d6adf9e8b3acc37afa7805d13ac29960fad0fd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

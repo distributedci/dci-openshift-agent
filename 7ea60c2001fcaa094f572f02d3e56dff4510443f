@@ -51,6 +51,24 @@
       "parentUuid": "f685ec88_889856f2",
       "revId": "7ea60c2001fcaa094f572f02d3e56dff4510443f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9e97773_2c922c6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-12T19:59:19Z",
+      "side": 1,
+      "message": "I checked an ocp 4.7 version and looks to be supported too\n\u003e \n[dciteam@jumphost ~]$ /opt/cache/4.7.55/oc version --client\nClient Version: 4.7.55\n[dciteam@jumphost ~]$ /opt/cache/4.7.55/oc adm release extract -h                                                                                             \nExtract the contents of a release image to disk\n...",
+      "parentUuid": "353696d8_d4465583",
+      "revId": "7ea60c2001fcaa094f572f02d3e56dff4510443f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
