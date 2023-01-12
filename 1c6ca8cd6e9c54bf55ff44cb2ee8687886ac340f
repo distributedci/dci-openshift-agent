@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "944a47e9_2633b599",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-12T12:46:51Z",
+      "side": 1,
+      "message": "this failure in last DCI job running sno-ai needs to be reviewed, it\u0027s complaining about ntp config: https://www.distributed-ci.io/jobs/23da59d7-94b1-4d9f-8339-302def7807e2/jobStates\n\nIn the meanwhile, I\u0027ll work in the fix for the nightly builds and retest sno and assisted in BOS2. Jorge, can you take a look to sno-ai issue?",
+      "revId": "1c6ca8cd6e9c54bf55ff44cb2ee8687886ac340f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
