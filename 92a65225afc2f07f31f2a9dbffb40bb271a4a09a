@@ -16,6 +16,23 @@
       "message": "here is an example of a problem :\nhttps://www.distributed-ci.io/jobs/15364565-5cd0-472b-8410-9b41663e95f3/jobStates?sort\u003ddate\u0026task\u003dda6aea4a-a7a0-4335-bbac-311cbbb516f1",
       "revId": "92a65225afc2f07f31f2a9dbffb40bb271a4a09a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "813e3a8d_f47964a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-12T08:46:36Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "92a65225afc2f07f31f2a9dbffb40bb271a4a09a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
