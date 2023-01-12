@@ -37,6 +37,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "4c1efda2_95597a7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-12T12:06:58Z",
+      "side": 1,
+      "message": "Oh, I think we need to refactor sno and assisted installers before continuing with this, look at the failed jobs:\n\nsno -\u003e failure: https://www.distributed-ci.io/jobs/5d0ad7f4-7fa7-4b6e-8c44-67d06cd06369/jobStates\nassisted -\u003e error: https://www.distributed-ci.io/jobs/9ae8ead2-2c6b-474b-a588-ed2c6f10cb87/jobStates\n\nThe thing is, both installers are not adapted to the usage of nightly builds, this needs to be addressed in a separate change.\n\nIn the meanwhile, I\u0027ll just add here the missed whitespace in the sno-ai check and add sno-ai as hint, to test it by default (but it will fail because of the nightly build issue). Then, we can continue testing in BOS2; the hint would run sno-ai by default, and to run the other cases, we\u0027ll need to run `dci-check-change --sno|assisted -f 27118",
+      "revId": "a96fc7b74e673d8ec9c6a0a0cdba9e8c33a90303",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "9b3f490a_2664120b",
         "filename": "dci-check-change",
         "patchSetId": 6
