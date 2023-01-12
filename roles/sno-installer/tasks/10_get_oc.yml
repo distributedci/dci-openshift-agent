@@ -162,7 +162,7 @@
 
 - name: "Fetch and Untar client tools"
   unarchive:
-    src: "{{ release_url }}/{{ version }}/{{ item }}-linux.tar.gz"
+    src: "{{ release_url }}/{{ version }}/{{ item }}-linux-{{ version }}.tar.gz"
     dest: "{{ cache_dir }}/{{ version }}"
     mode: "0755"
     remote_src: true

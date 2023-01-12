@@ -160,7 +160,7 @@
 
 - name: "Fetch and Untar client tools"
   unarchive:
-    src: "{{ release_url }}/{{ version }}/{{ item }}-linux.tar.gz"
+    src: "{{ release_url }}/{{ version }}/{{ item }}-linux-{{ version }}.tar.gz"
     dest: "{{ cache_dir }}/{{ version }}"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
