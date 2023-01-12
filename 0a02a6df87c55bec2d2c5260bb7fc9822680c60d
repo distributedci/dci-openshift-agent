@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "0a02a6df87c55bec2d2c5260bb7fc9822680c60d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8df9a1da_dbad3eac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-12T00:20:56Z",
+      "side": 1,
+      "message": "Those links are tricky, but they are needed to work in docs.distributed-ci.io, making this change will break them\n\nThat means they will be broken in github but working in the docs, we want the latter",
+      "revId": "0a02a6df87c55bec2d2c5260bb7fc9822680c60d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
