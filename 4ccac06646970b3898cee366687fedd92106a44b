@@ -16,6 +16,24 @@
       "message": "Change to update crucible repo to be compliant with nightly builds: https://github.com/redhat-partner-solutions/crucible/pull/208 -\u003e testing it here by including Test-Args-Hints\nChange to update SNO/UPI to be compliant with nightly builds: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/27171 -\u003e here I am testing sno with the files from https://github.com/dci-labs/bos2-ci-config/pull/50, so we can validate that there instead of here, would be the same\n\nHaving said that, I\u0027ll recheck in assisted manually in BOS2. sno-ai needs to be reviewed for the NTP problem already commented",
       "revId": "4ccac06646970b3898cee366687fedd92106a44b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c119312e_0a4b51df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-01-12T14:31:48Z",
+      "side": 1,
+      "message": "I have updated the config to point to the existing NTP server",
+      "parentUuid": "f18803b7_0a245aad",
+      "revId": "4ccac06646970b3898cee366687fedd92106a44b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
