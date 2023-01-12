@@ -52,6 +52,23 @@
       "parentUuid": "c119312e_0a4b51df",
       "revId": "4ccac06646970b3898cee366687fedd92106a44b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b95d25e_f5796af4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-12T16:18:18Z",
+      "side": 1,
+      "message": "Assisted is working fine: https://www.distributed-ci.io/jobs/4182a699-146f-4ca9-afcb-ad9ac8bbd546/jobStates\n\nWe just need to validate sno-ai before merging. Still hitting NTP issue.\n\nsno can be tested after merging, don\u0027t need to do it right now, because it\u0027s currently broken in BOS2. 27122 should unblock it",
+      "revId": "4ccac06646970b3898cee366687fedd92106a44b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
