@@ -33,6 +33,29 @@
       "message": "Looks nice now! Let\u0027s run the tests with each scenario to confirm everything is working before merging.",
       "revId": "a96fc7b74e673d8ec9c6a0a0cdba9e8c33a90303",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b3f490a_2664120b",
+        "filename": "dci-check-change",
+        "patchSetId": 6
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-12T11:45:41Z",
+      "side": 1,
+      "message": "whitespace missed here, I\u0027ve been testing this locally and it\u0027s complaining in this point\n\n```\n+ \u0027[\u0027 --sno-ai \u003d \u0027--sno-ai]\u0027\n/var/lib/dci-openshift-agent/ramon/2023-01-12-sno-ai/dci-openshift-agent/dci-check-change: line 94: [: missing `]\u0027\n```\n\nif you don\u0027t mind, I\u0027ll update the change to include this and quickly test, as I have modified BOS2 files to check this change before doing some other changes that I have to do today for other stuff",
+      "range": {
+        "startLine": 94,
+        "startChar": 20,
+        "endLine": 94,
+        "endChar": 21
+      },
+      "revId": "a96fc7b74e673d8ec9c6a0a0cdba9e8c33a90303",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
