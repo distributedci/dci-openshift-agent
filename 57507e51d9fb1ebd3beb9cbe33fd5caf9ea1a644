@@ -85,6 +85,23 @@
       "message": "it\u0027s working well on SNO\nhttps://www.distributed-ci.io/jobs/358f5b1e-00cd-4606-8af5-165fbad2ef83/jobStates?sort\u003ddate",
       "revId": "57507e51d9fb1ebd3beb9cbe33fd5caf9ea1a644",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07fe593d_9fddd335",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-13T13:59:26Z",
+      "side": 1,
+      "message": "Thanks for the change Pierre! Something related is included in 27122. But only used for IPI, as we don\u0027t have currently a way to test upi and in SNO it does not provide value\n\nThe other change has been tested successfully in SNO already and I expect it to be merged pretty soon.\n\nWe can include this change if you\u0027re in a hurry otherwise I\u0027ll suggest to wait for it.",
+      "revId": "57507e51d9fb1ebd3beb9cbe33fd5caf9ea1a644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
