@@ -85,6 +85,24 @@
       "parentUuid": "b529447e_134112d7",
       "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "268c3a36_1b9a85ac",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-01-13T14:11:03Z",
+      "side": 1,
+      "message": "I am testing a patch to reactivate this test on SNO, we can merge this one and reactivate the test later with #27173",
+      "parentUuid": "9a1ef0ba_56eb0bb2",
+      "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
