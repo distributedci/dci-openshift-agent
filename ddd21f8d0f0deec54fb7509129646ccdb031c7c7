@@ -67,6 +67,24 @@
       "message": "Hi Tony, why do we handle IPI and UPI in two different ways here?",
       "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a1ef0ba_56eb0bb2",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-01-13T11:25:13Z",
+      "side": 1,
+      "message": "This validation is also interesting on SNO installation 😊",
+      "parentUuid": "b529447e_134112d7",
+      "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
