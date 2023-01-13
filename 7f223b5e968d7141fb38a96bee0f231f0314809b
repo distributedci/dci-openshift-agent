@@ -33,6 +33,23 @@
       "message": "sno-ai is passing! also libvirt as expected\nfrom my side, it\u0027s fine to merge this :) I\u0027ll keep the variables related to crucible repo hardcoded in BOS2 settings file until my change is merged\nthanks Jorge for everything and for letting me check the minor details regarding BOS2 and the nightly builds!",
       "revId": "7f223b5e968d7141fb38a96bee0f231f0314809b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72513f74_5c4b2779",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-13T16:39:13Z",
+      "side": 1,
+      "message": "I\u0027ve just re-run a last-minute assisted job to check my updates in the crucible change, but it looks like it\u0027s working fine",
+      "revId": "7f223b5e968d7141fb38a96bee0f231f0314809b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
