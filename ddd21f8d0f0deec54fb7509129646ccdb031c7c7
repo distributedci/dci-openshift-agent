@@ -33,6 +33,40 @@
       "message": "The change looks really nice Tony, looks good to me and SNO seems to be fixed now!",
       "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a5f95e5_568c7112",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-13T10:04:46Z",
+      "side": 1,
+      "message": "Hi Tony, I have a question about the workflow, not a blocker to merge though. ",
+      "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b529447e_134112d7",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-13T10:04:46Z",
+      "side": 1,
+      "message": "Hi Tony, why do we handle IPI and UPI in two different ways here?",
+      "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
