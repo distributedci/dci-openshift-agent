@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b6220a2_c0617eca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-13T01:29:43Z",
+      "side": 1,
+      "message": "I see last job failed because of \"The available control/compute plane nodes do not match the requested size\", I checked and the compute/control are pulled from the install-config CM[1] and them compared with the number of control/computes[2], but the install-config of the SNO shows 0 replicas, I wonder if this check is new, because afaik the install-config has always shown 0 in replicas for computes.\n\n[1]https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/oc-setup/tasks/install.yml#L2-L11\n[2]https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/oc-setup/tasks/main.yml#L25-L34\n\n\u003e\n[dci@server03 ~]$ oc get cm cluster-config-v1 -n kube-system -o yaml | grep -A5 compute | grep replicas                                                                     \n      replicas: 0\n[dci@server03 ~]$ oc get cm cluster-config-v1 -n kube-system -o yaml | grep -A5 controlPlane | grep replicas                                                                 \n      replicas: 1\n[dci@server03 ~]$ oc get nodes -l node-role.kubernetes.io/worker\nNAME   STATUS   ROLES           AGE   VERSION\nsno    Ready    master,worker   43m   v1.24.6+5658434\n[dci@server03 ~]$ oc get nodes -l node-role.kubernetes.io/master\nNAME   STATUS   ROLES           AGE   VERSION\nsno    Ready    master,worker   43m   v1.24.6+5658434\n\n",
+      "revId": "08c17f680eb6b4426a646b323ea0317b253b3b43",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
