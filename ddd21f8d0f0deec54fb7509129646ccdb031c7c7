@@ -103,6 +103,24 @@
       "parentUuid": "9a1ef0ba_56eb0bb2",
       "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a887b694_8e425927",
+        "filename": "roles/oc-setup/tasks/main.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-13T14:34:16Z",
+      "side": 1,
+      "message": "Because two reasons, there\u0027s no value in checking this in SNO, if the one single node is not working the API won\u0027t respond, this check only validates the install config vs the number of nodes.\n\nIn UPI since we don\u0027t have a way to test I rather remove it until we can validate it will be like IPI and not like AI where all the nodes are workers, even the control-plane ones",
+      "parentUuid": "268c3a36_1b9a85ac",
+      "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
