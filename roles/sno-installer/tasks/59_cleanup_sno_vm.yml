@@ -37,6 +37,7 @@
   community.libvirt.virt:
     name: "{{ item }}"
     command: undefine
+    force: true
   with_items: "{{ all_vms.list_vms }}"
   when: item is search(host['name'])
   become: yes
