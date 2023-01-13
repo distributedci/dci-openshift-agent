@@ -50,6 +50,23 @@
       "message": "I\u0027ve just re-run a last-minute assisted job to check my updates in the crucible change, but it looks like it\u0027s working fine",
       "revId": "7f223b5e968d7141fb38a96bee0f231f0314809b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05d8cc48_3e5bf8e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-13T19:21:48Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "7f223b5e968d7141fb38a96bee0f231f0314809b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
