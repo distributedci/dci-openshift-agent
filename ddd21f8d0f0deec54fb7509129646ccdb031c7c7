@@ -16,6 +16,23 @@
       "message": "Thanks, LGTM!",
       "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13f97a92_0d2ad50f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-13T09:19:11Z",
+      "side": 1,
+      "message": "The change looks really nice Tony, looks good to me and SNO seems to be fixed now!",
+      "revId": "ddd21f8d0f0deec54fb7509129646ccdb031c7c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
