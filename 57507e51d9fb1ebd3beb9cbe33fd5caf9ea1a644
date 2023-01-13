@@ -50,6 +50,41 @@
       "message": "Please, disregard the last dci-ci-bot negative vote.\n\nI was testing restoring the server10 in bos2 and used this CR.\n\nI\u0027ll make sure ci bot votes +1 again.",
       "revId": "57507e51d9fb1ebd3beb9cbe33fd5caf9ea1a644",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "269a1e2d_473d5406",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-01-13T11:21:29Z",
+      "side": 1,
+      "message": "I think it is also interesting to execute this test on SNO, but just cover the control server.",
+      "parentUuid": "a1a19cf1_8782fd3c",
+      "revId": "57507e51d9fb1ebd3beb9cbe33fd5caf9ea1a644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12a0bd55_dee0d848",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-01-13T11:21:29Z",
+      "side": 1,
+      "message": "it\u0027s working well on SNO\nhttps://www.distributed-ci.io/jobs/358f5b1e-00cd-4606-8af5-165fbad2ef83/jobStates?sort\u003ddate",
+      "revId": "57507e51d9fb1ebd3beb9cbe33fd5caf9ea1a644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
