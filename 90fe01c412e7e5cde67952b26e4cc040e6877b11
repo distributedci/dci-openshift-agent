@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a41f0e50_3ce70fda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-13T11:29:42Z",
+      "side": 1,
+      "message": "included again",
+      "parentUuid": "66d305e1_6f606857",
+      "revId": "90fe01c412e7e5cde67952b26e4cc040e6877b11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d71acf1e_235efbd5",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-01-13T08:45:49Z",
       "side": 1,
       "message": "You have removed the whitespace here and it\u0027s required, else sno-ai will not be catched correctly",
+      "range": {
+        "startLine": 94,
+        "startChar": 20,
+        "endLine": 94,
+        "endChar": 21
+      },
+      "revId": "90fe01c412e7e5cde67952b26e4cc040e6877b11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "393fea2c_3cacf941",
+        "filename": "dci-check-change",
+        "patchSetId": 10
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-13T11:29:42Z",
+      "side": 1,
+      "message": "I suppose this was re-changed because of not pulling my latest changes, I\u0027ve readded again because I\u0027ve done a refactor in my crucible change to follow Tony\u0027s change in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/27122, which would simplify the story. I\u0027m going to test now",
+      "parentUuid": "d71acf1e_235efbd5",
       "range": {
         "startLine": 94,
         "startChar": 20,
