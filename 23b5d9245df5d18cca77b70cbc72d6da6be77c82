@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "23b5d9245df5d18cca77b70cbc72d6da6be77c82",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5dc1686_1fbf1799",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-13T23:05:35Z",
+      "side": 1,
+      "message": "LGTM, let\u0027s get it tested in SNO as well before +2",
+      "revId": "23b5d9245df5d18cca77b70cbc72d6da6be77c82",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
