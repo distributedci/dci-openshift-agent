@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66d305e1_6f606857",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-13T08:45:49Z",
+      "side": 1,
+      "message": "I\u0027d recommend to re-add to the commit message the hints I defined to properly test assisted deployments:\n\n```\nAlso testing https://github.com/redhat-partner-solutions/crucible/pull/208\nto be compliant with nightly builds in crucible\n\nTest-Hints: sno-ai\nTest-Args-Hints: -e assisted_deploy_repo\u003dhttps://github.com/ramperher/crucible.git -e assisted_deploy_version\u003dorigin/ocp-nightly-builds-support\n```",
+      "revId": "90fe01c412e7e5cde67952b26e4cc040e6877b11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d71acf1e_235efbd5",
+        "filename": "dci-check-change",
+        "patchSetId": 10
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-13T08:45:49Z",
+      "side": 1,
+      "message": "You have removed the whitespace here and it\u0027s required, else sno-ai will not be catched correctly",
+      "range": {
+        "startLine": 94,
+        "startChar": 20,
+        "endLine": 94,
+        "endChar": 21
+      },
+      "revId": "90fe01c412e7e5cde67952b26e4cc040e6877b11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
