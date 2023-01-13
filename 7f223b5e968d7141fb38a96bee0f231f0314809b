@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53ffe862_62c24ebc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-13T13:27:39Z",
+      "side": 1,
+      "message": "Change is working in assisted: https://www.distributed-ci.io/jobs/b3fa3d55-7d45-4680-a3f7-aee8794d06ac/jobStates\n\nAlso, I\u0027ve validated https://github.com/redhat-partner-solutions/crucible/pull/208 in all possible cases and it\u0027s also working (don\u0027t know what\u0027s the procedure to merge this).\n\nThe sno-ai job is failing in DNS, so this is related to BOS2, we\u0027ll check in bos2-ci-config change.\n\nFor the moment, I\u0027d vote +1, setting a +2 when passing in sno-ai too.\n\nBy the way, I\u0027ll test standard libvirt deployment now just to see that it is working fine, as I saw this failure from yesterday: https://www.distributed-ci.io/jobs/52391728-bdb8-4ac4-8a59-05776b392ee3/jobStates?sort\u003ddate. I\u0027ll run it from BOS2 jumphost CLI with `dci-check-change --virt -f 27118`",
+      "revId": "7f223b5e968d7141fb38a96bee0f231f0314809b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
