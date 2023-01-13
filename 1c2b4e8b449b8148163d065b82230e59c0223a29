@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.11-vanilla openshift-vanilla:components\u003docp\u003d4.11.22",
       "revId": "1c2b4e8b449b8148163d065b82230e59c0223a29",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a6a70e4_de8ffe7f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-01-13T15:30:16Z",
+      "side": 1,
+      "message": "Let\u0027s test it again once Tony has merged the patch on the artifact extraction",
+      "revId": "1c2b4e8b449b8148163d065b82230e59c0223a29",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
