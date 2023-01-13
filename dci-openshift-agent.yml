@@ -350,7 +350,7 @@
       rescue: *teardown_failure
 
 # Step 3a-1 : installing
-- name: 'Launch Assisted Install'
+- name: 'Launch Assisted'
   import_playbook: plays/assisted-install.yml
   when:
     - install_type == 'assisted'
