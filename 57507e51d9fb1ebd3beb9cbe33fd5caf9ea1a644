@@ -33,6 +33,23 @@
       "message": "Thanks Pierre, \n\nThis is also covered in:\n\nhttps://softwarefactory-project.io/r/c/dci-openshift-agent/+/27122/18/roles/oc-setup/tasks/main.yml\n\nI am thinking that maybe the previous approach to check was better.",
       "revId": "57507e51d9fb1ebd3beb9cbe33fd5caf9ea1a644",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ef9c3a1_a90d7631",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-01-13T09:11:30Z",
+      "side": 1,
+      "message": "Please, disregard the last dci-ci-bot negative vote.\n\nI was testing restoring the server10 in bos2 and used this CR.\n\nI\u0027ll make sure ci bot votes +1 again.",
+      "revId": "57507e51d9fb1ebd3beb9cbe33fd5caf9ea1a644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
