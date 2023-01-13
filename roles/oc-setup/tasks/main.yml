@@ -31,7 +31,8 @@
         msg: "The available control/compute plane nodes do not match the requested size"
       when:
         - ( requested_control | int != control_nodes_count | int ) or
-          ( requested_compute | int != compute_nodes_count | int)
+          ( requested_compute | int != compute_nodes_count | int ) and   
+          install_type != 'sno'
   when:
     - install_type in ['ipi', 'upi', 'sno']
   tags:
