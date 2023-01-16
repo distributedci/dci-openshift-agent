@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a706f0c6_01eeb831",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-16T10:12:47Z",
+      "side": 1,
+      "message": "I needed to include a small change when calling to mirror-ocp-release because of Tony\u0027s change merged last Friday: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/27122\nNow everything is passing again.\nI\u0027ll merge since this chane is stable enough right now and I need to continue working in some refactor in BOS2, and for this, I need the BOS2 change to be merged too.\nFor the crucible change, I\u0027ll keep the two variables pointing to my local crucible repo in the BOS2 settings file until it is merged.\nThanks Jorge for starting this!",
+      "revId": "d1dce1d7cd7c17370d5f0783549a390721c59e17",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
