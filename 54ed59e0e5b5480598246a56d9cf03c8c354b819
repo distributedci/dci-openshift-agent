@@ -33,6 +33,24 @@
       "message": "LGTM\nIf it\u0027s flapping for some time, then I was thinking that catalog could be mark as ready and this task will pass, but then potentially it would change back to non-ready, in that case I wonder if there is way to validate that it\u0027s ready for a period of time, like 20 out of 60 checks shows it ready, then it\u0027s really ready",
       "revId": "54ed59e0e5b5480598246a56d9cf03c8c354b819",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6955d3b_c21e6988",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-16T20:30:46Z",
+      "side": 1,
+      "message": "Thanks Manuel, I will continue checking how this behaves and see if we can improve the check.",
+      "parentUuid": "8cce97c4_8d811377",
+      "revId": "54ed59e0e5b5480598246a56d9cf03c8c354b819",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
