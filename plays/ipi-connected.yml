@@ -1,0 +1,67 @@
+---
+- name: debug
+  debug:
+    var: release_url
+
+- name: "Start artifact webserver"
+  vars:
+    cache_dir: >-
+      {{ hostvars.localhost.provision_cache_store |
+         default((hostvars.localhost.ansible_env.HOME, 'releases') |
+         join('/')) }}
+  containers.podman.podman_container:
+    name: "{{ hostvars.localhost.job_id }}"
+    image: quay.io/centos7/httpd-24-centos7:latest
+    state: started
+    publish_all: true
+    volumes:
+      - "{{ cache_dir }}:/var/www/html"
+  register: aw_container
+  delegate_to: localhost
+
+- name: Get dynamic web port
+  set_fact:
+    aw_dynamic_port: >-
+      {{ aw_container |
+         json_query('container.NetworkSettings.Ports."8080/tcp"[].HostPort') |
+         first }}
+
+- name: "Allow HTTP traffic"
+  firewalld:
+    port: "{{ aw_dynamic_port }}/tcp"
+    permanent: false
+    immediate: true
+    state: enabled
+  become: true
+  delegate_to: localhost
+
+- name: Set artifact web URL
+  vars:
+    controller_ip: "{{ hostvars[inventory_hostname]['ansible_env'].SSH_CONNECTION.split(' ')[0] }}"
+  set_fact:
+    release_url: "http://{{ controller_ip }}:{{ aw_dynamic_port }}"
+
+- name: "installer : Node preparation"
+  import_role:
+    name: node-prep
+
+- name: "installer : Run IPI installer"
+  import_role:
+    name: installer
+
+- name: "Remove artifact webserver"
+  containers.podman.podman_container:
+    name: not_random
+    state: absent
+  delegate_to: localhost
+
+- name: "Disallow HTTP traffic"
+  firewalld:
+    port: "{{ aw_dynamic_port }}/tcp"
+    permanent: false
+    immediate: true
+    state: disabled
+  become: true
+  delegate_to: localhost
+
+...
