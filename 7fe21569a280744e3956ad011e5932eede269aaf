@@ -16,6 +16,23 @@
       "message": "dallas check ocp-4.10-vanilla",
       "revId": "7fe21569a280744e3956ad011e5932eede269aaf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd98cc91_7b8a6322",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-17T23:35:58Z",
+      "side": 1,
+      "message": "dallas check ocp-4.10-vanilla",
+      "revId": "7fe21569a280744e3956ad011e5932eede269aaf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
