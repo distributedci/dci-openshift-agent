@@ -9,6 +9,12 @@
       --from {{ pull_url }}
       --to "{{ dir }}"
 
+- name: "Apply SELinux container file context to extracted files"
+  shell: >
+    set -o pipefail &&
+    /usr/bin/chcon -R -t container_file_t "{{ dir }}"
+  become: true
+
 - name: "Get release digest"
   shell: >
     set -o pipefail &&
