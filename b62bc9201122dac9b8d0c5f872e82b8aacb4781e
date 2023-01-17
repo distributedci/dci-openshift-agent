@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "922e9909_9eb95a48",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-17T20:50:59Z",
+      "side": 1,
+      "message": "Manuel, yeah we should be used upstream in the cases where it is not available in the official catalog. That will imply changes in how we prune and calculate that all the required operators are available across more than 1 index.\n\nAt this time, We will pin for the OCP version that we know is not GA.",
+      "parentUuid": "177ff44a_5851d11b",
+      "revId": "b62bc9201122dac9b8d0c5f872e82b8aacb4781e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d4c668d8_0b8d4e61",
