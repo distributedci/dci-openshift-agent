@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d099cfa_b5ef7ac5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-01-17T21:35:53Z",
+      "side": 1,
+      "message": "I\u0027m giving a +2 based on Tony\u0027s LGTM and the fact that this was broken.  I looked into simply validating the images pulled but we run oc-setup after this and that requires an actual cluster be installed.  Next step will be actually adding this to bos2 ci.",
+      "revId": "eb64302cb5b0ca9858010f0fd8bd331a82ef0cad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
