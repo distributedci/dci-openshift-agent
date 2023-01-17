@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "b62bc9201122dac9b8d0c5f872e82b8aacb4781e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "177ff44a_5851d11b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-17T19:57:23Z",
+      "side": 1,
+      "message": "Beto, Looks good to me, but just to clarify: Does this mean even nightly builds will use the build catalog and pull sriov from upstream? I thought building the catalog was only because operators were not in the official catalog yet. I\u0027m ok either method, just checking.",
+      "revId": "b62bc9201122dac9b8d0c5f872e82b8aacb4781e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
