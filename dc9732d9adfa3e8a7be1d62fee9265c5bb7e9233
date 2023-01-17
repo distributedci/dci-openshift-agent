@@ -16,6 +16,23 @@
       "message": "The changes in the role are afecting SNO (VMs cannot be destroyed) and ACM. So will need more testing for those and other installers. \n\nSorry for the noise",
       "revId": "dc9732d9adfa3e8a7be1d62fee9265c5bb7e9233",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "258692dc_34c25c02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 28
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-17T19:49:44Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "dc9732d9adfa3e8a7be1d62fee9265c5bb7e9233",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
