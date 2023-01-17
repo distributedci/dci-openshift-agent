@@ -1,6 +1,6 @@
 ---
-# vars file for sno-installer
+# vars file for upi-installer
 cache_dir: "/opt/cache"
-pullsecret_file: "{{ cache_dir }}/pull-secret.txt"
+pullsecret_file: "{{ dci_pullsecret_file }}"
 force_mirroring: false
 ocp_binary_path: "/usr/local/bin"
