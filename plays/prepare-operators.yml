@@ -26,6 +26,7 @@
   when:
     - (dci_disconnected | default(false) | bool) or (local_registry | length)
     - short_ver is version("4.12", ">=")
+    - ("build:ga" not in tags)
 
 - name: "Get the operators mirror-list"
   include_tasks: get-mirror-list.yml
