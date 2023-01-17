@@ -1,0 +1,14 @@
+---
+- name: debug
+  debug:
+    var: release_url
+
+- name: "installer : Node preparation"
+  import_role:
+    name: node-prep
+
+- name: "installer : Run IPI installer"
+  import_role:
+    name: installer
+
+...
