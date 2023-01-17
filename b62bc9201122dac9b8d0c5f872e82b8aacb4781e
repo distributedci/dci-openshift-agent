@@ -33,6 +33,23 @@
       "message": "Beto, Looks good to me, but just to clarify: Does this mean even nightly builds will use the build catalog and pull sriov from upstream? I thought building the catalog was only because operators were not in the official catalog yet. I\u0027m ok either method, just checking.",
       "revId": "b62bc9201122dac9b8d0c5f872e82b8aacb4781e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4c668d8_0b8d4e61",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-17T20:37:05Z",
+      "side": 1,
+      "message": "I\u0027m afraid this will not cover the cases of 4.12 nightly builds, the above will have to be changed to 4.13 and that will satisfy our need at the moment",
+      "revId": "b62bc9201122dac9b8d0c5f872e82b8aacb4781e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
