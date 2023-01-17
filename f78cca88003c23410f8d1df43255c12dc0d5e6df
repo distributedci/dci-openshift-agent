@@ -16,6 +16,24 @@
       "message": "Thanks for fixing this Bill!\n\nDo you have a way to test the UPI install? I don\u0027t think we have been able to do it. We\u0027d love to test it the same as the rest installers",
       "revId": "f78cca88003c23410f8d1df43255c12dc0d5e6df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a16e714_29fea0ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-01-17T18:32:40Z",
+      "side": 1,
+      "message": "Hi Tony,\n\nI don\u0027t have an easy way to test it yet.  But I\u0027m working on having a simple skeleton hook that verifies the component pieces downloaded get downloaded correctly.\n\nAfter my talk with one of our partners it became clear that our UPI customers would like to be able to plug in their own installer playbooks or scripts after we do the download piece. \n\nThat\u0027s why I discovered these issues since I\u0027m running it again in my personal lab.  I think we could easily add this to bos2 ci if it just verifies the download part.",
+      "parentUuid": "dccc344e_24d28681",
+      "revId": "f78cca88003c23410f8d1df43255c12dc0d5e6df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
