@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a117c6f_15f8baa8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-18T19:39:17Z",
+      "side": 1,
+      "message": "As this is only reproducible in libvirt (WIP) by executing the acm-sno role against an already deployed hub.\n\nhttp://pastebin.test.redhat.com/1088691 contains the executed tests results",
+      "revId": "c36f030085ccfcc588ee4d07ef1140e058d81cd1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
