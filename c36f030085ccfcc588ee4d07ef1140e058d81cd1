@@ -33,6 +33,40 @@
       "message": "Thanks, LGTM\n\nWe did something similar for our SNO in dallas to trigger the reboot and force the media to boot with, not exactly what you are doing but the commands look familiar. \nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-installer/tasks/60_deploy_sno_bm.yml#L8-L70",
       "revId": "c36f030085ccfcc588ee4d07ef1140e058d81cd1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a932f88a_06e0ece4",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-18T22:43:44Z",
+      "side": 1,
+      "message": "I think it would be better to add the acm_bmc_port default in defaults/main.yml",
+      "revId": "c36f030085ccfcc588ee4d07ef1140e058d81cd1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b76c66a_cbf776a0",
+        "filename": "roles/acm-sno/tasks/force-disk-boot.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-18T22:43:44Z",
+      "side": 1,
+      "message": "nit: doing multi-line the command for readability",
+      "revId": "c36f030085ccfcc588ee4d07ef1140e058d81cd1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
