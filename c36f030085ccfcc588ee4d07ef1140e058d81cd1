@@ -16,6 +16,23 @@
       "message": "As this is only reproducible in libvirt (WIP) by executing the acm-sno role against an already deployed hub.\n\nhttp://pastebin.test.redhat.com/1088691 contains the executed tests results",
       "revId": "c36f030085ccfcc588ee4d07ef1140e058d81cd1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ab086ad_b4e67d69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-18T20:01:36Z",
+      "side": 1,
+      "message": "Thanks, LGTM\n\nWe did something similar for our SNO in dallas to trigger the reboot and force the media to boot with, not exactly what you are doing but the commands look familiar. \nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-installer/tasks/60_deploy_sno_bm.yml#L8-L70",
+      "revId": "c36f030085ccfcc588ee4d07ef1140e058d81cd1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
