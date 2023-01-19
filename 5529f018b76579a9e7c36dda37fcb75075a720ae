@@ -16,6 +16,23 @@
       "message": "LGTM, thanks Beto!",
       "revId": "5529f018b76579a9e7c36dda37fcb75075a720ae",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86a6b1b7_2e30f061",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-19T16:05:42Z",
+      "side": 1,
+      "message": "Pastebin with the latest changes testing: http://pastebin.test.redhat.com/1088824",
+      "revId": "5529f018b76579a9e7c36dda37fcb75075a720ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
