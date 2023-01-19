@@ -33,6 +33,23 @@
       "message": "Tested in:\nsno: https://www.distributed-ci.io/jobs/4c5484e7-56ed-460d-80d1-c9596b816533/jobStates \nassisted: https://www.distributed-ci.io/jobs/7bf01148-5fda-4347-83fa-3cf68cd0fc42/jobStates \nacm-sno: https://www.distributed-ci.io/jobs/86acff65-52da-464f-9065-3a2a78d30474/jobStates",
       "revId": "805aa16e3e30f0da85881ccb3147d875b9bfcef9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d770131_15cd9daa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 31
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-19T10:55:16Z",
+      "side": 1,
+      "message": "LGTM, thanks Beto!",
+      "revId": "805aa16e3e30f0da85881ccb3147d875b9bfcef9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
