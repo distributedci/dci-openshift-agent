@@ -1,12 +1,18 @@
 ---
 
-- name: "Remove temp pull secret"
+- name: "Remove ACM temp pull secret"
   file:
     path: "{{ dci_pullsecret_file }}"
     state: absent
   when:
     - dci_pullsecret_file is defined
     - install_type == 'acm'
+
+- name: "Remove the job directory"
+  file:
+    path: "{{ job_dir.path }}"
+    state: absent
+  when: job_dir.path is defined
 
 - name: "Remove docker auths directory"
   file:
