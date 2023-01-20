@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla openshift-vanilla:components\u003docp\u003d4.12.0",
       "revId": "97bbcf4277fe03e38ef5df2a3b0cb6e2d5313ac0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d43271d_dcedebc8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-20T22:36:58Z",
+      "side": 1,
+      "message": "LGTM\n\nCould you please test the upgrade, we can use the CI for that",
+      "revId": "97bbcf4277fe03e38ef5df2a3b0cb6e2d5313ac0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
