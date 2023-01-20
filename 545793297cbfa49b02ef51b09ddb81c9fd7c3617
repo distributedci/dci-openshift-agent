@@ -33,6 +33,24 @@
       "message": "Nice work Tony!",
       "revId": "545793297cbfa49b02ef51b09ddb81c9fd7c3617",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e901a09a_247a51f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 27
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-20T14:53:57Z",
+      "side": 1,
+      "message": "That\u0027s correct. Perhaps I\u0027m overlooking something here, by any chance the current cache pod you mention is the webserver_url? or would it be the one used in SNO?\n\nThe webserver_url is only used in disconnected environments, in that case we can\u0027t handle nightlies, with this container we add support to both environments, connected and disconnected.\n\nThe container in SNO is only created there and not in IPI.\n\nIf that cache pod is something else then I\u0027d need to look at it",
+      "parentUuid": "6a628004_3c4df22a",
+      "revId": "545793297cbfa49b02ef51b09ddb81c9fd7c3617",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
