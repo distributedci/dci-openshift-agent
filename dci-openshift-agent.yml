@@ -107,6 +107,12 @@
       when:
         - dci_disconnected | default(false) | bool
 
+    - name: "Create a temporary directory for the job"
+      tempfile:
+        state: directory
+        suffix: job_dir
+      register: job_dir
+
     - name: pre-run
       dci_job:
         id: "{{ job_id }}"
