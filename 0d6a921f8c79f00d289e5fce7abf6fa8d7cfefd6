@@ -16,6 +16,24 @@
       "message": "I am fine with this change (hoping it won\u0027t break anything outside dallas) Can you please share an example where the domain name is duplicated in the node names?",
       "revId": "0d6a921f8c79f00d289e5fce7abf6fa8d7cfefd6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b718d116_1c0312df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-23T13:48:18Z",
+      "side": 1,
+      "message": "Thanks. I\u0027m also not expecting to break anything outside Dallas, in the libvirt job in BOS2 we can see logs are pulled correctly, and in the failed jobs logs are pulled fine as well. Also FYI, this change is needed because I\u0027m updating all nodes to use FQDN in https://github.com/dci-labs/inventories/pull/120.\n\nThis is an example of the log issue without this fix, in the files we\u0027ll see all journal logs have 0 bytes and in the task \"Get logs from OCP Deployment\" the scp commands fail with \"ERROR core@master-1.cluster4.dfwt5g.lab.cluster4.dfwt5g.lab sudo journalctl --all\\nssh: Could not resolve hostname master-1.cluster4.dfwt5g.lab.cluster4.dfwt5g.lab: Name or service not known\"\nhttps://www.distributed-ci.io/jobs/d70f94da-42ce-45b5-8195-c40797fa8319/jobStates?sort\u003ddate\u0026task\u003da800b5e4-4481-46c7-9eb8-12c4a9c26a18",
+      "parentUuid": "adada5b4_24e8a3cc",
+      "revId": "0d6a921f8c79f00d289e5fce7abf6fa8d7cfefd6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
