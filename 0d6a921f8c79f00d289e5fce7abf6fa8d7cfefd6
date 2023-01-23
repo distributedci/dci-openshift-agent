@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "adada5b4_24e8a3cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-01-23T08:42:10Z",
+      "side": 1,
+      "message": "I am fine with this change (hoping it won\u0027t break anything outside dallas) Can you please share an example where the domain name is duplicated in the node names?",
+      "revId": "0d6a921f8c79f00d289e5fce7abf6fa8d7cfefd6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
