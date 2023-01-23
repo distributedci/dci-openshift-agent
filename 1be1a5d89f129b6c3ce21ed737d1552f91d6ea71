@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.13-vanilla openshift-vanilla:components\u003docp\u003d4.13.0-ec.2-2023-01-20-131932",
       "revId": "1be1a5d89f129b6c3ce21ed737d1552f91d6ea71",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe1435fa_79449d64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-23T22:57:00Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "1be1a5d89f129b6c3ce21ed737d1552f91d6ea71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
