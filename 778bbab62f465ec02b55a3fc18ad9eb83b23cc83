@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "95616bbf_d974a6a5",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-23T17:44:03Z",
+      "side": 1,
+      "message": "I think that the purpose of that setting in the inventory is to fully override and that is ok. If that is undefined, then we will merge what is provided by the job + disconnected_auths.\n\nIMO, I think that disconnected auths should be renamed. Credentials there can be used for connected and disconnected registries. So those are just additional credentials to what is provided by DCI.",
+      "parentUuid": "4c0a372b_d02a71a3",
+      "revId": "778bbab62f465ec02b55a3fc18ad9eb83b23cc83",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "389c7366_bce3583a",
@@ -48,6 +66,30 @@
       "writtenOn": "2023-01-23T09:02:47Z",
       "side": 1,
       "message": "this task is the same in all the cases, maybe we can write it only once after the three defined blocks",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 65
+      },
+      "revId": "778bbab62f465ec02b55a3fc18ad9eb83b23cc83",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3184d21b_4c56b4b1",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-23T17:44:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "389c7366_bce3583a",
       "range": {
         "startLine": 108,
         "startChar": 0,
