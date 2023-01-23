@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57ea7f72_2036faa0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-23T07:13:29Z",
+      "side": 1,
+      "message": "Hi Tony, thanks. I added some comments regarding settings.yml.",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "028345b1_eda4c341",
+        "filename": "settings.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-23T07:13:29Z",
+      "side": 1,
+      "message": "I suggest having the dev version 13 as the default here, as we are encouraging partners to go through the fast-track certification process.",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3cd569fc_bb7776fd",
+        "filename": "settings.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-23T07:13:29Z",
+      "side": 1,
+      "message": "maybe let\u0027s use numbers here to keep it easy to understand",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b089217e_8e853fb2",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-01-23T07:13:29Z",
+      "side": 1,
+      "message": "do we need to have 4.1 here as well?",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
