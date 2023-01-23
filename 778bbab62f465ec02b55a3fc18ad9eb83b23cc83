@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7208d85_ce232c36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-23T09:02:47Z",
+      "side": 1,
+      "message": "Change looks fine apparently. I\u0027d run a test on dallas to verify it. Also, leaving one suggestion.",
+      "revId": "778bbab62f465ec02b55a3fc18ad9eb83b23cc83",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "389c7366_bce3583a",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-23T09:02:47Z",
+      "side": 1,
+      "message": "this task is the same in all the cases, maybe we can write it only once after the three defined blocks",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 65
+      },
+      "revId": "778bbab62f465ec02b55a3fc18ad9eb83b23cc83",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
