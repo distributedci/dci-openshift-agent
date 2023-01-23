@@ -16,6 +16,24 @@
       "message": "maybe use mor_dir to keep it consistent?",
       "revId": "eac879adcbc404a4141ff131846ab7d54aa06062",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ecb9d23_219d37e0",
+        "filename": "roles/mirror-ocp-release/tasks/fetch.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-23T22:29:18Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9fd8057d_88a15841",
+      "revId": "eac879adcbc404a4141ff131846ab7d54aa06062",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
