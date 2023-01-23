@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ea6187c5_cbdb8ae2",
+        "filename": "docs/support.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-01-23T08:49:44Z",
+      "side": 1,
+      "message": "It may be a good idea to add ocp-4.13 as well",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "028345b1_eda4c341",
         "filename": "settings.yml",
         "patchSetId": 1
