@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e41d4ed_87116a33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-23T17:03:28Z",
+      "side": 1,
+      "message": "Thanks for the feedback all.",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea6187c5_cbdb8ae2",
@@ -52,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "66b1228a_93a85f0b",
+        "filename": "docs/support.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-23T17:03:28Z",
+      "side": 1,
+      "message": "Non-GA versions are not supported",
+      "parentUuid": "ea6187c5_cbdb8ae2",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "028345b1_eda4c341",
@@ -65,6 +100,24 @@
       "writtenOn": "2023-01-23T07:13:29Z",
       "side": 1,
       "message": "I suggest having the dev version 13 as the default here, as we are encouraging partners to go through the fast-track certification process.",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af2798dc_a9e01241",
+        "filename": "settings.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-23T17:03:28Z",
+      "side": 1,
+      "message": "We discussed this one in our daily,\n\nThere\u0027s no certification for a non-GA release yet.\nnon-GA is mostly available through nightlies, not all installers support nightly builds, we will use GA here.",
+      "parentUuid": "028345b1_eda4c341",
       "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -88,6 +141,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b0309250_afebfd13",
+        "filename": "settings.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-23T17:03:28Z",
+      "side": 1,
+      "message": "I wanted to avoid the need to change this every new release :) any suggestion on what would be a good definition?",
+      "parentUuid": "3cd569fc_bb7776fd",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b089217e_8e853fb2",
         "filename": "test-runner",
         "patchSetId": 1
@@ -99,6 +170,24 @@
       "writtenOn": "2023-01-23T07:13:29Z",
       "side": 1,
       "message": "do we need to have 4.1 here as well?",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f26214f_d448176a",
+        "filename": "test-runner",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-23T17:03:28Z",
+      "side": 1,
+      "message": "At the moment these are hardcoded values",
+      "parentUuid": "b089217e_8e853fb2",
       "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
