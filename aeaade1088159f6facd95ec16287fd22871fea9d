@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "708cf84f_722be2d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-23T08:52:38Z",
+      "side": 1,
+      "message": "Hi Tony, can you do the same for BOS2 settings.yml file? https://github.com/dci-labs/bos2-ci-config/blob/main/files/settings.yml",
+      "revId": "aeaade1088159f6facd95ec16287fd22871fea9d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea6187c5_cbdb8ae2",
