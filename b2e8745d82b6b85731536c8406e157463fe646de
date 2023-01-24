@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla openshift-vanilla:components\u003docp\u003d4.10.0-0.nightly-2023-01-23-185707",
       "revId": "b2e8745d82b6b85731536c8406e157463fe646de",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4896c4a3_d9f84812",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-24T22:15:22Z",
+      "side": 1,
+      "message": "Thank you so much for fixing this Beto!!",
+      "revId": "b2e8745d82b6b85731536c8406e157463fe646de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
