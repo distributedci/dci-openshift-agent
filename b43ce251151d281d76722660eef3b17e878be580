@@ -16,6 +16,23 @@
       "message": "@Tony, documentation looks good to me. Thanks!",
       "revId": "b43ce251151d281d76722660eef3b17e878be580",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f0f8641_a7fcd710",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-24T21:02:01Z",
+      "side": 1,
+      "message": "LGTM, Thanks Beto!",
+      "revId": "b43ce251151d281d76722660eef3b17e878be580",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
