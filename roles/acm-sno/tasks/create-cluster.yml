@@ -293,6 +293,45 @@
       spec:
         hubAcceptsClient: true
 
+- name: "Encode Ignition config for podman policies"
+  vars:
+    podman_policy: >
+      {
+        "default": [
+          {
+            "type": "insecureAcceptAnything"
+          }
+        ],
+        "transports": {
+          "docker-daemon": {
+            "": [
+              {
+                "type": "insecureAcceptAnything"
+              }
+            ]
+          }
+        }
+      }
+    enc_podman_policy: "{{ podman_policy | b64encode }}"
+  set_fact:
+    ignition_config: >
+      {
+        "ignition": {
+          "version": "3.1.0"
+        },
+        "storage": {
+          "files": [
+            {
+              "path": "/etc/containers/policy.json",
+              "contents": {
+                "source": "data:text/plain;base64,{{ enc_podman_policy }}"
+              }
+            }
+          ]
+        }
+  when:
+    - acm_disconnected | bool
+
 - name: "Create the InfraEnv"
   community.kubernetes.k8s:
     definition:
@@ -317,6 +356,7 @@
         pullSecretRef:
           name: "pullsecret-{{ acm_cluster_name }}"
         sshAuthorizedKey: "{{ acm_ssh_key }}"
+        ignitionConfigOverride: "{{ ignition_config | default(omit) }}"
 
 - name: "Wait for the boot ISO creation"
   community.kubernetes.k8s_info:
