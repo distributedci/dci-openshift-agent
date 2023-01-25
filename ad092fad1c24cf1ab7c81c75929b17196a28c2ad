@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ce87cf5e_72180d7d",
+        "filename": "roles/acm-sno/tasks/create-cluster.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-25T22:14:41Z",
+      "side": 1,
+      "message": "I think we can also bump up the version to 3.2.0 which is the latest available since 4.7",
+      "revId": "ad092fad1c24cf1ab7c81c75929b17196a28c2ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b7f84405_004bea95",
         "filename": "roles/acm-sno/tasks/create-cluster.yml",
         "patchSetId": 1
