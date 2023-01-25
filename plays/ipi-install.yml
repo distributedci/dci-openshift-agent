@@ -84,12 +84,18 @@
     register: aw_container
     delegate_to: localhost
 
-  - name: Get dynamic web port
+  - name: Get dynamic web port and firewall zone
     set_fact:
       aw_dynamic_port: >-
         {{ aw_container |
            json_query('container.NetworkSettings.Ports."8080/tcp"[].HostPort') |
            first }}
+      aw_zone: >-
+        {%- if ansible_virtualization_role == "guest" -%}
+        libvirt
+        {%- else %}
+        public
+        {%- endif %}
 
   - name: "Allow HTTP traffic"
     firewalld:
@@ -126,6 +132,7 @@
       permanent: false
       immediate: true
       state: disabled
+      zone: "{{ aw_zone }}"
     become: true
     delegate_to: localhost
 
