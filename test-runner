@@ -418,7 +418,8 @@ for d in $(ls -d ansible-role-dci-* 2> /dev/null); do
     fi
 done
 
-ANSIBLE_COLLECTIONS_PATHS=
+#ANSIBLE_COLLECTIONS_PATHS=
+ansible-config dump | grep COLLECTIONS
 for d in $(ls -d ansible-collection-* 2> /dev/null); do
     mkdir -p collections
     LOCAL_COLLECTIONS=$PWD/collections
