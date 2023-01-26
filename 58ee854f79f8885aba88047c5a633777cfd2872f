@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96748dd8_5fcf46c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-26T20:12:04Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla openshift-vanilla:components\u003docp\u003d4.13.0-0.nightly-2023-01-24-061922",
+      "revId": "58ee854f79f8885aba88047c5a633777cfd2872f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
