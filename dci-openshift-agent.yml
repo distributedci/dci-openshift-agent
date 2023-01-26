@@ -270,6 +270,23 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
+        - name: Create test files
+          shell: echo {{ item }} > /tmp/{{ item }}.txt
+          with_items:
+            - file1
+            - file2
+            - file4
+            - file5
+
+        - name: Check on the test files
+          shell: stat /tmp/{{ item }}.txt
+          with_items:
+            - file1
+            - file2
+            - file3
+            - file4
+            - file5
+
         - name: "Launch {{ install_type }} install"
           include_tasks: "plays/{{ install_type }}-install.yml"
           when:
