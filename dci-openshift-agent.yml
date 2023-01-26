@@ -145,6 +145,23 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
+        - name: Create test files
+          shell: echo {{ item }} > /tmp/{{ item }}.txt
+          with_items:
+            - file1
+            - file2
+            - file4
+            - file5
+
+        - name: Check on the test files
+          shell: stat /tmp/{{ item }}.txt
+          with_items:
+            - file1
+            - file2
+            - file3
+            - file4
+            - file5
+
         - name: Configure jumpbox
           include_tasks: plays/configure-jumpbox.yml
 
