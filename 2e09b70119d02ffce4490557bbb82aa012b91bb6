@@ -33,6 +33,23 @@
       "message": "\u003e Patch Set 1:\n\u003e \n\u003e - FAILURE https://www.distributed-ci.io/jobs/627d5e72-8b23-47de-af2e-c5cc43d24d2d/jobStates\n\u003e  from https://github.com/dci-labs/dallas-pipelines/pull/640\n\nChange is working, despite the failed job. See it [here](https://www.distributed-ci.io/jobs/627d5e72-8b23-47de-af2e-c5cc43d24d2d/jobStates?sort\u003ddate\u0026task\u003d21d8524f-d686-488f-b4bf-e1c9b03b2eb3).\nIt failed on SPK E2E test due to the well-known issue with cluster6, it\u0027s not related to the change.\nThis is ready for review.",
       "revId": "2e09b70119d02ffce4490557bbb82aa012b91bb6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f83766ec_232a9813",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-26T18:37:32Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2e09b70119d02ffce4490557bbb82aa012b91bb6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
