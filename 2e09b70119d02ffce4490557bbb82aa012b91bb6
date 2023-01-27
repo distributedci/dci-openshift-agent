@@ -50,6 +50,23 @@
       "message": "LGTM",
       "revId": "2e09b70119d02ffce4490557bbb82aa012b91bb6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6341eef2_3905e18e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-27T10:42:35Z",
+      "side": 1,
+      "message": "The -1 in Zuul should be fixed when merging the change, I\u0027ve already seen this in other merged changes.",
+      "revId": "2e09b70119d02ffce4490557bbb82aa012b91bb6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
