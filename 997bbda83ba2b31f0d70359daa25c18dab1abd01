@@ -33,6 +33,23 @@
       "message": "Tested in Paris via: https://www.distributed-ci.io/jobs/c8e6b1cf-4f07-4030-8623-65db485855c0/jobStates?sort\u003ddate\u0026task\u003d84bd72ae-f710-4d70-b82b-070edcc66af8",
       "revId": "997bbda83ba2b31f0d70359daa25c18dab1abd01",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00819994_5caf9909",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-27T10:48:26Z",
+      "side": 1,
+      "message": "Just to verify. Is it expected that, in Beto\u0027s test [1], aw_zone for public zone is empty and for libvirt it is libvirt, but in last libvirt job in BOS2 [2], both zones have public aw_zone?\n\n[1] https://www.distributed-ci.io/jobs/c8e6b1cf-4f07-4030-8623-65db485855c0/jobStates?sort\u003ddate\u0026task\u003d4187208c-7feb-445a-8a2d-6b8974fd715d\n[2] https://www.distributed-ci.io/jobs/a0ba5630-e2cb-4b1d-ad22-13db6b261f3e/jobStates?sort\u003ddate\u0026task\u003dce702517-728e-4fed-8d34-13b8c76eab5b",
+      "revId": "997bbda83ba2b31f0d70359daa25c18dab1abd01",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
