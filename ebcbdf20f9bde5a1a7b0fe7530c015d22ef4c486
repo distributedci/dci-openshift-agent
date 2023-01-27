@@ -102,6 +102,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f73166aa_d4c105e6",
+        "filename": "test-runner",
+        "patchSetId": 2
+      },
+      "lineNbr": 636,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-27T13:33:38Z",
+      "side": 1,
+      "message": "yep, that\u0027s true :) the key here is that, if you see the BOS2 jobs, d-o-a-a jobs are not being launched because the syntax error (if you check the logs in BOS2), so has to be fixed",
+      "parentUuid": "56bcfec6_ecac96fe",
+      "range": {
+        "startLine": 636,
+        "startChar": 22,
+        "endLine": 636,
+        "endChar": 23
+      },
+      "revId": "ebcbdf20f9bde5a1a7b0fe7530c015d22ef4c486",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "241087a1_73ab79a2",
         "filename": "test-runner",
         "patchSetId": 2
