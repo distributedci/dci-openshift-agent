@@ -16,6 +16,69 @@
       "message": "LGTM",
       "revId": "ebcbdf20f9bde5a1a7b0fe7530c015d22ef4c486",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7fb8987_4ad9f88d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-27T10:59:35Z",
+      "side": 1,
+      "message": "There\u0027s a syntax error in your if-else.\nAlso, for validating the change, I\u0027d propose the following:\n- run a d-o-a-a job without Test-App-Args-Hints in the next patchset, to validate it\u0027s taking the \"else\" command\n- update commit msg to run a test with Test-App-Args-Hints using values WITHOUT spaces, to validate it\u0027s working too as before\n- finally, update commit msg again to run a test with Test-App-Args-Hints using values WITH spaces, to validate this case works.",
+      "revId": "ebcbdf20f9bde5a1a7b0fe7530c015d22ef4c486",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c07855f_bf47e8f3",
+        "filename": "test-runner",
+        "patchSetId": 2
+      },
+      "lineNbr": 636,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-27T10:59:35Z",
+      "side": 1,
+      "message": "you\u0027re missing \"; then\" here",
+      "range": {
+        "startLine": 636,
+        "startChar": 22,
+        "endLine": 636,
+        "endChar": 23
+      },
+      "revId": "ebcbdf20f9bde5a1a7b0fe7530c015d22ef4c486",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "241087a1_73ab79a2",
+        "filename": "test-runner",
+        "patchSetId": 2
+      },
+      "lineNbr": 655,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-01-27T10:59:35Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 655,
+        "startChar": 22,
+        "endLine": 655,
+        "endChar": 23
+      },
+      "revId": "ebcbdf20f9bde5a1a7b0fe7530c015d22ef4c486",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
