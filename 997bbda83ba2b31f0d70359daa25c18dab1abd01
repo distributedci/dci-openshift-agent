@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-vanilla openshift-vanilla:components\u003docp\u003d4.13.0-0.nightly-2023-01-24-061922",
       "revId": "997bbda83ba2b31f0d70359daa25c18dab1abd01",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "405fde15_70a7d765",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-27T02:30:17Z",
+      "side": 1,
+      "message": "Tested in Paris via: https://www.distributed-ci.io/jobs/c8e6b1cf-4f07-4030-8623-65db485855c0/jobStates?sort\u003ddate\u0026task\u003d84bd72ae-f710-4d70-b82b-070edcc66af8",
+      "revId": "997bbda83ba2b31f0d70359daa25c18dab1abd01",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
