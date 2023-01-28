@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-vanilla openshift-vanilla:components\u003docp\u003d4.13.0-0.nightly-2023-01-24-061922",
       "revId": "785b30bc46ba033d5ff15c45904d76b9d78a2902",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4e3d67c_bf531d55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-28T02:09:25Z",
+      "side": 1,
+      "message": "Paris test: https://www.distributed-ci.io/jobs/c8e6b1cf-4f07-4030-8623-65db485855c0/jobStates?sort\u003ddate\n\nIt is failing durin the compute plane validation because masters are labeled as workers in this environment. I have created a separated change to deal with this: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/27288",
+      "revId": "785b30bc46ba033d5ff15c45904d76b9d78a2902",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
