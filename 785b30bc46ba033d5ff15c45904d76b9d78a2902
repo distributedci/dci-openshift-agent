@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "785b30bc46ba033d5ff15c45904d76b9d78a2902",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8978a49f_9557e367",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-29T20:15:01Z",
+      "side": 1,
+      "message": "LGTM, I suspect SNO deployments might have the same issue this patch has been fixing for IPI, if so we could address that in another PR. Or do you know if the SNO artifacts for nightlies are pulled differently?",
+      "revId": "785b30bc46ba033d5ff15c45904d76b9d78a2902",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
