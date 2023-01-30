@@ -67,6 +67,24 @@
       "message": "LGTM, I suspect SNO deployments might have the same issue this patch has been fixing for IPI, if so we could address that in another PR. Or do you know if the SNO artifacts for nightlies are pulled differently?",
       "revId": "785b30bc46ba033d5ff15c45904d76b9d78a2902",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0a96d05_3067e392",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-01-30T22:11:15Z",
+      "side": 1,
+      "message": "Previously there was a change that removed the need to connect to a URL to get the release.txt file in SNO, it is now provided through the extraction of the artifacts in the release image.\nThe caveat of that change is that the pull_url is a requirement now. It is not an issue for SNO in the agent, as the pull_url is provided in every job. But, it could be an issue if someone is using SNO roles on their own.  I can get that fixed in a different change but at the moment nightly builds are working in SNO (https://softwarefactory-project.io/r/c/dci-openshift-agent/+/27122/18#message-998fa32d56442e9879e8df461a9d284e5b3f7494)",
+      "parentUuid": "8978a49f_9557e367",
+      "revId": "785b30bc46ba033d5ff15c45904d76b9d78a2902",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
