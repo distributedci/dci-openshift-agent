@@ -23,6 +23,7 @@ Requires: ansible-collection-containers-podman
 Requires: ansible-collection-community-general
 Requires: ansible-collection-community-libvirt
 Requires: ansible-collection-ansible-posix
+Requires: ansible-collection-ansible-utils
 Requires: python3-pyyaml python3-openshift
 Requires: jq
 Requires: git
