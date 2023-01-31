@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1f45733_c89d230b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-01-31T23:05:34Z",
+      "side": 1,
+      "message": "LGTM \nI guess before we defined the group [workers] empty to avoid this issue, but better take it into account if not defined",
+      "revId": "db35762aa345e605252e022e453f26ced18becad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
