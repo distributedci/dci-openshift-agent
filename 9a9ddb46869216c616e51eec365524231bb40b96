@@ -16,6 +16,24 @@
       "message": "I think this is changing what it was doing before, we are not installing epel, we are expecting it to be in place, we are just checking it is already.\n\nI think the question is if we should or not install epel, but if we do, then we need to update the docs",
       "revId": "9a9ddb46869216c616e51eec365524231bb40b96",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2ff4767_a4c71ba5",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-31T18:44:16Z",
+      "side": 1,
+      "message": "I think it is ok to install it. I updated the doc accordingly. But let me know if there is a reason for not installing it.",
+      "parentUuid": "5c30bba9_0669cf1a",
+      "revId": "9a9ddb46869216c616e51eec365524231bb40b96",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
