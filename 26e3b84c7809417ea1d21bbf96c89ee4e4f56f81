@@ -16,6 +16,24 @@
       "message": "This is still required, without it we can\u0027t install dci-openshift-agent, there\u0027s a dependency with epel. Maybe this is the reason why it was not installed previously in the agent? because is a chicken-egg problem?",
       "revId": "26e3b84c7809417ea1d21bbf96c89ee4e4f56f81",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed73aff9_e9b550c5",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-01-31T23:27:37Z",
+      "side": 1,
+      "message": "lol, yeah.",
+      "parentUuid": "16ee2368_499d85f2",
+      "revId": "26e3b84c7809417ea1d21bbf96c89ee4e4f56f81",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
