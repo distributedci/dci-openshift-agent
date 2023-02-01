@@ -67,7 +67,7 @@
           - cluster:{{ cluster }}
       when: cluster is defined
 
-    - name: debug components
+    - name: "debug components"
       debug:
         var: job_info.job.components
 
