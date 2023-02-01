@@ -34,6 +34,24 @@
       "parentUuid": "16ee2368_499d85f2",
       "revId": "26e3b84c7809417ea1d21bbf96c89ee4e4f56f81",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ed3c9e4_80b836c7",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-02-01T08:57:06Z",
+      "side": 1,
+      "message": "The dci-lab-setup roles take care of installing the epel repo in advance of installing the dci packages.\n\nHowever, we don\u0027t run the dci-lab-setup code, for instance, in libvirt environments, which means that either the provision host base image already has epel installed, epel is installed when running the libvirt_up playbook or we rely on the dci-openshift-agent to take care of EPEL.\n\nTo me, having epel installed from here is OK as long as we need to rely on epel. My understanding is we should not use epel and instead should use RH official sources. However there are packages which are only available in epel, so we have not many options here.",
+      "parentUuid": "ed73aff9_e9b550c5",
+      "revId": "26e3b84c7809417ea1d21bbf96c89ee4e4f56f81",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
