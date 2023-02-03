@@ -2,32 +2,36 @@
   debug:
     msg: "{{ sub.subcriptionName }}"
 
-- name: "Get updated package manifest"
+- name: Wait for current CSV to be updated
   community.kubernetes.k8s_info:
-    api: packages.operators.coreos.com/v1
-    kind: PackageManifest
-    name: "{{ sub.operatorName }}"
-    namespace:  default
-  register: packagemanifest
+    api: operators.coreos.com/v1alpha1
+    kind: Subscription
+    namespace: "{{ sub.namespace }}"
+    name: "{{ sub.subscriptionName }}"
+  register: sub_update
   retries: 10
-  delay: 5
+  delay: 10
   until:
-    - packagemanifest.resources is defined
-    - packagemanifest.resources | length == 1
-
-- name: "Get new operator's default channel name"
-  vars:
-    channels: "resources[*].status.defaultChannel"
-  set_fact:
-    default_channel: "{{ packagemanifest | json_query(channels) | join('') | string }}"
+    - sub_update.resources is defined
+    - sub_update.resources | length == 1
+    - "'status' in sub_update.resources[0]"
+    - "'currentCSV' in sub_update.resources[0].status"
+    - sub_update.resources[0].status.currentCSV != sub.installedCSV
+  # We don't trigger a failure if the currentCSV and installedCSV are set to
+  # the same value, since it may happen a cluster upgrade does not include an
+  # operator upgrade.
+  failed_when: >
+    sub_update.resources is unefined or
+    sub_update.resources[0].status is undefined or
+    sub_update.resources[0].status.currentCSV is undefined or
+    sub_update.resources[0].status.currentCSV == ""
 
 - name: "Get operator's CSV for desired channel"
-  vars:
-    current_csv: "resources[*].status.channels[? name=='{{ default_channel }}' ].currentCSV | [0]"
   set_fact:
-    operator_csv: "{{ packagemanifest | json_query(current_csv) | first  }}"
+    operator_csv: "{{ sub_update.resources[0].status.currentCSV  }}"
 
 - name: "Upgrade operator if the current CSV is different to the installed one"
+  when : operator_csv != sub.installedCSV
   block:
 
     # Versions may not follow the same convention between releases
@@ -110,5 +114,4 @@
           spec:
             name: "{{ sub.operatorName }}"
             installPlanApproval: "{{ sub.installPlanApproval }}"
-  when : operator_csv != sub.installedCSV
 ...
