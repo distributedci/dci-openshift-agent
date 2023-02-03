@@ -14,7 +14,8 @@
 - name: "Set pullsecret from job_info - Connected"
   set_fact:
     pullsecret: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
-  no_log: true
+    #no_log: true
+  no_log: false
   when:
     - not (dci_disconnected | default(false) | bool)
 
