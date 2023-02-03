@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da1a8d1a_2a2cf56f",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-03T17:47:46Z",
+      "side": 1,
+      "message": "There\u0027s a typo in the namespace",
+      "revId": "2eafec1f571386137fbf924e725980e769f3273a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f704bc1_b3a1a238",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-03T17:47:46Z",
+      "side": 1,
+      "message": "Could you try and see if by setting\n\n    field_selectors:\n      - status.catalogSource \u003d \u0027{{ sub.catalogSource }}\u0027\n\nwould filter and give you the packagemanifest you want?",
+      "revId": "2eafec1f571386137fbf924e725980e769f3273a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
