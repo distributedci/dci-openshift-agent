@@ -1,6 +1,6 @@
-- name: "Upgrading Operator {{ sub.subcriptionName }}"
+- name: "Upgrading Operator {{ sub.subscriptionName }}"
   debug:
-    msg: "{{ sub.subcriptionName }}"
+    msg: "{{ sub.subscriptionName }}"
 
 - name: "Get updated package manifest"
   community.kubernetes.k8s_info:
@@ -8,6 +8,8 @@
     kind: PackageManifest
     name: "{{ sub.operatorName }}"
     namespace:  default
+    label_selectors:
+      - status.catalogSource = '{{ sub.catalogSource }}'
   register: packagemanifest
   retries: 10
   delay: 5
@@ -28,6 +30,7 @@
     operator_csv: "{{ packagemanifest | json_query(current_csv) | first  }}"
 
 - name: "Upgrade operator if the current CSV is different to the installed one"
+  when : operator_csv != sub.installedCSV
   block:
 
     # Versions may not follow the same convention between releases
@@ -57,7 +60,7 @@
           apiVersion: operators.coreos.com/v1alpha1
           kind: Subscription
           metadata:
-            name: "{{ sub.subcriptionName }}"
+            name: "{{ sub.subscriptionName }}"
             namespace:  "{{ sub.namespace }}"
           spec:
             name: "{{ sub.operatorName }}"
@@ -105,10 +108,9 @@
           apiVersion: operators.coreos.com/v1alpha1
           kind: Subscription
           metadata:
-            name: "{{ sub.subcriptionName }}"
+            name: "{{ sub.subscriptionName }}"
             namespace:  "{{ sub.namespace }}"
           spec:
             name: "{{ sub.operatorName }}"
             installPlanApproval: "{{ sub.installPlanApproval }}"
-  when : operator_csv != sub.installedCSV
 ...
