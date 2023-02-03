@@ -2,18 +2,24 @@
   debug:
     msg: "{{ sub.subcriptionName }}"
 
-- name: "Get updated package manifest"
+- name: "Get list of package manifests"
   community.kubernetes.k8s_info:
     api: packages.operators.coreos.com/v1
     kind: PackageManifest
-    name: "{{ sub.operatorName }}"
-    namespace:  default
-  register: packagemanifest
+    namespace: vran-acceleration-operators
+  register: packagemanifest_all
   retries: 10
   delay: 5
   until:
-    - packagemanifest.resources is defined
-    - packagemanifest.resources | length == 1
+    - packagemanifest_all.resources is defined
+    - packagemanifest_all.resources | length > 0
+
+- name: "Get updated package manifest associated to the installed operator"
+  set_fact:
+    packagemanifest:
+      resources: "{{ packagemanifest_all | json_query(manifest_query) }}"
+  vars:
+    manifest_query: "resources[? metadata.name == '{{ sub.operatorName }}' && status.catalogSource == '{{ sub.catalog }}']"
 
 - name: "Get new operator's default channel name"
   vars:
