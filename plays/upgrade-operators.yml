@@ -13,6 +13,7 @@
       resources[*].{ subcriptionName: metadata.name,
         operatorName: spec.name,
         namespace: metadata.namespace,
+        catalogSource: spec.source,
         installedCSV: status.installedCSV,
         installPlanApproval: spec.installPlanApproval
       }
