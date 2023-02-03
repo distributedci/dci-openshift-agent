@@ -89,17 +89,25 @@
             source: "{{ source }}"
             sourceNamespace: "{{ source_ns }}"
 
-    - name: "Get Operator's CSV"
-      block:
-        - name: "Get operator's CSV for desired channel"
-          vars:
-            current_csv: "resources[*].status.channels[? name=='{{ desired_channel }}' ].currentCSV | [0]"
-          set_fact:
-            operator_csv: "{{ packagemanifest | json_query(current_csv) | first  }}"
-      rescue:
-        - name: "Operator's CSV not found in the specified channel"
-          fail:
-            msg: "Operator's CSV not found in the specified channel, check if channel: {{ desired_channel }} is valid"
+    - name: Wait for subscription to be ready
+      community.kubernetes.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: Subscription
+        namespace: "{{ namespace }}"
+        name: "{{ operator }}"
+      register: sub
+      retries: 20
+      delay: 30
+      until:
+        - sub.resources is defined
+        - sub.resources | length == 1
+        - "'status' in sub.resources[0]"
+        - "'currentCSV' in sub.resources[0].status"
+        - sub.resources[0].status.currentCSV | length > 0
+
+    - name: "Get operator's CSV for desired channel"
+      set_fact:
+        operator_csv: "{{ sub.resources[0].status.currentCSV }}"
 
     - name: "{{ ocp_version }} - {{ operator_csv }} - wait for CSV to be ready"
       community.kubernetes.k8s_info:
