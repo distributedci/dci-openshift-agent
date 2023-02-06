@@ -50,6 +50,42 @@
       "message": "I wanted to see the patch in action but it run on cluster1 and there are 4 workers on cluster1 so:\nNB_of_retries\u003d (4+1)*12 \u003d 60 so we don\u0027t really see the difference but that\u0027s working for me",
       "revId": "a50f898d1b4126ff1e091c2aa7cba59bc83a86d7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c106e9c0_470bfc25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-06T14:25:51Z",
+      "side": 1,
+      "message": "At the moment is the only place where it has been failing due to timeouts, is possible that after this passes other parts may require an increment, but I\u0027ll do them as needed.",
+      "parentUuid": "2404be1b_20d69c7c",
+      "revId": "a50f898d1b4126ff1e091c2aa7cba59bc83a86d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17013a2a_80825f46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-06T14:25:51Z",
+      "side": 1,
+      "message": "Correct, I didn\u0027t want to change the setting we had for the other configurations, for the 12 worker cluster it will be different and that\u0027s what\u0027s needed",
+      "parentUuid": "fa26af3f_0725404b",
+      "revId": "a50f898d1b4126ff1e091c2aa7cba59bc83a86d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
