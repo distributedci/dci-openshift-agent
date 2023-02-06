@@ -69,6 +69,24 @@
       "parentUuid": "2f704bc1_b3a1a238",
       "revId": "2eafec1f571386137fbf924e725980e769f3273a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dafa75f1_2cc70a27",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-06T14:22:08Z",
+      "side": 1,
+      "message": "Did you try with the ansible module? The doc suggest that it is possible: https://github.com/ansible-collections/community.kubernetes/blob/stable-1.2/plugins/modules/k8s_info.py#L93-L97",
+      "parentUuid": "6b52fdb4_d3813e69",
+      "revId": "2eafec1f571386137fbf924e725980e769f3273a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
