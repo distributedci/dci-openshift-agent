@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecb9c6fd_bdca5d86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-02-06T21:57:53Z",
+      "side": 1,
+      "message": "I\u0027ve tested this locally and the integration with crucible works.\n\nBut - There is an issue with the crucible support where it tries to copy the wrong netboot images if setup_pxe_service is true.  I will be putting together a PR to fix this in crucible.\n\nAlso I need to update the docs to explain how to use this. 😊",
+      "revId": "974afce53e6268bd400111c223ef820b6b8c224b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
