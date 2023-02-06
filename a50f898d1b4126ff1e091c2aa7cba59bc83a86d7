@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "a50f898d1b4126ff1e091c2aa7cba59bc83a86d7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2404be1b_20d69c7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-06T09:17:05Z",
+      "side": 1,
+      "message": "it looks good, but just a question: we have some other places in the code where this check-resource common role is called for MCP check, do we also need to do this in these places too? or just for PAO?",
+      "revId": "a50f898d1b4126ff1e091c2aa7cba59bc83a86d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
