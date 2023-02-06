@@ -33,6 +33,23 @@
       "message": "it looks good, but just a question: we have some other places in the code where this check-resource common role is called for MCP check, do we also need to do this in these places too? or just for PAO?",
       "revId": "a50f898d1b4126ff1e091c2aa7cba59bc83a86d7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa26af3f_0725404b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-06T13:13:46Z",
+      "side": 1,
+      "message": "I wanted to see the patch in action but it run on cluster1 and there are 4 workers on cluster1 so:\nNB_of_retries\u003d (4+1)*12 \u003d 60 so we don\u0027t really see the difference but that\u0027s working for me",
+      "revId": "a50f898d1b4126ff1e091c2aa7cba59bc83a86d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
