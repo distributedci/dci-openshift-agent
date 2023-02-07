@@ -16,6 +16,23 @@
       "message": "Thanks, Looks good to me, I\u0027ll just wait for the dallas job to add +2",
       "revId": "8baf25d30a843c6a2816f00cfa3dd6a03e169985",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11d01817_42b41f35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-07T21:37:42Z",
+      "side": 1,
+      "message": "LGTM!",
+      "revId": "8baf25d30a843c6a2816f00cfa3dd6a03e169985",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
