@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67e2ae68_c8e5c179",
+        "filename": "docs/a-i.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-02-09T17:25:22Z",
+      "side": 1,
+      "message": "are these case sensitive? may be important to document here either way",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6af41299_1b0ce1c2",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-02-09T17:25:22Z",
+      "side": 1,
+      "message": "is patch_cluster a noop for non-pxe install? there is no when clause here",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35193b5c_10520d55",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 435,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-02-09T17:25:22Z",
+      "side": 1,
+      "message": "if these two make the same kinda check, put them in a loop e.g. [\"8090/ready\", \"8888/health\"]",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
