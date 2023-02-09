@@ -1,4 +1,14 @@
 ---
+
+- name: "Fail when no acm_user_registry is defined"
+  fail:
+    msg:
+      - "registry.conf entries mandatory for disconnected deployments"
+      - "Please review the role documentation for an example of how to define the acm_user_registry parameter"
+  when:
+    - acm_user_registry is undefined
+    - acm_disconnected | bool
+
 - name: "Check if the ACM CRD is present"
   community.kubernetes.k8s_info:
     kind: CustomResourceDefinition

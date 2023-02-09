@@ -10,9 +10,9 @@
 
 - name: "Fail if a cluster namespace already exists"
   fail:
-   msg:
-     - "A namespace for the specified cluster name {{ acm_cluster_name }} already exist"
-     - "Set acm_force_deploy:true to delete it"
+    msg:
+      - "A namespace for the specified cluster name {{ acm_cluster_name }} already exist"
+      - "Set acm_force_deploy:true to delete it"
   when:
    - acm_cluster_ns.resources | length == 1
    - not acm_force_deploy | bool
