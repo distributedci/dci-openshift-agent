@@ -51,7 +51,7 @@ This role only been tested in x86_64 architectures.
 |acm_fs_volume_size                      |50Gi                           |No           | This value specifies how much storage is allocated for storing logs, manifests, and kubeconfig files for the clusters. You might need to use a higher value if there are many clusters|
 |acm_img_volume_size                     |40Gi                           |No           | This value specifies how much storage is allocated for the images of the clusters. You need to allow 1 GB of image storage for each instance of Red Hat Enterprise Linux CoreOS that is running. You might need to use a higher value if there are many clusters and instances of Red Hat Enterprise Linux CoreOS|
 |acm_user_bundle                         |Undefined                      |No           |CA certificate to be injected to spoke nodes. Requires `acm_disconnected` set to true |
-|acm_user_registry                       |Undefined                      |No           |registries.conf file to be injected to the spoke nodes. Requires `acm_disconnected` set to true                |
+|acm_user_registry                       |Undefined                      |Yes, for disconnected environments |registries.conf file to be injected to the spoke nodes.|
 
 *Important:* The values defined for the `acm_ocp_version` must match with the images provided for `acm_iso_url` and `acm_root_fs_url` variables.
 
