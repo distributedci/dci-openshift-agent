@@ -18,4 +18,10 @@
     pullsecret: "{{ hostvars.localhost.pullsecret | to_json }}"
   no_log: true
 
+- name: "Set OCP short version"
+  vars:
+    ocp_major: "{{ version.split('.')[0] }}"
+    ocp_minor: "{{ version.split('.')[1] }}"
+  set_fact:
+    short_version: "{{ version.split('.')[:2] | join('.') }}"
 ...

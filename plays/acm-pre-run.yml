@@ -46,7 +46,7 @@
         mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
         mor_webserver_url: "{{ hub_webserver_url | default(None) }}"
         mor_registry_url: "{{ hub_registry | urlsplit('netloc') }}"
-        mor_registry_path: "{{ (hub_registry | urlsplit('path'))[1:] | default('ocp4/openshift4', true) }}"
+        mor_registry_path: "{{ (hub_registry | urlsplit('path'))[1:] | default('ocp-'+short_version+'/'+version, true) }}"
         mor_auths_file: "{{ dci_pullsecret_file }}"
         mor_force: false
         mor_install_type: "{{ install_type }}"
@@ -60,7 +60,7 @@
       set_fact:
         acm_metal_iso_location: "{{ hub_webserver }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
         acm_rootfs_url: "{{ hub_webserver }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
-        acm_release_image: "{{ hub_registry | urlsplit('netloc') }}{{ hub_registry | urlsplit('path') | default('/ocp4/openshift4', true) }}:{{ version }}"
+        acm_release_image: "{{ hub_registry | urlsplit('netloc') }}{{ hub_registry | urlsplit('path') | default('ocp-'+short_version+'/'+version, true) }}:{{ version }}"
         dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
   when:
     - dci_disconnected | default(false) | bool
