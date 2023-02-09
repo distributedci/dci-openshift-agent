@@ -328,7 +328,7 @@ dnsvip=1.2.3.4
 #local_registry_host=local-registry
 # Registry port
 #local_registry_port=4443
-# Registry namespace
+# Registry namespace. if undefined, target path will be set by the mirror-ocp-role as "<version-core>/<version>"
 #local_repo=ocp4/openshift4
 
 # Master nodes
