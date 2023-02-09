@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f5037564_78903d02",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-02-09T18:30:52Z",
+      "side": 1,
+      "message": "no, this is for every install.  If you look at the log they took the patch code out of the create cluster role.  This was so they could re-use in the day2 playbooks.",
+      "parentUuid": "6af41299_1b0ce1c2",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "35193b5c_10520d55",
         "filename": "plays/assisted-pre-run.yml",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "writtenOn": "2023-02-09T17:25:22Z",
       "side": 1,
       "message": "if these two make the same kinda check, put them in a loop e.g. [\"8090/ready\", \"8888/health\"]",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f77537a3_687558af",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 435,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-02-09T18:30:52Z",
+      "side": 1,
+      "message": "Sounds like a fun nested loop in ansible.  I simply took what was already done in crucible here.  I\u0027m not confident enough in how ansible works to change it to a nested loop.  If you feel strongly feel free to provide a patch 😊",
+      "parentUuid": "35193b5c_10520d55",
       "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
