@@ -29,8 +29,9 @@
       {%- else %}
       {{ registry_encoded | urldecode }}
       {%- endif %}
+      {{ registry_encoded | urldecode }}
   set_fact:
-    acm_registry_conf: "{{ acm_user_registry | default(registry_decoded) }}"
+    acm_registry_conf: "{{ registry_decoded }}"
 
 - name: "Get cluster user-ca cert if exists"
   community.kubernetes.k8s_info:
