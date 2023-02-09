@@ -18,7 +18,7 @@ If enabled, the role requires an container registry to mirror the OCP container 
 | mor_write_custom_config      | true          | No          | Writes the OCP configuration files and sets the custom URL facts                                                             |
 | mor_webserver_url            | undefined     | Yes         | URL of the web server where the installation artifact are stored|
 | mor_registry_url             | undefined     | No*         | Required if `mor_mirror_container_images` is True. Registry where to mirror the upstream container images to                    |
-| mor_registry_path            | ocp4/openshift4 | No         | Path in registry where the the release images will be stored  |
+| mor_registry_path            | <version_core>/<full_version>    | No         | Path in registry where the the release images will be stored  |
 | mor_build                    | undefined     | Yes         | Build type (nightly, ga, dev, rc)  |
 | mor_oc                       | undefined     | Yes         | Path to the oc binary (stable is recommended). |
 

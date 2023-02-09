@@ -2,19 +2,20 @@
 
 - name: "Deploy an SNO node via ACM"
   vars:
-    acm_ocp_version: "{{ hostvars.localhost.version }}"
-    acm_release_image: "{{ hostvars.localhost.acm_release_image }}"
-    acm_force_deploy: "{{ hostvars.localhost.acm_force_deploy }}"
-    cluster_name: "{{ hostvars.localhost.acm_cluster_name }}"
-    base_domain: "{{ hostvars.localhost.acm_base_domain }}"
-    bmc_address: "{{ hostvars.localhost.acm_bmc_address }}"
-    boot_mac_address: "{{ hostvars.localhost.acm_boot_mac_address }}"
-    machine_cidr: "{{ hostvars.localhost.acm_machine_cidr }}"
-    bmc_user: "{{ hostvars.localhost.acm_bmc_user }}"
-    bmc_pass: "{{ hostvars.localhost.acm_bmc_pass }}"
-    acm_iso_url: "{{ hostvars.localhost.acm_metal_iso_location }}"
-    acm_root_fs_url: "{{ hostvars.localhost.acm_rootfs_url }}"
+    acm_ocp_version: "{{version }}"
+    acm_release_image: "{{ acm_release_image }}"
+    acm_force_deploy: "{{ acm_force_deploy }}"
+    cluster_name: "{{ acm_cluster_name }}"
+    base_domain: "{{ acm_base_domain }}"
+    bmc_address: "{{ acm_bmc_address }}"
+    boot_mac_address: "{{ acm_boot_mac_address }}"
+    machine_cidr: "{{ acm_machine_cidr }}"
+    bmc_user: "{{ acm_bmc_user }}"
+    bmc_pass: "{{ acm_bmc_pass }}"
+    acm_iso_url: "{{ acm_metal_iso_location }}"
+    acm_root_fs_url: "{{ acm_rootfs_url }}"
     acm_disconnected: "{{ dci_disconnected | default(False) | bool }}"
+    acm_user_registry: "{{ acm_registries }}"
   include_role:
     name: acm-sno
     apply:
