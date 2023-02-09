@@ -16,6 +16,24 @@
       "message": "Hi Bill, I believe this should be tested with assisted hint",
       "revId": "74a1ca94e69dc5e39413a6012bb8afd8b53bfd02",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f367568_33b099af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-02-09T13:29:09Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b2094b43_d5085686",
+      "revId": "74a1ca94e69dc5e39413a6012bb8afd8b53bfd02",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
