@@ -16,6 +16,24 @@
       "message": "Hi Beto, seems like a misprint in the vars:\n\n-e dci_teardown_on_success:false\n\n--\u003e\n\n-e dci_teardown_on_success\u003dfalse",
       "revId": "cf1547fb36a8dfd3281f545730d6d76413674455",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c5bf620_0b5696e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-10T18:15:47Z",
+      "side": 1,
+      "message": "Thanks Tatiana, cheers!",
+      "parentUuid": "928ba460_474db52e",
+      "revId": "cf1547fb36a8dfd3281f545730d6d76413674455",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
