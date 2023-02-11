@@ -33,6 +33,24 @@
       "message": "Interesting, I guess the cluster management plugin is installed by default? I\u0027m wondering if it\u0027s possible to not install it and do everything from the cli. ",
       "revId": "fb5d952e9aec86be97a9475b80705721d35dc5b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1c99e9f_ce570a72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-11T17:57:38Z",
+      "side": 1,
+      "message": "Yeah, that is the Openshift console installed by default. There you can see the actual cluster and if ACM is installed will allow you to manage the spoke instances. \n\nNot sure if that can be removed.\n\nThanks",
+      "parentUuid": "18f5da63_a5b15a02",
+      "revId": "fb5d952e9aec86be97a9475b80705721d35dc5b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
