@@ -33,6 +33,23 @@
       "message": "LGTM, thanks",
       "revId": "6c903c3732b3b6aab423c8b0d11585c9952e1d3b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c8e35b4_a2215832",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-13T16:09:53Z",
+      "side": 1,
+      "message": "I am a bit confused here:\nwhen checking the logs, one node was not in SchedulingDisable mode but when I was looking the logs on the cluster, it was resolved.\nIt seems to come from a new RenderedConfigGenerated that is applying at the end of the upgrade (but why?)\nIncreasing (again) the timeout should do the trick but I have the feeling that it is hiding a problem with the upgrade. What do you think? ",
+      "revId": "6c903c3732b3b6aab423c8b0d11585c9952e1d3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
