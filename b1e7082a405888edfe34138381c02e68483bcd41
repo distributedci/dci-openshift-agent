@@ -71,6 +71,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "05f8bff7_226bf787",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-13T23:42:02Z",
+      "side": 1,
+      "message": "Hello Nacho, I have been doing some testing regarding this.\n\nI think that during the upgrade, we should be doing something similar to what you are proposing on the installation. That is, use the subscription information as a source of truth to get the target CSV.\n\nOLM is the expert in calculating the upgrade paths, and in some cases that require using a different catalog source. If we do not want that behavior it would be better not to have catalogs available that will introduce some noise or unexpected upgrade paths. Our test environment should be \"controlled\".\n\nIf there is an upgrade available, OLM will calculate the target CSV and that will be available in the details of the sub: \n\n\n- An update to a new channel makes available a new upgrade. As the subs is set to manual, we can see the difference between the current and installed CSV, also the state indicates that there is an upgrade pending:\n\n$ oc describe subs -n open-cluster-management advanced-cluster-management |egrep \u0027Installed CSV|Current CSV|State:\u0027\n  Current CSV:              advanced-cluster-management.v2.7.0\n  Installed CSV:       advanced-cluster-management.v2.6.3\n  State:          UpgradePending\n\n\n- Once the IP is approved:\n$ oc describe subs -n open-cluster-management advanced-cluster-management |egrep \u0027Installed CSV|Current CSV|State:\u0027\n  Current CSV:              advanced-cluster-management.v2.7.0\n  Installed CSV:       advanced-cluster-management.v2.7.0\n  State:          AtLatestKnown\n\nThe current and installed CSVs match. The CSV should be marked as successful.\n\nI think we can use that information to monitor the CSV until it has been fully upgraded. \n\n\nPlease let me know if you have any questions or want me to work on the implementation. \n\nCheers\n",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0e56120b_2f96f21c",
         "filename": "common-roles/olm-operator/tasks/main.yml",
         "patchSetId": 8
