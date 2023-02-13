@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92273759_797ca394",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-13T14:19:25Z",
+      "side": 1,
+      "message": "LGTM, Charles. If you have a job that fails again in this part, please add the URL to see if there is something else. ",
+      "revId": "6c903c3732b3b6aab423c8b0d11585c9952e1d3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
