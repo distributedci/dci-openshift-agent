@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e0472c2_ea6ce418",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-13T20:04:41Z",
+      "side": 1,
+      "message": "There\u0027s no need to add these type of comments in the commit msg, they belong into gerrit/github instead",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b75aafa_8b7fb6d8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-13T20:04:41Z",
+      "side": 1,
+      "message": "If you have corrections between iterations, there\u0027s no need to add them in here either, they also belong in gerrit/github history",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b666633_c31d993a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-13T20:04:41Z",
+      "side": 1,
+      "message": "This is not needed, you have the right dependency already in the referenced PR",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd8b0cc0_770f1c0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-13T20:04:41Z",
+      "side": 1,
+      "message": "Thanks Nacho, let\u0027s make sure this is tested in connected, disconnected and upgrades. ",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e56120b_2f96f21c",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-13T20:04:41Z",
+      "side": 1,
+      "message": "What would you like to see in such cases?\n\nIn cases where there are multiple packages provided by different catalogs, let\u0027s use the catalog provided to make that distinction, the catalog can be filtered by label, e.g. \n\n     label_selectors:\n       - \"catalog \u003d {{ source }}\"\n\nwdyt?",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5b4cea5_a57dd2d4",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-13T20:04:41Z",
+      "side": 1,
+      "message": "Please remove these commented tasks if the ones above are replacing them, if this is a wip change you can set it in the UI above",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
