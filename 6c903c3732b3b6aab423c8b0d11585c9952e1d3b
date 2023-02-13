@@ -50,6 +50,23 @@
       "message": "I am a bit confused here:\nwhen checking the logs, one node was not in SchedulingDisable mode but when I was looking the logs on the cluster, it was resolved.\nIt seems to come from a new RenderedConfigGenerated that is applying at the end of the upgrade (but why?)\nIncreasing (again) the timeout should do the trick but I have the feeling that it is hiding a problem with the upgrade. What do you think? ",
       "revId": "6c903c3732b3b6aab423c8b0d11585c9952e1d3b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6f26d84_149b9c27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-13T22:49:56Z",
+      "side": 1,
+      "message": "Hello Charles, you are right, \n\nThe cluster is still applying changes by the time we declared it as Complete. I was taking a look to this and seems like we need to add some extra validations before declaring that the upgrade is done.\n\n- We need to check the machine-config operator to validata the the most recent transition do not have \"PoolUpdating\" as reason\noc get clusteroperator machine-config -o json | jq \u0027.status.conditions[]\u0027\n\n- Also, it will be good to check that the cluster operators are all \"Available\" instead of just \"degraded\"\n\nThe MCPs were still pending to be applied on 3 workers seem to be related to hugepages reconfiguration.\n\nI added some of the findings here: http://pastebin.test.redhat.com/1091608\n\nThanks!",
+      "revId": "6c903c3732b3b6aab423c8b0d11585c9952e1d3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
