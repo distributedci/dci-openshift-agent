@@ -71,6 +71,9 @@ ocs_operator:
   - ocs-operator
 odf_operator:
   - odf-operator
+  - mcg-operator
+  - ocs-operator
+  - odf-csi-addons-operator
 local_storage_operator:
   - local-storage-operator
 cnf_operators:
