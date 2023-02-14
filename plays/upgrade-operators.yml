@@ -1,4 +1,18 @@
 ---
+- name: "upgrader : Update disconnected catalogSources"
+  import_role:
+    name: catalog-source
+  vars:
+    cs_name: "{{ opm_catalog_source_name }}"
+    cs_namespace: "{{ opm_catalog_source_namespace }}"
+    cs_image: "{{ dci_local_registry }}{{ opm_local_registry_path }}:{{ index_tag }}"
+  when:
+  - dci_disconnected | default(false) | bool
+  - update_catalog_channel | default(true) | bool
+  - mirror_list is defined
+  - mirror_list | length
+  - index_tag is defined
+
 - name: "Get current subscriptions"
   community.kubernetes.k8s_info:
     api: operators.coreos.com/v1alpha1
@@ -14,6 +28,8 @@
         operatorName: spec.name,
         namespace: metadata.namespace,
         installedCSV: status.installedCSV,
+        currentCSV: status.currentCSV,
+        catalogSource: spec.source,
         installPlanApproval: spec.installPlanApproval
       }
   set_fact:
@@ -28,6 +44,12 @@
   when:
     - operator_skip_upgrade | default([]) | length
 
+- name: "Remove from the list of subscription the ones that do not show and upgraded CSV"
+  set_fact:
+    subscriptions: "{{ subscriptions | json_query(updated_csv) }}"
+  vars:
+    updated_csv: "[?currentCSV != installedCSV]"
+
 - name: "Change install plans to manual"
   community.kubernetes.k8s:
     definition:
@@ -35,7 +57,7 @@
       kind: Subscription
       metadata:
         name: "{{ sub.subcriptionName }}"
-        namespace:  "{{ sub.namespace }}"
+        namespace: "{{ sub.namespace }}"
       spec:
         name: "{{ sub.operatorName }}"
         installPlanApproval: "Manual"
@@ -43,20 +65,6 @@
   loop_control:
     loop_var: sub
     label: "{{ sub.subcriptionName }}"
-
-- name: "upgrader : Update disconnected catalogSources"
-  import_role:
-    name: catalog-source
-  vars:
-    cs_name: "{{ opm_catalog_source_name }}"
-    cs_namespace: "{{ opm_catalog_source_namespace }}"
-    cs_image: "{{ dci_local_registry }}{{ opm_local_registry_path }}:{{ index_tag }}"
-  when:
-  - dci_disconnected | default(false) | bool
-  - update_catalog_channel | default(true) | bool
-  - mirror_list is defined
-  - mirror_list | length
-  - index_tag is defined
 
 - name: "Upgrade-operators : Upgrade installed operators"
   include_tasks: upgrade-csv.yml
