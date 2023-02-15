@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "75642e3c_37dd32a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-15T19:50:00Z",
+      "side": 1,
+      "message": "After testing and talking with Nacho, it was found that removing operators from the list before checking for a new latest channel will remove the possibility of triggering an upgrade on that specific case.\n\nSo abandoning this.",
+      "revId": "018bb6580479e8458a3565f4595c112db4a1dd58",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1037e90f_9ab4016e",
@@ -31,6 +48,24 @@
       "writtenOn": "2023-02-15T15:00:03Z",
       "side": 1,
       "message": "I have a doubt here.\n\nIn the upgrade-csv file, when we retrieve the currentCSV from the package manifest, we allowed the task to retry for 50 seconds:\n\n```\n- name: \"Get updated package manifest\"\n  community.kubernetes.k8s_info:\n    api: packages.operators.coreos.com/v1\n    kind: PackageManifest\n    name: \"{{ sub.operatorName }}\"\n    namespace:  default\n  register: packagemanifest\n  retries: 10\n  delay: 5\n```\n\nI took this was because the package manifest and the currentCSV value could take a few moments to get updated.\n\nThe change you\u0027re proposing will retrieve the currentCSV must sooner than we used to.\n\nAre we sure the new currentCSV will be available at this point?",
+      "revId": "018bb6580479e8458a3565f4595c112db4a1dd58",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4f2d754_3a8fd96c",
+        "filename": "plays/upgrade-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-15T19:50:00Z",
+      "side": 1,
+      "message": "yes, I in cases were we apply a new catalog the role has enough wait time to generate the Install plans in case there are updates.",
+      "parentUuid": "1037e90f_9ab4016e",
       "revId": "018bb6580479e8458a3565f4595c112db4a1dd58",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
