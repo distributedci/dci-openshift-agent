@@ -50,6 +50,23 @@
       "message": "Hi Beto, I restarted the job with `example-cnf` at the very end in a hope to fix the parsing error in the zuul vote. ",
       "revId": "7b47d0625fb571be2cc2e3e3bf5ab1843ad01b72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36cd7b7d_3f06de3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-15T14:00:12Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "7b47d0625fb571be2cc2e3e3bf5ab1843ad01b72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
