@@ -84,6 +84,42 @@
       "message": "🎉",
       "revId": "7b47d0625fb571be2cc2e3e3bf5ab1843ad01b72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d21f373d_427c1d67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-15T16:29:22Z",
+      "side": 1,
+      "message": "Thanks, much appreciated it",
+      "parentUuid": "16348a15_20e07817",
+      "revId": "7b47d0625fb571be2cc2e3e3bf5ab1843ad01b72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99c0d1fe_f57aa93a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-15T16:29:22Z",
+      "side": 1,
+      "message": "Hello Tatiana, \n\nYes, deploying the operators is just a matter of creating the subscription and waiting for the CSV.\n\nThe real magic (and where all the resources are needed) y during the storage cluster creation.",
+      "parentUuid": "c860645f_362b71ca",
+      "revId": "7b47d0625fb571be2cc2e3e3bf5ab1843ad01b72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
