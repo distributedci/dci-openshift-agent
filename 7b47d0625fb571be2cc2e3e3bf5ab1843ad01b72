@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c860645f_362b71ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-15T10:33:58Z",
+      "side": 1,
+      "message": "Hi Beto, just to understand - will all the operators be properly deployed without the configured storage that they seem to require?  ",
+      "revId": "7b47d0625fb571be2cc2e3e3bf5ab1843ad01b72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
