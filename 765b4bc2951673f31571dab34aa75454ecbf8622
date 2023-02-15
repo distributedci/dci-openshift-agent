@@ -84,6 +84,24 @@
       "message": "oh I see where the problem is, I think using openshift_vanilla or openshift-vanilla does not make any difference, the last job in dallas shows this task was executed: [Add operators if enable_odf] but I see the task [Install ODF Operator] skipped, and from this line[1] looks like we need to pass enable_ocs\u003dtrue to enter the block, then it will validate if enable_odf is true to install the operator, so maybe something we can improve, \n\n[1]https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/deploy-operators.yml#L233\n\ncheck dallas ocp-4.9-vanilla openshift-vanilla:ansible_extravars\u003denable_odf:true openshift-vanilla:ansible_extravars\u003denable_ocs:true",
       "revId": "765b4bc2951673f31571dab34aa75454ecbf8622",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "552b1af7_b027ce87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-15T04:26:34Z",
+      "side": 1,
+      "message": "Yeah, it makes a difference. It was not working, so I ran it from the jumphost. Thanks for pointing out the typo. 😊\n\nI am introducing a new variable to request that the storage cluster is configured. Let\u0027s see how it behaves. \n\nUnfortunately, we cannot test the cluster creation in Dallas because the nodes do not have the proper storage configured. So we just need to confirm that the proper operators are deployed.",
+      "parentUuid": "a8ee7a06_0f87834a",
+      "revId": "765b4bc2951673f31571dab34aa75454ecbf8622",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
