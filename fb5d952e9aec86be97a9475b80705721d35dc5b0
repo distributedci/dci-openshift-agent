@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abeb1329_9612e646",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-02-15T15:00:03Z",
+      "side": 0,
+      "message": "Bear in mind that, since this change filters out in advance the operators not needing upgrading, this block\u0027s \"when\" clause may be removed.",
+      "revId": "fb5d952e9aec86be97a9475b80705721d35dc5b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
