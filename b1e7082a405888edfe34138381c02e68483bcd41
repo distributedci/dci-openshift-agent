@@ -88,6 +88,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0b910192_d9a9fe4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-15T19:34:45Z",
+      "side": 1,
+      "message": "See my comment in the install\n\nPlease mark as done those comments that have been addressed, I\u0027ve marked some in here.",
+      "parentUuid": "05f8bff7_226bf787",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0e56120b_2f96f21c",
         "filename": "common-roles/olm-operator/tasks/main.yml",
         "patchSetId": 8
@@ -105,6 +123,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "28305b84_87ed2d84",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-15T19:34:45Z",
+      "side": 1,
+      "message": "I think you still need to use the catalog in the packagemanifest, otherwise when you have multiple catalogs offering the same package to *install*, the desired_channel won\u0027t be possible to calculate",
+      "parentUuid": "0e56120b_2f96f21c",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5b4cea5_a57dd2d4",
         "filename": "common-roles/olm-operator/tasks/main.yml",
         "patchSetId": 8
@@ -116,6 +152,24 @@
       "writtenOn": "2023-02-13T20:04:41Z",
       "side": 1,
       "message": "Please remove these commented tasks if the ones above are replacing them, if this is a wip change you can set it in the UI above",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15987362_e6c58341",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-15T19:34:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d5b4cea5_a57dd2d4",
       "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
