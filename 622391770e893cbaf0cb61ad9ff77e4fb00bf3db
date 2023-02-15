@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c51a54fb_8cdbac02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-02-15T09:12:07Z",
+      "side": 1,
+      "message": "Hi Tony and Beto,\n\nThanks for all your comments. They\u0027re much appreciated.\n\nSo, for what I see, both using subscription.status.currentCSV and using label selectors to match the right package manifest applying to the installed operator would result in the same (correct) currentCSV value.\n\nI find using the subscription a more straight method, but I\u0027d like to hear your insights.\n\nIn any case, please Beto, check that my last change implements the solution as you thought of it.",
+      "revId": "622391770e893cbaf0cb61ad9ff77e4fb00bf3db",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
