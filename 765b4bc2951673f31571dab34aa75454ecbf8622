@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "765b4bc2951673f31571dab34aa75454ecbf8622",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4dbe402_117a4f7a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-15T02:07:52Z",
+      "side": 1,
+      "message": "looks promising, just minor typo when running the job in Dallas :)\n\ncheck dallas ocp-4.9-vanilla openshift-vanilla:ansible_extravars\u003denable_odf:true",
+      "revId": "765b4bc2951673f31571dab34aa75454ecbf8622",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
