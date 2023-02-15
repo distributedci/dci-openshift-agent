@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41c9fa41_60a21e7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-15T04:35:11Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla openshift-vanilla:ansible_extravars\u003denable_odf:true openshift-vanilla:ansible_extravars\u003denable_ocs:true",
+      "revId": "4630667b34c4c4098fac5b30e074c170c2be8fd7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
