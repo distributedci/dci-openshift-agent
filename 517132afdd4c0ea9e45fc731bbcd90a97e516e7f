@@ -89,6 +89,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8efb7101_56d4d147",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-16T16:23:06Z",
+      "side": 1,
+      "message": "Good point, maybe we could simply reuse the custom PCI passthrough as a piece of config. Going to add the possibility to do it.",
+      "parentUuid": "1df1b8da_5d366154",
+      "revId": "517132afdd4c0ea9e45fc731bbcd90a97e516e7f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a62891f_e1df32bd",
         "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
         "patchSetId": 1
