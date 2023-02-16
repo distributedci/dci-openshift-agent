@@ -104,6 +104,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "41152cdb_c977ef8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-02-16T14:16:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0b910192_d9a9fe4e",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e56120b_2f96f21c",
@@ -135,6 +153,24 @@
       "side": 1,
       "message": "I think you still need to use the catalog in the packagemanifest, otherwise when you have multiple catalogs offering the same package to *install*, the desired_channel won\u0027t be possible to calculate",
       "parentUuid": "0e56120b_2f96f21c",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f93c043_a1d5b0f5",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-02-16T14:16:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "28305b84_87ed2d84",
       "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
