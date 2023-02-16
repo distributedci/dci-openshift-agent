@@ -1,11 +1,20 @@
 ---
-- name: "Check if registry has already been mirrored"
-  stat:
-    path: "{{ mor_cache_dir }}/{{ mor_version }}/container_images.done"
-    get_checksum: false
-  register: container_images_done
-  when:
-    - not mor_force # we don't care to stat files if we're forcing
+- name: "Check if the release image pullable from the local registry"
+  containers.podman.podman_image:
+    name: "{{ mor_registry_url }}/{{ mor_registry_path }}"
+    tag: "{{ mor_version }}"
+    auth_file: "{{ mor_auths_file }}"
+    pull: yes
+    force: true
+  register: pull_release_image
+  ignore_errors: true
+
+- name: "Remove local release image"
+  containers.podman.podman_image:
+    name: "{{ mor_registry_url }}/{{ mor_registry_path }}"
+    tag: "{{ mor_version }}"
+    state: absent
+    force: true
 
 - name: "Mirror release images to local registry"
   command: >
@@ -19,7 +28,8 @@
   register: result
   until: result.rc == 0
   when:
-    - mor_force or not container_images_done.stat.exists
+    - mor_force | bool or
+      "'Failed' in pull_release_image.msg"
 
 - name: Generate ImageContentSourcePolicy
   shell: >
@@ -29,7 +39,8 @@
     sed -e 's/name:.*/name: release-{{ version }}/'
   register: icsp_release
   when:
-    - mor_force or not container_images_done.stat.exists
+    - mor_force | bool or
+      "'Failed' in pull_release_image.msg"
 
 - name: "Write mirrored image content source policy"
   copy:
@@ -41,11 +52,6 @@
     content: "{{ icsp_release.stdout }}"
   become: true
   when:
-    - mor_force or not container_images_done.stat.exists
-
-- name: "Marker for container images mirrored"
-  file:
-    dest: "{{ mor_cache_dir }}/{{ mor_version }}/container_images.done"
-    state: touch
-    mode: "0644"
+    - mor_force | bool or
+      "'Failed' in pull_release_image.msg"
 ...
