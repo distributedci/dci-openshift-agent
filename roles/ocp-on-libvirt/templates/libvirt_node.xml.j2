@@ -105,8 +105,19 @@
     <graphics type='vnc' port='-1' autoport='yes' listen='127.0.0.1' keymap='en-us'>
       <listen type='address' address='127.0.0.1'/>
     </graphics>
+{% if host['enable_pci_passthrough'] | default(false) | bool %}
+    <hostdev mode='subsystem' type='pci' managed='yes'>
+      <driver name='vfio'/>
+      <source>
+        <address domain='0x0000' bus='0x86' slot='0x00' function='0x0'/>
+      </source>
+      <alias name='hostdev0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x0d' function='0x0'/>
+    </hostdev>
+{% else %}
     <video>
       <model type='cirrus' vram='16384' heads='1'/>
     </video>
+{% endif %}
   </devices>
 </domain>
