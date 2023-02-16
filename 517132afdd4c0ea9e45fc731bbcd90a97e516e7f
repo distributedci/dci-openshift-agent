@@ -52,6 +52,41 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf0efef1_bd2eeae7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-16T16:19:36Z",
+      "side": 1,
+      "message": "\u003e It looks quite harmless to me if we don\u0027t enable the passthrough variable, right?\n\nyes, should be harmless, the default behavior hasn\u0027t changed.\n\n\u003e Assuming the libvirt tests pass, do you reckon there are any other tests that we should run to validate this change?\nThe idea is to test at partner\u0027s lab because it\u0027s difficult to replicate their setup in Dallas.",
+      "parentUuid": "88dd554e_7a0abd2d",
+      "revId": "517132afdd4c0ea9e45fc731bbcd90a97e516e7f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4833bc7_ff755522",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-16T16:19:36Z",
+      "side": 1,
+      "message": "Hi Nacho, added the motivation about video disabling and testing strategy.",
+      "revId": "517132afdd4c0ea9e45fc731bbcd90a97e516e7f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8a62891f_e1df32bd",
@@ -83,6 +118,24 @@
       "side": 1,
       "message": "It causes conflicts when rebooting the node, we commneted this on CILAB-990",
       "parentUuid": "8a62891f_e1df32bd",
+      "revId": "517132afdd4c0ea9e45fc731bbcd90a97e516e7f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "592795d6_582c213d",
+        "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-16T16:19:36Z",
+      "side": 1,
+      "message": "Here is the whole story.\n \nFirst, we only added the VFIO driver for the PCI passthrough, but the workers didn\u0027t boot back. Then, we found an internet article that explained that the VFIO driver is often used for GPU passthrough and proposed disabling the video settings to avoid potential conflicts. We tried this and it worked, the workers booted back.",
+      "parentUuid": "8b674993_95efbd51",
       "revId": "517132afdd4c0ea9e45fc731bbcd90a97e516e7f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
