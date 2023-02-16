@@ -16,6 +16,23 @@
       "message": "Ideally, I would like to merge and test directly in the partner\u0027s lab where they have a network card configured to meet the requirements of their application.",
       "revId": "517132afdd4c0ea9e45fc731bbcd90a97e516e7f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1df1b8da_5d366154",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-16T14:48:39Z",
+      "side": 1,
+      "message": "I\u0027m not sure that the values included in the template are general (domain, bus, slot and function attributes, mainly). I think we should provide them as inventory variables and then setting them up here in the template",
+      "revId": "517132afdd4c0ea9e45fc731bbcd90a97e516e7f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
