@@ -16,6 +16,23 @@
       "message": "This change was mainly affecting acm-sno installations. Because the Hub ICSP may be different to the ones required for the target cluster.\n\nIn this change the ICSP for the release mirror (registry.conf) are mandatory and appended to the ones obtained from the hub.\n\nWe obtain the ICSP during the ocp release mirroring",
       "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55ed6a21_f010612e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-17T06:34:28Z",
+      "side": 1,
+      "message": "See and example of how the release images will be shown in the new organizations: \n\nhttps://registry.dfwt5g.lab:4443/organization/ocp-4.10\n\n",
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
