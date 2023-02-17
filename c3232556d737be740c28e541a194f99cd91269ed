@@ -16,6 +16,23 @@
       "message": "Testing on a reserved cluster using: (dci-pipeline-check 27493 ocp-4.13-vanilla openshift-vanilla:ansible_tags\u003djob,dci,pre-run,success openshift-vanilla:ansible_extravars\u003dmor_force:true) - force_mirror and image not already mirrored\n- https://www.distributed-ci.io/jobs/0c03aee1-7040-4e6f-a1be-329eafdfcf08/jobStates?sort\u003ddate\u0026task\u003d9ba51274-9fe7-4cb5-9d3c-918da60f1543\n\nTesting on reserved cluster: (dci-pipeline-check 27493 ocp-4.13-vanilla openshift-vanilla:ansible_tags\u003djob,dci,pre-run,success) - image already available\n- https://www.distributed-ci.io/jobs/344f8f98-ed22-4194-b536-3706ca8f156d/jobStates?sort\u003ddate\u0026task\u003d6235cfc2-f331-4710-a029-eb17b1fdfec9",
       "revId": "c3232556d737be740c28e541a194f99cd91269ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37fc84d4_ded11fc1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-17T06:18:48Z",
+      "side": 1,
+      "message": "When the image is not mirrored: https://www.distributed-ci.io/jobs/006d1207-1864-4fab-a1d0-8c971d7dac86/jobStates?sort\u003ddate\u0026task\u003daa743238-663a-4e4f-a227-d1ccc681878e",
+      "revId": "c3232556d737be740c28e541a194f99cd91269ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
