@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "818ebe9e_2eb4a13e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:13:55Z",
+      "side": 1,
+      "message": "Hi Tony, I\u0027ve seen something that you may need to fix",
+      "revId": "e8de8122bca2f35b852b39fb136416df437af86b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb5c04aa_1eb4eb90",
+        "filename": "common-roles/mirror_images/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:13:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 9
+      },
+      "revId": "e8de8122bca2f35b852b39fb136416df437af86b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fd60877_12545af1",
+        "filename": "common-roles/mirror_images/tasks/mirror-images.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:13:55Z",
+      "side": 1,
+      "message": "mi_dest_authfile?",
+      "range": {
+        "startLine": 35,
+        "startChar": 14,
+        "endLine": 35,
+        "endChar": 27
+      },
+      "revId": "e8de8122bca2f35b852b39fb136416df437af86b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
