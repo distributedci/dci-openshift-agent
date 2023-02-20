@@ -101,6 +101,24 @@
       "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_tags\u003djob,dci,pre-run,success",
       "revId": "c3232556d737be740c28e541a194f99cd91269ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0f365d1_221407dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-20T20:31:56Z",
+      "side": 1,
+      "message": "Sure, \nIn this change I manually removed the release image from the registry: https://www.distributed-ci.io/jobs/14b5eee0-96de-4a6c-8399-3197d544f36f/jobStates?sort\u003ddate\u0026task\u003d6e5a2506-53c8-41a5-92b2-09e333e5371c\n\nThanks",
+      "parentUuid": "5aedd9e3_aadd5537",
+      "revId": "c3232556d737be740c28e541a194f99cd91269ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
