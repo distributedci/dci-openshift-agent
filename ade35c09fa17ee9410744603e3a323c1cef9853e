@@ -33,6 +33,92 @@
       "message": "See and example of how the release images will be shown in the new organizations: \n\nhttps://registry.dfwt5g.lab:4443/organization/ocp-4.10\n\n",
       "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1907046e_86e0bc9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:09:17Z",
+      "side": 1,
+      "message": "Thanks Beto for the change! some comments from my side",
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a427a2cd_6ca598a8",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:09:17Z",
+      "side": 1,
+      "message": "are these variables already updated in acm-sno role? how were we using them before this patchset?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 57
+      },
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b0e1a98_8ffeb54c",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:09:17Z",
+      "side": 1,
+      "message": "whitespaces",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 67,
+        "endChar": 14
+      },
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e75a17e7_a2245f9d",
+        "filename": "roles/acm-sno/tasks/acm-pull-data.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:09:17Z",
+      "side": 1,
+      "message": "could it happen that this info is duplicated? is it expected?",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 40
+      },
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
