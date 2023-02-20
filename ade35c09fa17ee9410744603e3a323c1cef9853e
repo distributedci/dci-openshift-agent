@@ -75,6 +75,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2e362ef_d90a9d42",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-20T19:36:36Z",
+      "side": 1,
+      "message": "yeah, those are the actual role variable names, during the role call we were passing variables that were not actually used and it was working with what was defined at in the inventory.",
+      "parentUuid": "a427a2cd_6ca598a8",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 57
+      },
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b0e1a98_8ffeb54c",
@@ -98,6 +122,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "742c137e_c0e794ee",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-20T19:36:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b0e1a98_8ffeb54c",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 67,
+        "endChar": 14
+      },
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e75a17e7_a2245f9d",
@@ -111,6 +159,30 @@
       "writtenOn": "2023-02-20T08:09:17Z",
       "side": 1,
       "message": "could it happen that this info is duplicated? is it expected?",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 40
+      },
+      "revId": "ade35c09fa17ee9410744603e3a323c1cef9853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83f6e2d4_34d3a117",
+        "filename": "roles/acm-sno/tasks/acm-pull-data.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-20T19:36:36Z",
+      "side": 1,
+      "message": "yea, that is a dup. Good catch. Thanks",
+      "parentUuid": "e75a17e7_a2245f9d",
       "range": {
         "startLine": 30,
         "startChar": 0,
