@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb7167ce_4b69e9a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T08:16:25Z",
+      "side": 1,
+      "message": "Also, I suppose you\u0027re aware, but we will need to change the calls to mirror_images role in partner hooks too",
+      "revId": "e8de8122bca2f35b852b39fb136416df437af86b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb5c04aa_1eb4eb90",
