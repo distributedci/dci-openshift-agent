@@ -16,6 +16,23 @@
       "message": "Hi Ramon and Nacho, change is ready for review.\n\nThe default behavior is tested in bos2 on server08 - all default settings are unchanged.\n\n```\n[dci@server08 ~]$ sudo virsh dumpxml dciokd-worker-0\n    \u003cvideo\u003e\n      \u003cmodel type\u003d\u0027cirrus\u0027 vram\u003d\u002716384\u0027 heads\u003d\u00271\u0027 primary\u003d\u0027yes\u0027/\u003e\n      \u003calias name\u003d\u0027video0\u0027/\u003e\n      \u003caddress type\u003d\u0027pci\u0027 domain\u003d\u00270x0000\u0027 bus\u003d\u00270x00\u0027 slot\u003d\u00270x02\u0027 function\u003d\u00270x0\u0027/\u003e\n    \u003c/video\u003e\n```",
       "revId": "b0c08a7adc89621b8dda498078147b72f8985c3b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c44dcc5e_46454b22",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-20T15:27:18Z",
+      "side": 1,
+      "message": "LGTM, then we can test it in partner\u0027s lab to see if it works fine",
+      "revId": "b0c08a7adc89621b8dda498078147b72f8985c3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
