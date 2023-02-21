@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2f26a86_8b767eb0",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-21T19:15:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e12441f5_9f612e29",
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6ac8b11_277eb6c6",
@@ -82,6 +100,30 @@
       "writtenOn": "2023-02-21T08:14:34Z",
       "side": 1,
       "message": "In terms of style, just one single whitespace before \"Output\" to be similar to the other cases.",
+      "range": {
+        "startLine": 573,
+        "startChar": 60,
+        "endLine": 573,
+        "endChar": 61
+      },
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da40cb78_519842bb",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 573,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-21T19:15:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f6ac8b11_277eb6c6",
       "range": {
         "startLine": 573,
         "startChar": 60,
@@ -109,6 +151,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96bd4e5d_e6c2cbc5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 575,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-21T19:15:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "278ba8fc_7e9a4045",
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "17b1ac90_9c4a92ce",
@@ -122,6 +182,30 @@
       "writtenOn": "2023-02-21T08:28:31Z",
       "side": 1,
       "message": "it is ocp_creds.txt",
+      "range": {
+        "startLine": 577,
+        "startChar": 2,
+        "endLine": 577,
+        "endChar": 11
+      },
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2827f869_44d10d24",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 577,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-21T19:15:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "17b1ac90_9c4a92ce",
       "range": {
         "startLine": 577,
         "startChar": 2,
