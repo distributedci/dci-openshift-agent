@@ -35,6 +35,40 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96932a11_6ac424e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-21T18:12:35Z",
+      "side": 1,
+      "message": "Thanks for documenting this!",
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e12441f5_9f612e29",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-21T18:12:35Z",
+      "side": 1,
+      "message": "This is an expanded yaml output, i.e. -o yaml",
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6ac8b11_277eb6c6",
