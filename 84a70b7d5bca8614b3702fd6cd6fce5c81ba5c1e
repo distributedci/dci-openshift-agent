@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.8-vanilla ocp-4.10-upgrade openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.10:ansible_extravars\u003dupgrade_eus:true openshift-vanilla:components\u003docp\u003d4.8.49",
       "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8b1d180_10dd98f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-21T08:12:20Z",
+      "side": 1,
+      "message": "Thanks Beto for reviewing my comments! My impression is that the change is mostly fine, but I\u0027ll lay the ground to other people in case they want to review, in case I missed something",
+      "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
