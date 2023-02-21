@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_tags\u003djob,dci,pre-run,success",
       "revId": "2e25762928ef0f24a2ad74c610c650bb4bc98d2d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0b28843_9125e934",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-21T21:51:59Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2e25762928ef0f24a2ad74c610c650bb4bc98d2d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
