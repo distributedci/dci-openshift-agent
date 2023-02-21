@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ff13ff8_be7e8542",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-21T20:27:15Z",
+      "side": 1,
+      "message": "\ncheck dallas ocp-4.13-vanilla openshift-vanilla:ansible_tags\u003djob,dci,pre-run,success",
+      "revId": "34761892b448ab08b78a8ea507daca81583ea024",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
