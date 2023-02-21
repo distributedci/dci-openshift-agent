@@ -33,6 +33,24 @@
       "message": "Thanks Beto for reviewing my comments! My impression is that the change is mostly fine, but I\u0027ll lay the ground to other people in case they want to review, in case I missed something",
       "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40d8715e_8badd3c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-21T19:59:56Z",
+      "side": 1,
+      "message": "Thanks Ramón, just need to check and EUS upgrade.",
+      "parentUuid": "d8b1d180_10dd98f5",
+      "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
