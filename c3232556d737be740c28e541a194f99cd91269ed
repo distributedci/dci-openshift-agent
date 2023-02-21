@@ -153,6 +153,74 @@
       "message": "LGTM",
       "revId": "c3232556d737be740c28e541a194f99cd91269ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a1eb953_878584fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-21T16:24:19Z",
+      "side": 1,
+      "message": "Hi Beto, looks good to me, I\u0027d propose a small refactoring to avoid ignore_errors usage, and that\u0027s it. Thanks.",
+      "revId": "c3232556d737be740c28e541a194f99cd91269ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7f6e801_69ac2daa",
+        "filename": "roles/mirror-ocp-release/tasks/registry.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-21T16:24:19Z",
+      "side": 1,
+      "message": "do we ignore throttling errors here?",
+      "revId": "c3232556d737be740c28e541a194f99cd91269ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8742a42d_2ad7ce1c",
+        "filename": "roles/mirror-ocp-release/tasks/registry.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-21T16:24:19Z",
+      "side": 1,
+      "message": "good thing!",
+      "revId": "c3232556d737be740c28e541a194f99cd91269ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5772abe4_830c80ad",
+        "filename": "roles/mirror-ocp-release/tasks/registry.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-21T16:24:19Z",
+      "side": 1,
+      "message": "maybe we could use this block as a rescue for the first task where we ignore the errors.",
+      "revId": "c3232556d737be740c28e541a194f99cd91269ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
