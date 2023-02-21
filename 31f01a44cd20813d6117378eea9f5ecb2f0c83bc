@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c5949cd_f890c261",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-21T08:28:31Z",
+      "side": 1,
+      "message": "I\u0027ve been checking some jobs, such as https://www.distributed-ci.io/jobs/5d3414a9-9471-42a0-a402-324e3fe07045/files (VCP one), and just including some files that I cannot see listed here:\n\n- cluster-install-config.yml\n- diff-jobs.txt\n- kubeconfig\n- pods.txt\n\nAlso, some questions that also come from the d-o-a-a change:\n\n- Should we put a reference to ansible.log file? It\u0027s useful for troubleshooting when we don\u0027t have any reference of the failure in the DCI GUI",
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6ac8b11_277eb6c6",
@@ -36,6 +53,29 @@
         "startChar": 60,
         "endLine": 573,
         "endChar": 61
+      },
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17b1ac90_9c4a92ce",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 577,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-21T08:28:31Z",
+      "side": 1,
+      "message": "it is ocp_creds.txt",
+      "range": {
+        "startLine": 577,
+        "startChar": 2,
+        "endLine": 577,
+        "endChar": 11
       },
       "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
