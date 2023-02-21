@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "698c71cc_58adb4f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-21T08:14:34Z",
+      "side": 1,
+      "message": "Thanks Beto! one super-minor comment from my side",
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6ac8b11_277eb6c6",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 573,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-21T08:14:34Z",
+      "side": 1,
+      "message": "In terms of style, just one single whitespace before \"Output\" to be similar to the other cases.",
+      "range": {
+        "startLine": 573,
+        "startChar": 60,
+        "endLine": 573,
+        "endChar": 61
+      },
+      "revId": "31f01a44cd20813d6117378eea9f5ecb2f0c83bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
