@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.8-vanilla ocp-4.10-upgrade openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla-upgrade-4.10:ansible_extravars\u003dupgrade_eus:true openshift-vanilla:components\u003docp\u003d4.8.49",
       "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a757b76d_dfc5304f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-21T22:38:02Z",
+      "side": 1,
+      "message": "Hi Beto, this is a good change, have you had the chance to test with EUS upgrade?",
+      "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e49c024_fab12efe",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-21T22:38:02Z",
+      "side": 1,
+      "message": "What happens if someone would like to define mor_registry_path? how is that one passed to the role? Also I don\u0027t see it documented in the README",
+      "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
