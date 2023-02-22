@@ -16,6 +16,23 @@
       "message": "Hi Ramon, we tested and the config requires some refinement, could you please have a look? Thanks!",
       "revId": "df062542822d5cf86e15e8cd5e65d98a253dff44",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97413edd_9c568042",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-22T16:14:01Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "df062542822d5cf86e15e8cd5e65d98a253dff44",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
