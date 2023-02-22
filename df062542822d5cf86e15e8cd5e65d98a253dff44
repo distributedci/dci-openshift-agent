@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3829b5a8_e2619d67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-22T13:48:56Z",
+      "side": 1,
+      "message": "Hi Ramon, we tested and the config requires some refinement, could you please have a look? Thanks!",
+      "revId": "df062542822d5cf86e15e8cd5e65d98a253dff44",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
