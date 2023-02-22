@@ -16,6 +16,176 @@
       "message": "thanks for the clarifications, LGTM",
       "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e2a90d4_b7610125",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 859,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "typos:\n  enable_perfor_addon -\u003e enable_perf_addon\n  AddOn --\u003e Add-On",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b08eb4b_54cc055c",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 877,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "Is it worth mention the time? if that change we will need to update it in here, I suggest to keep it high level and not too specific",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "404bfd52_696a96d3",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 889,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "typo:\n  disconneted --\u003e disconnected",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cea66f97_b10df0e1",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 893,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "What about mentioning that it applies to even releases and then have only one example?",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44c8e1ed_69bd36c0",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "typo:\n  should be the an --\u003e must be an",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd679632_eec39251",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 901,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "typo:\n  requires between and intermediate --\u003e requires an intermediate\n  \nInstead of saying: \"The variable `version_inter` allows...\"\nI\u0027d say: \"It\u0027s possible to specify the intermediate version through `version_inter`, this ignores the upgrade path\"",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca9b9f7e_581ae834",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 903,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "What about:\n\nFor example, to upgrade to a version where there\u0027s no path to it. Specify the intermediate version. `version_inter\u003d4.11.5` or to use candidate versions use `version_inter\u003d4.11.5-*`.",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1735cbd_c4c0cfa1",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 907,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "I\u0027m having difficulties understanding this point, can we make it more clear by saying that the only supported path to upgrade is if the cluster was deployed with doa instead?\n\n* The upgrade process is only supported when the installation was performed with the dci-openshift-agent",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15ccbe39_07004dd9",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "Do we need to mention this? I\u0027m not sure how this is useful, if someone wants to upgrade to a nightly build the agent will make it happen 😎",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f35865aa_1a2a7c28",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 911,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:38:45Z",
+      "side": 1,
+      "message": "What about:\n\n\nFor disconnected environments, it\u0027s required to enable the same operators (`enable_\\\u003coperator\\\u003e`) installed  by dci-openshift-agent to upgrade them.",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
