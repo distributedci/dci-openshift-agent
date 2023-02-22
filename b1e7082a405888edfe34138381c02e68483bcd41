@@ -177,6 +177,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6cd147f6_227b1e09",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T21:56:58Z",
+      "side": 1,
+      "message": "Hi Nacho, I sill not seeing the suggested change in the common-roles/olm-operator/tasks/main.yml, I\u0027m adding a note there. If that suggestion makes sense, then you could remove the commented lines in here as that won\u0027t happen any more.",
+      "parentUuid": "1f93c043_a1d5b0f5",
+      "revId": "b1e7082a405888edfe34138381c02e68483bcd41",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5b4cea5_a57dd2d4",
         "filename": "common-roles/olm-operator/tasks/main.yml",
         "patchSetId": 8

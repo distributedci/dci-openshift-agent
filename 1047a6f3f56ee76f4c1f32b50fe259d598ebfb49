@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bd2b4a5_e9e1d764",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T21:56:58Z",
+      "side": 1,
+      "message": "If you use `source` in here you will select the package you want to install from the selected catalog source. This prevents the case where multiple packages are available through multiple catalogs.",
+      "revId": "1047a6f3f56ee76f4c1f32b50fe259d598ebfb49",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
