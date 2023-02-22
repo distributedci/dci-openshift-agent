@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "573f20c7_d2a7da01",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-22T21:43:44Z",
+      "side": 1,
+      "message": "Somehow for during the intermediate upgrade the image returned as intermediate was provided by tag. That breaks with the current and new mirroring structure. We need to check what is the issue later. Setting as intermediate version 4.9.48\n\nUpgrade image using tag instead of SHA.\nhttps://www.distributed-ci.io/jobs/b07e43b9-9b05-4012-94aa-a0ca300a7c7c/jobStates?sort\u003ddate\u0026task\u003d5467f917-ff40-4b81-806a-52975ea5a5db",
+      "revId": "ee139ad15fac0346badce075c558c9910c014026",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
