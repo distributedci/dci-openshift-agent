@@ -104,6 +104,24 @@
       "parentUuid": "8a4a1f14_b98f4568",
       "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d9637db_50165b13",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-22T22:40:29Z",
+      "side": 1,
+      "message": "It was there, I think I removed it, it was kept only for the EUS. Will put it back.\n\nhostvars[groups[\u0027registry_host\u0027][0]].local_rep",
+      "parentUuid": "2bcd21e1_35538017",
+      "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
