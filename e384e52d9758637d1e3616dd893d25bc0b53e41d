@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0397825_becd79cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-22T13:29:07Z",
+      "side": 1,
+      "message": "Thanks a lot Beto for adding some documentation about the upgrade, it really needed it! I have noticed some minor things.",
+      "revId": "e384e52d9758637d1e3616dd893d25bc0b53e41d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4ad5aba_ca758f19",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-22T13:29:07Z",
+      "side": 1,
+      "message": "You may precise the two only possible values here: \"install\" \u0026 \"upgrade\".",
+      "revId": "e384e52d9758637d1e3616dd893d25bc0b53e41d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70e5690b_2ff5227b",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 865,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-22T13:29:07Z",
+      "side": 1,
+      "message": "there is a typo in the URL.",
+      "range": {
+        "startLine": 865,
+        "startChar": 178,
+        "endLine": 865,
+        "endChar": 193
+      },
+      "revId": "e384e52d9758637d1e3616dd893d25bc0b53e41d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dce991a6_de496eeb",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 873,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-22T13:29:07Z",
+      "side": 1,
+      "message": "some \u0027.\u0027 are missing at the end of some of your sentences.",
+      "revId": "e384e52d9758637d1e3616dd893d25bc0b53e41d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b135984a_2eb7d05e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 881,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-22T13:29:07Z",
+      "side": 1,
+      "message": "I am not convinced about this sentence, I found it a bit confusing with the current indentation.",
+      "range": {
+        "startLine": 881,
+        "startChar": 0,
+        "endLine": 881,
+        "endChar": 70
+      },
+      "revId": "e384e52d9758637d1e3616dd893d25bc0b53e41d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfb70d59_f9464371",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 885,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-02-22T13:29:07Z",
+      "side": 1,
+      "message": "is monitored",
+      "revId": "e384e52d9758637d1e3616dd893d25bc0b53e41d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
