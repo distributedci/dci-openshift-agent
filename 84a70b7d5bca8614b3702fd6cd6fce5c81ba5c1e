@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15d0c859_ba37dcd2",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-22T00:19:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc817f3a_91e9b790",
+      "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8822b280_258ec309",
@@ -83,6 +101,24 @@
       "writtenOn": "2023-02-21T22:38:02Z",
       "side": 1,
       "message": "If this variable does not have a default use: undefined\nInclude the format in the description instead",
+      "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15eb02e9_afbaf8ba",
+        "filename": "roles/mirror-ocp-release/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-22T00:19:11Z",
+      "side": 1,
+      "message": "actually, \u003cversion_core\u003e/\u003cfull_version\u003e is the default not the expected format for user inputs.\n\nUpdated the inventory example variable documentation to reflect the default value set by the role",
+      "parentUuid": "8822b280_258ec309",
       "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

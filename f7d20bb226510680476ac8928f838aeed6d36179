@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "89f933b9_d2d41226",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-22T00:19:11Z",
+      "side": 1,
+      "message": "That is the last thing that I have been trying to test... stay tuned!",
+      "parentUuid": "a757b76d_dfc5304f",
+      "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4e49c024_fab12efe",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-02-21T22:38:02Z",
       "side": 1,
       "message": "What happens if someone would like to define mor_registry_path? how is that one passed to the role? Also I don\u0027t see it documented in the README",
+      "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a4a1f14_b98f4568",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-22T00:19:11Z",
+      "side": 1,
+      "message": "mor_registry_path is in the role README, we are not passing the variable here to just use the default by the role. \n\nI updated the Role examples to depict how to define the target path.",
+      "parentUuid": "4e49c024_fab12efe",
       "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
