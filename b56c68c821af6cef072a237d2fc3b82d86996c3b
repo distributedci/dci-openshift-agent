@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49711f25_95aebe32",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-22T20:36:55Z",
+      "side": 1,
+      "message": "Thanks Beto, just a couple of clarifications",
+      "revId": "b56c68c821af6cef072a237d2fc3b82d86996c3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "214433b9_5a34b227",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 857,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-22T20:36:55Z",
+      "side": 1,
+      "message": "Clarification: I think it should read: \"after running an upgrade of OCP\" instead of \"after running and upgrade or OCP\", if not this wording is probably confusing?",
+      "revId": "b56c68c821af6cef072a237d2fc3b82d86996c3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37d04fb1_e986f892",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-22T20:36:55Z",
+      "side": 1,
+      "message": "question: I assume this is done in our automation? we detect it\u0027s a nightly and force it, or do we need to pass a flag to force it?",
+      "revId": "b56c68c821af6cef072a237d2fc3b82d86996c3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
