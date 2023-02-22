@@ -121,6 +121,24 @@
       "parentUuid": "8822b280_258ec309",
       "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0127578_b9a6d05f",
+        "filename": "roles/mirror-ocp-release/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:02:38Z",
+      "side": 1,
+      "message": "Ah, I see, in that case instead of using the variable names, could you use what\u0027s going to be used there. And btw, it\u0027s missing `ocp-` in front of it.\n\nI was thinking that it should be something like: ocp-\u003cversion\u003e/\u003cfull_version\u003e And explain what version and full_version is in the Details.",
+      "parentUuid": "15eb02e9_afbaf8ba",
+      "revId": "84a70b7d5bca8614b3702fd6cd6fce5c81ba5c1e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

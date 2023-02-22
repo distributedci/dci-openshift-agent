@@ -86,6 +86,24 @@
       "parentUuid": "4e49c024_fab12efe",
       "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bcd21e1_35538017",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-22T22:02:38Z",
+      "side": 1,
+      "message": "Ah! you\u0027re right, my bad.\n\nBut that means that there\u0027s no way to specify another location? I think it was possible previously",
+      "parentUuid": "8a4a1f14_b98f4568",
+      "revId": "f7d20bb226510680476ac8928f838aeed6d36179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
