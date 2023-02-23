@@ -34,6 +34,91 @@
       "parentUuid": "6dedb5fe_bdad427e",
       "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "485fac22_e1114a9c",
+        "filename": "README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T22:24:37Z",
+      "side": 1,
+      "message": "What about:\n\n  In disconnected environments, the default value is set by the mirror-ocp-role",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20c76bca_4b61db9d",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T22:24:37Z",
+      "side": 1,
+      "message": "is registry.conf or registries.conf ?",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0647e8ed_853f4835",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T22:24:37Z",
+      "side": 1,
+      "message": "Could you modify the description to say:\n  Custom entries appended to the registries.conf file inherited from the Hub cluster used in the spoke nodes",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee67f643_de2ff0d0",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T22:24:37Z",
+      "side": 1,
+      "message": "Suggestion:\n  Fail when acm_user_registry is not defined",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04bcae11_4fd6f989",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T22:24:37Z",
+      "side": 1,
+      "message": "Suggestion:\n  acm_user_registry variable is required for disconnected environments\n  Please review the example of the acm_user_registry variable in the role documentation",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
