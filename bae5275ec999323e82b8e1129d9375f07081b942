@@ -34,6 +34,24 @@
       "parentUuid": "5dbb7f9e_8b4e6cd1",
       "revId": "bae5275ec999323e82b8e1129d9375f07081b942",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "609b468d_dd8bb792",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T23:55:40Z",
+      "side": 1,
+      "message": "That is fine, I wasn\u0027t aware you had to use nightlies as intermediate versions during your testing. I will discard that part and hide slowly...",
+      "parentUuid": "476b35f7_eb289c8c",
+      "revId": "bae5275ec999323e82b8e1129d9375f07081b942",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
