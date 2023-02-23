@@ -82,6 +82,10 @@
       loop_control:
         loop_var: icsp_file
 
+    - name: "Clean-up the ICSPs list"
+      set_fact:
+        icsp_file: []
+
     - name: "Wait for updated MCP after applying ICSP"
       include_role:
         name: check-resource
