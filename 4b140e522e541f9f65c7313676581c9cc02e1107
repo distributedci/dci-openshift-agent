@@ -33,6 +33,24 @@
       "message": "If the libvirt job is able to pass, I\u0027ll probably merge this. It\u0027s clear that cirrus type seems to be deprecated after running tests with a partner.",
       "revId": "4b140e522e541f9f65c7313676581c9cc02e1107",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ec2c578_fc73834b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-02-23T12:21:05Z",
+      "side": 1,
+      "message": "I can\u0027t connect to bos2 server10 to verify libvirt_up and virsh config. The OCP job has passed ok: https://www.distributed-ci.io/jobs/b3089ca7-2617-46e8-bf13-cf5081b54f31/jobStates?sort\u003ddate",
+      "parentUuid": "14dfba8a_9bfc46ea",
+      "revId": "4b140e522e541f9f65c7313676581c9cc02e1107",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
