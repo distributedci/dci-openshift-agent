@@ -16,6 +16,24 @@
       "message": "From my side, the EUS upgrade job looks fine, the upgrade passed but the job failed when checking the MCP after finishing the upgrade. My impression is that this change is mostly fine",
       "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5d71065_d9a492b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T16:26:43Z",
+      "side": 1,
+      "message": "Yeah, agree. One of the nodes was still been rebooting when the time was over. Will create a separate change to wait more for the pool changes.",
+      "parentUuid": "6dedb5fe_bdad427e",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
