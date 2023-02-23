@@ -16,6 +16,24 @@
       "message": "When this was introduced, eus-4.12 was not available, so there was no way to determine the intermediate between 4.10 and 4.12. This will affect us again in 4.14\n\nWhat do you think we should do in such cases?",
       "revId": "bae5275ec999323e82b8e1129d9375f07081b942",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "476b35f7_eb289c8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:16:35Z",
+      "side": 1,
+      "message": "Submitted my comment as resolved 😄, reopening this",
+      "parentUuid": "5dbb7f9e_8b4e6cd1",
+      "revId": "bae5275ec999323e82b8e1129d9375f07081b942",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
