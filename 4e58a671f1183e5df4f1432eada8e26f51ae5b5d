@@ -245,6 +245,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28a586b9_cb234d71",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 903,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:05:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ca9b9f7e_581ae834",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1735cbd_c4c0cfa1",
