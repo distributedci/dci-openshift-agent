@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4cdae3b_04e9e532",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 822,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "Let\u0027s create the upgrades topic here and then put inside the test process, e.g.\n  ## OCP upgrades using dci-openshift-agent\n  \n  ### Test OCP upgrades with dci-openshift-agent",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7a9e80d_3f0738f0",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 857,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "This is not indented correctly, you could do either remove the first bullet point, I particularly like this better:\n  Please note the following settings:\n  \n  1. ...\n\nOR indent the numbering list like this, note that this will not use numbers as is a 2nd level of indentation and then it will use a. b., etc\n\n  * Please note the following settings:\n  \n      1. ...",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e96dfaa8_bf3dfe1c",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "The links are backwards here and in the line below\n  (text)[link]  --\u003e [text](link)",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc2e6bbe_7ed96d54",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 871,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "This is also broken when rendered, remove the spaces in front and you\u0027ll get what you want\n     1. ... 🔥\n   1. ... ✔\n   \nBut... having a list so long (15 elements) makes it really difficult to read, I think changing it to bullet list is best, unless there\u0027s a good reason to keep numbering",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "994538c3_e7f10a18",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 873,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "superscript does not render this way for mkdocs, needs to use html:\n   \u003csup\u003e1\u003c/sup\u003e",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45c6b98a_0a79fe8c",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 883,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "This is missing one space to render correctly, same for the bullet list below",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a3ce158_5ddef838",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "escaping is not needed when you have it inside backticks\n   `enable_\u003coperator\u003e`",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "779e19f3_e8accba2",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 911,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-23T23:08:20Z",
+      "side": 1,
+      "message": "Needs the full link md\n    (ansible-variables)[#ansible-variables]",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
