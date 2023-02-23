@@ -1,9 +1,4 @@
 ---
-- name: Force upgrade for nightly builds
-  set_fact:
-    force_upgrade: true
-  when: build == "nightly"
-
 - block:
   - name: "Get cluster config"
     community.kubernetes.k8s_info:

@@ -61,6 +61,13 @@
   when:
     - upgrade_eus | default(false) | bool
 
+- name: "Force upgrade for nightly builds"
+  set_fact:
+    force_upgrade: true
+  when:
+    - build == "nightly"
+    - image_inter is undefined
+
 - name: "Upgrader: Running the Intermediate upgrade - EUS"
   vars:
     version: "{{ version_inter }}"
