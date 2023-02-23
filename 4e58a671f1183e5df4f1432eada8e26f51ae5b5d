@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbe0266e_de970da9",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 859,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2a90d4_b7610125",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7b08eb4b_54cc055c",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-02-22T22:38:45Z",
       "side": 1,
       "message": "Is it worth mention the time? if that change we will need to update it in here, I suggest to keep it high level and not too specific",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee7ceb58_692b24a9",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 877,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "agree, removed the time",
+      "parentUuid": "7b08eb4b_54cc055c",
       "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -69,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "001183c2_58b8567b",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 889,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "404bfd52_696a96d3",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cea66f97_b10df0e1",
@@ -82,6 +136,24 @@
       "writtenOn": "2023-02-22T22:38:45Z",
       "side": 1,
       "message": "What about mentioning that it applies to even releases and then have only one example?",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7863ad12_ed31e194",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 893,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cea66f97_b10df0e1",
       "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -103,6 +175,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1b1dea0_8bcefc7d",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44c8e1ed_69bd36c0",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd679632_eec39251",
@@ -116,6 +206,24 @@
       "writtenOn": "2023-02-22T22:38:45Z",
       "side": 1,
       "message": "typo:\n  requires between and intermediate --\u003e requires an intermediate\n  \nInstead of saying: \"The variable `version_inter` allows...\"\nI\u0027d say: \"It\u0027s possible to specify the intermediate version through `version_inter`, this ignores the upgrade path\"",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06050219_cfe916da",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 901,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd679632_eec39251",
       "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -154,6 +262,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a919513_c239422b",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 907,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "yeah, better. We have hard dependencies with the DCI providing the intermediate version and other tasks during the pre-run.\n\nThanks",
+      "parentUuid": "b1735cbd_c4c0cfa1",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15ccbe39_07004dd9",
@@ -171,6 +297,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aae0d187_41c684ba",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "magic!",
+      "parentUuid": "15ccbe39_07004dd9",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f35865aa_1a2a7c28",
@@ -184,6 +328,24 @@
       "writtenOn": "2023-02-22T22:38:45Z",
       "side": 1,
       "message": "What about:\n\n\nFor disconnected environments, it\u0027s required to enable the same operators (`enable_\\\u003coperator\\\u003e`) installed  by dci-openshift-agent to upgrade them.",
+      "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3686b344_2966f350",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 911,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f35865aa_1a2a7c28",
       "revId": "4e58a671f1183e5df4f1432eada8e26f51ae5b5d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

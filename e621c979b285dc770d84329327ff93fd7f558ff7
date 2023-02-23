@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9872993_cea0d262",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 857,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "17af48b7_dda37a03",
+      "range": {
+        "startLine": 857,
+        "startChar": 152,
+        "endLine": 857,
+        "endChar": 156
+      },
+      "revId": "e621c979b285dc770d84329327ff93fd7f558ff7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2e618f41_f2a669f1",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-02-23T12:40:13Z",
       "side": 1,
       "message": "may we use `install` and `upgrade` instead of \"install\" and \"upgrade\"? (the quotes used)",
+      "range": {
+        "startLine": 858,
+        "startChar": 112,
+        "endLine": 858,
+        "endChar": 135
+      },
+      "revId": "e621c979b285dc770d84329327ff93fd7f558ff7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f75503d_512c6a7a",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e618f41_f2a669f1",
       "range": {
         "startLine": 858,
         "startChar": 112,
@@ -87,6 +135,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a76ac558_320f8584",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 893,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "39bf50e8_de0c6dc2",
+      "range": {
+        "startLine": 893,
+        "startChar": 0,
+        "endLine": 893,
+        "endChar": 9
+      },
+      "revId": "e621c979b285dc770d84329327ff93fd7f558ff7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11edfd31_a2f7bdc0",
@@ -100,6 +172,30 @@
       "writtenOn": "2023-02-23T12:40:13Z",
       "side": 1,
       "message": "\"the\" to be removed",
+      "range": {
+        "startLine": 899,
+        "startChar": 38,
+        "endLine": 899,
+        "endChar": 41
+      },
+      "revId": "e621c979b285dc770d84329327ff93fd7f558ff7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bb5266b_2e97f80b",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T17:04:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11edfd31_a2f7bdc0",
       "range": {
         "startLine": 899,
         "startChar": 38,
