@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6dedb5fe_bdad427e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-02-23T12:47:40Z",
+      "side": 1,
+      "message": "From my side, the EUS upgrade job looks fine, the upgrade passed but the job failed when checking the MCP after finishing the upgrade. My impression is that this change is mostly fine",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
