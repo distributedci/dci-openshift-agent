@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0a1a812_440fc76b",
+        "filename": "README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T23:53:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "485fac22_e1114a9c",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "20c76bca_4b61db9d",
@@ -66,6 +84,24 @@
       "writtenOn": "2023-02-23T22:24:37Z",
       "side": 1,
       "message": "is registry.conf or registries.conf ?",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f367bf4f_25fbff0b",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T23:53:35Z",
+      "side": 1,
+      "message": "registries, fixed",
+      "parentUuid": "20c76bca_4b61db9d",
       "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -87,6 +123,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "749216f5_3c53af0b",
+        "filename": "roles/acm-sno/README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T23:53:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0647e8ed_853f4835",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ee67f643_de2ff0d0",
@@ -104,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1f67d29_058a622f",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T23:53:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee67f643_de2ff0d0",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "04bcae11_4fd6f989",
@@ -117,6 +189,24 @@
       "writtenOn": "2023-02-23T22:24:37Z",
       "side": 1,
       "message": "Suggestion:\n  acm_user_registry variable is required for disconnected environments\n  Please review the example of the acm_user_registry variable in the role documentation",
+      "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26a7aedd_1b3bdc58",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-23T23:53:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04bcae11_4fd6f989",
       "revId": "13f0c183048b610304f3544e44e7aeb143b4e2fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
