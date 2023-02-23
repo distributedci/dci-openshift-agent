@@ -1,9 +1,4 @@
 ---
-- name: Force upgrade for nightly builds
-  set_fact:
-    force_upgrade: true
-  when: build == "nightly"
-
 - block:
   - name: "Get cluster config"
     community.kubernetes.k8s_info:
@@ -140,10 +135,36 @@
   retries: 10
   delay: 60
 
+- name: "Get the release image digest"
+  shell:
+    cmd: >
+      skopeo inspect
+      --no-tags
+      {% if dci_pullsecret_file is defined %}
+      --authfile {{ dci_pullsecret_file }}
+      {% endif %}
+      docker://{{ version_pull_url }} |
+      jq -r '.Digest'
+  register: image_digest
+  retries: 5
+  delay: 5
+  until:
+    - image_digest.stdout | regex_search('^sha')
+  when:
+    - '"sha256" not in version_pull_url'
+
+- name: "Set release image"
+  vars:
+    image_repo: "{{ version_pull_url | regex_search('(^.+):', '\\1') | first }}"
+  set_fact:
+    version_pull_url_sha: "{{ image_repo }}@{{ image_digest.stdout }}"
+  when:
+    - '"sha256" not in version_pull_url'
+
 - name: "upgrader : Execute the upgrade"
   vars:
     upgrade_options: >-
-      --to-image={{ version_pull_url }}
+      --to-image={{ version_pull_url_sha | default(version_pull_url) }}
       {% if force_upgrade | default(false) %}
       --force
       --allow-explicit-upgrade
