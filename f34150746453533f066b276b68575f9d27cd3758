@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1b97a00_c6fa69dc",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 822,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c4cdae3b_04e9e532",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c7a9e80d_3f0738f0",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-02-23T23:08:20Z",
       "side": 1,
       "message": "This is not indented correctly, you could do either remove the first bullet point, I particularly like this better:\n  Please note the following settings:\n  \n  1. ...\n\nOR indent the numbering list like this, note that this will not use numbers as is a 2nd level of indentation and then it will use a. b., etc\n\n  * Please note the following settings:\n  \n      1. ...",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c65e5af_764cbeb2",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 857,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c7a9e80d_3f0738f0",
       "revId": "f34150746453533f066b276b68575f9d27cd3758",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "97f3dc3f_01ac5705",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "😞",
+      "parentUuid": "e96dfaa8_bf3dfe1c",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dc2e6bbe_7ed96d54",
@@ -65,6 +119,24 @@
       "writtenOn": "2023-02-23T23:08:20Z",
       "side": 1,
       "message": "This is also broken when rendered, remove the spaces in front and you\u0027ll get what you want\n     1. ... 🔥\n   1. ... ✔\n   \nBut... having a list so long (15 elements) makes it really difficult to read, I think changing it to bullet list is best, unless there\u0027s a good reason to keep numbering",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c07d44d3_e5a9ac7c",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 871,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc2e6bbe_7ed96d54",
       "revId": "f34150746453533f066b276b68575f9d27cd3758",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "efb5895a_c7747eb9",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 873,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "994538c3_e7f10a18",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "45c6b98a_0a79fe8c",
@@ -99,6 +189,24 @@
       "writtenOn": "2023-02-23T23:08:20Z",
       "side": 1,
       "message": "This is missing one space to render correctly, same for the bullet list below",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae2fdf14_1d28e415",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 883,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45c6b98a_0a79fe8c",
       "revId": "f34150746453533f066b276b68575f9d27cd3758",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -120,6 +228,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "34d02ef3_b9f3c90d",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a3ce158_5ddef838",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "779e19f3_e8accba2",
@@ -133,6 +259,24 @@
       "writtenOn": "2023-02-23T23:08:20Z",
       "side": 1,
       "message": "Needs the full link md\n    (ansible-variables)[#ansible-variables]",
+      "revId": "f34150746453533f066b276b68575f9d27cd3758",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51229e2d_f0acd5df",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 911,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-24T00:40:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "779e19f3_e8accba2",
       "revId": "f34150746453533f066b276b68575f9d27cd3758",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
