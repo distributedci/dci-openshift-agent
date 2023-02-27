@@ -33,6 +33,24 @@
       "message": "Do we really need these? iirc, must-gather contain them already",
       "revId": "1f7f2206e28b918512f2fadaec2299b5e1018818",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5053dd79_c0071832",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-27T18:26:40Z",
+      "side": 1,
+      "message": "Yes, those are part of the must_gather as this script collects most of the information via `oc` commands. So, do you think we should stop collecting all that is already on the must-gather?\n\nIMO, It is needed because it is much faster to figure out \"a common\" issue without downloading the must-gather file. \n\nThis script is working mainly in installers that require a provisioner. We may need to think of a more general approach to collect logs later.",
+      "parentUuid": "7ef81c54_76d45bda",
+      "revId": "1f7f2206e28b918512f2fadaec2299b5e1018818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
