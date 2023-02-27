@@ -86,6 +86,24 @@
       "parentUuid": "39a8f907_6ce996ae",
       "revId": "0fbe5bf858bb09f518c7744e7e0fde250d430a2a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcad00aa_aa9bda4b",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-27T22:39:23Z",
+      "side": 1,
+      "message": "Thanks for the clarification and the chat, now is clear that there was a change with the information populated by the feeder and that is being discussed, while that\u0027s fixed, this is a good way to fix it. We may come back to this later to use what the OCP component has.",
+      "parentUuid": "3e14ca49_a6d1d102",
+      "revId": "0fbe5bf858bb09f518c7744e7e0fde250d430a2a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

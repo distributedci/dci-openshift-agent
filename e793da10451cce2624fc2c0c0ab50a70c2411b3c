@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "964949df_3b279b88",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-27T22:39:23Z",
+      "side": 1,
+      "message": "Instead of using shell, can we use the digest that\u0027s included in the component.\n\ndata.digest[0]",
+      "revId": "e793da10451cce2624fc2c0c0ab50a70c2411b3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
