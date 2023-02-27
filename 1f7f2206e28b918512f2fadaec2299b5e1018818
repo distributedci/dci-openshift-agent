@@ -51,6 +51,24 @@
       "parentUuid": "7ef81c54_76d45bda",
       "revId": "1f7f2206e28b918512f2fadaec2299b5e1018818",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5dce730d_0a16148e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-27T18:58:58Z",
+      "side": 1,
+      "message": "I agree that is faster and convenient to have the available in the Web UI, but I\u0027m concerned that we prevent the use of the must-gather for this convenience and continue duplicating the logs collected.\n\no-mg makes really easy to use the must-gather, but requires a couple of steps and I can see how that prevents people from using it, any idea on how to make easier the consumption of the must-gather tarballs?",
+      "parentUuid": "5053dd79_c0071832",
+      "revId": "1f7f2206e28b918512f2fadaec2299b5e1018818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
