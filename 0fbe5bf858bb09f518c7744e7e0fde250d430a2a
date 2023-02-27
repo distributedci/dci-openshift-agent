@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.8-vanilla ocp-4.10-upgrade openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[] openshift-vanilla:components\u003docp\u003d4.8.49 openshift-vanilla-upgrade-4.10:ansible_extravars\u003dupgrade_eus:true openshift-vanilla-upgrade-4.10:ansible_extravars\u003dversion_inter:4.9.55",
       "revId": "0fbe5bf858bb09f518c7744e7e0fde250d430a2a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "634b1454_9bec81dc",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-27T19:14:26Z",
+      "side": 1,
+      "message": "Did you mean icsp_files?\n\nIf this is set to empty the next task will never take place as icsp_files length is 0, in such case wouldn\u0027t be better to remove that conditional there or is there any other reason?",
+      "revId": "0fbe5bf858bb09f518c7744e7e0fde250d430a2a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39a8f907_6ce996ae",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-02-27T19:14:26Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand why this is needed? the digest should be coming from the job",
+      "revId": "0fbe5bf858bb09f518c7744e7e0fde250d430a2a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
