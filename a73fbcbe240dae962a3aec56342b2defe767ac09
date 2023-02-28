@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "197ff9f3_b2323718",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T20:05:37Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla openshift-vanilla:ansible_extravars\u003denable_nfd:true openshift-vanilla:ansible_extravars\u003denable_logging:true",
+      "revId": "a73fbcbe240dae962a3aec56342b2defe767ac09",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

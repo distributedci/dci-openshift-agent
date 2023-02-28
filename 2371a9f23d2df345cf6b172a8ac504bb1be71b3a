@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c8d9f510_fef285b8",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T20:05:37Z",
+      "side": 1,
+      "message": "Good point Manuel, I can figure out how to get the sha of that image before creating the CR. But need to confirm that no other pods use tag. If that is the case the operator is not ready for disconnected and will have to remove it from the change. \n\nThanks",
+      "parentUuid": "44acc731_1567347c",
+      "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f6e42a33_570e0198",
         "filename": "plays/deploy-operators.yml",
         "patchSetId": 2
@@ -48,6 +66,24 @@
       "writtenOn": "2023-02-28T14:22:37Z",
       "side": 1,
       "message": "I see this error, maybe we do not need to use the operator group?\n\u003e \"OwnNamespace InstallModeType not supported, cannot configure to watch own namespace - phase: Failed, reason: UnsupportedOperatorGroup\"",
+      "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d743908_a0b02702",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T20:05:37Z",
+      "side": 1,
+      "message": "yes, will ned to remove the target namespace to allow it to watch all namespaces. Thanks!",
+      "parentUuid": "f6e42a33_570e0198",
       "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
