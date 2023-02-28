@@ -72,6 +72,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "36e2e195_b9878fca",
+        "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-02-28T17:01:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c350d34d_2226702d",
+      "range": {
+        "startLine": 117,
+        "startChar": 24,
+        "endLine": 117,
+        "endChar": 28
+      },
+      "revId": "5b8f9ad2ad0f75c50f6297617bad24721088ac8e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e139c294_e416252d",
