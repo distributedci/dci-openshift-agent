@@ -16,6 +16,24 @@
       "message": "Instead of using shell, can we use the digest that\u0027s included in the component.\n\ndata.digest[0]",
       "revId": "e793da10451cce2624fc2c0c0ab50a70c2411b3c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2caebada_31fe9d2e",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T00:23:16Z",
+      "side": 1,
+      "message": "Maybe, it will need more conditionals. Because during EUS there are information about 2 components (the intermediate and the final target).\n\nWe will need something like if it is during an intermediate step, get the SHA from the inter_topic, else form the job component. \n\nFor the sake to make it generic, I\u0027d prefer to keep the shell. And this should be temporal until we fix the DCI database.",
+      "parentUuid": "964949df_3b279b88",
+      "revId": "e793da10451cce2624fc2c0c0ab50a70c2411b3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
