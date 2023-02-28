@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fc845327_a7149cef",
+        "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-02-28T16:21:30Z",
+      "side": 1,
+      "message": "It was about the configuration of nodes, but if you have another idea for the variable name, I\u0027m interested.",
+      "parentUuid": "a43c2ba2_2f8a1baa",
+      "range": {
+        "startLine": 117,
+        "startChar": 24,
+        "endLine": 117,
+        "endChar": 28
+      },
+      "revId": "5b8f9ad2ad0f75c50f6297617bad24721088ac8e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e139c294_e416252d",
         "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
         "patchSetId": 1
