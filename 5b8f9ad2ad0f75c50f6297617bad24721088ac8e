@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c350d34d_2226702d",
+        "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T16:56:36Z",
+      "side": 1,
+      "message": "As all the configurations in the file are for the node, I was thinking this could be enable_legacy_vga_mode as it is related to the video mode. But up to you it is just a variable 😊",
+      "parentUuid": "fc845327_a7149cef",
+      "range": {
+        "startLine": 117,
+        "startChar": 24,
+        "endLine": 117,
+        "endChar": 28
+      },
+      "revId": "5b8f9ad2ad0f75c50f6297617bad24721088ac8e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e139c294_e416252d",
         "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
         "patchSetId": 1
