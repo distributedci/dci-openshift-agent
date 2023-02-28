@@ -16,6 +16,24 @@
       "message": "Hi Pierre that\u0027s what we used before - we pinned the memory, probably to make it work on smaller labs\n\n```\n\u003cmodel type\u003d\u0027cirrus\u0027 vram\u003d\u002716384\u0027 heads\u003d\u00271\u0027/\u003e\n```\n\nMaybe to add vram in your configuration?",
       "revId": "5b8f9ad2ad0f75c50f6297617bad24721088ac8e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11746d22_16e73716",
+        "filename": "roles/ocp-on-libvirt/templates/libvirt_node.xml.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-02-28T15:51:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e139c294_e416252d",
+      "revId": "5b8f9ad2ad0f75c50f6297617bad24721088ac8e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
