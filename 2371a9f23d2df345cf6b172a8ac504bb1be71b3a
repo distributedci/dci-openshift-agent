@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04afe679_a0056a28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-28T14:22:37Z",
+      "side": 1,
+      "message": "Looks good, just minor comments below",
+      "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44acc731_1567347c",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-28T14:22:37Z",
+      "side": 1,
+      "message": "Question: Just checking if this expected to work in a disconnected env?",
+      "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6e42a33_570e0198",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-28T14:22:37Z",
+      "side": 1,
+      "message": "I see this error, maybe we do not need to use the operator group?\n\u003e \"OwnNamespace InstallModeType not supported, cannot configure to watch own namespace - phase: Failed, reason: UnsupportedOperatorGroup\"",
+      "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
