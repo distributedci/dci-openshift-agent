@@ -22,6 +22,30 @@
       },
       "revId": "255d45409c7d4917db82e7a1a2f100135e4f4ab9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62cc975a_f5b2d00f",
+        "filename": "common-roles/olm-operator/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-02-28T09:31:55Z",
+      "side": 1,
+      "message": "no, that\u0027s the variable I\u0027m working on adding.",
+      "parentUuid": "f5ae8264_e4c85dc4",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 12
+      },
+      "revId": "255d45409c7d4917db82e7a1a2f100135e4f4ab9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
