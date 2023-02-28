@@ -87,6 +87,24 @@
       "parentUuid": "5dce730d_0a16148e",
       "revId": "1f7f2206e28b918512f2fadaec2299b5e1018818",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93db8e6b_2c2f451e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-02-28T14:57:29Z",
+      "side": 1,
+      "message": "From my side I used must-gathers frequently to troubleshoot issues when cluster is not available, since the log outputs (pods, nodes. events) might not contain all. And funny thing is that I usually use the MG to get the MC and MCP information. So I\u0027m up for collecting both quick outputs, if they are not large files and MG to have pod logs. I agree that partners do not seem to use MGs, it\u0027s mostly for us when we want to understand an issue when helping a partner that does not provides access, or when engineering team asked us for information of an OCPBUG.",
+      "parentUuid": "dcfdd703_e88d026d",
+      "revId": "1f7f2206e28b918512f2fadaec2299b5e1018818",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
