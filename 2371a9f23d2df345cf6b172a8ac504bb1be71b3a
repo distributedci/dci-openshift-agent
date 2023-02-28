@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5495960_17133c30",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T20:06:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8d9f510_fef285b8",
+      "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6e42a33_570e0198",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "yes, will ned to remove the target namespace to allow it to watch all namespaces. Thanks!",
       "parentUuid": "f6e42a33_570e0198",
+      "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e309307_d7f974e3",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T20:06:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d743908_a0b02702",
       "revId": "2371a9f23d2df345cf6b172a8ac504bb1be71b3a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
