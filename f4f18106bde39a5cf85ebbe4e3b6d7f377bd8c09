@@ -16,6 +16,24 @@
       "message": "I think you forgot to remove this comment, my suggestion is what\u0027s in line 6 and 7",
       "revId": "f4f18106bde39a5cf85ebbe4e3b6d7f377bd8c09",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78f037ce_13268632",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-02-28T20:09:20Z",
+      "side": 1,
+      "message": "😮 👍",
+      "parentUuid": "6a18746f_7d69c923",
+      "revId": "f4f18106bde39a5cf85ebbe4e3b6d7f377bd8c09",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
