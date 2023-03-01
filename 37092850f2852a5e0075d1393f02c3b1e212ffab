@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "585fe850_710a4166",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-01T11:17:49Z",
+      "side": 1,
+      "message": "LGTM, thanks Tony, I\u0027ve checked that the change is being used in the libvirt job and it\u0027s passing fine.",
+      "revId": "37092850f2852a5e0075d1393f02c3b1e212ffab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
