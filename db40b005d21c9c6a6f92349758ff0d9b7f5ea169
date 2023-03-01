@@ -86,6 +86,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3aaadeeb_9d7510df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-03-01T13:41:17Z",
+      "side": 1,
+      "message": "Cool, just s couple of questions: Is Loki available in all version of OCP? Are we planning to update any pipeline to use this? Thanks",
+      "revId": "db40b005d21c9c6a6f92349758ff0d9b7f5ea169",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bda0f68f_81c1ea05",
