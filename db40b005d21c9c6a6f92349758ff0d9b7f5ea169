@@ -67,6 +67,46 @@
       "message": "After deploying NFD, the following labels are available for all workers: http://pastebin.test.redhat.com/1093274",
       "revId": "db40b005d21c9c6a6f92349758ff0d9b7f5ea169",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b649cc59_5e6c908a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-01T11:33:45Z",
+      "side": 1,
+      "message": "It\u0027s an interesting change, I\u0027ll leave one comment after doing my review, just to clarify",
+      "revId": "db40b005d21c9c6a6f92349758ff0d9b7f5ea169",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bda0f68f_81c1ea05",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-01T11:33:45Z",
+      "side": 1,
+      "message": "(Personal opinion) May we find a different, more meaningful name, for this variable, just to avoid confussion with `enable_clusterlogging`? Because they\u0027re quite similar in naming, but the only difference is the presence/absence of Loki. However, I\u0027ll let you decide, it\u0027s a minor change, don\u0027t mind if it remains with this name",
+      "range": {
+        "startLine": 266,
+        "startChar": 2,
+        "endLine": 266,
+        "endChar": 16
+      },
+      "revId": "db40b005d21c9c6a6f92349758ff0d9b7f5ea169",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
