@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "57d62554_81fa37b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-01T11:26:11Z",
+      "side": 1,
+      "message": "From my point of view, the change is fine, according to the code included and the results obtained. But there may be other people interested in giving more feedback, just leaving a +1 up to now",
+      "revId": "e793da10451cce2624fc2c0c0ab50a70c2411b3c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "964949df_3b279b88",
