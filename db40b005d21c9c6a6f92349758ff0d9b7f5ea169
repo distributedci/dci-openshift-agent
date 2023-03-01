@@ -50,6 +50,23 @@
       "message": "After deploying NFD, the following labels are available for all workers:\n",
       "revId": "db40b005d21c9c6a6f92349758ff0d9b7f5ea169",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ffd40e3_de530eb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-01T00:53:42Z",
+      "side": 1,
+      "message": "After deploying NFD, the following labels are available for all workers: http://pastebin.test.redhat.com/1093274",
+      "revId": "db40b005d21c9c6a6f92349758ff0d9b7f5ea169",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
