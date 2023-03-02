@@ -33,6 +33,24 @@
       "message": "Are you planning on testing CentOS 9 also for the provision host? I see we use CentOS 8 by default.",
       "revId": "66e42b0b154429f23eda88a6464d3498a7cd63ee",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7207a279_1b2df4e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-03-02T15:02:07Z",
+      "side": 1,
+      "message": "Unfortunately Centos 9 is not supported as an OS for the jumphost",
+      "parentUuid": "031ef3d9_f05e67bb",
+      "revId": "66e42b0b154429f23eda88a6464d3498a7cd63ee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
