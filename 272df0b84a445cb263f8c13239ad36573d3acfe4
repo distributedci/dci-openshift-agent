@@ -86,6 +86,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2b5672b_50f70178",
+        "filename": "docs/a-i.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-03-02T16:53:53Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "67e2ae68_c8e5c179",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6af41299_1b0ce1c2",
@@ -121,6 +139,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "019adf33_b5f2bacd",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-03-02T16:53:53Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f5037564_78903d02",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "35193b5c_10520d55",
@@ -152,6 +188,24 @@
       "side": 1,
       "message": "Sounds like a fun nested loop in ansible.  I simply took what was already done in crucible here.  I\u0027m not confident enough in how ansible works to change it to a nested loop.  If you feel strongly feel free to provide a patch 😊",
       "parentUuid": "35193b5c_10520d55",
+      "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91b61c41_f41ea94f",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 435,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-03-02T16:53:53Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f77537a3_687558af",
       "revId": "272df0b84a445cb263f8c13239ad36573d3acfe4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
