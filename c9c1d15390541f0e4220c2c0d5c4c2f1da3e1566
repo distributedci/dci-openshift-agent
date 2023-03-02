@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15878474_c87c20c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-02T14:23:03Z",
+      "side": 1,
+      "message": "In the last test we see the change working as expected:\n\nhttps://www.distributed-ci.io/jobs/3afc95ff-4a2c-4399-92b6-073f44f35ab3/jobStates\n\nThe job is set to install mtc-operator version 1.7.5:\n\n```\n-e {\"dci_operators\":[{\"name\":\"mtc-operator\",\"catalog_source\":\"redhat-operators\",\"namespace\":\"openshift-migration\",\"starting_csv\":\"mtc-operator.v1.7.5\",\"ns_labels\":{\"openshift.io/cluster-monitoring\":\"true\"},\"operator_group_spec\":{\"targetNamespaces\":[\"openshift-migration\"]}}]}\n```\n\nwhile the current CSV is 1.7.7:\n\n```\napiVersion: packages.operators.coreos.com/v1\nkind: PackageManifest\nmetadata:\n  name: mtc-operator\n  [...]\nstatus:\n  catalogSource: redhat-operators\n  channels:\n  - currentCSV: mtc-operator.v1.7.7\n  [...]\n```\n\nThis results in the olm-operator role having to actively identify the Install Plan and approve it:\n\n```\nTASK [olm-operator : Get Install plans] *************************\nTASK [olm-operator : Approve install plan for specific CSV] *****\n```\n\nSo the target version gets installed:\n\n```\n$ oc get csv -n openshift-migration\nNAME                   DISPLAY                                     VERSION   REPLACES   PHASE\nmtc-operator.v1.7.5    Migration Toolkit for Containers Operator   1.7.5                Succeeded\noadp-operator.v1.0.7   OADP Operator                               1.0.7                Succeeded\n```\n\nAnd the install plan for the current CSV gets in hold waiting for approval:\n\n```\n$ oc get ip -n openshift-migration\nNAME            CSV                   APPROVAL   APPROVED\ninstall-5bcvs   mtc-operator.v1.7.5   Manual     true\ninstall-fbf9l   mtc-operator.v1.7.7   Manual     false\n```\n\nAn improvement would be to look up the right install plan instead of looping through all the found one in order to approve it:\n\n```\nwhen:\n  - operator_csv in install_plan.spec.clusterServiceVersionNames\n  - install_plan.spec.approved \u003d\u003d false\nloop: \"{{ install_plans.resources }}\"\nloop_control:\n  loop_var: install_plan\n```",
+      "revId": "c9c1d15390541f0e4220c2c0d5c4c2f1da3e1566",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
