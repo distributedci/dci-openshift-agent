@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9e9506c1_2e654335",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-03-02T19:45:07Z",
+      "side": 1,
+      "message": "This is what was preventing us from passing for the longest time.  Upstream moved the cluster patching to it\u0027s own role.  The patch cluster role patches 3 manifests which breaks the app routing if and only if you have workers configured.  I\u0027m debugging further before bringing it up to the crucible team.  But it doesn\u0027t affect this patch since we aren\u0027t currently patching.",
+      "parentUuid": "aca99328_7d92a647",
+      "revId": "bddb56817d153c5d2c9d55b359253c3299223431",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a9992d01_69f6501b",
         "filename": "plays/assisted-install.yml",
         "patchSetId": 11
@@ -48,6 +66,24 @@
       "writtenOn": "2023-03-02T19:28:16Z",
       "side": 1,
       "message": "I think you could directly use setup_pxe_service in here, unless the defined var MOUNT_DISCOVERY_ISO is used in the role. When not needed it could be used as\n\n  when: setup_pxe_service | default(False) | bool\n  \nThe only gain is reducing the use of vars and having the default in the same \"when\" statement, but also I saw crucible is using it like this.",
+      "revId": "bddb56817d153c5d2c9d55b359253c3299223431",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f586db5d_a47df2df",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-03-02T19:45:07Z",
+      "side": 1,
+      "message": "yeah.. I purposely kept it the same as the crucible playbook.",
+      "parentUuid": "a9992d01_69f6501b",
       "revId": "bddb56817d153c5d2c9d55b359253c3299223431",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
