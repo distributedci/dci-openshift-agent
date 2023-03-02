@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01fd0532_fae750b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-02T18:36:52Z",
+      "side": 1,
+      "message": "Removed the candidate patch to obtain the digest as DCI database has been fixed",
+      "revId": "9c3683300e67491cf5455f961a48f5499f7d6c02",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
