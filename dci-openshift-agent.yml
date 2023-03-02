@@ -413,8 +413,6 @@
     KUBECONFIG: "{{ kubeconfig_path }}"
   tasks:
     - block:
-        - name: "Run cluster health checks"
-          include_tasks: plays/check-cluster-health.yml
         - name: "dci-openshift-agent : Launch partner install"
           include_tasks: '{{ hookdir }}/hooks/install.yml'
           loop: "{{ dci_config_dirs }}"
