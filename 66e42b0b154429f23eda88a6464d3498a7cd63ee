@@ -51,6 +51,24 @@
       "parentUuid": "031ef3d9_f05e67bb",
       "revId": "66e42b0b154429f23eda88a6464d3498a7cd63ee",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f555229_66a9a947",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-03T09:41:50Z",
+      "side": 1,
+      "message": "yup, the question was regarding the libvirt provision host, where we currently use CentOS8.\n\nFor what I see, the source image for the provision host is defined in the libvirt resources yaml file:\n\nHere is an example for the samples settings:\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/dfa25470970db9a0f949babdddf685446a483a51/samples/ocp_on_libvirt/inventory/libvirt_resources.yml#L12\n\nAnd here it\u0027s defined for BOS2 server02:\nhttps://github.com/dci-labs/bos2-ci-config/blob/df0657c543457898ed853becca7afacc3eef0e91/files/ocp_on_libvirt/server02/server02-libvirt_resources.yml#L12\n\nSo, I guess the questions now are whether:\n\n- we want to update this source image to a newer major version.\n\n- we want to keep working with CentOS for the libvirt provision host or a different OS.\n\n- any changes agreed upon answering the questions above should be included in this CR, or it belongs in a different one.",
+      "parentUuid": "7207a279_1b2df4e7",
+      "revId": "66e42b0b154429f23eda88a6464d3498a7cd63ee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
