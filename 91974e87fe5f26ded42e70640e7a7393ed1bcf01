@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "709183b9_2911698e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-03T11:17:17Z",
+      "side": 1,
+      "message": "Hi Ramon, that\u0027s a CR to fix the bug we found during yesterday\u0027s debug. \n\nNot sure if that would be enough or if we\u0027ll also have to update baremetal-deploy that now somehow uses the \"dci\" user for the OCP installation: https://www.distributed-ci.io/jobs/d345b7e3-eeb2-40e3-94e2-7179a4a74e4d/jobStates?sort\u003ddate\u0026task\u003df1a41dac-50ad-405a-a656-d6f560a88705 \n\nLink to the code at baremetal-deploy, maybe we\u0027ll have to add here kvm and qemu groups as well: https://github.com/openshift-kni/baremetal-deploy/blob/master/ansible-ipi-install/roles/node-prep/tasks/50_modify_sudo_user.yml#L5 ",
+      "revId": "91974e87fe5f26ded42e70640e7a7393ed1bcf01",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
