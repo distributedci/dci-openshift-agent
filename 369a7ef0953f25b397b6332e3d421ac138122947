@@ -50,6 +50,24 @@
       "message": "I think Fred usually updates the changelog and the agent version when this spec file is modified, just to let you know, now that the assisted tests are passing",
       "revId": "369a7ef0953f25b397b6332e3d421ac138122947",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "742561ea_ed3ae8e5",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-03-06T13:12:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1415607c_ddba2f34",
+      "revId": "369a7ef0953f25b397b6332e3d421ac138122947",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

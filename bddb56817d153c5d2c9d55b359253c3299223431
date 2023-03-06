@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82c4540b_77e5f6c7",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-03-06T13:12:29Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9e9506c1_2e654335",
+      "revId": "bddb56817d153c5d2c9d55b359253c3299223431",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9992d01_69f6501b",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "yeah.. I purposely kept it the same as the crucible playbook.",
       "parentUuid": "a9992d01_69f6501b",
+      "revId": "bddb56817d153c5d2c9d55b359253c3299223431",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15e15e0b_b12b239f",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-03-06T13:12:29Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f586db5d_a47df2df",
       "revId": "bddb56817d153c5d2c9d55b359253c3299223431",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
