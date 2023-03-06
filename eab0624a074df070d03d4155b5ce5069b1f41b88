@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "669e4236_2d8184a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-06T07:02:18Z",
+      "side": 1,
+      "message": "Some general comments from my side, without digging into the details of the NFS deployment",
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d81402e_20d98cd7",
+        "filename": "common-roles/nfs-external-storage/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-06T07:02:18Z",
+      "side": 1,
+      "message": "should we need here the SCC labels, annotations and so on for OCP 4.12 and above? Or is it the purpose of the next task, \"Allow hostmount-anyuid to the namespace SA\"?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 27
+      },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c34df027_f3f50e75",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-06T07:02:18Z",
+      "side": 1,
+      "message": "where are these two variables, nfs_server and nfs_path, defined? I believe we should assert that, if enable_nfs_storage is true, these two variables are defined before running the role, and not inside the role",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d28b6af_e60b6db7",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-06T07:02:18Z",
+      "side": 1,
+      "message": "should this be defined in the d-o-a README?",
+      "range": {
+        "startLine": 42,
+        "startChar": 6,
+        "endLine": 42,
+        "endChar": 24
+      },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
