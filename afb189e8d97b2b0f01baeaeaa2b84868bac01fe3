@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "702936f5_457abeae",
+        "filename": "common-roles/nfs-external-storage/defaults/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T23:16:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc04deff_7d3ae376",
+      "revId": "afb189e8d97b2b0f01baeaeaa2b84868bac01fe3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "397e6206_4f39a41e",
@@ -65,6 +83,24 @@
       "writtenOn": "2023-03-06T22:28:12Z",
       "side": 1,
       "message": "Is the tag missing when using local registry?",
+      "revId": "afb189e8d97b2b0f01baeaeaa2b84868bac01fe3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78774410_3b24f62a",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T23:16:37Z",
+      "side": 1,
+      "message": "It is not, a good catch. Thanks",
+      "parentUuid": "397e6206_4f39a41e",
       "revId": "afb189e8d97b2b0f01baeaeaa2b84868bac01fe3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
