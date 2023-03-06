@@ -64,6 +64,10 @@
     src: "{{ item }}"
     dest: "{{ dci_cluster_configs_dir }}"
     remote_src: true
+    register: result
+    retries: 3
+    delay: 10
+    until: result is not failed
     mode: 0755
   loop:
     - "{{ ocp_clients_url }}/opm-linux.tar.gz"
