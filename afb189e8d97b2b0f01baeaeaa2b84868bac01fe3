@@ -16,6 +16,57 @@
       "message": "Thanks for the reviews.\n\nConfirmed that the volumes provisioned are good for ACM requirements: http://pastebin.test.redhat.com/1093830\n\n",
       "revId": "afb189e8d97b2b0f01baeaeaa2b84868bac01fe3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c15b2356_6cbf6160",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-06T22:28:12Z",
+      "side": 1,
+      "message": "LGTM, needs some testing in a disconnected env",
+      "revId": "afb189e8d97b2b0f01baeaeaa2b84868bac01fe3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc04deff_7d3ae376",
+        "filename": "common-roles/nfs-external-storage/defaults/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-06T22:28:12Z",
+      "side": 1,
+      "message": "Please switch to registry.k8s.io as k8s.gcr.io is going to be deprecated[1], let\u0027s start using the new registry instead.\n\n\n[1] https://kubernetes.io/blog/2022/11/28/registry-k8s-io-faster-cheaper-ga/",
+      "revId": "afb189e8d97b2b0f01baeaeaa2b84868bac01fe3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "397e6206_4f39a41e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-06T22:28:12Z",
+      "side": 1,
+      "message": "Is the tag missing when using local registry?",
+      "revId": "afb189e8d97b2b0f01baeaeaa2b84868bac01fe3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
