@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f8ffb71_ce36aa70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-06T09:13:43Z",
+      "side": 1,
+      "message": "Thanks, Ramón, for the reviews.\n\nI applied your changes as suggested.",
+      "revId": "e31f5ff20d067de3c5d681f7cb20b070f97cb374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d68b11f_10dac86a",
@@ -41,6 +58,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1036dcd9_3843c175",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-06T09:13:43Z",
+      "side": 1,
+      "message": "Thanks. Will do so.",
+      "parentUuid": "0d68b11f_10dac86a",
+      "range": {
+        "startLine": 85,
+        "startChar": 39,
+        "endLine": 85,
+        "endChar": 72
+      },
+      "revId": "e31f5ff20d067de3c5d681f7cb20b070f97cb374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd2834a0_a5adba4a",
@@ -54,6 +95,30 @@
       "writtenOn": "2023-03-06T06:54:55Z",
       "side": 1,
       "message": "same\nalso, don\u0027t know if it\u0027s better to move the when statement to the end of the block, we usually do it in that way",
+      "range": {
+        "startLine": 106,
+        "startChar": 10,
+        "endLine": 106,
+        "endChar": 42
+      },
+      "revId": "e31f5ff20d067de3c5d681f7cb20b070f97cb374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58603046_59cc43ae",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-06T09:13:43Z",
+      "side": 1,
+      "message": "In general, I like it better at the top of the block otherwise I find the condition may get lost at the end of a long list of tasks.\n\nHowever, you\u0027re right, this is the common practice in the team.",
+      "parentUuid": "fd2834a0_a5adba4a",
       "range": {
         "startLine": 106,
         "startChar": 10,
