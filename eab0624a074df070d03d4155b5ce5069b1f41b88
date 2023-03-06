@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec8e3376_649b1642",
+        "filename": "common-roles/nfs-external-storage/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T20:16:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a06430b9_c9477cb3",
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d81402e_20d98cd7",
@@ -65,6 +83,30 @@
       "writtenOn": "2023-03-06T07:02:18Z",
       "side": 1,
       "message": "should we need here the SCC labels, annotations and so on for OCP 4.12 and above? Or is it the purpose of the next task, \"Allow hostmount-anyuid to the namespace SA\"?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 27
+      },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f6c07c2_19ea1f43",
+        "filename": "common-roles/nfs-external-storage/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T20:16:16Z",
+      "side": 1,
+      "message": "I haven\u0027t seen warnings regarding policy violations. The SCC and rolebindings are doing the trick for the deployment. Will add them anyway. Thanks!",
+      "parentUuid": "3d81402e_20d98cd7",
       "range": {
         "startLine": 9,
         "startChar": 0,
@@ -92,6 +134,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa4ff15f_b7b5004b",
+        "filename": "common-roles/nfs-external-storage/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T20:16:16Z",
+      "side": 1,
+      "message": "yeah, not a big deal. Thanks",
+      "parentUuid": "e40a6546_f301b168",
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d73a26d_d6986afe",
@@ -105,6 +165,24 @@
       "writtenOn": "2023-03-06T14:05:21Z",
       "side": 1,
       "message": "Here you verify that all pods in the namespace are running. \n\nIf you need to check just one pod, it could be done like this \n```\n- name: Wait for nfs-client-provisioner pod to be Running\n  community.kubernetes.k8s_info:\n    api_version: v1\n    kind: Pod\n    namespace: \"{{ nes_namespace }}\"\n    label_selectors:\n      - app\u003dnfs-client-provisioner\n  register: nfs_pod\n  retries: 6\n  delay: 10\n  until: nfs_pod.resources[0].status.phase \u003d\u003d \u0027Running\u0027\n ```",
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05baad77_458f0807",
+        "filename": "common-roles/nfs-external-storage/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T20:16:16Z",
+      "side": 1,
+      "message": "nice, thanks!",
+      "parentUuid": "4d73a26d_d6986afe",
       "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -134,6 +212,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9887ebb8_18f87552",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T20:16:16Z",
+      "side": 1,
+      "message": "Those can be defined in the inventory or the pipeline. In our case will be in the inventory. Added the proper assertions. Thanks",
+      "parentUuid": "c34df027_f3f50e75",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6d28b6af_e60b6db7",
         "filename": "plays/deploy-operators.yml",
         "patchSetId": 4
@@ -145,6 +247,30 @@
       "writtenOn": "2023-03-06T07:02:18Z",
       "side": 1,
       "message": "should this be defined in the d-o-a README?",
+      "range": {
+        "startLine": 42,
+        "startChar": 6,
+        "endLine": 42,
+        "endChar": 24
+      },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e12dca59_44714232",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T20:16:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6d28b6af_e60b6db7",
       "range": {
         "startLine": 42,
         "startChar": 6,
