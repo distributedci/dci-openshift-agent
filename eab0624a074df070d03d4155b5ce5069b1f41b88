@@ -18,6 +18,40 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a17517d5_3fa2f8f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-06T14:05:21Z",
+      "side": 1,
+      "message": "Hi Beto, I noted some minor issues, mostly I complain about the sequence of the actions: you use NFS SA before defining it, and that potentially could be a problem on a fresh cluster. ",
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a06430b9_c9477cb3",
+        "filename": "common-roles/nfs-external-storage/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-06T14:05:21Z",
+      "side": 1,
+      "message": "Hi Beto, it seems like a quite old busybox image, there is 1.36 already available: https://hub.docker.com/_/busybox",
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d81402e_20d98cd7",
@@ -37,6 +71,40 @@
         "endLine": 9,
         "endChar": 27
       },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e40a6546_f301b168",
+        "filename": "common-roles/nfs-external-storage/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-06T14:05:21Z",
+      "side": 1,
+      "message": "Should we first create a SA nfs-client-provisioner, before using it?",
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d73a26d_d6986afe",
+        "filename": "common-roles/nfs-external-storage/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-06T14:05:21Z",
+      "side": 1,
+      "message": "Here you verify that all pods in the namespace are running. \n\nIf you need to check just one pod, it could be done like this \n```\n- name: Wait for nfs-client-provisioner pod to be Running\n  community.kubernetes.k8s_info:\n    api_version: v1\n    kind: Pod\n    namespace: \"{{ nes_namespace }}\"\n    label_selectors:\n      - app\u003dnfs-client-provisioner\n  register: nfs_pod\n  retries: 6\n  delay: 10\n  until: nfs_pod.resources[0].status.phase \u003d\u003d \u0027Running\u0027\n ```",
       "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
