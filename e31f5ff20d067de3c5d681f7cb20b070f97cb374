@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a78fbf8_a311c36e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-06T06:54:55Z",
+      "side": 1,
+      "message": "A couple of suggestions below",
+      "revId": "e31f5ff20d067de3c5d681f7cb20b070f97cb374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d68b11f_10dac86a",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-06T06:54:55Z",
+      "side": 1,
+      "message": "did you try with `starting_csv|default(\u0027\u0027)|length` ?",
+      "range": {
+        "startLine": 85,
+        "startChar": 39,
+        "endLine": 85,
+        "endChar": 72
+      },
+      "revId": "e31f5ff20d067de3c5d681f7cb20b070f97cb374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd2834a0_a5adba4a",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-06T06:54:55Z",
+      "side": 1,
+      "message": "same\nalso, don\u0027t know if it\u0027s better to move the when statement to the end of the block, we usually do it in that way",
+      "range": {
+        "startLine": 106,
+        "startChar": 10,
+        "endLine": 106,
+        "endChar": 42
+      },
+      "revId": "e31f5ff20d067de3c5d681f7cb20b070f97cb374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
