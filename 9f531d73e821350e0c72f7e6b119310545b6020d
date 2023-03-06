@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46d1a2ba_cff676b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-03-06T16:23:49Z",
+      "side": 1,
+      "message": "for sno:\nhttps://www.distributed-ci.io/jobs/dfee9793-5f44-443f-8cee-49f3fece4379/jobStates?sort\u003ddate\u0026task\u003d60808456-6c14-444e-b3bc-f865d3df938f\n\nfor jumphost:\nhttps://www.distributed-ci.io/jobs/c1ababaa-7766-4326-b419-5420dadbe9cc/jobStates?sort\u003ddate\u0026task\u003d7a8ff137-c9ce-419d-bcb8-d2033e41a7f9",
+      "revId": "9f531d73e821350e0c72f7e6b119310545b6020d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
