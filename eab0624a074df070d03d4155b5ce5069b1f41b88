@@ -234,6 +234,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "02b284df_f0ff81a8",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-06T22:13:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9887ebb8_18f87552",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "eab0624a074df070d03d4155b5ce5069b1f41b88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6d28b6af_e60b6db7",
