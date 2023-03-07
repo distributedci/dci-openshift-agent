@@ -50,6 +50,24 @@
       "message": "Hi Beto, thanks for the improvements! Could you please add more details about the installation of a \"reacheable NFS server\" in the readme? \n\nHere is how I imagine NFS installation - I have to define the permissions for a share and also some export options for exportfs. Which parameters should we use? \n\n```\n# install NFS\ndnf install nfs-utils -y\n\n# create a share and set permissions\n# which permissions do we need and which user should own a share?\nmkdir -p /shares/registry\nchown -R nobody:nobody /shares/registry\nchmod -R 777 /shares/registry\n\n# export the share\n# which options do we need?\necho \"/shares/registry $DALLAS_JUMPHOST_NETWORK_IP/24(rw,sync,root_squash,no_subtree_check,no_wdelay)\" \u003e /etc/exports\nexportfs -rv\n\n# start NFS server\nsystemctl enable nfs-server rpcbind\nsystemctl start nfs-server rpcbind nfs-mountd\n```",
       "revId": "95f12d15fae0dc8f89de41bc85ec9ed09c5d8bee",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ce5475d_41edc204",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-07T18:27:51Z",
+      "side": 1,
+      "message": "Hello Tatiana, I would add commands to\n\n- Configure the firewall\nsudo firewall-cmd --add-service\u003dnfs --permanent\nsudo firewall-cmd --add-service\u003d{nfs3,mountd,rpc-bind} --permanent \nsudo firewall-cmd --reload \n\n- Configure the SeLinux\nsudo setsebool -P nfs_export_all_rw 1\n\nPermissions should be rwx for others.\n\nBut I think that setting up the nfs server is a something that is very well documented in other places. I will add a link to the official information. \n\nThanks for all the feedback.",
+      "parentUuid": "33c5348e_bf521c19",
+      "revId": "95f12d15fae0dc8f89de41bc85ec9ed09c5d8bee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
