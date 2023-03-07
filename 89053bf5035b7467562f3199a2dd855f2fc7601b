@@ -16,6 +16,23 @@
       "message": "thx for your review guys !",
       "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cf17a2a_41452b9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-07T08:14:08Z",
+      "side": 1,
+      "message": "Thanks Pierre! After clarifying that, I thinks it\u0027s fine, but let\u0027s see if other people also agrees",
+      "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
