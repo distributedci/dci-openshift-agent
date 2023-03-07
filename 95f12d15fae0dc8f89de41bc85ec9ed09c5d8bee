@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c41be850_64c3805c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-07T03:44:43Z",
+      "side": 1,
+      "message": "Validated on disconnected using cluster1 NetApp storage:\n\nocp-4.10-vanilla openshift-vanilla:ansible_extravars\u003denable_nfs_storage:true openshift-vanilla:ansible_extravars\u003dnfs_server:192.168.13.200 openshift-vanilla:ansible_extravars\u003dnfs_path:/nes",
+      "revId": "95f12d15fae0dc8f89de41bc85ec9ed09c5d8bee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
