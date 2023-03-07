@@ -16,6 +16,23 @@
       "message": "LGTM, thanks Beto!",
       "revId": "28a2744f5d82b20831a80066222851e81beea3c4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fb23711_99249353",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-07T23:02:29Z",
+      "side": 1,
+      "message": "Last job in cluster6 failed because there was a change in the share path",
+      "revId": "28a2744f5d82b20831a80066222851e81beea3c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
