@@ -33,6 +33,23 @@
       "message": "Thanks Pierre! After clarifying that, I thinks it\u0027s fine, but let\u0027s see if other people also agrees",
       "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34abf12f_d1e84836",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-07T09:54:20Z",
+      "side": 1,
+      "message": "@Pierre, I\u0027m thinking... these changes mostly apply to the ocp-on-libvirt features of the dci-openshift-agent.\n\nMaybe these changes should also be applied to the dci-lab-setup code (https://github.com/dci-labs/dci-lab-setup). Don\u0027t you think?\n\nCould you take a look into the repo and either, let me know or submit a PR yourself?",
+      "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
