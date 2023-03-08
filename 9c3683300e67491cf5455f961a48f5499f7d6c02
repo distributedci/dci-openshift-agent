@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "9c3683300e67491cf5455f961a48f5499f7d6c02",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc5da889_cf4cc8fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-08T18:18:25Z",
+      "side": 1,
+      "message": "LGTM, thanks Beto",
+      "revId": "9c3683300e67491cf5455f961a48f5499f7d6c02",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
