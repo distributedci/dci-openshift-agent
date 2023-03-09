@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0596f494_adfe3951",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-09T13:40:13Z",
+      "side": 1,
+      "message": "Something unexpected I\u0027m observing in Job:\n\nhttps://www.distributed-ci.io/jobs/323ada99-ad05-4c43-a8c1-de1cd6b9ee14/jobStates?sort\u003ddate\u0026task\u003d2399180e-844e-4047-bfca-04a05e08e75b\n\nIs, although the starting_csv variable is not defined the condition:\n\nstarting_csv | default(\u0027\u0027) | length\n\nis returning true, so the block at:\n\ncommon-roles/olm-operator/tasks/main.yml#143\n\nis executed and the install approval strategy in the subscription is set to \"manual\":\n\ncommon-roles/olm-operator/tasks/main.yml#85\n",
+      "revId": "cf5048233c3ee851ee757e5950612faaa8fcbe4d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
