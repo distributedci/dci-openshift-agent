@@ -33,6 +33,40 @@
       "message": "Validated using a a custom SC: https://www.distributed-ci.io/jobs/e0c7231a-2ea0-458a-a441-b07bbdbefd6f/jobStates\n\nValidated using the default SC: https://www.distributed-ci.io/jobs/282311b4-f5ae-469a-a326-aca67e05d528/jobStates\n\nThe jobs failing in between were related to having 2 default SCs. That needs to be addressed in Trident. When there are 2 SC set as default, the workload must indicate the specific storage class to use.\n",
       "revId": "fdbc7cccb5f687d8ab6b25b466a7c0f0343ef4ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74d055e2_074dc7b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-10T15:20:46Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "fdbc7cccb5f687d8ab6b25b466a7c0f0343ef4ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ca17a62_f35cdeb6",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-10T15:20:46Z",
+      "side": 1,
+      "message": "typo: \nFail when not storage class\n-\u003e\nFail when these is no storage class available",
+      "revId": "fdbc7cccb5f687d8ab6b25b466a7c0f0343ef4ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
