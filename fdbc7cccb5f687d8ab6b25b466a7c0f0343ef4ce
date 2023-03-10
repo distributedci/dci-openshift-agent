@@ -16,6 +16,23 @@
       "message": "- On the below job. There was no default SC. ACM is configure to use: managed-nfs-storage\nhttps://www.distributed-ci.io/jobs/b105a1a5-9591-4bb4-bc30-24a5aef4eb92/jobStates?sort\u003ddate\u0026task\u003d38c05012-f41a-4b03-8858-6917e69c0c06\n\n- There seems to be network/DNS issues in the cluster4/worker-4 that are not related to this change that need to be reviewed separatedly\n\n$ oc get sc \nNAME                      PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE\ndefault-trident-storage   csi.trident.netapp.io   Delete          Immediate           true                   92m\nmanaged-nfs-storage       storage.io/nfs          Delete          Immediate           false                  100m\npremium                   csi.trident.netapp.io   Delete          Immediate           true                   92m\n\n$ oc get pvc -A\nNAMESPACE             NAME                                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS          AGE\nmulticluster-engine   assisted-service                              Bound    pvc-f963fa1a-8ac0-4754-9558-b97d03649948   50Gi       RWO            managed-nfs-storage   71s\nmulticluster-engine   image-service-data-assisted-image-service-0   Bound    pvc-29fa6325-aae0-4506-968a-20ce91344f60   40Gi       RWO            managed-nfs-storage   71s\nmulticluster-engine   postgres                                      Bound    pvc-a0b677c2-aae3-4e17-ba99-6c2c39372c7d   40Gi       RWO            managed-nfs-storage   71s",
       "revId": "fdbc7cccb5f687d8ab6b25b466a7c0f0343ef4ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "210edeee_1ff96dd5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-10T00:13:10Z",
+      "side": 1,
+      "message": "Validated using a a custom SC: https://www.distributed-ci.io/jobs/e0c7231a-2ea0-458a-a441-b07bbdbefd6f/jobStates\n\nValidated using the default SC: https://www.distributed-ci.io/jobs/282311b4-f5ae-469a-a326-aca67e05d528/jobStates\n\nThe jobs failing in between were related to having 2 default SCs. That needs to be addressed in Trident. When there are 2 SC set as default, the workload must indicate the specific storage class to use.\n",
+      "revId": "fdbc7cccb5f687d8ab6b25b466a7c0f0343ef4ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
