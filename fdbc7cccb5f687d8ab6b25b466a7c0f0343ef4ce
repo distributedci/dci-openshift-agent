@@ -67,6 +67,24 @@
       "message": "typo: \nFail when not storage class\n-\u003e\nFail when these is no storage class available",
       "revId": "fdbc7cccb5f687d8ab6b25b466a7c0f0343ef4ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8a5a031_36a40f4b",
+        "filename": "roles/acm-sno/tasks/pre-run.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-10T18:21:55Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9ca17a62_f35cdeb6",
+      "revId": "fdbc7cccb5f687d8ab6b25b466a7c0f0343ef4ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
