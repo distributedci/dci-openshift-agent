@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0c54966_4514267e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-14T11:13:51Z",
+      "side": 1,
+      "message": "Hi Charles! One comment that I have. In theory, this check-cluster-health play is not only executed after the upgrade, but also in other points on the dci-openshift-agent stages. So, I\u0027m fearing this may lead to delaying normal executions. Could it be a way to just increase the time for the upgrade case?",
+      "revId": "36630e3a2ed0904181c41ba432cd985272ad1f6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
