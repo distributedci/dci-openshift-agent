@@ -16,6 +16,24 @@
       "message": "Hi Charles! One comment that I have. In theory, this check-cluster-health play is not only executed after the upgrade, but also in other points on the dci-openshift-agent stages. So, I\u0027m fearing this may lead to delaying normal executions. Could it be a way to just increase the time for the upgrade case?",
       "revId": "36630e3a2ed0904181c41ba432cd985272ad1f6b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ab3a9bf_570ac6ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-03-14T12:41:15Z",
+      "side": 1,
+      "message": "Ramon, what you propose could definitely be an option, but if these are retries, then the MCP will be only rechecked while is not in Updated state (mainly during the upgrade) other stages in d-o-a should go faster and won\u0027t wait for the 25 mins to finish validation.",
+      "parentUuid": "f0c54966_4514267e",
+      "revId": "36630e3a2ed0904181c41ba432cd985272ad1f6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
