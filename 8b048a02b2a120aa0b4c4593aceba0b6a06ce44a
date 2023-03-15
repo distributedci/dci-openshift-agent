@@ -16,6 +16,23 @@
       "message": "Hi Rabin, thank you for the contribution! We already have some automated tests running, but I will start some more.",
       "revId": "8b048a02b2a120aa0b4c4593aceba0b6a06ce44a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73048e5e_cadb0457",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-15T11:10:47Z",
+      "side": 1,
+      "message": "To test the change, we need to run the OCP-4.12 nightly build, here is an example from our dailies: https://www.distributed-ci.io/jobs/11d265c1-32ef-4656-9c44-261824609f08/jobStates?sort\u003ddate\u0026task\u003d4d9dbe00-a46c-4708-b738-7ed59dccb188.\n\nI have started a job to test your change, here is the link. Please let me know if you already have access to the DCI UI, or if you would like to be added: https://www.distributed-ci.io/jobs/198a891d-426f-4653-acd8-a947ddd169b9/jobStates?sort\u003ddate",
+      "revId": "8b048a02b2a120aa0b4c4593aceba0b6a06ce44a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
