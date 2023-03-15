@@ -145,6 +145,20 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
+
+        - name: Check on the test files
+          shell: "curl -I {{ item }}"
+          args:
+            warn: False
+          with_items:
+            - https://www.redhat.com/en
+            - https://foo.bar
+            - https://getfedora.org
+          register: stat
+          until: "{{ stat.rc == 0 }}"
+          retries: 3
+          delay: 1
+
         - name: Configure jumpbox
           include_tasks: plays/configure-jumpbox.yml
 
