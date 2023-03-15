@@ -87,6 +87,30 @@
       },
       "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06678023_6565fc3e",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1520
+      },
+      "writtenOn": "2023-03-15T12:49:52Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f4257807_741626e2",
+      "range": {
+        "startLine": 112,
+        "startChar": 54,
+        "endLine": 112,
+        "endChar": 72
+      },
+      "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
