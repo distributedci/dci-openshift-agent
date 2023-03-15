@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5c112f4_e6811138",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-15T11:26:00Z",
+      "side": 1,
+      "message": "Hi Rabin, thanks for your first contribution here! Really appreciate that. I think your change will work, in fact it has passed now the task it was failing in the previous job. Just adding one minor suggestion from my side.",
+      "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f48718d6_9419cc79",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-15T11:26:00Z",
+      "side": 1,
+      "message": "I think you can get rid of `community.general.` and directly use `json_query`; it is already included on DCI deps",
+      "range": {
+        "startLine": 112,
+        "startChar": 54,
+        "endLine": 112,
+        "endChar": 72
+      },
+      "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
