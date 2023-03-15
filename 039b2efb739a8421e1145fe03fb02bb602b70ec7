@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4b4404a_b0b05b89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-15T13:07:01Z",
+      "side": 1,
+      "message": "In \n\nhttps://www.distributed-ci.io/jobs/7b5c8ff0-26ac-4f67-9394-c1e5873d5e06/jobStates?sort\u003ddate\u0026task\u003dc0cce314-eadc-4986-bb6c-80c8483b2a04\n\nWe have a job where the failed task get\u0027s masked due to an ansible warning.\n\nNext thing we\u0027ll do is set the warn: False argument in the task, to see if DCI manages to set the banner in red.",
+      "revId": "039b2efb739a8421e1145fe03fb02bb602b70ec7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
