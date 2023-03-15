@@ -39,6 +39,30 @@
       },
       "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6515059f_86913e10",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1520
+      },
+      "writtenOn": "2023-03-15T11:46:04Z",
+      "side": 1,
+      "message": "I only see it in `assisted-pre-run.yml`, \n\nAnd from my understanding, the common best practice is to DO use the fqcn.\nBut if that\u0027s the project code style, I will change it.",
+      "parentUuid": "f48718d6_9419cc79",
+      "range": {
+        "startLine": 112,
+        "startChar": 54,
+        "endLine": 112,
+        "endChar": 72
+      },
+      "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
