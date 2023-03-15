@@ -63,6 +63,30 @@
       },
       "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4257807_741626e2",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-15T11:56:35Z",
+      "side": 1,
+      "message": "For the json_filter, I think we usually use the short name, but anyway, there\u0027s not any issue if it\u0027s left finally",
+      "parentUuid": "6515059f_86913e10",
+      "range": {
+        "startLine": 112,
+        "startChar": 54,
+        "endLine": 112,
+        "endChar": 72
+      },
+      "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

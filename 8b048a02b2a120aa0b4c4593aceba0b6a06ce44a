@@ -51,6 +51,24 @@
       "parentUuid": "73048e5e_cadb0457",
       "revId": "8b048a02b2a120aa0b4c4593aceba0b6a06ce44a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b9a1ef0_db1ddfce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-15T11:56:35Z",
+      "side": 1,
+      "message": "the job is relaunched automatically when creating a new patchset, here you can see the list of jobs launched for this change: https://www.distributed-ci.io/jobs?page\u003d1\u0026perPage\u003d20\u0026where\u003dtags:gerrit:dci-openshift-agent-27756\n\nand this is the job for the patchset 2: https://www.distributed-ci.io/jobs/b6e74a41-e1e9-4e0c-b8e4-5f8de733d704/jobStates?sort\u003ddate",
+      "parentUuid": "293590ba_3124942c",
+      "revId": "8b048a02b2a120aa0b4c4593aceba0b6a06ce44a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
