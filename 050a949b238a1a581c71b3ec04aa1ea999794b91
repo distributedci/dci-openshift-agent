@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "63556a2c_7e6367eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-15T15:50:33Z",
+      "side": 1,
+      "message": "Rabin, thanks, LGTM, do not hesitate to merge. The merge will trigger rebuild of rpm and in about one hour you could run `sudo dnf upgrade --refresh --repo dci` to get your change as a part of official package.",
+      "revId": "050a949b238a1a581c71b3ec04aa1ea999794b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f48718d6_9419cc79",
