@@ -69,6 +69,24 @@
       "parentUuid": "293590ba_3124942c",
       "revId": "8b048a02b2a120aa0b4c4593aceba0b6a06ce44a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f0edc7c_b8bc90f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-03-15T13:24:27Z",
+      "side": 1,
+      "message": "Hi Rabin, your change was tested fine in BOS2 (ocp-on-libvirt lab) and I re-triggered the test in Dallas (ocp on baremetal), here is the job to follow: https://www.distributed-ci.io/jobs/e69137e3-af71-4982-9032-fdf273fc74a7/jobStates?sort\u003ddate",
+      "parentUuid": "9b9a1ef0_db1ddfce",
+      "revId": "8b048a02b2a120aa0b4c4593aceba0b6a06ce44a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
