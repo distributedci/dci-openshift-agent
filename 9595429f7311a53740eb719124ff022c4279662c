@@ -33,6 +33,23 @@
       "message": "I am curious, it is weird that we have not seen any issue in our dailies before.",
       "revId": "9595429f7311a53740eb719124ff022c4279662c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d0a0c76_7e746fc6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-17T17:04:45Z",
+      "side": 1,
+      "message": "Nacho, the error is complaining on a field on the labels, likely the omit[1] it does not seem to be related to the api version\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/common-roles/olm-operator/tasks/main.yml#L28",
+      "revId": "9595429f7311a53740eb719124ff022c4279662c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
