@@ -16,6 +16,23 @@
       "message": "Hi Nacho. Does this change mean that we have to update all the tasks related to creating namespaces to include this support? And also in dci-openshift-app-agent?",
       "revId": "9595429f7311a53740eb719124ff022c4279662c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08330d53_b986bf25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-17T15:02:40Z",
+      "side": 1,
+      "message": "I am curious, it is weird that we have not seen any issue in our dailies before.",
+      "revId": "9595429f7311a53740eb719124ff022c4279662c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
