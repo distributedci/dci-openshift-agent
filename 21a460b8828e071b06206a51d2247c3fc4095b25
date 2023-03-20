@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c03bf862_3530f48c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-20T12:37:57Z",
+      "side": 1,
+      "message": "Nacho, is this related to 27786? I think the problem was introduced in change 27314\n\nThe omit can\u0027t work in that context because labels is not part of   community.kubernetes.k8s, it is a value of the definition. omit is an ansible command that works with module parameters.  My suggestion is to roll back that change (27314) as it is breaking the functionality.",
+      "revId": "21a460b8828e071b06206a51d2247c3fc4095b25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
