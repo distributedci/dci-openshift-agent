@@ -25,7 +25,7 @@
       kind: Namespace
       metadata:
         name: "{{ namespace }}"
-        labels: "{{ ns_labels | default('omit') }}"
+        labels: "{{ ns_labels | default(omit) }}"
 
 - name: "Labeling namespace to cover PodSecurity requirements"
   community.kubernetes.k8s:
