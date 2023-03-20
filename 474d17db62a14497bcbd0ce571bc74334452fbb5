@@ -33,6 +33,24 @@
       "message": "It should not harm 5 more mins, I provided some comments in CILAB-1005.",
       "revId": "474d17db62a14497bcbd0ce571bc74334452fbb5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5dceded_2d0cb007",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-03-20T16:13:47Z",
+      "side": 1,
+      "message": "In fact in the last job the error occurs, MCP was back to normal during the time logs were collected, that\u0027s why I have not increased the retries by a lot.",
+      "parentUuid": "e47fec2c_a9412fd9",
+      "revId": "474d17db62a14497bcbd0ce571bc74334452fbb5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
