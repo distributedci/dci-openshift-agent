@@ -16,6 +16,23 @@
       "message": "I increase the the retry to 5min more as we discuss during the CI duty sync",
       "revId": "474d17db62a14497bcbd0ce571bc74334452fbb5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e47fec2c_a9412fd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-03-20T15:54:27Z",
+      "side": 1,
+      "message": "It should not harm 5 more mins, I provided some comments in CILAB-1005.",
+      "revId": "474d17db62a14497bcbd0ce571bc74334452fbb5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
