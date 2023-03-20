@@ -199,6 +199,8 @@
     operator_group_spec:
       targetNamespaces:
         - openshift-logging
+    ns_labels:
+      openshift.io/cluster-monitoring: "true"
   when:
     - enable_logs_stack | bool or
       enable_clusterlogging | bool
