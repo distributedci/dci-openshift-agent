@@ -16,6 +16,24 @@
       "message": "Nacho, is this related to 27786? I think the problem was introduced in change 27314\n\nThe omit can\u0027t work in that context because labels is not part of   community.kubernetes.k8s, it is a value of the definition. omit is an ansible command that works with module parameters.  My suggestion is to roll back that change (27314) as it is breaking the functionality.",
       "revId": "21a460b8828e071b06206a51d2247c3fc4095b25",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebb582fd_5fb7072e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-20T13:31:59Z",
+      "side": 1,
+      "message": "oh. Thanks for the hint, Tony.\n\nI thought I had removed all the usage of omit, in 27314.\n\nI\u0027ll take a look.\n\nOK, actually, the problem does come fro 27314, but it looks like the issue is caused by this line in the k8s module call:\n\nlabels: \"{{ ns_labels | default(\u0027omit\u0027) }}\"\n\nWhere omit should not have been in quotes.\n\nThat was a mistake on my side, but I can\u0027t figure out how I got to make it.",
+      "parentUuid": "c03bf862_3530f48c",
+      "revId": "21a460b8828e071b06206a51d2247c3fc4095b25",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
