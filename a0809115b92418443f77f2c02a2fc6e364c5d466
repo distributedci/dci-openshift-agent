@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f95cb1e0_7bfafd9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-03-22T14:10:26Z",
+      "side": 1,
+      "message": "The last failure shows a weird behavior with the UI, it might be worth to take a look? ",
+      "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
