@@ -16,6 +16,23 @@
       "message": "The last failure shows a weird behavior with the UI, it might be worth to take a look? ",
       "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51a787e3_c730933d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-03-22T15:58:38Z",
+      "side": 1,
+      "message": "This would still test the \"regular\" assisted installer code path, not ABI/BILLI, as the default in crucible is still on-prem AI. If you want to test BILLI need to update test-runner to include some extra hints.",
+      "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
