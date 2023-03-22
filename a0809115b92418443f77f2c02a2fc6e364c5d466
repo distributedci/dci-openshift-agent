@@ -51,6 +51,24 @@
       "parentUuid": "51a787e3_c730933d",
       "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec77099d_82a29fbc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2023-03-22T17:14:16Z",
+      "side": 1,
+      "message": "\u003e Actually might be possible to just pass `Test-Args-Hints: use_agent_based_installer\u003dyes`\n\nI didn\u0027t want to test ABI, I wanted to test a change from crucible to see if the Assisted Installer was still working.",
+      "parentUuid": "40fbcd91_2c267941",
+      "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
