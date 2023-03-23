@@ -50,6 +50,23 @@
       "message": "LGTM\n\nbtw, no need to test the whole run, just to the part where it is validated.",
       "revId": "61c74c10f11bb6ad41522d97859a7e34ab8e6572",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "269619aa_acaafe53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-23T19:27:05Z",
+      "side": 1,
+      "message": "regate",
+      "revId": "61c74c10f11bb6ad41522d97859a7e34ab8e6572",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
