@@ -121,6 +121,24 @@
       "message": "Fred, I think you havae to take into account that, in this step, the crucible code to be used is cloned from what it\u0027s specified in the assisted_deploy_repo + assisted_deploy_version variables, which by default points to crucible main branch: https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/assisted-pre-run.yml#L101-L115\n\nmaybe here we\u0027d need to do something similar to what\u0027s done for tnf: override that variable with a file path and check if the assisted_deploy_Repo variable is a file path; if true, we\u0027re testing a crucible change in the debug job, and then we have to take that code instead.",
       "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1769589_b2516f46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-03-23T14:31:11Z",
+      "side": 1,
+      "message": "You could also point to a forked repo at a given SHA, no?",
+      "parentUuid": "cd421cad_a6918c2c",
+      "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
