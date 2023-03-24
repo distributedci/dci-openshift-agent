@@ -157,6 +157,24 @@
       "parentUuid": "c1769589_b2516f46",
       "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3adaeb43_aea78750",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-24T08:32:58Z",
+      "side": 1,
+      "message": "I think I am getting the point, but then, my impression is that the clone of Crucible repo in this task: https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/assisted-pre-run.yml#L101-L115, would be, in the end, useless in this case.\n\nI mean; the repo is cloned to place it in /var/lib/dci-openshift-agent/assisted_deploy_repo, but here, if we are not using that clone, but we\u0027re using the one from the change, should we omit this clone?",
+      "parentUuid": "31cc1827_e2b7e054",
+      "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
