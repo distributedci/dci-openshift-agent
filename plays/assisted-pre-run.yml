@@ -113,31 +113,6 @@
         retries: 3
         delay: 10
         until: not git_clone.failed
-
-      - name: "Prereq facts check"
-        vars:
-          ssh_public_check: "{{ not (generate_ssh_keys | default(True)) }}"
-          mirror_certificate_check: "{{ ((use_local_mirror_registry | default(False)) == True) and ((setup_registry_service | default(True)) == False) }}"
-        include_role:
-          name: prereq_facts_check
-
-      - name: "Populate image_hashes for relevant images"
-        include_role:
-          name: get_image_hash
-
-      - name: "Parse openshift version"
-        include_role:
-          name: populate_mirror_registry
-          tasks_from: var_check.yml
-
-      - name: "Pull openshift binaries"
-        include_role:
-          name: populate_mirror_registry
-          tasks_from: prerequisites.yml
-        vars:
-          downloads_path: "{{ ansible_env.HOME }}"
-          release_image_remote: "{{ ocp_release_data['container_image'].split('@')[0] }}"
-          config_file_path: "{{ dci_cluster_configs_dir }}"
       rescue: &teardown_error
         - name: Run the teardown error handler
           block:
@@ -166,6 +141,111 @@
               include_tasks: failure.yml
           delegate_to: localhost
           ignore_unreachable: true
+
+- name: Process KVM nodes
+  hosts: bastion
+  vars_files:
+    - ../group_vars/all
+  tasks:
+    - block:
+      - name: Process kvm nodes
+        include_role:
+          name: process_kvm_nodes
+        when: (setup_vms | default(true))
+      rescue: *teardown_error
+
+- name: Provision VMS
+  hosts: vm_hosts
+  gather_facts: "{{ (setup_vms | default((kvm_nodes | default([])) | length | int >= 1)) | bool }}"
+  vars:
+    SETUP_VMS: "{{ setup_vms | default((kvm_nodes | default([])) | length | int >= 1) }}"
+  vars_files:
+    - ../group_vars/all
+  tasks:
+    - block:
+      - name: Destroy vms
+        include_role:
+          name: destroy_vms
+        when: SETUP_VMS | bool
+        tags:
+          - destroy_vms
+
+      - name: Setup vm host network
+        include_role:
+          name: setup_vm_host_network
+        when: (SETUP_VM_BRIDGE | default(SETUP_VMS)) | bool
+
+      - name: Configure firewall for vm_bridge_zone
+        block:
+          - name: Move bridge to designated firewall zone
+            community.general.nmcli:
+              conn_name: "{{ vm_bridge_name }}"
+              state: present
+              zone: "{{ vm_bridge_zone }}"
+
+          - name: Create Iptables NAT chain
+            iptables:
+              table: nat
+              chain: POSTROUTING
+              source: '{{ machine_network_cidr }}'
+              destination: '! {{ machine_network_cidr }}'
+              jump: MASQUERADE
+              protocol: all
+              comment: Ansible NAT Masquerade
+
+          - name: Manage IPv4 forwarding
+            sysctl:
+              name: net.ipv4.ip_forward
+              value: '1'
+              state: present
+              reload: True
+        when:
+          - (SETUP_VM_BRIDGE | default(SETUP_VMS)) | bool
+          - vm_bridge_zone is defined
+        become: true
+
+      - name: Create vms
+        include_role:
+          name: create_vms
+        when: SETUP_VMS | bool
+        tags:
+          - setup_vms
+      rescue: *teardown_error
+
+- hosts: localhost
+  become: false
+  gather_facts: false
+  vars_files:
+    - ../group_vars/all
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+  tasks:
+    - block:
+      - name: "Prereq facts check"
+        vars:
+          ssh_public_check: "{{ not (generate_ssh_keys | default(True)) }}"
+          mirror_certificate_check: "{{ ((use_local_mirror_registry | default(False)) == True) and ((setup_registry_service | default(True)) == False) }}"
+        include_role:
+          name: prereq_facts_check
+
+      - name: "Populate image_hashes for relevant images"
+        include_role:
+          name: get_image_hash
+
+      - name: "Parse openshift version"
+        include_role:
+          name: populate_mirror_registry
+          tasks_from: var_check.yml
+
+      - name: "Pull openshift binaries"
+        include_role:
+          name: populate_mirror_registry
+          tasks_from: prerequisites.yml
+        vars:
+          downloads_path: "{{ ansible_env.HOME }}"
+          release_image_remote: "{{ ocp_release_data['container_image'].split('@')[0] }}"
+          config_file_path: "{{ dci_cluster_configs_dir }}"
+      rescue: *teardown_error
 
 - name: Setup NTP
   hosts: ntp_host
@@ -256,76 +336,6 @@
         include_role:
           name: populate_mirror_registry
         when: SETUP_REGISTRY_SERVICE == True
-      rescue: *teardown_error
-
-- name: Process KVM nodes
-  hosts: bastion
-  vars_files:
-    - ../group_vars/all
-  tasks:
-    - block:
-      - name: Process kvm nodes
-        include_role:
-          name: process_kvm_nodes
-        when: (setup_vms | default(true))
-      rescue: *teardown_error
-
-- name: Provision VMS
-  hosts: vm_hosts
-  gather_facts: "{{ (setup_vms | default((kvm_nodes | default([])) | length | int >= 1)) | bool }}"
-  vars:
-    SETUP_VMS: "{{ setup_vms | default((kvm_nodes | default([])) | length | int >= 1) }}"
-  vars_files:
-    - ../group_vars/all
-  tasks:
-    - block:
-      - name: Destroy vms
-        include_role:
-          name: destroy_vms
-        when: SETUP_VMS | bool
-        tags:
-          - destroy_vms
-
-      - name: Setup vm host network
-        include_role:
-          name: setup_vm_host_network
-        when: (SETUP_VM_BRIDGE | default(SETUP_VMS)) | bool
-
-      - name: Configure firewall for vm_bridge_zone
-        block:
-          - name: Move bridge to designated firewall zone
-            community.general.nmcli:
-              conn_name: "{{ vm_bridge_name }}"
-              state: present
-              zone: "{{ vm_bridge_zone }}"
-
-          - name: Create Iptables NAT chain
-            iptables:
-              table: nat
-              chain: POSTROUTING
-              source: '{{ machine_network_cidr }}'
-              destination: '! {{ machine_network_cidr }}'
-              jump: MASQUERADE
-              protocol: all
-              comment: Ansible NAT Masquerade
-
-          - name: Manage IPv4 forwarding
-            sysctl:
-              name: net.ipv4.ip_forward
-              value: '1'
-              state: present
-              reload: True
-        when:
-          - (SETUP_VM_BRIDGE | default(SETUP_VMS)) | bool
-          - vm_bridge_zone is defined
-        become: true
-
-      - name: Create vms
-        include_role:
-          name: create_vms
-        when: SETUP_VMS | bool
-        tags:
-          - setup_vms
       rescue: *teardown_error
 
 - name: Setup TFTP
