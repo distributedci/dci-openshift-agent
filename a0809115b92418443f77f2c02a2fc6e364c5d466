@@ -175,6 +175,24 @@
       "parentUuid": "31cc1827_e2b7e054",
       "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af78ba88_668c88b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2023-03-24T10:41:59Z",
+      "side": 1,
+      "message": "I agreee with you, that can be optimized but it is not impacting so much so for now we can continue to it the same way as for baremetal-deploy and later if needed, we\u0027ll optimize it.",
+      "parentUuid": "3adaeb43_aea78750",
+      "revId": "a0809115b92418443f77f2c02a2fc6e364c5d466",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
