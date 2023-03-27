@@ -16,6 +16,23 @@
       "message": "Hi Bill, thanks for the change! Can you test using the `assisted` hint to validate it\u0027s working there?",
       "revId": "3df72bfc4ee2a5fa782e42268196997197084602",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c79286fa_3faeb289",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-03-27T18:55:35Z",
+      "side": 1,
+      "message": "check libvirt --assisted",
+      "revId": "3df72bfc4ee2a5fa782e42268196997197084602",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
