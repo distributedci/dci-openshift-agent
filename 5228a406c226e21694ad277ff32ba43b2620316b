@@ -16,6 +16,23 @@
       "message": "check libvirt --assisted",
       "revId": "5228a406c226e21694ad277ff32ba43b2620316b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88fb7697_eb2d8733",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-03-27T21:57:09Z",
+      "side": 1,
+      "message": "regate",
+      "revId": "5228a406c226e21694ad277ff32ba43b2620316b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
