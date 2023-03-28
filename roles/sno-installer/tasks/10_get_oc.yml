@@ -118,7 +118,6 @@
   shell:
     cmd: >
       {{ sno_tmp_dir.path }}/oc adm release extract
-      --registry-config {{ pullsecret_file }}
       --tools
       --from {{ pull_url }}
       --to "{{ cache_dir }}/{{ version }}"
