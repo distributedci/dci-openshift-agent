@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60ce3821_f7dc8d2b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "Hi Beto, I think this is a good idea to make easier to partners the access to these tools.\n\nNothing wrong with utilities, but I\u0027d prefer utils. \n\nIs missing the changes to the .spec\n\nLet\u0027s hear more feedback on this.",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e4abe4c_8f85bd7f",
+        "filename": "utilities/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "Maybe just \"DCI OpenShift Agent utilities\" ?",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "066129fc_c7429d00",
+        "filename": "utilities/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "I think this could be omitted as the same license applies to all the repo and is defined in the main README[1]\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/README.md#license",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f61738c_ecc8cb0e",
+        "filename": "utilities/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "IMO, this can be omitted as is already included in the main README[1]\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/README.md#contact",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b8b9d0b_f1289d8e",
+        "filename": "utilities/cleanup-scripts/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "Can omit bash as is is +x and has its shebang",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d610fc9_92b427dd",
+        "filename": "utilities/cleanup-scripts/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "I think we can omit from here to the EOF",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "723c8e33_338637d0",
+        "filename": "utilities/cleanup-scripts/clean-webartifact.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "Missing Licence header",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f3dc962_1671e133",
+        "filename": "utilities/cleanup-scripts/clean-webartifact.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "no shellcheck here",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a623ce3_a624d2f3",
+        "filename": "utilities/cleanup-scripts/cleanup.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "Missing License header",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "411e4b05_0a14abaa",
+        "filename": "utilities/cleanup-scripts/cleanup.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T22:48:14Z",
+      "side": 1,
+      "message": "Copyright (C) 2023 ? since is the first time here?",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
