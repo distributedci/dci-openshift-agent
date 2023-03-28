@@ -249,36 +249,34 @@ fi
 echo "$DESC" | tr -d '\r' | sort -u | $BASEDIR/extract-dependencies $DIR
 
 # process Test-Hints if not specified on the command line
-if [ -z "$VIRT" ]; then
-    if [[ sno =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*sno\s*" <<< $DESC; then
-        VIRT=--sno
-        if [ -n "$SNO_DCI_QUEUE" ]; then
-            DCI_QUEUE="$SNO_DCI_QUEUE"
-        fi
+if [[ sno =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*sno\s*" <<< $DESC; then
+    VIRT=--sno
+    if [ -n "$SNO_DCI_QUEUE" ]; then
+        DCI_QUEUE="$SNO_DCI_QUEUE"
     fi
+fi
 
-    if [[ sno-ai =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*sno-ai\s*" <<< $DESC; then
-        VIRT=--sno-ai
-        if [ -n "$SNO_AI_DCI_QUEUE" ]; then
-            DCI_QUEUE="$SNO_AI_DCI_QUEUE"
-        fi
+if [[ sno-ai =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*sno-ai\s*" <<< $DESC; then
+    VIRT=--sno-ai
+    if [ -n "$SNO_AI_DCI_QUEUE" ]; then
+        DCI_QUEUE="$SNO_AI_DCI_QUEUE"
     fi
+fi
 
-    if [[ assisted =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*assisted\s*" <<< $DESC; then
-        VIRT=--assisted
-        if [ -n "$ASSISTED_DCI_QUEUE" ]; then
-            DCI_QUEUE="$ASSISTED_DCI_QUEUE"
-        fi
+if [[ assisted =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*assisted\s*" <<< $DESC; then
+    VIRT=--assisted
+    if [ -n "$ASSISTED_DCI_QUEUE" ]; then
+        DCI_QUEUE="$ASSISTED_DCI_QUEUE"
     fi
+fi
 
-    if [[ libvirt =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*libvirt\s*" <<< $DESC; then
-        VIRT=--virt
-    fi
+if [[ libvirt =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*libvirt\s*" <<< $DESC; then
+    VIRT=--virt
+fi
 
-    if [[ no-check =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*no-check\s*" <<< $DESC; then
-        VIRT=--no-check
-        NO_DCI_QUEUE=1
-    fi
+if [[ no-check =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*no-check\s*" <<< $DESC; then
+    VIRT=--no-check
+    NO_DCI_QUEUE=1
 fi
 
 if [[ force-check =~ $SUPPORTED_HINTS ]] && grep -qi "^\s*Test-Hints:\s*force-check\s*" <<< $DESC; then
