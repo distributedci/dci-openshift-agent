@@ -25,6 +25,10 @@ install:
 	  install -p -D -m 755 $$script $(BUILDROOT)$(DATADIR)/dci-openshift-agent/$$script; \
 	done
 
+	for util in $$(ls utils); do \
+	  find util/$$util -type f -exec install -v -p -D -m 644 "{}" "$(BUILDROOT)$(DATADIR)/dci-openshift-agent/{}" \; ; \
+	done
+
 	for role in $$(ls roles); do \
 	  find roles/$$role -type f -exec install -v -p -D -m 644 "{}" "$(BUILDROOT)$(DATADIR)/dci-openshift-agent/{}" \; ; \
 	done
