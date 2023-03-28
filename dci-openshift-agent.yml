@@ -12,7 +12,7 @@
   tasks:
     - name: Display proxy settings
       debug:
-        msg: "http_proxy={{ http_proxy }} https_proxy={{ https_proxy }} no_proxy={{ no_proxy_list }}"
+        msg: "http_proxy={{ http_proxy }} https_proxy={{ https_proxy }} no_proxy={{ no_proxy_list }} {{ dci_pipeline_id }}"
 
     - name: Read credentials from env vars
       set_fact:
@@ -37,11 +37,11 @@
         pipeline_id: "{{ dci_pipeline_id }}"
       register: job_info
       when: job_info is not defined
-      no_log: "{{ dci_hide_secrets }}"
 
     - name: Set the job id
       set_fact:
         job_id: '{{ job_info.job.id }}'
+        pipeline_id: '{{ job_info.job.pipeline_id }}'
 
     - name: copy the job_id to the JOB_ID_FILE if it exists
       copy:
