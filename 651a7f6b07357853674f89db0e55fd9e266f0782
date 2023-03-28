@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7d33e149_248246a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Renamed the directory",
+      "parentUuid": "60ce3821_f7dc8d2b",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6e4abe4c_8f85bd7f",
         "filename": "utilities/README.md",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2023-03-28T22:48:14Z",
       "side": 1,
       "message": "Maybe just \"DCI OpenShift Agent utilities\" ?",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "160cf267_8122bd68",
+        "filename": "utilities/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e4abe4c_8f85bd7f",
       "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bac0876c_abca2bed",
+        "filename": "utilities/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "066129fc_c7429d00",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8f61738c_ecc8cb0e",
@@ -65,6 +119,24 @@
       "writtenOn": "2023-03-28T22:48:14Z",
       "side": 1,
       "message": "IMO, this can be omitted as is already included in the main README[1]\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/README.md#contact",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c688fc1e_3bdbff96",
+        "filename": "utilities/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f61738c_ecc8cb0e",
       "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28bdcfdd_95f23cc8",
+        "filename": "utilities/cleanup-scripts/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b8b9d0b_f1289d8e",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d610fc9_92b427dd",
@@ -99,6 +189,24 @@
       "writtenOn": "2023-03-28T22:48:14Z",
       "side": 1,
       "message": "I think we can omit from here to the EOF",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fae39cc5_df2a76e0",
+        "filename": "utilities/cleanup-scripts/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3d610fc9_92b427dd",
       "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -120,6 +228,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "71689ab2_61c1bb45",
+        "filename": "utilities/cleanup-scripts/clean-webartifact.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "723c8e33_338637d0",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8f3dc962_1671e133",
@@ -133,6 +259,24 @@
       "writtenOn": "2023-03-28T22:48:14Z",
       "side": 1,
       "message": "no shellcheck here",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82f54d8f_1f765b5a",
+        "filename": "utilities/cleanup-scripts/clean-webartifact.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f3dc962_1671e133",
       "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -154,6 +298,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb9a8fa5_df5f76dd",
+        "filename": "utilities/cleanup-scripts/cleanup.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a623ce3_a624d2f3",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "411e4b05_0a14abaa",
@@ -167,6 +329,24 @@
       "writtenOn": "2023-03-28T22:48:14Z",
       "side": 1,
       "message": "Copyright (C) 2023 ? since is the first time here?",
+      "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0121744c_59944127",
+        "filename": "utilities/cleanup-scripts/cleanup.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-28T23:52:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "411e4b05_0a14abaa",
       "revId": "651a7f6b07357853674f89db0e55fd9e266f0782",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
