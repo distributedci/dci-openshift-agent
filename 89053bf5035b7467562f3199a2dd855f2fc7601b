@@ -50,6 +50,41 @@
       "message": "@Pierre, I\u0027m thinking... these changes mostly apply to the ocp-on-libvirt features of the dci-openshift-agent.\n\nMaybe these changes should also be applied to the dci-lab-setup code (https://github.com/dci-labs/dci-lab-setup). Don\u0027t you think?\n\nCould you take a look into the repo and either, let me know or submit a PR yourself?",
       "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd8b3151_ebfc3370",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-03-28T13:35:02Z",
+      "side": 1,
+      "message": "This pactch is still ready to merge, I am using it almost every day to redeploy my lab in rhel9",
+      "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59704127_b4121f52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-03-28T13:35:02Z",
+      "side": 1,
+      "message": "Yes, I think it can be interesting to update this another repo with these changes.",
+      "parentUuid": "34abf12f_d1e84836",
+      "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
