@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6000fd97_2bac85fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-28T19:20:40Z",
+      "side": 1,
+      "message": "I think this is still required, we do similarly for installers that make use of mirror-ocp-release[1] in disconnected envs\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/mirror-ocp-release/tasks/download.yml#L15",
+      "revId": "ab318f087c9e58de0ce251bbd6af3613cb5c2dd6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
