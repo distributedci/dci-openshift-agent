@@ -42,6 +42,7 @@
     - name: Set the job id
       set_fact:
         job_id: '{{ job_info.job.id }}'
+        pipeline_id: '{{ job_info.job.pipeline_id }}'
 
     - name: copy the job_id to the JOB_ID_FILE if it exists
       copy:
