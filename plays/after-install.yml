@@ -53,7 +53,8 @@
         - DCI_CS_URL: "{{ hostvars.localhost.dci_cs_url }}"
       dci_component:
         name: "{{ kernel_version }}"
-        canonical_project_name: "rhcos_kernel {{ kernel_version }}"
+        display_name: "rhcos_kernel"
+        version: "{{ kernel_version }}"
         team_id: "{{ hostvars.localhost.job_info['job']['team_id'] }}"
         topic_id: "{{ hostvars.localhost.job_info['job']['topic_id'] }}"
         type: kernel
