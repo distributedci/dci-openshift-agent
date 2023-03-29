@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6913505f_67d33878",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-29T12:30:44Z",
+      "side": 1,
+      "message": "Some minor comments from my side, just details",
+      "revId": "0378930d01eae16966c0e7902f453dccc8f35fc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40e02b08_f3e6ece9",
+        "filename": "utils/cleanup-scripts/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-29T12:30:44Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 3,
+        "startChar": 188,
+        "endLine": 3,
+        "endChar": 189
+      },
+      "revId": "0378930d01eae16966c0e7902f453dccc8f35fc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b057456_fac18d78",
+        "filename": "utils/cleanup-scripts/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-29T12:30:44Z",
+      "side": 1,
+      "message": "Python, upper case",
+      "range": {
+        "startLine": 25,
+        "startChar": 16,
+        "endLine": 25,
+        "endChar": 22
+      },
+      "revId": "0378930d01eae16966c0e7902f453dccc8f35fc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d18d349_97d25628",
+        "filename": "utils/cleanup-scripts/cleanup.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-29T12:30:44Z",
+      "side": 1,
+      "message": "what if the partner is not using dci-pipeline or dci-queue? I\u0027d add in the readme that it\u0027s advisable to have them installed",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 78
+      },
+      "revId": "0378930d01eae16966c0e7902f453dccc8f35fc7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
