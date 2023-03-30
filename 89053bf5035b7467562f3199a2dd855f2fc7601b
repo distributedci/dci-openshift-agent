@@ -102,6 +102,23 @@
       "message": "lgtm",
       "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6883672e_be50ef4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-03-30T13:42:21Z",
+      "side": 1,
+      "message": "Thanks for your reviews",
+      "revId": "89053bf5035b7467562f3199a2dd855f2fc7601b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
