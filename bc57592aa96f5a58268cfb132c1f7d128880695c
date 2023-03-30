@@ -16,6 +16,23 @@
       "message": "4.10 - success\n4.11 - success\n4.12 - pending\n4.13 - Bug: RHCOS ISO grub.cfg path incompatible with assisted-image-service minimal-iso creator",
       "revId": "bc57592aa96f5a58268cfb132c1f7d128880695c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05bd18cf_92e9b654",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-30T21:14:31Z",
+      "side": 1,
+      "message": "This is working when the hub in 4.10. \nOn 4.12, the BMC seems to do not be responding to ACM calls. That is an issue that has been reported as a bug and we are still investigating. It is not related to what we are changing here.",
+      "revId": "bc57592aa96f5a58268cfb132c1f7d128880695c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
