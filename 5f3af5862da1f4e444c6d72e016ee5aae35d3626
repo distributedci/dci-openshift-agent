@@ -16,6 +16,23 @@
       "message": "check libvirt --assisted",
       "revId": "5f3af5862da1f4e444c6d72e016ee5aae35d3626",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "289e0c50_c7e97043",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2023-03-30T20:06:06Z",
+      "side": 1,
+      "message": "Add \"Test-Hints: assisted\" to the commit message to have the change validated with the right CI job.",
+      "revId": "5f3af5862da1f4e444c6d72e016ee5aae35d3626",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
