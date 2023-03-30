@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35cc1822_22243375",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-30T05:31:52Z",
+      "side": 1,
+      "message": "4.10 - success\n4.11 - success\n4.12 - pending\n4.13 - Bug: RHCOS ISO grub.cfg path incompatible with assisted-image-service minimal-iso creator",
+      "revId": "bc57592aa96f5a58268cfb132c1f7d128880695c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
