@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "840a057a_87c09a62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-30T12:42:52Z",
+      "side": 1,
+      "message": "LGTM, leaving some space to others to vote too in case I\u0027m missing something",
+      "revId": "34fd48a66bc4cd236b098d5ff8ed53787d80a0f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
