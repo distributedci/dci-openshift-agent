@@ -28,9 +28,29 @@
   set_fact:
     inherit_mirroring: true
   when:
-    - acm_registry_conf is defined
+    #- acm_registry_conf is defined
     - acm_user_ca_bundle is defined
     - acm_disconnected | bool
+
+- name: "Get Hub ICSP"
+  community.kubernetes.k8s_info:
+    api_version: operator.openshift.io/v1alpha1
+    kind: ImageContentSourcePolicy
+  register: hub_icsp
+
+- name: "Generate registry.conf entries for ACM containers"
+  vars:
+    hub_registry: "docker://{{ hub_icsp.resources[0].spec.repositoryDigestMirrors[0].mirrors[0] }}"
+    local_registry: "{{ hub_registry | urlsplit('netloc') }}"
+  set_fact:
+    acm_images: |
+      [[registry]]
+        prefix = ""
+        location = "registry.redhat.io/rhacm2"
+        mirror-by-digest-only = true
+
+        [[registry.mirror]]
+          location = "{{ local_registry }}/rhacm2"
 
 - name: "Create a Config map with registry entries and CA bundle"
   vars:
@@ -44,8 +64,8 @@
           app: assisted-service
       data:
         registries.conf: |
-          {{ acm_registry_conf | indent(4) }}
           {{ acm_user_registry | indent(4) }}
+          {{ acm_images | indent(4) }}
         ca-bundle.crt: |
           {{ acm_user_ca_bundle | indent(4) }}
   community.kubernetes.k8s:
