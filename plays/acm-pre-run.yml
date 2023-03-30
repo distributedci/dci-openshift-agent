@@ -79,6 +79,14 @@
 
           {% endfor %}
 
+          [[registry]]
+            prefix = ""
+            location = "registry.redhat.io/multicluster-engine"
+            mirror-by-digest-only = true
+
+            [[registry.mirror]]
+              location = "{{ hub_registry | urlsplit('netloc') }}/multicluster-engine"
+
     - name: "Set facts for install via ACM - disconnected"
       set_fact:
         acm_metal_iso_location: "{{ hub_webserver }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
