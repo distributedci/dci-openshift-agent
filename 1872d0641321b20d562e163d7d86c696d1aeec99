@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "283cfc5b_21c5fe68",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-31T23:04:03Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed, just in the changelog",
+      "revId": "1872d0641321b20d562e163d7d86c696d1aeec99",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
