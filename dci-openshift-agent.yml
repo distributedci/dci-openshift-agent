@@ -71,6 +71,10 @@
       debug:
         var: job_info.job.components
 
+    - name: debug msg
+      debug:
+        msg: hello
+
     - name: Get openshift_version from job.components
       set_fact:
         tags: "{{ item['tags'] }}"
