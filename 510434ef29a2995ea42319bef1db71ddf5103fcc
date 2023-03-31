@@ -33,6 +33,24 @@
       "message": "What it means this unqualified-search-registries?",
       "revId": "510434ef29a2995ea42319bef1db71ddf5103fcc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d133e7b_7a95153a",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-31T15:48:29Z",
+      "side": 1,
+      "message": "That is used in cases references to images are ambiguous and there is no clarity about which registry to use, so the registry listed there will be used to complete the path.",
+      "parentUuid": "c4549074_8e0a2585",
+      "revId": "510434ef29a2995ea42319bef1db71ddf5103fcc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
