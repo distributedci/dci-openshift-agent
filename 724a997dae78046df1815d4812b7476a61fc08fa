@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dace4bb8_9338d006",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-31T18:54:31Z",
+      "side": 1,
+      "message": "The new dir is missing in the Makefile, should look like similar to: https://github.com/redhat-cip/dci-openshift-agent/blob/master/Makefile#L24-L26",
+      "revId": "724a997dae78046df1815d4812b7476a61fc08fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90249a45_906e4f3f",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-31T18:54:31Z",
+      "side": 1,
+      "message": "missing release e.g.\n    0.5.5-1",
+      "revId": "724a997dae78046df1815d4812b7476a61fc08fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
