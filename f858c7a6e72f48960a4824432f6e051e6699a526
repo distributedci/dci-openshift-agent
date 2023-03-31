@@ -33,6 +33,24 @@
       "message": "recheck",
       "revId": "f858c7a6e72f48960a4824432f6e051e6699a526",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d4523a1_94dbcddf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-03-31T15:43:38Z",
+      "side": 1,
+      "message": "There was nothing wrong with your change Bill, I\u0027ve been troubleshooting and it has been a side effect after Fred\u0027s change was merged: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/27850. In BOS2 /etc/dci-openshift-agent/config file, we have defined VIRT\u003d--virt, and as Fred introduced the check of VIRT to check or not the hints, the config in place was breaking that logic. I\u0027ve removed that variable from the config file and now it\u0027s working as expected, I\u0027ve done a recheck of your change and now it\u0027s using assisted:\n\n```\n 3075 [server10]: env UPGRADE_ARGS\u003d APP_NAME\u003d APP_ARGS\u003d /var/lib/dci-openshift-agent/gerrit/27925-320e0a949a9d27f9addf4b62baaaa781/dci-openshift-agent/test-runner --assisted /var/lib/dci-openshift-agent/gerrit/27925-320e0a949a9d27f9addf4b62baaaa781 -p server10 (wd: /var/lib/dci-openshift-agent/gerrit/27925-320e0a949a9d27f9addf4b62baaaa781)\n```",
+      "parentUuid": "e17c26db_503e0898",
+      "revId": "f858c7a6e72f48960a4824432f6e051e6699a526",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
