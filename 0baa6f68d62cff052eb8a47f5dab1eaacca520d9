@@ -33,6 +33,23 @@
       "message": "Hello Nacho, \n\nThanks for getting this fixed. I was interested in seen the case that triggered this issue: Having 2 catalog providing the same packagemanifest. I see it worked fine here: \"Intel FEC operator is installed from quay.io and the cluster upgrades successfully (intel-nm)\"\n\nIt is a shame that an actual upgrade was not needed for the operator, but shoudn\u0027t be issues.. I think.\n\n",
       "revId": "0baa6f68d62cff052eb8a47f5dab1eaacca520d9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4cd0f21_d56c0340",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-03-31T08:26:13Z",
+      "side": 1,
+      "message": "Hi Beto,\n\nThanks for the approval. I\u0027ll merge it on Monday, so if anything breaks again it won\u0027t be there for the whole weeked.\n\nRegarding the upgrade of the operator, bear in mind this change does not only address the operators upgrading, but also de case when the current CSV in the different catalogs do not match.\n\nIn that scenario, if the agents picked the current csv from the wrong catalog, they could think an upgrade was in order but would be uncapable of setting up an upgrade path.\n\nBy making sure we use the right catalog source we guarantee operator upgrades are triggered only when they\u0027re actually needed.",
+      "revId": "0baa6f68d62cff052eb8a47f5dab1eaacca520d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
