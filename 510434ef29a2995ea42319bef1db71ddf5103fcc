@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70b74b73_8a271c23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-31T15:41:13Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "510434ef29a2995ea42319bef1db71ddf5103fcc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4549074_8e0a2585",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-03-31T15:41:13Z",
+      "side": 1,
+      "message": "What it means this unqualified-search-registries?",
+      "revId": "510434ef29a2995ea42319bef1db71ddf5103fcc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
