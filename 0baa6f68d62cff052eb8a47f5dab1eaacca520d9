@@ -16,6 +16,23 @@
       "message": "Just wrapping up all the test cases run.\n\nThis is the test case that triggered the revert on the merge. We run the vcp-edge-1.5, where the operator cluster-logging is created without stating any label for the namespace:\n\nhttps://www.distributed-ci.io/jobs?page\u003d1\u0026perPage\u003d20\u0026where\u003dtags:pipeline-id:8nodes.10014\n\nBesides this, we have the previous use cases:\n\n- Intel FEC operator is installed from makefile and the cluster upgrades successfully (intel-nm).\nhttps://www.distributed-ci.io/jobs?page\u003d1\u0026perPage\u003d20\u0026where\u003dtags:pipeline-id:cluster.709\n\n- Intel FEC operator is installed from certified-operators and the cluster upgrades successfully (intel-nm).\nhttps://www.distributed-ci.io/jobs?page\u003d1\u0026perPage\u003d20\u0026where\u003dtags:pipeline-id:cluster.756\n\n- Intel FEC operator is installed from quay.io and the cluster upgrades successfully (intel-nm).\nhttps://www.distributed-ci.io/jobs?page\u003d1\u0026perPage\u003d20\u0026where\u003dtags:pipeline-id:cluster.757\n\n- Upgrade job including any operator upgrade succeeds in BOS2.\nhttps://www.distributed-ci.io/jobs?page\u003d1\u0026perPage\u003d20\u0026where\u003dtags:queue-id:vpool.2949\n\n- Upgrade job including any operator upgrade succeeds in Dallas.\nhttps://www.distributed-ci.io/jobs?page\u003d1\u0026perPage\u003d20\u0026where\u003dtags:pipeline-id:8nodes.10042\n\nComments and reviews are welcome.",
       "revId": "0baa6f68d62cff052eb8a47f5dab1eaacca520d9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "901a8153_f67ae75f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-03-31T00:37:24Z",
+      "side": 1,
+      "message": "Hello Nacho, \n\nThanks for getting this fixed. I was interested in seen the case that triggered this issue: Having 2 catalog providing the same packagemanifest. I see it worked fine here: \"Intel FEC operator is installed from quay.io and the cluster upgrades successfully (intel-nm)\"\n\nIt is a shame that an actual upgrade was not needed for the operator, but shoudn\u0027t be issues.. I think.\n\n",
+      "revId": "0baa6f68d62cff052eb8a47f5dab1eaacca520d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
