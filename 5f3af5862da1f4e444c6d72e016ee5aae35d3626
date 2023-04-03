@@ -51,6 +51,24 @@
       "parentUuid": "289e0c50_c7e97043",
       "revId": "5f3af5862da1f4e444c6d72e016ee5aae35d3626",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "577bd7a6_21d5d490",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2023-04-03T06:26:25Z",
+      "side": 1,
+      "message": "\u003e ok, but how is that any different then running check libvirt --assisted??  It should be the same code path.\n\nyes but it avoids launching 2 jobs and it is automated if you do any new iteration.",
+      "parentUuid": "51bef8e1_f70986ec",
+      "revId": "5f3af5862da1f4e444c6d72e016ee5aae35d3626",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
