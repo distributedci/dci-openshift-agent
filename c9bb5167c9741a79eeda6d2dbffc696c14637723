@@ -16,6 +16,24 @@
       "message": "Hi Fred, in the current debug job, I see the crucible component related to the PR is created correctly: https://www.distributed-ci.io/jobs/9d79e53b-fde4-4aba-ae4e-ae69ff690321/jobStates?sort\u003ddate\u0026task\u003d1adeadf0-8f2a-470b-8be9-e9e9151edd8e, however it also appears in the job another crucible component related to the main branch. Shouldn\u0027t this one be skipped?",
       "revId": "c9bb5167c9741a79eeda6d2dbffc696c14637723",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d804139_c952554c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-03T08:00:57Z",
+      "side": 1,
+      "message": "For example, in cnf-certification-test jobs that come from PRs, only one component (the one related to the PR) is created: https://www.distributed-ci.io/jobs/5a8ea7ff-c5d0-4873-932a-e0c51a94724b/jobStates?sort\u003ddate",
+      "parentUuid": "fa3e9bcf_84a6f83b",
+      "revId": "c9bb5167c9741a79eeda6d2dbffc696c14637723",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
