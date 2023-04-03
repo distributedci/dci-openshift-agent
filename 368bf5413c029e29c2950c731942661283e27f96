@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "368bf5413c029e29c2950c731942661283e27f96",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb5ef676_29de620f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-03T07:52:53Z",
+      "side": 1,
+      "message": "LGTM, checked that the removal worked in the debug jobs",
+      "revId": "368bf5413c029e29c2950c731942661283e27f96",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
