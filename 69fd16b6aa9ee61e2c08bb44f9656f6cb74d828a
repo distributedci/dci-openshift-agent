@@ -63,6 +63,30 @@
       },
       "revId": "69fd16b6aa9ee61e2c08bb44f9656f6cb74d828a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8e7244b_2419bf63",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-04T12:48:49Z",
+      "side": 1,
+      "message": "Thanks Beto, I\u0027d prefer to use something like your code if I could, but I\u0027m having issues with the split, that is not a jinja filter[1] and map is expecting one.  Did it work on your side? \n\n[1] https://jinja.palletsprojects.com/en/3.0.x/templates/#list-of-builtin-filters",
+      "parentUuid": "5d0897ae_8be3697d",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 58
+      },
+      "revId": "69fd16b6aa9ee61e2c08bb44f9656f6cb74d828a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
