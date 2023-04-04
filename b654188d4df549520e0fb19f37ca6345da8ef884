@@ -33,6 +33,24 @@
       "message": "I don\u0027t like the idea of using a shell cmd here, it is not a good practice when you can do it in ansible with something like this:\n\nset_fact: \"{{ lookup(\u0027ansible.builtin.env\u0027, \u0027ANSIBLE_ROLES_PATH\u0027) | regex_replace(\u0027I_dont_get_it\u0027) }}\"\n\nAnd I don\u0027t understand what should be the output of the sed cmd here.",
       "revId": "b654188d4df549520e0fb19f37ca6345da8ef884",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0117fedc_e44d50be",
+        "filename": "plays/configure-jumpbox.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2023-04-04T09:02:30Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t like the idea of using a shell cmd here, it is not a good practice when you can do it in ansible with something like this:\n\u003e \n\u003e set_fact: \"{{ lookup(\u0027ansible.builtin.env\u0027, \u0027ANSIBLE_ROLES_PATH\u0027) | regex_replace(\u0027I_dont_get_it\u0027) }}\"\n\u003e \n\u003e And I don\u0027t understand what should be the output of the sed cmd here.\n\nThat\u0027s the only way I found because if you try what you propose, you will see that it doesn\u0027t work.",
+      "parentUuid": "74ccaaf2_73413e98",
+      "revId": "b654188d4df549520e0fb19f37ca6345da8ef884",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
