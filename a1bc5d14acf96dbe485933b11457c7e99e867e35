@@ -16,6 +16,23 @@
       "message": "Last patchset fixes the issues in rpm el8, not sure about why el9 failed, I\u0027ll trigger the build one more time",
       "revId": "a1bc5d14acf96dbe485933b11457c7e99e867e35",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0d691da_8c9693ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-04T19:09:10Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "a1bc5d14acf96dbe485933b11457c7e99e867e35",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
