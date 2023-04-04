@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.5.4
+Version:       0.5.5
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -96,6 +96,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Wed Apr  4 2023 Tony Garica <tonyg@redhat.com> 0.5.5-1
+- Just a test to validate rpm creation
+
 * Wed Mar  1 2023 Bill Peck <bpeck@redhat.com> 0.5.4-1
 - added requires on ansible-collection-ansible-utils
 
