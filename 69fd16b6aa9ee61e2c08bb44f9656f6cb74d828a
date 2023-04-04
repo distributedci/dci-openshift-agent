@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "712a649e_fabc604b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-04-04T07:47:22Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "69fd16b6aa9ee61e2c08bb44f9656f6cb74d828a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "00b3f08e_9985358a",
@@ -14,6 +31,30 @@
       "writtenOn": "2023-04-04T00:16:31Z",
       "side": 1,
       "message": "Looks good, I think that you can avoid the loop with something like this:\n\n        bmh_unique_states: \"{{ bmh_info | json_query(query) | map(\u0027split\u0027, \u0027 \u0027) | map(\u0027last\u0027) | unique }}\"",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 58
+      },
+      "revId": "69fd16b6aa9ee61e2c08bb44f9656f6cb74d828a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d0897ae_8be3697d",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-04-04T07:47:22Z",
+      "side": 1,
+      "message": "it looks like poetry to me",
+      "parentUuid": "00b3f08e_9985358a",
       "range": {
         "startLine": 33,
         "startChar": 0,
