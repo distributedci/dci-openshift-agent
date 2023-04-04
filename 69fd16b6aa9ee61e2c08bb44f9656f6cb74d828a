@@ -87,6 +87,30 @@
       },
       "revId": "69fd16b6aa9ee61e2c08bb44f9656f6cb74d828a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b523db17_f5e62993",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-04T13:57:33Z",
+      "side": 1,
+      "message": "\u003e Thanks Beto, I\u0027d prefer to use something like your code if I could, but I\u0027m having issues with the split, that is not a jinja filter[1] and map is expecting one.  Did it work on your side? \n\u003e \n\u003e [1] https://jinja.palletsprojects.com/en/3.0.x/templates/#list-of-builtin-filters\n\nTony, \n\nYes. It worked on my local. \n\n\n    - name: \"installer : Check all nodes have been provisioned\"\n      vars:\n        query: \"resources[*].status.provisioning.state\"\n        bmh_unique_states: \"{{ bmh_info | json_query(query) | map(\u0027split\u0027, \u0027 \u0027) | map(\u0027last\u0027) | unique }}\"\n      community.kubernetes.k8s_info:\n        kind: BareMetalHost\n        api: metal3.io/v1alpha1\n        namespace: openshift-machine-api\n      register: bmh_info\n      retries: 10\n      delay: 30\n      until: bmh_unique_states \u003d\u003d [\u0027provisioned\u0027]\n      \nNot a big deal. Some poetry is always good!",
+      "parentUuid": "b8e7244b_2419bf63",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 58
+      },
+      "revId": "69fd16b6aa9ee61e2c08bb44f9656f6cb74d828a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
