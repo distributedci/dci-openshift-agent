@@ -33,6 +33,24 @@
       "message": "missing release e.g.\n    0.5.5-1",
       "revId": "724a997dae78046df1815d4812b7476a61fc08fa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f780b124_53910aa5",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-04T19:08:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "90249a45_906e4f3f",
+      "revId": "724a997dae78046df1815d4812b7476a61fc08fa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

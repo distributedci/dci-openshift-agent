@@ -16,6 +16,24 @@
       "message": "I don\u0027t think this is needed, just in the changelog",
       "revId": "1872d0641321b20d562e163d7d86c696d1aeec99",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f75cdc7_b6123df9",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-04T19:08:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "283cfc5b_21c5fe68",
+      "revId": "1872d0641321b20d562e163d7d86c696d1aeec99",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
