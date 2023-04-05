@@ -69,6 +69,24 @@
       "parentUuid": "74ccaaf2_73413e98",
       "revId": "b654188d4df549520e0fb19f37ca6345da8ef884",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ceb72192_90b4ac59",
+        "filename": "plays/configure-jumpbox.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-04-05T09:59:08Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "0117fedc_e44d50be",
+      "revId": "b654188d4df549520e0fb19f37ca6345da8ef884",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

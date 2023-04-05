@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ce03331_86a35af2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-04-05T09:59:08Z",
+      "side": 1,
+      "message": "Let\u0027s not waste too much time on minor implementation details, let\u0027s merge it ",
+      "revId": "386d4953e98906c32a2698e341b2205eab133a13",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
