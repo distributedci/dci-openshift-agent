@@ -16,6 +16,23 @@
       "message": "LGTM, waiting for the test for +2",
       "revId": "a57ef5e39fc416a5574040a55cc57d4015a2ebde",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1465e9f_89263d60",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-05T17:03:42Z",
+      "side": 1,
+      "message": "Thanks for the fix Manuel!",
+      "revId": "a57ef5e39fc416a5574040a55cc57d4015a2ebde",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
