@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19414cb7_0e44401f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-05T16:59:41Z",
+      "side": 1,
+      "message": "LGTM, waiting for the test for +2",
+      "revId": "a57ef5e39fc416a5574040a55cc57d4015a2ebde",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
