@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "c02d3d550270e1acdabf73bf08330656959cbf89",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63ac3376_c8cb0282",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-04-06T12:28:16Z",
+      "side": 1,
+      "message": "I guess this is out of the scope of your change, but I take that using \"master\" here could lead to confusion since worker nodes may also be added to the list, right?",
+      "revId": "c02d3d550270e1acdabf73bf08330656959cbf89",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c146e17_66c4476d",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 10
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-04-06T12:28:16Z",
+      "side": 1,
+      "message": "It looks like these two commands should be run from within the \"for\" block above.\n\nThe way it\u0027s currently done, only the boostrap debugging data is taken from the last node in the nodes list which, by the way, could be a worker node, even if the openshift-baremetal-install documentation states that \"gather bootstrap\" is only intended for control plane nodes.\n\n```\nAvailable Commands:\n  bootstrap   Gather debugging data for a failing-to-bootstrap control plane\n```\n\nI only mention this because the last element in the nodes list is likely to be a worker node rather and a control plane one.\n\nThe way I understand it should work is, if we pass on a list of 5 nodes, we collect the data for all of them.",
+      "revId": "c02d3d550270e1acdabf73bf08330656959cbf89",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
