@@ -152,16 +152,20 @@ If you want to get started quickly with the OCP Agent to test the Assisted
 Installer the path is fairly easy, assuming you have a jumpbox that meets the
 requirements. Here's a quick step by step list of what you need to do:
 
-1.  Get the FQDN you want the Assisted Installer service to have, you could use
-    your own machine e.g. `hostname -f`
-1.  Figure out the DNS server used for your jumpbox, e.g. if using
-    `NetworkManager` you can do something like `nmcli dev show | awk '/IP4.DNS/
-    { print $2; exit }'`
-1.  Copy the contents of the file `samples/assisted/hosts.in` to
-    `/etc/dci-openshift-agent/hosts` and replace the placeholders for `@FQDN@`
-    and `@DNS@` with the values you figured in the previous steps
-    1.  Optionally, if you want this to work in a disconnected environment,
-        uncomment and adjust the section **Restricted Network configuration**
+1.  Generate the libvirt test inventory file from the sample template, there
+    are 3 templates to choose from: `sno` (single node openshift),
+    `controlplane` (only 3 control plane nodes), and `split` (3+3 control and
+    data plane nodes). To generate the inventory file, login to your jumpbox
+    and execute:
+
+    ```bash
+    INSTALL_TYPE=sno  # or 'controlplane' or 'split'
+    cd /usr/share/dci-openshift-agent
+    ansible-playbook -i samples/assisted_on_libvirt/dev/$INSTALL_TYPE samples/assisted_on_libvirt/parse-template.yml
+    ```
+
+1.  Copy the generated file from `$HOME/hosts` to
+    `/etc/dci-openshift-agent/hosts`
 1.  Switch to the `dci-openshift-agent` user and start the agent with
     `dci-openshift-agent-ctl -s`
 
