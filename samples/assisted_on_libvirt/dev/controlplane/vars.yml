@@ -1,0 +1,37 @@
+---
+all:
+  vars:
+    cluster_name: dciokd-cp
+    domain: metalkube.org
+    provisioner_hostname: "{{ ansible_fqdn }}"
+    provisioner_username: dci-openshift-agent
+    provisioner_dns: "{{ ansible_default_ipv4.address }}"
+    api_vip: 10.60.1.96
+    ingress_vip: 10.60.1.97
+    cache_dir_base: "/var/cache/dci-openshift-agent"  # customize as needed
+    downloads_path: "{{ cache_dir_base }}"
+    assisted_installer_dir: "{{ cache_dir_base }}/ai"
+    registry_dir: "{{ cache_dir_base }}/registry"
+    vm_create_scripts_dir: "{{ cache_dir_base }}/vm_scripts"
+    sushy_dir: "{{ cache_dir_base }}/sushy"
+    http_dir: "{{ cache_dir_base }}/http"
+    iso_download_dest_path: "{{ http_dir }}/data"
+    rootfs_directory: "{{ iso_download_dest_path }}/pxe"
+    setup_ntp_service: true
+    setup_dns_service: true
+    setup_vm_bridge: true
+    vm_bridge_ip: 10.60.1.190
+    vm_bridge_name: "{{ cluster_name }}-br"
+    vm_network_test_ip: "{{ vm_bridge_ip }}"
+    nodes:
+      masters:
+        - name: master-0
+          ip: 10.60.1.100
+          mac: "DE:AD:BE:EF:C0:00"
+        - name: master-1
+          ip: 10.60.1.101
+          mac: "DE:AD:BE:EF:C0:01"
+        - name: master-2
+          ip: 10.60.1.102
+          mac: "DE:AD:BE:EF:C0:02"
+...
