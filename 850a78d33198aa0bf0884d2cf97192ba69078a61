@@ -33,6 +33,23 @@
       "message": "Just an FYI - When I ran the playbook from /var/lib/dci-openshift-agent the hosts file that it generated was put in /var/lib/dci-openshift-agent/samples/assisted_on_libvirt/",
       "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17ecf312_bf21744c",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 5
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-04-11T21:23:13Z",
+      "side": 1,
+      "message": "I don\u0027t think we should default this to eno2.  Just because we are doing virt doesn\u0027t mean we are attaching it to a physical network.",
+      "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
