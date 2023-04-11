@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7726066_d2e7fc22",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:05:59Z",
+      "side": 1,
+      "message": "Overall LGTM, but I\u0027d prefer the order of some tasks to happen first in case of a failure",
+      "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5c69afe_57cdc37c",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:05:59Z",
+      "side": 1,
+      "message": "Wouldn\u0027t having the installer config first would be helpful in case there\u0027s a failure in the following tasks?\n\nShouldn\u0027t the cluster-operators be checked first? without them I\u0027m not sure the worker nodes could join the cluster",
+      "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "719c1c15_c4240ad7",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:05:59Z",
+      "side": 1,
+      "message": "Wouldn\u0027t having the installer config first would be helpful in case there\u0027s a failure in the following tasks?\n\nShouldn\u0027t the cluster-operators be checked first? without them I\u0027m not sure the worker nodes could join the cluster",
+      "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "632a088d_4cc770b4",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:05:59Z",
+      "side": 1,
+      "message": "This task seems duplicated from line 67",
+      "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
