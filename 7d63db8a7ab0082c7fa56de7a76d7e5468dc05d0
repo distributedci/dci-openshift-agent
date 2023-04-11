@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "7d63db8a7ab0082c7fa56de7a76d7e5468dc05d0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f229dfcd_2ca5b351",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-04-11T14:17:58Z",
+      "side": 1,
+      "message": "This looks good, but I don\u0027t understand why by the commit/PR message alone",
+      "revId": "7d63db8a7ab0082c7fa56de7a76d7e5468dc05d0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
