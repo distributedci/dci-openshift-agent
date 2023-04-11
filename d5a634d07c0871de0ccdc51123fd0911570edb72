@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbf38965_96026daf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-11T11:32:58Z",
+      "side": 1,
+      "message": "Change looks nice for me, only one question: I remember the general README was updated to include the files that are gathered on each job. Have you confirmed that the list is correct with this change?\nAlso, another question but not related to this change: should we do the same on dci-openshift-app-agent? We have a get-logs script there that should be then updated.",
+      "revId": "d5a634d07c0871de0ccdc51123fd0911570edb72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
