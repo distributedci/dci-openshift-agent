@@ -33,6 +33,23 @@
       "message": "LGTM, just need a working job in BOS2 to have everything",
       "revId": "d446e1d75b627e0a4c79a4b0d6790b774a5c0dfe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0260fd8_d4f69419",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T15:41:14Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "d446e1d75b627e0a4c79a4b0d6790b774a5c0dfe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
