@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "142a30da_56addc4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T00:37:22Z",
+      "side": 1,
+      "message": "Will implement as part of https://softwarefactory-project.io/r/c/dci-openshift-agent/+/28067",
+      "revId": "adbda9bee1cc653a5152d36ac70c9ea53aa7f4fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
