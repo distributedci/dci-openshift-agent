@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "af248f97_b4a53e21",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T23:00:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "686c1fa6_e06baccb",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56792920_8f655e70",
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fbcf968_88967776",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T23:00:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a75b46cd_bab657c7",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9207abf2_a4853ab2",
@@ -82,6 +118,24 @@
       "writtenOn": "2023-04-11T16:43:35Z",
       "side": 1,
       "message": "Would it be worth limiting the logs collected? I\u0027ve found that in cases we may run some jobs using tags on clusters that have been running for days and the logs collected are not that useful and only consume space and take longer to run.\n\nIf you agree we could do it by time or boot (as in the bootstrap logs, line 74), e.g.\n\n  sudo journalctl --all --since \"2 hours ago\"\n  OR\n  sudo journalctl --all --boot\n\nwdyt?",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "114a1a43_bb805424",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T23:00:52Z",
+      "side": 1,
+      "message": "two hours ago should be ok.",
+      "parentUuid": "1dac1f1d_79ad8f00",
       "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
