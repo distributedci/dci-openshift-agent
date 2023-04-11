@@ -16,6 +16,23 @@
       "message": "Currently this file would be in /var/lib/dci-openshift-agent.  dci-openshift-agent doesn\u0027t put anything in %docs yet.\n\nI\u0027m fine if we change this but remember this could affect the ci execution in bos2 if we change this.",
       "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "beb95e1b_b2f0be2a",
+        "filename": "docs/a-i.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-04-11T17:17:37Z",
+      "side": 1,
+      "message": "Just an FYI - When I ran the playbook from /var/lib/dci-openshift-agent the hosts file that it generated was put in /var/lib/dci-openshift-agent/samples/assisted_on_libvirt/",
+      "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
