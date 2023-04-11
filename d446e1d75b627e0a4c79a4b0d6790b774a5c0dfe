@@ -16,6 +16,23 @@
       "message": "Sorry for the noise, trying to replicate the issue.\n\nJob killed, so the namespace finalizers won\u0027t allow its removal: https://www.distributed-ci.io/jobs/26306c20-8baf-4c79-92f4-f48c45b17f1d/jobStates?sort\u003ddate\n\nOn this job: The assets created previously are properly removed and not blocking the new deployment\nhttps://www.distributed-ci.io/jobs/8cd12915-9011-40bd-9978-0316b77036c5/jobStates?sort\u003ddate\u0026task\u003d445d3037-8860-4d6e-a791-40d8fe108092",
       "revId": "d446e1d75b627e0a4c79a4b0d6790b774a5c0dfe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4e3e73e_28be6282",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-11T11:28:41Z",
+      "side": 1,
+      "message": "LGTM, just need a working job in BOS2 to have everything",
+      "revId": "d446e1d75b627e0a4c79a4b0d6790b774a5c0dfe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
