@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "686c1fa6_e06baccb",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:43:35Z",
+      "side": 1,
+      "message": "Let\u0027s take advantage and make the variable name capitalized to make easier to know in the script that this value is expected to come in an env var",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56792920_8f655e70",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:43:35Z",
+      "side": 1,
+      "message": "You probably want to do a git mv instead of remove/add to help keep the git history of this file",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a75b46cd_bab657c7",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:43:35Z",
+      "side": 1,
+      "message": "if you define ssh_ops above this line you could then define the prov_cmd as\n\n    prov_cmd\u003d\"timeout -v 20m ssh ${ssh_ops} ${user_at_provisioner}\"",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9207abf2_a4853ab2",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:43:35Z",
+      "side": 1,
+      "message": "suggestion\n\n   ${prov_cmd} ssh ${ssh_ops} \\",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1dac1f1d_79ad8f00",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:43:35Z",
+      "side": 1,
+      "message": "Would it be worth limiting the logs collected? I\u0027ve found that in cases we may run some jobs using tags on clusters that have been running for days and the logs collected are not that useful and only consume space and take longer to run.\n\nIf you agree we could do it by time or boot (as in the bootstrap logs, line 74), e.g.\n\n  sudo journalctl --all --since \"2 hours ago\"\n  OR\n  sudo journalctl --all --boot\n\nwdyt?",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bcfb1cf_16b9552d",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-11T16:43:35Z",
+      "side": 1,
+      "message": "Since this comes from an ENV var let define it with capital letters",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
