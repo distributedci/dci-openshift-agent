@@ -16,6 +16,24 @@
       "message": "Change looks nice for me, only one question: I remember the general README was updated to include the files that are gathered on each job. Have you confirmed that the list is correct with this change?\nAlso, another question but not related to this change: should we do the same on dci-openshift-app-agent? We have a get-logs script there that should be then updated.",
       "revId": "d5a634d07c0871de0ccdc51123fd0911570edb72",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83da13b3_c2fcb8d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T16:09:07Z",
+      "side": 1,
+      "message": "Thanks, Ramón for the check. After reviewing, I see that the following files were missing:\ninstall-config-yaml.txt\nopenshift_install.log\n\nTesting again on libvirt.\n\nYeah, I will check the get-logs script in DOAA",
+      "parentUuid": "bbf38965_96026daf",
+      "revId": "d5a634d07c0871de0ccdc51123fd0911570edb72",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
