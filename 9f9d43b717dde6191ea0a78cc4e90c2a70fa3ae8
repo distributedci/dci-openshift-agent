@@ -52,6 +52,42 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a042413c_8cc7260f",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T16:20:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c5c69afe_57cdc37c",
+      "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d715ad71_b4954dcd",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T16:20:28Z",
+      "side": 1,
+      "message": "yeah, good catch",
+      "parentUuid": "719c1c15_c4240ad7",
+      "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "632a088d_4cc770b4",
@@ -65,6 +101,24 @@
       "writtenOn": "2023-04-11T16:05:59Z",
       "side": 1,
       "message": "This task seems duplicated from line 67",
+      "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18dce043_4fb4f69c",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-11T16:20:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "632a088d_4cc770b4",
       "revId": "9f9d43b717dde6191ea0a78cc4e90c2a70fa3ae8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
