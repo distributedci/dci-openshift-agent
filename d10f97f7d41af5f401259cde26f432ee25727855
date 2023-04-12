@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "d10f97f7d41af5f401259cde26f432ee25727855",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ca3d19f_98185d2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-12T23:06:21Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll +2 after the dci-bot validation",
+      "revId": "d10f97f7d41af5f401259cde26f432ee25727855",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
