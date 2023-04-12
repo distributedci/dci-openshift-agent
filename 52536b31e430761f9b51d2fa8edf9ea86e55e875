@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9108f7fc_50ed0bef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-12T02:17:14Z",
+      "side": 1,
+      "message": "It is getting the expected logs now.",
+      "revId": "52536b31e430761f9b51d2fa8edf9ea86e55e875",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
