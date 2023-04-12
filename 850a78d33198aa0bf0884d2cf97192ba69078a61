@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c63a552_f6603b25",
+        "filename": "docs/a-i.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-04-12T18:10:57Z",
+      "side": 1,
+      "message": "good catch, amending the docs to point to the right location",
+      "parentUuid": "bf8b8c1d_c9653009",
+      "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "beb95e1b_b2f0be2a",
@@ -37,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "863ebbfc_7eb5660f",
+        "filename": "docs/a-i.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-04-12T18:10:57Z",
+      "side": 1,
+      "message": "This is odd, every time I have tested it has put it on ~dci-openshift-agent/ which user you ran the playbook as?",
+      "parentUuid": "beb95e1b_b2f0be2a",
+      "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "17ecf312_bf21744c",
         "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
         "patchSetId": 5
@@ -48,6 +84,24 @@
       "writtenOn": "2023-04-11T21:23:13Z",
       "side": 1,
       "message": "I don\u0027t think we should default this to eno2.  Just because we are doing virt doesn\u0027t mean we are attaching it to a physical network.",
+      "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecbb3459_3c32840e",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 5
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-04-12T18:10:57Z",
+      "side": 1,
+      "message": "Removed the default, now if you are setting up the bridge the interface is required",
+      "parentUuid": "17ecf312_bf21744c",
       "revId": "850a78d33198aa0bf0884d2cf97192ba69078a61",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
