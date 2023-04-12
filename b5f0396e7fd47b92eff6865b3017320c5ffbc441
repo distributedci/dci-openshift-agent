@@ -123,6 +123,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "648ac57b_2b7ce776",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-12T02:17:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9207abf2_a4853ab2",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1dac1f1d_79ad8f00",
@@ -171,6 +189,24 @@
       "writtenOn": "2023-04-11T16:43:35Z",
       "side": 1,
       "message": "Since this comes from an ENV var let define it with capital letters",
+      "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be287862_ac34dc61",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 13
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-12T02:17:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2bcfb1cf_16b9552d",
       "revId": "b5f0396e7fd47b92eff6865b3017320c5ffbc441",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
