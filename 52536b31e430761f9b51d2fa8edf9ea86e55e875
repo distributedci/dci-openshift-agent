@@ -16,6 +16,23 @@
       "message": "It is getting the expected logs now.",
       "revId": "52536b31e430761f9b51d2fa8edf9ea86e55e875",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "870c0b9f_a5ec8bbe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-12T14:49:33Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "52536b31e430761f9b51d2fa8edf9ea86e55e875",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
