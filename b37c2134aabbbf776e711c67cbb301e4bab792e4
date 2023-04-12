@@ -16,6 +16,24 @@
       "message": "I think the tasks related to obtaining and uploading the install should happen first than anything else, even if it implies doing another upload of additional files",
       "revId": "b37c2134aabbbf776e711c67cbb301e4bab792e4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97c849b2_5975c740",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-12T22:46:18Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fea9d917_849f61cb",
+      "revId": "b37c2134aabbbf776e711c67cbb301e4bab792e4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
