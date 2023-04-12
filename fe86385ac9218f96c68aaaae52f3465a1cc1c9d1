@@ -16,6 +16,24 @@
       "message": "Can we omit this variable entirely if it\u0027s not set in your vars?  Or will this work with vm_bridge_interface set to \"\"?",
       "revId": "fe86385ac9218f96c68aaaae52f3465a1cc1c9d1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82224a79_44f76767",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 8
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-04-12T19:00:45Z",
+      "side": 1,
+      "message": "there\u0027s a conditional just above defaulting to false so it wouldn\u0027t ask for this variable unless you want to, and if you want to setup your vm bridge then the conditional should be set imo",
+      "parentUuid": "d3d306f9_bcd30b10",
+      "revId": "fe86385ac9218f96c68aaaae52f3465a1cc1c9d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
