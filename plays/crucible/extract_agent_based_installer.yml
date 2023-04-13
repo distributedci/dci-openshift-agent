@@ -1,0 +1,24 @@
+---
+- name: Extract openshift installer
+  hosts: bastion
+  gather_facts: false
+  vars:
+    destination_hosts:
+      - bastion
+  vars_files:
+    - ../../group_vars/all
+  tasks:
+    - block:
+      - name: "assisted installer: pre-compute need to get hashes"
+        set_fact:
+          run_get_hash: "{{ assisted_installer_release_images | default({}) | length == 0  }}"
+      - name: "assisted installer: get image hash"
+        include_role:
+          name: get_image_hash
+        when: run_get_hash | bool
+      - name: "assisted installer: extract openshift installer"
+        include_role:
+          name: extract_openshift_installer
+      rescue:
+        - include_tasks: rescue.yml
+...
