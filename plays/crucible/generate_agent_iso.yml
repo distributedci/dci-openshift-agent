@@ -1,0 +1,21 @@
+---
+- name:  Generate agent iso using agent_based_installer
+  hosts: bastion
+  environment:
+    PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
+  vars_files:
+    - ../../group_vars/all
+  tasks:
+    - block:
+      - name: debug dci_cluster_configs_dir
+        debug:
+          var: dci_cluster_configs_dir
+      - name: debug ansible_env
+        debug:
+          var: ansible_env
+      - name: "assisted installer: generate agent iso"
+        include_role:
+          name: generate_agent_iso
+      rescue:
+        - include_tasks: rescue.yml
+...
