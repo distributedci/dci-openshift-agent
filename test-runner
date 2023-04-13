@@ -528,7 +528,7 @@ if [ -z "$KCFG" ]; then
             do_wait
         elif [ "$VIRT" = assisted ]; then
             OPTS+=(-e install_type=assisted)
-            setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
+            setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} "$@" &
             do_wait
         elif [ "$VIRT" = "sno-ai" ]; then
             OPTS+=(-e install_type=assisted)
