@@ -33,6 +33,23 @@
       "message": "Jorge, I\u0027m glad you find the issue with SSH connections, I see the 0775 -\u003e 0755 corrections, but it\u0027s not clear to me that they apply to the home of dci-openshift-agent user. Thanks.  ",
       "revId": "6f3a73925906bcf70bc61d5a4712b7c04de0558c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7daca3a8_eaaa0a38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-13T09:06:46Z",
+      "side": 1,
+      "message": "I\u0027ll launch a job in dallas, since we\u0027re using dci-pipeline there and it uses group permissions instead of user permissions, which are changed here (in BOS2, we use the agent-ctl, so directly it uses user permissions, not testing what it\u0027s changed here)",
+      "revId": "6f3a73925906bcf70bc61d5a4712b7c04de0558c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
