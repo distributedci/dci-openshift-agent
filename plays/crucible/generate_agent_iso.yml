@@ -1,0 +1,15 @@
+---
+- name:  Generate agent iso using agent_based_installer
+  hosts: bastion
+  vars_files:
+    - ../../group_vars/all
+  vars:
+    generated_dir: "{{ ansible_env.HOME }}/generated"
+  tasks:
+    - block:
+      - name: "assisted installer: generate agent iso"
+        include_role:
+          name: generate_agent_iso
+      rescue:
+        - include_tasks: rescue.yml
+...

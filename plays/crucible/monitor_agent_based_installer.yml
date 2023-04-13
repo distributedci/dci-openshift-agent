@@ -1,0 +1,16 @@
+---
+- name: Monitor install process of agent_based_installer
+  hosts: bastion
+  gather_facts: False
+  vars_files:
+    - ../../group_vars/all
+  vars:
+    generated_dir: "{{ ansible_env.HOME }}/generated"
+  tasks:
+    - block:
+      - name: "assisted installer: monitor agent based installer"
+        include_role:
+          name: monitor_agent_based_installer
+      rescue:
+        - include_tasks: rescue.yml
+...
