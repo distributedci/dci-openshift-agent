@@ -1,0 +1,14 @@
+---
+- name: Generate Assisted Installer Discovery ISO
+  hosts: bastion
+  gather_facts: False
+  vars_files:
+    - ../../group_vars/all
+  tasks:
+    - block:
+      - name: "assisted installer: generate discovery iso"
+        include_role:
+          name: generate_discovery_iso
+      rescue:
+        include_tasks: rescue.yml
+...
