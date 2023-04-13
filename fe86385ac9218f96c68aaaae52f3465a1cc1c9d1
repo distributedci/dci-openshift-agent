@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "229d0aba_fb6c1787",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-13T12:45:19Z",
+      "side": 1,
+      "message": "As usual with AI changes, please do not forget to launch a job in BOS2 to test the change with AI and AI-SNO, to confirm it\u0027s working fine",
+      "revId": "fe86385ac9218f96c68aaaae52f3465a1cc1c9d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3d306f9_bcd30b10",
