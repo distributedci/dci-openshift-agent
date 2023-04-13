@@ -1,0 +1,28 @@
+---
+- name: Create cluster
+  hosts: bastion
+  gather_facts: False
+  vars:
+    disconnected: "{{ use_local_mirror_registry | default(setup_registry_service | default(true)) }}"
+    ASSISTED_INSTALLER_HOST: "{{ hostvars['assisted_installer']['host'] }}"
+    ASSISTED_INSTALLER_PORT: "{{ hostvars['assisted_installer']['port'] }}"
+    pull_secret: "{{ hostvars['localhost']['pull_secret'] }}"
+    openshift_full_version: "{{ hostvars['localhost']['version'] }}"
+    CLUSTER_ID: "{{ cluster_id }}"
+    DOWNLOAD_DEST_FILE: "{{ discovery_iso_name }}"
+    DOWNLOAD_DEST_PATH: "{{ iso_download_dest_path | default('/opt/http_store/data') }}"
+    HTTP_AUTH_USERNAME: "{{ http_auth_username | default('none') }}"
+    HTTP_AUTH_PASSWORD: "{{ http_auth_password | default('none') }}"
+  vars_files:
+    - ../../group_vars/all
+  tasks:
+    - block:
+      - name: "assisted installer: create cluster"
+        include_role:
+          name: create_cluster
+#      - name: "assisted installer: patch cluster"
+#        include_role:
+#          name: patch_cluster
+      rescue:
+        include_tasks: rescue.yml
+...
