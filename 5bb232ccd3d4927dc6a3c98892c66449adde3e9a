@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0251743_a0e3c711",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-04-14T19:19:24Z",
+      "side": 1,
+      "message": "So this run verified that this PR still works when doing a regular assisted install.  For ABI, our inventories need to be updated in our CI system to support a network_config.  I will work on that next week.",
+      "revId": "5bb232ccd3d4927dc6a3c98892c66449adde3e9a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
