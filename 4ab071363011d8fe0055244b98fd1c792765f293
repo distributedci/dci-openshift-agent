@@ -16,6 +16,24 @@
       "message": "It does not seem to me like this is a workaround. I read this as \"fail when this conditions are met\"\n\nI guess I\u0027m not understanding why this is checked only when OCPBUGS-6676 is defined, wouldn\u0027t it make more sense to remove `OCPBUGS-6676` and always fail on these conditions?",
       "revId": "4ab071363011d8fe0055244b98fd1c792765f293",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84f1d1cb_0aab69a5",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-14T08:02:08Z",
+      "side": 1,
+      "message": "I agree, as a first step, I decided to keep some logic regarding OCPGUBS-6676 because, in the end, it is the original issue that caused the reinclusion of the MCP workaround, but it\u0027s true the workaround was wrongly applied, since the nodes were in NotReady status, and we don\u0027t have anything to do with that.\n\nI\u0027m going to do what you\u0027re proposing, to always fail if there\u0027s one node in NotReady status, to avoid wasting time applying the workaround for OCPBUGS-11779. I\u0027ll just only leave one comment to refer to OCPBUGS-6676, to remind that the failure comes from that bug.",
+      "parentUuid": "7a6ed368_00018999",
+      "revId": "4ab071363011d8fe0055244b98fd1c792765f293",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
