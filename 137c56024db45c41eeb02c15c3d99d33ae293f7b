@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e01b4e0_27e4bb97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-04-18T17:18:21Z",
+      "side": 1,
+      "message": "Regular code path works (assisted on prem) on my lab, will attempt ABI next",
+      "revId": "137c56024db45c41eeb02c15c3d99d33ae293f7b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
