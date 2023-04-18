@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c9d3811_eb9e40b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-04-18T21:30:11Z",
+      "side": 1,
+      "message": "And example of the reason to increase the logs can be seen in the journal logs of this job: https://www.distributed-ci.io/jobs/2b10751c-b457-4c7a-9abf-6b88998ef0c2/files\n\n\u003e - The task [Get logs from IPI/UPI deployment] ran at 2023-04-18 14:49:19 (17:49 time in the nodes)\n\u003e - all the uploaded journals logs start at 17:49 time\n\u003e - But master journal logs start at 17:00 and workers about 17:34\n\u003e - So we didn\u0027t get logs for about 30 mins in the masters, and 15 mins in the workers, enough for NOT capturing the initial boot like ovs-configuration service.\n\u003e - 4 hours should be fine for most cases, this was an SPK job, so a VCP might take longer.\n",
+      "revId": "c482e431267cc9432fce97869583b9a81d3db663",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
