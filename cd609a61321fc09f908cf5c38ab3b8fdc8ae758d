@@ -16,6 +16,23 @@
       "message": "Pretty sure you can bump to 2.18.1 too, unless you already tested and failed ?",
       "revId": "cd609a61321fc09f908cf5c38ab3b8fdc8ae758d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e069b9f_0327f501",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-04-19T14:22:45Z",
+      "side": 1,
+      "message": "I guess this is the same that Jorge points out, but the CI bot failure was caused because there is not assisted-installer-ui image with tag v2.17.4.\n\nv2.8.1 does exist, though.",
+      "revId": "cd609a61321fc09f908cf5c38ab3b8fdc8ae758d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
