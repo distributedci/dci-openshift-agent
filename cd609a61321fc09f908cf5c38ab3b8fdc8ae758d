@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1f992a5_4219c900",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-04-19T14:13:37Z",
+      "side": 1,
+      "message": "Pretty sure you can bump to 2.18.1 too, unless you already tested and failed ?",
+      "revId": "cd609a61321fc09f908cf5c38ab3b8fdc8ae758d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
