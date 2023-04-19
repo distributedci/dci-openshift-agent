@@ -50,6 +50,23 @@
       "message": "LGTM, my question is why post run was disable for ACM before?",
       "revId": "53a310166b6f1175943fac36b7ecbfa92fc01ced",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cf991a9_e8923880",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-04-19T15:01:38Z",
+      "side": 1,
+      "message": "It was disabled because during the testing it was not clear how to handle the files generated for the spoke instance. Now that we are able to use the same roles for any installer is ok to remove it. (And I forgot to remove it before hehe)\n\nThanks",
+      "revId": "53a310166b6f1175943fac36b7ecbfa92fc01ced",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
