@@ -453,7 +453,9 @@ REQS=$(ls */requirements.txt 2> /dev/null)
 
 if [ -n "$REQS" ]; then
     rm -rf .venv
-    virtualenv .venv
+    # use --system-site-packages to get libselinux-python from the
+    # system (not possible via pip)
+    virtualenv --system-site-packages .venv
     . .venv/bin/activate
 
     # substitute dependencies from the changes into requirements.txt
@@ -469,7 +471,7 @@ if [ -n "$REQS" ]; then
 
     # install python dependencies into the virtualenv
     for req in $REQS; do
-        pip install -r "$req"
+        pip install -I -r "$req"
         cd $(dirname "$req")
         python setup.py develop || :
         cd -
@@ -511,20 +513,20 @@ if [ -z "$KCFG" ]; then
         export PREFIX
 
         if [ "$VIRT" = virt ]; then
-            setsid ansible-playbook -v libvirt_destroy.yml ${VIRT_INV:-} &
+            setsid ansible-playbook -vv libvirt_destroy.yml ${VIRT_INV:-} &
             do_wait
-            setsid ansible-playbook -v libvirt_up.yml ${VIRT_INV:-} "$@" &
+            setsid ansible-playbook -vv libvirt_up.yml ${VIRT_INV:-} "$@" &
             do_wait
         elif [ "$VIRT" = sno ]; then
-            setsid ansible-playbook -v generate-hosts-file.yml ${VIRT_INV:-} &
+            setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
             do_wait
         elif [ "$VIRT" = assisted ]; then
             OPTS+=(-e install_type=assisted)
-            setsid ansible-playbook -v generate-hosts-file.yml ${VIRT_INV:-} &
+            setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
             do_wait
         elif [ "$VIRT" = "sno-ai" ]; then
             OPTS+=(-e install_type=assisted)
-            setsid ansible-playbook -v generate-hosts-file.yml ${VIRT_INV:-} &
+            setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
             do_wait
         fi
 
