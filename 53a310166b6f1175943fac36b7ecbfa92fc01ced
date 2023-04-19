@@ -16,6 +16,23 @@
       "message": "The outputs copy is working fine. Need to work on the -post inventory for the SNO RESOURCE.",
       "revId": "53a310166b6f1175943fac36b7ecbfa92fc01ced",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc341d7f_aba8e6c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-04-19T00:52:51Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "53a310166b6f1175943fac36b7ecbfa92fc01ced",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
