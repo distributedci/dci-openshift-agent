@@ -20,6 +20,7 @@
 - name: "Delete current cluster"
   include_tasks: delete-cluster.yml
   when:
+    - acm_cluster_ns.resources | length == 1
     - acm_force_deploy | bool
 
 - name: "Install a new cluster"
