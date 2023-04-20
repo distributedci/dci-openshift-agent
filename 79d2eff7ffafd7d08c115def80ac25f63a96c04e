@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d174546_ad66071f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-04-20T22:33:22Z",
+      "side": 1,
+      "message": "check libvirt --assisted -e use_agent_based_installer\u003dtrue",
+      "revId": "79d2eff7ffafd7d08c115def80ac25f63a96c04e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
