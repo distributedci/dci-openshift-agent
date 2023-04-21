@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "3b8ea6d516691b0ca0f9e436d3b88ad2b619384e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b175497_6506e92b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-21T12:06:51Z",
+      "side": 1,
+      "message": "I\u0027ve scheduled a job in dallas, apart from the one in BOS2, to see if it\u0027s passing, but it should. Giving a +2 as I\u0027m leaving now and I\u0027ve been tracking the issue today with Tatiana, this would fix the problem",
+      "revId": "3b8ea6d516691b0ca0f9e436d3b88ad2b619384e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
