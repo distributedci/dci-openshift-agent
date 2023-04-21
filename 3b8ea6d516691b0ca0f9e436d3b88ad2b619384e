@@ -16,6 +16,23 @@
       "message": "We got a permission issue while accessing releases.txt for nightly builds. It turned out to be permission denied for apache to access the folder located in the podman volume\n\n\u003e sh-4.2$ cd /var/www/html/\nsh-4.2$ ls\nls: cannot open directory .: Permission denied\n\nWe added :Z label to comply with the SELinux requirements and test it locally:\n\n\u003e podman run --name f75e71e7-e009-4c50-9b3f-27388b490010 --publish-all\u003dTrue --volume /home/dci/releases:/var/www/html:Z --detach\u003dTrue quay.io/centos7/httpd-24-centos7:latest\n\n\u003e [dci@ocp-svc ~]$ podman exec -u 0 -it 1789ce52140e /bin/sh\nsh-4.2# cd /var/www/html/\nsh-4.2# ls\n4.11.0-0.nightly-2023-04-05-183241 4.11.0-0.nightly-2023-04-07-124837\t4.11.0-0.nightly-2023-04-09-013420 4.11.0-0.nightly-2023-04-12-130625\t4.11.0-0.nightly-2023-04-15-035926 4.11.0-0.nightly-2023-04-18-150603\t4.11.37\n4.11.0-0.nightly-2023-04-07-035007 4.11.0-0.nightly-2023-04-07-193403\t4.11.0-0.nightly-2023-04-10-100905 4.11.0-0.nightly-2023-04-13-214244\t4.11.0-0.nightly-2023-04-17-145751 4.11.0-0.nightly-2023-04-20-101601\t4.11.38\n",
       "revId": "3b8ea6d516691b0ca0f9e436d3b88ad2b619384e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d34f0236_70490f56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-21T12:06:02Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla",
+      "revId": "3b8ea6d516691b0ca0f9e436d3b88ad2b619384e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
