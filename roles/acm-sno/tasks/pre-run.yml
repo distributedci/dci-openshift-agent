@@ -52,4 +52,23 @@
     - storage_class is defined
     - "not('true' in query_results)"
     - acm_sc is not defined
+
+- name: "Allow to expose virtual media via external network"
+  community.kubernetes.k8s_info:
+    api_version: metal3.io/v1alpha1
+    kind: Provisioning
+    name: provisioning-configuration
+  register: provisioning_cr
+
+- name: Disable provisioning
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: metal3.io/v1alpha1
+      kind: Provisioning
+      metadata:
+        name: provisioning-configuration
+      spec:
+        virtualMediaViaExternalNetwork: true
+  when:
+    - provisioning_cr.resources | length
 ...
