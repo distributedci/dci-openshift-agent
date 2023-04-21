@@ -68,19 +68,31 @@
 - name: "Nightly builds"
   when: hostvars.localhost.build == "nightly"
   block:
+  - name: Create directory with the proper permissions for webserver
+    vars:
+      cache_dir: >-
+        {{ hostvars.localhost.provision_cache_store |
+            default((hostvars.localhost.ansible_env.HOME, 'releases') |
+            join('/')) }}
+    file:
+      path: "{{ cache_dir }}/webserver"
+      state: directory
+      mode: 0755
+    delegate_to: localhost
+
   - name: "Start artifact webserver"
     vars:
       cache_dir: >-
         {{ hostvars.localhost.provision_cache_store |
-           default((hostvars.localhost.ansible_env.HOME, 'releases') |
-           join('/')) }}
+            default((hostvars.localhost.ansible_env.HOME, 'releases') |
+            join('/')) }}
     containers.podman.podman_container:
       name: "{{ hostvars.localhost.job_id }}"
       image: quay.io/centos7/httpd-24-centos7:latest
       state: started
       publish_all: true
       volumes:
-        - "{{ cache_dir }}:/var/www/html"
+        - "{{ cache_dir }}/webserver:/var/www/html:Z"
     register: aw_container
     delegate_to: localhost
 
