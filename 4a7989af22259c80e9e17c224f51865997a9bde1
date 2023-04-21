@@ -33,6 +33,24 @@
       "message": "wouldn\u0027t be better to include the \"setype: httpd_sys_content_t\" here? My understanding was that the label was missing right?",
       "revId": "4a7989af22259c80e9e17c224f51865997a9bde1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4acaa5e9_bb362be9",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-04-21T14:28:28Z",
+      "side": 1,
+      "message": "thank you Manny, let me try it out",
+      "parentUuid": "33b385ba_b3f59453",
+      "revId": "4a7989af22259c80e9e17c224f51865997a9bde1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
