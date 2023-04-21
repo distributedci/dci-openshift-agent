@@ -65,6 +65,12 @@
     import_role:
       name: installer
 
+- name: Create directory with the proper permissions for webserver
+  file:
+    path: "{{ cache_dir }}/webserver"
+    state: directory
+    mode: 0755
+
 - name: "Nightly builds"
   when: hostvars.localhost.build == "nightly"
   block:
@@ -80,7 +86,7 @@
       state: started
       publish_all: true
       volumes:
-        - "{{ cache_dir }}:/var/www/html"
+        - "{{ cache_dir }}/webserver:/var/www/html:Z"
     register: aw_container
     delegate_to: localhost
 
