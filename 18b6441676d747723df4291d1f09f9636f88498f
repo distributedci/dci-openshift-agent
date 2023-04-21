@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "18b6441676d747723df4291d1f09f9636f88498f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf19632c_c0c8b51a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-21T14:39:16Z",
+      "side": 1,
+      "message": "Let\u0027s hold a bit on this one, it is really strange that only KS is seeing this and we haven\u0027t seen this in many other places",
+      "revId": "18b6441676d747723df4291d1f09f9636f88498f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
