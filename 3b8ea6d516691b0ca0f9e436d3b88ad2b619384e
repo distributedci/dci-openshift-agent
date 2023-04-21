@@ -67,6 +67,24 @@
       "message": "The Z option updates the context on the source directory, if you are not the owner you will have the ```Error: lsetxattr``` issue :/ ",
       "revId": "3b8ea6d516691b0ca0f9e436d3b88ad2b619384e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b716f822_2d34cf0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-04-21T13:17:41Z",
+      "side": 1,
+      "message": "yeah, exactly what we\u0027ve got testing in Dallas: https://www.distributed-ci.io/jobs/f6523bfb-eed7-4061-8fd6-9a354048eba9/jobStates \n\n\u003e TASK [Start artifact webserver] ********************************************************************\n2s\ntask path: /home/dciteam/gerrit/28192-9361b683a5621616fdce1dbb96eee03b/dci-openshift-agent/plays/ipi-install.yml:71\nfatal: [provisioner.cluster1.dfwt5g.lab -\u003e localhost]: FAILED! \u003d\u003e {\"changed\": false, \"msg\": \"Can\u0027t run container f6523bfb-eed7-4061-8fd6-9a354048eba9\", \"stderr\": \"Error: lsetxattr /opt/cache/cisco: operation not permitted\\n\", \"stderr_lines\": [\"Error: lsetxattr /opt/cache/cisco: operation not permitted\"], \"stdout\": \"\", \"stdout_lines\": []}\n\nI should think about another fix for our partner nightlies: https://www.distributed-ci.io/jobs/f75e71e7-e009-4c50-9b3f-27388b490010/jobStates?sort\u003ddate\u0026task\u003dde814abb-d4f0-410a-8339-75d9428a003a",
+      "parentUuid": "feb68a7a_9ded23d4",
+      "revId": "3b8ea6d516691b0ca0f9e436d3b88ad2b619384e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
