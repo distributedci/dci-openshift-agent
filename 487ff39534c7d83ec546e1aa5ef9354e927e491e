@@ -16,6 +16,23 @@
       "message": "In the test above Virtual media was used for the provisioning. \n\n$ grep virtual inventories/dallas/sno/sno1-cluster4.yml \n    acm_bmc_address: ilo5-virtualmedia://192.168.10.48/redfish/v1/Systems/1\n$ oc get bmh -n sno1 sno1 -o yaml | grep virtual\n    address: ilo5-virtualmedia://192.168.10.48/redfish/v1/Systems/1\n\nThe Ironic base URL is over the baremetal network IP:\n$ oc logs -n openshift-machine-api metal3-image-cache-ghn42 |grep IRONIC_BASE_URL\nDefaulted container \"metal3-httpd\" out of: metal3-httpd, metal3-machine-os-downloader (init)\n+ IRONIC_BASE_URL\u003dhttp://192.168.52.12\n",
       "revId": "487ff39534c7d83ec546e1aa5ef9354e927e491e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e80ac7e0_66f04975",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-21T22:27:19Z",
+      "side": 1,
+      "message": "LGTM!!",
+      "revId": "487ff39534c7d83ec546e1aa5ef9354e927e491e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
