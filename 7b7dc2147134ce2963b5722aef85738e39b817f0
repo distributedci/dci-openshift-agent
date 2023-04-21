@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eae71ea5_09101a25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-04-21T19:09:08Z",
+      "side": 1,
+      "message": "Let\u0027s instead document the requirement for those using provision_cache_store that is, *if* selinux is enabled, the right context and label is required to be in place, and can be set with:  sudo chcon -t container_file_t -l s0 /path/to/provision_cache_store",
+      "revId": "7b7dc2147134ce2963b5722aef85738e39b817f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
