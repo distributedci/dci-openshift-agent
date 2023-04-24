@@ -16,6 +16,23 @@
       "message": "Let\u0027s instead document the requirement for those using provision_cache_store that is, *if* selinux is enabled, the right context and label is required to be in place, and can be set with:  sudo chcon -t container_file_t -l s0 /path/to/provision_cache_store",
       "revId": "7b7dc2147134ce2963b5722aef85738e39b817f0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9dd90bc_b47d6205",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-04-24T07:42:24Z",
+      "side": 1,
+      "message": "We had a discussion with Tony about our problem with the nightly OCP installations at the partner\u0027s lab, which is triggered by the change in folder permissions merged on 13 Apr: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/28117\n\nWe discussed several possible solutions:\n\n- The first solution, that worked at partner\u0027s lab, which is to add a `:Z` label, does not work in Dallas because of the /opt/cache/cisco folder. This folder contains the backup for the switches and is owned by the root user. We can only use this solution after negotiating with Ryan to move that folder out of /opt/cache.\n    \n- The second solution, which is to move the webserver folder from /opt/cache to /opt/cache/webserver, would require a significant overhaul of the ocp-mirroring role as it is tightly coupled to the current location.\n\n- The simplest workaround is to manually change the context. It appears that Pierre had a similar problem in another partner\u0027s lab and found this solution:\n\n\u003e sudo /usr/bin/chcon -t container_file_t /opt/cache\nls -lZd /opt/cache   # should show secontext container_file_t\n\nWe\u0027re going to try it first.\n\n",
+      "revId": "7b7dc2147134ce2963b5722aef85738e39b817f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
