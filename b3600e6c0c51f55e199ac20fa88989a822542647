@@ -34,6 +34,23 @@
       "parentUuid": "a9b06c23_d4245549",
       "revId": "b3600e6c0c51f55e199ac20fa88989a822542647",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f31447ec_66bdb8c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-04-27T14:13:59Z",
+      "side": 1,
+      "message": "Looks good to me as well.\n\nHere comes my +2 if Jorge\u0027s work does not end up replacing this change.\n\nJust a question: I see we have a host group named tftp_host in the bos2 inventories which is not present in your sample. Does it mean it\u0027s not needed here, or is any of the inventories outdated?",
+      "revId": "b3600e6c0c51f55e199ac20fa88989a822542647",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
