@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "356a2b08_6f6db9f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-28T16:01:18Z",
+      "side": 1,
+      "message": "I\u0027ll increase the retries to have 6 more minutes waiting, I\u0027ve documented the reasoning in CILAB-1057, but it totally looks like a timing issue, nothing more than that",
+      "revId": "ee75b495c465acadfdacdce484b90ac07705e76a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
