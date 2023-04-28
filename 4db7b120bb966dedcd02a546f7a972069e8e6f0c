@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75a28e54_ea6721ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-28T08:48:16Z",
+      "side": 1,
+      "message": "CC Charles (CI Duty)\nThese are the jobs where I\u0027ve observed this, remember we\u0027re running daily jobs in BOS2 to test all installers:\n- https://www.distributed-ci.io/jobs/38c55341-4ed3-480e-a36e-4dc575e7432f/files\n- https://www.distributed-ci.io/jobs/94655d63-7da7-4ef7-994d-eee2921769d3/files",
+      "revId": "4db7b120bb966dedcd02a546f7a972069e8e6f0c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
