@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19597fa4_61280196",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-04-28T08:57:10Z",
+      "side": 1,
+      "message": "LGTM but leaving some space to other people in case something more is needed to be checked",
+      "revId": "ea8595901ddbddb85d43b23f79b318193b5e4981",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
