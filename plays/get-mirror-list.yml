@@ -3,6 +3,18 @@
   set_fact:
     mirror_list: "{{ opm_mirror_list | default([]) }}"
 
+- name: enable_sriov
+  debug:
+    var: enable_sriov
+
+- name: operators_index
+  debug:
+    var: operators_index
+
+- name: build_upstream_sriov
+  debug:
+    var: build_upstream_sriov
+
 - name: "Add operators if enable_sriov"
   set_fact:
     mirror_list: "{{ mirror_list + sriov_operator }}"
