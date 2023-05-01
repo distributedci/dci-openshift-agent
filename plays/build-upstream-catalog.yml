@@ -6,6 +6,7 @@
     sriov_bundle: "{{ dci_local_registry }}/telcoci/upstream/sriov-operator-bundle"
   when:
     - enable_sriov | bool
+    - build_upstream_sriov | default(true) | bool
 
 - name: Create catalog with upstream bundles
   vars:
