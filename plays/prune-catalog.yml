@@ -40,7 +40,11 @@
         chdir: "{{ tmp_prune.path }}"
         cmd: >
           set -x;
-          {{ dci_cluster_configs_dir }}/opm render {{ source_index }} >
+          {{ dci_cluster_configs_dir }}/opm render
+          {% if operators_index is defined %}
+          --skip-tls-verify
+          {% endif %}
+          {{ source_index }} >
           {{ tmp_prune.path }}/index-packages
       environment:
         - DOCKER_CONFIG: "{{ docker_conf.path }}"
