@@ -51,6 +51,24 @@
       "parentUuid": "e9dd90bc_b47d6205",
       "revId": "7b7dc2147134ce2963b5722aef85738e39b817f0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6110ef08_1a04f8f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-02T21:28:38Z",
+      "side": 1,
+      "message": "Turns out we *DO* have *some* control[1], for those cases where `provision_cache_store` is *NOT* defined, we create the directory, in this scenario we can set the right SELinux context: `container_file_t`.\n\nThis + documentaion would be a good solution for this change.\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L116-L122",
+      "parentUuid": "bb8a914e_c0bbce7a",
+      "revId": "7b7dc2147134ce2963b5722aef85738e39b817f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
