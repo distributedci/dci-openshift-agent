@@ -16,6 +16,24 @@
       "message": "Can we leave it in and commented out so it\u0027s easy for people to discover it?  Or do you think the crucible docs should be sufficient?",
       "revId": "449a12126d5411d770d374fc61a75cce9d5893de",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d420bd27_66b38461",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 12
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-05-03T17:42:51Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "6c3277bf_960af001",
+      "revId": "449a12126d5411d770d374fc61a75cce9d5893de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
