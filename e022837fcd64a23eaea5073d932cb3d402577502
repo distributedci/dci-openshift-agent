@@ -16,6 +16,23 @@
       "message": "setting the change to review to run libvirt jobs",
       "revId": "e022837fcd64a23eaea5073d932cb3d402577502",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1aef901_ac0a51b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-03T14:00:03Z",
+      "side": 1,
+      "message": "LGTM, Thanks working through this!",
+      "revId": "e022837fcd64a23eaea5073d932cb3d402577502",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
