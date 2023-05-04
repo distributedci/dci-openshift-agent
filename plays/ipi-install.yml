@@ -141,6 +141,8 @@
       name: node-prep
 
   - name: "installer : Run IPI installer"
+    environment:
+      OPENSHIFT_INSTALL_RELEASE_IMAGE_OVERRIDE: "{{ mor_registry_url }}/{{ mor_registry_path }}:{{ mor_version }}/tmp/libvirt-destroy.log"
     import_role:
       name: installer
 
