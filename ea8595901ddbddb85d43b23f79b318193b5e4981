@@ -68,6 +68,24 @@
       "parentUuid": "632d7bf1_36bbc76d",
       "revId": "ea8595901ddbddb85d43b23f79b318193b5e4981",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23f93b4a_92ec7915",
+        "filename": "roles/upi-installer/tasks/23_rhcos_image_paths.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-05-04T16:50:13Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7f50e164_0987333a",
+      "revId": "ea8595901ddbddb85d43b23f79b318193b5e4981",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
