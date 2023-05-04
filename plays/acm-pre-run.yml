@@ -1,15 +1,23 @@
 ---
 - name: "Get registry mirror registry details"
   block:
-    - name: "Get Hub ICSP"
+    - name: Find ImageDigestMirrorSet in the cluster
+      community.kubernetes.k8s_info:
+        api_version: config.openshift.io/v1
+        kind: ImageDigestMirrorSet
+      register: idms_res
+
+    - name: "Get Hub Image Source"
       community.kubernetes.k8s_info:
         api_version: operator.openshift.io/v1alpha1
-        kind: ImageContentSourcePolicy
-      register: hub_icsp
+        kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
+      register: hub_is
 
     - name: "Set hub_registry location"
+      vars:
+        hub_query: "spec.*[*].mirrors[0]"
       set_fact:
-        hub_registry: "docker://{{ hub_icsp.resources[0].spec.repositoryDigestMirrors[0].mirrors[0] }}"
+        hub_registry: "docker://{{ hub_is.resources[0] | json_query(hub_query) | flatten | first }}"
 
     - name: "Get hub cluster config"
       community.kubernetes.k8s_info:
@@ -58,29 +66,45 @@
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
 
-    - name: "Convert ICSP to registries.conf format"
+    - name: "Convert Image Source to registries.conf format"
       vars:
-        icsp_path: "{{ provision_cache_store }}/{{ version }}/imagecontentsourcepolicy.yaml"
+        img_src_paths:
+          - "{{ provision_cache_store }}/{{ version }}/imagesource.yaml"
+          - "{{ provision_cache_store }}/{{ version }}/imagecontentsourcepolicy.yaml"
+        hub_src_path: "{{ lookup('first_found', img_src_paths) }}"
+        hub_query: "spec.*[*].{mirrors: mirrors[0], source: source}"
         registries: >
-          {{ lookup('file', icsp_path ) |
+          {{ lookup('file', hub_src_path) |
              from_yaml |
-             json_query('spec.repositoryDigestMirrors[*].{ mirrors: mirrors[0], source: source  }')
+             json_query(hub_query) |
+             first
           }}
       set_fact:
         acm_registries: |
           unqualified-search-registries = ["registry.access.redhat.com", "docker.io"]
           short-name-mode = ""
 
-          {% for registry in registries %}
           [[registry]]
             prefix = ""
-            location = "{{ registry.source }}"
+            location = "quay.io/openshift-release-dev/ocp-v4.0-art-dev"
             mirror-by-digest-only = true
 
             [[registry.mirror]]
-              location = "{{ registry.mirrors }}"
+              location = "registry.dfwt5g.lab:4443/ocp-4.14/4.14.0-0.nightly-2023-09-02-132842"
 
-          {% endfor %}
+            [[registry.mirror]]
+              location = "registry.dfwt5g.lab:4443/ocp-4.13/4.13.0-0.nightly-2023-09-05-135358"
+
+          [[registry]]
+            prefix = ""
+            location = "registry.ci.openshift.org/ocp/release"
+            mirror-by-digest-only = true
+
+            [[registry.mirror]]
+              location = "registry.dfwt5g.lab:4443/ocp-4.14/4.14.0-0.nightly-2023-09-02-132842"
+
+            [[registry.mirror]]
+              location = "registry.dfwt5g.lab:4443/ocp-4.13/4.13.0-0.nightly-2023-09-05-135358"
 
           [[registry]]
             prefix = ""
@@ -118,7 +142,6 @@
         mor_pull_url: "{{ version_pull_url }}"
         mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
         mor_webserver_url: "{{ hub_webserver_url | default(None) }}"
-        mor_registry_url: "{{ hub_registry }}"
         mor_auths_file: "{{ dci_pullsecret_file }}"
         mor_force: true
         mor_install_type: "{{ install_type }}"
@@ -136,4 +159,3 @@
   when:
     - not (dci_disconnected | default(false) | bool)
     - acm_cluster_type == 'sno'
-...
