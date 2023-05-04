@@ -1,15 +1,20 @@
 ---
 - name: "Get registry mirror registry details"
   block:
-    - name: "Get Hub ICSP"
+    - name: "Get Hub Image Source"
+      vars:
+        hub_is_kind: "{{ 'ImageContentSourcePolicy' if version is version('4.13', '<=') else 'ImageDigestMirrorSet' }}"
       community.kubernetes.k8s_info:
         api_version: operator.openshift.io/v1alpha1
-        kind: ImageContentSourcePolicy
-      register: hub_icsp
+        kind: "{{ hub_is_kind }}"
+      register: hub_is
 
     - name: "Set hub_registry location"
+      vars:
+        hub_is_mirror: "{{ 'repositoryDigestMirrors' if version is version('4.13', '<=') else 'imageDigestMirrors' }}"
+        hub_mirror: "hub_is.resources[0].spec.{{ hub_is_mirror }}[0].mirrors[0]"
       set_fact:
-        hub_registry: "docker://{{ hub_icsp.resources[0].spec.repositoryDigestMirrors[0].mirrors[0] }}"
+        hub_registry: "docker://{{ hub_mirror }}"
 
     - name: "Get hub cluster config"
       community.kubernetes.k8s_info:
@@ -58,11 +63,11 @@
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
 
-    - name: "Convert ICSP to registries.conf format"
+    - name: "Convert Image Source to registries.conf format"
       vars:
-        icsp_path: "{{ provision_cache_store }}/{{ version }}/imagecontentsourcepolicy.yaml"
+        is_path: "{{ provision_cache_store }}/{{ version }}/imagesource.yaml"
         registries: >
-          {{ lookup('file', icsp_path ) |
+          {{ lookup('file', is_path ) |
              from_yaml |
              json_query('spec.repositoryDigestMirrors[*].{ mirrors: mirrors[0], source: source  }')
           }}
