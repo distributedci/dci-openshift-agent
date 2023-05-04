@@ -26,10 +26,10 @@
         mc_registry: "{{ dci_local_registry }}"
         mc_pullsecret: "{{ dci_pullsecret_file }}"
 
-    - name: "Append the ImageContentSourcePolicy file"
+    - name: "Append the Image Source file"
       set_fact:
-        icsp_files: "{{ icsp_files | default([]) + [mc_icsp_file.path] }}"
-      when: mc_icsp_file is defined
+        is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
+      when: mc_is_file is defined
 
     - name: "Create Red Hat disconnected catalogSource"
       include_role:
