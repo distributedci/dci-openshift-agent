@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c370b96_52878cf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-04T17:15:29Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ve checked the path this time 👍",
+      "revId": "e9e16f7ca507b55f3a4322f63a66977a593f8144",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
