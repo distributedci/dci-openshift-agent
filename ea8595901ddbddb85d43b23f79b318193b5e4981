@@ -33,6 +33,23 @@
       "message": "LGTM",
       "revId": "ea8595901ddbddb85d43b23f79b318193b5e4981",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "632d7bf1_36bbc76d",
+        "filename": "roles/upi-installer/tasks/23_rhcos_image_paths.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2023-05-04T14:44:40Z",
+      "side": 1,
+      "message": "It should not be \"qcow2.gz\" instead of qcow2\\.gz ?",
+      "revId": "ea8595901ddbddb85d43b23f79b318193b5e4981",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
