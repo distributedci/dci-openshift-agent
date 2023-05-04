@@ -38,21 +38,21 @@
       register: result
       until: result.rc == 0
 
-    - name: Generate ImageContentSourcePolicy
+    - name: Generate Image Source manifest
       shell: >
         set -o pipefail &&
         echo -e "{{ result.stdout }}" |
         sed -n '/apiVersion/,$p' |
         sed -e 's/name:.*/name: release-{{ version }}/'
-      register: icsp_release
+      register: is_release
 
-    - name: "Write mirrored image content source policy"
+    - name: Write Image Source manifest
       copy:
-        dest: "{{ mor_cache_dir }}/{{ mor_version }}/imagecontentsourcepolicy.yaml"
+        dest: "{{ mor_cache_dir }}/{{ mor_version }}/imagesource.yaml"
         owner: "{{ mor_owner }}"
         group: "{{ mor_group }}"
         mode: "0644"
         setype: httpd_sys_content_t
-        content: "{{ icsp_release.stdout }}"
+        content: "{{ is_release.stdout }}"
       become: true
 ...
