@@ -45,16 +45,20 @@
       --to-manifests={{ mc_tmp.path }}/manifests
   register: catalog_manifests_output
 
-- name: Set the icsp file
+- name: Set the Image Source file
   tempfile:
     state: file
-    prefix: "icsp_{{ (mc_catalog | basename).split(':')[0] }}."
-  register: mc_icsp_file
+    prefix: "imagesource_{{ (mc_catalog | basename).split(':')[0] }}."
+  register: mc_is_file
 
-- name: Copy the generated icsp file
+- name: Copy the generated Image Source file
+  vars:
+    is_manifest_files:
+      - "{{ mc_tmp.path }}/manifests/imageDigestMirrorSet.yaml"
+      - "{{ mc_tmp.path }}/manifests/imageContentSourcePolicy.yaml"
   copy:
-    src: "{{ mc_tmp.path }}/manifests/imageContentSourcePolicy.yaml"
-    dest: "{{ mc_icsp_file.path }}"
+    src: "{{ lookup('first_found', is_manifest_files)}}"
+    dest: "{{ mc_is_file.path }}"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
     mode: "0644"

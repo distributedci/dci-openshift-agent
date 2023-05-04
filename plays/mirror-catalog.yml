@@ -10,7 +10,7 @@
     - dci_local_registry is defined
     - dci_local_registry | length
 
-- name: "Append to list of ImageContentSourcePolicy files"
+- name: "Append to list of Image Source files"
   set_fact:
-    icsp_files: "{{ icsp_files | default([]) + [mc_icsp_file.path] }}"
-  when: mc_icsp_file is defined
+    is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
+  when: mc_is_file is defined
