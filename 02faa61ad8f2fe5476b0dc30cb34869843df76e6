@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-vanilla",
       "revId": "02faa61ad8f2fe5476b0dc30cb34869843df76e6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd54c4e5_63fcee24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-05T08:38:26Z",
+      "side": 1,
+      "message": "One reminder here: we have CNF jobs, like tnf-test-cnf, example-cnf, etc. where we also use ICSP, do we need to change them to use the new ImageDigestSources?",
+      "revId": "02faa61ad8f2fe5476b0dc30cb34869843df76e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
