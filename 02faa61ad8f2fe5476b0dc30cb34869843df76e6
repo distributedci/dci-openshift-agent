@@ -33,6 +33,24 @@
       "message": "One reminder here: we have CNF jobs, like tnf-test-cnf, example-cnf, etc. where we also use ICSP, do we need to change them to use the new ImageDigestSources?",
       "revId": "02faa61ad8f2fe5476b0dc30cb34869843df76e6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d4ad1cc_399cb616",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-05T23:09:19Z",
+      "side": 1,
+      "message": "not at this time, IDS and passed via the install-config, the changes for the ICSP will need to be applied post deployment, before the operators installation and during the upgrades. \n\nThat will be addressed in a separated CR.",
+      "parentUuid": "bd54c4e5_63fcee24",
+      "revId": "02faa61ad8f2fe5476b0dc30cb34869843df76e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
