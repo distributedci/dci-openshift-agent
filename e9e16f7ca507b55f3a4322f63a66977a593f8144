@@ -16,6 +16,23 @@
       "message": "LGTM, I\u0027ve checked the path this time 👍",
       "revId": "e9e16f7ca507b55f3a4322f63a66977a593f8144",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "243c846d_97215fa6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-05-05T14:50:11Z",
+      "side": 1,
+      "message": "tested locally",
+      "revId": "e9e16f7ca507b55f3a4322f63a66977a593f8144",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
