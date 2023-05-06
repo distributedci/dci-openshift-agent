@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71ca9ca4_24b4552e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-06T03:33:33Z",
+      "side": 1,
+      "message": "There\u0027s some progress, installation seemed for the most part OK, but is strange that I don\u0027t see ImageDigestMirrorSet\n\n$ oc get crd |grep -i image\nconfigs.imageregistry.operator.openshift.io                 2023-05-06T02:20:30Z\nimagecontentsourcepolicies.operator.openshift.io            2023-05-06T02:20:10Z\nimagepruners.imageregistry.operator.openshift.io            2023-05-06T02:20:33Z\nimages.config.openshift.io                                  2023-05-06T02:20:10Z",
+      "revId": "3eca3d9a8a96cf608b262697bca6593189c6151e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
