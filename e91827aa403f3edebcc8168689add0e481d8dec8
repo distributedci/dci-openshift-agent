@@ -33,6 +33,23 @@
       "message": "LGTM, thanks Beto for checking this",
       "revId": "e91827aa403f3edebcc8168689add0e481d8dec8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e47d973_6d107963",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-08T19:07:08Z",
+      "side": 1,
+      "message": "Last job failed in the bootstrap of OCP 4.14. maybe trying a GA version can help? I see most 4.14 lately failed in the installation :/",
+      "revId": "e91827aa403f3edebcc8168689add0e481d8dec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
