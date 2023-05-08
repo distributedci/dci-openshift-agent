@@ -50,6 +50,23 @@
       "message": "Last job failed in the bootstrap of OCP 4.14. maybe trying a GA version can help? I see most 4.14 lately failed in the installation :/",
       "revId": "e91827aa403f3edebcc8168689add0e481d8dec8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffd78ac7_bb2a911a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-08T20:04:27Z",
+      "side": 1,
+      "message": "Confirmed that the logs and config files are related to the SNO instance in https://www.distributed-ci.io/jobs/136f5aaf-f2a2-48c9-a33a-c652a2609471/files\n\nMerging this",
+      "revId": "e91827aa403f3edebcc8168689add0e481d8dec8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
