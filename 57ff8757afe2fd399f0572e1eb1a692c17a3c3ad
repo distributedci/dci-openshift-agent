@@ -86,6 +86,24 @@
       "parentUuid": "01b7e50d_ba1f5454",
       "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "730a0f68_cfcf8e0b",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-09T16:44:07Z",
+      "side": 1,
+      "message": "Bootstrap VMs have a 192 IP address too (other than the API VIP), in our labs is predictable, but maybe something to add in the future it\u0027s a DNS record that points to that 192 IPv4 address, so the get_logs script can use the name to SSH, and we can bind it to an IPv6 address too. I think the APIVIP is fine for now.",
+      "parentUuid": "f7e2e1cd_5e1dd239",
+      "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
