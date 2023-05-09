@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "86a70b7c_5db21340",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-09T15:51:15Z",
+      "side": 1,
+      "message": "Job colleccting the bootstrap issues:\nhttps://www.distributed-ci.io/jobs/8570873e-1583-4a6e-808b-6623f9624d31/files\n\nJob that is not getting the bootstrap logs:\n - https://www.distributed-ci.io/jobs/0359b014-57d2-40b9-b3b1-d98fbf9de514/files",
+      "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ed76450a_134e41a6",
@@ -18,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "777ebd49_451e8a63",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-09T15:51:15Z",
+      "side": 1,
+      "message": "The script is only executed for IPI installations, so the install-config.yaml is available and we are already pulling that. Using ~/clusterconfigs/.openshift_install_state.json works but requires us to download another just to extract a value that we already have.\n\nI you do not mind, I will prefer extracting the data from the install-config",
+      "parentUuid": "ed76450a_134e41a6",
+      "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01b7e50d_ba1f5454",
@@ -31,6 +66,24 @@
       "writtenOn": "2023-05-09T13:58:59Z",
       "side": 1,
       "message": "Let\u0027s avoid apiVIP, since is deprecated in 4.13",
+      "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7e2e1cd_5e1dd239",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-09T15:51:15Z",
+      "side": 1,
+      "message": "That is used for the fallback and is needed if the provisioning network is not ready. Sometimes the VM is not reachable via 172 but 192 works. \n\nOnce we start using the apiVIPs array, we can update the script accordingly.\n\nThanks",
+      "parentUuid": "01b7e50d_ba1f5454",
       "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
