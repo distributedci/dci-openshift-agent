@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed76450a_134e41a6",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-09T13:58:59Z",
+      "side": 1,
+      "message": "since this only applies to IPI, you could use the json state file generated to extract the ip e.g.\n    jq -r \u0027.\"*installconfig.InstallConfig\".config.platform.baremetal.bootstrapProvisioningIP\u0027 ~/clusterconfigs/.openshift_install_state.json \n172.22.0.2",
+      "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01b7e50d_ba1f5454",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-09T13:58:59Z",
+      "side": 1,
+      "message": "Let\u0027s avoid apiVIP, since is deprecated in 4.13",
+      "revId": "57ff8757afe2fd399f0572e1eb1a692c17a3c3ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
