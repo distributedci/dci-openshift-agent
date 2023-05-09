@@ -23,12 +23,15 @@
         msg: "No workaround is defined, so the job has to fail at this point"
       when:
         - '"OCPBUGS-11779" not in dci_workarounds|default([])'
+        - '"OCPBUGS-13278" not in dci_workarounds|default([])'
 
-    - name: Apply workaround for OCPBUGS-11779
+    # The workaround for OCPBUGS-11779 and OCPBUGS-13278 is currently the same, but
+    # each bug comes from different places.
+    - name: Apply workaround for OCPBUGS-11779 or OCPBUGS-13278
       block:
         # If nodes are NotReady, we cannot do much more than failing at this point.
         # This is related to OCPBUGS-6676, just to avoid wasting time applying
-        # the OCPBUGS-11779 workaround in the case of having NotReady nodes.
+        # the OCPBUGS-11779/13278 workaround in the case of having NotReady nodes.
         - name: Check for workers with NotReady,SchedulingDisabled status
           shell: >
             {{ oc_tool_path }} get nodes --no-headers=true |
@@ -59,6 +62,6 @@
 
       when:
         - dci_workarounds is defined
-        - '"OCPBUGS-11779" in dci_workarounds'
+        - '"OCPBUGS-11779" in dci_workarounds or "OCPBUGS-13278" in dci_workarounds'
 
 ...
