@@ -16,6 +16,23 @@
       "message": "Hi, I\u0027ve tried to run a DCI job with tnf-test-cnf pipeline in dci-openshift-app-agent and it\u0027s failing in the include-components common role, can you take a look to the error in the last reported job?",
       "revId": "4ccb1a2b0253e9e6b8acd283591a109fdd53bb05",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45be950b_ced96eb1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-09T09:26:37Z",
+      "side": 1,
+      "message": "sorry, it was because of wrongly testing the CNF job, I think this is fine",
+      "revId": "4ccb1a2b0253e9e6b8acd283591a109fdd53bb05",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
