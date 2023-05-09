@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "907aab37_63e34efb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-09T18:43:42Z",
+      "side": 1,
+      "message": "Live tested this on a cluster3 that that was running a deployment, but I can run a job if needed:\n\nhttp://pastebin.test.redhat.com/1099630\n",
+      "revId": "ab54c14c1372798e204f8d88729fa98f16e091ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
