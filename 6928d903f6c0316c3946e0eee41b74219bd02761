@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e8de284_2cc8ea67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 33
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-09T09:51:53Z",
+      "side": 1,
+      "message": "Hi Bill, the change looks fine from my point of view, I\u0027ve left some comments to review.\nAlso, now that ABI seems to be validated, can we run some checks with ABI \u003d false to just test AI and validate it\u0027s working fine?",
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53334a1b_530eebe2",
+        "filename": "plays/crucible/deploy_assisted_installer_onprem.yml",
+        "patchSetId": 33
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-09T09:51:53Z",
+      "side": 1,
+      "message": "In the original code, a failure here was treated as \"error\", but with this rescue playbook, we are treating it as a \"failure\" instead",
+      "range": {
+        "startLine": 56,
+        "startChar": 8,
+        "endLine": 56,
+        "endChar": 35
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05bdbe46_d89f97d8",
+        "filename": "plays/crucible/rescue.yml",
+        "patchSetId": 33
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-09T09:51:53Z",
+      "side": 1,
+      "message": "I suppose there\u0027s a reason for this, but I\u0027d like to know why. Do we really need this rescue playbook, since we have the teardown_error and teardown_failure handlers in dci-openshift-agent.yml?\nThis also applies to the code under the plays/assisted...",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f2b3a2e_78eaf09f",
+        "filename": "test-runner",
+        "patchSetId": 33
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-09T09:51:53Z",
+      "side": 1,
+      "message": "I put this comment here but it\u0027s not related to this line, it\u0027s related to how we are going to handle ABI. Should we need to include a new hint to consider we are running ABI, just to clearly distinguishing it from AI? Because right now we are testing all installer in BOS2 on a daily basis, and we currently test AI and AI-SNO, and with this change, maybe we can add ABI too, but as it\u0027s following the same hint than assisted, it may be confusing how to differentiate between them when checking the jobs",
+      "range": {
+        "startLine": 523,
+        "startChar": 12,
+        "endLine": 523,
+        "endChar": 13
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
