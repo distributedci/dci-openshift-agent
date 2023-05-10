@@ -89,6 +89,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecd31ebb_6ecae906",
+        "filename": "plays/crucible/deploy_assisted_installer_onprem.yml",
+        "patchSetId": 33
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-05-10T18:16:34Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "65953bd9_528b121b",
+      "range": {
+        "startLine": 56,
+        "startChar": 8,
+        "endLine": 56,
+        "endChar": 35
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05bdbe46_d89f97d8",
