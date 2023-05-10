@@ -67,6 +67,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "65953bd9_528b121b",
+        "filename": "plays/crucible/deploy_assisted_installer_onprem.yml",
+        "patchSetId": 33
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-10T13:46:35Z",
+      "side": 1,
+      "message": "I mean here: https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/assisted-pre-run.yml#L449",
+      "parentUuid": "75b0db5a_63837988",
+      "range": {
+        "startLine": 56,
+        "startChar": 8,
+        "endLine": 56,
+        "endChar": 35
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "05bdbe46_d89f97d8",
         "filename": "plays/crucible/rescue.yml",
         "patchSetId": 33
