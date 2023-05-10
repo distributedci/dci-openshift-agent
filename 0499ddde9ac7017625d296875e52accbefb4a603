@@ -50,6 +50,23 @@
       "message": "LGTM",
       "revId": "0499ddde9ac7017625d296875e52accbefb4a603",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df6b69db_9153157c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-10T23:17:20Z",
+      "side": 1,
+      "message": "Interestingly there was no issues with ICSP:\n\n  $ tail -7 clusterconfigs/install-config.yaml.bkup \n\n  imageContentSources:\n  - mirrors: [\u0027registry.dfwt5g.lab:4443/ocp-4.14/4.14.0-ec.0\u0027]\n    source: quay.io/openshift-release-dev/ocp-release\n  - mirrors: [\u0027registry.dfwt5g.lab:4443/ocp-4.14/4.14.0-ec.0\u0027]\n    source: quay.io/openshift-release-dev/ocp-v4.0-art-dev\n  \n  $ ssh core@172.22.0.2 sudo cat /etc/containers/registries.conf 2\u003e/dev/null\n  [[registry]]\n  location \u003d \"quay.io/openshift-release-dev/ocp-release\"\n  insecure \u003d false\n  mirror-by-digest-only \u003d true\n\n  [[registry.mirror]]\n  location \u003d \"registry.dfwt5g.lab:4443/ocp-4.14/4.14.0-ec.0\"\n  insecure \u003d false\n\n\n  [[registry]]\n  location \u003d \"quay.io/openshift-release-dev/ocp-v4.0-art-dev\"\n  insecure \u003d false\n  mirror-by-digest-only \u003d true\n\n  [[registry.mirror]]\n  location \u003d \"registry.dfwt5g.lab:4443/ocp-4.14/4.14.0-ec.0\"\n  insecure \u003d false",
+      "revId": "0499ddde9ac7017625d296875e52accbefb4a603",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
