@@ -16,6 +16,23 @@
       "message": "Validation has been done and it\u0027s documented on CILAB-1064",
       "revId": "9cd01956f5b736c0ea3ba11795c738a881693568",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3949a367_194803ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-11T20:10:47Z",
+      "side": 1,
+      "message": "dupe of 28346?",
+      "revId": "9cd01956f5b736c0ea3ba11795c738a881693568",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
