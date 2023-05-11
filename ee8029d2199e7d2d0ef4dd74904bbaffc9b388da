@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b45649_9159b065",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 37
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-11T09:33:50Z",
+      "side": 1,
+      "message": "Some more feedback from my side, now that assisted-abi hint is included.\nBTW I\u0027ve created this change in BOS2 repo to be aligned with this new hint, and also the idea is to run this installer on our daily jobs in BOS2 once it\u0027s merged: https://github.com/dci-labs/bos2-ci-config/pull/63",
+      "revId": "ee8029d2199e7d2d0ef4dd74904bbaffc9b388da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f89cb409_55438b3f",
+        "filename": "dci-check-change",
+        "patchSetId": 37
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-11T09:33:50Z",
+      "side": 1,
+      "message": "Can you update the hints section in the d-o-a docs to include the new hint? https://github.com/redhat-cip/dci-openshift-agent/blob/master/docs/development.md#hints",
+      "revId": "ee8029d2199e7d2d0ef4dd74904bbaffc9b388da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c790f469_528f0095",
+        "filename": "test-runner",
+        "patchSetId": 37
+      },
+      "lineNbr": 543,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-11T09:33:50Z",
+      "side": 1,
+      "message": "This also applies for assisted and sno-ai: I think we don\u0027t need to update OPTS variable here to include the install_type variables and so on, because we already do this at the beginning with INSTALL_OPT variable, which is also passed when launching dci-openshift-agent. So, I\u0027ll propose to remove these three lines updating OPTS here, as they\u0027re redundant. For example, for virt and sno, we don\u0027t update that.",
+      "revId": "ee8029d2199e7d2d0ef4dd74904bbaffc9b388da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b603b7e4_3c4bb254",
+        "filename": "test-runner",
+        "patchSetId": 37
+      },
+      "lineNbr": 544,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-11T09:33:50Z",
+      "side": 1,
+      "message": "isn\u0027t it enough if we just put here `-e use_agent_based_installer\u003dtrue`? because I suppose `install_type\u003dassisted` is not needed here",
+      "range": {
+        "startLine": 544,
+        "startChar": 78,
+        "endLine": 544,
+        "endChar": 90
+      },
+      "revId": "ee8029d2199e7d2d0ef4dd74904bbaffc9b388da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
