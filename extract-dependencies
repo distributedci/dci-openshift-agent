@@ -73,7 +73,8 @@ while read line; do
               git fetch origin "pull/$pr/head:pr$pr"
           fi
           # check if branch is already merged
-          if git branch -d pr$pr; then
+          MERGED_PR=$(jq -r .merged "$dir-$pr.json")
+          if [ "$MERGED_PR" = true ]; then
               git checkout "$BRANCH"
           else
               git checkout pr$pr
