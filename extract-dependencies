@@ -73,8 +73,11 @@ while read line; do
               git fetch origin "pull/$pr/head:pr$pr"
           fi
           # check if branch is already merged
-          if git branch -d pr$pr; then
-              git checkout "$BRANCH"
+          MERGED_PR=$(jq -r .merged "$dir-$pr.json")
+          if [ "$MERGED_PR" = true ]; then
+              # extract the merge_commit_sha and move to that commit to really test what it is merged
+              MERGE_COMMIT_SHA=$(jq -r .merge_commit_sha "$dir-$pr.json")
+              git checkout "$MERGE_COMMIT_SHA"
           else
               git checkout pr$pr
               if [ -n "$GITHUB_SSH_ID" ]; then
