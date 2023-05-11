@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e59eef4_5251cb60",
+        "filename": "dci-check-change",
+        "patchSetId": 37
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-05-11T13:48:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f89cb409_55438b3f",
+      "revId": "ee8029d2199e7d2d0ef4dd74904bbaffc9b388da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c790f469_528f0095",
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "70b464db_2d7d3c7c",
+        "filename": "test-runner",
+        "patchSetId": 37
+      },
+      "lineNbr": 543,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-05-11T13:48:05Z",
+      "side": 1,
+      "message": "I\u0027ve removed this.  I ended up updating the bos2-ci files config to have the use_agent_based_installer.  This follows the same logic now.",
+      "parentUuid": "c790f469_528f0095",
+      "revId": "ee8029d2199e7d2d0ef4dd74904bbaffc9b388da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b603b7e4_3c4bb254",
@@ -65,6 +101,30 @@
       "writtenOn": "2023-05-11T09:33:50Z",
       "side": 1,
       "message": "isn\u0027t it enough if we just put here `-e use_agent_based_installer\u003dtrue`? because I suppose `install_type\u003dassisted` is not needed here",
+      "range": {
+        "startLine": 544,
+        "startChar": 78,
+        "endLine": 544,
+        "endChar": 90
+      },
+      "revId": "ee8029d2199e7d2d0ef4dd74904bbaffc9b388da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcdc81f0_35f92b26",
+        "filename": "test-runner",
+        "patchSetId": 37
+      },
+      "lineNbr": 544,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-05-11T13:48:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b603b7e4_3c4bb254",
       "range": {
         "startLine": 544,
         "startChar": 78,
