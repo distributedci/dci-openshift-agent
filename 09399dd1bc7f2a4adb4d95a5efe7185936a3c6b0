@@ -16,6 +16,41 @@
       "message": "LGTM, but I don\u0027t know if we should validate this first with an OCP 4.14 job in disconnected (bad thing is that all OCP 4.14 jobs are currently failing, it\u0027s difficult to validate)",
       "revId": "09399dd1bc7f2a4adb4d95a5efe7185936a3c6b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6db3d7db_d63d5891",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-11T14:03:04Z",
+      "side": 1,
+      "message": "CR 28344 will help to get more success in the 4.14 jobs, but it was merged after the dailies yesterday, I think we can test this PR now",
+      "parentUuid": "4485142a_1cfb2d9e",
+      "revId": "09399dd1bc7f2a4adb4d95a5efe7185936a3c6b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4444992_42167bea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-11T14:03:04Z",
+      "side": 1,
+      "message": "check dallas ocp-4.14-vanilla",
+      "revId": "09399dd1bc7f2a4adb4d95a5efe7185936a3c6b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
