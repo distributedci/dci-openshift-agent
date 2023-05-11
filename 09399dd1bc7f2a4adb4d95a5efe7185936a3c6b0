@@ -68,6 +68,24 @@
       "message": "I see last job didn\u0027t include the task in this change, and I think it\u0027s because the dependency 28344 it\u0027s also a doa change and that took precedence, so now that 28344 is merged, we can remove the dependency and test again :)",
       "revId": "09399dd1bc7f2a4adb4d95a5efe7185936a3c6b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb6525a5_dfe0fff2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-11T21:06:33Z",
+      "side": 1,
+      "message": "Yes, I\u0027ll remove the dependency now that it is merged, and include the rest of the changes to start testing.",
+      "parentUuid": "0e1f48c0_dc6eb812",
+      "revId": "09399dd1bc7f2a4adb4d95a5efe7185936a3c6b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
