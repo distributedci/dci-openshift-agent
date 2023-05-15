@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdfde9e2_bf366f5d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-15T17:20:15Z",
+      "side": 1,
+      "message": "I was confused on this change, but now is clear to me, I guess a nitpick would be on the commit message as it wasn\u0027t clear to me what was the intention of this change. In short I see this change is now: Using GitHub PR info to rely on its merge status",
+      "revId": "116277c95b2d2e3afc43c4acf5f79545b49ec638",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
