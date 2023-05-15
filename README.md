@@ -580,6 +580,7 @@ A DCI job produces a set of relevant configuration files, logs, reports, and tes
 | machine-configs.txt                            | Tests   | Debugging information regarding the machine configs status                                |
 | image-content-source-policies.yaml             | Tests   | Image Content Source policies applied to the cluster                                      |
 
+Some of the collected files are prefixed with the cluster name.
 
 ## Troubleshooting common issues
 
