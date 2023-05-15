@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7ef39e51_5c1f4be5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-15T23:17:04Z",
+      "side": 1,
+      "message": "Do not feel nervous, changing names is very common these days. 😄\n\nIMO, I think that it is good to not make a difference between hub and spoke and keep it generic. Do you think that having the cluster_X_log file will make it more complex to review the log files locally?\n\n\nI want to test the info provided by must-gather for ACM, so will have time to read other\u0027s opinions.\n\nThanks!",
+      "parentUuid": "a2780989_a8047802",
+      "revId": "c63487d15ad611203eaab33d30bac7b9eded595c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2ba43342_04a4ac5e",
         "filename": "plays/scripts/get-ocp-logs",
         "patchSetId": 1
@@ -31,6 +49,30 @@
       "writtenOn": "2023-05-15T21:32:13Z",
       "side": 1,
       "message": "I\u0027m afraid we don\u0027t provide yq  in doa, but we do in doaa[1]\n\nOne option is to pass as another env var the cluster name we have in the ansible execution\n\nAnother option is to introduce an *optional* prefix support instead. And *only* pass hub_ prefix in ACM hub or spoke_ prefix in ACM spoke node, would that be possible?\n\n[1] https://github.com/redhat-cip/dci-openshift-app-agent/blob/master/roles/chart-verifier/tasks/get-tools.yml#L17-L23",
+      "range": {
+        "startLine": 37,
+        "startChar": 105,
+        "endLine": 37,
+        "endChar": 107
+      },
+      "revId": "c63487d15ad611203eaab33d30bac7b9eded595c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "130f46ba_42b5e5da",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-15T23:17:04Z",
+      "side": 1,
+      "message": "Managed to obtain the cluster name without using other tools.",
+      "parentUuid": "2ba43342_04a4ac5e",
       "range": {
         "startLine": 37,
         "startChar": 105,
