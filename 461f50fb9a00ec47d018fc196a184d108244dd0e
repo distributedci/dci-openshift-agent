@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0aedfc3_4285e3f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-15T15:17:51Z",
+      "side": 1,
+      "message": "LGTM, reviewed, it\u0027s the current latest commit in main branch",
+      "revId": "461f50fb9a00ec47d018fc196a184d108244dd0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
