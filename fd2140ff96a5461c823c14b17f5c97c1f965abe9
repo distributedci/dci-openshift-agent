@@ -16,6 +16,23 @@
       "message": "check libvirt --assisted",
       "revId": "fd2140ff96a5461c823c14b17f5c97c1f965abe9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d33cbff_c2cf38fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 39
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-15T07:23:58Z",
+      "side": 1,
+      "message": "Thanks Bill for taking into account all my suggestions, I think we are ready for merging!",
+      "revId": "fd2140ff96a5461c823c14b17f5c97c1f965abe9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

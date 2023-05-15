@@ -160,6 +160,54 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "25ffead9_4fb9438b",
+        "filename": "plays/crucible/rescue.yml",
+        "patchSetId": 33
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-15T07:23:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7799862d_2ed24dcd",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e28aa08b_cd985998",
+        "filename": "plays/crucible/rescue.yml",
+        "patchSetId": 33
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-15T07:23:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7799862d_2ed24dcd",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f2b3a2e_78eaf09f",
@@ -197,6 +245,30 @@
       "side": 1,
       "message": "I\u0027m happy to add assisted-abi.  That should clarify the runs",
       "parentUuid": "2f2b3a2e_78eaf09f",
+      "range": {
+        "startLine": 523,
+        "startChar": 12,
+        "endLine": 523,
+        "endChar": 13
+      },
+      "revId": "6928d903f6c0316c3946e0eee41b74219bd02761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ac1db75_89f9ea92",
+        "filename": "test-runner",
+        "patchSetId": 33
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-15T07:23:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "82eabb19_82e28f03",
       "range": {
         "startLine": 523,
         "startChar": 12,
