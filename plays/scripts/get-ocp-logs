@@ -34,48 +34,53 @@ fi
 
 log_dir="${1}"
 
-# Gather host's MCP status
-cluster_nodes=$(${oc_path} get node -o=custom-columns=name:.metadata.name --no-headers 2>/dev/null )
-for h in ${cluster_nodes}; do
-  (echo "${h}"; ${oc_path} get nodes "${h}" -o yaml|grep -E 'desiredConfig|currentConfig') >> "${log_dir}/machine-configs.txt";
-done
+cluster_name=$(${oc_path} config view -o jsonpath='{.clusters[0].name}')
 
-# Collect must-gather
-for image in ${DCI_MUST_GATHER_IMAGES:-"registry.redhat.io/openshift4/ose-must-gather"}
-do
-    if [ -n "${REGISTRY}" ] && [ "${REGISTRY}" != ":" ]
-    then
-        image="${REGISTRY}/${image#*/}"
-    fi
-    must_gather_opts="${must_gather_opts} --image=${image}"
-done
+if [ -n "${cluster_name}" ]; then
+  # Gather host's MCP status
+  cluster_nodes=$(${oc_path} get node -o=custom-columns=name:.metadata.name --no-headers 2>/dev/null )
+  for h in ${cluster_nodes}; do
+    (echo "${h}"; ${oc_path} get nodes "${h}" -o yaml|grep -E 'desiredConfig|currentConfig') >> "${log_dir}/${cluster_name}_machine-configs.txt";
+  done
 
-must_gather_dir="${log_dir}/must_gather"
-mkdir -p "${must_gather_dir}"
-${oc_path} adm must-gather \
-  --dest-dir="${must_gather_dir}" \
-  ${must_gather_opts} \
-  >/dev/null
+  # Collect must-gather
+  for image in ${DCI_MUST_GATHER_IMAGES:-"registry.redhat.io/openshift4/ose-must-gather"}
+  do
+      if [ -n "${REGISTRY}" ] && [ "${REGISTRY}" != ":" ]
+      then
+          image="${REGISTRY}/${image#*/}"
+      fi
+      must_gather_opts="${must_gather_opts} --image=${image}"
+  done
 
-# Compress must-gather
-tar \
-  --use-compress-program='pigz --best --recursive' \
-  --directory "${log_dir}" \
-  --create \
-  --file "${must_gather_dir}.tar.gz" must_gather/
+  must_gather_dir="${log_dir}/${cluster_name}_must_gather"
+  mkdir -p "${must_gather_dir}"
+  ${oc_path} adm must-gather \
+    --dest-dir="${must_gather_dir}" \
+    ${must_gather_opts} \
+    >/dev/null
 
-rm -Rf "${must_gather_dir}"
+  # Compress must-gather
+  tar \
+    --use-compress-program='pigz --best --recursive' \
+    --directory "${log_dir}" \
+    --create \
+    --file "${must_gather_dir}.tar.gz" ${cluster_name}_must_gather/
 
-# Get some misc outputs
-${oc_path} version > "${log_dir}/version.txt"
-${oc_path} get clusterversion/version > "${log_dir}/clusterversion.txt"
-${oc_path} get clusteroperator > "${log_dir}/clusteroperator.txt"
-${oc_path} get network cluster -o yaml > "${log_dir}/clusternetwork.yaml"
-${oc_path} get nodes -o wide > "${log_dir}/nodes.txt"
-${oc_path} get nodes -o yaml > "${log_dir}/all-nodes.yaml"
-${oc_path} get events --all-namespaces --sort-by='.metadata.creationTimestamp' > "${log_dir}/events.txt"
-${oc_path} get pods --all-namespaces -o wide > "${log_dir}/pods.txt"
-${oc_path} get mcp >> "${log_dir}/machine-configs.txt"
-${oc_path} get mc >> "${log_dir}/machine-configs.txt"
-${oc_path} get imagecontentsourcepolicies -o yaml > "${log_dir}/image-content-source-policies.yaml"
-${oc_path} get csr > "${log_dir}/csr.txt"
+  rm -Rf "${must_gather_dir}"
+
+  # Get some misc outputs
+  ${oc_path} version > "${log_dir}/${cluster_name}_version.txt"
+  ${oc_path} get clusterversion/version > "${log_dir}/${cluster_name}_clusterversion.txt"
+  ${oc_path} get clusteroperator > "${log_dir}/${cluster_name}_clusteroperator.txt"
+  ${oc_path} get network cluster -o yaml > "${log_dir}/${cluster_name}_clusternetwork.yaml"
+  ${oc_path} get nodes -o wide > "${log_dir}/${cluster_name}_nodes.txt"
+  ${oc_path} get nodes -o yaml > "${log_dir}/${cluster_name}_all-nodes.yaml"
+  ${oc_path} get events --all-namespaces --sort-by='.metadata.creationTimestamp' > "${log_dir}/${cluster_name}_events.txt"
+  ${oc_path} get pods --all-namespaces -o wide > "${log_dir}/${cluster_name}_pods.txt"
+  ${oc_path} get mcp >> "${log_dir}/${cluster_name}_machine-configs.txt"
+  ${oc_path} get mc >> "${log_dir}/${cluster_name}_machine-configs.txt"
+  ${oc_path} get imagecontentsourcepolicies -o yaml > "${log_dir}/${cluster_name}_image-content-source-policies.yaml"
+  ${oc_path} get csr > "${log_dir}/${cluster_name}_csr.txt"
+
+fi
