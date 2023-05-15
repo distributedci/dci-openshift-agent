@@ -33,6 +33,24 @@
       "message": "dupe of 28346?",
       "revId": "9cd01956f5b736c0ea3ba11795c738a881693568",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a66036a8_0623edd0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-15T07:36:30Z",
+      "side": 1,
+      "message": "Hi Tony, it\u0027s not a dup at all, this change affects to d-o-a (so dci-check-change) and the other one affects to dci-pipeline (so dci-pipeline-check). We have to do the same in both scripts.",
+      "parentUuid": "3949a367_194803ff",
+      "revId": "9cd01956f5b736c0ea3ba11795c738a881693568",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
