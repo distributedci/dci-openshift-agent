@@ -16,6 +16,24 @@
       "message": "I was confused on this change, but now is clear to me, I guess a nitpick would be on the commit message as it wasn\u0027t clear to me what was the intention of this change. In short I see this change is now: Using GitHub PR info to rely on its merge status",
       "revId": "116277c95b2d2e3afc43c4acf5f79545b49ec638",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42d5c31a_bf94704f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-16T07:21:33Z",
+      "side": 1,
+      "message": "I\u0027ve included that in the change + a final suggestion made by Fred to also update the check for gerrit changes. Now it\u0027s fine.",
+      "parentUuid": "bdfde9e2_bf366f5d",
+      "revId": "116277c95b2d2e3afc43c4acf5f79545b49ec638",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
