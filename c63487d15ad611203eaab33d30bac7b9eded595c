@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a73f9a2f_232470ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-16T12:55:38Z",
+      "side": 1,
+      "message": "😊 not afraid of change, I\u0027m afraid of breaking others, for example, this change breaks analyze_jobs[1], we don\u0027t now what other partners are doing. I\u0027d support this change if we could check if other partners are using the logs for any sort of automation.\n\n\n[1] https://github.com/dci-labs/analyze-job/blob/master/log_map.yml",
+      "parentUuid": "ae52b04f_adc91d14",
+      "revId": "c63487d15ad611203eaab33d30bac7b9eded595c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2ba43342_04a4ac5e",
         "filename": "plays/scripts/get-ocp-logs",
         "patchSetId": 1
