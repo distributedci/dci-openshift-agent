@@ -50,6 +50,23 @@
       "message": "Testing: https://www.distributed-ci.io/jobs/17bbe604-3376-4f97-8463-ace1350aab55/jobStates?sort\u003ddate \n\n```\ndci-pipeline-check 28362 ocp-4.12-vanilla fake-cnf\n```",
       "revId": "36428a5a1ac7a37e387a0c393d2a741d21b63761",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4c90dee_bbf144fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-05-16T08:19:48Z",
+      "side": 1,
+      "message": "I think we should merge it; testing  using test-runner won\u0027t check if the patch fixes the issue as the path of crucible related playbooks is overridden, like this:\n```\n/home/dciteam/gerrit/28362-371aff22348d5247b4bdf399d7379a4c/dci-openshift-agent/plays/crucible/deploy_assisted_installer_onprem.yml\n```\n",
+      "revId": "36428a5a1ac7a37e387a0c393d2a741d21b63761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
