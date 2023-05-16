@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ae52b04f_adc91d14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-16T00:20:20Z",
+      "side": 1,
+      "message": "When we had hostnames with FQDNs, the log names included the domain, for example: \"journal_cluster.domain\", but we returned to short names and that was gone, I liked it because I could identify logs from diff clusters easily. So personally I\u0027ll be ok with that.",
+      "parentUuid": "7ef39e51_5c1f4be5",
+      "revId": "c63487d15ad611203eaab33d30bac7b9eded595c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2ba43342_04a4ac5e",
         "filename": "plays/scripts/get-ocp-logs",
         "patchSetId": 1
