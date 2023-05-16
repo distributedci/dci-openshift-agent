@@ -117,6 +117,30 @@
       },
       "revId": "c63487d15ad611203eaab33d30bac7b9eded595c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a44d76d_40f05f2b",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-16T22:37:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "130f46ba_42b5e5da",
+      "range": {
+        "startLine": 37,
+        "startChar": 105,
+        "endLine": 37,
+        "endChar": 107
+      },
+      "revId": "c63487d15ad611203eaab33d30bac7b9eded595c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
