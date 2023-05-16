@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c25a4785_34c2a243",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-16T08:55:09Z",
+      "side": 1,
+      "message": "I\u0027ve validated that now it is working fine by testing it in BOS2, with the following outputs for the changes included in this test:\n\n```\n++ jq -r .status ../28347.json                                                                                                                                                                                     \n+ \u0027[\u0027 NEW \u003d MERGED \u0027]\u0027                                                                                                                                                                                             \n+ git checkout gr28347                                                                                                                                                                                             \nSwitched to branch \u0027gr28347\u0027                                                                                                                                                                                       \n+ git fetch origin master                                                                                                                                                                                          \nFrom https://softwarefactory-project.io/r/dci-openshift-agent                                                                                                                                                      \n * branch            master     -\u003e FETCH_HEAD                                                                                                                                                                      \n+ git rebase origin/master                                                                                                                                                                                         \nSuccessfully rebased and updated refs/heads/gr28347.\n\n++ jq -r .merged ../cnf-certification-test-1081.json\n+ \u0027[\u0027 true \u003d true \u0027]\u0027\n+ git checkout main\nAlready on \u0027main\u0027\nYour branch is up to date with \u0027origin/main\u0027.\n\n++ jq -r .status ../I2f360bbb5ff62f05a3535375e7c07081cd3feb19.json\n+ \u0027[\u0027 NEW \u003d MERGED \u0027]\u0027\n+ git checkout grI2f360bbb5ff62f05a3535375e7c07081cd3feb19\nSwitched to branch \u0027grI2f360bbb5ff62f05a3535375e7c07081cd3feb19\u0027\n+ git fetch origin master\nFrom https://softwarefactory-project.io/r/dci-pipeline\n * branch            master     -\u003e FETCH_HEAD\n+ git rebase origin/master\nCurrent branch grI2f360bbb5ff62f05a3535375e7c07081cd3feb19 is up to date.\n\n++ jq -r .status ../If153177378e115741a5d8bd91d76631e49544e0e.json\n+ \u0027[\u0027 MERGED \u003d MERGED \u0027]\u0027\n+ git checkout master\nAlready on \u0027master\u0027\nYour branch is up to date with \u0027origin/master\u0027.\n```\n\nThe results are the expected ones.",
+      "revId": "822f4f7437c22cba9b8631a0a04fe1a16ece673c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
