@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dabe59d4_7390e5ee",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 8
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-16T21:18:11Z",
+      "side": 1,
+      "message": "yeah, to check if the kubeconfig is valid and run the other steps",
+      "parentUuid": "5b6b2b77_abc51a59",
+      "revId": "552dcfaae07f192bbfcbe09532115d9bab43a75b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ebc832f4_78176203",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-05-16T21:07:02Z",
       "side": 1,
       "message": "If cluster_name is empty you can exit earlier and avoid indenting the rest of the script",
+      "revId": "552dcfaae07f192bbfcbe09532115d9bab43a75b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9e8bb54_942ee5d2",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-16T21:18:11Z",
+      "side": 1,
+      "message": "yeah, that was the idea of having all inside the if, will exit then",
+      "parentUuid": "ebc832f4_78176203",
       "revId": "552dcfaae07f192bbfcbe09532115d9bab43a75b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
