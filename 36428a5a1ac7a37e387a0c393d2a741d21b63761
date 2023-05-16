@@ -33,6 +33,23 @@
       "message": "Thank you Manny, it\u0027s impacting our partners as well, let\u0027s merge",
       "revId": "36428a5a1ac7a37e387a0c393d2a741d21b63761",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe9a0eb3_9fd6a33e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-05-16T08:07:13Z",
+      "side": 1,
+      "message": "Testing: https://www.distributed-ci.io/jobs/17bbe604-3376-4f97-8463-ace1350aab55/jobStates?sort\u003ddate \n\n```\ndci-pipeline-check 28362 ocp-4.12-vanilla fake-cnf\n```",
+      "revId": "36428a5a1ac7a37e387a0c393d2a741d21b63761",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
