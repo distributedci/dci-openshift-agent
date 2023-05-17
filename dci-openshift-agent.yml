@@ -86,6 +86,11 @@
       with_items: "{{ tags }}"
       when: item.split(":")[0] == "build"
 
+    - name: Fail if build is nightly
+      fail:
+        msg: "nightly build. aborting."
+      when: "build == 'nightly"
+
     # Candidate builds are ga builds that haven't gone ga quite yet.
     # The following changes the build and version vars to look like ga
     # for the upstream install playbooks. The dci-feeder adds '-0.rc-$TIMESTAMP'
