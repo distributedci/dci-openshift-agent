@@ -33,6 +33,23 @@
       "message": "check libvirt --assisted-abi",
       "revId": "42db1886243794f2dcd650c1eb3b2f03c1fd2c75",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "628f5406_b88bde13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-05-19T14:03:10Z",
+      "side": 1,
+      "message": "check libvirt --assisted -e use_agent_based_installer\u003dtrue",
+      "revId": "42db1886243794f2dcd650c1eb3b2f03c1fd2c75",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
