@@ -9,8 +9,9 @@
 
 - name: "Write rhcos.json from command (>= 4.8)"
   shell: >
-    {{ mor_cache_dir }}/{{ mor_version }}/openshift-baremetal-install coreos print-stream-json >
-    {{ mor_cache_dir }}/{{ mor_version }}/rhcos.json
+    {{ mor_cache_dir }}/{{ mor_version }}/openshift-baremetal-install coreos print-stream-json
+  register:
+    rhcos
   when:
     - mor_version is version("4.8", ">=")
 
@@ -30,12 +31,12 @@
       vars:
         uri: "https://raw.githubusercontent.com/openshift/installer/{{ commit_id.stdout }}/data/data/rhcos.json"
         mor_dir: "{{ mor_cache_dir }}/{{ mor_version }}"
+
+    - name: "Read the contents of rhcos.json"
+      command: "cat {{ mor_cache_dir }}/{{ mor_version }}/rhcos.json"
+      register: rhcos
   when:
     - mor_version is version("4.8", "<")
-
-- name: "Read the contents of rhcos.json"
-  command: "cat {{ mor_cache_dir }}/{{ mor_version }}/rhcos.json"
-  register: rhcos
 
 - name: "Set image facts"
   set_fact:
