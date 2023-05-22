@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e190806d_bdad0e6c",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-22T20:32:57Z",
+      "side": 1,
+      "message": "nit: Add a delay to avoid race conditions in parallel jobs",
+      "revId": "ff8adbf07b5c161b85e0ccf627fb293f973889b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b54de19_6b08b21f",
+        "filename": "roles/mirror-ocp-release/tasks/facts.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-22T20:32:57Z",
+      "side": 1,
+      "message": "I\u0027m a bit confused by this, above in line 13 you removed the creation of the file, but here we are attempting to read it.\n\nDid you meant to remove this instead?\n\nDo we care about the rhcos.json generated after the install? if is not used any longer then I think is ok to not write it.",
+      "revId": "ff8adbf07b5c161b85e0ccf627fb293f973889b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
