@@ -33,6 +33,23 @@
       "message": "I\u0027ll bring down the provisioning interface when the bootstrap is ready and will kill the job. This should force the script to use the apiVIPs to connect to the bootstrap and extract the logs.",
       "revId": "2c63cd8f5901fdbdd71a746d65a820d4676941f9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ca4d9d4_06a65f9a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-22T22:19:35Z",
+      "side": 1,
+      "message": "Unscheduling didn\u0027t work as I expected, so I\u0027ll have to try again",
+      "revId": "2c63cd8f5901fdbdd71a746d65a820d4676941f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
