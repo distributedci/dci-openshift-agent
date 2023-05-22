@@ -11,6 +11,10 @@
   shell: >
     {{ mor_cache_dir }}/{{ mor_version }}/openshift-baremetal-install coreos print-stream-json >
     {{ mor_cache_dir }}/{{ mor_version }}/rhcos.json
+  register: result
+  retries: 5
+  delay: 10
+  until: result is not failed
   when:
     - mor_version is version("4.8", ">=")
 
