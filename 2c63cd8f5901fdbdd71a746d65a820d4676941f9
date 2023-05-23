@@ -84,6 +84,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "2c63cd8f5901fdbdd71a746d65a820d4676941f9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03424d84_0e01e09a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-23T15:35:32Z",
+      "side": 1,
+      "message": "Looks good to me.\nI guess you want to cause a failure when either the API VIP is setup in the boostrapVM or the master nodes to get the logs?",
+      "revId": "2c63cd8f5901fdbdd71a746d65a820d4676941f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
