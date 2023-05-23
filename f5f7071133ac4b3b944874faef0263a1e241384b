@@ -33,6 +33,40 @@
       "message": "The last job validates the fallback, this is the task of the get-logs[1] there different IPs were gathered:\n\n    + ips+\u003d($(jq -r \u0027.bootstrapProvisioningIP\u0027 \u003c\u003c\u003c \\\"${bm_data}\\\"))\n    ...\n    + ips+\u003d($(LANG\u003den_US.UTF-8 ${prov_cmd} sudo virsh domifaddr --source arp \\\"${vm}\\\" |\n    awk \u0027/\u0027${ext_mac}\u0027/ {print $4}\u0027 |\n    cut -d\u0027/\u0027 -f1))\n    ...\n    + ips+\u003d($(jq -r \\\".${api_key}\\\" \u003c\u003c\u003c \\\"${bm_data}\\\"))\n\nThen the connection was verified and the active ip was set:\n\n    + active_ip\u003d192.168.62.16\n    \nThis IP was then used to collect the logs in the job\n\n    + echo \u0027Collect logs on VM via: 192.168.62.16\u0027\n\n[1] https://www.distributed-ci.io/jobs/d317d5d1-9cb8-4533-b148-9c81fa7ef055/jobStates?sort\u003ddate\u0026task\u003d47b9de94-c859-41bc-b43a-b9b8fe1d2f89",
       "revId": "f5f7071133ac4b3b944874faef0263a1e241384b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86bcc626_0b2eee19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-23T21:27:51Z",
+      "side": 1,
+      "message": "Good job, LGTM!",
+      "revId": "f5f7071133ac4b3b944874faef0263a1e241384b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2363bf3b_35ec87f8",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-05-23T21:27:51Z",
+      "side": 1,
+      "message": "minor typo here \"bootstrap\" : )",
+      "revId": "f5f7071133ac4b3b944874faef0263a1e241384b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
