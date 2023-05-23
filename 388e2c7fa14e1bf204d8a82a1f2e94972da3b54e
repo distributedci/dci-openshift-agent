@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "433270b5_1d335008",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-23T00:42:30Z",
+      "side": 1,
+      "message": "\nDry run:\n./clean-webartifact.sh /etc/dci-openshift-app-agent/dci_credentials.sh\nlocalhost/cnf-certification-test:unstable-e429e748-1779-4aad-b157-2cb649915eee\nlocalhost/cnf-certification-test:unstable-7b2dbb9e-12e0-44c1-ab6a-1ab9241e9546\nlocalhost/cnf-certification-test:unstable-84370582-534b-417c-9ca1-c3be6073801b\nlocalhost/cnf-certification-test:unstable-b0ec53f8-f701-440c-99fa-f4bd71ebb234\nlocalhost/cnf-certification-test:unstable-cb4cc902-3309-4212-90b2-9b59382ba5c4\nlocalhost/cnf-certification-test:v4.2.4-3c7546ca-0f87-43ce-99c5-3833cf41af57\n",
+      "revId": "388e2c7fa14e1bf204d8a82a1f2e94972da3b54e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
