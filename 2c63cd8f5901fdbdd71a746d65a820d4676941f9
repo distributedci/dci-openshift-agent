@@ -101,6 +101,24 @@
       "message": "Looks good to me.\nI guess you want to cause a failure when either the API VIP is setup in the boostrapVM or the master nodes to get the logs?",
       "revId": "2c63cd8f5901fdbdd71a746d65a820d4676941f9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7b9905a_62fb4cbb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-23T16:33:31Z",
+      "side": 1,
+      "message": "yes, but it has been trickier than expected.  I\u0027m letting get to the bootstraping, then I bring down the provisioning interface and try to cause a failure, but needs to be at the task level and not at the whole playbook level. I hope I get it right this time.",
+      "parentUuid": "03424d84_0e01e09a",
+      "revId": "2c63cd8f5901fdbdd71a746d65a820d4676941f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
