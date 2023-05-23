@@ -56,6 +56,30 @@
       },
       "revId": "388e2c7fa14e1bf204d8a82a1f2e94972da3b54e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76b64253_8cbd8656",
+        "filename": "utils/cleanup-scripts/clean-webartifact.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-23T17:52:04Z",
+      "side": 1,
+      "message": "cool, thanks",
+      "parentUuid": "1b0e9fd2_a49881a2",
+      "range": {
+        "startLine": 66,
+        "startChar": 73,
+        "endLine": 66,
+        "endChar": 74
+      },
+      "revId": "388e2c7fa14e1bf204d8a82a1f2e94972da3b54e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
