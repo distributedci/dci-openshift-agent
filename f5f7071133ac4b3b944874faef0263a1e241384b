@@ -67,6 +67,24 @@
       "message": "minor typo here \"bootstrap\" : )",
       "revId": "f5f7071133ac4b3b944874faef0263a1e241384b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb6b6b0d_9aa31b25",
+        "filename": "plays/scripts/get-ipi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-23T22:19:05Z",
+      "side": 1,
+      "message": "Thanks it has been fixed",
+      "parentUuid": "2363bf3b_35ec87f8",
+      "revId": "f5f7071133ac4b3b944874faef0263a1e241384b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
