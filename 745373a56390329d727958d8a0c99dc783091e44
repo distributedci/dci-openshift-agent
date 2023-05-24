@@ -33,6 +33,23 @@
       "message": "LGTM",
       "revId": "745373a56390329d727958d8a0c99dc783091e44",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1ce4d68_595678f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-24T16:41:15Z",
+      "side": 1,
+      "message": "LGTM, thanks Beto",
+      "revId": "745373a56390329d727958d8a0c99dc783091e44",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
