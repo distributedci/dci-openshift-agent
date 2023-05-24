@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee593fe3_9fcc43af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-05-24T14:16:24Z",
+      "side": 1,
+      "message": "testing on a jumphost without OC command on the PATH:\nhttps://www.distributed-ci.io/jobs/b45c3b7d-3818-48c3-9570-72ef61785f9b/jobStates?sort\u003ddate",
+      "revId": "76f8b010fe835410dc7efc8854d80da6f84ecd35",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
