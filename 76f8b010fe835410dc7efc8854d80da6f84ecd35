@@ -50,6 +50,24 @@
       "message": "Thanks Pierre!",
       "revId": "76f8b010fe835410dc7efc8854d80da6f84ecd35",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53ae8c0b_7428695d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-05-24T17:01:53Z",
+      "side": 1,
+      "message": "Exact, actually it is using the one on the jumphost, it was put manually I think.\n```\n[dciteam@jumphost ~]$ ls -l /usr/local/bin/oc\n-rwxr-xr-x. 1 root root 128564456 Oct 27  2022 /usr/local/bin/oc\n```",
+      "parentUuid": "ec22aba5_2e1bc0da",
+      "revId": "76f8b010fe835410dc7efc8854d80da6f84ecd35",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
