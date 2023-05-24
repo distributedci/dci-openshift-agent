@@ -33,6 +33,23 @@
       "message": "Pierre, is the goal of this change to use binaries like the \"oc\" command from the clusterconfig dir?",
       "revId": "76f8b010fe835410dc7efc8854d80da6f84ecd35",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "121851f0_5531ccd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-24T15:14:15Z",
+      "side": 1,
+      "message": "Thanks Pierre!",
+      "revId": "76f8b010fe835410dc7efc8854d80da6f84ecd35",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
