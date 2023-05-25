@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b78a777d_a2da479b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-05-25T20:46:52Z",
+      "side": 1,
+      "message": "LGTM - Do you even need to create it?  Shouldn\u0027t it already be there with the pullsecret?",
+      "revId": "8225e012ad44e9317ed1919bac382819a84bb7fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
