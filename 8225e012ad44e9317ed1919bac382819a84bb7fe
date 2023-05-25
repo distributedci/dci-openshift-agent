@@ -16,6 +16,24 @@
       "message": "LGTM - Do you even need to create it?  Shouldn\u0027t it already be there with the pullsecret?",
       "revId": "8225e012ad44e9317ed1919bac382819a84bb7fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a092597_9a291938",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-05-25T21:42:28Z",
+      "side": 1,
+      "message": "Don\u0027t think you even need to create it either, but having it ensuring the directory exists feels more self contained",
+      "parentUuid": "b78a777d_a2da479b",
+      "revId": "8225e012ad44e9317ed1919bac382819a84bb7fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
