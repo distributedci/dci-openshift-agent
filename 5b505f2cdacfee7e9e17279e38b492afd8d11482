@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.14-vanilla openshift-vanilla:ansible_extravars\u003ddci_force_mirroring:true",
       "revId": "5b505f2cdacfee7e9e17279e38b492afd8d11482",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0220978a_268e6a25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-26T04:21:09Z",
+      "side": 1,
+      "message": "check dallas ocp-4.14-vanilla openshift-vanilla:ansible_extravars\u003ddci_force_mirroring:true",
+      "revId": "5b505f2cdacfee7e9e17279e38b492afd8d11482",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
