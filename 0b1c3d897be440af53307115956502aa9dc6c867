@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68c58724_180c2338",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-26T20:45:52Z",
+      "side": 1,
+      "message": "Thanks Beto! Can you add the openshift_install_state.json file to the README? Just to conclude this",
+      "revId": "0b1c3d897be440af53307115956502aa9dc6c867",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
