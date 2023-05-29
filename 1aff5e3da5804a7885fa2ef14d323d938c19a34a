@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a57c276e_79c1fb33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-05-29T22:04:01Z",
+      "side": 1,
+      "message": "Validated the change in https://www.distributed-ci.io/jobs/260eb77e-4f2e-4e9f-b765-c5303711a9ed/jobStates?sort\u003ddate\u0026task\u003dd67bea94-5add-4678-a598-f758496b5541 \n\nMissing that file will trigger the mirroring. DOA owns the generation of that file so it does not exist, the force will guarantee the file creation.\n",
+      "revId": "1aff5e3da5804a7885fa2ef14d323d938c19a34a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
