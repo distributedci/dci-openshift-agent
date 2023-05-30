@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23a890b3_1203fa67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-05-30T08:41:35Z",
+      "side": 1,
+      "message": "+1 for the moment, just to wait for the upgrade to be working. However, in the upgrade, shouldn\u0027t we need hints?",
+      "revId": "e12852b272f4f5856a587d1ef1fd0749040d8d70",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
