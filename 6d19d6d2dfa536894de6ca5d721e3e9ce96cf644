@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b032fb6_364c2921",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-01T23:57:24Z",
+      "side": 1,
+      "message": "Thanks Manuel, let\u0027s wait for the test",
+      "revId": "6d19d6d2dfa536894de6ca5d721e3e9ce96cf644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
