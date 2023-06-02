@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "983d25d4_030bd7f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-02T00:51:16Z",
+      "side": 1,
+      "message": "$ oc get packagemanifest |grep loki-operator\nloki-operator                                      Red Hat Operators     47h\nloki-operator                                      Community Operators   47h\n\n$ oc describe  packagemanifest loki-operator | grep Default\n  Default Channel:  alpha\n$ oc describe  packagemanifest loki-operator | grep Default\n  Default Channel:  stable\n$ oc describe  packagemanifest loki-operator | grep Defaul\n  Default Channel:  stable\n$ oc describe  packagemanifest loki-operator | grep Defaul\n  Default Channel:  stable\n$ oc describe  packagemanifest loki-operator | grep Defaul\n  Default Channel:  alpha\n\nIn the following job \"alpha\" was returned from the comunity-operators:\nhttps://www.distributed-ci.io/jobs/b92496d2-6ced-4aa9-b8b1-c20fc5289baa/jobStates?sort\u003ddate\u0026task\u003d42fbe2a9-59a8-4600-ba66-ad5b50c86cc3",
+      "revId": "06243f96ff68465f5949a384cb48a1cc66bed08a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
