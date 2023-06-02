@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "816fb143_9e1aa7ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-02T16:20:54Z",
+      "side": 1,
+      "message": "Last job finally pass the hints to the workers in the install-config.yml https://www.distributed-ci.io/jobs/c38a286a-2ead-401e-9dcd-1fda27d69eed/files\n\n\u003e        rootDeviceHints:\n\u003e          serialNumber: \u0027dciokd-worker-0\u0027\n\nThat comes from VMs definition:\n\n\u003e [root@server04 ~]# virsh dumpxml dciokd-worker-0 | grep \"\u003cserial\u003e\" | cut -d\\\u003c -f2 | cut -d\\\u003e -f2\n\u003e dciokd-worker-0\n\n\nThe previous job https://www.distributed-ci.io/jobs/09dc8866-6302-4b70-8fcb-c324288af5f0/files does not pass any rootHints because the BOS2 hosts vars didn\u0027t include root_hints, so if partners do not set those vars they should be fine.",
+      "revId": "641197c2734eb4b8f1abaac9368fe2824f33a4bb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
