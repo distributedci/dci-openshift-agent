@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0ed7264_e5dcc50a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-05T08:18:30Z",
+      "side": 1,
+      "message": "Can we test an upgrade job from OCP 4.13 to OCP 4.14? Or isn\u0027t it possible?",
+      "revId": "0656e18d86daae7cc7f7363d31003d21d811a04d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
