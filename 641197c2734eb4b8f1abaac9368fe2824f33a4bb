@@ -33,6 +33,23 @@
       "message": "nice change, thanks Manuel",
       "revId": "641197c2734eb4b8f1abaac9368fe2824f33a4bb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee6c9b00_1591cf8b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-05T19:00:00Z",
+      "side": 1,
+      "message": "Thanks",
+      "revId": "641197c2734eb4b8f1abaac9368fe2824f33a4bb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
