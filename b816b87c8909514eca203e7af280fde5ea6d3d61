@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "844d131e_90a143ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-05T20:49:03Z",
+      "side": 1,
+      "message": "Hello Charles, could you please help me to test this change for the trident? \nI see that it\u0027s used here: https://github.com/dci-labs/trident-config/blob/master/hooks/mirror.yml#L90 \n\nSince that\u0027s a common role, I\u0027m scared to break the other workflows. ",
+      "revId": "b816b87c8909514eca203e7af280fde5ea6d3d61",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
