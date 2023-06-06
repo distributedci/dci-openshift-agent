@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3db20c6c_c0f3f399",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-06-06T13:48:11Z",
+      "side": 1,
+      "message": "Nice!\nDo you know how the metalLB config will be apply on the operator? Will it be an extra ansible playbook run by the DOAA?",
+      "revId": "4a6415db83cab876c991ed6bb27a1feadd4a16eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
