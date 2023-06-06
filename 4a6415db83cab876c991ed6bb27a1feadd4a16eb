@@ -34,6 +34,23 @@
       "parentUuid": "3db20c6c_c0f3f399",
       "revId": "4a6415db83cab876c991ed6bb27a1feadd4a16eb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "168b6dd2_b5030440",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-06T15:43:03Z",
+      "side": 1,
+      "message": "Thanks Manuel, LGTM",
+      "revId": "4a6415db83cab876c991ed6bb27a1feadd4a16eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
