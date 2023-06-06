@@ -16,6 +16,24 @@
       "message": "Nice!\nDo you know how the metalLB config will be apply on the operator? Will it be an extra ansible playbook run by the DOAA?",
       "revId": "4a6415db83cab876c991ed6bb27a1feadd4a16eb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7abf906_6baad23b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-06T13:54:18Z",
+      "side": 1,
+      "message": "Yes, this is just the first stage, the plan is to add a role or a play in doa that will take some variables to configure the operator, like BGP address pool, peers IPs, and other settings.",
+      "parentUuid": "3db20c6c_c0f3f399",
+      "revId": "4a6415db83cab876c991ed6bb27a1feadd4a16eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
