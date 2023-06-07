@@ -263,7 +263,15 @@ This is the dci-openshift-agent variables that can be set in the
 | enable_cnv                      | False    | Boolean | False                                                          | Deploys CNV and enables the HCO operator.
 | cnv_api_version                 | False    | String  | v1beta1
 API version to use when deploying HCO operator: hco.kubevirt.io/cnv_api_version
-| enable_logs_stack               | False    | Boolean | False                                                          | Deploys the Loki and cluster-logging operators.
+| enable_logs_stack               | False    | Boolean | False                                                          | Enables the OCP cluster logging subsystem using the Loki and ClusterLogging Operators. When enabled, the following variables (logs_*) are required.
+| logs_access_key_id              | False    | String  | undefined                                                      | Key ID for the Object storage system.
+| logs_access_key_secret          | False    | String  | undefined                                                      | Key Secret for the Object Storage system.
+| logs_bucket                     | False    | String  | undefined                                                      | Object Storage bucket name.
+| logs_endpoint                   | False    | String  | undefined                                                      | Object Storage endpoint.
+| logs_region                     | False    | String  | undefined                                                      | Object Storage region.
+| logs_loki_size                  | False    | String  | undefined                                                      | Loki Deployment Size. See [Sizing](https://docs.openshift.com/container-platform/4.13/logging/cluster-logging-loki.html#deployment-sizing_cluster-logging-loki) for more details.
+| logs_storage_class              | False    | String  | undefined                                                      | Cluster Storage class for Loki components.
+| logs_event_router_image         | False    | String  | registry.redhat.io/openshift-logging/eventrouter-rhel8:v5.2.1-1| Event Router image.
 | enable_elasticsearch            | False    | Boolean | False                                                          | Deploys the ElasticSearch Operator.
 | enable_clusterlogging           | False    | Boolean | False                                                          | Deploys the Cluster-Logging Operator.
 | enable_perf_addon               | False    | Boolean | False                                                          | Deploys the Performance AddOn Operator. For its configuration is recommended to define a `performance_definition`.
