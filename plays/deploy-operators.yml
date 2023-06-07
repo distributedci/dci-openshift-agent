@@ -272,6 +272,44 @@
 
   when: (enable_lso | bool) or (enable_ocs | bool)
 
+- name: "Setup OCP logging stack"
+  block:
+    - name: "Mirroring the event router image"
+      include_role:
+        name: mirror_images
+      vars:
+        images: ['registry.redhat.io/openshift-logging/eventrouter-rhel8:v5.2.1-1']
+        authfile: "{{ dci_pullsecret_file }}"
+      when:
+        - dci_disconnected | default(false) | bool
+
+    - name: "Setup OCP logging stack"
+      include_role:
+        name: ocp-logging
+      vars:
+        ol_access_key_id: "{{ logs_access_key_id }}"
+        ol_access_key_secret: "{{ logs_access_key_secret }}"
+        ol_s3_bucket: "{{ logs_s3_bucket }}"
+        ol_s3_endpoint: "{{ logs_s3_endpoint }}"
+        ol_s3_region: "{{ logs_s3_region }}"
+        ol_loki_size: "{{ logs_loki_size }}"
+        ol_storage_class: "{{ logs_storage_class }}"
+        ol_event_router_image: "{{ dci_disconnected | default(false) | bool |
+                                ternary( dci_local_registry+'/openshift-logging/eventrouter-rhel8:v5.2.1-1',
+                                'registry.redhat.io/openshift-logging/eventrouter-rhel8:v5.2.1-1' ) }}"
+  rescue:
+    - name: "Cleanup ClusterLogging resources on failure"
+      include_role:
+        name: ocp-logging
+        tasks_from: clean-resources
+
+    - name: "ClusterLogging stack failed"
+      fail:
+        msg: "Issues during the ClusterLogging stack deployment"
+
+  when:
+    - enable_logs_stack | bool
+
 - name: "Deploy and configure the Advanced Cluster Manager"
   vars:
     acm_namespace: open-cluster-management
