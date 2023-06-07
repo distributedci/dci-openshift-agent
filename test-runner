@@ -547,10 +547,22 @@ if [ -z "$KCFG" ]; then
             setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
             do_wait
         elif [ "$VIRT" = assisted ]; then
+            # For assisted and assisted-abi, perform the same cleanup playbook than we use for IPI
+            cd ../ocp_on_libvirt
+            CLEAN_VIRT_INV="-i ${CONFIG_DIR}/ocp_on_libvirt/${PREFIX_NAME%-}"
+            setsid ansible-playbook -vv libvirt_destroy.yml ${CLEAN_VIRT_INV:-} &
+            do_wait
+            cd "$VIRTDIR"
             OPTS+=(-e install_type=assisted)
             setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
             do_wait
         elif [ "$VIRT" = "assisted-abi" ]; then
+            # For assisted and assisted-abi, perform the same cleanup playbook than we use for IPI
+            cd ../ocp_on_libvirt
+            CLEAN_VIRT_INV="-i ${CONFIG_DIR}/ocp_on_libvirt/${PREFIX_NAME%-}"
+            setsid ansible-playbook -vv libvirt_destroy.yml ${CLEAN_VIRT_INV:-} &
+            do_wait
+            cd "$VIRTDIR"
             OPTS+=(-e install_type=assisted)
             setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
             do_wait
