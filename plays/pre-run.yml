@@ -20,6 +20,20 @@
   when:
     - enable_nfs_storage | bool
 
+- name: "Validate Logging Subsystem variables"
+  assert:
+    that: "{{ item }} is defined"
+    fail_msg: "The parameter {{ item }} is required"
+  with_items:
+    - logs_access_key_id
+    - logs_access_key_secret
+    - logs_bucket
+    - logs_endpoint
+    - logs_loki_size
+    - logs_storage_class
+  when:
+    - enable_logs_stack | bool
+
 - name: "Set pullsecret from job_info - Connected"
   set_fact:
     pullsecret: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
