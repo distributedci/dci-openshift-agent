@@ -1,0 +1,182 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37986c88_be756ba2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "Hi Beto, just reaching you here to comment about some typos I\u0027ve seen in the change",
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d39c9d31_088b55fa",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "Operators",
+      "range": {
+        "startLine": 266,
+        "startChar": 198,
+        "endLine": 266,
+        "endChar": 206
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53c012c8_4d10b320",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "ClusterLogging",
+      "range": {
+        "startLine": 246,
+        "startChar": 21,
+        "endLine": 246,
+        "endChar": 34
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01a2f69e_83705bf4",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "ClusterLogging",
+      "range": {
+        "startLine": 53,
+        "startChar": 17,
+        "endLine": 53,
+        "endChar": 30
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "665d67d0_00447a3e",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 28,
+        "startChar": 7,
+        "endLine": 28,
+        "endChar": 8
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c24ff87a_099001e8",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "exist",
+      "range": {
+        "startLine": 63,
+        "startChar": 46,
+        "endLine": 63,
+        "endChar": 51
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96f0c4ba_fc5cc794",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "exist",
+      "range": {
+        "startLine": 65,
+        "startChar": 45,
+        "endLine": 65,
+        "endChar": 51
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98ce1c18_c10b4290",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T07:43:07Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 158,
+        "startChar": 49,
+        "endLine": 158,
+        "endChar": 50
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
