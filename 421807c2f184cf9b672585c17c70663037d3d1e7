@@ -16,6 +16,23 @@
       "message": "As documented in CILAB-1097, the VMs craeted in cluster10 previously by IPI (provisionhost) and AI (master and worker nodes) have been removed with libvirt_destroy, so no possibility of collisions.",
       "revId": "421807c2f184cf9b672585c17c70663037d3d1e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46c7b5e0_5a062086",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-06-07T17:38:20Z",
+      "side": 1,
+      "message": "LGTM - The only other suggestion is since we have special logic for ocp_on_libvirt anyway we might as well generate that variable once and use it in each condition, instead of recalculating it each time.  I would suggest OCP_VIRT_INV and use it in each.",
+      "revId": "421807c2f184cf9b672585c17c70663037d3d1e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
