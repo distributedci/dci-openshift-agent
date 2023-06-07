@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32cb12c6_72efcd74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-07T17:18:46Z",
+      "side": 1,
+      "message": "As documented in CILAB-1097, the VMs craeted in cluster10 previously by IPI (provisionhost) and AI (master and worker nodes) have been removed with libvirt_destroy, so no possibility of collisions.",
+      "revId": "421807c2f184cf9b672585c17c70663037d3d1e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
