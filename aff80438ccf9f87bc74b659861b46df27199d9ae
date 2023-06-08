@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91e447be_8d04da10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:21:42Z",
+      "side": 1,
+      "message": "thanks! I think last remaining thing here is to add dci_do_cnf_tests to the README - variables section",
+      "revId": "aff80438ccf9f87bc74b659861b46df27199d9ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
