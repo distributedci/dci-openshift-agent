@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "a3b0f876_88974283",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Yeah, will move those to the pipeline and encrypted with dci-vault",
+      "parentUuid": "6ff88c0d_8c447e24",
+      "range": {
+        "startLine": 11,
+        "startChar": 179,
+        "endLine": 11,
+        "endChar": 288
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "d6dd5670_474710b1",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 9
@@ -64,6 +88,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad4e6ea4_a2721210",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8def1996_0418a658",
+      "range": {
+        "startLine": 289,
+        "startChar": 0,
+        "endLine": 289,
+        "endChar": 11
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3e7d446c_ecf2469e",
@@ -77,6 +125,30 @@
       "writtenOn": "2023-06-08T10:19:21Z",
       "side": 1,
       "message": "should we move this version to a variable to easily update it in the future?",
+      "range": {
+        "startLine": 298,
+        "startChar": 98,
+        "endLine": 298,
+        "endChar": 106
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7538a5f_dbae1751",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e7d446c_ecf2469e",
       "range": {
         "startLine": 298,
         "startChar": 98,
@@ -110,6 +182,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d475ff4_1fa3ba89",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "I am a bit concerned about not removing the PVC that are consuming most of the space that we have allocated for the NFS share. But yeah, will remove it from here, keep it in the teardown and monitor the space usage.",
+      "parentUuid": "f79efdcf_62eb9537",
+      "range": {
+        "startLine": 301,
+        "startChar": 0,
+        "endLine": 301,
+        "endChar": 57
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f65d3c7b_f35dcda0",
@@ -133,6 +229,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a314fb1d_0453a2d4",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f65d3c7b_f35dcda0",
+      "range": {
+        "startLine": 304,
+        "startChar": 0,
+        "endLine": 304,
+        "endChar": 35
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e05c2a12_1cd39cdd",
@@ -146,6 +266,30 @@
       "writtenOn": "2023-06-08T10:19:21Z",
       "side": 1,
       "message": "same",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 31
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51b16c43_a165ef07",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e05c2a12_1cd39cdd",
       "range": {
         "startLine": 56,
         "startChar": 0,
@@ -203,6 +347,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "30a9430c_5627eed1",
+        "filename": "roles/ocp-logging/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "AWS S3 is the actual Amazon product, S3 is an API, protocol to access object storage systems. We can have S3 in NetApp, Openstack - swift, Minio, etc. I think that the variables will look good with out \"S3\"",
+      "parentUuid": "8c6a22c1_744d6789",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 126
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3328f09_6eb585fb",
@@ -220,6 +388,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "24c958b0_9a2898f9",
+        "filename": "roles/ocp-logging/defaults/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d3328f09_6eb585fb",
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1b3aab93_3ca35a65",
@@ -233,6 +419,30 @@
       "writtenOn": "2023-06-08T10:19:21Z",
       "side": 1,
       "message": "Just a reminder here to review the structure of the main playbook with the action variable proposed",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c226226e_e9155d1e",
+        "filename": "roles/ocp-logging/tasks/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b3aab93_3ca35a65",
       "range": {
         "startLine": 1,
         "startChar": 2,

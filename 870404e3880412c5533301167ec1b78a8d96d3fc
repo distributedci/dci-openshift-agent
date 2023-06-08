@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9db8884_9c818b3a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d87ec5fb_8542a82e",
+      "revId": "870404e3880412c5533301167ec1b78a8d96d3fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "04a6e5a5_4f55d56a",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-06-08T21:52:00Z",
       "side": 1,
       "message": "Is it logs_s3* vars or only logs_* vars in the three lines above? in the pre-run we do not have the \"s3\" part in the variables.",
+      "revId": "870404e3880412c5533301167ec1b78a8d96d3fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86aa4f78_d6639146",
+        "filename": "README.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T21:59:49Z",
+      "side": 1,
+      "message": "Only logs_*, I removed s3. Good catch",
+      "parentUuid": "04a6e5a5_4f55d56a",
       "revId": "870404e3880412c5533301167ec1b78a8d96d3fc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
