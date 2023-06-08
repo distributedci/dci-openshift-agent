@@ -51,6 +51,24 @@
       "parentUuid": "46c7b5e0_5a062086",
       "revId": "421807c2f184cf9b672585c17c70663037d3d1e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cf785f9_703b93be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T09:52:45Z",
+      "side": 1,
+      "message": "Sure, I\u0027ve added some conditions before running the installation to do exactly the same cleaning process in IPI, AI and AI-ABI, I think it\u0027s better organized now.",
+      "parentUuid": "9d8525b2_3919f8b1",
+      "revId": "421807c2f184cf9b672585c17c70663037d3d1e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
