@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf5f8bd8_0a351ab4",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T01:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d39c9d31_088b55fa",
+      "range": {
+        "startLine": 266,
+        "startChar": 198,
+        "endLine": 266,
+        "endChar": 206
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "53c012c8_4d10b320",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-06-07T07:43:07Z",
       "side": 1,
       "message": "ClusterLogging",
+      "range": {
+        "startLine": 246,
+        "startChar": 21,
+        "endLine": 246,
+        "endChar": 34
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64d31a06_7abfa0bf",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T01:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "53c012c8_4d10b320",
       "range": {
         "startLine": 246,
         "startChar": 21,
@@ -87,6 +135,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e86eaf2c_f2e5826b",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T01:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01a2f69e_83705bf4",
+      "range": {
+        "startLine": 53,
+        "startChar": 17,
+        "endLine": 53,
+        "endChar": 30
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "665d67d0_00447a3e",
@@ -100,6 +172,30 @@
       "writtenOn": "2023-06-07T07:43:07Z",
       "side": 1,
       "message": "whitespace",
+      "range": {
+        "startLine": 28,
+        "startChar": 7,
+        "endLine": 28,
+        "endChar": 8
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e04e562d_8dba46d7",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T01:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "665d67d0_00447a3e",
       "range": {
         "startLine": 28,
         "startChar": 7,
@@ -133,6 +229,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb2de0cf_55acdff4",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T01:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c24ff87a_099001e8",
+      "range": {
+        "startLine": 63,
+        "startChar": 46,
+        "endLine": 63,
+        "endChar": 51
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "96f0c4ba_fc5cc794",
@@ -156,6 +276,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e79778b7_acb78057",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T01:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "96f0c4ba_fc5cc794",
+      "range": {
+        "startLine": 65,
+        "startChar": 45,
+        "endLine": 65,
+        "endChar": 51
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "98ce1c18_c10b4290",
@@ -169,6 +313,30 @@
       "writtenOn": "2023-06-07T07:43:07Z",
       "side": 1,
       "message": "whitespace",
+      "range": {
+        "startLine": 158,
+        "startChar": 49,
+        "endLine": 158,
+        "endChar": 50
+      },
+      "revId": "920179007c4d6744a1b3006e04adb0b5dbccfb37",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46ab6222_058be922",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T01:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98ce1c18_c10b4290",
       "range": {
         "startLine": 158,
         "startChar": 49,
