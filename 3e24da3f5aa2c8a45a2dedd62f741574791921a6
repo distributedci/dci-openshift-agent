@@ -1,0 +1,222 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ff88c0d_8c447e24",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "I have a concern with this. Remember the commit message is public and here we\u0027re exposing a secret. Should we find a different way of handling this secret? Maybe a file? (same for the inventories change)",
+      "range": {
+        "startLine": 11,
+        "startChar": 179,
+        "endLine": 11,
+        "endChar": 288
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6dd5670_474710b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "Some more comments from my side",
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8def1996_0418a658",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "in the same way than with the cleanup, here we would pass a variable called \"action: install\", and the three playbooks related to the installation in the role would be wrapped with a when: action \u003d\u003d install. This would be better, I think",
+      "range": {
+        "startLine": 289,
+        "startChar": 0,
+        "endLine": 289,
+        "endChar": 11
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e7d446c_ecf2469e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "should we move this version to a variable to easily update it in the future?",
+      "range": {
+        "startLine": 298,
+        "startChar": 98,
+        "endLine": 298,
+        "endChar": 106
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f79efdcf_62eb9537",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "Question: why do we need to cleanup here if the job will fail anyway? isn\u0027t it enough by doing this in the teardown?",
+      "range": {
+        "startLine": 301,
+        "startChar": 0,
+        "endLine": 301,
+        "endChar": 57
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f65d3c7b_f35dcda0",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "I think it\u0027s better to pass a variable to the ocp-logging role here, such as \"action: cleanup\", and add the call to clean-resources in the main.yml, using when: action \u003d\u003d cleanup to select that task\nSomething similar to what we have in ocp_on_libvirt with install/cleanup actions: https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/ocp-on-libvirt/tasks/main.yml",
+      "range": {
+        "startLine": 304,
+        "startChar": 0,
+        "endLine": 304,
+        "endChar": 35
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e05c2a12_1cd39cdd",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 31
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c6a22c1_744d6789",
+        "filename": "roles/ocp-logging/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "S3 reminds me to AWS. Do we need an AWS account to have this logging system?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 126
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3328f09_6eb585fb",
+        "filename": "roles/ocp-logging/defaults/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "default value should be the image from redhat registry, as specified in the readme",
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b3aab93_3ca35a65",
+        "filename": "roles/ocp-logging/tasks/main.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-08T10:19:21Z",
+      "side": 1,
+      "message": "Just a reminder here to review the structure of the main playbook with the action variable proposed",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
