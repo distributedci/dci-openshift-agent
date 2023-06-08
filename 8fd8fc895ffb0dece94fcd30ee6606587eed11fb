@@ -34,6 +34,23 @@
       "parentUuid": "b63a9212_82ed730a",
       "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df7c5b77_6742562e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-08T19:10:04Z",
+      "side": 1,
+      "message": "For the record, I recall we we having issues with pullsecret in the bos2server/opt/cache, so we manually copied them. Yeah, this need to be automated.",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
