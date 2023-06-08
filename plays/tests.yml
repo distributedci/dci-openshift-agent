@@ -44,5 +44,6 @@
 
 - name: Run cnf tests
   include_tasks: cnf-tests-run.yml
-
+  when:
+    -  dci_do_cnf_tests | bool
 ...
