@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b63a9212_82ed730a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-06-08T12:42:02Z",
+      "side": 1,
+      "message": "For reference, this is the job that triggered the need for this change:\n\nhttps://www.distributed-ci.io/jobs/95f61228-9f7f-40a9-a8e7-0b6d5f79d630/jobStates?sort\u003ddate",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
