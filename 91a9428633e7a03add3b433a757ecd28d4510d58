@@ -16,6 +16,24 @@
       "message": "Why are we linking the execution of cnf tests to the usage of connected/disconnected environments? Then, if we are linking both variables, then it\u0027s not optional by default, is it? (as it depends on dci_disconnected)",
       "revId": "91a9428633e7a03add3b433a757ecd28d4510d58",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b21a468c_c7e6e3f9",
+        "filename": "plays/tests.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2023-06-08T09:59:23Z",
+      "side": 1,
+      "message": "Thanks for asking, in fact I missread\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/cnf-tests-run.yml#L27\n\nI have a partner who is running in disconnected mode, but it\u0027s not a telco one, so no need of CNF.\n\nI\u0027ll update, thanks.",
+      "parentUuid": "d38837da_f0216286",
+      "revId": "91a9428633e7a03add3b433a757ecd28d4510d58",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
