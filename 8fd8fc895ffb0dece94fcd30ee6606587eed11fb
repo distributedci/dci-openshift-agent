@@ -16,6 +16,24 @@
       "message": "For reference, this is the job that triggered the need for this change:\n\nhttps://www.distributed-ci.io/jobs/95f61228-9f7f-40a9-a8e7-0b6d5f79d630/jobStates?sort\u003ddate",
       "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "260be30f_c2732215",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-08T19:07:31Z",
+      "side": 1,
+      "message": "Nacho, I wonder if a multinode cluster deployment creates /opt/cache and stores the pull-secret.txt so that SNO deployments take advantage of it.\n\nFrom the sno plays, I see that SNO installer role is expecting that var pullsecret_file points to \"{{ cache_dir }}/pull-secret.txt\"[1] in the ansible controller node, and it relies in the pre-run.yml to place it there, but only if var pullsecret_file is defined[2]. \nIn the job you mentioned, I see that at the end the pre-run.yml play stores the content of the pull-secret in a diff path[3] ($HOME/clusterconfigs-{{ cluster }}-sno/pull-secret.txt), that\u0027s why I believe the ocp_on_libvirt deployment placed the file there in other clusters/jobs, otherwise all our SNO jobs will fail. \n\nAnyways, I think it\u0027s safe to copy it, but do you mind adding a check first, only copy the file if it does not exists in the remote.\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-installer/vars/main.yml#L4\n[2] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L57-L77\n[3] https://www.distributed-ci.io/jobs/95f61228-9f7f-40a9-a8e7-0b6d5f79d630/jobStates?sort\u003ddate\u0026task\u003da6690db6-cebb-4ca7-b590-45e6c3d8fc41",
+      "parentUuid": "b63a9212_82ed730a",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
