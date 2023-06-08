@@ -179,6 +179,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f9129bb_b2dff380",
+        "filename": "roles/ocp-logging/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-08T21:52:00Z",
+      "side": 1,
+      "message": "Not in our case, we use minio as S3 server in the jumphost: https://github.com/minio/minio, but we could use AWS too and yes we\u0027ll need an account and lots of $$$!",
+      "parentUuid": "8c6a22c1_744d6789",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 126
+      },
+      "revId": "3e24da3f5aa2c8a45a2dedd62f741574791921a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3328f09_6eb585fb",

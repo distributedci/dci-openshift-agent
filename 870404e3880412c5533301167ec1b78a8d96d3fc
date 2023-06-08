@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d87ec5fb_8542a82e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-08T21:52:00Z",
+      "side": 1,
+      "message": "I see a typo for the livbirt test in the Test-Args-Hints, there is \"logs__region\u003dus-east-1\" and it should be \"logs_region\u003dus-east-1\"",
+      "revId": "870404e3880412c5533301167ec1b78a8d96d3fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04a6e5a5_4f55d56a",
+        "filename": "README.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-08T21:52:00Z",
+      "side": 1,
+      "message": "Is it logs_s3* vars or only logs_* vars in the three lines above? in the pre-run we do not have the \"s3\" part in the variables.",
+      "revId": "870404e3880412c5533301167ec1b78a8d96d3fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
