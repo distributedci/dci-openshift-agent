@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.13-vanilla preflight-green",
       "revId": "efb656edba33bf1704a8eb73be53581bb225233b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fe5326a_64187768",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-09T21:43:21Z",
+      "side": 1,
+      "message": "LGTM, thank you Tatiana",
+      "revId": "efb656edba33bf1704a8eb73be53581bb225233b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
