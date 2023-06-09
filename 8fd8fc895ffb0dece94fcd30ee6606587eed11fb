@@ -122,6 +122,24 @@
       "parentUuid": "e92d0492_a92010b8",
       "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f11fecde_fafbfd98",
+        "filename": "roles/sno-node-prep/tasks/95_check_pull_secret.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-09T21:24:47Z",
+      "side": 1,
+      "message": "That sounds good, it passes the dci* var to the sno role, so the role remains standalone.",
+      "parentUuid": "8d48046b_c245c691",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
