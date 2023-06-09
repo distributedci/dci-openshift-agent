@@ -16,6 +16,23 @@
       "message": "LGTM, let see a test in disconnected",
       "revId": "d6a3778563e1c12ad604c633c3e461648c05d207",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e097a972_dab66a7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-09T16:01:54Z",
+      "side": 1,
+      "message": "err, the loop var is \"image\"",
+      "revId": "d6a3778563e1c12ad604c633c3e461648c05d207",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
