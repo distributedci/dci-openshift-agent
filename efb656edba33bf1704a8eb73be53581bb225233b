@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "efb656edba33bf1704a8eb73be53581bb225233b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef5c2c65_577aaaf9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-09T19:08:33Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla preflight-green",
+      "revId": "efb656edba33bf1704a8eb73be53581bb225233b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
