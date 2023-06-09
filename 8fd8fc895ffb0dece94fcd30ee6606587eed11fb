@@ -51,6 +51,24 @@
       "message": "For the record, I recall we we having issues with pullsecret in the bos2server/opt/cache, so we manually copied them. Yeah, this need to be automated.",
       "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d57d2629_68797cae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-06-09T08:08:20Z",
+      "side": 1,
+      "message": "Hi Manny, thanks for your notes.\n\nI don\u0027t believe the SNO deployment relies on a previous IPI deployment to have the pull secret file placed in the cache dir. At least, not in my experience, since I started testing the BOS2 server09 IPI and then moved to SNO and the file was still missing.\n\nI\u0027m guessing Beto has the right answer here.\n\nRegarding the check task, what would be the benefit of it? I mean, after all, the Ansible copy module already checks if the file is present and it only copies it if the file does not exist or it\u0027s to be tested. [1] [2] [3]\n\n[1] https://github.com/ansible/ansible/blob/6ac0ea35672eed7778f530b5cc7751d41b09c43a/lib/ansible/modules/copy.py#L663\n\n[2] https://github.com/ansible/ansible/blob/6ac0ea35672eed7778f530b5cc7751d41b09c43a/lib/ansible/modules/copy.py#L694\n\n[3] https://github.com/ansible/ansible/blob/6ac0ea35672eed7778f530b5cc7751d41b09c43a/lib/ansible/modules/copy.py#L712",
+      "parentUuid": "260be30f_c2732215",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
