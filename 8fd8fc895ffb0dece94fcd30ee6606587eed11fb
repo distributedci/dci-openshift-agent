@@ -104,6 +104,24 @@
       "message": "My only concern now, is that if you look for dci* vars in sno roles you won\u0027t find any, because the roles were crafted so anybody could use them without the need of DCI, so this will break that approach, since \"dci_pullsecret_file\" is not defined in the sno roles, but during the execution of the pre-run.\n\nI suggest to use this:\n\u003e       copy:\n\u003e         content: \"{{ hostvars[\u0027localhost\u0027][\u0027pullsecret\u0027] }}\"\n\nBecause, at least SNO is expecting pullsecret var[1] and we set that variable for connected envs in the pre-run[2] wdyt? Or if you think there are better ways please let me know.\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-node-prep/tasks/10_validation.yml#L44-L58\n[2] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L23-L28",
       "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d48046b_c245c691",
+        "filename": "roles/sno-node-prep/tasks/95_check_pull_secret.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-09T19:19:43Z",
+      "side": 1,
+      "message": "What about something like:\n\n- name: \"installer : SNO Node preparation\"\n  vars:\n    sno_pullsecret: \"{{ dci_pullsecret_file }}\"\n  import_role:\n    name: sno-node-prep\n \nRename the default pullsecret var in the role to sno_pullsecret and replace the required instances.\n\nAt some time we may need to start qualifying the sno role variables.",
+      "parentUuid": "e92d0492_a92010b8",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
