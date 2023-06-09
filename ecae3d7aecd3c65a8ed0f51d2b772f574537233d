@@ -20,6 +20,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "7db88334_25ddefdc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-09T18:49:00Z",
+      "side": 1,
+      "message": "Thanks Manuel!",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "67630441_79e59157",
         "filename": "roles/ocp-logging/defaults/main.yml",
         "patchSetId": 15
@@ -37,6 +54,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "7a5b4879_acf206d4",
+        "filename": "roles/ocp-logging/defaults/main.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-09T18:49:00Z",
+      "side": 1,
+      "message": "The idea of having the tag in group_vars/all is to have a single place to update all the \"static\" images that we use in the agent. So I am thinking of doing something similar not just for this image. May be the full image name or just the tag. \n\nAnd for the role have its config setting. We may want to desire to use a different version in DOA than the one that is defaulted in the role.\n\nWill handle the default images for DOA in a separate change.",
+      "parentUuid": "67630441_79e59157",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "875cd949_ad6ed49b",
         "filename": "roles/ocp-logging/tasks/pre-run.yml",
         "patchSetId": 15
@@ -48,6 +83,24 @@
       "writtenOn": "2023-06-09T16:21:47Z",
       "side": 1,
       "message": "In the README of this role it shows that we could install the operator in OCP 4.10  and above, here will only allow starting at 4.11 isn\u0027t it?",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51f1f329_62d9a8af",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-09T18:49:00Z",
+      "side": 1,
+      "message": "at this time `ol_ocp_supported` is set to 4.10, so it is \"\u003e\u003d\" and will pass. If 4.9 is tested, that will fail.",
+      "parentUuid": "875cd949_ad6ed49b",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
