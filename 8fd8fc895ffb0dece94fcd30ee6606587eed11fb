@@ -69,6 +69,41 @@
       "parentUuid": "260be30f_c2732215",
       "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fccc7c71_92f99634",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-09T13:35:22Z",
+      "side": 1,
+      "message": "Ouch, if we had to copy manually before, that explains it :/\nCool, I didn\u0027t know the copy will do all that, then that\u0027s fine",
+      "parentUuid": "d57d2629_68797cae",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e92d0492_a92010b8",
+        "filename": "roles/sno-node-prep/tasks/95_check_pull_secret.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-09T13:35:22Z",
+      "side": 1,
+      "message": "My only concern now, is that if you look for dci* vars in sno roles you won\u0027t find any, because the roles were crafted so anybody could use them without the need of DCI, so this will break that approach, since \"dci_pullsecret_file\" is not defined in the sno roles, but during the execution of the pre-run.\n\nI suggest to use this:\n\u003e       copy:\n\u003e         content: \"{{ hostvars[\u0027localhost\u0027][\u0027pullsecret\u0027] }}\"\n\nBecause, at least SNO is expecting pullsecret var[1] and we set that variable for connected envs in the pre-run[2] wdyt? Or if you think there are better ways please let me know.\n\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-node-prep/tasks/10_validation.yml#L44-L58\n[2] https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/pre-run.yml#L23-L28",
+      "revId": "8fd8fc895ffb0dece94fcd30ee6606587eed11fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
