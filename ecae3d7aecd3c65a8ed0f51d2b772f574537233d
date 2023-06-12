@@ -43,6 +43,48 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "e20bda2d_0ed830e0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "added the option to load the vars from a file, and those can be encrypted. We should be good. Thanks keep your finger on it. A was not doing this because a I was not been able to read encrypted values from the inventory files.",
+      "parentUuid": "7f54b1e9_aba74034",
+      "range": {
+        "startLine": 11,
+        "startChar": 179,
+        "endLine": 11,
+        "endChar": 288
+      },
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9f77ca3_a865113b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "will prefer not to use a nested structure. Added the option to use a vars file. Will be easier for testing on bos2 and allow encrypting the passwords.\n\nFor Dallas, the settings will be defined at the inventory.\n\nThe enable OCS, odf, and also vars are for the storage class installation, we need to work on simplifying that configuration.",
+      "parentUuid": "be512f61_9453f3ff",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "91f23c6a_51960b39",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 15
@@ -109,6 +151,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7f219b2_bf9884e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "It is deprecated, as a second stage for this we need to check how be able to use the logs from clusters that are already gone. \n\nWe can discuss about that on Friday.",
+      "parentUuid": "0c60c539_cd8829e5",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8d9bf573_5d4b88fd",
@@ -122,6 +182,24 @@
       "writtenOn": "2023-06-12T10:59:43Z",
       "side": 1,
       "message": "I would move this out to a separate table loki-setting, not to make it too heavy",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29234e91_0dcfe6f2",
+        "filename": "README.md",
+        "patchSetId": 15
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d9bf573_5d4b88fd",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -143,6 +221,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2818d6b_13840b47",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9239642c_f9662941",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "51571b1b_3dc694a3",
@@ -156,6 +252,24 @@
       "writtenOn": "2023-06-12T10:59:43Z",
       "side": 1,
       "message": "could we provide credentials as a link to the file and not as a plain text?",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62b19f95_f7a0e244",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "added the option to pass the variables in a file, that way we will be able to use vault encryption",
+      "parentUuid": "51571b1b_3dc694a3",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -247,6 +361,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3f21c04_9563d2a9",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "All the new roles and the ones that have been refactored are following the same approach.\n\n1. DCI variables\n2. Role variables\n3. attribute\n\nWe have been having many issues with collisions between variables, not being clear about values passed to a role, etc. We are also allowed to use the functions without DCI.",
+      "parentUuid": "ce2eea2c_e43274b0",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "315a0dd6_e1739e2d",
@@ -260,6 +392,24 @@
       "writtenOn": "2023-06-12T10:59:43Z",
       "side": 1,
       "message": "I believe that `type: fluentd` can be more beneficial if we would like to analyze our logs one day, especially in an automated way. It also seems to be a recommended setting: https://docs.openshift.com/container-platform/4.13/logging/config/cluster-logging-configuring-cr.html",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91ed361f_b22a3418",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "Fluentd collector is deprecated, some parts of the documentation still need to be updated for the new components.",
+      "parentUuid": "315a0dd6_e1739e2d",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -281,6 +431,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dda1f3bb_5160690e",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "Unfortunately no, actually having the pods running should be enough. So removing this. Will add a troubleshooting/verification section to the readme.",
+      "parentUuid": "7626f5ac_63629e49",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11951811_4550a78c",
@@ -294,6 +462,24 @@
       "writtenOn": "2023-06-12T10:59:43Z",
       "side": 1,
       "message": "do we use openshift-console for the logs only? If not, maybe we could separate the namespaces",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdbae04e_5282bb27",
+        "filename": "roles/ocp-logging/tasks/validate-stack.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-12T22:47:44Z",
+      "side": 1,
+      "message": "We are checking for the openshift-console pods to be running because after patching the Console CR to enable the Log\u0027s GUI, the pods are restarted. \n\nTo enable monitoring on a namespace we need to add the proper label `openshift.io/cluster-monitoring\u003dtrue`",
+      "parentUuid": "11951811_4550a78c",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
