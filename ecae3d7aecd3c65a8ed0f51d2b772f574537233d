@@ -24,6 +24,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "be512f61_9453f3ff",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "Hi Beto, I\u0027d add loki-related settings in one nested structure, for the sake of simplicity. For example, in the way it\u0027s done now, it\u0027s not evident if enable_ocs is a global setting or loki-specific.\n\nloki_settings:\n  storage_cluster: True\n  enable_ocs: True\n  enable_lso: True\n  enable_odf: True\n  enable_logs_stack: True\n  dci_teardown_on_success: False\n  logs_access_key_id: \"8PV0sJkcu6aqBsw6W5Oc\"\n  logs_access_key_secret: \"vooASng2yM6MGaSKRs3HblIiTW43ZNdpXkjEs48C\"\n  logs_bucket: \"loki\"\n  logs_endpoint: \"http://192.168.16.10:9000\"\n  logs_region: \"us-east-1\"\n  logs_loki_size: \"1x.extra-small\"\n  logs_storage_class: \"ocs-storagecluster-ceph-rbd\"\n  \nThis way it\u0027s clear what to enable / disable during the activation. I would also added this into docs in a separate table of loki-related settings.",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "91f23c6a_51960b39",
@@ -71,6 +88,74 @@
       "writtenOn": "2023-06-12T08:26:53Z",
       "side": 1,
       "message": "LGTM, just one more concern",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c60c539_cd8829e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "Hey Beto, impressive work! I just added some ideas to simplify the code to make it easier to follow and debug. \n\nMy main concern is the usage of `collection type: \"vector\"`, I\u0027d propose that we use fluentd right from the start, it would simplify a lot the follow-up automated log analysis and setup of alerts with Prometheus if needed.\n\nHere is how fluentd allows us to set up the alerts with Prometheus, it could be really interesting for us: https://docs.fluentd.org/monitoring-fluentd/monitoring-prometheus.",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d9bf573_5d4b88fd",
+        "filename": "README.md",
+        "patchSetId": 15
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "I would move this out to a separate table loki-setting, not to make it too heavy",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9239642c_f9662941",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "probably the usage of if/else {% if dci_disconnected %}{{ image_1 }}{% else %}{{ image_2 }}{% endif %} could improve the readability here",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "51571b1b_3dc694a3",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "could we provide credentials as a link to the file and not as a plain text?",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -141,6 +226,74 @@
       "side": 1,
       "message": "at this time `ol_ocp_supported` is set to 4.10, so it is \"\u003e\u003d\" and will pass. If 4.9 is tested, that will fail.",
       "parentUuid": "875cd949_ad6ed49b",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce2eea2c_e43274b0",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "I see that all of the variables are re-defined 3 times though the code:\nlogs_access_key_secret -\u003e ol_access_key_id -\u003e access_key_id\nlogs_region -\u003e ol_region -\u003e region\netc\n\nIt makes the code difficult to follow.\n\nCould we just define every setting once, for example, by setting `region` and then instead of re-assigning all the time, just check if this variable is defined?",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "315a0dd6_e1739e2d",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "I believe that `type: fluentd` can be more beneficial if we would like to analyze our logs one day, especially in an automated way. It also seems to be a recommended setting: https://docs.openshift.com/container-platform/4.13/logging/config/cluster-logging-configuring-cr.html",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7626f5ac_63629e49",
+        "filename": "roles/ocp-logging/tasks/setup-logging.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "could we wait for a particular object to be up instead of simply waiting for 1 min?",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11951811_4550a78c",
+        "filename": "roles/ocp-logging/tasks/validate-stack.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-12T10:59:43Z",
+      "side": 1,
+      "message": "do we use openshift-console for the logs only? If not, maybe we could separate the namespaces",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
