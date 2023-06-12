@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f54b1e9_aba74034",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-12T08:26:53Z",
+      "side": 1,
+      "message": "However, we\u0027re still exposing here the creds and will be visible once the change is merged. Is there something we can do here to avoid that? Because I suppose it\u0027s hard to do that by using hints",
+      "range": {
+        "startLine": 11,
+        "startChar": 179,
+        "endLine": 11,
+        "endChar": 288
+      },
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "91f23c6a_51960b39",
@@ -31,6 +54,23 @@
       "writtenOn": "2023-06-09T18:49:00Z",
       "side": 1,
       "message": "Thanks Manuel!",
+      "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e3be4e7_2a5ec876",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-12T08:26:53Z",
+      "side": 1,
+      "message": "LGTM, just one more concern",
       "revId": "ecae3d7aecd3c65a8ed0f51d2b772f574537233d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
