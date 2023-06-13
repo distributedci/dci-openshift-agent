@@ -16,6 +16,40 @@
       "message": "LGTM",
       "revId": "f7b56dcc9794adecae423670d9e79731e60583c4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fc0a5c7_91f3ed2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-13T12:53:28Z",
+      "side": 1,
+      "message": "LGTM, just one minor question",
+      "revId": "f7b56dcc9794adecae423670d9e79731e60583c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27ea573f_069ab0dc",
+        "filename": "utils/cleanup-scripts/clean-webartifact.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-13T12:53:28Z",
+      "side": 1,
+      "message": "just one question: the parenthesis at the end of the grep -E, shouldn\u0027t be at the end of line? like the one below",
+      "revId": "f7b56dcc9794adecae423670d9e79731e60583c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
