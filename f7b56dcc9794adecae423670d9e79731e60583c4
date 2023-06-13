@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "21bee63e_c3d961b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-13T17:14:34Z",
+      "side": 1,
+      "message": "That is correct Manuel, It is fixed and actually, I realized that I need to replace the new lines with a space.\nThanks",
+      "parentUuid": "0fc0a5c7_91f3ed2d",
+      "revId": "f7b56dcc9794adecae423670d9e79731e60583c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "27ea573f_069ab0dc",
