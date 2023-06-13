@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61ae977b_4531c5d5",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-13T10:51:03Z",
+      "side": 1,
+      "message": "what if log_settings is not defined? that\u0027s why the job is failing on libvirt right now",
+      "range": {
+        "startLine": 35,
+        "startChar": 18,
+        "endLine": 35,
+        "endChar": 31
+      },
+      "revId": "ce40daab01785fc727858bc13d4cfe163b36ed4d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
