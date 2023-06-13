@@ -68,6 +68,24 @@
       "message": "just one question: the parenthesis at the end of the grep -E, shouldn\u0027t be at the end of line? like the one below",
       "revId": "f7b56dcc9794adecae423670d9e79731e60583c4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26bc7fb0_3c05f1c0",
+        "filename": "utils/cleanup-scripts/clean-webartifact.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-13T17:18:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "27ea573f_069ab0dc",
+      "revId": "f7b56dcc9794adecae423670d9e79731e60583c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
