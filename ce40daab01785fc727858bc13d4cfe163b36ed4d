@@ -22,6 +22,30 @@
       },
       "revId": "ce40daab01785fc727858bc13d4cfe163b36ed4d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2af06070_49074dcd",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 20
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-13T18:34:44Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "61ae977b_4531c5d5",
+      "range": {
+        "startLine": 35,
+        "startChar": 18,
+        "endLine": 35,
+        "endChar": 31
+      },
+      "revId": "ce40daab01785fc727858bc13d4cfe163b36ed4d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
