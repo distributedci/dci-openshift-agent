@@ -33,6 +33,91 @@
       "message": "I think this is ready to be merged, thanks Beto!",
       "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72265e16_a8e1e24b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-14T14:27:45Z",
+      "side": 1,
+      "message": "LGTM, just minor typos in case you want to fix them.",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e950e0f_e70a6be7",
+        "filename": "README.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-14T14:27:45Z",
+      "side": 1,
+      "message": "double \"and and\" almost at the end of sentence :)",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ccf9f46f_d39d773f",
+        "filename": "roles/ocp-logging/README.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-14T14:27:45Z",
+      "side": 1,
+      "message": "*Validates",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9003463_ea48c07e",
+        "filename": "roles/ocp-logging/README.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-14T14:27:45Z",
+      "side": 1,
+      "message": "*Creates",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2656b8eb_e73ba9b2",
+        "filename": "roles/ocp-logging/tasks/pre-run.yml",
+        "patchSetId": 25
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-14T14:27:45Z",
+      "side": 1,
+      "message": "extra \"s\" at the end, it should read: \"does not exist\"",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
