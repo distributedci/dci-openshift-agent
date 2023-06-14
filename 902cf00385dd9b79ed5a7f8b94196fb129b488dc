@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fad307a_abaa6cb6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-14T07:35:57Z",
+      "side": 1,
+      "message": "Thanks Beto for your work here, I just have a couple of questions to understand everything at all",
+      "revId": "902cf00385dd9b79ed5a7f8b94196fb129b488dc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eff471b0_2421b85d",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-14T07:35:57Z",
+      "side": 1,
+      "message": "sorry for the question because it may be trivial, but in what moment \"release.txt\" file is placed in webserver_url/version path? because, in mirror-ocp-release, we\u0027re checking mor_cache_dirm which is a different file path",
+      "range": {
+        "startLine": 44,
+        "startChar": 10,
+        "endLine": 44,
+        "endChar": 62
+      },
+      "revId": "902cf00385dd9b79ed5a7f8b94196fb129b488dc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

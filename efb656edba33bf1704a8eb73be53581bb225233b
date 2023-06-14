@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "205f8c32_2c6433af",
+        "filename": "roles/mirror-ocp-release/tasks/files.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-14T07:35:57Z",
+      "side": 0,
+      "message": "don\u0027t we need this file anymore?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 39
+      },
+      "revId": "efb656edba33bf1704a8eb73be53581bb225233b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
