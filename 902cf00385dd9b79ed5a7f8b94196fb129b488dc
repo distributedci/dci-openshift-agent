@@ -39,6 +39,30 @@
       },
       "revId": "902cf00385dd9b79ed5a7f8b94196fb129b488dc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73629c59_794d7fbb",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-14T15:13:11Z",
+      "side": 1,
+      "message": "Thanks, Ramon, the file is extracted from the release image in https://github.com/redhat-cip/dci-openshift-agent/blob/2e3179acbacf3d4d62d4759fec4b0889a460de69/roles/mirror-ocp-release/tasks/download.yml#L11 in /opt/cache/\u003cversion\u003e and that file is exposed via the web server.\n\nDuring the upgrade, we are not using the cache anymore as can get the webserver used for the cluster deployment and get the files on the fly.",
+      "parentUuid": "eff471b0_2421b85d",
+      "range": {
+        "startLine": 44,
+        "startChar": 10,
+        "endLine": 44,
+        "endChar": 62
+      },
+      "revId": "902cf00385dd9b79ed5a7f8b94196fb129b488dc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
