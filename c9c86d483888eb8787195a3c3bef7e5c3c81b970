@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "56aa2e97_60408ca7",
+        "filename": "README.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-14T18:56:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e950e0f_e70a6be7",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ccf9f46f_d39d773f",
@@ -86,6 +104,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "de488287_0e3e3658",
+        "filename": "roles/ocp-logging/README.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-14T18:56:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ccf9f46f_d39d773f",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c9003463_ea48c07e",
@@ -99,6 +135,24 @@
       "writtenOn": "2023-06-14T14:27:45Z",
       "side": 1,
       "message": "*Creates",
+      "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a67e8694_277e693d",
+        "filename": "roles/ocp-logging/README.md",
+        "patchSetId": 25
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-14T18:56:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9003463_ea48c07e",
       "revId": "c9c86d483888eb8787195a3c3bef7e5c3c81b970",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
