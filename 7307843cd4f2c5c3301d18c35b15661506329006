@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1904711e_29152e68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-06-16T19:15:29Z",
+      "side": 1,
+      "message": "Just so you know.. You should be able to comment with \"check libvirt --assisted-abi\" in the future and it will override the test-hint I believe.",
+      "revId": "7307843cd4f2c5c3301d18c35b15661506329006",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
