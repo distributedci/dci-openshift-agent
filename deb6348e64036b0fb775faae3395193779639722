@@ -50,6 +50,24 @@
       "message": "change allow_upgrade_warns to allow_upgrade_with_warnings to match the flag to keep consistent with rest of the variables style",
       "revId": "deb6348e64036b0fb775faae3395193779639722",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "124ecf52_754ca9ae",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-16T19:26:57Z",
+      "side": 1,
+      "message": "Sure, done in the patchset 2",
+      "parentUuid": "43aa5ba8_aa95b3f6",
+      "revId": "deb6348e64036b0fb775faae3395193779639722",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
