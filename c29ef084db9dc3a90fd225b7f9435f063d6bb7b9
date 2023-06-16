@@ -16,6 +16,23 @@
       "message": "LGTM, thanks",
       "revId": "c29ef084db9dc3a90fd225b7f9435f063d6bb7b9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "536e384e_12d1bc5f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-16T19:06:30Z",
+      "side": 1,
+      "message": "thanks, now changing commit to test assisted-abi ",
+      "revId": "c29ef084db9dc3a90fd225b7f9435f063d6bb7b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
