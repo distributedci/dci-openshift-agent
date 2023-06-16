@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.9-vanilla ocp-4.10-upgrade openshift-vanilla:components\u003docp?tags%3abuild%3aga openshift-vanilla-upgrade-4.10:components\u003docp?tags%3abuild%3aga openshift-vanilla-upgrade-4.10:ansible_extravars\u003dallow_explicit_upgrade:true",
       "revId": "deb6348e64036b0fb775faae3395193779639722",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43aa5ba8_aa95b3f6",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-06-16T15:39:16Z",
+      "side": 1,
+      "message": "change allow_upgrade_warns to allow_upgrade_with_warnings to match the flag to keep consistent with rest of the variables style",
+      "revId": "deb6348e64036b0fb775faae3395193779639722",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
