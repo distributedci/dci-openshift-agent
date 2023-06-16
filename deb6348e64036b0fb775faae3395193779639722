@@ -16,6 +16,23 @@
       "message": "Let\u0027s test this with the daily upgrade",
       "revId": "deb6348e64036b0fb775faae3395193779639722",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ab833d8_e29cac40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-16T14:53:50Z",
+      "side": 1,
+      "message": "check dallas ocp-4.9-vanilla ocp-4.10-upgrade openshift-vanilla:components\u003docp?tags%3abuild%3aga openshift-vanilla-upgrade-4.10:components\u003docp?tags%3abuild%3aga openshift-vanilla-upgrade-4.10:ansible_extravars\u003dallow_explicit_upgrade:true",
+      "revId": "deb6348e64036b0fb775faae3395193779639722",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
