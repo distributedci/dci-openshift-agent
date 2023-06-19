@@ -16,6 +16,24 @@
       "message": "Thanks Beto,\nThis was actually verified in the sno-installer role[1], but I guess makes more sense to move it to the sno-node-prep,\n[1] https://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-installer/tasks/10_get_oc.yml#L30-L53",
       "revId": "ea504504e9b985837f4f1fcdce892b84f74e4715",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f228a732_8eead71a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-19T21:04:33Z",
+      "side": 1,
+      "message": "Yeah, it is failing on the node that we are rebuilding. Thanks",
+      "parentUuid": "29fd6bcb_237d4fad",
+      "revId": "ea504504e9b985837f4f1fcdce892b84f74e4715",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
