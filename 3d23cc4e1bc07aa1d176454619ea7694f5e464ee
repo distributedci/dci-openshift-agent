@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "3d23cc4e1bc07aa1d176454619ea7694f5e464ee",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66ecdfed_43577844",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-22T00:40:50Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "3d23cc4e1bc07aa1d176454619ea7694f5e464ee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19838b96_88fda913",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-22T00:40:50Z",
+      "side": 1,
+      "message": "interesting, I didn\u0027t know we could add conditions in multiple lines this way",
+      "revId": "3d23cc4e1bc07aa1d176454619ea7694f5e464ee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
