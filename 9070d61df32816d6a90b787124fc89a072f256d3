@@ -16,6 +16,40 @@
       "message": "Some jobs were the issue has been observed:\n\nhttps://www.distributed-ci.io/jobs/d8fd8263-e143-49be-8242-9c0c61bc378d/jobStates?sort\u003ddate\nhttps://www.distributed-ci.io/jobs/d8c956ff-c588-43ef-bd94-5732b267a6ab/jobStates/",
       "revId": "9070d61df32816d6a90b787124fc89a072f256d3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "104c6213_5973eba6",
+        "filename": "roles/hco-setup/tasks/deploy-hco.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-06-23T01:29:50Z",
+      "side": 1,
+      "message": "I don\u0027t think this makes any change in this PR, v1 is the default if you don\u0027t specify.  But fine to be explicit.",
+      "revId": "9070d61df32816d6a90b787124fc89a072f256d3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b202661c_b93ea07f",
+        "filename": "roles/hco-setup/tasks/deploy-hco.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-06-23T01:29:50Z",
+      "side": 1,
+      "message": "So I can\u0027t find any examples of using pods..  I\u0027m not sure how this worked before 😊\n\nAll the examples show Pod.",
+      "revId": "9070d61df32816d6a90b787124fc89a072f256d3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
