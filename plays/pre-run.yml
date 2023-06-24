@@ -10,6 +10,21 @@
   when:
     - dci_disconnected | default(false) | bool
 
+- name: "Validate paths for file to mirror catalogs"
+  block:
+    - name: "Assert that file_catalog exists is enabled"
+      stat:
+        path: "{{ file_catalog }}"
+      register: catalog_path
+
+    - name: "Fail when file_catalog path does not exists"
+      ansible.builtin.fail:
+        msg: "{{ file_catalog }} path does not exists"
+      when:
+        - not catalog_path.stat.exists
+  when:
+    - file_catalog | default("") | length
+
 - name: "Validate NFS provisioner variables"
   assert:
     that:
