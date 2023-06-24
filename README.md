@@ -282,6 +282,9 @@ API version to use when deploying HCO operator: hco.kubevirt.io/cnv_api_version
 | nfs_server                      | False    | String  |                                                                | NFS server's FQDN or IP Address. eg. my-nfs.mylab.local
 | nfs_path                        | False    | String  |                                                                | NFS export path. e.g. /exports/nfs-provisioner
 | enable_mlb                      | False    | Boolean | False                                                          | Deploys MetalLB operator.
+| file_catalog                    | False    | String  | ""                                                             | Mirror Operator images from an index dump stored in a webserver. This is useful for full disconnected environents where the operator images are provided using a mirror to file artifact.
+| file_catalog_name               | False    | String  | catalog-from-file                                              | Name for the catalog created from index dump.
+| file_catalog_display            | False    | String  | Catalog from file                                              | Display Name for the catalog created from an index dump.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
