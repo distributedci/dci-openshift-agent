@@ -1,0 +1,108 @@
+---
+- name: "Create working directory"
+  tempfile:
+    state: directory
+  register: image_dir
+
+- name: "Set workdir fact"
+  set_fact:
+    image_dir: "{{ image_dir.path }}"
+
+- name: "Download stable oc-mirror plugin"
+  vars:
+    ocp_mirror_url: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/oc-mirror.tar.gz"
+  unarchive:
+    src: "{{ ocp_mirror_url }}"
+    dest: "{{ image_dir }}"
+    remote_src: true
+    mode: 0755
+  register: result
+  retries: 3
+  delay: 10
+  until: result is not failed
+
+- name: "Check if the operator images file exists"
+  uri:
+    url: "{{ file_catalog }}"
+  register: file_response
+  ignore_errors: true
+  run_once: true
+
+- name: "Operator Images file cannot be downloaded"
+  fail:
+    msg: "Operator Images file cannot be downloaded - {{ file_catalog }}"
+  when:
+    - file_response.status | int != 200
+
+- name: "Download Operators Image file"
+  get_url:
+    url: "{{ file_catalog }}"
+    dest: "{{ image_dir }}/"
+    mode: "0750"
+
+- name: "Load Images to registry"
+  environment:
+    - DOCKER_CONFIG: "{{ image_dir }}"
+  shell:
+    chdir: "{{ image_dir }}"
+    cmd: >
+      set -x;
+      {{ image_dir }}/oc-mirror
+      --from={{ image_dir }}
+      docker://{{ dci_local_registry }}
+      --skip-metadata-check
+      --dest-skip-tls
+
+- name: "Find the Catalogsource manifests"
+  find:
+    paths: "{{ image_dir }}"
+    recurse: true
+    patterns: "catalogSource-redhat-operator-index.yaml"
+  register: catalog_manifest
+
+- name: "Fail if not CatalogSource is present"
+  fail:
+    msg: "The Catalog source manifest is missing"
+  when: catalog_manifest.matched == 0
+
+- name: "Create the Catalogsource for from-file operators"
+  vars:
+    catsrc_manifest: "{{ lookup('file', catalog_manifest.files[0].path) }}"
+    index_image: "{{ catsrc_manifest | from_yaml | json_query('spec.image') }}"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      metadata:
+        name: "{{ file_catalog_name }}"
+        namespace: openshift-marketplace
+      spec:
+        image: "{{ index_image }}"
+        displayName: "{{ file_catalog_display }}"
+        sourceType: grpc
+
+- name: "Find the ICSP manifest"
+  find:
+    paths: "{{ image_dir }}"
+    recurse: true
+    patterns: "imageContentSourcePolicy.yaml"
+  register: icsp_manifest
+
+- name: "Fail if not ICSP was created"
+  fail:
+    msg: "The ICSP manifest is missing"
+  when: icsp_manifest.matched == 0
+
+- name: "Apply the ICSP manifest"
+  community.kubernetes.k8s:
+    definition: "{{ lookup('template', '{{ icsp_manifest.files[0].path }}') | from_yaml }}"
+
+- name: "Delete working directory"
+  file:
+    state: absent
+    path: "{{ image_dir }}"
+
+- name: "Update catalogSource name"
+  set_fact:
+    opm_catalog_source_name: "{{ file_catalog_name }}"
+...
