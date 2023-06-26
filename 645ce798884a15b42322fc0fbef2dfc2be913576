@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82202d4f_0bff9362",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-26T18:52:01Z",
+      "side": 1,
+      "message": "check dallas ocp-4.10-vanilla openshift-vanilla:ansible_extravars\u003dfile_catalog:\u0027http://172.27.17.53:8080/mirror_seq1_000000.tar\u0027",
+      "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
