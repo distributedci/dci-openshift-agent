@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b8835ef_7b45726a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-27T06:50:29Z",
+      "side": 1,
+      "message": "field_selectors and label_selectors were not working at all.\n\nWill retry on the check until get the packagemanifest from the desired catalog_source.\n",
+      "revId": "0d40aac46ee51edb5115f7cfae74d0a5d28ceb26",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
