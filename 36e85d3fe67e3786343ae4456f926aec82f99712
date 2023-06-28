@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e180a2ae_65fda6be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-28T10:15:47Z",
+      "side": 1,
+      "message": "Hi team, adding you as CI Duty couple this week.\nThe two cases where this issue is happeing are reported in CILAB-1116. You\u0027ll have more information there.",
+      "revId": "36e85d3fe67e3786343ae4456f926aec82f99712",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
