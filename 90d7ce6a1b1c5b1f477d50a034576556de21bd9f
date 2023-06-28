@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e86f972_9234f449",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-28T17:34:03Z",
+      "side": 1,
+      "message": "Test-Args-Hints: -e dci_topic\u003dOCP-4.12 -e enable_logs_stack\u003dtrue -e logs_settings\u003d/opt/cache/logs_settings.yml.enc -e enable_ocs\u003dtrue -e enable_lso\u003dtrue -e enable_odf\u003dtrue -e storage_cluster\u003dtrue",
+      "revId": "90d7ce6a1b1c5b1f477d50a034576556de21bd9f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
