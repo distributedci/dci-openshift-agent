@@ -16,6 +16,23 @@
       "message": "Hi team, adding you as CI Duty couple this week.\nThe two cases where this issue is happeing are reported in CILAB-1116. You\u0027ll have more information there.",
       "revId": "36e85d3fe67e3786343ae4456f926aec82f99712",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afcf8bf5_33713301",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-28T12:32:44Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "36e85d3fe67e3786343ae4456f926aec82f99712",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
