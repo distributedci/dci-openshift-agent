@@ -86,6 +86,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e92fd54a_e2ed89c2",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-28T01:42:10Z",
+      "side": 1,
+      "message": "thanks, yeah some responsibilities on our side. Updated the readme accordingly",
+      "parentUuid": "9f153643_35782d98",
+      "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "632cea17_975c8d47",
@@ -99,6 +117,24 @@
       "writtenOn": "2023-06-26T22:48:04Z",
       "side": 1,
       "message": "We could avoid needing this variable by using the catalog name but making it human readable, example:\n\n    \u0027 \u0027.join(file_catalog_name.split(\u0027-\u0027)).capitalize()",
+      "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fbf1d2c_cd3f4637",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-28T01:42:10Z",
+      "side": 1,
+      "message": "nice, thanks",
+      "parentUuid": "632cea17_975c8d47",
       "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -120,6 +156,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab359a1e_1ef6d552",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-28T01:42:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0dfb4a80_6c742149",
+      "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9c00a566_291d4b31",
@@ -137,6 +191,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6143a030_aa36a736",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-28T01:42:10Z",
+      "side": 1,
+      "message": "yeah, it is more natural",
+      "parentUuid": "9c00a566_291d4b31",
+      "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4eb202f5_a168a48f",
@@ -150,6 +222,24 @@
       "writtenOn": "2023-06-26T22:48:04Z",
       "side": 1,
       "message": "Can delete this block and make it part of the block above as it applies to disconnected environments only",
+      "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da93e177_67442f8e",
+        "filename": "plays/catalog-from-image.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-28T01:42:10Z",
+      "side": 1,
+      "message": "Ended up moving that logic to prepare-operators as it is a common task for both plays",
+      "parentUuid": "4eb202f5_a168a48f",
       "revId": "645ce798884a15b42322fc0fbef2dfc2be913576",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
