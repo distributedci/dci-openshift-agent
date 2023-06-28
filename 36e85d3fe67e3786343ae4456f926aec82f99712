@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "36e85d3fe67e3786343ae4456f926aec82f99712",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46bb7e80_dcb61b5e",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-28T16:38:18Z",
+      "side": 1,
+      "message": "Since the logic of the failure is moved here, you can remove the next task and remove the ignore_errors in here",
+      "revId": "36e85d3fe67e3786343ae4456f926aec82f99712",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
