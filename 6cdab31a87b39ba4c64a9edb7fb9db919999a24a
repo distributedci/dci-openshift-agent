@@ -86,6 +86,23 @@
       "parentUuid": "c93f5a7d_03d8c9d4",
       "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb65343b_09038048",
+        "filename": "group_vars/all",
+        "patchSetId": 6
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-29T04:41:42Z",
+      "side": 1,
+      "message": "This can be gone since is not used any longer, right?",
+      "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
