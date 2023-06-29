@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "99a846db_e6ac183e",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T17:36:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a5b7a72a_ad2fd432",
+      "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d864148_65aeea27",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-06-29T04:41:42Z",
       "side": 1,
       "message": "nit: same as above, failed_when",
+      "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1422cf67_812853ec",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T17:36:17Z",
+      "side": 1,
+      "message": "Thanks",
+      "parentUuid": "4d864148_65aeea27",
       "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -92,6 +128,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3bb5dc57_9da77500",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T17:36:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4626fc7d_9d4fec78",
+      "range": {
+        "startLine": 26,
+        "startChar": 6,
+        "endLine": 26,
+        "endChar": 18
+      },
+      "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a39a3cbe_7f842790",
@@ -105,6 +165,24 @@
       "writtenOn": "2023-06-29T04:41:42Z",
       "side": 1,
       "message": "I\u0027m unsure why this was moved to this place",
+      "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3277c48_6a6d3cae",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T17:36:17Z",
+      "side": 1,
+      "message": "To cover the ICSP applied for the catalog created from a file. When the catalog is created from a file we are not defining icsp_files.",
+      "parentUuid": "a39a3cbe_7f842790",
       "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

@@ -103,6 +103,24 @@
       "message": "This can be gone since is not used any longer, right?",
       "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c27899a_0294d1f3",
+        "filename": "group_vars/all",
+        "patchSetId": 6
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T17:36:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb65343b_09038048",
+      "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
