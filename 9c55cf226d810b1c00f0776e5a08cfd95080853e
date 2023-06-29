@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e285155_b2f98362",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-29T18:40:39Z",
+      "side": 1,
+      "message": "Can remove the block and just leave one task",
+      "revId": "9c55cf226d810b1c00f0776e5a08cfd95080853e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
