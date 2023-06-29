@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "3ee51ca2_b0c7e6e1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T01:09:50Z",
+      "side": 1,
+      "message": "I think we need to test other cases, but those can be address on separated changes",
+      "parentUuid": "7347c8d1_6307d869",
+      "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "7ed7907f_b9f01856",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 6
@@ -48,6 +66,24 @@
       "writtenOn": "2023-06-29T01:01:13Z",
       "side": 1,
       "message": "empty space at the end of the line :)",
+      "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "462ac77c_37d030fe",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T01:09:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c93f5a7d_03d8c9d4",
       "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
