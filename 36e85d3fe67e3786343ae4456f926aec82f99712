@@ -50,6 +50,24 @@
       "message": "Since the logic of the failure is moved here, you can remove the next task and remove the ignore_errors in here",
       "revId": "36e85d3fe67e3786343ae4456f926aec82f99712",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1eb97260_5e4895f9",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-29T08:46:53Z",
+      "side": 1,
+      "message": "It was just to keep the same Jira card in case it\u0027s happening again, but understood, I\u0027ll change that",
+      "parentUuid": "46bb7e80_dcb61b5e",
+      "revId": "36e85d3fe67e3786343ae4456f926aec82f99712",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
