@@ -33,6 +33,24 @@
       "message": "what\u0027s the expected behavior if the defined hub_sc does not exist? should it use the default sc? or fail",
       "revId": "e9ae78c3d3034e8bcbb843a138e33fb8a03da5a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2978fed_9e73053c",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T18:14:44Z",
+      "side": 1,
+      "message": "if `hub_sc` does not exist, it will fail. If undefined and a default SC is present, that will be used. So, by default will use the default SC",
+      "parentUuid": "fbdb536c_620930a2",
+      "revId": "e9ae78c3d3034e8bcbb843a138e33fb8a03da5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

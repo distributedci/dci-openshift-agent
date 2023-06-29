@@ -58,6 +58,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15011893_5d3b5e7a",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T18:14:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f135fff9_b99d2f18",
+      "range": {
+        "startLine": 10,
+        "startChar": 26,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "7721b890e4354b7b3af8b9ba12e42c01febc69a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4e5c7144_68d25b15",
@@ -81,6 +105,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e8999fc_e2f8cdc6",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T18:14:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e5c7144_68d25b15",
+      "range": {
+        "startLine": 14,
+        "startChar": 41,
+        "endLine": 14,
+        "endChar": 43
+      },
+      "revId": "7721b890e4354b7b3af8b9ba12e42c01febc69a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8bdcf9a1_227f0037",
@@ -94,6 +142,30 @@
       "writtenOn": "2023-06-29T11:06:49Z",
       "side": 1,
       "message": "should we use a flag to also enable it? something like enable_hypershift? (Default to false)",
+      "range": {
+        "startLine": 247,
+        "startChar": 2,
+        "endLine": 247,
+        "endChar": 6
+      },
+      "revId": "7721b890e4354b7b3af8b9ba12e42c01febc69a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11e2c2d7_29968600",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-29T18:14:44Z",
+      "side": 1,
+      "message": "I do not think it is needed at this moment. In our case, hypershift will be highly tied to ACM. Just a couple of components need to be activated.",
+      "parentUuid": "8bdcf9a1_227f0037",
       "range": {
         "startLine": 247,
         "startChar": 2,
