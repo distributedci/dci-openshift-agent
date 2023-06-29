@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de20ea81_234be8bb",
+        "filename": "roles/hco-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-06-29T07:52:34Z",
+      "side": 1,
+      "message": "Hi Tony, you probably have to cut off the digest from the target image to avoid the skopeo error that we recently hit with Beto in the common-roles/mirroring: https://github.com/containers/skopeo/issues/2023",
+      "revId": "ef2e5f0189ceec4bc6b7a9b46058aec871787568",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
