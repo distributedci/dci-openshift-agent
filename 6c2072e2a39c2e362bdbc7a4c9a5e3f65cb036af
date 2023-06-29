@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a751da6_71a532f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-29T10:57:38Z",
+      "side": 1,
+      "message": "minor comment frm my side",
+      "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a5b7a72a_ad2fd432",
@@ -48,6 +65,29 @@
       "writtenOn": "2023-06-29T04:41:42Z",
       "side": 1,
       "message": "nit: could do in one task with failed_when: not catalog_path.stat.exists",
+      "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4626fc7d_9d4fec78",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-06-29T10:57:38Z",
+      "side": 1,
+      "message": "should this be added to group_vars/all, since it\u0027s defined in the README too?",
+      "range": {
+        "startLine": 26,
+        "startChar": 6,
+        "endLine": 26,
+        "endChar": 18
+      },
       "revId": "6c2072e2a39c2e362bdbc7a4c9a5e3f65cb036af",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
