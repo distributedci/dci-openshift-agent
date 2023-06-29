@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d6740ba_7327a972",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-29T20:02:34Z",
+      "side": 1,
+      "message": "Another typo? shouldn\u0027t this one be hub_sc instead? btw you could do \n   - hub_sc is undefined",
+      "revId": "25061f69bc7a92e7c3f0bed6d9cf3e7225dae43e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
