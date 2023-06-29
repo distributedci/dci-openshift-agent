@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7347c8d1_6307d869",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-29T01:01:13Z",
+      "side": 1,
+      "message": "does the WIP needs to be updated? or there are still pending decisions?",
+      "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ed7907f_b9f01856",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-29T01:01:13Z",
+      "side": 1,
+      "message": "thanks, I see the last job use the operators from file, just minor comments",
+      "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c93f5a7d_03d8c9d4",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-29T01:01:13Z",
+      "side": 1,
+      "message": "empty space at the end of the line :)",
+      "revId": "6cdab31a87b39ba4c64a9edb7fb9db919999a24a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
