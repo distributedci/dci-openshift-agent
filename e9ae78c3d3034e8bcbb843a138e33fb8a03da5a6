@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-acm-hub",
       "revId": "e9ae78c3d3034e8bcbb843a138e33fb8a03da5a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbdb536c_620930a2",
+        "filename": "roles/acm-setup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-29T04:45:05Z",
+      "side": 1,
+      "message": "what\u0027s the expected behavior if the defined hub_sc does not exist? should it use the default sc? or fail",
+      "revId": "e9ae78c3d3034e8bcbb843a138e33fb8a03da5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

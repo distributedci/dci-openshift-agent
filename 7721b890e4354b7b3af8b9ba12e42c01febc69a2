@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-acm-hub",
       "revId": "7721b890e4354b7b3af8b9ba12e42c01febc69a2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a3c088d_44437c93",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-29T04:45:05Z",
+      "side": 1,
+      "message": "Thanks Beto, I have a question on the SC",
+      "revId": "7721b890e4354b7b3af8b9ba12e42c01febc69a2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
