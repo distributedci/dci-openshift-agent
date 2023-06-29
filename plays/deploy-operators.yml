@@ -178,6 +178,9 @@
     - name: "configure-operators : Deploy Hyperconverged Operator"
       include_role:
         name: hco-setup
+      vars:
+        hs_pullsecret_file: "{{ dci_pullsecret_file }}"
+        hs_registry: "{{ dci_local_registry }}"
 
   when:
     - enable_cnv | bool
