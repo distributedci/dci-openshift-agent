@@ -17,6 +17,7 @@ The configuration of the ACM hub can be customized by using the following variab
 |hub_namespace                       |open-cluster-management        |No           |Namespace where ACM has been installed and will be configured |
 |hub_instance                        |multiclusterhub                |No           |Name of the multiclusterhub instance to be created (fail if already exists) |
 |hub_disconnected                    |false                          |No           |If true, it will create custom ClusterImageSets and remove the Channel subscriptions |
+|hub_sc                              |Undefined                      | If no default StorageClass is available | Storage class for ACM Hub resources |
 
 ## Requirements
 1. An Openshift Cluster with a subscription for the ACM operator.
