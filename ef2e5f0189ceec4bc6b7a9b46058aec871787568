@@ -16,6 +16,24 @@
       "message": "Hi Tony, you probably have to cut off the digest from the target image to avoid the skopeo error that we recently hit with Beto in the common-roles/mirroring: https://github.com/containers/skopeo/issues/2023",
       "revId": "ef2e5f0189ceec4bc6b7a9b46058aec871787568",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a24d3c7f_6dffd530",
+        "filename": "roles/hco-setup/tasks/test-deploy-vm.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-29T17:27:29Z",
+      "side": 1,
+      "message": "Thanks taking a look and for sharing this, I see the reply to that issue works fine with a digest. It is expected in most cases to have a tag for this testing image as the test will pull from the registry directly, i.e. without the use of a mirroring mechanism like imageContentSourcePolicies",
+      "parentUuid": "de20ea81_234be8bb",
+      "revId": "ef2e5f0189ceec4bc6b7a9b46058aec871787568",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
