@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "8455f198212a2de3f419faea4f1ddf979d9052b9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62b51bfb_587d6050",
+        "filename": "roles/acm-setup/tasks/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-06-29T18:53:49Z",
+      "side": 1,
+      "message": "typo? acm_sc --\u003e hub_sc",
+      "revId": "8455f198212a2de3f419faea4f1ddf979d9052b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
