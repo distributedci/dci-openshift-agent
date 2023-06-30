@@ -16,6 +16,23 @@
       "message": "LGTM, thanks Tony",
       "revId": "ed7cef7ab3689bb067498e1b84ab7fcfcd487077",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7583313c_3905c2fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-06-30T15:46:24Z",
+      "side": 1,
+      "message": "thanks",
+      "revId": "ed7cef7ab3689bb067498e1b84ab7fcfcd487077",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
