@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9361739_0f4cc61e",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-06-30T21:47:10Z",
+      "side": 1,
+      "message": "It looks like the Operator group scope of openshift-operators namespace is not compatible with the requirements of the operator. I think the documentation is wrong.",
+      "revId": "f699b5473f30484ee2db673809d19aa3ba59498e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
