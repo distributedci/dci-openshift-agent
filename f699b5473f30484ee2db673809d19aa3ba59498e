@@ -16,6 +16,24 @@
       "message": "It looks like the Operator group scope of openshift-operators namespace is not compatible with the requirements of the operator. I think the documentation is wrong.",
       "revId": "f699b5473f30484ee2db673809d19aa3ba59498e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "873b2bb1_d39ebd17",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-01T18:55:35Z",
+      "side": 1,
+      "message": "I remember installing the gitops operator in the openshift-operators namespace since it was TP in 4.7, maybe something change recently that could be causing not to work, openshift gitops is a cluster-scoped operator, maybe something about that in recent versions of OCP? or PSA?",
+      "parentUuid": "d9361739_0f4cc61e",
+      "revId": "f699b5473f30484ee2db673809d19aa3ba59498e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
