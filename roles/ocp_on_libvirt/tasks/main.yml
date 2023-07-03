@@ -21,6 +21,8 @@
       vars:
         vbmc_host: "{{ vbmc_host_provided }}"
         vbmc_nodes: "{{ resources }}"
+    - include_tasks: redfish_setup.yml
+      when: enable_redfish | bool
     - include_tasks: dci_setup.yml
     - include_role:
         name: conserver
