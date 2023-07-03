@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b52d1f4_d5c0b2ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-03T23:03:54Z",
+      "side": 1,
+      "message": "\n$ oc get clusterversion\nNAME      VERSION                              AVAILABLE   PROGRESSING   SINCE   STATUS\nversion   4.13.0-0.nightly-2023-06-20-224158   True        False         165m    Cluster version is 4.13.0-0.nightly-2023-06-20-224158\n$ oc get bmh -n sno1 -w\nNAME   STATE          CONSUMER   ONLINE   ERROR   AGE\nsno1   provisioning              true             18m\nsno1   provisioned               true             19m\nsno1   provisioned               true             19m\nsno1   provisioned               true             19m",
+      "revId": "420096c3f8c6cfdba3d6e36a79a8431af813a5ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
