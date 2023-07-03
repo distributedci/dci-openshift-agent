@@ -73,3 +73,10 @@ ansible_ssh_extra_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/n
 # The following mirror entries are the default ones. If you want to add more mirror
 #   you can uncomment this parameter and add it here.
 #registry_source_mirrors=["quay.io/openshift-release-dev/ocp-v4.0-art-dev", "registry.svc.ci.openshift.org/ocp/release", "quay.io/openshift-release-dev/ocp-release"]
+
+{% if enable_redfish | bool -%}
+[kvm_hosts_redfish]
+{% for key, value in ironic_nodes.items() -%}
+{{ key }}
+{% endfor %}
+{%- endif %}
