@@ -27,6 +27,30 @@
       vars:
         cluster_nodes: "{{ groups['masters'] + ('workers' in groups) | ternary(groups['workers'], []) }}"
       when: enable_conserver
+    - block:
+        - name: "Clone/update assisted-deploy repo"
+          vars:
+            git_repo: "{{ assisted_deploy_repo }}"
+            git_ref: "{{ assisted_deploy_version }}"
+          git:
+            version: "{{ git_ref }}"
+            repo: "{{ git_repo }}"
+            dest: "{{ dci_cache_dir }}/assisted_deploy_repo"
+            force: true
+          # On RHEL8 git clone can sporadically fail with OpenSSL SSL_read:
+          # SSL_ERROR_SYSCALL, errno 104.
+          register: git_clone
+          retries: 3
+          delay: 10
+          until: not git_clone.failed
+          when:
+            - "dci_cache_dir + '/assisted_deploy_repo/roles' in roles_path"
+          tags:
+            - clone_upstream_repos
+        - name: Install sushy-tools
+          include_role:
+            name: setup_sushy_tools
+      when: enable_redfish
   when: hook_action == 'install'
 
 - block:
