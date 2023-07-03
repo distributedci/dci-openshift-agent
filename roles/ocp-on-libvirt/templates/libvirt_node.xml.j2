@@ -5,6 +5,11 @@
   <os>
     <type arch='{{ host['arch'] }}'>hvm</type>
     <boot dev='{{ host['boot_dev'] }}'/>
+{% if enable_redfish %}
+    <type arch='x86_64' machine='pc-q35-rhel8.6.0'>hvm</type>
+    <loader readonly='yes' secure='yes' type='pflash'>/usr/share/edk2/ovmf/OVMF_CODE.secboot.fd</loader>
+    <nvram template='/usr/share/edk2/ovmf/OVMF_VARS.secboot.fd'>/var/lib/libvirt/qemu/nvram/{{ host['name'] }}_VARS.fd</nvram>
+{% endif %}
 {% if enable_conserver %}
     <bios useserial='yes' rebootTimeout='0'/>
 {% endif %}
