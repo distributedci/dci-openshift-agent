@@ -127,6 +127,24 @@ $ cd samples/ocp_on_libvirt/
 $ ansible-playbook -v libvirt_destroy.yml
 ```
 
+### Remote boot management over Redfish
+
+By default, the libvirt environments use the IPMI protocol to remotely control the boot options in the virtual machines, by means of the vBMC service.
+
+Alternatively, the Redfish protocol may be used as implemented by the sushy-tools Redfish Emulator, both in PXE boot and virtual media modes.
+
+To do so, your libvirt_up playbook inventory must include the following parameters:
+
+* **enable_redfish (boolean):** to switch from IPMI to Redfish protocol.
+
+* **enable_virtualmedia (boolean):** if enable_redfish is set to true, you may choose to use virtual media instead of PXE boot mode.
+
+* **vendor (=kvm):** the baremetal deploy ansible code supports several Redfish implementations. To use the sushy-tools emulator implementation set this parameter to "kvm".
+
+* **vbmc_user (string):** the username to set up and connect to the redfish endpoint.
+
+* **vbmc_password (string):** the password to set up and connect to the redfish endpoint.
+
 ### Demo screencast
 [![demo](https://asciinema.org/a/Rv35FeMi5CADVsaBUhdu3f6d0.svg)](https://asciinema.org/a/Rv35FeMi5CADVsaBUhdu3f6d0?autoplay=1)
 
