@@ -431,6 +431,7 @@ fi
 
 if [ -d crucible ]; then
     sed -i -e "s@/var/lib/dci-openshift-agent/assisted_deploy_repo/@$PWD/crucible/@g" ansible.cfg
+    sed -i -e "s@/var/lib/dci-openshift-agent/assisted_deploy_repo/@$PWD/crucible/@g" "$PWD"/dci-openshift-agent/samples/ocp_on_libvirt/ansible.cfg
 fi
 
 if [ -d dci-ansible ]; then
@@ -552,7 +553,7 @@ if [ -z "$KCFG" ]; then
         cd "$VIRTDIR"
 
         if [ "$VIRT" = virt ]; then
-            setsid ansible-playbook -vv libvirt_up.yml ${VIRT_INV:-} "$@" &
+            setsid ansible-playbook --vault-id ${DCI_VAULT_CLIENT:=/usr/bin/dci-vault-client} -vv libvirt_up.yml ${VIRT_INV:-} "$@" &
             do_wait
         elif [ "$VIRT" = sno ]; then
             setsid ansible-playbook -vv generate-hosts-file.yml ${VIRT_INV:-} &
