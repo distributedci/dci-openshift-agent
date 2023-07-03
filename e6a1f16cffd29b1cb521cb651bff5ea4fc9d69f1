@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fd02eda_d85d620f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-03T14:58:34Z",
+      "side": 1,
+      "message": "Hi Nacho, thanks for working on this. While this is ready for review, do you mind moving it to WIP? Thanks again!",
+      "revId": "e6a1f16cffd29b1cb521cb651bff5ea4fc9d69f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
