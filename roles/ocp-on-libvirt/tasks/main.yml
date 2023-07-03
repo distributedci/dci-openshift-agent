@@ -27,6 +27,50 @@
       vars:
         cluster_nodes: "{{ groups['masters'] + ('workers' in groups) | ternary(groups['workers'], []) }}"
       when: enable_conserver
+
+    - block:
+        - name: "Get Ansible roles path"
+          shell: "set -o pipefail && ansible-config dump|grep DEFAULT_ROLES_PATH|sed -e 's/.*=\\s*//'"
+          register: roles_path_cmd
+          delegate_to: localhost
+
+        - name: "Set roles_path"
+          set_fact:
+            roles_path: "{{ roles_path_cmd.stdout }}"
+
+        - name: Set dci_cache_dir variable
+          set_fact:
+            dci_cache_dir: "{{ item | regex_replace('^(.*)assisted_deploy_repo.*$', '\\1') }}"
+          loop: "{{ roles_path }}"
+          when: "'assisted_deploy_repo' in item"
+
+        - name: "Clone/update assisted-deploy repo"
+          vars:
+            git_repo: "{{ assisted_deploy_repo }}"
+            git_ref: "{{ assisted_deploy_version }}"
+          git:
+            version: "{{ git_ref }}"
+            repo: "{{ git_repo }}"
+            dest: "{{ dci_cache_dir }}/assisted_deploy_repo"
+            force: true
+          # On RHEL8 git clone can sporadically fail with OpenSSL SSL_read:
+          # SSL_ERROR_SYSCALL, errno 104.
+          register: git_clone
+          retries: 3
+          delay: 10
+          until: not git_clone.failed
+          when:
+            - "dci_cache_dir + '/assisted_deploy_repo/roles' in roles_path"
+          tags:
+            - clone_upstream_repos
+
+        - name: Install sushy-tools
+          vars:
+            bmc_user: root
+            bmc_password: password
+          include_role:
+            name: setup_sushy_tools
+      when: enable_redfish | bool
   when: hook_action == 'install'
 
 - block:
