@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "02eaf937_dfa7c4e9",
+        "filename": "roles/ocp-on-libvirt/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-07-05T09:44:53Z",
+      "side": 1,
+      "message": "no, I\u0027m looking for an alternative way to using dci_cache_dir. Emptying that placeholder was a mistake.\n\nThanks for noticing it.",
+      "parentUuid": "7a3afecd_e3269b7a",
+      "range": {
+        "startLine": 41,
+        "startChar": 21,
+        "endLine": 41,
+        "endChar": 23
+      },
+      "revId": "cb5a293662ca05e7d600083ebcd3fc3f196a6200",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15f46c43_19d66f53",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-07-05T08:13:35Z",
       "side": 1,
       "message": "Remember to add this variable to BOS2 inventory files to test this",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "cb5a293662ca05e7d600083ebcd3fc3f196a6200",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13804c68_079a8cba",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-07-05T09:44:53Z",
+      "side": 1,
+      "message": "sure",
+      "parentUuid": "15f46c43_19d66f53",
       "range": {
         "startLine": 14,
         "startChar": 4,
