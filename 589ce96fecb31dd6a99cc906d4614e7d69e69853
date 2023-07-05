@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e354c2c3_a5cecda1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-05T08:23:45Z",
+      "side": 1,
+      "message": "Some minor comments from my side regarding typos and so on, but from my side, the structure of the new role looks fine, waiting for your final tests for a more precise review!",
+      "revId": "589ce96fecb31dd6a99cc906d4614e7d69e69853",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdb328a4_592437f8",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-05T08:23:45Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 84,
+        "startChar": 19,
+        "endLine": 84,
+        "endChar": 20
+      },
+      "revId": "589ce96fecb31dd6a99cc906d4614e7d69e69853",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a73b18aa_127f1e37",
+        "filename": "roles/metallb-setup/tasks/pre-requisites.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-05T08:23:45Z",
+      "side": 1,
+      "message": "... is missing. See role...",
+      "range": {
+        "startLine": 40,
+        "startChar": 49,
+        "endLine": 40,
+        "endChar": 63
+      },
+      "revId": "589ce96fecb31dd6a99cc906d4614e7d69e69853",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
