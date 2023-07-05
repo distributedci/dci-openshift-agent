@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd9755be_f787051d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-05T08:13:35Z",
+      "side": 1,
+      "message": "A couple of things that I would like to comment, just to have them present",
+      "revId": "cb5a293662ca05e7d600083ebcd3fc3f196a6200",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a3afecd_e3269b7a",
+        "filename": "roles/ocp-on-libvirt/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-05T08:13:35Z",
+      "side": 1,
+      "message": "Is this empty on purpose?",
+      "range": {
+        "startLine": 41,
+        "startChar": 21,
+        "endLine": 41,
+        "endChar": 23
+      },
+      "revId": "cb5a293662ca05e7d600083ebcd3fc3f196a6200",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15f46c43_19d66f53",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-05T08:13:35Z",
+      "side": 1,
+      "message": "Remember to add this variable to BOS2 inventory files to test this",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "cb5a293662ca05e7d600083ebcd3fc3f196a6200",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
