@@ -34,6 +34,24 @@
       "parentUuid": "d9361739_0f4cc61e",
       "revId": "f699b5473f30484ee2db673809d19aa3ba59498e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ef3d0b5_4620a93d",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-05T13:59:38Z",
+      "side": 1,
+      "message": "From what I\u0027ve observed, the latest successful job deployed all the resources (pods, replicasets, etc.) in a namespace called openshift-gitops. I\u0027ve been discussing with Manuel and maybe it\u0027s better to use that namespace to create the controller too, then having everything included in that namespace may simplify the troubleshooting afterwards.\nAlso, the operator is cluster scope; with the current call to olm-operator role, we\u0027re fine with that since we\u0027re not specifying targetNamespaces in the config.",
+      "parentUuid": "873b2bb1_d39ebd17",
+      "revId": "f699b5473f30484ee2db673809d19aa3ba59498e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
