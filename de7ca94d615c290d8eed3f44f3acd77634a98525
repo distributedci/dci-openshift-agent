@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c02f67a1_aabda1b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-05T14:12:43Z",
+      "side": 1,
+      "message": "Thanks Ramon, new patch-set resolves the last feedback",
+      "revId": "de7ca94d615c290d8eed3f44f3acd77634a98525",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
