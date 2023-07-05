@@ -39,6 +39,30 @@
       },
       "revId": "3253c810818eda63b2ea59d1e2ebde90a1333c80",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ab7920d_5ea282d0",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-05T20:35:49Z",
+      "side": 1,
+      "message": "lol, I copied the whole thing from the integration of your last role. I missed replacing that one :P (patch-set 4 includes the fix)",
+      "parentUuid": "b5bcb821_69ebe116",
+      "range": {
+        "startLine": 37,
+        "startChar": 67,
+        "endLine": 37,
+        "endChar": 84
+      },
+      "revId": "3253c810818eda63b2ea59d1e2ebde90a1333c80",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
