@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88cfb2d3_00569301",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-05T20:29:02Z",
+      "side": 1,
+      "message": "Nice job Manuel!",
+      "revId": "3253c810818eda63b2ea59d1e2ebde90a1333c80",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5bcb821_69ebe116",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-05T20:29:02Z",
+      "side": 1,
+      "message": "A metal LB instance?",
+      "range": {
+        "startLine": 37,
+        "startChar": 67,
+        "endLine": 37,
+        "endChar": 84
+      },
+      "revId": "3253c810818eda63b2ea59d1e2ebde90a1333c80",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
