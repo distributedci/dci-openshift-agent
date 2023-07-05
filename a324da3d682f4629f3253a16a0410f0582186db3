@@ -16,6 +16,23 @@
       "message": "One minor review, now should be fine for merging",
       "revId": "a324da3d682f4629f3253a16a0410f0582186db3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6704c22_45af58aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-05T14:30:39Z",
+      "side": 1,
+      "message": "LGTM, thanks Ramon",
+      "revId": "a324da3d682f4629f3253a16a0410f0582186db3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
