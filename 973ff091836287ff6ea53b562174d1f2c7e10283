@@ -33,6 +33,24 @@
       "message": "Since you are setting `roles_path` in ansible.cfg, you don\u0027t have to do this, just clone/update to the same static location you set `/var/lib/dci-openshift-agent/assisted_deploy_repo`, can\u0027t remember if ocp-on-libvirt uses the group_vars but if it does there\u0027s already a variable for that path, if not, set a variable and use that.",
       "revId": "973ff091836287ff6ea53b562174d1f2c7e10283",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "650f14cb_5560be35",
+        "filename": "roles/ocp-on-libvirt/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-07-05T14:16:52Z",
+      "side": 1,
+      "message": "by \"this\" I mean you don\u0027t have to figure out dci_cache_dir, it\u0027s a static location.",
+      "parentUuid": "3ff550f4_ad133014",
+      "revId": "973ff091836287ff6ea53b562174d1f2c7e10283",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
