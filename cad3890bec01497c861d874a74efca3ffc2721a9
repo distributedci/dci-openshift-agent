@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4803094f_80a08379",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-06T10:36:25Z",
+      "side": 1,
+      "message": "some minor feedback from my side, but the rest looks really fine right now!",
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08402b8a_2d64913a",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-06T10:36:25Z",
+      "side": 1,
+      "message": "Missing two more vars from defaults:\n\nmlb_namespace: metallb-system\nmlb_bfd_profile: bfd-fastest",
+      "range": {
+        "startLine": 13,
+        "startChar": 3,
+        "endLine": 13,
+        "endChar": 12
+      },
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e4a67bc_d16cccfd",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-06T10:36:25Z",
+      "side": 1,
+      "message": "MetalLB",
+      "range": {
+        "startLine": 63,
+        "startChar": 30,
+        "endLine": 63,
+        "endChar": 36
+      },
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0d0865d_1208291d",
+        "filename": "roles/metallb-setup/tasks/pre-requisites.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-06T10:36:25Z",
+      "side": 1,
+      "message": "I think you can safely remove this",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 41
+      },
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
