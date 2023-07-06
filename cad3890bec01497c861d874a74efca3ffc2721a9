@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c074826_cc214573",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-06T16:57:15Z",
+      "side": 1,
+      "message": "Thanks, fixes added in patch-set 5",
+      "parentUuid": "4803094f_80a08379",
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08402b8a_2d64913a",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-07-06T10:36:25Z",
       "side": 1,
       "message": "Missing two more vars from defaults:\n\nmlb_namespace: metallb-system\nmlb_bfd_profile: bfd-fastest",
+      "range": {
+        "startLine": 13,
+        "startChar": 3,
+        "endLine": 13,
+        "endChar": 12
+      },
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e5e0e17_cb23e4d7",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-06T16:57:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "08402b8a_2d64913a",
       "range": {
         "startLine": 13,
         "startChar": 3,
@@ -64,6 +106,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c23d9e8f_7a194add",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-06T16:57:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e4a67bc_d16cccfd",
+      "range": {
+        "startLine": 63,
+        "startChar": 30,
+        "endLine": 63,
+        "endChar": 36
+      },
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a0d0865d_1208291d",
@@ -77,6 +143,30 @@
       "writtenOn": "2023-07-06T10:36:25Z",
       "side": 1,
       "message": "I think you can safely remove this",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 41
+      },
+      "revId": "cad3890bec01497c861d874a74efca3ffc2721a9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc88aeb1_cb2cf795",
+        "filename": "roles/metallb-setup/tasks/pre-requisites.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-06T16:57:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a0d0865d_1208291d",
       "range": {
         "startLine": 14,
         "startChar": 0,
