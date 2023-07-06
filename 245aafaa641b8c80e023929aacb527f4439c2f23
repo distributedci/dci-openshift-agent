@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7171e201_3c04d8ad",
+        "filename": "roles/ocp-on-libvirt/defaults/main.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-06T10:47:57Z",
+      "side": 1,
+      "message": "this is repeated",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 21
+      },
+      "revId": "245aafaa641b8c80e023929aacb527f4439c2f23",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
