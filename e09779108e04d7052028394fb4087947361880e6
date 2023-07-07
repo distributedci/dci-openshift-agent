@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "36bbc610_a426127d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-07T14:35:40Z",
+      "side": 1,
+      "message": "Yes, missed that. thanks, all fixes on patch-set 2",
+      "parentUuid": "3156a01b_fbb9a80c",
+      "revId": "e09779108e04d7052028394fb4087947361880e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ddaa873f_69283974",
@@ -43,6 +61,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "145a7527_d75ae4d7",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-07T14:35:40Z",
+      "side": 1,
+      "message": "Yes, I actually copied the tasks from the pre-run.yml, and I see we juggle with the pull-secrets a bit, I think it makes sense what you say, if we get the secret from a file do not pull it from the job, and if we get it from the job, we give it some treatment for disconnected.",
+      "parentUuid": "ddaa873f_69283974",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 84
+      },
+      "revId": "e09779108e04d7052028394fb4087947361880e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6806a08b_42a935b8",
         "filename": "plays/assisted-pre-run.yml",
         "patchSetId": 1
@@ -54,6 +96,30 @@
       "writtenOn": "2023-07-07T11:15:30Z",
       "side": 1,
       "message": "I think this is redundant since you\u0027re checking if it\u0027s defined in the previous task",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 38
+      },
+      "revId": "e09779108e04d7052028394fb4087947361880e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92ee33fb_31df2935",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-07T14:35:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6806a08b_42a935b8",
       "range": {
         "startLine": 82,
         "startChar": 0,
