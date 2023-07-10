@@ -67,6 +67,24 @@
       "message": "Should we check at least one tarball exist in the dir?",
       "revId": "b48b5f56c0e82666b21bbc95678263f57326a59e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca92df24_b387a0aa",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-10T22:29:31Z",
+      "side": 1,
+      "message": "Good idea, done",
+      "parentUuid": "2d2113e9_5ea9ed9c",
+      "revId": "b48b5f56c0e82666b21bbc95678263f57326a59e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
