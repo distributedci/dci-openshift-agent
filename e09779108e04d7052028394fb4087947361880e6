@@ -83,6 +83,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddaa5f75_d46a31ef",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-10T10:29:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "145a7527_d75ae4d7",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 84
+      },
+      "revId": "e09779108e04d7052028394fb4087947361880e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6806a08b_42a935b8",
