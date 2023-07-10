@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.14-vanilla openshift-vanilla:ansible_extravars\u003doperator_catalog_dir:/opt/cache/pre-ga/06252023 openshift-vanilla:ansible_extravars\u003ddci_prepare_cnf:false openshift-vanilla:ansible_extravars\u003denable_sriov:true",
       "revId": "b48b5f56c0e82666b21bbc95678263f57326a59e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "463c7639_25466d30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-10T19:01:20Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_extravars\u003doperator_catalog_dir:/opt/cache/pre-ga/06252023 openshift-vanilla:ansible_extravars\u003ddci_prepare_cnf:false openshift-vanilla:ansible_extravars\u003denable_sriov:true",
+      "revId": "b48b5f56c0e82666b21bbc95678263f57326a59e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
