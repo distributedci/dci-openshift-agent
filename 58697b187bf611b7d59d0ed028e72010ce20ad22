@@ -50,6 +50,23 @@
       "message": "- The issues with sriov deployment is not related to this change.\n- The test above should file because the dir does not exist. ",
       "revId": "58697b187bf611b7d59d0ed028e72010ce20ad22",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44684b86_a4e6c0b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-11T13:53:07Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_extravars\u003doperator_catalog_dir:/opt/cache/pre-ga/06252023 openshift-vanilla:ansible_extravars\u003ddci_prepare_cnf:false openshift-vanilla:ansible_extravars\u003denable_sriov:true",
+      "revId": "58697b187bf611b7d59d0ed028e72010ce20ad22",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
