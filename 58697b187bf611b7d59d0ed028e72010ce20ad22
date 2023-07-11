@@ -67,6 +67,46 @@
       "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_extravars\u003doperator_catalog_dir:/opt/cache/pre-ga/06252023 openshift-vanilla:ansible_extravars\u003ddci_prepare_cnf:false openshift-vanilla:ansible_extravars\u003denable_sriov:true",
       "revId": "58697b187bf611b7d59d0ed028e72010ce20ad22",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c66bf9a7_15a42de6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-11T16:27:45Z",
+      "side": 1,
+      "message": "Everything is looking good, one last request",
+      "revId": "58697b187bf611b7d59d0ed028e72010ce20ad22",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4953c672_d480e8be",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-11T16:27:45Z",
+      "side": 1,
+      "message": "Could you please add a link to it, e.g.\n\nhttps://docs.openshift.com/container-platform/4.13/installing/disconnected_install/installing-mirroring-disconnected.html\nOR\nhttps://github.com/openshift/oc-mirror",
+      "range": {
+        "startLine": 479,
+        "startChar": 135,
+        "endLine": 479,
+        "endChar": 152
+      },
+      "revId": "58697b187bf611b7d59d0ed028e72010ce20ad22",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
