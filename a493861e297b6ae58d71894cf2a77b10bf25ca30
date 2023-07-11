@@ -16,6 +16,24 @@
       "message": "LGTM, waiting for a job working fine in disconnected and also taking the pullsecret from a file",
       "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1724a5a_bb428f78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-11T18:33:53Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ll keep testing, just apologies for the future spam, there might be lots of failed jobs and not related to this change, now battling with the network variables :/",
+      "parentUuid": "a1ae03a7_4ed7fee5",
+      "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
