@@ -16,6 +16,24 @@
       "message": "The idea of having this here is to show that operators can be deployed on top of the spoke cluster",
       "revId": "f8ec6dcb2108eb1ec25891ccfe487b61174b4e8b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f51b9a24_8a22be64",
+        "filename": "docs/acm.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-12T22:31:42Z",
+      "side": 0,
+      "message": "Understood, I will re-add it and add some notes on that, I thought it was the minimum required for SNO",
+      "parentUuid": "1ec7dc11_dfb55ea1",
+      "revId": "f8ec6dcb2108eb1ec25891ccfe487b61174b4e8b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
