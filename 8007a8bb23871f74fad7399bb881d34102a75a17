@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90fb03aa_528d3553",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-12T19:35:09Z",
+      "side": 1,
+      "message": "This change has been tested in BOS2 on top of an ACM hub cluster.\n\nThis is the job: https://www.distributed-ci.io/jobs/4e24e6b7-943c-4c65-91ba-331cd00a7f8d",
+      "revId": "8007a8bb23871f74fad7399bb881d34102a75a17",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
