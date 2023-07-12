@@ -51,6 +51,24 @@
       "message": "You\u0027re ignoring the pull secret from job_info if you define the pullsecret_file variable as per the `when` condition. This breaks the use case where an operator wants to use a disconnected env + an extra pull secret file for an extra repo say, an internal (online) repo where the tested operators are pushed.\n\nWhat you should do here is 1) load the provided pullsecret_file if defined 2) load the pull secret from job_info 3) clean cloud.openshift.com from job_info.pullsecret 4) merge job_info.pullsecret and pullsecret_file (defaults to {})\n\nThe provided pullsecret_file should remain untouched and should override the duplicated entries from job_info.pullsecret, but it shouldn\u0027t override it completely.",
       "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f1b6309_b0e7a0fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-07-12T16:12:49Z",
+      "side": 1,
+      "message": "small clarification: I meant to say \"This breaks the use case where an operator wants to use a *connected* env + an extra pull secret file\"",
+      "parentUuid": "7282aeba_2c6a1811",
+      "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
