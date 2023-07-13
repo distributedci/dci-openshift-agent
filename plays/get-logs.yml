@@ -52,6 +52,22 @@
   when:
     - install_type in ['acm']
 
+- name: Submission of Assisted logs - if present
+  block:
+    - name: Get logs from Assisted deployments
+      find:
+        paths: "{{ dci_cluster_configs_dir }}"
+        recurse: yes
+        patterns: "log-bundle-*"
+      register: assisted_logs_matched
+
+    - name: "Upload Assisted logs"
+      vars:
+        mime_type: "application/x-gzip"
+      include_tasks: upload-log.yml
+      with_items: "{{ assisted_logs_matched.files }}"
+  when: install_type == 'assisted'
+
 - name: "Find test Junit files"
   find:
     paths: "{{ job_logs.path }}"
