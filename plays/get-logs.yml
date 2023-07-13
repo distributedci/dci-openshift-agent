@@ -20,6 +20,54 @@
   when:
     - install_type in ['ipi', 'upi']
 
+# Files that are retrieved from provisioner in IPI and UPI deployments can be obtained from
+# repo_root_path in Assisted jobs, since there is no provisionhost in that deployment mode
+# install-config file is already retrieved from dci_cluster_configs_dir, not needing to retrieve
+# it here
+- name: "Get config files from Assisted deployment"
+  block:
+    - name: Assisted - Copy openshift_install.log file in log folder
+      copy:
+        src: "{{ repo_root_path }}/generated/{{ cluster_name }}/.openshift_install.log"
+        dest: "{{ job_logs.path }}/openshift_install.log"
+
+    - name: Assisted - Copy openshift_install_state.json file in log folder
+      copy:
+        src: "{{ repo_root_path }}/generated/{{ cluster_name }}/.openshift_install_state.json"
+        dest: "{{ job_logs.path }}/openshift_install_state.json"
+
+    - name: Assisted - Copy agent-config.yaml file in log folder
+      copy:
+        src: "{{ repo_root_path }}/agent-config.yaml"
+        dest: "{{ job_logs.path }}/agent-config.yaml"
+
+    - name: Assisted - Copy install-config.yaml file in log folder
+      copy:
+        src: "{{ repo_root_path }}/install-config.yaml"
+        dest: "{{ job_logs.path }}/install-config.yaml"
+  ignore_errors: true
+  when:
+    - install_type in ['assisted']
+
+# For the rest of log files, run get-ai-logs script
+# Bootstrap host is the first master node of the cluster
+- name: "Get logs from Assisted deployment"
+  vars:
+    bootstrap_host: >-
+      {{ hostvars[groups.nodes.0].ansible_host |
+        default(groups['nodes'][0]) }}
+    domain_name: "{{ cluster_name }}.{{ base_dns_domain }}"
+  script:
+    cmd: >
+      ./scripts/get-ai-logs
+      {{ bootstrap_host }}
+      {{ domain_name }}
+      {{ job_logs.path }}
+      {{ groups['nodes'] | join (' ') }}
+  ignore_errors: true
+  when:
+    - install_type in ['assisted']
+
 - name: "Get logs from OCP deployment"
   environment:
     DCI_MUST_GATHER_IMAGES: >-
@@ -51,6 +99,24 @@
   ignore_errors: true
   when:
     - install_type in ['acm']
+
+# They are only created if the Assisted deployment fails after bootstrap
+# (and not always)
+- name: Submission of Assisted logs - if present
+  block:
+    - name: Get logs from Assisted deployments
+      find:
+        paths: "{{ repo_root_path }}"
+        recurse: yes
+        patterns: "log-bundle-*"
+      register: assisted_logs_matched
+
+    - name: "Upload Assisted logs"
+      vars:
+        mime_type: "application/x-gzip"
+      include_tasks: upload-log.yml
+      with_items: "{{ assisted_logs_matched.files }}"
+  when: install_type == 'assisted'
 
 - name: "Find test Junit files"
   find:
