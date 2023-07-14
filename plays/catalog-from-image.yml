@@ -6,6 +6,7 @@
   when:
     - dci_disconnected | default(false) | bool or (dci_local_registry | length )
     - short_ver is version("4.14", ">=")
+    - build_from_upstream | default(true) | bool
 
 - name: "Get the operators mirror-list"
   include_tasks: get-mirror-list.yml
