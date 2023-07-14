@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0988bbea_2f484826",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-14T22:48:48Z",
+      "side": 1,
+      "message": "Actually just realized that when using catalogs from files, the upstream tasks are not executed. As we still do not have sriv in the official catalog this will be complicated to test. \n\nThe job failed because the loaded index do not have all the ACM dependencies. Will close this.",
+      "revId": "52571e3b82844fcb56726719c09f085e17c572c2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d5eb2fe_bfd177c1",
