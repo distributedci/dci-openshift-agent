@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.14-vanilla openshift-vanilla:ansible_extravars\u003doperator_catalog_dir:/opt/cache/pre-ga/07102023b openshift-vanilla:ansible_extravars\u003ddci_prepare_cnf:false openshift-vanilla:ansible_extravars\u003denable_sriov:false openshift-vanilla:ansible_extravars\u003denable_acm:true openshift-vanilla:ansible_extravars\u003dbuild_from_upstream:false ",
       "revId": "52571e3b82844fcb56726719c09f085e17c572c2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24e4a478_04d5657c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-14T20:56:33Z",
+      "side": 1,
+      "message": "LGTM, wdyt of adding the new flag to the variables table in the agent README?",
+      "revId": "52571e3b82844fcb56726719c09f085e17c572c2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
