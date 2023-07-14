@@ -50,6 +50,23 @@
       "message": "LGTM, wdyt of adding the new flag to the variables table in the agent README?",
       "revId": "52571e3b82844fcb56726719c09f085e17c572c2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d5eb2fe_bfd177c1",
+        "filename": "plays/catalog-from-image.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-14T22:41:50Z",
+      "side": 1,
+      "message": "Would it make sense to replace the short_ver conditional with this and default it to false?\n\nThat way we could control when we want to use upstream?",
+      "revId": "52571e3b82844fcb56726719c09f085e17c572c2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
