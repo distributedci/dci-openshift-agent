@@ -26,6 +26,7 @@
   shell:
     cmd: >
       skopeo inspect
+      --tls-verify=false
       docker://{{ bundle }}
   register: bundle_inspect
   retries: 2
