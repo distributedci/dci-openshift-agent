@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "f60dd2c7_40504c47",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-17T21:57:50Z",
+      "side": 1,
+      "message": "nit: better description on the subject, e.g.\n    Fixed fbc default channel and registry verification",
+      "revId": "c5b2a1628341d0a3762d7e584e8657d554756819",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "655a1cb6_101c0f30",
@@ -14,6 +31,23 @@
       "writtenOn": "2023-07-17T21:50:01Z",
       "side": 1,
       "message": "check dallas ocp-4.14-vanilla  openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
+      "revId": "c5b2a1628341d0a3762d7e584e8657d554756819",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26c54635_cdea2a74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-17T21:57:50Z",
+      "side": 1,
+      "message": "LGTM",
       "revId": "c5b2a1628341d0a3762d7e584e8657d554756819",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
