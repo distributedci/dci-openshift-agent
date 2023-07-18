@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "3be4f72c0b8f28d58dfcef5993b0477ee1e71bb8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b94bfa22_b1eb218c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-18T00:07:36Z",
+      "side": 1,
+      "message": "check dallas upgrade-4.11 ocp-4.10-vanilla example-cnf-continuous ocp-4.11-upgrade example-cnf-validation openshift-vanilla:components\u003docp\u003d4.10.63 openshift-vanilla-upgrade-4.11:components\u003docp\u003d4.11.44 openshift-vanilla-upgrade-4.11:prev_stages\u003dcnf example-cnf:ansible_extravars\u003drun_migration_test:false",
+      "revId": "3be4f72c0b8f28d58dfcef5993b0477ee1e71bb8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
