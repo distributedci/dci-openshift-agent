@@ -84,6 +84,23 @@
       "message": "recheck",
       "revId": "b33c337cc3b84616533bc50fa17f84377a41116b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc4b18e7_581ef5f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2023-07-18T19:53:18Z",
+      "side": 1,
+      "message": "The issue related to pyyaml seems to come from here: https://github.com/yaml/pyyaml/pull/702",
+      "revId": "b33c337cc3b84616533bc50fa17f84377a41116b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
