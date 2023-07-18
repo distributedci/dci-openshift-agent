@@ -30,9 +30,18 @@ dci_cluster_configs_dir: "{{'~/clusterconfigs' | expanduser}}-{{ cluster }}"
 dci_rpms_to_components: []
 dci_gits_to_components: "{{ dci_config_dirs }}"
 dev_gits_to_components: []
-http_proxy: "{{ lookup('env','http_proxy') }}"
-https_proxy: "{{ lookup('env','https_proxy') }}"
-no_proxy_list: "{{ lookup('env','no_proxy') }}"
+http_proxy: |-
+  {% if dci_enable_proxy | default(false) | bool %}
+  {{ dci_http_proxy | default(lookup('env','http_proxy')) }}
+  {%- endif %}
+https_proxy: |-
+  {% if dci_enable_proxy | default(false) | bool %}
+  {{ dci_https_proxy | default(lookup('env','https_proxy')) }}
+  {%- endif %}
+no_proxy_list: |-
+  {% if dci_enable_proxy | default(false) | bool %}
+  {{ dci_no_proxy | default(lookup('env','no_proxy')) }}
+  {%- endif %}
 dci_workarounds: []
 dci_comment: null
 dci_url: null
