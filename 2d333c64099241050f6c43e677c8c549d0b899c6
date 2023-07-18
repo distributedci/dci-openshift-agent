@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "2d333c64099241050f6c43e677c8c549d0b899c6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d913c27_f329a216",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-18T14:28:51Z",
+      "side": 1,
+      "message": "Looks good to me, but just to play safe, can we add the \"Test-Hints: sno\" in the commit to test SNO?\n",
+      "revId": "2d333c64099241050f6c43e677c8c549d0b899c6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
