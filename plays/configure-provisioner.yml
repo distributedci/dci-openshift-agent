@@ -1,4 +1,12 @@
 ---
+- name: Configure proxy in DNF
+  become: true
+  lineinfile:
+    path: /etc/dnf/dnf.conf
+    regexp: "^proxy="
+    line: "proxy={{ https_proxy }}"
+  when: https_proxy | length
+
 - name: Check on the EPEL repository status on a connected provisioner
   become: true
   package:
