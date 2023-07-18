@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.14-vanilla  openshift-vanilla:ansible_extravars\u003dcnf_test_suites:[]",
       "revId": "4b30250bdf7b219ca98e9e638088658bbacfdc48",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a0051e3_89217ca3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-18T11:38:21Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "4b30250bdf7b219ca98e9e638088658bbacfdc48",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
