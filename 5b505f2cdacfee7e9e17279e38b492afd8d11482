@@ -67,6 +67,24 @@
       "message": "Not sure if it could be useful, I found docs on how to convert ICSP to IDSP using `oc adm migrate icsp` command:\nhttps://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/html/images/image-configuration#images-configuration-registry-mirror-convert_image-configuration ",
       "revId": "5b505f2cdacfee7e9e17279e38b492afd8d11482",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43cb6817_583f8b9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-19T15:13:41Z",
+      "side": 1,
+      "message": "Thanks for sharing, that may be helpful :)",
+      "parentUuid": "01869926_868a213c",
+      "revId": "5b505f2cdacfee7e9e17279e38b492afd8d11482",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
