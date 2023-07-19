@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.14-vanilla openshift-vanilla:ansible_extravars\u003ddci_force_mirroring:true",
       "revId": "5b505f2cdacfee7e9e17279e38b492afd8d11482",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01869926_868a213c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-07-19T12:09:11Z",
+      "side": 1,
+      "message": "Not sure if it could be useful, I found docs on how to convert ICSP to IDSP using `oc adm migrate icsp` command:\nhttps://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/html/images/image-configuration#images-configuration-registry-mirror-convert_image-configuration ",
+      "revId": "5b505f2cdacfee7e9e17279e38b492afd8d11482",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
