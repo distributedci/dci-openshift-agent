@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bed39506_a86c4f43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-22T03:25:01Z",
+      "side": 1,
+      "message": "Finally the cluster is deployed in Dallas as connected using proxy 😊",
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
