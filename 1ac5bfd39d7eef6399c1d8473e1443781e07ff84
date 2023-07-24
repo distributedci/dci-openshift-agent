@@ -56,6 +56,30 @@
       },
       "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50e2ad19_e9d3a869",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-24T16:48:37Z",
+      "side": 1,
+      "message": "Hi Ramón, thanks for checking, yes we do want to leave it empty here, that means no proxy will be used when empty string is set.",
+      "parentUuid": "33fdc9f2_86c2acd8",
+      "range": {
+        "startLine": 7,
+        "startChar": 34,
+        "endLine": 7,
+        "endChar": 46
+      },
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
