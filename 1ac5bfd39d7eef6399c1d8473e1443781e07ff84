@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "559d8ffa_5c6159e2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-24T18:40:44Z",
+      "side": 1,
+      "message": "Thanks, fixed",
+      "parentUuid": "69eac8ba_309645e1",
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "bed39506_a86c4f43",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 12
@@ -130,6 +148,30 @@
       "side": 1,
       "message": "maybe another option could be to add a condition to only run this task if https_proxy | length \u003e 0 ?",
       "parentUuid": "50e2ad19_e9d3a869",
+      "range": {
+        "startLine": 7,
+        "startChar": 34,
+        "endLine": 7,
+        "endChar": 46
+      },
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "310c8c4d_60ff2dbb",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-24T18:40:44Z",
+      "side": 1,
+      "message": "That was considered initially but if we do that, when another job runs that is not using proxy will skip the task and won\u0027t \"unset\" the proxy, leaving the node connected through proxy when it shouldn\u0027t.\n\nThis way we can switch from proxied to not proxied depending on the https_proxy variable.",
+      "parentUuid": "9113b27f_406f9896",
       "range": {
         "startLine": 7,
         "startChar": 34,
