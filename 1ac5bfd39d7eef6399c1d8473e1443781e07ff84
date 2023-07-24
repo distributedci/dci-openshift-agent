@@ -16,6 +16,46 @@
       "message": "Finally the cluster is deployed in Dallas as connected using proxy 😊",
       "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e585d61_36ec177c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-24T10:31:48Z",
+      "side": 1,
+      "message": "just one question from my side",
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33fdc9f2_86c2acd8",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-24T10:31:48Z",
+      "side": 1,
+      "message": "since https_proxy has a default value (https_proxy env var), and I suppose that, if we use that default value and doesn\u0027t exist, it will be empty string, do we really need to add a default clause here?",
+      "range": {
+        "startLine": 7,
+        "startChar": 34,
+        "endLine": 7,
+        "endChar": 46
+      },
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
