@@ -3,6 +3,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "69eac8ba_309645e1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-24T18:23:41Z",
+      "side": 1,
+      "message": "just typo twice: variables instead of varialbes :P",
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "bed39506_a86c4f43",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 12
@@ -31,6 +48,23 @@
       "writtenOn": "2023-07-24T10:31:48Z",
       "side": 1,
       "message": "just one question from my side",
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da10731f_e22d988e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-24T18:23:41Z",
+      "side": 1,
+      "message": "LGTM",
       "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -72,6 +106,30 @@
       "side": 1,
       "message": "Hi Ramón, thanks for checking, yes we do want to leave it empty here, that means no proxy will be used when empty string is set.",
       "parentUuid": "33fdc9f2_86c2acd8",
+      "range": {
+        "startLine": 7,
+        "startChar": 34,
+        "endLine": 7,
+        "endChar": 46
+      },
+      "revId": "1ac5bfd39d7eef6399c1d8473e1443781e07ff84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9113b27f_406f9896",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-24T18:23:41Z",
+      "side": 1,
+      "message": "maybe another option could be to add a condition to only run this task if https_proxy | length \u003e 0 ?",
+      "parentUuid": "50e2ad19_e9d3a869",
       "range": {
         "startLine": 7,
         "startChar": 34,
