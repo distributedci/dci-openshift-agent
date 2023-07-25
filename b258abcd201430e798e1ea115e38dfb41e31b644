@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "661441ab_2e929210",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-25T08:17:44Z",
+      "side": 1,
+      "message": "Just one minor comment in terms of documentation",
+      "revId": "b258abcd201430e798e1ea115e38dfb41e31b644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0a8eeb0_c559d0b0",
+        "filename": "plays/deploy-custom-operator.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-25T08:17:44Z",
+      "side": 1,
+      "message": "These three variables don\u0027t appear in the example provided in the README for dci_operators, I think they should be included or at least referenced",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 94
+      },
+      "revId": "b258abcd201430e798e1ea115e38dfb41e31b644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
