@@ -39,6 +39,30 @@
       },
       "revId": "b258abcd201430e798e1ea115e38dfb41e31b644",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b6b6a5a_1f499009",
+        "filename": "plays/deploy-custom-operator.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-25T18:03:37Z",
+      "side": 1,
+      "message": "Thanks Ramon, I updated the READMEs",
+      "parentUuid": "f0a8eeb0_c559d0b0",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 94
+      },
+      "revId": "b258abcd201430e798e1ea115e38dfb41e31b644",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
