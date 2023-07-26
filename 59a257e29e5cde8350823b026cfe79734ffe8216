@@ -16,6 +16,57 @@
       "message": "check dallas ocp-4.14-vanilla",
       "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9fca5aa_038f271c",
+        "filename": "plays/all-from-catalog.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-26T22:54:07Z",
+      "side": 1,
+      "message": "Since you\u0027re defining its default in install-all-operators.yml could you define its default in here too and remove it from groups_vars/all ?",
+      "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88ee752a_f0e472dc",
+        "filename": "plays/all-from-catalog.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-26T22:54:07Z",
+      "side": 1,
+      "message": "Maybe remove this var, does not seem to be used",
+      "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "585dfa59_edad5e6e",
+        "filename": "plays/install-all-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-26T22:54:07Z",
+      "side": 1,
+      "message": "For ptp-operator, wouldn\u0027t this end up with another namespace created by olm-operator, since you already created one above?\n\nWould it help to define another namespace variable in this play to set the ns required by ptp-operator and then unset at the end of the play, similarly as the group_spec?",
+      "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
