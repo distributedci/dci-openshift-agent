@@ -1,0 +1,42 @@
+---
+- name: "Check that {{ install_all_from_catalog }} CatalogSource is Ready"
+  community.kubernetes.k8s_info:
+    api: operators.coreos.com/v1alpha1
+    kind: CatalogSource
+    name: "{{ install_all_from_catalog }}"
+    namespace: "{{ install_all_from_catalog_source }}"
+  register: source_status
+  until:
+    - source_status | json_query('resources[0].status.connectionState.lastObservedState') == 'READY'
+  retries: 60
+  delay: 10
+
+- name: "Get operator's package manifests"
+  community.kubernetes.k8s_info:
+    api: packages.operators.coreos.com/v1
+    kind: PackageManifest
+    namespace: default
+    label_selectors:
+      - "catalog={{ install_all_from_catalog }}"
+  register: operator_packagemanifest
+  retries: 5
+  delay: 3
+  until:
+    - operator_packagemanifest.resources is defined
+    - operator_packagemanifest.resources | length
+
+- name: "Filter operators names"
+  vars:
+    package_details: >
+      resources[*].metadata.name
+  set_fact:
+    index_operators: "{{ operator_packagemanifest | json_query('resources[*].metadata.name') }}"
+  retries: 5
+  delay: 5
+
+- name: "deploy-operators : Deploy all operators from an index"
+  include_tasks: install-all-operators.yml
+  loop: "{{ index_operators }}"
+  loop_control:
+    loop_var: package
+...
