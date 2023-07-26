@@ -16,6 +16,24 @@
       "message": "why did you remove the environment variables? If we need a proxy for everything even on localhost, how is it going to work?",
       "revId": "3be4f72c0b8f28d58dfcef5993b0477ee1e71bb8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e6b6fef_5137b7e5",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-26T16:17:51Z",
+      "side": 0,
+      "message": "It can be tricky, at this time it\u0027s a requirement for the jumphost/localhost to have access to Internet[1], so actions in localhost don\u0027t need the proxy.\n\nIf we need to add support for proxy usage in the jumphost/localhost then we will need to add that requirement and see how to solve for it.\n\n[1] https://docs.distributed-ci.io/dci-openshift-agent/#jumpbox-requirements",
+      "parentUuid": "ef3465eb_2ef7da61",
+      "revId": "3be4f72c0b8f28d58dfcef5993b0477ee1e71bb8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
