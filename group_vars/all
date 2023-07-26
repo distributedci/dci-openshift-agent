@@ -116,6 +116,9 @@ nfs_subdir_external_provisioner_tag: v4.0.2
 operator_catalog_dir: ""
 operator_catalog_dir_name: "catalog-from-file"
 
+# Install all operators from a catalog
+install_all_from_catalog: ""
+install_all_from_catalog_source: openshift-marketplace
 ...
 # Local Variables:
 # mode: yaml
