@@ -16,6 +16,24 @@
       "message": "I think that waiting would be good for most of the cases where we need to wait for MCPs, what do you think about adding the delay and the beginning of the check-resource role?",
       "revId": "def76a359e536a75bd934180cf4a4d4c46403377",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85c6676e_4d43cb40",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-27T18:21:22Z",
+      "side": 1,
+      "message": "I like the idea, I\u0027ll update the CR",
+      "parentUuid": "994e293c_08459efd",
+      "revId": "def76a359e536a75bd934180cf4a4d4c46403377",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
