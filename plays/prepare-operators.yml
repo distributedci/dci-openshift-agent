@@ -91,6 +91,10 @@
       loop: "{{ icsp_files | unique | select | list }}"
       loop_control:
         loop_var: icsp_file
+
+    - name: "Pause 60 seconds to wait for MC to be triggered by ICSP changes"
+      pause:
+        seconds: 60
   when:
     - icsp_files is defined
     - icsp_files | length
