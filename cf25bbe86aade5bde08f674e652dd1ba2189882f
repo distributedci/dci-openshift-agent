@@ -50,6 +50,24 @@
       "message": "LGTM, could you please test the upgrade?\n\nI think this is what you want to include in the commit, not completely sure 😊\n\nTest-Upgrade-Hints: yes\nTest-Upgrade-From-Topic-Hints: OCP-4.12\nTest-Upgrade-To-Topic-Hints: OCP-4.13\n",
       "revId": "cf25bbe86aade5bde08f674e652dd1ba2189882f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f867c6a2_79f85d2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-27T19:29:13Z",
+      "side": 1,
+      "message": "yes, I\u0027m actually testing the upgrade but in Dallas, I see this task did its work https://www.distributed-ci.io/jobs/4beefcc8-0161-4e33-8e48-c09ae4173c28/jobStates?sort\u003ddate\u0026task\u003d2b9b2af4-0e65-4230-94a8-0fbf0d7367c0 \nBut the upgrade it\u0027s stuck at 13% due to other issues, so let\u0027s test in BOS2 otherwise I suspect I won\u0027t be able to have successful run in Dallas soon.",
+      "parentUuid": "c197652e_33e8b07d",
+      "revId": "cf25bbe86aade5bde08f674e652dd1ba2189882f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
