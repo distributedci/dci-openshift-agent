@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "53d7a3f5_91b13108",
+        "filename": "plays/all-from-catalog.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-27T00:39:58Z",
+      "side": 1,
+      "message": "Removed both from group_vars, for install_all_from_catalog defined its default in deploy operators as that is the control var to execute the play.\n\nThanks",
+      "parentUuid": "c9fca5aa_038f271c",
+      "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "88ee752a_f0e472dc",
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c430371_9455511d",
+        "filename": "plays/all-from-catalog.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-27T00:39:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "88ee752a_f0e472dc",
+      "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "585dfa59_edad5e6e",
@@ -65,6 +101,24 @@
       "writtenOn": "2023-07-26T22:54:07Z",
       "side": 1,
       "message": "For ptp-operator, wouldn\u0027t this end up with another namespace created by olm-operator, since you already created one above?\n\nWould it help to define another namespace variable in this play to set the ns required by ptp-operator and then unset at the end of the play, similarly as the group_spec?",
+      "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d252c2ea_541020e7",
+        "filename": "plays/install-all-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-07-27T00:39:58Z",
+      "side": 1,
+      "message": "What I have observed is that both namespaces are used. The one created by the OLM has the subscription, the CSC, etc and the other is used to create a service and other deployments.\n\nWell, regarding the variable for the additional namespaces I decided to define a list with the operator and the name of an additional ns, so once we find other operators with specific requirements we can just add it to the list. Eg:\n\n    additional_ns:\n      ptp-operator:\n        required_ns: \"openshift-ptp\"\n      odf-operator operator:\n        required_ns: \"my_ns1\"\n      ocs-operator operator:\n        required_ns: \"my_ocs operator\"",
+      "parentUuid": "585dfa59_edad5e6e",
       "revId": "59a257e29e5cde8350823b026cfe79734ffe8216",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
