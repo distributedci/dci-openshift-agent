@@ -33,6 +33,23 @@
       "message": "LGTM, thanks!",
       "revId": "cf25bbe86aade5bde08f674e652dd1ba2189882f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c197652e_33e8b07d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-27T19:18:50Z",
+      "side": 1,
+      "message": "LGTM, could you please test the upgrade?\n\nI think this is what you want to include in the commit, not completely sure 😊\n\nTest-Upgrade-Hints: yes\nTest-Upgrade-From-Topic-Hints: OCP-4.12\nTest-Upgrade-To-Topic-Hints: OCP-4.13\n",
+      "revId": "cf25bbe86aade5bde08f674e652dd1ba2189882f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
