@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72618589_6cb37f52",
+        "filename": "plays/all-from-catalog.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-27T09:44:31Z",
+      "side": 1,
+      "message": "- Maybe a comment here to explain why this namespace is needed would be good, to know why this is needed\n- Since it\u0027s only used in install-all-operators.yml, should we move this set_fact to the next task, under `vars`?",
+      "range": {
+        "startLine": 36,
+        "startChar": 2,
+        "endLine": 36,
+        "endChar": 6
+      },
+      "revId": "bf752f43a054f4880001909a52194e6fdb64d223",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4b82ea7_c96efe9a",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-27T09:44:31Z",
+      "side": 1,
+      "message": "I guess you are aware of this, but just in case: document this var",
+      "range": {
+        "startLine": 492,
+        "startChar": 6,
+        "endLine": 492,
+        "endChar": 30
+      },
+      "revId": "bf752f43a054f4880001909a52194e6fdb64d223",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
