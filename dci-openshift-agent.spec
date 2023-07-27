@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.5.7
+Version:       0.5.8
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -28,6 +28,7 @@ Requires: python3-pyyaml python3-openshift
 Requires: jq
 Requires: git
 Requires: python3-netaddr
+Requires: python3-jmespath
 Requires: skopeo
 Requires: podman
 
@@ -98,6 +99,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Thu Jul 27 2023 Beto Rdz <josearod@redhat.com> 0.5.8-1
+- Add jmespath dependency
+
 * Mon May 15 2023 Bill Peck <bpeck@redhat.com> 0.5.7-1
 - Move crucible playbooks into crucible directory in the agent
 
