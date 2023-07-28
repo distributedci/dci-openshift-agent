@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "949a7644_17a14aaf",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-28T17:58:42Z",
+      "side": 1,
+      "message": "The last job failed because \"domain\" is an IPI variable, and in assisted inventory is not defined, there we use \"base_dns_domain\" variable. An option could be to add a ternary here and use \"base_dns_domain\" if \"domain\" is not defined, wdyt?",
+      "revId": "efb4ca8e016079a2d81df58cec0c12d54a00770e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
