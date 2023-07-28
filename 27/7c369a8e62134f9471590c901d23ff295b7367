@@ -1,0 +1,10 @@
+Verified+1: dci-ci-bot <dci-ci-bot@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Workflow+1: Manuel Rodriguez <manuel.rodriguez@redhat.com>
+Code-Review+2: Beto Rodríguez <josearod@redhat.com>
+Code-Review+2: Ramon Perez <raperez@redhat.com>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Fri, 28 Jul 2023 17:10:32 +0000
+Reviewed-on: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/28951
+Project: dci-openshift-agent
+Branch: refs/heads/master
