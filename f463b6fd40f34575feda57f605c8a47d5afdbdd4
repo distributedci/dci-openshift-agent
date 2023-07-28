@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "f463b6fd40f34575feda57f605c8a47d5afdbdd4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ca66fd1_c86ac72f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-28T07:29:32Z",
+      "side": 1,
+      "message": "LGTM. Strange issue with BOS2, by the way, it\u0027s not related to the change of course",
+      "revId": "f463b6fd40f34575feda57f605c8a47d5afdbdd4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
