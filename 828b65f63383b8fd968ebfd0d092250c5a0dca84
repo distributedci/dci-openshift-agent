@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b654646_c8dae9a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-07-28T14:34:13Z",
+      "side": 1,
+      "message": "I believe we would need to test this with sno-ai hint, apart from libvirt, which is currently running",
+      "revId": "828b65f63383b8fd968ebfd0d092250c5a0dca84",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
