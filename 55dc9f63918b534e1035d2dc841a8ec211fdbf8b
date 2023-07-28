@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "55dc9f63918b534e1035d2dc841a8ec211fdbf8b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "606b62f5_68b53976",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-28T22:04:27Z",
+      "side": 1,
+      "message": "I had to manually edit /usr/share/bos2-ci-config/files/settings.yml to be able to use 4.14, this is not working in Dallas but there it\u0027s 4.14.0-ec3, ",
+      "revId": "55dc9f63918b534e1035d2dc841a8ec211fdbf8b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
