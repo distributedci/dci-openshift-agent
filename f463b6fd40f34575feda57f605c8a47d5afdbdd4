@@ -67,6 +67,24 @@
       "message": "LGTM. Strange issue with BOS2, by the way, it\u0027s not related to the change of course",
       "revId": "f463b6fd40f34575feda57f605c8a47d5afdbdd4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec5b8dee_5641c211",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-07-28T13:21:38Z",
+      "side": 1,
+      "message": "Thanks, I think it has to do with the OCP version chosen by the job, I see a difference with the daily upgrade job in BOS2 that worked yesterday, that job it\u0027s using OpenShift 4.13.7, and my change is using a nightly: OpenShift 4.13 nightly 2023-07-27 13:45 both have force_upgrade: true, so I\u0027ll specify the OCP versions to see if that works.",
+      "parentUuid": "4ca66fd1_c86ac72f",
+      "revId": "f463b6fd40f34575feda57f605c8a47d5afdbdd4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
