@@ -77,7 +77,7 @@
   delay: 10
   when:
     - install_type is undefined or install_type != 'sno'
-    - reg_mcpool_worker.resources[0].status.machineCount == 0
+    - reg_mcpool_worker.resources[0].status.machineCount >= 1
   no_log: true
 
 - name: "Pause 60 seconds to wait for MC triggered by Performance Profile starts the node changes"
@@ -85,6 +85,7 @@
     seconds: 60
   when:
     - install_type is undefined or install_type != 'sno'
+    - reg_mcpool_worker.resources[0].status.machineCount == 0
   no_log: true
 
 - name: "Wait for SNO node to be available"
@@ -98,7 +99,7 @@
 
     - name: "Wait for API to be available"
       uri:
-        url: 'https://api.{{ cluster }}.{{ domain }}:6443/readyz'
+        url: "https://api.{{ cluster }}.{{ domain is defined | ternary(domain, base_dns_domain) }}:6443/readyz"
         validate_certs: no
         return_content: yes
       register: api_ready
@@ -122,7 +123,7 @@
       delay: 10
   when:
     - install_type is defined
-    - install_type == "sno"
+    - install_type == "sno" or reg_mcpool_worker.resources[0].status.machineCount == 0
 
 - name: Wait for MCP status
   include_role:
