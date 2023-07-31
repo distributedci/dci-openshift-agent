@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2651e4c_839b587f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-07-31T20:06:53Z",
+      "side": 1,
+      "message": "I followed the code, finally http_proxy will be only used in the sno installation:\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-installer/templates/install-config.j2#L3\n\nAnd on the dnf configuration, is it correct ?\n ",
+      "revId": "b0329225fb26a406faf5ea78286b6b3bfa79f62a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
