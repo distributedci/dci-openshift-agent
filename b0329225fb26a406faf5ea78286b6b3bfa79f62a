@@ -16,6 +16,24 @@
       "message": "I followed the code, finally http_proxy will be only used in the sno installation:\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/roles/sno-installer/templates/install-config.j2#L3\n\nAnd on the dnf configuration, is it correct ?\n ",
       "revId": "b0329225fb26a406faf5ea78286b6b3bfa79f62a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d18f013d_ae348970",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-31T23:07:36Z",
+      "side": 1,
+      "message": "The main difference is that now if the proxy is defined in the inventory it will be used, as before only through env or --extra-vars it was honored because groups_vars/all takes precedence over inventories.\n\nAs for sno installation it will be used as before as long as it is defined in the right places",
+      "parentUuid": "d2651e4c_839b587f",
+      "revId": "b0329225fb26a406faf5ea78286b6b3bfa79f62a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
