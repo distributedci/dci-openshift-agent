@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a426438a_103a12cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-31T23:39:02Z",
+      "side": 1,
+      "message": "Bump the version here as well and that will be the dependency requirement with d-o-a-a",
+      "revId": "ab0976679a1ba2ed4c479034e59d4bba474d82c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
