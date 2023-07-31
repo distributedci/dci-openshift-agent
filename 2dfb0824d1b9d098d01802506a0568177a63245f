@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79ee6acf_90399c94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-07-31T23:04:05Z",
+      "side": 1,
+      "message": "LGTM, but you will have to add a dependency through RPM as this is required by your other change in the app-agent",
+      "revId": "2dfb0824d1b9d098d01802506a0568177a63245f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
