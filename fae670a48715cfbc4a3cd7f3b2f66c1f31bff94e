@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ec95ef6_debd4c5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-08-01T09:35:25Z",
+      "side": 1,
+      "message": "Adding Yassine for a review as it is not so trivial after all",
+      "revId": "fae670a48715cfbc4a3cd7f3b2f66c1f31bff94e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
