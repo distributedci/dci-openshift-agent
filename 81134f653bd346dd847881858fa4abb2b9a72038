@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a663801_f4be5586",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-01T16:57:54Z",
+      "side": 1,
+      "message": "just making sure dallas deployments are working with this change\n\ncheck dallas ocp-4.13-vanilla",
+      "revId": "81134f653bd346dd847881858fa4abb2b9a72038",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
