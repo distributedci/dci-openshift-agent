@@ -16,6 +16,23 @@
       "message": "thanks! I think last remaining thing here is to add dci_do_cnf_tests to the README - variables section",
       "revId": "aff80438ccf9f87bc74b659861b46df27199d9ae",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c046ef9f_ec80f416",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-08-01T17:22:13Z",
+      "side": 1,
+      "message": "update docs please with this new variable 😊",
+      "revId": "aff80438ccf9f87bc74b659861b46df27199d9ae",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
