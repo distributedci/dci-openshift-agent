@@ -16,6 +16,91 @@
       "message": "Hi guys, adding you here in this change, to see if I can improve something in get-ai-logs script. For the moment, this is the first version and I\u0027m running a debug job with assisted that will fail (I\u0027m causing the failure), and where bootstrap VM will be running in master-0, to see if we can retrieve the logs from there or not",
       "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2370a91_956075d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-01T18:53:30Z",
+      "side": 1,
+      "message": "Thanks for starting this Ramon, it would helped me a lot for CILAB-1107, I listed this log issue and other improvements there :)",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "024ab307_e535cf20",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-01T18:53:30Z",
+      "side": 1,
+      "message": "I see this json file contains all the cluster configuration, and it\u0027s not bad, but I just wonder that this block it\u0027s suppose to get logs, not configs, so maybe we should rename the block name? \nOn the other hand, for another conversation, we are not collecting the real install-config.yaml and the agent-install.yaml that are created before the deployment (that needs to be done in crucible because they are consumed when AI generates the ISO but crucible tasks are not making a backup) maybe that\u0027s something we can work on a diff PR and discuss with crucible folks.",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3af114e_c08a7d7f",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-01T18:53:30Z",
+      "side": 1,
+      "message": "here by default is adding the node names in an array [] separated by quotes, and as you can see in the last job, it used that as server name (example [dciokd-master-0,) so let\u0027s change this line to {{ groups[\u0027nodes\u0027] | join (\u0027 \u0027) }} to add a space between each node instead of a \",\"",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec6d581c_48360359",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-01T18:53:30Z",
+      "side": 1,
+      "message": "I deployed assisted 4.14 abi and logged in the rendezvous node while deploying, I can see the actual pod names are different than in IP, so we should collect at least: assisted-db, assisted-installer, cluster-bootstrap. There are two others but their names are not very relevant: service and next-step-runner",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a20fbd25_dd84e3ca",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-01T18:53:30Z",
+      "side": 1,
+      "message": "Let\u0027s change this message to something like \"No bootstrap logs found in rendezvous node\"",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
