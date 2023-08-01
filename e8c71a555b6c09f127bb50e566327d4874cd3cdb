@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "75db7487_e6e9b830",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-08-01T08:33:55Z",
+      "side": 1,
+      "message": "I think I understand what is is going on:\n\n* From what I understood, this initial condition \u0027machineCount \u003d\u003d 0\u0027 is faulty, because it means it running in SNO mode, or more precisely SNO-AI. In SNO, the only node is part of the master MC. But, as the Performance profile used here is targeting only the worker node, the Master MCP is not modified so the \u0027until condition\u0027 will never succeed.\n\n* By fixing the when condition in my test, it failed because even in a classic libvirt install, the master MC is not reg-generated so the only reason this condition has never failed before is only because the \u0027when\u0027 condition is faulty.",
+      "parentUuid": "2d25494f_88713dd8",
+      "revId": "e8c71a555b6c09f127bb50e566327d4874cd3cdb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5c35f431_e45bfbf5",
         "filename": "plays/apply-pao-profile.yml",
         "patchSetId": 5
@@ -48,6 +66,24 @@
       "writtenOn": "2023-08-01T06:59:19Z",
       "side": 1,
       "message": "shouldn\u0027t it be \u003e\u003d 1?",
+      "revId": "e8c71a555b6c09f127bb50e566327d4874cd3cdb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7157880f_f1a92d38",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-08-01T08:33:55Z",
+      "side": 1,
+      "message": "Absolutely! Thanks!",
+      "parentUuid": "5c35f431_e45bfbf5",
       "revId": "e8c71a555b6c09f127bb50e566327d4874cd3cdb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
