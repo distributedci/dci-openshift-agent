@@ -16,6 +16,40 @@
       "message": "recheck",
       "revId": "e8c71a555b6c09f127bb50e566327d4874cd3cdb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d25494f_88713dd8",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-01T06:59:19Z",
+      "side": 1,
+      "message": "Charles, I think we need two things here:\n- firstly, make this task to work if `reg_mcpool_worker.resources[0].status.machineCount \u003e\u003d 1`, which was never tested before, I think. My impression is that this condition is now correct, aligned with the previous one that checked the renderer-worker MC but somehow it\u0027s failing... maybe we would need to retrieve the logs here",
+      "revId": "e8c71a555b6c09f127bb50e566327d4874cd3cdb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c35f431_e45bfbf5",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-01T06:59:19Z",
+      "side": 1,
+      "message": "shouldn\u0027t it be \u003e\u003d 1?",
+      "revId": "e8c71a555b6c09f127bb50e566327d4874cd3cdb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
