@@ -16,6 +16,23 @@
       "message": "Thanks Beto",
       "revId": "451af41e89e0287bc8e714679c9b4654502b69da",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4f951cb_2ebf8444",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-02T14:13:39Z",
+      "side": 1,
+      "message": "Hi Beto, sorry, I was off for two days and probably missed some conversations.\n\nShould I add now mi_options to preflight role mirroring, to avoid the bug with scorecard pod that I fixed here https://softwarefactory-project.io/r/c/dci-openshift-agent/+/28548 with `--preserve-digests`? Or is the digest preservation now ensured in some other ways? ",
+      "revId": "451af41e89e0287bc8e714679c9b4654502b69da",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
