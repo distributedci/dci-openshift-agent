@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "447ad491_f42f2d24",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-02T15:19:41Z",
+      "side": 1,
+      "message": "Let me change the block name to talk about configs instead of logs, sure.\nAnd regarding the install-configs, I\u0027ll try to include them in my Crucible PR, I will generalize it to talk about logging and config retrieval, probably",
+      "parentUuid": "024ab307_e535cf20",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3af114e_c08a7d7f",
@@ -65,6 +83,24 @@
       "writtenOn": "2023-08-01T18:53:30Z",
       "side": 1,
       "message": "here by default is adding the node names in an array [] separated by quotes, and as you can see in the last job, it used that as server name (example [dciokd-master-0,) so let\u0027s change this line to {{ groups[\u0027nodes\u0027] | join (\u0027 \u0027) }} to add a space between each node instead of a \",\"",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c7493ab_d0055f4d",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-02T15:19:41Z",
+      "side": 1,
+      "message": "that\u0027s true, I forgot to include that, in fact it\u0027s done in that way with IPI case, let me add it",
+      "parentUuid": "d3af114e_c08a7d7f",
       "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -88,6 +124,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "54e1e4da_64fb9b7c",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-02T15:19:41Z",
+      "side": 1,
+      "message": "But I think we\u0027re doing this in the next for loop. We retrieve all the pods deployed in the rendezvouz node (and among them, we have the ones you\u0027re talking about; in fact, I check at the beginning if assisted-installer pod is running to determine if bootstrap is still present in master-0).\nThis is just to collect service logs, so I think this is fine currently. I\u0027ve verified these two services are in place when running the bootstrap.",
+      "parentUuid": "ec6d581c_48360359",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a20fbd25_dd84e3ca",
         "filename": "plays/scripts/get-ai-logs",
         "patchSetId": 2
@@ -99,6 +153,24 @@
       "writtenOn": "2023-08-01T18:53:30Z",
       "side": 1,
       "message": "Let\u0027s change this message to something like \"No bootstrap logs found in rendezvous node\"",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b074c6f_1235a759",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-02T15:19:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a20fbd25_dd84e3ca",
       "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
