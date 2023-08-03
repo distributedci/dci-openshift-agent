@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "415d8c6e_31a45795",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-03T15:02:30Z",
+      "side": 1,
+      "message": "Change is ready for review.\n\nIn this last job, I managed to check that all log files from Assisted are generated in case it is failing during bootstrap (I forced a failure while bootstrap was acting to be able to test it, that\u0027s why the job is failing): https://www.distributed-ci.io/jobs/602b27cf-7547-4548-8a59-a7b770cc656d/files\n\nThe only thing that is still failing is the execution of openshift-install gather bootstrap command, in both Crucible: https://www.distributed-ci.io/jobs/602b27cf-7547-4548-8a59-a7b770cc656d/jobStates?sort\u003ddate\u0026task\u003d432b205a-13a0-499c-8449-adb293efa0ef and get-ai-logs command: https://www.distributed-ci.io/jobs/602b27cf-7547-4548-8a59-a7b770cc656d/jobStates?sort\u003ddate\u0026task\u003d51c16fc4-2a3f-4848-9cfa-cecd03a0c158\n\nHowever, if checking a IPI deployment failing in bootstrap, where openshift-baremetal-install gather bootstrap (similar command) is launched, it\u0027s working: https://www.distributed-ci.io/jobs/e72938c7-bc81-47fd-accf-7675d43adee4/jobStates?sort\u003ddate\u0026task\u003d9fd64f85-8306-445f-b3c0-3b75384f244a\n\nMy impression is that there are still issues with SSH and Ansible, because if I run the command locally, it\u0027s working.\n\nCould you please take a look to that particular command, in case I am missing something? Because I don\u0027t really know what to do more. I\u0027d appreciate that",
+      "revId": "4b0d8549194764f746ece2008f4d2586c3231674",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
