@@ -69,6 +69,24 @@
       "parentUuid": "7282aeba_2c6a1811",
       "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4ee8488_402316bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-03T19:21:24Z",
+      "side": 1,
+      "message": "Hi Jorge, thanks for commenting, and apologies for the delay to answer, but this change as it is now, was allowing me to continue testing other aspects of the deployment, and now that I passed those issues I can finally come here to polish it :)\n\nI see your point about the scenario \"*connected* env + an extra pull secret file\", and I believe that is covered in the CR, in a certain way: that is, when pullsecret_file is undefined, we get the pullsecret from job_info and we merge it with the openshift_secret variable, that variable is expected to be a dictionary with additional auths to be combined. And we do the same if it\u0027s a disconnected env. \n\nOn the other hand, when pullsecret_file is defined, I was expecting that all the required auths should be defined there, so no need to combine with the one from job_info or other extra auths.\n\nCurrently in pre-run of IPI we always get the pull secret from job_info (connected or disconnected) and in different tasks we provide options to combine it with the content of openshift_secret variable, or disconnected_auths variable (which both should contain additional registry auths), but we\u0027ll only use that final pull_secret content when pullsecret_file is undefined; if pullsecret_file is defined we override everything and use whatever that is provided in the file. \n\nI think you recommendation of the 4 steps, will cover almost every possible scenario and leave no room for assumptions, but maybe that\u0027s an improvement we can do in another PR for both assisted and IPI, here I mainly wanted to allow AI installations to use a defined pull_secret file which in our case has all the auths we need for our env.",
+      "parentUuid": "4f1b6309_b0e7a0fa",
+      "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
