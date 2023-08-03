@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "165c8868_cda478cb",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-03T11:19:30Z",
+      "side": 1,
+      "message": "Regarding install-config and agent-config files, they are removed somehow after starting the installation, they should be present under {{ repo_root_path }}/generated/{{ cluster_name }}, but they were not there. I\u0027ve added to my Crucible patch a backup of these files in {{ repo_root_path }}, then we copy them in our get-logs playbook to the log directory: https://github.com/redhat-partner-solutions/crucible/pull/252",
+      "parentUuid": "447ad491_f42f2d24",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3af114e_c08a7d7f",
@@ -136,6 +154,24 @@
       "side": 1,
       "message": "But I think we\u0027re doing this in the next for loop. We retrieve all the pods deployed in the rendezvouz node (and among them, we have the ones you\u0027re talking about; in fact, I check at the beginning if assisted-installer pod is running to determine if bootstrap is still present in master-0).\nThis is just to collect service logs, so I think this is fine currently. I\u0027ve verified these two services are in place when running the bootstrap.",
       "parentUuid": "ec6d581c_48360359",
+      "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98eba726_6f3bf5c1",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-03T11:19:30Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "54e1e4da_64fb9b7c",
       "revId": "bc2ff6445af6a76b3cb89ae56e314b9b833a23ef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
