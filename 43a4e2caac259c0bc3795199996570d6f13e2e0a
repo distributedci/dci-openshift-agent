@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2f48b6a_04f85f6d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-08-04T20:29:42Z",
+      "side": 1,
+      "message": "Nice change! Thx Manny.",
+      "revId": "43a4e2caac259c0bc3795199996570d6f13e2e0a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e09f05a4_6ca32ba6",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-08-04T20:29:42Z",
+      "side": 1,
+      "message": "The variable dci_erase_bootloader_on_disk is not documented, even if it is already use in the pre-run play. Maybe it is the time to do it 😊",
+      "revId": "43a4e2caac259c0bc3795199996570d6f13e2e0a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
