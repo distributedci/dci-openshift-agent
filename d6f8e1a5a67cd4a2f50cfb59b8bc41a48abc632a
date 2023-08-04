@@ -16,6 +16,23 @@
       "message": "Sorry, my bad, get-ai-logs was not launched again, I was using a variable defined under crucible scope. Now it should be working, I\u0027m just relying on inventory vars in all cases",
       "revId": "d6f8e1a5a67cd4a2f50cfb59b8bc41a48abc632a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "024e6ab9_03cbf6b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-04T15:36:37Z",
+      "side": 1,
+      "message": "LGTM, I see the journal logs this time, thanks for all the work here!",
+      "revId": "d6f8e1a5a67cd4a2f50cfb59b8bc41a48abc632a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

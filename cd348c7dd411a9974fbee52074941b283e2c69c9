@@ -69,6 +69,24 @@
       "parentUuid": "07529aeb_59572061",
       "revId": "cd348c7dd411a9974fbee52074941b283e2c69c9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "279aa363_ebe10218",
+        "filename": "group_vars/all",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-04T15:36:37Z",
+      "side": 1,
+      "message": "Sure, let\u0027s leave it, I synced with Jorge/Bill about two months ago, we were pinning a specific commit, and they told me that it was because there was a newer commit breaking the deployment, but since then multiple fixes have been merged, and if your commit is the last that means previous commits are fine now, so next time we can bump it to origin/main.",
+      "parentUuid": "7b07ba2b_0819690b",
+      "revId": "cd348c7dd411a9974fbee52074941b283e2c69c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
