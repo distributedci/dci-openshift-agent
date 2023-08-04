@@ -51,6 +51,24 @@
       "message": "❤️ if your change is the latest, at this point we can point to origin/main",
       "revId": "cd348c7dd411a9974fbee52074941b283e2c69c9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b07ba2b_0819690b",
+        "filename": "group_vars/all",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-04T13:15:44Z",
+      "side": 1,
+      "message": "Yeah, I also thought about that, but I don\u0027t know if there was a reason to pin the version of assisted_deploy_version, maybe we can leave this as it is right now and check maybe with Jorge/Bill, to see if they agree or not to move to origin/main",
+      "parentUuid": "07529aeb_59572061",
+      "revId": "cd348c7dd411a9974fbee52074941b283e2c69c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
