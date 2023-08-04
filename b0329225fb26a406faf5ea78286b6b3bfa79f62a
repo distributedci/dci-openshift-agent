@@ -34,6 +34,23 @@
       "parentUuid": "d2651e4c_839b587f",
       "revId": "b0329225fb26a406faf5ea78286b6b3bfa79f62a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b726393a_5879214e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-04T21:57:02Z",
+      "side": 1,
+      "message": "Discussed this one with Fred, I\u0027ll dig into the DCI jobs to see if we have anyone using proxy just to be safe",
+      "revId": "b0329225fb26a406faf5ea78286b6b3bfa79f62a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
