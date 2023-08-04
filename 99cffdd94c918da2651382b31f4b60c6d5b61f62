@@ -16,6 +16,41 @@
       "message": "I\u0027ll wait for my assisted PR to be merged before running the final test, I\u0027ll also update the assisted version to use",
       "revId": "99cffdd94c918da2651382b31f4b60c6d5b61f62",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e285e81b_667c6a6d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-04T12:40:01Z",
+      "side": 1,
+      "message": "Great work Ramon! I believe as it is, it covers most of the info we want to retrieve : ). I just noticed something new in the latest job test, in case you can double check",
+      "parentUuid": "565064ef_2d1b5253",
+      "revId": "99cffdd94c918da2651382b31f4b60c6d5b61f62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "600a65ee_8a5c2819",
+        "filename": "plays/assisted-get-logs.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-04T12:40:01Z",
+      "side": 1,
+      "message": "In the last successful job[1], somehow the new way to get the rendezvous IP is sending an error: \" {{ hostvars[agent_based_installer_bootstrap_node][host_ip_keyword] }}: \u0027host_ip_keyword\u0027 is undefined\", and no journal logs from the nodes were pulled : (\n\n[1] https://www.distributed-ci.io/jobs/411ad159-b22f-4ebc-a198-32d3b5b7a863/jobStates?sort\u003ddate\u0026task\u003d82aed60e-501f-48f8-8916-da2a6c14729c\n\nI think the correct var is \"{{ hostvars[agent_based_installer_bootstrap_node][\u0027ansible_host\u0027] }}\" because host_ip_keyword it\u0027s under vm_hosts.hosts.vm_host1 only",
+      "revId": "99cffdd94c918da2651382b31f4b60c6d5b61f62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
