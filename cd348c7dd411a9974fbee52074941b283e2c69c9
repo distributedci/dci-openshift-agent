@@ -16,6 +16,41 @@
       "message": "Change is now ready for review, assisted change is merged, I\u0027ve updated the version to take this latest code which is now stable",
       "revId": "cd348c7dd411a9974fbee52074941b283e2c69c9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bece9aea_a5d111b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-04T12:55:22Z",
+      "side": 1,
+      "message": "Great! I\u0027ll +2 after the CI job finishes : )",
+      "parentUuid": "6f1a12ce_415a4e9c",
+      "revId": "cd348c7dd411a9974fbee52074941b283e2c69c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07529aeb_59572061",
+        "filename": "group_vars/all",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-04T12:55:22Z",
+      "side": 1,
+      "message": "❤️ if your change is the latest, at this point we can point to origin/main",
+      "revId": "cd348c7dd411a9974fbee52074941b283e2c69c9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
