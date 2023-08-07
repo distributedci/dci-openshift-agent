@@ -104,6 +104,24 @@
       "message": "We will have to verify and update every commit from crucible before updating the hash here.  We have other partners using this now so we can\u0027t take the risk of a crucible update breaking.",
       "revId": "7b876414865352b6ef183c890730d718657de379",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f19b5bd_7c5e78c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-07T15:30:08Z",
+      "side": 1,
+      "message": "Okey, let\u0027s do that then, I\u0027ll close this",
+      "parentUuid": "525c3f15_65298f12",
+      "revId": "7b876414865352b6ef183c890730d718657de379",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
