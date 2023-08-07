@@ -33,6 +33,24 @@
       "message": "Why are you moving to HEAD without verifying?  If you want to use the latest in main branch that would be commit 7411b3ab66bae1530cf37711c7d7830cbc6c2f86 I don\u0027t think we should blindly pull from main when it hasn\u0027t been tested/verified in the dci agent.",
       "revId": "7b876414865352b6ef183c890730d718657de379",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b86c2fd7_919f5b0e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-07T13:53:57Z",
+      "side": 1,
+      "message": "Hi Bill, in fact, it\u0027s validated in this job: https://www.distributed-ci.io/jobs/fab1e076-6df0-403c-b3fb-d2e9c37b002a/jobStates?sort\u003ddate\nAlso, have in mind that we\u0027re testing Assisted on a daily basis in BOS2, so we\u0027re continuously validating it.\nThe main reason of moving to HEAD is because we have been recently applying changes to Crucible repository (and there are some ongoing changes that we will merge in the future) and, if not changing the version to test (e.g. because we forget about it), we may be testing something that doesn\u0027t contain patches we\u0027ve been including.",
+      "parentUuid": "6788211e_eeaa8988",
+      "revId": "7b876414865352b6ef183c890730d718657de379",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
