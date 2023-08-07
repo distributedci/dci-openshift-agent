@@ -69,6 +69,24 @@
       "parentUuid": "b86c2fd7_919f5b0e",
       "revId": "7b876414865352b6ef183c890730d718657de379",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3db33af5_cda59421",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-07T15:25:23Z",
+      "side": 1,
+      "message": "Thanks Jorge, we can do that, yes. I\u0027ll propose it here then: https://github.com/dci-labs/bos2-ci-config/pull/78\n\nBut for the agent code, I just wanted to follow the same approach than with baremetal-deploy repo. If you still think it\u0027s not fine to do the same, I\u0027ll close this and just change the BOS2 config, but I fear that, each time we merge something in Crucible, we\u0027ll need to update the var in dci-openshift-agent to point to the new commit. To pin to a specific version is something that we do in other projects, such as cnf-cert or preflight in the app-agent, but linking them to a branch, not to a commit-id. That was my concern, mainly",
+      "parentUuid": "8a50600e_e3116eba",
+      "revId": "7b876414865352b6ef183c890730d718657de379",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
