@@ -16,6 +16,23 @@
       "message": "Hi Jorge, Bill, do you think it\u0027s fine to move now to assisted\u0027s main branch by default? We\u0027ve been creating some changes that relied on main branch and were working fine. I think it\u0027s a good time to update this variable",
       "revId": "7b876414865352b6ef183c890730d718657de379",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6788211e_eeaa8988",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-08-07T12:51:18Z",
+      "side": 1,
+      "message": "Why are you moving to HEAD without verifying?  If you want to use the latest in main branch that would be commit 7411b3ab66bae1530cf37711c7d7830cbc6c2f86 I don\u0027t think we should blindly pull from main when it hasn\u0027t been tested/verified in the dci agent.",
+      "revId": "7b876414865352b6ef183c890730d718657de379",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
