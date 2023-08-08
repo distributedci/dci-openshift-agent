@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce447398_319e00ae",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-08T21:43:08Z",
+      "side": 1,
+      "message": "Same as in dci-pipeline/+/29067, just wondering what is the new var, your change looks good, but I couldn\u0027t find cnf_certification_test_src_dir, only test_network_function_src_dir, I hope I\u0027m not confusing things. :)",
+      "revId": "fa893d14637d03b66e6552d170db6c518834f946",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "f8fc284e_5b443761",
