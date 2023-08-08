@@ -50,6 +50,24 @@
       "message": "Hi Ramon, 48-55 looks like a duplication of 37-44, isn\u0027t it?",
       "revId": "0e54e91f954216de52353cc9831a6ed15dad0c6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "349ad320_480a59a6",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-08T07:22:00Z",
+      "side": 1,
+      "message": "Hi Tania, no, it\u0027s not the same, first task checks if there\u0027s a node in NotReady,SchedulingDisabled status. If passing, we need to check if there\u0027s a node in Ready (instead of NotReady), SchedulingDisabled status, just to make the job to fail in that point, since we don\u0027t have currently an open OCPBUGS that cover that case. In case of happening this failure again, we would open a new OCPBUGS and reinclude the workaround of uncordoning nodes and so on.",
+      "parentUuid": "ebdfbd26_952b2d2c",
+      "revId": "0e54e91f954216de52353cc9831a6ed15dad0c6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
