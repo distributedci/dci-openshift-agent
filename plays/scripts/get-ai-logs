@@ -66,7 +66,7 @@ if [ "$assisted_installer_present" -ne "0" ]; then
 
   # Collect the bootstrap logs
   # TODO. Make it work, SSH is not working properly
-  $OPENSHIFT_INSTALL_BINARY --log-level=debug gather bootstrap --dir=${log_dir} --bootstrap ${rendezvous_ip_address} ${nodes_param}
+  $OPENSHIFT_INSTALL_BINARY --log-level=debug gather bootstrap --dir=${log_dir} --key /var/lib/dci-openshift-agent/.ssh/id_rsa --bootstrap ${rendezvous_ip_address} ${nodes_param}
 
   # Collect services logs
   for serv in release-image bootkube; do
