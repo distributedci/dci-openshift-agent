@@ -16,6 +16,40 @@
       "message": "LGTM",
       "revId": "0e54e91f954216de52353cc9831a6ed15dad0c6e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdc51e68_3c16f909",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-08T07:19:51Z",
+      "side": 1,
+      "message": "Hi Ramon, It seems like there is a duplication of one task, could you please have a look?",
+      "revId": "0e54e91f954216de52353cc9831a6ed15dad0c6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebdfbd26_952b2d2c",
+        "filename": "common-roles/check-resource/tasks/wait-mcp.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-08T07:19:51Z",
+      "side": 1,
+      "message": "Hi Ramon, 48-55 looks like a duplication of 37-44, isn\u0027t it?",
+      "revId": "0e54e91f954216de52353cc9831a6ed15dad0c6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
