@@ -33,6 +33,23 @@
       "message": "reverify",
       "revId": "fa893d14637d03b66e6552d170db6c518834f946",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bf59e52_54fd1e25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-08T13:10:44Z",
+      "side": 1,
+      "message": "Change is ready for review, the debug job launched in BOS2 is taking the tnf PR and testing it by using the code from https://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/29066",
+      "revId": "fa893d14637d03b66e6552d170db6c518834f946",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
