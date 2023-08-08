@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "49549b38_db4c65c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-08T07:52:06Z",
+      "side": 1,
+      "message": "Hi Ramon, I see the idea, thanks for the explanation. ",
+      "revId": "0e54e91f954216de52353cc9831a6ed15dad0c6e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ebdfbd26_952b2d2c",
