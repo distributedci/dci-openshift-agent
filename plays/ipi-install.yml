@@ -80,6 +80,10 @@
 - name: "Nightly builds"
   when: hostvars.localhost.build == "nightly"
   block:
+  - name: "Set delagate variable for container usecase"
+    set_fact:
+      delagate_target: "{{ ( lookup('ansible.builtin.env', 'container', default='') == 'oci' ) | ternary('jumphost', 'localhost') }}"
+
   - name: "Start artifact webserver"
     vars:
       cache_dir: >-
@@ -94,7 +98,7 @@
       volumes:
         - "{{ cache_dir }}:/var/www/html"
     register: aw_container
-    delegate_to: localhost
+    delegate_to: "{{ delagate_target }}"
 
   - name: "Get dynamic web port"
     set_fact:
@@ -102,7 +106,7 @@
         {{ aw_container |
            json_query('container.NetworkSettings.Ports."8080/tcp"[].HostPort') |
            first }}
-    delegate_to: localhost
+    delegate_to: "{{ delagate_target }}"
 
   - name: "Get routable interface to provisionhost"
     vars:
@@ -110,14 +114,14 @@
     shell:
       cmd: /usr/sbin/ip -j route get {{ target_ip }}
     register: aw_route
-    delegate_to: localhost
+    delegate_to: "{{ delagate_target }}"
 
   - name: "Get all active zones in controller"
     ansible.posix.firewalld_info:
       active_zones: true
     register: aw_fw_zones
     become: true
-    delegate_to: localhost
+    delegate_to: "{{ delagate_target }}"
 
   - name: "Get firewall zone in controller"
     vars:
@@ -130,6 +134,7 @@
     loop: "{{ aw_fw_zones.collected_zones }}"
     loop_control:
       loop_var: zone
+    delegate_to: "{{ delagate_target }}"
 
   - name: "Allow HTTP traffic"
     firewalld:
@@ -139,7 +144,7 @@
       state: enabled
       zone: "{{ aw_zone }}"
     become: true
-    delegate_to: localhost
+    delegate_to: "{{ delagate_target }}"
 
   - name: Set artifact web URL
     vars:
@@ -161,7 +166,7 @@
     containers.podman.podman_container:
       name: "{{ hostvars.localhost.job_id }}"
       state: absent
-    delegate_to: localhost
+    delegate_to: "{{ delagate_target }}"
 
   - name: "Disallow HTTP traffic"
     firewalld:
@@ -171,6 +176,6 @@
       state: disabled
       zone: "{{ aw_zone }}"
     become: true
-    delegate_to: localhost
+    delegate_to: "{{ delagate_target }}"
 
 ...
