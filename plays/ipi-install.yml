@@ -80,29 +80,56 @@
 - name: "Nightly builds"
   when: hostvars.localhost.build == "nightly"
   block:
-  - name: "Start artifact webserver"
-    vars:
-      cache_dir: >-
-        {{ hostvars.localhost.provision_cache_store |
-           default((hostvars.localhost.ansible_env.HOME, 'releases') |
-           join('/')) }}
-    containers.podman.podman_container:
-      name: "{{ hostvars.localhost.job_id }}"
-      image: quay.io/centos7/httpd-24-centos7:latest
-      state: started
-      publish_all: true
-      volumes:
-        - "{{ cache_dir }}:/var/www/html"
-    register: aw_container
-    delegate_to: localhost
+    - name: Set web server with conatainer 
+      when: lookup('ansible.builtin.env', 'container', default='') != 'oci'
+      block:
+      - name: "Start artifact webserver"
+        vars:
+          cache_dir: >-
+            {{ hostvars.localhost.provision_cache_store |
+               default((hostvars.localhost.ansible_env.HOME, 'releases') |
+               join('/')) }}
+        containers.podman.podman_container:
+          name: "{{ hostvars.localhost.job_id }}"
+          image: quay.io/centos7/httpd-24-centos7:latest
+          state: started
+          publish_all: true
+          volumes:
+            - "{{ cache_dir }}:/var/www/html"
+        register: aw_container
+        delegate_to: localhost
 
-  - name: "Get dynamic web port"
-    set_fact:
-      aw_dynamic_port: >-
-        {{ aw_container |
-           json_query('container.NetworkSettings.Ports."8080/tcp"[].HostPort') |
-           first }}
-    delegate_to: localhost
+      - name: "Get dynamic web port"
+        set_fact:
+          aw_dynamic_port: >-
+            {{ aw_container |
+               json_query('container.NetworkSettings.Ports."8080/tcp"[].HostPort') |
+               first }}
+        delegate_to: localhost
+
+    - name: "Set web server without container"
+      when: lookup('ansible.builtin.env', 'container', default='') == 'oci'
+      block: 
+      - name: "Start artifact webserver"
+        shell: |
+          echo $$ > /tmp/httpd.pid
+          python3 -m http.server -d /tmp 0
+        register: cmd
+        async: 10000
+        poll: 0
+        delegate_to: localhost
+
+      - name: "Get dynamic web port"
+        shell: |
+          PID=$(cat /tmp/httpd.pid)
+          lsof -Pan -p $PID| grep TCP | sed -re 's/.*:(.*) \(.*/\1/'
+        register: cmdport
+        delegate_to: localhost
+
+      - name: "Set dynamic web fact"
+        set_fact:
+          aw_dynamic_port: "{{ cmdport.stdout }}"
+        delegate_to: localhost
 
   - name: "Get routable interface to provisionhost"
     vars:
@@ -157,10 +184,16 @@
     import_role:
       name: installer
 
-  - name: "Remove artifact webserver"
+  - name: "Remove artifact webserver with podman"
+    when: lookup('ansible.builtin.env', 'container', default='') != 'oci'
     containers.podman.podman_container:
       name: "{{ hostvars.localhost.job_id }}"
       state: absent
+    delegate_to: localhost
+
+  - name: "Remove artifact webserver with httpd"
+    when: lookup('ansible.builtin.env', 'container', default='') == 'oci'
+    shell: kill -9 $(cat /tmp/httpd.pid)
     delegate_to: localhost
 
   - name: "Disallow HTTP traffic"
