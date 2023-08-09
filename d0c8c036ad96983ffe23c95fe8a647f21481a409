@@ -16,6 +16,24 @@
       "message": "Good, do you know how long on average it lasts ?",
       "revId": "d0c8c036ad96983ffe23c95fe8a647f21481a409",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b112aa0_aba47003",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-09T16:31:15Z",
+      "side": 1,
+      "message": "Good question, from the daily jobs, I see the whole script runs in about 2mins (the script gets the must-gather and runs other oc get commands) and the clusters were up for about 3-4 hours, but I have ran it manually before and it varies from job to job, and time of a running cluster, I\u0027ve seen some jobs topping the 5m, so 15m was just a raw estimate to cover must scenarios.",
+      "parentUuid": "993c529f_42823fe8",
+      "revId": "d0c8c036ad96983ffe23c95fe8a647f21481a409",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
