@@ -69,6 +69,24 @@
       "parentUuid": "ea899f27_52a5a028",
       "revId": "720e363debe627dde8ac69baa3446d36fc2d596e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e7a1817_129447ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-09T09:49:08Z",
+      "side": 1,
+      "message": "I\u0027ll finally check the SSH remaining issue in a new change, but now, as Manuel said, the result is the expected one. To fix the AI gather logs, we need to avoid trying all keys. I\u0027ve explored some options bu, as I said, I\u0027ll check this in a different change\nI\u0027ll run the job without making it to fail so that we confirm we have a green job here, to be able to merge this",
+      "parentUuid": "d4dc40f7_7a2582f6",
+      "revId": "720e363debe627dde8ac69baa3446d36fc2d596e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
