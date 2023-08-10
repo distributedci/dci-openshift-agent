@@ -87,6 +87,24 @@
       "message": "Hi Manny, great idea and thank you for the quick fix!",
       "revId": "d0c8c036ad96983ffe23c95fe8a647f21481a409",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9d9eb1c_01316fcc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-10T13:44:54Z",
+      "side": 1,
+      "message": "Thanks",
+      "parentUuid": "b60461e4_a4c6b942",
+      "revId": "d0c8c036ad96983ffe23c95fe8a647f21481a409",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
