@@ -70,6 +70,23 @@
       "parentUuid": "97d34e0d_0d3a52ca",
       "revId": "d0c8c036ad96983ffe23c95fe8a647f21481a409",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b60461e4_a4c6b942",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-10T07:32:35Z",
+      "side": 1,
+      "message": "Hi Manny, great idea and thank you for the quick fix!",
+      "revId": "d0c8c036ad96983ffe23c95fe8a647f21481a409",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
