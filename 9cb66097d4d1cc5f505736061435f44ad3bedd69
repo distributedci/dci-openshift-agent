@@ -16,6 +16,24 @@
       "message": "this block/when is unnecessary since you validate first thing in the rescue block, right? remove this block and unindent the tasks",
       "revId": "9cb66097d4d1cc5f505736061435f44ad3bedd69",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "410ba391_3cc94cd2",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-11T08:02:15Z",
+      "side": 1,
+      "message": "You\u0027re right Jorge, but just to give some context here; this code structure is probably based on the wait-mcp workaround, which has this structure because, at the beginning, there were multiple OCPBUGS pointing to that playbook, and for each OCPBUGS, there were a specific workaround to follow, that\u0027s why each OCPBUGS was included in a different block, having a fail task which was common for all of them.\nBut yes, now that there\u0027s only one OCPBUGS attached, the block is probably useless.\nI\u0027ve removed it from the wait-mcp task in this change, just to follow that: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/29119, the same should be done here",
+      "parentUuid": "67cc1e7b_ab305574",
+      "revId": "9cb66097d4d1cc5f505736061435f44ad3bedd69",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
