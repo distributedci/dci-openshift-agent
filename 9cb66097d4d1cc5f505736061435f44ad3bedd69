@@ -34,6 +34,24 @@
       "parentUuid": "67cc1e7b_ab305574",
       "revId": "9cb66097d4d1cc5f505736061435f44ad3bedd69",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30e3e1e1_31e6c620",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-11T08:18:52Z",
+      "side": 1,
+      "message": "thank Jorge, nice catch, fixed!",
+      "parentUuid": "410ba391_3cc94cd2",
+      "revId": "9cb66097d4d1cc5f505736061435f44ad3bedd69",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
