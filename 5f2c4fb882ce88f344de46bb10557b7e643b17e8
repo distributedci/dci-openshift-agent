@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.13-vanilla ocp-4.14-upgrade openshift-vanilla:ansible_extravars\u003ddci_force_mirroring:true openshift-vanilla-upgrade-4.14:ansible_extravars\u003ddci_force_mirroring:true",
       "revId": "5f2c4fb882ce88f344de46bb10557b7e643b17e8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62909e56_f78b4ffa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-14T15:33:18Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla ocp-4.14-upgrade openshift-vanilla:ansible_extravars\u003dbonding_config:vanilla-ipv4-9 openshift-vanilla:ansible_extravars\u003ddualstack_baremetal:false openshift-vanilla:ansible_extravars\u003dipv6_enabled:false openshift-vanilla:ansible_extravars\u003ddualstack_vips:false openshift-vanilla:ansible_extravars\u003ddci_force_mirroring:true openshift-vanilla-upgrade-4.14:ansible_extravars\u003ddci_force_mirroring:true",
+      "revId": "5f2c4fb882ce88f344de46bb10557b7e643b17e8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
