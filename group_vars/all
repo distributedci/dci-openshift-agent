@@ -115,6 +115,12 @@ nfs_subdir_external_provisioner_tag: v4.0.2
 # Catalog from file vars
 operator_catalog_dir: ""
 operator_catalog_dir_name: "catalog-from-file"
+
+# Control the catalog source for DCI managed operators
+opm_local_registry_path: "/pruned/redhat-operator-index"
+opm_catalog_source_name: "redhat-operators"
+opm_catalog_source_namespace: "openshift-marketplace"
+
 ...
 # Local Variables:
 # mode: yaml
