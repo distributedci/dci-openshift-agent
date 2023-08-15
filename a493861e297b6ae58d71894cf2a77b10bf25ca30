@@ -139,6 +139,24 @@
       "message": "Just waiting on a successful run to +1 this, Manuel I see the last successful run was testing ABI in Dallas, is that change related to this one?",
       "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbf84d4e_c67ba17a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-08-15T18:08:37Z",
+      "side": 1,
+      "message": "Correct, there are a few successful jobs in Dallas, the ones that failed are because of other network configs I\u0027m testing (ipv6, dualstack, dhcp), either way let me launch a new job with ipv4 only to get a successful full run.",
+      "parentUuid": "bea3d40b_05005dc7",
+      "revId": "a493861e297b6ae58d71894cf2a77b10bf25ca30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
