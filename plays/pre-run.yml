@@ -1,4 +1,8 @@
 ---
+- name: task to trigger deployment and test crucible pr
+  debug:
+    msg: ":P"
+
 - name: Validate we have all the pieces to run in disconnected mode
   assert:
     that:
