@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8d73eeb_dde885be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-16T14:33:41Z",
+      "side": 1,
+      "message": "Hello Tatiana, thanks for the change.\n\nIMHO, we should restart the pod just after disabling the default catalog sources just as a sanity action to clean up the cache. In that case, that won\u0027t need to be managed as a workaround, just as part of the regular workflow. At some time a remember reading that it was recommended to restart some stuff after removing the default catalogs.\n\nWhat about that, can we give it a try to that instead of dealing with it using a WA for a bug already reported for other teams that will be scheduled for fix soon? \n\nRegards",
+      "parentUuid": "33ef2a99_2dc609e7",
+      "revId": "8e0a18125cb595c908cd910d4056bad956bec5f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11b51777_933f1ec7",
