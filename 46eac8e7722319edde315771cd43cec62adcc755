@@ -36,6 +36,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "90f84d84_584203a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-16T19:42:55Z",
+      "side": 1,
+      "message": "Thanks Tony, the change is pretty clear now, just one more question.",
+      "revId": "46eac8e7722319edde315771cd43cec62adcc755",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dbdacc08_b5ae5c7e",
@@ -189,6 +206,24 @@
       "side": 1,
       "message": "Explained in the main comment, we will start using IDMS in 4.14",
       "parentUuid": "a4ac1435_e1f90c93",
+      "revId": "46eac8e7722319edde315771cd43cec62adcc755",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9641e29_d45013ea",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-16T19:42:55Z",
+      "side": 1,
+      "message": "The main comment mentions: \"ImageContentSourcePolicy (icsp) resource is being deprecated in 4.14\". What I\u0027m suggesting is that since 4.13 already provides IDMS, why not make use of it? This approach would enable us to run more jobs for testing the new functionality.",
+      "parentUuid": "198b47d1_05f10584",
       "revId": "46eac8e7722319edde315771cd43cec62adcc755",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
