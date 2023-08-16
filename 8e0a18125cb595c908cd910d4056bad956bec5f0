@@ -33,6 +33,24 @@
       "message": "Let\u0027s add the dci_workaround and its bug ID otherwise we will forget about this when fixed",
       "revId": "8e0a18125cb595c908cd910d4056bad956bec5f0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6cc21ce_c048bb31",
+        "filename": "common-roles/olm-operator/tasks/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-16T12:44:38Z",
+      "side": 1,
+      "message": "Hi Tony, thanks for checking, it\u0027s added right above ^^",
+      "parentUuid": "11b51777_933f1ec7",
+      "revId": "8e0a18125cb595c908cd910d4056bad956bec5f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
