@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "847072bc_33ba601f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-16T14:35:08Z",
+      "side": 1,
+      "message": "Just after:\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/44b083de5b90a418113ebe6a00a1a9c241d91148/plays/prepare-operators.yml#L34",
+      "parentUuid": "d8d73eeb_dde885be",
+      "revId": "8e0a18125cb595c908cd910d4056bad956bec5f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11b51777_933f1ec7",
