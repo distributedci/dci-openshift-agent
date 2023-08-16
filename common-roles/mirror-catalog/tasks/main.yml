@@ -60,3 +60,10 @@
     mode: "0644"
   notify:
     - "Delete tmp directory"
+
+# The issue is with the OLM pod, which is searching for an old CatalogSource.
+# The workaround could involve restarting it.
+- name: Restart OLM pod catalog-operator
+  include_tasks: restart_olm_pod.yml
+  when: '"OCPBUGS-13286" in dci_workarounds | default([])'
+...
