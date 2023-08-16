@@ -106,6 +106,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f65063ae_30f30f57",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-16T19:29:47Z",
+      "side": 1,
+      "message": "The issue is that \"after removing catalog\" sources, the OLM pod still has in its cache information that will be used when it tries to resolve dependencies for new subscriptions. \n\n$ oc get operator hub cluster -o yaml\napiVersion: config.openshift.io/v1\nkind: OperatorHub\n\u003c\u003csnip\u003e\u003e\n  disableAllDefaultSources: true\nstatus:\n  sources:\n  - disabled: true\n    name: certified-operators\n    status: Success\n  - disabled: true\n    name: community-operators\n    status: Success\n  - disabled: true\n    name: Redhat-marketplace\n    status: Success\n  - disabled: true\n    name: Redhat-operators\n    status: Success\n\nredhat-marketplace is one that we have seen most of the times\n\nIf we restart the pod after disabling the catalogs will benefit the operator\u0027s subscriptions that we create in DOA and also the workloads running via DOAA.\n\nIt should work also only doing that on the catalog-source role just before or after creating a catalog, but we may be running it more times than needed.",
+      "parentUuid": "c58f8bb9_59bafba9",
+      "revId": "8e0a18125cb595c908cd910d4056bad956bec5f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11b51777_933f1ec7",
