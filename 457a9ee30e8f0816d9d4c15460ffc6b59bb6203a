@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8cb59e2_8448784d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-17T02:00:49Z",
+      "side": 1,
+      "message": "I think is an interesting idea, not sure if the path is that helpful. In our case it would as we are using dates.\n\nI wonder if we could use the info from the catalog image instead? The challenge is how to make unique the catalog based on different paths or content. I see we currently create the catalog image from the spec.image which for the two directories we have is almost the same, only difference is in the namespace one uses:  \u003cuser\u003e vs \u003cuser\u003e/olm but the name of the image (redhat-operator-index) and the tag (4.14) are the same, wdyt?",
+      "revId": "457a9ee30e8f0816d9d4c15460ffc6b59bb6203a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
