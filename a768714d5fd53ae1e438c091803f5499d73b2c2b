@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.14-vanilla",
       "revId": "a768714d5fd53ae1e438c091803f5499d73b2c2b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a58fcbd5_dc245329",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-17T14:20:12Z",
+      "side": 1,
+      "message": "I tested locally like this \n\n```\n---\n- name: \n  hosts: local\n  tasks:\n    - name: \"Read from file\"\n      set_fact:\n        clusteroperator_info: \"{{ lookup(\u0027file\u0027, \u0027/path/to/operators_failed.json\u0027) | from_json }}\"\n        last_conditions: \"{{ clusteroperator_info.resources | json_query(\u0027[*].status.conditions[-1]\u0027) }}\"\n      failed_when: last_conditions | selectattr(\u0027type\u0027, \u0027eq\u0027, \u0027Degraded\u0027) | selectattr(\u0027status\u0027, \u0027eq\u0027, \u0027True\u0027) | list | length \u003e 0\n...\n```\n\ntaking the content of operators_failed.json from this task: https://www.distributed-ci.io/jobs/53b7d41c-b437-4d06-9d5a-11f4a6830a0e/jobStates?sort\u003ddate\u0026task\u003d4783f2e7-b4e9-4ff7-9a5f-652e6a6aae46",
+      "revId": "a768714d5fd53ae1e438c091803f5499d73b2c2b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
