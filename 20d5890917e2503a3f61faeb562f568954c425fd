@@ -33,6 +33,23 @@
       "message": "Ready for review, tested using operator-sdk test PR: https://github.com/operator-framework/operator-sdk/pull/6529 ",
       "revId": "20d5890917e2503a3f61faeb562f568954c425fd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd44ff1f_27536d8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-08-17T07:21:34Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "20d5890917e2503a3f61faeb562f568954c425fd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
