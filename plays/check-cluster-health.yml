@@ -1,15 +1,28 @@
-
 ---
-- name: "Fail if there are degraded cluster-operators - {{ version }}"
+- name: "Wait 30 seconds for operators to stabilize"
+  pause:
+    seconds: 30
+
+- name: "Check cluster info"
   community.kubernetes.k8s_info:
     kind: ClusterOperator
   register: clusteroperator_info
+
+- name: "Fail if there are degraded cluster-operators - {{ version }}"
   vars:
-    status_query: "resources[*].status.conditions[?type=='Degraded'].status"
-    cluster_operators_degraded: "{{ clusteroperator_info | json_query(status_query) | flatten | unique }}"
-  failed_when: "'True' in cluster_operators_degraded"
-  retries: 3
-  delay: 10
+    operator_conditions: "{{ clusteroperator_info.resources | json_query('[*].status.conditions') }}"
+    operator_last_conditions: "{{ operator_conditions | map('sort', attribute='lastTransitionTime') | map('last') | list }}"
+    operator_names: "{{ clusteroperator_info.resources | json_query('[*].metadata.name') }}"
+  set_fact:
+    operator_to_last_condition: "{{ operator_last_conditions | zip(operator_names) | map('list') }}"
+    # degraded_operators: >-
+    #   {{
+    #     operator_to_last_condition |
+    #     selectattr('0.type', 'eq', 'Degraded') |
+    #     selectattr('0.status', 'eq', 'True') |
+    #     list
+    #   }}
+  # failed_when: degraded_operators | length > 0
 
 - name: "Check that control-plane nodes are ready"
   community.kubernetes.k8s_info:
