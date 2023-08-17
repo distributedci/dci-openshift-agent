@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7ba8764_353bb997",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-17T23:00:17Z",
+      "side": 1,
+      "message": "The component with the creation date is been created.\nWe can check later if a file additional information about the index metadata can be provided along with the tarballls",
+      "revId": "0d5e740388e63e5a8deb427a8621fb69173b5e7d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
