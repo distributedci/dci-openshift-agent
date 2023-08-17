@@ -33,6 +33,23 @@
       "message": "I tested locally like this \n\n```\n---\n- name: \n  hosts: local\n  tasks:\n    - name: \"Read from file\"\n      set_fact:\n        clusteroperator_info: \"{{ lookup(\u0027file\u0027, \u0027/path/to/operators_failed.json\u0027) | from_json }}\"\n        last_conditions: \"{{ clusteroperator_info.resources | json_query(\u0027[*].status.conditions[-1]\u0027) }}\"\n      failed_when: last_conditions | selectattr(\u0027type\u0027, \u0027eq\u0027, \u0027Degraded\u0027) | selectattr(\u0027status\u0027, \u0027eq\u0027, \u0027True\u0027) | list | length \u003e 0\n...\n```\n\ntaking the content of operators_failed.json from this task: https://www.distributed-ci.io/jobs/53b7d41c-b437-4d06-9d5a-11f4a6830a0e/jobStates?sort\u003ddate\u0026task\u003d4783f2e7-b4e9-4ff7-9a5f-652e6a6aae46",
       "revId": "a768714d5fd53ae1e438c091803f5499d73b2c2b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a493a743_bec8c3d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-17T17:47:10Z",
+      "side": 1,
+      "message": "Hello Tatiana, \n\nI grabbed a cluster with degraded COs and this change is not working as expected. Also failed in the test https://www.distributed-ci.io/jobs/462444e0-5661-4191-807c-4cd191f5f66b/files (the job should have failed)\n\nI tried to use \"status.conditions[0]\", with it I got that 2 operators were degraded but those were actually 3. The check that was giving the proper results is the one that is currently in place. And I think that it has been working fine on the dailies. So, I think we should keep the check as it is now.\n\nDebug: http://pastebin.test.redhat.com/1107676\n\nRegards\n\n\n",
+      "revId": "a768714d5fd53ae1e438c091803f5499d73b2c2b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
