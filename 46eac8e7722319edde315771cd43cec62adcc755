@@ -248,6 +248,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "998bcea3_7da75bc0",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 15
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-17T09:33:02Z",
+      "side": 1,
+      "message": "Thank you, Tony. Could you kindly provide a list of the tools that do not support IDMS in version 4.13? This information would be valuable to include in the main comment.",
+      "parentUuid": "5762e878_4002270c",
+      "revId": "46eac8e7722319edde315771cd43cec62adcc755",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9bdccd9f_c1976c38",
         "filename": "plays/acm-pre-run.yml",
         "patchSetId": 15
