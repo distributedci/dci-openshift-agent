@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ae1587d_1f72d603",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-18T02:53:27Z",
+      "side": 1,
+      "message": "I will hold on on this... may not be needed for the operators created from tar balls as we are overriding the opm_catalog_source_name to the name of the catalog that was just created.\n\nMaybe be useful for other catalogs but is not an use case that we have at this moment. Will check with the team.",
+      "revId": "3ad15084b4b999ba40e5ce74a08d1dabe9a0f460",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
