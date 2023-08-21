@@ -50,6 +50,24 @@
       "message": "Hello Tatiana, \n\nI grabbed a cluster with degraded COs and this change is not working as expected. Also failed in the test https://www.distributed-ci.io/jobs/462444e0-5661-4191-807c-4cd191f5f66b/files (the job should have failed)\n\nI tried to use \"status.conditions[0]\", with it I got that 2 operators were degraded but those were actually 3. The check that was giving the proper results is the one that is currently in place. And I think that it has been working fine on the dailies. So, I think we should keep the check as it is now.\n\nDebug: http://pastebin.test.redhat.com/1107676\n\nRegards\n\n\n",
       "revId": "a768714d5fd53ae1e438c091803f5499d73b2c2b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c942cf8f_a93c71cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-21T12:27:02Z",
+      "side": 1,
+      "message": "Hi Beto, thanks for checking.\n\n\u003e I tried to use \"status.conditions[0]\"\n\nI checked one more time the output from here (job that uses the query from the master branch): https://www.distributed-ci.io/jobs/53b7d41c-b437-4d06-9d5a-11f4a6830a0e/jobStates?sort\u003ddate\u0026task\u003d04a37d14-27a3-47cb-90f8-a4cfd82f3023\n\nand it seems like the conditions are not ordered by timestamps, nor the -1, nor the 0 condition is the latest. It\u0027s really strange, I did not expect that. For example, here is what we have for dns:\n\n\u003e 2023-08-17T09:42:57Z \"status\":\"False\",\"type\":\"Available\"\n\u003e 2023-08-17T09:49:49Z \"status\":\"True\",\"type\":\"Progressing\"\n\u003e 2023-08-17T09:21:01Z \"status\":\"True\",\"type\":\"Degraded\"\n\u003e 2023-08-17T08:18:18Z \"status\":\"True\",\"type\":\"Upgradeable\"\n\n\n\u003e dns\n[{\"lastTransitionTime\":\"2023-08-17T09:42:57Z\",\"message\":\"DNS \\\"default\\\" is unavailable.\",\"reason\":\"DNSUnavailable\",\"status\":\"False\",\"type\":\"Available\"},{\"lastTransitionTime\":\"2023-08-17T09:49:49Z\",\"message\":\"DNS \\\"default\\\" reports Progressing\u003dTrue: \\\"Have 0 available DNS pods, want 7.\\\"\",\"reason\":\"DNSReportsProgressingIsTrue\",\"status\":\"True\",\"type\":\"Progressing\"},{\"lastTransitionTime\":\"2023-08-17T09:21:01Z\",\"message\":\"DNS default is degraded\",\"reason\":\"DNSDegraded\",\"status\":\"True\",\"type\":\"Degraded\"},{\"lastTransitionTime\":\"2023-08-17T08:18:18Z\",\"message\":\"DNS default is upgradeable: DNS Operator can be upgraded\",\"reason\":\"DNSUpgradeable\",\"status\":\"True\",\"type\":\"Upgradeable\"}]\n\nFor this example my query will not work (since I take the last element which is not the latest), so we agree that I have to refine the query and introduce the ordering by timestamp.\n\nThe current condition did not work either, as we see in this job, it failed (because it detected status\u003dTrue,type\u003dDegraded at 09:21) but the last timestamp was showing Progressing (09:49 \"status\":\"True\",\"type\":\"Progressing\"): https://www.distributed-ci.io/jobs/53b7d41c-b437-4d06-9d5a-11f4a6830a0e/jobStates?sort\u003ddate\u0026task\u003d04a37d14-27a3-47cb-90f8-a4cfd82f3023\n\n\u003e So, I think we should keep the check as it is now.\n\nThe current condition just detects a presence of any True+Degraded in the logs, and as we see above, it does not work, it\u0027s too strict. I\u0027ll try to refine the query by introducing the ordering by timestamps.",
+      "parentUuid": "a493a743_bec8c3d8",
+      "revId": "a768714d5fd53ae1e438c091803f5499d73b2c2b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
