@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "254523ca_312f0301",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-22T12:11:59Z",
+      "side": 1,
+      "message": "Hi Beto,\n\nI implemented the idea to only check the condition with the latest timestamp.\nHere are local tests: https://gist.github.com/tkrishtop/22c601d64d672085487eefa8f2b39cc0\n\nWDYT?\n\ncheck dallas ocp-4.14-vanilla",
+      "revId": "01b85992ea8cfac758b6814c708377c2c5c07a45",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
