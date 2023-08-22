@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.10-vanilla",
       "revId": "66170ea386ae65517a0ae6c5a82119cf26b4f15d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99230ba1_0de0a23b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-22T12:43:23Z",
+      "side": 1,
+      "message": "Hi Beto, tbh, I dislike the fact that there is a duplication of the code in both CRs:\n\nhttps://softwarefactory-project.io/r/c/dci-openshift-agent/+/29196\nhttps://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/29197\n\nI tried to avoid this duplication in my CRs:\n\nhttps://softwarefactory-project.io/r/c/dci-openshift-agent/+/29163\nhttps://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/29164\n\nBut but I understand your argument about keeping the role mirror-catalog to be one-purpose, without any assumptions that the OLM is installed. So let\u0027s merge your changes, I will close my CRs.\n\nThanks.",
+      "revId": "66170ea386ae65517a0ae6c5a82119cf26b4f15d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
