@@ -33,6 +33,24 @@
       "message": "Hi Beto, tbh, I dislike the fact that there is a duplication of the code in both CRs:\n\nhttps://softwarefactory-project.io/r/c/dci-openshift-agent/+/29196\nhttps://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/29197\n\nI tried to avoid this duplication in my CRs:\n\nhttps://softwarefactory-project.io/r/c/dci-openshift-agent/+/29163\nhttps://softwarefactory-project.io/r/c/dci-openshift-app-agent/+/29164\n\nBut but I understand your argument about keeping the role mirror-catalog to be one-purpose, without any assumptions that the OLM is installed. So let\u0027s merge your changes, I will close my CRs.\n\nThanks.",
       "revId": "66170ea386ae65517a0ae6c5a82119cf26b4f15d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa59f7aa_b7833860",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-22T16:39:12Z",
+      "side": 1,
+      "message": "hello Tatiana,\n\nyeah, I was not happy with that too. I think that we need to define a method to share plays between the agents that do not necessarily require a role. \n\nIn this case, at least the code is not duplicated between the agents, one block under the scope of the hook.\n\nCheers",
+      "parentUuid": "99230ba1_0de0a23b",
+      "revId": "66170ea386ae65517a0ae6c5a82119cf26b4f15d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
