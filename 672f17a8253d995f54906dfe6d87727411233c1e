@@ -50,6 +50,24 @@
       "message": "Oops, missing:\n  definition:",
       "revId": "672f17a8253d995f54906dfe6d87727411233c1e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a9026a1_fda35e75",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-22T04:18:22Z",
+      "side": 1,
+      "message": "Thanks, Tony, but it seems it is necessary to get the info about the current pods and then delete it.",
+      "parentUuid": "a495bd3d_1d242e03",
+      "revId": "672f17a8253d995f54906dfe6d87727411233c1e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
