@@ -1,4 +1,9 @@
 ---
+- name: "Remove pull secret file"
+  file:
+    path: "{{ dci_pullsecret_file }}"
+    state: absent
+
 - name: "Gathering results for storage service tester"
   include_role:
     name: storage-tester
