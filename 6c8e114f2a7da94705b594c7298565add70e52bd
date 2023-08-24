@@ -16,6 +16,24 @@
       "message": "Something\u0027s wrong with the path, I will try with plays/scripts/get-ocp-logs",
       "revId": "6c8e114f2a7da94705b594c7298565add70e52bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da49aa69_4056462d",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-08-24T12:09:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "38f3364c_d5af8a0c",
+      "revId": "6c8e114f2a7da94705b594c7298565add70e52bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
