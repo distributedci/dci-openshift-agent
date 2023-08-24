@@ -1,12 +1,17 @@
 ---
+- name: "Remove dci_auth_vars file"
+  file:
+    path: "{{ dci_auth_vars.path }}"
+    state: absent
+  when:
+    - dci_auth_vars is defined
 
-- name: "Remove ACM temp pull secret"
+- name: "Remove pull secret file"
   file:
     path: "{{ dci_pullsecret_file }}"
     state: absent
   when:
     - dci_pullsecret_file is defined
-    - install_type == 'acm'
 
 - name: "Remove docker auths directory"
   file:
