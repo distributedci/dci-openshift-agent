@@ -32,8 +32,9 @@
         join(" ") }}
     REGISTRY: "{{ dci_local_registry }}"
     PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
-  script:
+  shell:
     cmd: >
+      timeout -v 20m
       ./scripts/get-ocp-logs
       {% if install_type == 'acm' %}
       -p {{ acm_cluster_type }}
