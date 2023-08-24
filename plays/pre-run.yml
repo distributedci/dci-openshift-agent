@@ -66,24 +66,36 @@
   when:
     - enable_logs_stack | bool
 
-- name: "Set pullsecret from job_info - Connected"
-  set_fact:
-    pullsecret: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
+- name: "Read Disconnected auths"
+  include_vars:
+    file: "/var/lib/dci/service-configs/registry/auth.json"
+    name: disconnected_auths
   no_log: true
   when:
-    - not (dci_disconnected | default(false) | bool)
+    - dci_disconnected | default(false) | bool
 
-# Removing secret for cloud.openshift.com in order to disable the insights operator
-- name: "Set pullsecret from job_info - Disconnected"
+- name: "Set temp file with DCI Job creds + auth vars"
+  tempfile:
+    state: file
+    prefix: "dci_auth_vars"
+  register: dci_auth_vars
+  no_log: true
+
+- name: "Append openshift_secret and disconnected_auths to DCI Job pull_secret"
   vars:
-    dci_pullsecret: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
+    dci_os: "{{ job_info.job.topic.data.pull_secret | default({}) | combine(openshift_secret | default({}), recursive=True) }}"
+  set_fact:
+    pullsecret: "{{ dci_os | combine({'auths': disconnected_auths | default({})}, recursive=True) }}"
+  no_log: true
+
+- name: "Remove cloud.openshift.com auth in disconnected"
   set_fact:
     pullsecret: |
       {
         "auths": {
-        {% for repo in dci_pullsecret.auths | list %}
+        {% for repo in pullsecret.auths | list %}
           {% if repo != "cloud.openshift.com" %}
-            "{{ repo }}": {{ dci_pullsecret.auths[repo] | to_json }}{% if loop.last %}{% else %},{% endif %}
+            "{{ repo }}": {{ pullsecret.auths[repo] | to_json }}{% if loop.last %}{% else %},{% endif %}
           {% endif %}
         {% endfor %}
         }
@@ -92,15 +104,20 @@
   when:
     - dci_disconnected | default(false) | bool
 
-- name: "Read Disconnected auths"
-  include_vars:
-    file: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_auths_file }}"
-    name: disconnected_auths
-  no_log: true
-  when:
-    - dci_disconnected | default(false) | bool
+- name: "Save DCI + openshift_secret + disconnected_auths into a temp file"
+  copy:
+    content: "{{ pullsecret }}"
+    dest: "{{ dci_auth_vars.path }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: "0400"
+    force: true
 
-- name: "Check if {{ pullsecret_file }} exists"
+- name: "Set auth files paths"
+  set_fact:
+    auth_paths: "{{ [dci_auth_vars.path] }}"
+
+- name: "Check if {{ pullsecret_file }} file exists"
   stat:
     path: "{{ pullsecret_file }}"
     get_checksum: false
@@ -108,56 +125,27 @@
   when:
     - pullsecret_file is defined
 
-- name: "Override Job pull secret with what is defined in pullsecret_file var"
-  block:
-    - name: "Copy pull secret file to cache directory"
-      copy:
-        src: "{{ pullsecret_file }}"
-        dest: "{{ dci_cluster_configs_dir }}/pull-secret.txt"
-        owner: "{{ ansible_user_id }}"
-        group: "{{ ansible_user_gid }}"
-        mode: "0400"
-        force: true
+- name: "Append {{ pullsecret_file }} to the list of auths to combine"
+  set_fact:
+    auth_paths: "{{ auth_paths + [ pullsecret_file ] }}"
   when:
     - pullsecret_file is defined
-    - pullfile.stat.exists | bool
+    - pullfile.stat.exists
 
-- name: "Combine Job pullsecret and disconnected_auths"
-  block:
-    - name: "Combine secrets"
-      set_fact:
-        auths: "{{ pullsecret | combine({'auths': disconnected_auths}, recursive=True) }}"
-      no_log: true
+- name: "Combine auth files"
+  include_role:
+    name: combine-auths
+  vars:
+    ca_auth_files: "{{ auth_paths }}"
 
-    - name: "Save combined secrets to a file"
-      copy:
-        content: "{{ auths }}"
-        dest: "{{ dci_cluster_configs_dir }}/pull-secret.txt"
-        owner: "{{ ansible_user_id }}"
-        group: "{{ ansible_user_gid }}"
-        mode: "0400"
-        force: true
-  when:
-    - dci_disconnected | default(false) | bool
-    - pullsecret_file is undefined
-
-- name: "Set dci_pullsecret_file in connected environments"
-  block:
-    - name: "Save Job pullsecret content to a file"
-      copy:
-        content: "{{ pullsecret }}"
-        dest: "{{ dci_cluster_configs_dir }}/pull-secret.txt"
-        owner: "{{ ansible_user_id }}"
-        group: "{{ ansible_user_gid }}"
-        mode: "0400"
-        force: true
-  when:
-    - not (dci_disconnected | default(false) | bool)
-    - pullsecret_file is undefined
+- name: "Delete dci_auth_vars file"
+  file:
+    path: "{{ dci_auth_vars.path }}"
+    state: absent
 
 - name: "Set dci_pullsecret_file"
   set_fact:
-    dci_pullsecret_file: "{{ dci_cluster_configs_dir }}/pull-secret.txt"
+    dci_pullsecret_file: "{{ ca_auth_file }}"
 
 - name: "Create releases dir in home directory if needed"
   file:
