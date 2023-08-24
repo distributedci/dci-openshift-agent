@@ -1,0 +1,48 @@
+---
+- name: "Check if the list has items"
+  assert:
+    that:
+      - "{{ ca_auth_files is defined }}"
+      - "{{ ca_auth_files | length > 0 }}"
+    fail_msg: "A list of JSON auth files is required"
+
+- name: "Process auth files"
+  set_fact:
+    ca_data_list: "{{ ca_data_list | default([]) +
+                    [lookup('file', file) | from_json] }}"
+  no_log: true
+  loop: "{{ ca_auth_files }}"
+  loop_control:
+    loop_var: file
+  when:
+    - lookup('file', file) is defined
+
+- name: "Combine auth files"
+  set_fact:
+    ca_auth_data: "{{ ca_auth_data | default({}) |
+                   combine(file | default({}), recursive=True) }}"
+  no_log: true
+  loop: "{{ ca_data_list }}"
+  loop_control:
+    loop_var: file
+  when:
+    - ca_data_list is defined
+
+- name: "Set the combined auth file"
+  tempfile:
+    state: file
+    prefix: "auth_"
+  register: ca_auth_file
+
+- name: "Write consolidated auth file"
+  copy:
+    content: "{{ ca_auth_data | to_json }}"
+    dest: "{{ ca_auth_file.path }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: "0400"
+
+- name: "Unset consolidated auth fact"
+  set_fact:
+    ca_auth_file: "{{ ca_auth_file.path }}"
+...
