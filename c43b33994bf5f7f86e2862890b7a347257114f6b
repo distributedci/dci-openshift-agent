@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.14-vanilla",
       "revId": "c43b33994bf5f7f86e2862890b7a347257114f6b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb081078_b9911844",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-28T12:21:33Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "c43b33994bf5f7f86e2862890b7a347257114f6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
