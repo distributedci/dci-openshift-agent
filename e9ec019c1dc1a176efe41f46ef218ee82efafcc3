@@ -50,6 +50,24 @@
       "message": "you can tackle this in a different way:\n\n1) don\u0027t add a pause at the beginning\n2) change your single task to a polling task similar to the one you\u0027re replacing but sorted by timestamp. You could optionally fail_when zipping returns a length of 1 with Degraded/True\n3) have an ansible.builtin.fail task after that would check if the last status is healthy, this would catch when zipping returns length \u003e 1, hopefully it went Degraded/True -\u003e Degraded/True -\u003e Degraded/False but it will also catch when it goes Degraded/True -\u003e Degraded/False -\u003e Degraded/True",
       "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56144da6_07deda49",
+        "filename": "plays/check-cluster-health.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-29T19:36:27Z",
+      "side": 1,
+      "message": "Hi Jorge, yes, I was thinking of doing this at the very beginning\n\n  name: \"Fail if there are degraded cluster-operators - {{ version }}\"\n  community.kubernetes.k8s_info:\n    kind: ClusterOperator\n  register: clusteroperator_info\n  vars:\n    operator_conditions: \"{{ clusteroperator_info.resources | map(attribute\u003d\u0027status.conditions\u0027) }}\"\n    operator_last_conditions: \"{{ operator_conditions | map(\u0027sort\u0027, attribute\u003d\u0027lastTransitionTime\u0027) | map(\u0027last\u0027) | list }}\"\n    degraded_conditions: \"{{ operator_last_conditions | selectattr(\u0027type\u0027, \u0027eq\u0027, \u0027Degraded\u0027) | selectattr(\u0027status\u0027, \u0027eq\u0027, \u0027True\u0027) | list }}\"\n  failed_when: degraded_conditions | length \u003e 0\n  retries: 3\n  delay: 10\n  \nThe issue is that this way debugging becomes less convenient when there are degraded operators: we would have no clusteroperator_info and no information about which operators degraded and why.\n\nMy current change consists of 2 tasks instead of one, but we have a zipped list of degraded operators and why they degraded. We also have complete clusteroperator_info if we need to debug further.\n\nWhat do you think?",
+      "parentUuid": "a22d0000_e04d5724",
+      "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
