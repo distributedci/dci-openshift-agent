@@ -16,6 +16,24 @@
       "message": "The first hurdle I see is that some authentications exist in a variable/fact and some are a file path. This role\u0027s input is a list of file paths. I think this needs to be a list of auth dictionaries, because we shouldn\u0027t write the auth file coming from the API anywhere, instead read the pull_secret_file into a variable.",
       "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbb0a151_8e164c48",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-08-29T15:48:20Z",
+      "side": 1,
+      "message": "Or I don\u0027t know if you want this to be extra smart and process according to the type of input, if it\u0027s a dict then it\u0027s a variable, if it\u0027s a string then it is a path, up to you.",
+      "parentUuid": "41951b27_fb615fed",
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
