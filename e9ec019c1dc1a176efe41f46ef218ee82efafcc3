@@ -68,6 +68,24 @@
       "parentUuid": "a22d0000_e04d5724",
       "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85d340fd_290216ea",
+        "filename": "plays/check-cluster-health.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-08-29T23:22:24Z",
+      "side": 1,
+      "message": "I see what you mean, I came up with the following:\n```\n    - name: Wait for ClusterOperator to settle\n      ansible.builtin.pause:\n        seconds: \"{{ clusteroperator_settle_seconds | default(30) }}\"\n\n    - name: Fetch ClusterOperator info\n      community.kubernetes.k8s_info:\n        kind: ClusterOperator\n      register: operator_info\n\n    - name: Cleanup into a more manageable structucture\n      ansible.builtin.set_fact:\n        operator_status: \"{{ operator_info | to_json | from_json | json_query(\u0027resources[*].{name: metadata.name, last: sort_by(status.conditions, \u0026lastTransitionTime)[-1]}\u0027) }}\"  # \nfrom/to json silliness thanks to a jinja2 bug\n\n    - name: Debug for troubleshooting\n      ansible.builtin.debug:\n        var: operator_status\n\n    - name: Fail if any ClusterOperator last status is Degraded\n      ansible.builtin.fail:\n        msg: \"There are operators in Degraded state\"                                      \n      when: \u003e-\n        operator_status |\n        selectattr(\u0027last.type\u0027, \u0027eq\u0027, \u0027Degraded\u0027) |                                       \n        selectattr(\u0027last.status\u0027, \u0027eq\u0027, \u0027True\u0027) |                                         \n        list |\n        length \u003e 0\n```\n\nwdyt?",
+      "parentUuid": "56144da6_07deda49",
+      "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
