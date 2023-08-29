@@ -34,6 +34,24 @@
       "parentUuid": "41951b27_fb615fed",
       "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bd8d00d_27b189b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-29T17:56:21Z",
+      "side": 1,
+      "message": "I had a similar thought on the inputs, the caveat is that it could be:\n- A dictionary with auths (dci job)\n- A string (a single auth entry)\n- A string with a file path (provided pull secret file)\n\nwith the current implementation at least is clearly stated that the input must be auth files\n\nWhile I\u0027m not a fan of writing secrets into a file I think is a good trade-off to standardize the role. IMO, the use of single auth entry seems not a common use case.\n\nMy 2¢",
+      "parentUuid": "bbb0a151_8e164c48",
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
