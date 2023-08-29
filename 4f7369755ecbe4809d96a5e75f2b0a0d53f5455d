@@ -52,6 +52,24 @@
       "parentUuid": "bbb0a151_8e164c48",
       "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "703021ef_a7c579b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 606
+      },
+      "writtenOn": "2023-08-29T18:42:32Z",
+      "side": 1,
+      "message": "I have the same feedback.  I think this should work with a list of dicts and return a combined dict back.   Use the lookup method to read the json in before calling this role if you have files.",
+      "parentUuid": "1bd8d00d_27b189b8",
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
