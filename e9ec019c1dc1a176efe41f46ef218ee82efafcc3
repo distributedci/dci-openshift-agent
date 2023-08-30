@@ -104,6 +104,24 @@
       "parentUuid": "85d340fd_290216ea",
       "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2ca4960_4b0e0e92",
+        "filename": "plays/check-cluster-health.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-08-30T21:36:25Z",
+      "side": 1,
+      "message": "If you tried to use sort_by before and you got a weird error you may have hit this bug https://github.com/ansible-collections/community.general/issues/320 that\u0027s why I added `to_json | from_json` as it was listed as a workaround in that bug, silly I know, but seems to work.",
+      "parentUuid": "7862dbd8_60f5e03e",
+      "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
