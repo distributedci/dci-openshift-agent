@@ -86,6 +86,24 @@
       "parentUuid": "56144da6_07deda49",
       "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7862dbd8_60f5e03e",
+        "filename": "plays/check-cluster-health.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-30T07:46:56Z",
+      "side": 1,
+      "message": "Thanks, Jorge. Doing a sort within the json_query is exactly what I was searching for. I initially thought it was impossible. Thank you for demonstrating how to do it, I\u0027m adopting this idea. \n\nI\u0027ve tested your query locally for both degraded and green scenarios, and it works perfectly. Running Libvirt/Dallas tests now.",
+      "parentUuid": "85d340fd_290216ea",
+      "revId": "e9ec019c1dc1a176efe41f46ef218ee82efafcc3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
