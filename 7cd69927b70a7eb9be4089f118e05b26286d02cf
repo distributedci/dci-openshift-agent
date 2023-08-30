@@ -50,6 +50,23 @@
       "message": "Hi Jorge and Beto, could you please have a second look?\n\nThe change is tested ok:\n- Dallas: https://www.distributed-ci.io/jobs/a664ee69-be10-4853-a39b-da66fe80ab8b/jobStates?sort\u003ddate\u0026task\u003d422068a1-58d5-439c-b29f-a00d24e2d0d0\n- Libvirt: https://www.distributed-ci.io/jobs/14c132ea-c74f-4483-84d1-dfa3ab92755b/jobStates?sort\u003ddate\u0026task\u003d810f878e-9303-4fcd-b8f6-67cc23787022\n\nI\u0027ll attempt to rerun 4.14 to recreate a scenario with failed operators. For the moment, this scenario is only tested locally.",
       "revId": "7cd69927b70a7eb9be4089f118e05b26286d02cf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1813271_f89b1a6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-30T23:08:38Z",
+      "side": 1,
+      "message": "Thanks for the change Tatiana, just a final test with our old 4.14.0-0.nightly-2023-08-11-055332",
+      "revId": "7cd69927b70a7eb9be4089f118e05b26286d02cf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
