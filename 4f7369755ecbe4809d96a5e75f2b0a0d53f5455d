@@ -70,6 +70,47 @@
       "parentUuid": "1bd8d00d_27b189b8",
       "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd32c2fe_304fe76a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2023-08-31T09:05:28Z",
+      "side": 1,
+      "message": "+1 with a list of dicts and return a combined dict",
+      "parentUuid": "703021ef_a7c579b7",
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2fd1ca0_e94a8707",
+        "filename": "README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2023-08-31T09:05:28Z",
+      "side": 1,
+      "message": "Any reason why we introduce a new variable?\npullsecret_file vs disconnected_registry_auths_file\n\nIt complexifies the doc IMO",
+      "range": {
+        "startLine": 418,
+        "startChar": 2,
+        "endLine": 418,
+        "endChar": 106
+      },
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
