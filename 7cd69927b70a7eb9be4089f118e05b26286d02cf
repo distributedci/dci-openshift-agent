@@ -119,6 +119,23 @@
       "message": "Thank you Beto and Jorge!",
       "revId": "7cd69927b70a7eb9be4089f118e05b26286d02cf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5618b1c0_11ea7300",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T22:26:58Z",
+      "side": 1,
+      "message": "Looking at the job: https://www.distributed-ci.io/jobs/7be9a1cc-b901-4386-8425-f86c61e24e58/jobStates?sort\u003ddate\u0026task\u003d451ec5bd-03e4-4c48-be94-a2af0542152a\n\nI see this may be giving a false positive result, let\u0027s take a look to the dns co:\n\n{\n  \"last\": {\n    \"lastTransitionTime\": \"2023-08-31T10:20:16Z\",\n    \"message\": \"DNS \\\"default\\\" reports Progressing\u003dTrue: \\\"Have 0 available DNS pods, want 6.\\\"\",\n    \"reason\": \"DNSReportsProgressingIsTrue\",\n    \"status\": \"True\",\n    \"type\": \"Progressing\"\n  },\n  \"name\": \"dns\"\n}\n\nThat is showing as progressing but it is degraded:\n\n❯ omc get co dns -o json | jq \u0027.status.conditions[]\u0027\n{\n  \"type\": \"Available\",\n  \"status\": \"False\",\n  \"lastTransitionTime\": \"2023-08-31T10:11:50Z\",\n  \"reason\": \"DNSUnavailable\",\n  \"message\": \"DNS \\\"default\\\" is unavailable.\"\n}\n{\n  \"type\": \"Progressing\",\n  \"status\": \"True\",\n  \"lastTransitionTime\": \"2023-08-31T10:20:16Z\",\n  \"reason\": \"DNSReportsProgressingIsTrue\",\n  \"message\": \"DNS \\\"default\\\" reports Progressing\u003dTrue: \\\"Have 0 available DNS pods, want 6.\\\"\"\n}\n{\n  \"type\": \"Degraded\",\n  \"status\": \"True\",\n  \"lastTransitionTime\": \"2023-08-31T09:55:23Z\",\n  \"reason\": \"DNSDegraded\",\n  \"message\": \"DNS default is degraded\"\n}\n{\n  \"type\": \"Upgradeable\",\n  \"status\": \"True\",\n  \"lastTransitionTime\": \"2023-08-31T08:53:29Z\",\n  \"reason\": \"DNSUpgradeable\",\n  \"message\": \"DNS default is upgradeable: DNS Operator can be upgraded\"\n}\n\n\nWhile it may become Available, there\u0027s no guarantee at this point that it is, I think the previous logic was correct in not letting this one pass, wdyt?",
+      "revId": "7cd69927b70a7eb9be4089f118e05b26286d02cf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
