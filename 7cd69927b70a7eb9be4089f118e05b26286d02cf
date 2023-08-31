@@ -84,6 +84,41 @@
       "message": "check dallas ocp-4.14-vanilla openshift-vanilla:components\u003docp\u003d4.14.0-0.nightly-2023-08-11-055332",
       "revId": "7cd69927b70a7eb9be4089f118e05b26286d02cf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d70bfe55_e10cbd37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-31T13:12:37Z",
+      "side": 1,
+      "message": "Thank you Beto, works as expected, the job failed showing 3 degraded operators: https://www.distributed-ci.io/jobs/7be9a1cc-b901-4386-8425-f86c61e24e58/jobStates?sort\u003ddate\u0026task\u003d451ec5bd-03e4-4c48-be94-a2af0542152a",
+      "parentUuid": "c46270b0_4f90e43d",
+      "revId": "7cd69927b70a7eb9be4089f118e05b26286d02cf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f215e246_d726661f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-08-31T13:12:37Z",
+      "side": 1,
+      "message": "Thank you Beto and Jorge!",
+      "revId": "7cd69927b70a7eb9be4089f118e05b26286d02cf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
