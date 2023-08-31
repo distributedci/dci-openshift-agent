@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6127f5b2_3bfe05aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-31T20:28:54Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-acm-hub ocp-4.13-acm-sno",
+      "revId": "bde38aff3eed0457974518ebd4958cfcb6045fcf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
