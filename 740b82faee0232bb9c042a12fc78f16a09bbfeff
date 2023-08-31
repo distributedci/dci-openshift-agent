@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ba8e8d8_64d9c574",
+        "filename": "common-roles/merge-registry-creds/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "rename to merge-registry-creds ?",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0139c8f6_5a762b1c",
+        "filename": "common-roles/merge-registry-creds/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "instead of Podman, maybe use registry credentials?\n\nThere is no more input files, maybe use The list of credentials are processed in order.",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75636adb_e87b9eca",
+        "filename": "common-roles/merge-registry-creds/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "Did you mean mrc_auth_dicts?  perhaps could be simplified to mrc_auths ?",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9166d4e8_211a71f0",
+        "filename": "common-roles/merge-registry-creds/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "Could be more explicit and include something like:\n\n    - auths:\n        quay.io:\n          auth: \"XXXX\"\n        cloud.openshift.com:\n          auth: \"YYYY\",\n          email: \"someone@example.com\"\n    - auths:\n        docker.io:\n          auth: \"ZZZZ\"\n        quay.io/ns:\n          auth: \"AAAA\"",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31b65133_f6d9f6ee",
+        "filename": "common-roles/merge-registry-creds/defaults/main.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "This can be removed if nothing needs defaults",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0c6aaaf_4bdd5d6b",
+        "filename": "plays/failure.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "when: dci_pullsecret_file is defined ?",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47ce97de_b690557b",
+        "filename": "plays/pullsecrets.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "Can this assignment be done in the next task as a var and avoid the set_fact?",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7700e1db_a6f46d64",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T18:25:03Z",
+      "side": 1,
+      "message": "when: dci_pullsecret_file is defined ?",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
