@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-acm-hub ocp-4.13-acm-sno",
       "revId": "bde38aff3eed0457974518ebd4958cfcb6045fcf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a69bb43_e2398d35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T22:46:36Z",
+      "side": 1,
+      "message": "LGTM, thanks!!",
+      "revId": "bde38aff3eed0457974518ebd4958cfcb6045fcf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
