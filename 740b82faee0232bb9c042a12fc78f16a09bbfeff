@@ -228,6 +228,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "97edd260_2e9b765c",
+        "filename": "plays/pullsecrets.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-31T20:14:26Z",
+      "side": 1,
+      "message": "\u003e Can this assignment be done in the next task as a var and avoid the set_fact?",
+      "parentUuid": "47ce97de_b690557b",
+      "revId": "740b82faee0232bb9c042a12fc78f16a09bbfeff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7700e1db_a6f46d64",
