@@ -118,6 +118,24 @@
       "message": "check dallas ocp-4.13-acm-hub ocp-4.14-acm-sno",
       "revId": "e4af9909c4ff798359bcb49dd4e7c2c8458f61fb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31aaef3c_c015dc66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-08-31T00:41:03Z",
+      "side": 1,
+      "message": "I see the problem, I\u0027ve fixed the issue in the last patchset, I\u0027ve launch the test from a PR[1] used for testing.\n\n[1] https://github.com/dci-labs/dallas-pipelines/pull/837",
+      "parentUuid": "d35a68ee_dfcab95b",
+      "revId": "e4af9909c4ff798359bcb49dd4e7c2c8458f61fb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
