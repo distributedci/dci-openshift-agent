@@ -129,6 +129,30 @@
       },
       "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25d15bee_af71171a",
+        "filename": "README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-31T17:47:01Z",
+      "side": 1,
+      "message": "Guillaume, disconnected_registry_auths_file a requirement of the ipi-install role. It\u0027s just the auths entries that will be set to the cluster to talk with private registries. \n\nI\u0027m not sure at what time we started using pullsecret_file. But \"I think\" that it was because of the need to allow partners to add credentials for public registries not provided by DCI, e.g.: docker.io",
+      "parentUuid": "a2fd1ca0_e94a8707",
+      "range": {
+        "startLine": 418,
+        "startChar": 2,
+        "endLine": 418,
+        "endChar": 106
+      },
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
