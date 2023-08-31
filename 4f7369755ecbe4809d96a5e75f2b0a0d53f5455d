@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d817f826_f6f84d0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-08-31T17:40:03Z",
+      "side": 1,
+      "message": "Thanks for the comments, I updated the role to work with dictionaries. \n\n\"because we shouldn\u0027t write the auth file coming from the API anywhere\" \u003e Unfortunately we must do it sometime as most of the tasks require it. But yeah, reducing the number of times we do that is good. \n\nCheers",
+      "parentUuid": "703021ef_a7c579b7",
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a2fd1ca0_e94a8707",
         "filename": "README.md",
         "patchSetId": 12
