@@ -92,13 +92,13 @@
   when:
     - dci_disconnected | default(false) | bool
 
-- name: "Read Disconnected auths"
-  include_vars:
-    file: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_auths_file }}"
-    name: disconnected_auths
-  no_log: true
-  when:
-    - dci_disconnected | default(false) | bool
+# - name: "Read Disconnected auths"
+#   include_vars:
+#     file: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_auths_file }}"
+#     name: disconnected_auths
+#   no_log: true
+#   when:
+#     - dci_disconnected | default(false) | bool
 
 - name: "Check if {{ pullsecret_file }} exists"
   stat:
@@ -124,10 +124,10 @@
 
 - name: "Combine Job pullsecret and disconnected_auths"
   block:
-    - name: "Combine secrets"
-      set_fact:
-        auths: "{{ pullsecret | combine({'auths': disconnected_auths}, recursive=True) }}"
-      no_log: true
+    # - name: "Combine secrets"
+    #   set_fact:
+    #     auths: "{{ pullsecret | combine({'auths': disconnected_auths}, recursive=True) }}"
+    #   no_log: true
 
     - name: "Save combined secrets to a file"
       copy:
@@ -158,6 +158,10 @@
 - name: "Set dci_pullsecret_file"
   set_fact:
     dci_pullsecret_file: "{{ dci_cluster_configs_dir }}/pull-secret.txt"
+
+- name: "Set disconnected_auths file"
+  set_fact:
+    disconnected_auths: "{{ dci_cluster_configs_dir }}/pull-secret.txt"
 
 - name: "Create releases dir in home directory if needed"
   file:
