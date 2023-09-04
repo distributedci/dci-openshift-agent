@@ -50,6 +50,23 @@
       "message": "Checking acm-sno was not required and this change does not affect SNO as the pull secret there is taken from the hub",
       "revId": "bde38aff3eed0457974518ebd4958cfcb6045fcf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03a4349f_485de98e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2023-09-04T07:39:44Z",
+      "side": 1,
+      "message": "Except the accidental complexity with disconnected_registry_auths_file and pullsecret_file, I like this patch.\n\nI\u0027m ok merging this one  if we want to address this UX issue later.",
+      "revId": "bde38aff3eed0457974518ebd4958cfcb6045fcf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

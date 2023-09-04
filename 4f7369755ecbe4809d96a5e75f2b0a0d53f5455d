@@ -171,6 +171,30 @@
       },
       "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33b54b54_8f88f904",
+        "filename": "README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2023-09-04T07:39:44Z",
+      "side": 1,
+      "message": "What I\u0027m saying is that in terms of user experience, having 2 variables is not good. The values are anyway merged together.\nSo my question: is it possible to remove disconnected_registry_auths_file from the documentation? Basically the user only configures pullsecret_file. If the IPI installer needs the disconnected_registry_auths_file variable, then we take pullsecret_file and put it in disconnected_registry_auths_file.\n\nI would like to avoid having variables that are too specific to the installers. It would simplify the doc.\n\nExcept that I\u0027m ok with this patch.",
+      "parentUuid": "25d15bee_af71171a",
+      "range": {
+        "startLine": 418,
+        "startChar": 2,
+        "endLine": 418,
+        "endChar": 106
+      },
+      "revId": "4f7369755ecbe4809d96a5e75f2b0a0d53f5455d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
