@@ -8,6 +8,7 @@ To execute the acm-hypershift role a running OpenShift cluster and its credentia
 
 - OpenShift Cluster with ACM operator. Please see [acm-setup](../acm-setup/README.md) role to deploy ACM through a role.
 - A default storage class
+- A metalLB instance on baremetal environments
 - DNS configuration
 
 ### DNS configuration
