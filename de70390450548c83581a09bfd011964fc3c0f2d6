@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d66a2dfd_48acf3a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-05T17:24:26Z",
+      "side": 1,
+      "message": "Looks good Beto, just some minor comments:",
+      "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9032ac63_5d6d1b32",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-05T17:24:26Z",
+      "side": 1,
+      "message": "Please, let\u0027s update this statement to highlight that the role support L2 mode as well",
+      "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "641b7a6e_056378a9",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-05T17:24:26Z",
+      "side": 1,
+      "message": "I think the mlb_bgp_peers Default value is still undefined isn\u0027t it? And I agree that is not required anymore now that L2 is also supported.",
+      "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fd691a2_becff044",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-05T17:24:26Z",
+      "side": 1,
+      "message": "Here we could change \"Setup\" by \"Cleanup\" or something to make clear this task is for clean up, wdyt?",
+      "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
