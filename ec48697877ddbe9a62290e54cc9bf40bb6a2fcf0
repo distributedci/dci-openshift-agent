@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "abfdbd39_d7546585",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-06T01:11:03Z",
+      "side": 1,
+      "message": "The change is working great, the problem with the job testing the catalog in the telcoci account is that it does not have all the operators enabled in the pipeline. \n\n\"msg\": \"\\\"cluster-logging\\\"\n\\\"kubernetes-nmstate-operator\\\"\n\\\"metallb-operator\\\"\n\\\"sriov-network-operator\\\"\"\n\nI think that to test in DOAA a check on the green pipelines",
+      "revId": "ec48697877ddbe9a62290e54cc9bf40bb6a2fcf0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "302b668a_d593c2e9",
