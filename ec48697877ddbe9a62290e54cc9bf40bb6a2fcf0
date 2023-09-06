@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "510f5fc0_073dd04c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-06T15:08:06Z",
+      "side": 1,
+      "message": "Correct, the issue is unrelated to the fix, but validates that the change is working.\n\nCorrect, I\u0027ll do the test in DOAA with a green pipeline.",
+      "parentUuid": "abfdbd39_d7546585",
+      "revId": "ec48697877ddbe9a62290e54cc9bf40bb6a2fcf0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "302b668a_d593c2e9",
