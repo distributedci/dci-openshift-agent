@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "355ee3c3_0d79a582",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-07T22:47:29Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9032ac63_5d6d1b32",
+      "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "641b7a6e_056378a9",
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "06ed3f69_ef245c08",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-07T22:47:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "641b7a6e_056378a9",
+      "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1fd691a2_becff044",
@@ -65,6 +101,24 @@
       "writtenOn": "2023-09-05T17:24:26Z",
       "side": 1,
       "message": "Here we could change \"Setup\" by \"Cleanup\" or something to make clear this task is for clean up, wdyt?",
+      "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3375d206_0ba33dd0",
+        "filename": "roles/metallb-setup/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-07T22:47:29Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "1fd691a2_becff044",
       "revId": "de70390450548c83581a09bfd011964fc3c0f2d6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
