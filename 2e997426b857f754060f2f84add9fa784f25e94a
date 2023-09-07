@@ -16,6 +16,40 @@
       "message": "Nice job Manuel!, \n\nI was just wondering if we can make the play to restart the pods more generic, passing a second parameter to the include with the logs pattern for pods that need to be recreated.\n\nRegards!",
       "revId": "2e997426b857f754060f2f84add9fa784f25e94a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0cf48b28_09873e4a",
+        "filename": "plays/upgrade-pods-restart.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-07T23:40:23Z",
+      "side": 1,
+      "message": "Maybe pass as variable",
+      "revId": "2e997426b857f754060f2f84add9fa784f25e94a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47296bef_97fa5423",
+        "filename": "plays/upgrade-pods-restart.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-07T23:40:23Z",
+      "side": 1,
+      "message": "Maybe pass as a variable. \n\nA couple of trailing spaces",
+      "revId": "2e997426b857f754060f2f84add9fa784f25e94a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
