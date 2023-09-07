@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da6a7ff4_6c6b5e40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 36
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-07T02:53:19Z",
+      "side": 1,
+      "message": "Sorry for the hardcode, just for testing",
+      "revId": "7c6a70301ed2400bd624aa2f9fcb0d53308968ea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
