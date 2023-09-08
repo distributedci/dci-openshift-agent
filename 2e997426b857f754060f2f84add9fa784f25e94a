@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d257b454_05e3d966",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-08T14:25:46Z",
+      "side": 1,
+      "message": "Yes, I like the idea.",
+      "parentUuid": "93af5ca8_40bfd02a",
+      "revId": "2e997426b857f754060f2f84add9fa784f25e94a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0cf48b28_09873e4a",
@@ -37,6 +55,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "e5f95f68_e938f219",
+        "filename": "plays/upgrade-pods-restart.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-08T14:25:46Z",
+      "side": 1,
+      "message": "Done, now the selector can be passed as variable in patch-set 2",
+      "parentUuid": "0cf48b28_09873e4a",
+      "revId": "2e997426b857f754060f2f84add9fa784f25e94a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "47296bef_97fa5423",
         "filename": "plays/upgrade-pods-restart.yml",
         "patchSetId": 1
@@ -48,6 +84,24 @@
       "writtenOn": "2023-09-07T23:40:23Z",
       "side": 1,
       "message": "Maybe pass as a variable. \n\nA couple of trailing spaces",
+      "revId": "2e997426b857f754060f2f84add9fa784f25e94a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "554e9da3_ef1ce4a4",
+        "filename": "plays/upgrade-pods-restart.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-08T14:25:46Z",
+      "side": 1,
+      "message": "done, passing the logging message as variable in patch-set 2, and removing that silly trailing space :P",
+      "parentUuid": "47296bef_97fa5423",
       "revId": "2e997426b857f754060f2f84add9fa784f25e94a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
