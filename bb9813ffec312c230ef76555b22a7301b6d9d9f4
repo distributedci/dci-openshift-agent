@@ -16,6 +16,40 @@
       "message": "LGTM",
       "revId": "bb9813ffec312c230ef76555b22a7301b6d9d9f4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "569d3049_9e5bed73",
+        "filename": "plays/pods-restart.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-08T16:35:29Z",
+      "side": 1,
+      "message": "Do we need this block?",
+      "revId": "bb9813ffec312c230ef76555b22a7301b6d9d9f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7872563_69a62b44",
+        "filename": "plays/pods-restart.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-08T16:35:29Z",
+      "side": 1,
+      "message": "Have you considered a rollout restart of the ds given is usually ds pods the affected ones? \nThe advantage is that is one command that will perform the restart of all the pods, but the downside is that I am afraid is not possible to do it in ansible 😭\n\nI see your change also only restarts those specific failed pods which is good.\nI also like this could be used to restart other pods that may not be in a ds 😊",
+      "revId": "bb9813ffec312c230ef76555b22a7301b6d9d9f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
