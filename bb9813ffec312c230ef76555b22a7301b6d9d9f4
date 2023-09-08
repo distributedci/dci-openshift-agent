@@ -37,6 +37,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "ecc6e893_9b047d16",
+        "filename": "plays/pods-restart.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-08T18:45:12Z",
+      "side": 1,
+      "message": "not needed, removed in patch-set 4",
+      "parentUuid": "569d3049_9e5bed73",
+      "revId": "bb9813ffec312c230ef76555b22a7301b6d9d9f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "b7872563_69a62b44",
         "filename": "plays/pods-restart.yml",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "writtenOn": "2023-09-08T16:35:29Z",
       "side": 1,
       "message": "Have you considered a rollout restart of the ds given is usually ds pods the affected ones? \nThe advantage is that is one command that will perform the restart of all the pods, but the downside is that I am afraid is not possible to do it in ansible 😭\n\nI see your change also only restarts those specific failed pods which is good.\nI also like this could be used to restart other pods that may not be in a ds 😊",
+      "revId": "bb9813ffec312c230ef76555b22a7301b6d9d9f4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bfb2ba7_da6123f7",
+        "filename": "plays/pods-restart.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-08T18:45:12Z",
+      "side": 1,
+      "message": "I didn\u0027t consider it, but it does not sound bad, although as you saw the play allows to restart any pods independent of how they are managed. Currently I\u0027m addressing the dns-default* issue with the play, but I\u0027ve seen other pods having the same errors, so I think I\u0027ll keep the simple restart of individual pods for now, in case other pods managed by other type of resources show up. Thanks!",
+      "parentUuid": "b7872563_69a62b44",
       "revId": "bb9813ffec312c230ef76555b22a7301b6d9d9f4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
