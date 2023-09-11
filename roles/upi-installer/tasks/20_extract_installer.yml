@@ -12,8 +12,8 @@
   unarchive:
     src: "{{ cache_dir }}/{{ version }}/openshift-install-linux-{{ version }}.tar.gz"
     dest: "{{ cache_dir }}/{{ version }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_user_id }}"
+    group: "{{ upi_group_id }}"
     mode: "0755"
     remote_src: true
     exclude:
@@ -22,6 +22,7 @@
   retries: 3
   delay: 10
   until: result is not failed
+  become: true
   delegate_to: "{{ cache_server }}"
   when:
     - not extracted_cmd.stat.exists
@@ -33,8 +34,8 @@
   copy:
     src: "{{ cache_dir }}/{{ version }}/openshift-install"
     dest: "{{ ocp_binary_path }}/openshift-install"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_user_id }}"
+    group: "{{ upi_group_id }}"
     mode: '0755'
     remote_src: true
   become: true
@@ -57,8 +58,6 @@
       copy:
         src: "/tmp/openshift-install"
         dest: "{{ dir }}/openshift-install"
-        owner: "{{ ansible_user_id }}"
-        group: "{{ ansible_user_gid }}"
         mode: 0755
       become: true
 
@@ -72,8 +71,6 @@
       copy:
         src: "{{ dir }}/openshift-install"
         dest: "{{ ocp_binary_path }}/openshift-install"
-        owner: "{{ ansible_user_id }}"
-        group: "{{ ansible_user_gid }}"
         mode: "0755"
         remote_src: true
       become: true
