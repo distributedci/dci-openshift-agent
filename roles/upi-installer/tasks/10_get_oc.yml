@@ -35,12 +35,17 @@
     - getoc
     - cache
 
+- name: "Set facts for cache ownership"
+  set_fact:
+    upi_cache_user: "{{ cachedir.stat.pw_name | default(ansible_user_id) }}"
+    upi_cache_group: "{{ cachedir.stat.gr_name | default(ansible_user_gid) }}"
+
 - name: "Create master cache directory"
   file:
     path: "{{ cache_dir }}"
     state: directory
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_cache_user }}"
+    group: "{{ upi_cache_user) }}"
     mode: "0755"
   become: true
   delegate_to: "{{ cache_server }}"
@@ -63,8 +68,8 @@
 - name: "Create cache directory for release"
   file:
     path: "{{ cache_dir }}/{{ version }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_cache_user  }}"
+    group: "{{ upi_cache_group }}"
     mode: "0755"
     state: directory
   become: true
@@ -108,15 +113,30 @@
     - getoc
     - cache
 
+- name: "Create temporary pull secret at cache server"
+  tempfile:
+    state: file
+    prefix: "upi_auth_"
+  register: upi_creds_file
+  delegate_to: "{{ cache_server }}"
+
+- name: "Copy pull_secret_file to the cache server"
+  copy:
+    src: "{{ pullsecret_file }}"
+    dest: "{{ upi_creds_file.path }}"
+    mode: 0400
+  delegate_to: "{{ cache_server }}"
+
 - name: "Extract artifacts from release image"
   shell:
     cmd: >
-      {{ upi_tmp_dir.path }}/oc adm release extract
-      --registry-config {{ pullsecret_file }}
+      sudo {{ upi_tmp_dir.path }}/oc adm release extract
+      --registry-config {{ upi_creds_file.path }}
       --tools
       --from {{ pull_url }}
       --to "{{ cache_dir }}/{{ version }}"
   delegate_to: "{{ cache_server }}"
+  become: true
   tags:
     - getoc
     - cache
@@ -147,6 +167,7 @@
     mode: "0755"
     remote_src: true
   delegate_to: "{{ cache_server }}"
+  become: true
   when:
     - not client_tools_done.stat.exists or force_mirroring
   tags:
@@ -235,6 +256,7 @@
     state: touch
     mode: "0644"
   delegate_to: "{{ cache_server }}"
+  become: true
   when:
     - not client_tools_done.stat.exists or force_mirroring
   tags:
