@@ -1,4 +1,19 @@
 ---
+
+- name: "Create temporary pull secret at provisioner"
+  tempfile:
+    state: file
+    prefix: "upi_auth_"
+  register: upi_creds_file
+
+- name: "Copy pull_secret_file to the provisioner host"
+  copy:
+    src: "{{ pullsecret_file }}"
+    dest: "{{ upi_creds_file.path }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: 0400
+
 - name: "Find any existing {{ ocp_binary_path }} OpenShift binaries"
   find:
     paths: "{{ ocp_binary_path }}"
@@ -112,7 +127,7 @@
   shell:
     cmd: >
       {{ upi_tmp_dir.path }}/oc adm release extract
-      --registry-config {{ pullsecret_file }}
+      --registry-config {{ upi_creds_file.path }}
       --tools
       --from {{ pull_url }}
       --to "{{ cache_dir }}/{{ version }}"
