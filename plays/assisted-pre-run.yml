@@ -10,6 +10,10 @@
     ai_releases_dir: "{{ (ansible_env.HOME, 'releases') | join('/') }}"
   tasks:
     - block:
+      - name: Task to trick test-runner with a fake change
+        debug:
+          msg: ":P"
+
       - name: "Add Bastion host to provisioner group"
         add_host:
           hostname: "{{ item }}"
