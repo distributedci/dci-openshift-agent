@@ -39,8 +39,8 @@
   file:
     path: "{{ cache_dir }}"
     state: directory
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_user_id }}"
+    group: "{{ upi_group_id }}"
     mode: "0755"
   become: true
   delegate_to: "{{ cache_server }}"
@@ -63,8 +63,8 @@
 - name: "Create cache directory for release"
   file:
     path: "{{ cache_dir }}/{{ version }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_user_id }}"
+    group: "{{ upi_group_id }}"
     mode: "0755"
     state: directory
   become: true
@@ -108,15 +108,33 @@
     - getoc
     - cache
 
+- name: "Create temporary pull secret at cache server"
+  tempfile:
+    state: file
+    prefix: "upi_auth_"
+  register: upi_creds_file
+  delegate_to: "{{ cache_server }}"
+
+- name: "Copy pull_secret_file to the cache server"
+  copy:
+    src: "{{ pullsecret_file }}"
+    dest: "{{ upi_creds_file.path }}"
+    owner: "{{ upi_user_id }}"
+    group: "{{ upi_group_id }}"
+    mode: 0440
+  become: true
+  delegate_to: "{{ cache_server }}"
+
 - name: "Extract artifacts from release image"
   shell:
     cmd: >
       {{ upi_tmp_dir.path }}/oc adm release extract
-      --registry-config {{ pullsecret_file }}
+      --registry-config {{ upi_creds_file.path }}
       --tools
       --from {{ pull_url }}
       --to "{{ cache_dir }}/{{ version }}"
   delegate_to: "{{ cache_server }}"
+  become: true
   tags:
     - getoc
     - cache
@@ -146,9 +164,36 @@
     dest: "{{ cache_dir }}/{{ version }}"
     mode: "0755"
     remote_src: true
+  become: true
   delegate_to: "{{ cache_server }}"
   when:
     - not client_tools_done.stat.exists or force_mirroring
+  tags:
+    - getoc
+    - cache
+
+- name: "Marker for client tools downloaded"
+  file:
+    dest: "{{ cache_dir }}/{{ version }}/client_tools.done"
+    state: touch
+    mode: "0644"
+  delegate_to: "{{ cache_server }}"
+  become: true
+  when:
+    - not client_tools_done.stat.exists or force_mirroring
+  tags:
+    - getoc
+    - cache
+
+- name: "Fix permisions for extracted artifacts"
+  file:
+    path: "{{ cache_dir }}/{{ version }}"
+    owner: "{{ upi_user_id }}"
+    group: "{{ upi_group_id }}"
+    state: directory
+    recurse: yes
+  delegate_to: "{{ cache_server }}"
+  become: true
   tags:
     - getoc
     - cache
@@ -170,8 +215,6 @@
       copy:
         src: "/tmp/{{ item }}"
         dest: "{{ dir }}/{{ item }}"
-        owner: "{{ ansible_user_id }}"
-        group: "{{ ansible_user_gid }}"
         mode: 0755
       loop:
         - kubectl
@@ -191,8 +234,6 @@
       copy:
         src: "{{ dir }}/{{ item }}"
         dest: "{{ ocp_binary_path }}/{{ item }}"
-        owner: "{{ ansible_user_id }}"
-        group: "{{ ansible_user_gid }}"
         mode: "0755"
         remote_src: true
       become: true
@@ -217,26 +258,14 @@
   copy:
     src: "{{ cache_dir }}/{{ version }}/{{ item[0] }}"
     dest: "{{ item[1] }}/{{ item[0] }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_user_id }}"
+    group: "{{ upi_group_id }}"
     mode: "0755"
     remote_src: true
   become: true
   loop: "{{ files|product(dest)|list }}"
   when:
     - cache_provisioner | bool
-  tags:
-    - getoc
-    - cache
-
-- name: "Marker for client tools downloaded"
-  file:
-    dest: "{{ cache_dir }}/{{ version }}/client_tools.done"
-    state: touch
-    mode: "0644"
-  delegate_to: "{{ cache_server }}"
-  when:
-    - not client_tools_done.stat.exists or force_mirroring
   tags:
     - getoc
     - cache

@@ -31,3 +31,10 @@
   loop: "{{ dci_config_dirs }}"
   loop_control:
     loop_var: hookdir
+
+- name: Remove pull secret file from provisioner
+  file:
+    path: "{{ upi_creds_file.path }}"
+    state: absent
+  when:
+    - upi_creds_file is defined
