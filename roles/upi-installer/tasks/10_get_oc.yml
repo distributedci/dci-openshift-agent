@@ -108,11 +108,28 @@
     - getoc
     - cache
 
+- name: "Create temporary pull secret at provisioner"
+  tempfile:
+    state: file
+    prefix: "upi_auth_"
+  register: upi_creds_file
+  delegate_to: "{{ cache_server }}"
+
+- name: "Copy pull_secret_file to the provisioner host"
+  copy:
+    src: "{{ pullsecret_file }}"
+    dest: "{{ upi_creds_file.path }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: 0400
+  delegate_to: "{{ cache_server }}"
+  become: true
+
 - name: "Extract artifacts from release image"
   shell:
     cmd: >
       {{ upi_tmp_dir.path }}/oc adm release extract
-      --registry-config {{ pullsecret_file }}
+      --registry-config {{ upi_creds_file.path }}
       --tools
       --from {{ pull_url }}
       --to "{{ cache_dir }}/{{ version }}"
