@@ -12,8 +12,8 @@
   unarchive:
     src: "{{ cache_dir }}/{{ version }}/openshift-install-linux-{{ version }}.tar.gz"
     dest: "{{ cache_dir }}/{{ version }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_gid }}"
+    owner: "{{ upi_cache_user }}"
+    group: "{{ upi_cache_group }}"
     mode: "0755"
     remote_src: true
     exclude:
@@ -23,6 +23,7 @@
   delay: 10
   until: result is not failed
   delegate_to: "{{ cache_server }}"
+  become: true
   when:
     - not extracted_cmd.stat.exists
   tags:
