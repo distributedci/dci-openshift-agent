@@ -16,6 +16,23 @@
       "message": "LGTM, thanks Rabin",
       "revId": "ab4d45d7930b03456fceb180a3df69b325f4d03e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64f01eab_ce9b4111",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-11T16:39:17Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll +2 once the test is completed",
+      "revId": "ab4d45d7930b03456fceb180a3df69b325f4d03e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
