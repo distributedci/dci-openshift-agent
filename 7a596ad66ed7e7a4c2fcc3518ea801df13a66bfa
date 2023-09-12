@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77694bfd_317f01d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-09-12T07:40:21Z",
+      "side": 1,
+      "message": "For me, the change looks correct and the debug job shows what it has to show",
+      "revId": "7a596ad66ed7e7a4c2fcc3518ea801df13a66bfa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
