@@ -16,6 +16,23 @@
       "message": "For me, the change looks correct and the debug job shows what it has to show",
       "revId": "7a596ad66ed7e7a4c2fcc3518ea801df13a66bfa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29f312b0_7960d0f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-12T18:49:43Z",
+      "side": 1,
+      "message": "LGTM, thanks",
+      "revId": "7a596ad66ed7e7a4c2fcc3518ea801df13a66bfa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
