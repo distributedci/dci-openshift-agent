@@ -6,6 +6,11 @@
       set_fact:
         pull_secret: "{{ hostvars['localhost']['pull_secret'] }}"
 
+    - name: Set facts for install playbooks in disconnected mode
+      set_fact:
+        registry_repository: "{{ mor_registry_path }}"
+      when: dci_disconnected | default(False) | bool
+
 - import_playbook: crucible/deploy_cluster_agent_based_installer.yml
   when: (use_agent_based_installer | default(false)) | bool
 
