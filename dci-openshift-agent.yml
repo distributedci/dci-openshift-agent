@@ -144,6 +144,10 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - block:
+        - name: debug
+          debug:
+            msg: hi
+
         - name: Configure jumpbox
           include_tasks: plays/configure-jumpbox.yml
 
