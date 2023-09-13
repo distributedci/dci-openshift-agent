@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d882d69a_9aae903f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-13T20:59:56Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "805fb5eb4309a062983d419302a22a45881781bb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2932d095_1827a7ec",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-13T20:59:56Z",
+      "side": 1,
+      "message": "nit: False -\u003e false",
+      "revId": "805fb5eb4309a062983d419302a22a45881781bb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
