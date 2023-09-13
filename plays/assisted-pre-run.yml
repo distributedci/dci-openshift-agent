@@ -9,6 +9,11 @@
   vars:
     ai_releases_dir: "{{ (ansible_env.HOME, 'releases') | join('/') }}"
   tasks:
+
+    - name: debug
+      debug:
+        msg: hi
+
     - block:
       - name: "Add Bastion host to provisioner group"
         add_host:
