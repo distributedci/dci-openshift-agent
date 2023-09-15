@@ -33,6 +33,24 @@
       "message": "Thanks, Are we testing any older version that requires OADP? or all the version we are testing do not need it?",
       "revId": "636ae60c5bebf7a2693557bfbb8f14f70e3d09e3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff9fedc2_d628d7f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-15T22:53:14Z",
+      "side": 1,
+      "message": "We are not testing older versions, I remember seeing that in 2.5. I am not sure if I enabled the backup feature during the initial discovery of the tool and incorrectly marked it as a hard dependency.",
+      "parentUuid": "6fa8596b_e2b9329f",
+      "revId": "636ae60c5bebf7a2693557bfbb8f14f70e3d09e3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
