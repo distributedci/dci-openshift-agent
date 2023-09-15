@@ -33,6 +33,24 @@
       "message": "nit: False -\u003e false",
       "revId": "805fb5eb4309a062983d419302a22a45881781bb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5636b92_61bc7b22",
+        "filename": "plays/assisted-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-15T17:06:45Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ll keep that in mind on next change :)",
+      "parentUuid": "2932d095_1827a7ec",
+      "revId": "805fb5eb4309a062983d419302a22a45881781bb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
