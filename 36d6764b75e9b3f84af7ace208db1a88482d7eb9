@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d657552_b372c893",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-15T19:57:46Z",
+      "side": 1,
+      "message": "all was working except that the etcd operator was degraded, launching again\n\nrecheck",
+      "revId": "36d6764b75e9b3f84af7ace208db1a88482d7eb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
