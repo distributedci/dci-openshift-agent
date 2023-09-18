@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "8511cdd0a2522e9442778f13e960d7d7c1d9362e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd07fcf5_c7cc6471",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-09-18T10:08:44Z",
+      "side": 1,
+      "message": "In this case, the job passed and the workaround was not needed, but I think it\u0027s fine to merge it, it should improve the situation.",
+      "revId": "8511cdd0a2522e9442778f13e960d7d7c1d9362e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
