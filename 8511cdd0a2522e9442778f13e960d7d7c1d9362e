@@ -50,6 +50,24 @@
       "message": "In this case, the job passed and the workaround was not needed, but I think it\u0027s fine to merge it, it should improve the situation.",
       "revId": "8511cdd0a2522e9442778f13e960d7d7c1d9362e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43b2b89e_2474b6e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-18T14:08:50Z",
+      "side": 1,
+      "message": "Correct, in the previous job didn\u0027t happen but the job before in Dallas it actually applied the WA, but pods were being restarted at the same time because the operator was being upgraded, so I had to include ignore errors to avoid this situation, I think if should be fine this time. Thanks.",
+      "parentUuid": "cd07fcf5_c7cc6471",
+      "revId": "8511cdd0a2522e9442778f13e960d7d7c1d9362e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
