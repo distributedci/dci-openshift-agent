@@ -16,6 +16,23 @@
       "message": "all was working except that the etcd operator was degraded, launching again\n\nrecheck",
       "revId": "36d6764b75e9b3f84af7ace208db1a88482d7eb9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c87bb927_adcc211b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-09-18T09:30:34Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "36d6764b75e9b3f84af7ace208db1a88482d7eb9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
