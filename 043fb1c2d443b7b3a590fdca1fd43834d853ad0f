@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68a860aa_acd84a42",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 49
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-18T19:42:23Z",
+      "side": 1,
+      "message": "Great work Tony, this LGTM\n\nPlease consider removing the 4.14 releases from our local quay after merging this change to force the mirroring. There is a mix of image source configuration in the cache directory.\n\n$ cat /opt/cache/4.14.0-*/image* | grep kind\nkind: ImageContentSourcePolicy\nkind: ImageContentSourcePolicy\nkind: ImageDigestMirrorSet\nkind: ImageContentSourcePolicy\nkind: ImageContentSourcePolicy\n$ ls -1 /opt/cache/4.14.0-*/image*\n/opt/cache/4.14.0-0.nightly-2023-09-15-233408/imagecontentsourcepolicy.yaml\n/opt/cache/4.14.0-ec.4/imagecontentsourcepolicy.yaml\n/opt/cache/4.14.0-ec.4/imagesource.yaml\n/opt/cache/4.14.0-rc.1/imagecontentsourcepolicy.yaml\n/opt/cache/4.14.0-rc.1/imagesource.yaml",
+      "revId": "043fb1c2d443b7b3a590fdca1fd43834d853ad0f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
