@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "983eaa63a1745891981134c11220def1ffa19853",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a703b251_54b06bec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2023-09-19T13:01:45Z",
+      "side": 1,
+      "message": "This patch will patch multiple failed jobs:\nhttps://www.distributed-ci.io/jobs/66091d9f-92bd-4b06-85c6-b068a02600a5/jobStates\nhttps://www.distributed-ci.io/jobs/9005c603-7537-45da-aa4e-9e99d27afc02/jobStates\nhttps://www.distributed-ci.io/jobs/b315d5ad-cba7-455f-8bb9-14da3595559d/jobStates\nhttps://www.distributed-ci.io/jobs/ca7e0f5d-0476-4c3b-acc9-71d5f929ba59/jobStates\nhttps://www.distributed-ci.io/jobs/fb1ec9f0-133d-46cd-9f65-6801bc3f0465/jobStates",
+      "revId": "983eaa63a1745891981134c11220def1ffa19853",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
