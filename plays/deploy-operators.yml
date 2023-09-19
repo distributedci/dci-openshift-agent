@@ -123,9 +123,6 @@
             operator: sriov-network-operator
             source: "{{ upstream_source_catalog_name | default(opm_catalog_source_name) }}"
             namespace: openshift-sriov-network-operator
-            operator_group_spec:
-              targetNamespaces:
-                - openshift-sriov-network-operator
             ns_labels:
               openshift.io/run-level: "1"
 
@@ -170,9 +167,6 @@
         operator: kubevirt-hyperconverged
         source: "{{ opm_catalog_source_name }}"
         namespace: openshift-cnv
-        operator_group_spec:
-          targetNamespaces:
-            - openshift-cnv
 
     - name: "configure-operators : Deploy Hyperconverged Operator"
       include_role:
@@ -217,9 +211,6 @@
     operator: cluster-logging
     source: "{{ opm_catalog_source_name }}"
     namespace: openshift-logging
-    operator_group_spec:
-      targetNamespaces:
-        - openshift-logging
   when:
     - enable_logs_stack | bool or
       enable_clusterlogging | bool
@@ -247,9 +238,6 @@
         namespace: openshift-storage
         ns_labels:
           openshift.io/cluster-monitoring: "true"
-        operator_group_spec:
-          targetNamespaces:
-            - openshift-storage
       when:
         - enable_odf | bool
 
@@ -262,9 +250,6 @@
         namespace: openshift-storage
         ns_labels:
           openshift.io/cluster-monitoring: "true"
-        operator_group_spec:
-          targetNamespaces:
-            - openshift-storage
       when:
         - enable_ocs | bool
         - not enable_odf | bool
@@ -276,9 +261,6 @@
         operator: local-storage-operator
         source: "{{ opm_catalog_source_name }}"
         namespace: openshift-local-storage
-        operator_group_spec:
-          targetNamespaces:
-            - openshift-local-storage
       when:
         - enable_lso | bool
 
@@ -334,9 +316,6 @@
         operator: advanced-cluster-management
         source: "{{ opm_catalog_source_name }}"
         namespace: "{{ acm_namespace }}"
-        operator_group_spec:
-          targetNamespaces:
-            - "{{ acm_namespace }}"
   when:
     - enable_acm | bool
 
@@ -355,9 +334,6 @@
         namespace: "{{ nfd_namespace }}"
         ns_labels:
           openshift.io/cluster-monitoring: "true"
-        operator_group_spec:
-          targetNamespaces:
-            - "{{ nfd_namespace }}"
 
     - name: "Get the release ose-node-feature-discovery image digest"
       shell:
@@ -472,9 +448,6 @@
         operator: kubernetes-nmstate-operator
         source: "{{ opm_catalog_source_name }}"
         namespace: "{{ nmstate_namespace }}"
-        operator_group_spec:
-          targetNamespaces:
-            - "{{ nmstate_namespace }}"
 
     - name: Initialize instance
       community.kubernetes.k8s:
