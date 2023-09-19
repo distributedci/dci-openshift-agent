@@ -47,7 +47,7 @@
         - setup
       uri:
         url: https://www.redhat.com
-        status_code: [-1,200]
+        status_code: [-1,200,301]
         timeout: 1
       register: internet_url
 
