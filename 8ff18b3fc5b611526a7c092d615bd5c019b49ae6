@@ -56,6 +56,30 @@
       },
       "revId": "8ff18b3fc5b611526a7c092d615bd5c019b49ae6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80eb407e_345e486f",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-19T19:27:32Z",
+      "side": 1,
+      "message": "good idea, done in patch-set 2",
+      "parentUuid": "07f6bfc7_5790e42b",
+      "range": {
+        "startLine": 21,
+        "startChar": 34,
+        "endLine": 21,
+        "endChar": 50
+      },
+      "revId": "8ff18b3fc5b611526a7c092d615bd5c019b49ae6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
