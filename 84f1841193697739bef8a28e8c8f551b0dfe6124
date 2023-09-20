@@ -33,6 +33,23 @@
       "message": "This is the issue that we are hitting for ACM: https://issues.redhat.com/browse/ACM-7467\n\nI updated the card with our findings.",
       "revId": "84f1841193697739bef8a28e8c8f551b0dfe6124",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9383464e_11f8575a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-09-20T10:38:27Z",
+      "side": 1,
+      "message": "I find this change fine",
+      "revId": "84f1841193697739bef8a28e8c8f551b0dfe6124",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
