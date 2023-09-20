@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd639f86_b3ed2fdb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-20T03:20:57Z",
+      "side": 1,
+      "message": "The errors in the previous job are not related to this change, it is showing issues during the actual installation of ACM with the postgresql pods. Before this, we were not testing the configuration of some operators, so the idea if pre-ga is to identify issues that may be solved in a newer bundle.\n\nWe should receive a new bundle by EOW. We can report the issues to the team that generate the files.\n\n[dciteam@jumphost ~]$ oc get pods  |grep Crash\nsearch-api-7bdd9f768d-5995b                                       0/1     CrashLoopBackOff   9 (3m33s ago)    27m\nsearch-indexer-db98cb6b8-85pvc                                    0/1     CrashLoopBackOff   11 (4m39s ago)   27m\nsearch-postgres-5c58cd5c67-d89mp                                  0/1     CrashLoopBackOff   9 (3m44s ago)    27m",
+      "revId": "84f1841193697739bef8a28e8c8f551b0dfe6124",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
