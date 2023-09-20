@@ -22,6 +22,30 @@
       },
       "revId": "3fe995b00ad9b73f8cafc7bf76fbd4efba9f51e0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0729cfa1_1b84f195",
+        "filename": "plays/monitor-upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-20T15:08:16Z",
+      "side": 1,
+      "message": "Good point, it might be confusing, I removed this after all, and just updated the message of previous max wait time.",
+      "parentUuid": "2feb863f_8ea0b8c0",
+      "range": {
+        "startLine": 22,
+        "startChar": 36,
+        "endLine": 22,
+        "endChar": 37
+      },
+      "revId": "3fe995b00ad9b73f8cafc7bf76fbd4efba9f51e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
