@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22cdfadf_74bdfe68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-21T20:30:55Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll +2 after test",
+      "revId": "677df8f438a3bd20108824423642b1aab6e522ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17ac4679_3d938c0c",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-21T20:30:55Z",
+      "side": 1,
+      "message": "Would it be worth to look if the file has content already instead? something like\n\n```\n  if grep -q \"worker\" \u003c\u003c\u003c \"${h}\" \u0026\u0026\n     [[ ! -s \"${log_dir}/worker-kernel-params.txt\" ]]; then\n```  \n  \nIf any connection to the",
+      "revId": "677df8f438a3bd20108824423642b1aab6e522ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
