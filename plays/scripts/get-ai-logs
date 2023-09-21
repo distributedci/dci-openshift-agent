@@ -83,6 +83,12 @@ fi
 
 echo "Gather host's journals"
 
+info_extracted="false"
 for h in "${nodes[@]}"; do
   ssh ${ssh_ops} core@"${h}.${domain_name}" 'sudo journalctl --all --since "4 hours ago"' > "${log_dir}/journal-${h}.log"
+  # Get kernel parameters only from first worker in the list
+  if echo "${h}" | grep -q "worker" && [ "${info_extracted}" == "false" ]; then
+    ssh ${ssh_ops} core@"${h}.${domain_name}" 'cat /proc/cmdline' > "${log_dir}/worker-kernel-params.txt"
+    info_extracted="true"
+  fi
 done
