@@ -51,6 +51,24 @@
       "parentUuid": "17ac4679_3d938c0c",
       "revId": "677df8f438a3bd20108824423642b1aab6e522ac",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54c37a62_560eb507",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-22T20:14:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bbd8b8bf_4e9ab00f",
+      "revId": "677df8f438a3bd20108824423642b1aab6e522ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
