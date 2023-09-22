@@ -33,6 +33,24 @@
       "message": "Would it be worth to look if the file has content already instead? something like\n\n```\n  if grep -q \"worker\" \u003c\u003c\u003c \"${h}\" \u0026\u0026\n     [[ ! -s \"${log_dir}/worker-kernel-params.txt\" ]]; then\n```  \n  \nIf any connection to the",
       "revId": "677df8f438a3bd20108824423642b1aab6e522ac",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbd8b8bf_4e9ab00f",
+        "filename": "plays/scripts/get-ai-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-22T14:19:00Z",
+      "side": 1,
+      "message": "Thanks, let\u0027s give this a try, looks simpler this way. Patch-set 2",
+      "parentUuid": "17ac4679_3d938c0c",
+      "revId": "677df8f438a3bd20108824423642b1aab6e522ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
