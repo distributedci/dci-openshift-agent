@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8028a67_4d5f3a1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-26T19:22:20Z",
+      "side": 1,
+      "message": "Thanks Beto, just checking metalLB with BGP is still happy\n\ncheck dallas ocp-4.13-vanilla",
+      "revId": "735a640e89973fe6556e11706d7c2a5a87ddf044",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b45fb42d_5c8e07b6",
