@@ -50,6 +50,57 @@
       "message": "From what I can observe, the change looks fine, but I think last job was testing the `none` cluster type, how are you going to test `kubevirt` option?",
       "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09dfd84f_809d1a4e",
+        "filename": "roles/acm-hypershift/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-28T18:52:09Z",
+      "side": 1,
+      "message": "Instead, move ah_cluster_name randomization naming to defaults and avoid the new cluster_name",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97d5130a_f8925289",
+        "filename": "roles/acm-hypershift/tasks/validations.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-28T18:52:09Z",
+      "side": 1,
+      "message": "nit: lower the input\n\n```\n- ah_cluster_type | lower not in ...\n```",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "158bfacc_0d6d8261",
+        "filename": "roles/acm-hypershift/vars/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-28T18:52:09Z",
+      "side": 1,
+      "message": "nit: rename to `ah_cluster_types` ?",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
