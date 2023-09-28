@@ -1,4 +1,19 @@
 ---
+
+- name: Confirm internet connectivity on the workstation
+  uri:
+    url: "{{ ah_url_check }}"
+    timeout: 1
+  register: check_url
+  failed_when: check_url.status not in [-1,200,301]
+  no_log: true
+
+- name: "Check for role allowed providers"
+  fail:
+    msg: "{{ ah_cluster_type }} provider is not supported by this role"
+  when:
+    - ah_cluster_type not in ah_allowed_cluster_type
+
 - name: "Check for metallb instances"
   community.kubernetes.k8s_info:
     api_version: metallb.io/v1beta1
@@ -10,7 +25,8 @@
     msg:
       - "A MetalLB instance is required to configure hypershift on baremetal environments"
   when:
-  - mlb_instance.resources | length == 0
+    - mlb_instance.resources | length == 0
+    - ah_cluster_type != "none"
 
 - name: "Validate that a pull secret file is defined"
   fail:
