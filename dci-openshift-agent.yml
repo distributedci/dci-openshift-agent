@@ -38,6 +38,20 @@
       register: job_info
       when: job_info is not defined
 
+    - name: Custom OCP build component
+      when:
+        - dci_custom_component | default(false) | bool
+        - dci_custom_component_file is defined
+        - dci_custom_component_file | length
+      block:
+        - name: Load custom build component
+          set_fact:
+            custom_component: "{{ lookup('file', dci_custom_component_file) | from_json }}"
+
+        - name: Append custom build component
+          set_fact:
+            dci_components: "{{ dci_components + [custom_component] }}"
+
     - name: Set the job id
       set_fact:
         job_id: '{{ job_info.job.id }}'
