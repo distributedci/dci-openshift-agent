@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51097b29_da1d2714",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-09-28T21:35:51Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla openshift-vanilla:ansible_extravars\u003ddci_custom_component:true openshift-vanilla:ansible_extravars\u003ddci_custom_component_file:/home/dciteam/tonyg/test/custom_builds/dci-custom-component.json openshift-vanilla:ansible_extravars\u003dpullsecret_file:/home/dciteam/manny/build-reg-secrets.json",
+      "revId": "ced88fb8b709c3fb20318db6585dd55ad3792034",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
