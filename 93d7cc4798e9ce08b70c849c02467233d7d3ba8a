@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6850adda_14d41104",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-09-28T08:47:23Z",
+      "side": 1,
+      "message": "From what I can observe, the change looks fine, but I think last job was testing the `none` cluster type, how are you going to test `kubevirt` option?",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
