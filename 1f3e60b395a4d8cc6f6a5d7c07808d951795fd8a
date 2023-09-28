@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "1f3e60b395a4d8cc6f6a5d7c07808d951795fd8a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f038691_c8ad1049",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-28T21:44:56Z",
+      "side": 1,
+      "message": "The job running for this https://www.distributed-ci.io/jobs/bbd2c9a5-5c37-489b-ae2d-c6b825450172/jobStates?sort\u003ddate\u0026task\u003d6018c905-77d1-4e77-91b2-30a8db42fa7f has passed the tested task.",
+      "revId": "1f3e60b395a4d8cc6f6a5d7c07808d951795fd8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
