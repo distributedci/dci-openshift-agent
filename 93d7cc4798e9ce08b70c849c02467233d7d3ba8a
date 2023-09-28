@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "827ec918_65bc29da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-28T23:03:15Z",
+      "side": 1,
+      "message": "Hello Ramon, \n\nI checked the job above and saw that it was tested using kubevirt. Maybe I misprinted some messages? The nodes in hypershift_nodes.txt are VMs created using kubevirt. \n\nTo test one or another provider we can pass the `ah_cluster_type` extravar with values \"none\" or \"kubevirt\".\n\nThe last 2 jobs from today, show the test for both providers.\n\nThanks",
+      "parentUuid": "6850adda_14d41104",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "09dfd84f_809d1a4e",
@@ -65,6 +83,24 @@
       "writtenOn": "2023-09-28T18:52:09Z",
       "side": 1,
       "message": "Instead, move ah_cluster_name randomization naming to defaults and avoid the new cluster_name",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5770469_2cd13f7a",
+        "filename": "roles/acm-hypershift/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-28T23:03:15Z",
+      "side": 1,
+      "message": "The problem is t a new ramdom strig is generated each time the variable is referenced. Renamed the var accaccording fite naming conventions and to avoid collisions. Thanks",
+      "parentUuid": "09dfd84f_809d1a4e",
       "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "814c428a_73676a1e",
+        "filename": "roles/acm-hypershift/tasks/validations.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-28T23:03:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97d5130a_f8925289",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "158bfacc_0d6d8261",
@@ -99,6 +153,24 @@
       "writtenOn": "2023-09-28T18:52:09Z",
       "side": 1,
       "message": "nit: rename to `ah_cluster_types` ?",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6ca3d1e_685ce428",
+        "filename": "roles/acm-hypershift/vars/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-09-28T23:03:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "158bfacc_0d6d8261",
       "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
