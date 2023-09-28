@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "33d0618090dc7d099f62ffcdd6e2d04eb7d3b191",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1af0193_fc4f5b9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-09-28T08:33:31Z",
+      "side": 1,
+      "message": "Waiting for a green job to confirm it\u0027s workng fine",
+      "revId": "33d0618090dc7d099f62ffcdd6e2d04eb7d3b191",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
