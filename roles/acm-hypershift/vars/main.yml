@@ -1,0 +1,4 @@
+ah_url_check: https://www.redhat.com
+ah_allowed_cluster_type:
+  - none
+  - kubevirt
