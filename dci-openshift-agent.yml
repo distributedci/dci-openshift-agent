@@ -38,6 +38,16 @@
       register: job_info
       when: job_info is not defined
 
+    - name: Custom OCP build component
+      when:
+        - dci_custom_component | default(false) | bool
+        - dci_custom_component_file is defined
+        - dci_custom_component_file | length
+      block:
+        - name: Load custom build component
+          set_fact:
+            custom_component: "{{ lookup('file', dci_custom_component_file) | from_json }}"
+
     - name: Set the job id
       set_fact:
         job_id: '{{ job_info.job.id }}'
@@ -67,17 +77,21 @@
       when: cluster is defined
 
     - name: debug components
+      vars:
+        custom_comp: "{{ custom_component | default({}) }}"
       debug:
-        var: job_info.job.components
+        msg: "{{ job_info.job.components | combine(custom_comp) }}"
 
     - name: Get openshift_version from job.components
+      vars:
+        custom_comp: "{{ custom_component | default({}) }}"
       set_fact:
         tags: "{{ item['tags'] }}"
         url: "{{ item['url'] | regex_replace('\\/$', '') }}"
         version: "{{ item['data']['version'] }}"
         version_pull_url: "{{ item['data']['pull_url'] }}"
         ocp_product_id: "{{ item['id'] }}"
-      with_items: "{{ job_info.job.components }}"
+      with_items: "{{ job_info.job.components | combine(custom_comp) }}"
       when: item["type"] == "ocp"
 
     - name: Get build from tag
