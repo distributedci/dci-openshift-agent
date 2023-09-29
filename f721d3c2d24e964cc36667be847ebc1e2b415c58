@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7eea642f_2b603b90",
+        "filename": "roles/acm-hypershift/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-29T20:13:16Z",
+      "side": 1,
+      "message": "Could you update this to clarify that MetalLB is only needed in kubevirt \nOR always use MetalLB, even in none",
+      "revId": "f721d3c2d24e964cc36667be847ebc1e2b415c58",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89144c0a_2ebfa1f2",
+        "filename": "roles/acm-hypershift/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-29T20:13:16Z",
+      "side": 1,
+      "message": "Please remove this default",
+      "range": {
+        "startLine": 37,
+        "startChar": 28,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "f721d3c2d24e964cc36667be847ebc1e2b415c58",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

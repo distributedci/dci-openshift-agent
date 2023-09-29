@@ -123,6 +123,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "65b4d7b4_1471bad8",
+        "filename": "roles/acm-hypershift/tasks/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-29T20:13:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "09dfd84f_809d1a4e",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "97d5130a_f8925289",
@@ -158,6 +176,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cabcd8f_7e3c7bc3",
+        "filename": "roles/acm-hypershift/tasks/validations.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-29T20:13:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97d5130a_f8925289",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "158bfacc_0d6d8261",
@@ -186,6 +222,24 @@
         "id": 724
       },
       "writtenOn": "2023-09-28T23:03:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "158bfacc_0d6d8261",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8de08535_d714351a",
+        "filename": "roles/acm-hypershift/vars/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-29T20:13:16Z",
       "side": 1,
       "message": "Done",
       "parentUuid": "158bfacc_0d6d8261",
