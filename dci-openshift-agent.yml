@@ -1,6 +1,6 @@
 ---
 # Step 0 : DCI setup
-- name: 'Set dci variables'
+- name: 'Set dci variables.'
   hosts: localhost
   tags:
     - job
