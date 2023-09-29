@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3c14f78f_61788084",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-29T18:50:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c016fe99_27e4c42a",
+      "revId": "7349cf66f30f81a602e09d5a4a06f07fc287815d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f27800a_ffbdf7a3",
         "filename": "dci-openshift-agent.yml",
         "patchSetId": 2
@@ -65,6 +83,24 @@
       "writtenOn": "2023-09-29T01:59:54Z",
       "side": 1,
       "message": "I think the libvirt job failed because the bracket from \"[custom_component needs be be closed before, maybe like this:\n\u003e \"{{ job_info.job.components + [custom_component] | default({}) }}\"",
+      "revId": "7349cf66f30f81a602e09d5a4a06f07fc287815d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02b7b6ab_e80afff3",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-09-29T18:50:39Z",
+      "side": 1,
+      "message": "Thanks, the sytnax was ok but it was not doing what I wanted that is merge the components, it was adding them, and on the 2nd loop it was not able to get certain keys expected by the task. It has been fixed in the new patchset",
+      "parentUuid": "f1cfe374_95b1d547",
       "revId": "7349cf66f30f81a602e09d5a4a06f07fc287815d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
