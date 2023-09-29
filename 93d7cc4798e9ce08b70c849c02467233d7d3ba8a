@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "544912bf_3055877f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-09-29T09:59:11Z",
+      "side": 1,
+      "message": "Got it, I saw now it\u0027s working fine in both cluster types, thanks!",
+      "parentUuid": "827ec918_65bc29da",
+      "revId": "93d7cc4798e9ce08b70c849c02467233d7d3ba8a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "09dfd84f_809d1a4e",
