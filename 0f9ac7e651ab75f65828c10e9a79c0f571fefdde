@@ -50,6 +50,29 @@
       "message": "recheck",
       "revId": "0f9ac7e651ab75f65828c10e9a79c0f571fefdde",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80c8b795_f9c787d0",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-02T10:22:00Z",
+      "side": 1,
+      "message": "This is not working, see the error message in the last job:\n\n`Unexpected templating type error occurred on ({{ job_info.job.components + custom_component if custom_component is defined else job_info.job.components }}): can only concatenate list (not \\\"dict\\\") to list`",
+      "range": {
+        "startLine": 81,
+        "startChar": 7,
+        "endLine": 81,
+        "endChar": 123
+      },
+      "revId": "0f9ac7e651ab75f65828c10e9a79c0f571fefdde",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
