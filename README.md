@@ -284,7 +284,7 @@ This is the dci-openshift-agent variables that can be set in the
 | enable_nfd                      | False    | Boolean | False                                                          | Deploys the [NFD](https://docs.openshift.com/container-platform/4.10/hardware_enablement/psap-node-feature-discovery-operator.html) Operator.
 | operator_skip_upgrade           | False    | List    | []                                                             | List of operators to skip during the upgrade.
 | custom_catalogs                 | False    | List    | []                                                             | List of custom catalogs to install alongside default catalog sources.
-| enable_nfs_storage              | False    | Boolean | False                                                          | Enable an NFS as external storage provisioner. Values for `nfs_server` and `nfs_path` are required if for this. See [nfs-external-storage](roles/nfs-external-storage) for details.
+| enable_nfs_storage              | False    | Boolean | False                                                          | Enable an NFS as external storage provisioner. Values for `nfs_server` and `nfs_path` are required if for this. See [nfs-external-storage](https://github.com/redhatci/ocp/tree/main/roles/nfs-external-storage) for details.
 | nfs_server                      | False    | String  |                                                                | NFS server's FQDN or IP Address. eg. my-nfs.mylab.local
 | nfs_path                        | False    | String  |                                                                | NFS export path. e.g. /exports/nfs-provisioner
 | enable_mlb                      | False    | Boolean | False                                                          | Deploys MetalLB operator.
@@ -555,7 +555,7 @@ install_all_from_catalog_source: <my-ocp-catalog-ns>
 
 The `enable_logs_stack` variable allows configuring OCP to send log files and metrics produced by the infrastructure and workloads to a logging stack. This stack is integrated by the ClusterLogging, Loki and an Object storage system.
 
-The following variables allow customizing the logs stack deployment. Please see the [ocp-logging](roles/ocp-logging) role for additional details.
+The following variables allow customizing the logs stack deployment. Please see the [ocp-logging](https://github.com`/redhatci/ocp/tree/main/roles/ocp-logging) role for additional details.
 
 | Variable                        | Required | Type    | Default                                                        | Description
 | ------------------------------- | -------- | ------- | -------------------------------------------------------------- | ------------
