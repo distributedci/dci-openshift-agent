@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "4f8b586d840b1b0ac35da6600139c54f24e2d4ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa650823_010d1e47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-02T18:13:18Z",
+      "side": 1,
+      "message": "LGTM, There is currently a job running in Dallas, the installation worked, the upgrade is in progress, but already in the \"wait for upgrade\" loop.",
+      "revId": "4f8b586d840b1b0ac35da6600139c54f24e2d4ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
