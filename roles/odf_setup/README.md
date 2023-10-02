@@ -89,7 +89,7 @@ Dependencies
 - olm_operator
 
 This role does not installs the operators, it depends on olm_operator.
-See [olm_operator readme](https://github.com/redhatci/ansible-collections-redhatci-ocp/blob/master/common-roles/olm_operator/README.md) for more details.
+See [olm_operator readme](https://github.com/redhatci/ansible-collections-redhatci-ocp/blob/master/roles/olm_operator/README.md) for more details.
 
 
 Example Inventory

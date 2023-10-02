@@ -52,7 +52,7 @@
 
         - name: "test_ redhat_tests: Mirror sonobuoy images"
           include_role:
-            name: mirror_images
+            name: redhatci.ocp.mirror_images
           vars:
             images: "{{ ts_kubevirt_images }}"
             local_registry: "{{ ts_registry }}"

@@ -57,7 +57,7 @@ See below for some examples of how to use the `acm_hypershift` role
     ah_ocp_version: 4.13.4
     ah_pullsecret_file: /<path_to_ps>
   include_role:
-    name: acm_hypershift
+    name: redhatci.ocp.acm_hypershift
 ```
 
 ## Role Outputs
