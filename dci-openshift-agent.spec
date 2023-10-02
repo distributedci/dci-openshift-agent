@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.5.12
+Version:       0.6.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -24,6 +24,7 @@ Requires: ansible-collection-community-general
 Requires: ansible-collection-community-libvirt
 Requires: ansible-collection-ansible-posix
 Requires: ansible-collection-ansible-utils
+Requires: ansible-collection-redhatci-ocp
 Requires: python3-pyyaml python3-openshift
 Requires: jq
 Requires: git
@@ -83,14 +84,11 @@ exit 0
 
 %{_datadir}/dci-openshift-agent/plays/*.yml
 %{_datadir}/dci-openshift-agent/plays/scripts/*
-%{_datadir}/dci-openshift-agent/roles/*
 %{_datadir}/dci-openshift-agent/action_plugins/*
 %{_datadir}/dci-openshift-agent/utils/*
 %{_datadir}/dci-openshift-agent/plays/crucible/*
 
 %{_datadir}/dci-openshift-agent/group_vars/all
-
-%{_datadir}/dci/roles/*
 
 %{_unitdir}/*
 
@@ -99,6 +97,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Fri Oct 13 2023 Tony Garcia <tonyg@redhat.com> 0.6.0-1
+- Remove roles, use collections instead
+
 * Thu Oct  5 2023 Tony Garcia <tonyg@redhat.com> 0.5.12-1
 - Renaming of common-roles
 

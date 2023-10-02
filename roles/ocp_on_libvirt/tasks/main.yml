@@ -17,13 +17,13 @@
     - include_tasks: dns_setup.yml
       when: do_dns_config|bool
     - include_role:
-        name: vbmc
+        name: redhatci.ocp.vbmc
       vars:
         vbmc_host: "{{ vbmc_host_provided }}"
         vbmc_nodes: "{{ resources }}"
     - include_tasks: dci_setup.yml
     - include_role:
-        name: conserver
+        name: redhatci.ocp.conserver
       vars:
         cluster_nodes: "{{ groups['masters'] + ('workers' in groups) | ternary(groups['workers'], []) }}"
       when: enable_conserver
@@ -41,7 +41,7 @@
     - include_tasks: dns_cleanup.yml
       when: do_dns_config|bool
     - include_role:
-        name: vbmc
+        name: redhatci.ocp.vbmc
       vars:
         vbmc_host: "{{ vbmc_host_provided }}"
         vbmc_nodes: "{{ resources }}"
