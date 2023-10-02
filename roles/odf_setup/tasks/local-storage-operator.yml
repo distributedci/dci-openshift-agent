@@ -1,7 +1,7 @@
 ---
 - name: Mirroring the image needed for gathering info
   include_role:
-    name: mirror_images
+    name: redhatci.ocp.mirror_images
   vars:
     images: ['registry.access.redhat.com/ubi8/ubi']
     local_registry: "{{ dci_local_registry }}"
