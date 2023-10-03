@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-vanilla",
       "revId": "467eb9e251e418db351d802d40f2e6720bb1207a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ccda721_d7943eee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-03T18:41:44Z",
+      "side": 1,
+      "message": "LGTM, thanks",
+      "revId": "467eb9e251e418db351d802d40f2e6720bb1207a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
