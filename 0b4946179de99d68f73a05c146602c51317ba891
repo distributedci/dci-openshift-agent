@@ -52,6 +52,24 @@
       "parentUuid": "cde0227f_e327f2a4",
       "revId": "0b4946179de99d68f73a05c146602c51317ba891",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ca24df4_4fc10bb0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-05T20:32:33Z",
+      "side": 1,
+      "message": "From the task is not clear to me where it is cloning the repo, do you know where the clone destination is in this task?\n\nFrom the assisted-pre-run play:\n\n```\n  dest: \"{{ dci_cache_dir }}/assisted_deploy_repo\"\n```\n\nIt suggests that is the central location you mentioned /var/lib/dci-openshift-agent (dci_cache_dir value from groups_vars/all)\n\nIf dest is the same location that you mention as the global path, then seems to me like the test is valid.\n\nOn the other hand I agree, that if another job is running at the same time it can mess the repo and provide unexpected results.\n\nBefore merging I really would like to see this tested using test-hints using assisted-abi",
+      "parentUuid": "739b4045_16b00fe7",
+      "revId": "0b4946179de99d68f73a05c146602c51317ba891",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
