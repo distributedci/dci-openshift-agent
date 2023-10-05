@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7a88779_82cf67dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-05T19:18:00Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll switch to +2 after tested in the CI\n\nbtw, I see it was tested succesfully with the old hash: https://www.distributed-ci.io/jobs/4d716d91-cf6f-4fb4-ae51-85dcfb8de066 something else must have changed that made subsequent jobs to fail.",
+      "revId": "0b4946179de99d68f73a05c146602c51317ba891",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
