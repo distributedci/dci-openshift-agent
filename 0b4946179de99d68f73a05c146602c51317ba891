@@ -34,6 +34,24 @@
       "parentUuid": "f7a88779_82cf67dd",
       "revId": "0b4946179de99d68f73a05c146602c51317ba891",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "739b4045_16b00fe7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-05T19:58:57Z",
+      "side": 1,
+      "message": "You can see the task that clones/updates the repo here https://www.distributed-ci.io/jobs/4d716d91-cf6f-4fb4-ae51-85dcfb8de066/jobStates?sort\u003ddate\u0026task\u003dcac557cd-c8f5-42f6-8ae9-3fd03e0487d1 making a fresh clone (look at before and after SHA) but then look at the tasks from crucible itself e.g. https://www.distributed-ci.io/jobs/4d716d91-cf6f-4fb4-ae51-85dcfb8de066/jobStates?sort\u003ddate\u0026task\u003d1b290d7a-5ad0-4f8a-a0b5-5164e0922019 and it runs from `/var/lib/dci-openshift-agent/assisted_deploy_repo` that means that all builds use the same central location to import crucible roles from, this to me it means that dci-check-change is not updating ansible.cfg to import from the freshly cloned repo and/or another build happening at the same time is moving the index as they all point to the same location.",
+      "parentUuid": "cde0227f_e327f2a4",
+      "revId": "0b4946179de99d68f73a05c146602c51317ba891",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
