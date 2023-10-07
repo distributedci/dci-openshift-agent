@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.14-vanilla",
       "revId": "0b31fa6c93a95342700e2cd715816f1a41fa5cd4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2359518_4550bce1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-07T21:00:11Z",
+      "side": 1,
+      "message": "Is the operators.txt in the operator_catalog_dir dir an input file generated manually, and what is its purpose? This is not like the operators.json that we get as an output from the ops installed right?",
+      "revId": "0b31fa6c93a95342700e2cd715816f1a41fa5cd4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
