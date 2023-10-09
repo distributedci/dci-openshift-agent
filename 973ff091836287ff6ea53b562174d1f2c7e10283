@@ -69,6 +69,24 @@
       "parentUuid": "650f14cb_5560be35",
       "revId": "973ff091836287ff6ea53b562174d1f2c7e10283",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3eec72b5_51860bed",
+        "filename": "roles/ocp-on-libvirt/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-10-09T12:46:31Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ab8f8cd0_9f1956f4",
+      "revId": "973ff091836287ff6ea53b562174d1f2c7e10283",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
