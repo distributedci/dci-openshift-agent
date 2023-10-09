@@ -33,6 +33,23 @@
       "message": "Is the operators.txt in the operator_catalog_dir dir an input file generated manually, and what is its purpose? This is not like the operators.json that we get as an output from the ops installed right?",
       "revId": "0b31fa6c93a95342700e2cd715816f1a41fa5cd4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7610141_e9039f91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-09T08:20:29Z",
+      "side": 1,
+      "message": "I wonder if operators.txt file should appear as output file in the README docs",
+      "revId": "0b31fa6c93a95342700e2cd715816f1a41fa5cd4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
