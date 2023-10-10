@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee262426_4edc3b7f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-10T22:23:57Z",
+      "side": 1,
+      "message": "LGTM, this change made me think that once all this is done, it could be a good idea to mention in the doa readme about the redhatci.ocp collections, just as a quick reference for folks to understand we ship them as an RPM from the DCI repo and for those who wish to contribute.",
+      "revId": "a553fdae4e453dbe17e1b5da599dad9fc3c9850b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
