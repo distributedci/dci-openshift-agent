@@ -1,0 +1,9 @@
+---
+deployment_name: minio
+service_name: minio-service
+pvc_name: minio-pvc-claim
+sm_resources:
+  - { kind: 'Service', name: '{{ service_name }}', apiVer: 'v1' }
+  - { kind: 'Deployment', name: '{{ deployment_name }}', apiVer: 'apps/v1' }
+  - { kind: 'PersistentVolumeClaim', name: '{{ pvc_name }}', apiVer: 'v1' }
+...
