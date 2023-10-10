@@ -1,0 +1,15 @@
+---
+- name: Create Minio deployment
+  include_tasks: setup-minio.yml
+  when:
+    - sm_action == 'install'
+
+- name: "Delete Minio Namespace"
+  community.kubernetes.k8s:
+    state: absent
+    api: "v1"
+    kind: "Namespace"
+    name: "{{ sm_namespace }}"
+  when:
+    - sm_action == 'cleanup'
+...
