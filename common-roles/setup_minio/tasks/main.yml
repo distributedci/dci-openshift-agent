@@ -1,0 +1,11 @@
+---
+- name: Create Minio deployment
+  include_tasks: setup-minio.yml
+  when:
+    - sm_action == 'install'
+
+- name: "Cleanup Logging stack resources"
+  include_tasks: clean-resources.yml
+  when:
+    - sm_action == 'cleanup'
+...
