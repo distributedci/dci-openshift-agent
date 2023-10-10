@@ -1,0 +1,13 @@
+---
+- name: "Validate parameters"
+  assert:
+    that: "{{ item }} is defined"
+    fail_msg: "The parameter {{ item }} is required"
+  with_items:
+    - sm_access_key_id
+    - sm_access_key_secret
+    - sm_bucket_name
+    - sm_namespace
+    - sm_storage_class
+    - sm_claim_size
+...

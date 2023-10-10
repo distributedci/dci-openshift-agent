@@ -60,6 +60,7 @@ enable_nfs_storage: false
 enable_mlb: false
 enable_nmstate: false
 enable_gitops: false
+enable_minio: false
 # Lists of packages for each operator
 cnv_operator:
   - kubevirt-hyperconverged
