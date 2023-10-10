@@ -1,4 +1,8 @@
 ---
+- name: Fake task to trigger test
+  debug:
+    msg: ":)"
+
 - name: Validate we have all the pieces to run in disconnected mode
   assert:
     that:
