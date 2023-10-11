@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4dbac631_68a50df5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-11T22:44:43Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_extravars\u003dminio_storage_class:managed-nfs-storage openshift-vanilla:ansible_extravars\u003denable_minio:true",
+      "revId": "d18dc9bc8e1c1f974850de3ac3482cedd918b9e9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
