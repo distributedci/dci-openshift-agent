@@ -243,6 +243,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "00e2f288_71b12b30",
+        "filename": "common-roles/setup_minio/tasks/validation.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-11T22:09:49Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ca7515d0_ae1f7a75",
+      "revId": "1f48dfadae2e66440e92fc1707aa0778d4184203",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0db93b66_4bd0aa08",
