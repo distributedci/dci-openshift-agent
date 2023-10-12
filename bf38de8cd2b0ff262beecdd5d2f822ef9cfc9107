@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf93b045_7ece6779",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-12T19:57:27Z",
+      "side": 1,
+      "message": "can this be done as a PR for redhatci/ansible-collection-redhatci-ocp github repo instead?",
+      "revId": "bf38de8cd2b0ff262beecdd5d2f822ef9cfc9107",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
