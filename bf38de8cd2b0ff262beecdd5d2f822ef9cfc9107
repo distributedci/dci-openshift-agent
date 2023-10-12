@@ -16,6 +16,23 @@
       "message": "can this be done as a PR for redhatci/ansible-collection-redhatci-ocp github repo instead?",
       "revId": "bf38de8cd2b0ff262beecdd5d2f822ef9cfc9107",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "086b1af5_a7728208",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-12T21:25:22Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_extravars\u003dminio_storage_class:managed-nfs-storage openshift-vanilla:ansible_extravars\u003denable_minio:true",
+      "revId": "bf38de8cd2b0ff262beecdd5d2f822ef9cfc9107",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
