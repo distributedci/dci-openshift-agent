@@ -16,6 +16,24 @@
       "message": "you need a .spec change here, probably after you\u0027ve merged the other PR",
       "revId": "f7ed564ff90f3e752a70fd9801679445afac61f0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abcdd42d_1d2d8d49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-12T20:49:43Z",
+      "side": 1,
+      "message": "Can you point me to the spec change, I\u0027m not sure I\u0027m following since we don\u0027t provide baremetal-deploy, we will consume it from the collections and that was added as a dep in 0.6.0",
+      "parentUuid": "e4b91e54_9a9e7ea0",
+      "revId": "f7ed564ff90f3e752a70fd9801679445afac61f0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
