@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2aa3742f_4ef008e3",
+        "filename": "group_vars/all",
+        "patchSetId": 8
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-12T17:56:18Z",
+      "side": 1,
+      "message": "I\u0027d like to avoid this variable here,I believe this is defined here to allow mirroring in case of a disconnected env, right? But we could provide that directly in the code even if it feels hard-coded. I don\u0027t see why another image would be used",
+      "revId": "2f063939cfd923e7336f838167ad0a7898da13ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f24a92f_d0169016",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-12T17:56:18Z",
+      "side": 1,
+      "message": "See my comment on hard-coding the public image",
+      "revId": "2f063939cfd923e7336f838167ad0a7898da13ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e017da1_9d5e2c32",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-12T17:56:18Z",
+      "side": 1,
+      "message": "Would \"omit\" make sense here? if not could we use an empty var and in that case use the default?",
+      "revId": "2f063939cfd923e7336f838167ad0a7898da13ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
