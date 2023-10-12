@@ -50,6 +50,24 @@
       "message": "Example of the problem when we only want to deploy operators on an already deployed cluster \n\nhttps://www.distributed-ci.io/jobs/55df5ce8-efb3-4e70-88e7-ef0f8f02521c/jobStates?sort\u003ddate\u0026task\u003dc0f8685d-5372-4fda-8afd-4668a6039c7d",
       "revId": "8418fb263337e121ff45de64061e62fe2467bdfa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f00646e_afc0579e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-12T13:03:46Z",
+      "side": 1,
+      "message": "please disregard the above comment. Wrong CR",
+      "parentUuid": "2409f9d1_91529898",
+      "revId": "8418fb263337e121ff45de64061e62fe2467bdfa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
