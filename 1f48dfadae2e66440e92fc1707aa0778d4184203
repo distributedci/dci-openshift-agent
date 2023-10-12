@@ -87,6 +87,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "56fbcb05_f210426e",
+        "filename": "common-roles/setup_minio/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-12T16:38:30Z",
+      "side": 1,
+      "message": "Ok, removed the default. That will be a required parameter. Clarified in the readme",
+      "parentUuid": "388472a7_0d19703c",
+      "revId": "1f48dfadae2e66440e92fc1707aa0778d4184203",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "738293e2_f24993fa",
