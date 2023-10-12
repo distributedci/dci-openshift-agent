@@ -16,6 +16,23 @@
       "message": "Example of the problem when we only want to deploy operators on an already deployed cluster\n\nhttps://www.distributed-ci.io/jobs/55df5ce8-efb3-4e70-88e7-ef0f8f02521c/jobStates?sort\u003ddate\u0026task\u003dc0f8685d-5372-4fda-8afd-4668a6039c7d",
       "revId": "f9dca109a5b9abe114a114790cba94a2c6c391b7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af8819ed_497da65a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-12T15:32:11Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "f9dca109a5b9abe114a114790cba94a2c6c391b7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
