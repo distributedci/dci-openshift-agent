@@ -16,6 +16,24 @@
       "message": "nitpick: bump to 0.6.1 instead, so that way we can isolate the whole move to version 0.6.x (that\u0027s why I bumped to 0.6 in the previous change)",
       "revId": "17f161602632927ab008712598361f56ddd1550a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3b1bb94_24830769",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-12T20:43:00Z",
+      "side": 1,
+      "message": "While ideally I\u0027d prefer to do a major version change, I think doing minor would suit it better because we are removing files in this package.\n\nWe know 0.6.0 works fine because it only pulls the dependency on collection, the real deal will be here where we not longer use the roles that used to be included.",
+      "parentUuid": "e16fb3b2_f680af2c",
+      "revId": "17f161602632927ab008712598361f56ddd1550a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
