@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "93c5bde1_b38f7ff0",
+        "filename": "group_vars/all",
+        "patchSetId": 8
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-12T19:32:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2aa3742f_4ef008e3",
+      "revId": "2f063939cfd923e7336f838167ad0a7898da13ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4f24a92f_d0169016",
@@ -35,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "73cac176_82ab45e9",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-12T19:32:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4f24a92f_d0169016",
+      "revId": "2f063939cfd923e7336f838167ad0a7898da13ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1e017da1_9d5e2c32",
@@ -48,6 +84,24 @@
       "writtenOn": "2023-10-12T17:56:18Z",
       "side": 1,
       "message": "Would \"omit\" make sense here? if not could we use an empty var and in that case use the default?",
+      "revId": "2f063939cfd923e7336f838167ad0a7898da13ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f500c6ae_2603b6f9",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-12T19:32:00Z",
+      "side": 1,
+      "message": "Omit or any other string, empty is passed to the role. So, it is not picking the default. No big deal passing the hardcode again 😄",
+      "parentUuid": "1e017da1_9d5e2c32",
       "revId": "2f063939cfd923e7336f838167ad0a7898da13ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
