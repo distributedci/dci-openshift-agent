@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3a67771_70ab52e8",
+        "filename": "common-roles/setup_minio/tasks/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-13T19:26:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "522f540b_6d59baae",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7e0607a_dfcfd442",
@@ -49,6 +67,24 @@
       "writtenOn": "2023-10-13T17:18:29Z",
       "side": 1,
       "message": "I feel this should be in a cleanup.yml task file, even if it is a single task at the moment",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cef092d_9afec9e6",
+        "filename": "common-roles/setup_minio/tasks/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-13T19:26:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7e0607a_dfcfd442",
       "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -70,6 +106,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c40cc2de_7564139f",
+        "filename": "common-roles/setup_minio/tasks/setup-minio.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-13T19:26:26Z",
+      "side": 1,
+      "message": "I updated the check to monitor the endpoint but used the node port to avoid running a pod that tests the internal service.",
+      "parentUuid": "60bdb16e_7a6a0af4",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1be91ca_91351fce",
@@ -83,6 +137,24 @@
       "writtenOn": "2023-10-13T17:18:29Z",
       "side": 1,
       "message": "you are not removing this directory at the end, you should cleanup",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "851f9333_802157c6",
+        "filename": "common-roles/setup_minio/tasks/setup-minio.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-13T19:26:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b1be91ca_91351fce",
       "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -104,6 +176,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "05701ebf_5f21526b",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-13T19:26:26Z",
+      "side": 1,
+      "message": "no, it does not work. Using omit here will pass a string placeholder as value to the role. https://github.com/ansible/ansible/issues/22417",
+      "parentUuid": "2b48c299_2ce5f127",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ac2d8674_81af6757",
@@ -121,6 +211,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb6c7fe7_6ead9c67",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-13T19:26:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ac2d8674_81af6757",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d9a0682_d943bef5",
@@ -134,6 +242,24 @@
       "writtenOn": "2023-10-13T16:48:19Z",
       "side": 1,
       "message": "I think this should not be a list",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85806a64_5d6dba83",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-13T19:26:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d9a0682_d943bef5",
       "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
