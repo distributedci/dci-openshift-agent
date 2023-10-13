@@ -3,6 +3,91 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4b3a2139_1fa709c5",
+        "filename": "common-roles/setup_minio/tasks/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-13T17:18:29Z",
+      "side": 1,
+      "message": "Don\u0027t repeat yourself, rename setup-minio.yml to setup.yml only",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7e0607a_dfcfd442",
+        "filename": "common-roles/setup_minio/tasks/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-13T17:18:29Z",
+      "side": 1,
+      "message": "I feel this should be in a cleanup.yml task file, even if it is a single task at the moment",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60bdb16e_7a6a0af4",
+        "filename": "common-roles/setup_minio/tasks/setup-minio.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-13T17:18:29Z",
+      "side": 1,
+      "message": "the deployment already has readiness/liveness probe defined, monitor those instead of the running pods because a running pod may not be ready",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1be91ca_91351fce",
+        "filename": "common-roles/setup_minio/tasks/setup-minio.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-13T17:18:29Z",
+      "side": 1,
+      "message": "you are not removing this directory at the end, you should cleanup",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b48c299_2ce5f127",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-13T17:18:29Z",
+      "side": 1,
+      "message": "aren\u0027t you already defining defaults in the role? would default(omit) work here?",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac2d8674_81af6757",
         "filename": "plays/teardown.yml",
         "patchSetId": 10
