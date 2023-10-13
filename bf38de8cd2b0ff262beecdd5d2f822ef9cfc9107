@@ -68,6 +68,23 @@
       "parentUuid": "bf93b045_7ece6779",
       "revId": "bf38de8cd2b0ff262beecdd5d2f822ef9cfc9107",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51682780_e6222334",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-13T15:46:03Z",
+      "side": 1,
+      "message": "The role was tested succesfully, the failure is with a different part of the job.\n\nWhat I did not see is the removal of minio in the teardown, could you please add it to the agent?",
+      "revId": "bf38de8cd2b0ff262beecdd5d2f822ef9cfc9107",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
