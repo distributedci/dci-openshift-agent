@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "522f540b_6d59baae",
+        "filename": "common-roles/setup_minio/tasks/main.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-10-13T17:19:08Z",
+      "side": 1,
+      "message": "or better yet, call it install because that\u0027s the same name as the action",
+      "parentUuid": "4b3a2139_1fa709c5",
+      "revId": "57cc41eb4749f858f5ff80193a7d80bd11fcfdb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e7e0607a_dfcfd442",
         "filename": "common-roles/setup_minio/tasks/main.yml",
         "patchSetId": 10
