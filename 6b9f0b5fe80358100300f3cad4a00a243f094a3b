@@ -16,6 +16,24 @@
       "message": "punch it",
       "revId": "6b9f0b5fe80358100300f3cad4a00a243f094a3b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16c4c1e5_38a69875",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-16T21:04:34Z",
+      "side": 1,
+      "message": "🎉",
+      "parentUuid": "8de5dfca_85e9aaae",
+      "revId": "6b9f0b5fe80358100300f3cad4a00a243f094a3b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
