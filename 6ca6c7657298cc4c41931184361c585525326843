@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a20eb99_3533ad9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-17T09:42:02Z",
+      "side": 1,
+      "message": "some cosmetics",
+      "revId": "6ca6c7657298cc4c41931184361c585525326843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6de91fd4_c017a32b",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-17T09:42:02Z",
+      "side": 1,
+      "message": "whitespace? \"[Minio](#minio-deployment) section\"",
+      "range": {
+        "startLine": 299,
+        "startChar": 221,
+        "endLine": 299,
+        "endChar": 228
+      },
+      "revId": "6ca6c7657298cc4c41931184361c585525326843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74035ebd_04872c4e",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-17T09:42:02Z",
+      "side": 1,
+      "message": "\"_\" instead of \"-\"",
+      "range": {
+        "startLine": 565,
+        "startChar": 88,
+        "endLine": 565,
+        "endChar": 89
+      },
+      "revId": "6ca6c7657298cc4c41931184361c585525326843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "819ff3b9_cfb57e2d",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-17T09:42:02Z",
+      "side": 1,
+      "message": "I don\u0027t know if this sentence and the previous one are connected or not. I think it\u0027s better to separate them, so \"...-stack). No details...\"",
+      "range": {
+        "startLine": 583,
+        "startChar": 376,
+        "endLine": 583,
+        "endChar": 380
+      },
+      "revId": "6ca6c7657298cc4c41931184361c585525326843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b39e51e9_37150443",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 585,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-17T09:42:02Z",
+      "side": 1,
+      "message": "setup_minio instead?",
+      "range": {
+        "startLine": 585,
+        "startChar": 80,
+        "endLine": 585,
+        "endChar": 91
+      },
+      "revId": "6ca6c7657298cc4c41931184361c585525326843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "993730dd_3025bc7c",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 596,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-17T09:42:02Z",
+      "side": 1,
+      "message": "setup_minio instead ?",
+      "range": {
+        "startLine": 596,
+        "startChar": 138,
+        "endLine": 596,
+        "endChar": 149
+      },
+      "revId": "6ca6c7657298cc4c41931184361c585525326843",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
