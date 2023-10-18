@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b05ef364_55fa2745",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-18T20:03:09Z",
+      "side": 1,
+      "message": "Looks promising, just minor typo that could break the get Node info",
+      "revId": "cec6e97777f7cf94c4f976faa29f9be91ed4fcba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d958ef1_53caf110",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-18T20:03:09Z",
+      "side": 1,
+      "message": "I think somehow a typo was introduced here with the extra \"q\", or maybe a new type of node I was not aware :)",
+      "revId": "cec6e97777f7cf94c4f976faa29f9be91ed4fcba",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
