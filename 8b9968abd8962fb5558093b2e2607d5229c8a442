@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fd6d2cd_a13dc051",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-18T00:36:57Z",
+      "side": 1,
+      "message": "The change worked fine in the above job. The issue with MetalLB needs to be investigated and fixed on a separated CR.",
+      "revId": "8b9968abd8962fb5558093b2e2607d5229c8a442",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
