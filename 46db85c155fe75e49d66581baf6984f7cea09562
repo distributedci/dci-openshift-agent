@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b9064fd_f9abc67a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 79
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-19T09:21:08Z",
+      "side": 1,
+      "message": "Some comments from my side, now that it looks like more stable",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "239ced07_8a194d88",
+        "filename": "samples/ocp_on_libvirt/inventory/hosts",
+        "patchSetId": 79
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-19T09:21:08Z",
+      "side": 1,
+      "message": "In BOS2 change, we also had bmc_user and bmc_password. Don\u0027t we need them here?",
+      "range": {
+        "startLine": 14,
+        "startChar": 11,
+        "endLine": 14,
+        "endChar": 20
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9d78d93_f6779fb7",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 79
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-19T09:21:08Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 14,
+        "startChar": 20,
+        "endLine": 14,
+        "endChar": 24
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0abbd75_194d2526",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 549,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-19T09:21:08Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 549,
+        "startChar": 0,
+        "endLine": 549,
+        "endChar": 12
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7db569be_34f661d6",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-19T09:21:08Z",
+      "side": 1,
+      "message": "is this new argument compatible with the default configuration we had before? (so, not to use sushy tools). Have you tested it?",
+      "range": {
+        "startLine": 550,
+        "startChar": 36,
+        "endLine": 550,
+        "endChar": 93
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
