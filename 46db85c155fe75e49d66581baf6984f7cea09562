@@ -18,6 +18,74 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d6a34ff_74a62676",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 79
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-10-19T10:11:06Z",
+      "side": 1,
+      "message": "Hi Nacho, looks good! I mainly added some questions, to better understand the idea.",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecdf0da5_ef6bb1ae",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 79
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-10-19T10:11:06Z",
+      "side": 1,
+      "message": "is it a parameter or more like a hardcoded value? Could we have something else than kvm?",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd0e3cff_d5c0e36d",
+        "filename": "roles/ocp_on_libvirt/tasks/redfish_setup.yml",
+        "patchSetId": 79
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-10-19T10:11:06Z",
+      "side": 1,
+      "message": "should we remove or uncomment this line?",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d34446b_0e45ce70",
+        "filename": "roles/ocp_on_libvirt/tasks/redfish_setup.yml",
+        "patchSetId": 79
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-10-19T10:11:06Z",
+      "side": 1,
+      "message": "all these parameters - maybe better to add them to defaults?",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "239ced07_8a194d88",
@@ -66,6 +134,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c2242d48_48aa82c7",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-10-19T10:11:06Z",
+      "side": 1,
+      "message": "it seems like the lines 434 and 435 do the same job, or I\u0027m not seeing something?",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b0abbd75_194d2526",
         "filename": "test-runner",
         "patchSetId": 79
@@ -100,6 +185,30 @@
       "writtenOn": "2023-10-19T09:21:08Z",
       "side": 1,
       "message": "is this new argument compatible with the default configuration we had before? (so, not to use sushy tools). Have you tested it?",
+      "range": {
+        "startLine": 550,
+        "startChar": 36,
+        "endLine": 550,
+        "endChar": 93
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff62f34d_08eaad69",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2023-10-19T10:11:06Z",
+      "side": 1,
+      "message": "I have the same question here. Do we require already DCI_VAULT_CLIENT by default?",
+      "parentUuid": "7db569be_34f661d6",
       "range": {
         "startLine": 550,
         "startChar": 36,
