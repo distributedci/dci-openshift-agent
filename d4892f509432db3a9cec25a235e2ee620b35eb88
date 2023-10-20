@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c150a49_a751d05b",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-20T13:53:06Z",
+      "side": 1,
+      "message": "I\u0027m curious, is the absence of this SELinux option affecting current deployments?\nMy concern is that if provision_cache_store is provided there might be other files there, it\u0027s not like we create the path so we can set the privileges we want, I recall a similar discussion like this in the past, Maybe @Tony Garcia do you remember?",
+      "revId": "d4892f509432db3a9cec25a235e2ee620b35eb88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
