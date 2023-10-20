@@ -43,7 +43,6 @@ oc_tool_path: "{{ dci_cluster_configs_dir }}/oc"
 dci_prepare_cnf: false
 enable_cnv: false
 enable_odf: false
-enable_ocs: false
 enable_acm: false
 enable_nfd: false
 storage_cluster: false
