@@ -92,7 +92,7 @@
       state: started
       publish_all: true
       volumes:
-        - "{{ cache_dir }}:/var/www/html"
+        - "{{ cache_dir }}:/var/www/html:Z"
     register: aw_container
     delegate_to: localhost
 
