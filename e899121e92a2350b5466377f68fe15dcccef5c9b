@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e4d43f5_d13bf75e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-20T06:47:37Z",
+      "side": 1,
+      "message": "Hi Beto, some questions from my side",
+      "revId": "e899121e92a2350b5466377f68fe15dcccef5c9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c0c61b0_6456932b",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-20T06:47:37Z",
+      "side": 1,
+      "message": "this should be in line 285, right?",
+      "range": {
+        "startLine": 287,
+        "startChar": 0,
+        "endLine": 287,
+        "endChar": 219
+      },
+      "revId": "e899121e92a2350b5466377f68fe15dcccef5c9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "940e7ec3_7c5c0953",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-20T06:47:37Z",
+      "side": 1,
+      "message": "If enable_ocs has been removed from the README, should we maintain it? Or should we delete it too? (also in group_vars/all)",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 25
+      },
+      "revId": "e899121e92a2350b5466377f68fe15dcccef5c9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
