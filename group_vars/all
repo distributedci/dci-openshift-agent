@@ -53,7 +53,6 @@ enable_clusterlogging: false
 enable_perf_addon: false
 enable_sriov: false
 enable_elasticsearch: false
-enable_lso: false
 enable_nfs_storage: false
 enable_mlb: false
 enable_nmstate: false
