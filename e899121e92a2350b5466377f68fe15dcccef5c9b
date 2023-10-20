@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0da7d3a2_74881a4d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-20T22:15:40Z",
+      "side": 1,
+      "message": "Please disregard my comment about ODF and LSO, LSO is not installed automatically by ODF, so as our cluster based in Local storage it must be enabled explicitly",
+      "parentUuid": "f1419e19_27ea0934",
+      "revId": "e899121e92a2350b5466377f68fe15dcccef5c9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c0c61b0_6456932b",
