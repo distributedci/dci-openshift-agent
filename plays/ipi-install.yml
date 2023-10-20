@@ -93,6 +93,7 @@
       publish_all: true
       volumes:
         - "{{ cache_dir }}:/var/www/html"
+      privileged: yes
     register: aw_container
     delegate_to: localhost
 
