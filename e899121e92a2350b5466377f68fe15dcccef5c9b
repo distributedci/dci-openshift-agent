@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1419e19_27ea0934",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-20T20:17:37Z",
+      "side": 1,
+      "message": "I wasn\u0027t sure if LSO could be configured without OCS but that seems to be the case. So, I put it back in its section. I have observed that this operator does not support 2 subscriptions at the same time, so it can be enabled only if ODF is not.\n\nRegarding OCS, I was trying to keep support for users already using only enable_ocs, but yeah.. let\u0027s just use enable_odf",
+      "parentUuid": "2f9d445b_5e624b76",
+      "revId": "e899121e92a2350b5466377f68fe15dcccef5c9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c0c61b0_6456932b",
@@ -58,6 +76,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "51dedb8c_2efbf694",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-20T20:17:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4c0c61b0_6456932b",
+      "range": {
+        "startLine": 287,
+        "startChar": 0,
+        "endLine": 287,
+        "endChar": 219
+      },
+      "revId": "e899121e92a2350b5466377f68fe15dcccef5c9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "940e7ec3_7c5c0953",
@@ -71,6 +113,30 @@
       "writtenOn": "2023-10-20T06:47:37Z",
       "side": 1,
       "message": "If enable_ocs has been removed from the README, should we maintain it? Or should we delete it too? (also in group_vars/all)",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 25
+      },
+      "revId": "e899121e92a2350b5466377f68fe15dcccef5c9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27c00930_1fbae093",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-20T20:17:37Z",
+      "side": 1,
+      "message": "I was thinking of removing it from the Readme but keeping the logic with the same value as enable_odf for backward compatibility. \n\nBut is not a big deal removing it, I think we are the main user for this in Bos2-",
+      "parentUuid": "940e7ec3_7c5c0953",
       "range": {
         "startLine": 36,
         "startChar": 0,
