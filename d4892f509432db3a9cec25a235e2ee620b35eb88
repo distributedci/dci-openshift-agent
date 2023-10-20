@@ -16,6 +16,24 @@
       "message": "I\u0027m curious, is the absence of this SELinux option affecting current deployments?\nMy concern is that if provision_cache_store is provided there might be other files there, it\u0027s not like we create the path so we can set the privileges we want, I recall a similar discussion like this in the past, Maybe @Tony Garcia do you remember?",
       "revId": "d4892f509432db3a9cec25a235e2ee620b35eb88",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "126212a4_c8381555",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-20T18:56:59Z",
+      "side": 1,
+      "message": "We had this issue in the past, :Z will cause issues when there are two or more jobs running in the same cached version.\n\nWe had this issue in our Lab and also a partner had it, since, it has been documented that because we don\u0027t have the guarantee that the cache_dir is created by us we won\u0027t change it\u0027s context.\n\nThe requirement is to set the type before hand[1]\n\n\u003e NOTE: If you choose to create the provision_cache_store folder manually, make sure to set the container_file_t setype for it. This will help ensure a smooth installation of OCP nightly builds.\n\n[1] https://docs.distributed-ci.io/dci-openshift-agent/#inventory",
+      "parentUuid": "8c150a49_a751d05b",
+      "revId": "d4892f509432db3a9cec25a235e2ee620b35eb88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
