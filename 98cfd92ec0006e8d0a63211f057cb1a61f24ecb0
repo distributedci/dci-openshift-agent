@@ -33,6 +33,24 @@
       "message": "nit: Could you use a list of valid major versions instead? e.g.\n\n```\n- \u0027\"major\" in [\"4.13\", \"4.12\"]\u0027\n```",
       "revId": "98cfd92ec0006e8d0a63211f057cb1a61f24ecb0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09fa7ac1_b8646742",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-10-23T13:16:24Z",
+      "side": 1,
+      "message": "err..\n```\n- major in [\"4.13\", \"4.12\"]\n```",
+      "parentUuid": "4089301c_fb75ed42",
+      "revId": "98cfd92ec0006e8d0a63211f057cb1a61f24ecb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
