@@ -51,6 +51,24 @@
       "parentUuid": "4089301c_fb75ed42",
       "revId": "98cfd92ec0006e8d0a63211f057cb1a61f24ecb0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "392b2670_cbc8d002",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-23T16:11:36Z",
+      "side": 1,
+      "message": "Sure, this looks simpler. added in patch set 2",
+      "parentUuid": "09fa7ac1_b8646742",
+      "revId": "98cfd92ec0006e8d0a63211f057cb1a61f24ecb0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
