@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "7dccedbd_6b018201",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-23T15:30:50Z",
+      "side": 1,
+      "message": "Thanks",
+      "parentUuid": "804d28aa_1a815859",
+      "revId": "ec58925794762151f45a266789085b5ff9d6191c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "08468505_b288c4ff",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 7
@@ -65,6 +83,30 @@
       "writtenOn": "2023-10-23T07:22:53Z",
       "side": 1,
       "message": "do we need this variable? can it be removed?",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 12
+      },
+      "revId": "ec58925794762151f45a266789085b5ff9d6191c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28986ce1_fd77eca4",
+        "filename": "group_vars/all",
+        "patchSetId": 7
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-23T15:30:50Z",
+      "side": 1,
+      "message": "Not needed. Thanks Ramón",
+      "parentUuid": "b68b7aa9_dc29a98c",
       "range": {
         "startLine": 73,
         "startChar": 0,
