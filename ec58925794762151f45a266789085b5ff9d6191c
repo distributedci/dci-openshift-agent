@@ -33,6 +33,46 @@
       "message": "LGTM",
       "revId": "ec58925794762151f45a266789085b5ff9d6191c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6f108f8_1c72bcb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-23T07:22:53Z",
+      "side": 1,
+      "message": "Just a minor change that we still need",
+      "revId": "ec58925794762151f45a266789085b5ff9d6191c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b68b7aa9_dc29a98c",
+        "filename": "group_vars/all",
+        "patchSetId": 7
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-23T07:22:53Z",
+      "side": 1,
+      "message": "do we need this variable? can it be removed?",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 12
+      },
+      "revId": "ec58925794762151f45a266789085b5ff9d6191c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
