@@ -16,6 +16,24 @@
       "message": "out of curiosity, why this container need to be run in privileged mode? Is adding one capability not enough? https://man7.org/linux/man-pages/man7/capabilities.7.html",
       "revId": "5abd8a52d43c95579e6e49491a5d56253042eefc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecf0c991_023f6a24",
+        "filename": "plays/ipi-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-10-23T08:51:33Z",
+      "side": 1,
+      "message": "Hi Charles.\nYou\u0027re right.\nI\u0027ll try relabelling the mounted files which should also work.",
+      "parentUuid": "85d8bf49_e6d470d1",
+      "revId": "5abd8a52d43c95579e6e49491a5d56253042eefc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
