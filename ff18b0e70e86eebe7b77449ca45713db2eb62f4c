@@ -16,6 +16,23 @@
       "message": "Sorry, I found that the labels for the ocs_nodes were not processed. I had to include changes label_nodes role and to the template that generates the host file.",
       "revId": "ff18b0e70e86eebe7b77449ca45713db2eb62f4c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f6380bd_855ffa97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-10-24T01:56:39Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla",
+      "revId": "ff18b0e70e86eebe7b77449ca45713db2eb62f4c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
