@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.14-vanilla-abi openshift-vanilla:ansible_extravars\u003dassisted_deploy_repo:\"https://github.com/manurodriguez/crucible.git\" openshift-vanilla:ansible_extravars\u003dassisted_deploy_version:add-imagedigestdsources-support-414",
       "revId": "5ba73c919fd412f254df9dd2719556bd8333a527",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60bcd12a_6f001709",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-10-24T22:31:45Z",
+      "side": 1,
+      "message": "check dallas ocp-4.14-vanilla-abi",
+      "revId": "5ba73c919fd412f254df9dd2719556bd8333a527",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
