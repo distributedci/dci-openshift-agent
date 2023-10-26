@@ -1,5 +1,5 @@
 ---
-- name: "Get cluster version"
+- name: "cluster version"
   community.kubernetes.k8s_info:
     api: config.openshift.io/v1
     kind: ClusterVersion
