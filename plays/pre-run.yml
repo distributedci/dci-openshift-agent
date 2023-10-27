@@ -193,6 +193,12 @@
   include_role:
     name: redhatci.ocp.include_components
 
+- name: Count workarounds
+  dci_job:
+    id: "{{ job_id }}"
+    key: "workarounds"
+    value: "{{ dci_workarounds | length }}"
+
 - name: Append mirrors to trust bundle
   block:
     - name: Copy initial trust bundle
