@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7317cd24_4f6eaf15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2023-10-27T12:12:57Z",
+      "side": 1,
+      "message": "LGTM, I have relaunched the test by fixing the syntax of the list.",
+      "revId": "e29e9ce6dbf1408a25e01175c871d8a50dcdc5fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
