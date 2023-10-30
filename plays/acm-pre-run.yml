@@ -9,6 +9,7 @@
 
     - name: "Get Hub Image Source"
       community.kubernetes.k8s_info:
+        api_version: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('config.openshift.io/v1', 'operator.openshift.io/v1alpha1') }}"
         kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
       register: hub_is
 
@@ -18,30 +19,23 @@
       set_fact:
         hub_registry: "docker://{{ hub_is.resources[0] | json_query(hub_query) | flatten | first }}"
 
-    - name: "Get hub cluster config"
-      community.kubernetes.k8s_info:
-        kind: ConfigMap
-        namespace: kube-system
-        name: cluster-config-v1
-        kubeconfig: "{{ hub_kubeconfig_path }}"
-      register: hub_config
-
-    - name: "Set webserver URL and hub mirrors"
+    - name: "Set hub mirrors"
       vars:
-        cluster_install_info: |-
-          {{ ( hub_config.resources[0].data |
-          from_yaml )['install-config'] |
-          from_yaml }}
         hub_mirrors_type: |-
           {{ idms_res.resources is defined and idms_res.resources |
              length |
             ternary('imageDigestSources', 'imageContentSources')
           }}
       set_fact:
-        hub_webserver: "{{ cluster_install_info.platform.baremetal.bootstrapOSImage | urlsplit('scheme') }}://{{ cluster_install_info.platform.baremetal.bootstrapOSImage | urlsplit('netloc') }}"
         hub_mirrors: "{{ cluster_install_info | json_query(hub_mirrors_type) }}"
       when:
         - hub_config | length
+
+    - name: "Validate webserver_cache variable is defined"
+      assert:
+        that:
+          - webserver_cache | string
+          - (webserver_cache | urlsplit('scheme')) in ('http', 'https',)
   when:
     - dci_disconnected | default(false) | bool
     - acm_cluster_type == 'sno'
@@ -124,8 +118,8 @@
 
     - name: "Set facts for install via ACM - disconnected"
       set_fact:
-        acm_metal_iso_location: "{{ hub_webserver }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
-        acm_rootfs_url: "{{ hub_webserver }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
+        acm_metal_iso_location: "{{ webserver_cache }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
+        acm_rootfs_url: "{{ webserver_cache }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
         acm_release_image: "{{ hub_registry | urlsplit('netloc') }}/{{ 'ocp-'+version_core+'/'+version }}:{{ version }}"
         dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
 
