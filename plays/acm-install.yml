@@ -16,6 +16,7 @@
     acm_root_fs_url: "{{ hostvars.localhost.acm_rootfs_url }}"
     acm_disconnected: "{{ dci_disconnected | default(False) | bool }}"
     acm_user_registry: "{{ acm_registries }}"
+    acm_webserver_cache: "{{ hostvars.localhost.webserver_cache | default(None) }}"
   include_role:
     name: redhatci.ocp.acm_sno
     apply:
