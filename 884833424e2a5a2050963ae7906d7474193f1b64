@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95d348f8_f5a6f016",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-10-31T10:57:31Z",
+      "side": 1,
+      "message": "Manny, can you test assisted on BOS2 to confirm it\u0027s also fine there?",
+      "revId": "884833424e2a5a2050963ae7906d7474193f1b64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
