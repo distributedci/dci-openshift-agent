@@ -88,6 +88,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "16dae7fd_bf04af58",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 79
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-02T15:34:45Z",
+      "side": 1,
+      "message": "it\u0027s a hardcoded value.\n\nIdeally, we would define the variable when we included the setup_sushytools roles. The problem with this defintion is the role would ignore the values.\n\nInstead, the role assesses each host variable individually, thus the need of having it in the inventory.\n\nI\u0027m currently trying a different approach to have the variable defined for each host in the inventory, but I believe I tested it in the past and it didn\u0027t work.",
+      "parentUuid": "ecdf0da5_ef6bb1ae",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cd0e3cff_d5c0e36d",
         "filename": "roles/ocp_on_libvirt/tasks/redfish_setup.yml",
         "patchSetId": 79
@@ -99,6 +117,24 @@
       "writtenOn": "2023-10-19T10:11:06Z",
       "side": 1,
       "message": "should we remove or uncomment this line?",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f5884eb_88d88ac7",
+        "filename": "roles/ocp_on_libvirt/tasks/redfish_setup.yml",
+        "patchSetId": 79
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-02T15:34:45Z",
+      "side": 1,
+      "message": "This role was moved to the ansible collection.\n\nI\u0027ll remove the comment mark (#) there and leave the \"force: true\" line as it originally was.",
+      "parentUuid": "cd0e3cff_d5c0e36d",
       "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -116,6 +152,24 @@
       "writtenOn": "2023-10-19T10:11:06Z",
       "side": 1,
       "message": "all these parameters - maybe better to add them to defaults?",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bfb5ff3f_df802fa8",
+        "filename": "roles/ocp_on_libvirt/tasks/redfish_setup.yml",
+        "patchSetId": 79
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-02T15:34:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d34446b_0e45ce70",
       "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -179,6 +233,24 @@
       "writtenOn": "2023-10-19T10:11:06Z",
       "side": 1,
       "message": "it seems like the lines 434 and 435 do the same job, or I\u0027m not seeing something?",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a23efbc_559d57ec",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-02T15:34:45Z",
+      "side": 1,
+      "message": "Please, see if the new version looks better to you.",
+      "parentUuid": "c2242d48_48aa82c7",
       "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
