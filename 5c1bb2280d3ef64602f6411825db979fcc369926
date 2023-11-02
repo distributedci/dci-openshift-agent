@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59001190_f14ed67e",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-02T18:52:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da44d5b4_69399ea6",
+      "revId": "5c1bb2280d3ef64602f6411825db979fcc369926",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4cddb4c6_23e8ac34",
@@ -65,6 +83,24 @@
       "writtenOn": "2023-11-02T18:33:27Z",
       "side": 1,
       "message": "IMO, we can omit the rescue and the fail, since we are going to fail at the end it would be better to fail in the right location (control plane or compute nodes) and probably just rename the tasks to be more meaningful on what\u0027s happening, e.g. \"Check control plane nodes matches requested\" or something along those lines.\n\nPerhaps we can reduce the blocks after all 😎",
+      "revId": "5c1bb2280d3ef64602f6411825db979fcc369926",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36c16eda_a814689c",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-02T18:52:21Z",
+      "side": 1,
+      "message": "Yes, done in patch-set 2, initially I preserved the fail message to not change much the tasks, but makes sense now to rename them and if it fails we\u0027ll know which group of nodes have the problem. I removed the blocks I introduced too.",
+      "parentUuid": "4cddb4c6_23e8ac34",
       "revId": "5c1bb2280d3ef64602f6411825db979fcc369926",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
