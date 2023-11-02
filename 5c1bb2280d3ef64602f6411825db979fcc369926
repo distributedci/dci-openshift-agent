@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15e4b8fc_15d05cb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-02T18:19:55Z",
+      "side": 1,
+      "message": "More details please see comment from Nov 2nd 2023 in  https://issues.redhat.com/browse/CILAB-1100",
+      "revId": "5c1bb2280d3ef64602f6411825db979fcc369926",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
