@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61fb26ff_54c5b516",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-06T20:06:12Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla tnf-test-cnf preflight",
+      "revId": "dd4d9df41efaa2fa4367a81ec3b69e1b09ad48b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
