@@ -197,6 +197,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c544b0aa_2bc1e758",
+        "filename": "samples/ocp_on_libvirt/inventory/hosts",
+        "patchSetId": 79
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-07T14:16:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "239ced07_8a194d88",
+      "range": {
+        "startLine": 14,
+        "startChar": 11,
+        "endLine": 14,
+        "endChar": 20
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f9d78d93_f6779fb7",
@@ -210,6 +234,30 @@
       "writtenOn": "2023-10-19T09:21:08Z",
       "side": 1,
       "message": "whitespace",
+      "range": {
+        "startLine": 14,
+        "startChar": 20,
+        "endLine": 14,
+        "endChar": 24
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "904b3c96_6d1de60f",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 79
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-07T14:16:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f9d78d93_f6779fb7",
       "range": {
         "startLine": 14,
         "startChar": 20,
@@ -278,6 +326,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "50b776f4_f96f82a8",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 549,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-07T14:16:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0abbd75_194d2526",
+      "range": {
+        "startLine": 549,
+        "startChar": 0,
+        "endLine": 549,
+        "endChar": 12
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7db569be_34f661d6",
@@ -315,6 +387,30 @@
       "side": 1,
       "message": "I have the same question here. Do we require already DCI_VAULT_CLIENT by default?",
       "parentUuid": "7db569be_34f661d6",
+      "range": {
+        "startLine": 550,
+        "startChar": 36,
+        "endLine": 550,
+        "endChar": 93
+      },
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7adf1c0_07c5f0e1",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-07T14:16:02Z",
+      "side": 1,
+      "message": "I\u0027ll run an IPMI based deployment, but the use of dci-ansible is needed in order to set up the Red Hat subscription in the RHEL based provisioning host.",
+      "parentUuid": "ff62f34d_08eaad69",
       "range": {
         "startLine": 550,
         "startChar": 36,
