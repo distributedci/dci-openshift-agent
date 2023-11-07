@@ -16,6 +16,41 @@
       "message": "Tony, the issue started happening again in the New Mexico lab after applying the chcon command as per the documentation and abandoning this CR.\n\nI read that, by using :z instead of :Z we allow multiple container to share the access on the mounted volume.\n\nWould that not be a valid option.\n\nActually, after running a manual test with :z, the issue seems to have disappeared on its own.\n\nI\u0027m comparing the NM setup with Dallas and Bos2. Bos2, however, is not a good reference since SELinux run in permissive mode there.\n\nComparing the previous labels in NM, with the current ones and those in Dallas, this is what I get:\n\n```\ndrwxr-xr-x. 2 dci-openshift-agent dci-openshift-agent unconfined_u:object_r:container_file_t:s0:c1022,c1023 4.0K Nov  1 14:54 4.15.0-0.nightly-2023-11-01-080931\n\ndrwxr-xr-x. 2 dci-openshift-agent dci-openshift-agent system_u:object_r:container_file_t:s0 4.0K Nov  1 14:54 4.15.0-0.nightly-2023-11-01-080931\n\ndrwxr-xr-x.  2 dciteam dciteam unconfined_u:object_r:container_file_t:s0  4.0K Nov  1 23:58 4.15.0-0.nightly-2023-11-01-080931                                                                                      \n```\n\nSo I see the label c1022,c1023 applied to the failing NM setup. Do you think this could have been the cause?",
       "revId": "5923cb698e979a6ccb1c4a105685b2b781eb200a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec90f3c2_f2a1fe54",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-07T19:46:27Z",
+      "side": 1,
+      "message": "I\u0027ll share an example regarding this problem, what you\u0027re describing sounds like something or someone changed the level in those files that, I assume, were cleaned up.",
+      "revId": "5923cb698e979a6ccb1c4a105685b2b781eb200a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2f6508f_73d5e2f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-07T19:46:27Z",
+      "side": 1,
+      "message": "Yes, in the end we want to avoid changing other environments as SELinux could be configured differently as you found.\n\nWhen some other partners and also when we saw these issues, by cleaning up and preparing the directories were enough to avoid the issue again.",
+      "parentUuid": "b63d2bfd_944e0ddd",
+      "revId": "5923cb698e979a6ccb1c4a105685b2b781eb200a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
