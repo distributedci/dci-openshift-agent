@@ -33,6 +33,23 @@
       "message": "Thanks",
       "revId": "eef5ff9341bdd5749f7f8de924b724f67b4877e9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bf23009_bc728578",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-07T22:25:21Z",
+      "side": 1,
+      "message": "First EUS from 4.12.42 -\u003e 4.13.21 -\u003e 4.14.1 validated 🎉",
+      "revId": "eef5ff9341bdd5749f7f8de924b724f67b4877e9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
