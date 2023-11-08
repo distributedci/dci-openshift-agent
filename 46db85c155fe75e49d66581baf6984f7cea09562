@@ -104,6 +104,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a810c8a8_ddcd9c41",
+        "filename": "docs/ocp_on_libvirt.md",
+        "patchSetId": 79
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-08T11:57:11Z",
+      "side": 1,
+      "message": "After some testing, we were able to avoid the need of setting the variables vendor, bmc_user and bmc_password in the inventory.\n\nNow, answering the initial question from Tania, the vendor variable must be set to \"kvm\" for the baremetal deploy roles to set the right redfish addressing to the BMCs in the install-config file. Other redfish addressing schemas include HP and Dell servers.",
+      "parentUuid": "16dae7fd_bf04af58",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cd0e3cff_d5c0e36d",
@@ -299,6 +317,24 @@
       "side": 1,
       "message": "Please, see if the new version looks better to you.",
       "parentUuid": "c2242d48_48aa82c7",
+      "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46d65856_e887aa8f",
+        "filename": "test-runner",
+        "patchSetId": 79
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-08T11:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a23efbc_559d57ec",
       "revId": "46db85c155fe75e49d66581baf6984f7cea09562",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
