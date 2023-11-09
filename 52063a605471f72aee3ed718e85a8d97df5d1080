@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "52063a605471f72aee3ed718e85a8d97df5d1080",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04f336a7_2f006991",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 84
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-09T09:27:26Z",
+      "side": 1,
+      "message": "The following is a successful test run exercising the target use case:\n\n- redfish enabled\n- virtual media enabled\n\ndci-check-change : SUCCESS tested on libvirt:virt\nlibvirt -\u003e success: https://www.distributed-ci.io/jobs/cf55f5e4-261f-43e6-be95-6c1bbfa95032/jobStates\ncontrol_plane_example -\u003e success: https://www.distributed-ci.io/jobs/4aa834e4-bf86-4cd3-8999-c6d072b4a711/jobStates",
+      "revId": "52063a605471f72aee3ed718e85a8d97df5d1080",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
