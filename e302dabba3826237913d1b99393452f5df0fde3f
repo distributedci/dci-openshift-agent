@@ -16,6 +16,57 @@
       "message": "recheck",
       "revId": "e302dabba3826237913d1b99393452f5df0fde3f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bb500d7_345ff647",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 85
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-10T11:11:57Z",
+      "side": 1,
+      "message": "Hi Nacho. For me, the code looks fine, but I\u0027m still missing some context about the tests you\u0027re launching, and why we\u0027re having recurrent failures in ocp_on_libvirt right now.\n\nI\u0027d say we need to confirm that:\n- This code does not affect to the current way of launching ocp_on_libvirt\n- When testing the new way of launching it, confirm it\u0027s working",
+      "revId": "e302dabba3826237913d1b99393452f5df0fde3f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92311d4b_8360a261",
+        "filename": "test-runner",
+        "patchSetId": 85
+      },
+      "lineNbr": 549,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-10T11:11:57Z",
+      "side": 1,
+      "message": "We need to confirm that this command works with the current way of launching ocp_on_libvirt. Is this done?",
+      "revId": "e302dabba3826237913d1b99393452f5df0fde3f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4ad6634_8291fbd1",
+        "filename": "test-runner",
+        "patchSetId": 85
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-10T11:11:57Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "e302dabba3826237913d1b99393452f5df0fde3f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
