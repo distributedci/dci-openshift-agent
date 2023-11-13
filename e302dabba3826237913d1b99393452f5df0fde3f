@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a965545b_0786f323",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 85
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2023-11-13T10:48:43Z",
+      "side": 1,
+      "message": "Hi Ramón,\n\nPrecisely when testing the backwards compatibility of the change it started failing, so at a first glance it looks like the change breaks the current use case.\n\nI\u0027ll keep investigating.",
+      "parentUuid": "5bb500d7_345ff647",
+      "revId": "e302dabba3826237913d1b99393452f5df0fde3f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92311d4b_8360a261",
