@@ -16,6 +16,23 @@
       "message": "My bad, lets try again 😜",
       "revId": "2f1bb0b9adeb22637c7808b0bbdb0c844e6aee7f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8ec1ac2_233352df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-14T13:38:40Z",
+      "side": 1,
+      "message": "LGTM, thanks!",
+      "revId": "2f1bb0b9adeb22637c7808b0bbdb0c844e6aee7f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
