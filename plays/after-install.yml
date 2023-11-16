@@ -103,6 +103,23 @@
   when:
     - acm_cluster_type | default('') not in ['hypershift', 'sno']
 
+- name: "Modify the number of unavailable workers to 2 when >= 4 are available"
+  vars:
+    compute_nodes_count: "{{ compute_nodes.resources | length }}"
+  community.kubernetes.k8s:
+    definition:
+      apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfigPool
+      metadata:
+        name: worker
+      spec:
+        maxUnavailable: 2
+  when:
+    - increase_unavailable_workers | default(True) | bool
+    - install_type is undefined or install_type != 'sno'
+    - acm_cluster_type | default('') not in ['hypershift', 'sno']
+    - compute_nodes_count is defined and compute_nodes_count | int  >= 4
+
 - name: "Create a DCI component for the rhcos_kernel"
   block:
     - name: "Create component with the rhcos kernel in use"
