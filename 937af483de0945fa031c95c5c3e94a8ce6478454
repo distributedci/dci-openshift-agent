@@ -305,6 +305,23 @@
       "message": "check workflow tnf-test-cnf-green",
       "revId": "937af483de0945fa031c95c5c3e94a8ce6478454",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7df1e38f_ea71c4cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2023-11-17T07:46:20Z",
+      "side": 1,
+      "message": "check dallas ocp-4.13-vanilla",
+      "revId": "937af483de0945fa031c95c5c3e94a8ce6478454",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
