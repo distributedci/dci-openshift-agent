@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "429dcd90_17f1c78c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-17T00:03:58Z",
+      "side": 1,
+      "message": "In general looks good, happy to see this is finally becoming a role!!\n\nCouple of minor things.",
+      "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "694f72aa_84900f17",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-17T00:03:58Z",
+      "side": 1,
+      "message": "typo: images -\u003e image",
+      "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95fc07d0_d864b256",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-17T00:03:58Z",
+      "side": 1,
+      "message": "I don\u0027t see the repotags are used later, just the exit code, would it make sense to compare the output of the repo tag to dci_prune_index to make sure the right image was actually built locally?",
+      "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
