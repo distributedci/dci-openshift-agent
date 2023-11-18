@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1352e486_489c06d4",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-18T02:27:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "694f72aa_84900f17",
+      "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "95fc07d0_d864b256",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-11-17T00:03:58Z",
       "side": 1,
       "message": "I don\u0027t see the repotags are used later, just the exit code, would it make sense to compare the output of the repo tag to dci_prune_index to make sure the right image was actually built locally?",
+      "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22c97d25_ad65fdbc",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-18T02:27:01Z",
+      "side": 1,
+      "message": "Refactored the code and removed the ignore errors. This part is to allow the fallback in case the role is not able to build the image",
+      "parentUuid": "95fc07d0_d864b256",
       "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
