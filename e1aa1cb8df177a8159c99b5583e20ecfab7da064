@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.13-vanilla",
       "revId": "e1aa1cb8df177a8159c99b5583e20ecfab7da064",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a79f4342_9c073317",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-18T02:52:32Z",
+      "side": 1,
+      "message": "Nice, I see that we are 9 mins faster... LGTM",
+      "revId": "e1aa1cb8df177a8159c99b5583e20ecfab7da064",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
