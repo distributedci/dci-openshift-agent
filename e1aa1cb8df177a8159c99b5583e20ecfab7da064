@@ -33,6 +33,24 @@
       "message": "Nice, I see that we are 9 mins faster... LGTM",
       "revId": "e1aa1cb8df177a8159c99b5583e20ecfab7da064",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bc48309_ce955194",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-20T14:18:38Z",
+      "side": 1,
+      "message": "Thanks, and the Wait for MCP after PAO reboot took only 1817s. I\u0027ll also need this during upgrades, so I\u0027m merging this and prepare a new PR and more testing.",
+      "parentUuid": "a79f4342_9c073317",
+      "revId": "e1aa1cb8df177a8159c99b5583e20ecfab7da064",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
