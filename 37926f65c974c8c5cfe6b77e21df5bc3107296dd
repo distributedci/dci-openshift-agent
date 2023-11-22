@@ -86,6 +86,24 @@
       "parentUuid": "95fc07d0_d864b256",
       "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87c21bb6_e6a58e42",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-22T17:17:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "22c97d25_ad65fdbc",
+      "revId": "37926f65c974c8c5cfe6b77e21df5bc3107296dd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
