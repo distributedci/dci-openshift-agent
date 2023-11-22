@@ -50,6 +50,23 @@
       "message": "last job failed in the ocp install not related to this change, retrying again:\n\ncheck dallas ocp-4.13-acm-hub",
       "revId": "259c8f2485d383255face1a5e13350b97a083b9b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae7902c2_d9195733",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-22T18:27:53Z",
+      "side": 1,
+      "message": "last two jobs failed in cluster3, it times out to contact the ILO from master-0, the cluster is deployed but the master-0 is taking almost double the time so the install goes over the 1h, I reset the ILO, trying again.\n\ncheck dallas ocp-4.13-acm-hub",
+      "revId": "259c8f2485d383255face1a5e13350b97a083b9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
