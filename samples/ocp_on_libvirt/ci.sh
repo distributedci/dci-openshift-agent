@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2021-2022 Red Hat, Inc.
+# Copyright (C) 2021-2023 Red Hat, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
@@ -20,13 +20,14 @@ PROJECTS=(
     ansible-collection-community-kubernetes
     ansible-collection-community-libvirt
     ansible-collection-containers-podman
+    ansible-collection-redhatci-ocp
     ansible-role-dci-podman
     ansible-role-dci-sync-registry
     dci-ansible
     dci-openshift-agent
     dci-openshift-app-agent
-    python-dciclient
     python-dciauth
+    python-dciclient
 )
 
 unschedule_gerrit_change() {
