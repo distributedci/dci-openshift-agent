@@ -135,6 +135,23 @@
       "message": "Finally the clusters cooperated, LGTM!",
       "revId": "259c8f2485d383255face1a5e13350b97a083b9b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4325ad19_a6912584",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-23T14:33:23Z",
+      "side": 1,
+      "message": "Thanks for the help Manuel",
+      "revId": "259c8f2485d383255face1a5e13350b97a083b9b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
