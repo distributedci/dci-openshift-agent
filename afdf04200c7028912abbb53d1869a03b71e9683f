@@ -33,6 +33,24 @@
       "message": "I wonder if we could pass \"-vvvvv\" to the \"ansible-galaxy collection install\" command, so we could see more details of why it fails to find the redhatci.ocp collection",
       "revId": "afdf04200c7028912abbb53d1869a03b71e9683f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79e1003d_b019ae0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2023-11-23T17:05:31Z",
+      "side": 1,
+      "message": "\u003e I wonder if we could pass \"-vvvvv\" to the \"ansible-galaxy collection install\" command, so we could see more details of why it fails to find the redhatci.ocp collection\n\ngood idea. trying to do it with the depends-on change.",
+      "parentUuid": "9d609797_b40e1eb2",
+      "revId": "afdf04200c7028912abbb53d1869a03b71e9683f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
