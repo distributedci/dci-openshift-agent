@@ -84,6 +84,24 @@
       "message": "I see the job passed in Dallas, but not libvirt, I wonder if its related to resources",
       "revId": "b6124c627f6173831b0b253a204ee1428e5921ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b12e1785_54c29c7b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-23T18:48:23Z",
+      "side": 1,
+      "message": "I updated the wait and checks, seems like it helped. Thanks!",
+      "parentUuid": "e3fc7e6d_c6ec552a",
+      "revId": "b6124c627f6173831b0b253a204ee1428e5921ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
