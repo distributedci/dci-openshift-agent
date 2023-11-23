@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "afdf04200c7028912abbb53d1869a03b71e9683f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d609797_b40e1eb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-23T16:52:18Z",
+      "side": 1,
+      "message": "I wonder if we could pass \"-vvvvv\" to the \"ansible-galaxy collection install\" command, so we could see more details of why it fails to find the redhatci.ocp collection",
+      "revId": "afdf04200c7028912abbb53d1869a03b71e9683f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
