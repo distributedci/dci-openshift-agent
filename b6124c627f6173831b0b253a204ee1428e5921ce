@@ -67,6 +67,23 @@
       "message": "check dallas ocp-4.15-vanilla",
       "revId": "b6124c627f6173831b0b253a204ee1428e5921ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3fc7e6d_c6ec552a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-23T14:26:22Z",
+      "side": 1,
+      "message": "I see the job passed in Dallas, but not libvirt, I wonder if its related to resources",
+      "revId": "b6124c627f6173831b0b253a204ee1428e5921ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
