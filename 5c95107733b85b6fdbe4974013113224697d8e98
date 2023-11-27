@@ -16,6 +16,114 @@
       "message": "check dallas ocp-4.15-vanilla openshift-vanilla:ansible_extravars\u003doperator_catalog_dir:/mnt/backup/pre-ga/latest",
       "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dedb310b_2d567739",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-27T09:30:19Z",
+      "side": 1,
+      "message": "Some comments from my side",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a20da69_7388d809",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-27T09:30:19Z",
+      "side": 1,
+      "message": "Maybe, I\u0027d include a comment to comment that this is an output generated from mirror_from_directory. Maybe you can put it at the beginning, when calling to that role, as this variable is used more than once here. This is just to remind that the variable comes from there.",
+      "range": {
+        "startLine": 15,
+        "startChar": 13,
+        "endLine": 15,
+        "endChar": 34
+      },
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7b3f4f2_502d869f",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-27T09:30:19Z",
+      "side": 1,
+      "message": "Here, you\u0027re checking that mdf_image_source_file is defined. Don\u0027t you need the same check for the case where OCP \u003e\u003d 4.14?",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2b794e1_7923ec21",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-27T09:30:19Z",
+      "side": 1,
+      "message": "Same, I\u0027d write a comment here to say that mdf_catalog_source_file comes from the role executed at the beginning",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45b19ddf_a0f9e59c",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-27T09:30:19Z",
+      "side": 1,
+      "message": "Same, I\u0027d write a comment here to say that mdf_manifests_dir comes from the role executed at the beginning",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1ada55f_77a544f3",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-27T09:30:19Z",
+      "side": 1,
+      "message": "If catalog-from-file playbook is already running this role, do we need to run the validation playbook here? it\u0027s executed twice",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
