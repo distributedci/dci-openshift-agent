@@ -60,6 +60,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "43a77d14_271a7f8b",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-27T19:14:22Z",
+      "side": 1,
+      "message": "Added that comment after including the role",
+      "parentUuid": "8a20da69_7388d809",
+      "range": {
+        "startLine": 15,
+        "startChar": 13,
+        "endLine": 15,
+        "endChar": 34
+      },
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b7b3f4f2_502d869f",
         "filename": "plays/catalog-from-file.yml",
         "patchSetId": 4
@@ -71,6 +95,24 @@
       "writtenOn": "2023-11-27T09:30:19Z",
       "side": 1,
       "message": "Here, you\u0027re checking that mdf_image_source_file is defined. Don\u0027t you need the same check for the case where OCP \u003e\u003d 4.14?",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4d00fa9_30a8ea29",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-27T19:14:22Z",
+      "side": 1,
+      "message": "Thanks, I updated the conditions. ICPS if \u003c 4.14, IDMS \u003e\u003d 4.14",
+      "parentUuid": "b7b3f4f2_502d869f",
       "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -92,6 +134,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c07f3cf1_17ccf4b2",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-27T19:14:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a2b794e1_7923ec21",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "45b19ddf_a0f9e59c",
@@ -109,6 +169,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "39033c10_5e165e46",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-27T19:14:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45b19ddf_a0f9e59c",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e1ada55f_77a544f3",
@@ -122,6 +200,24 @@
       "writtenOn": "2023-11-27T09:30:19Z",
       "side": 1,
       "message": "If catalog-from-file playbook is already running this role, do we need to run the validation playbook here? it\u0027s executed twice",
+      "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9164c25e_41a3c9d9",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-27T19:14:22Z",
+      "side": 1,
+      "message": "Yeah, I think it is good to execute it on pre-run to validate before deploying the cluster that we have all the elements and do not detect issues too late (after cluster deployment). Thanks",
+      "parentUuid": "e1ada55f_77a544f3",
       "revId": "5c95107733b85b6fdbe4974013113224697d8e98",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
