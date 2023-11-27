@@ -58,6 +58,7 @@ enable_mlb: false
 enable_nmstate: false
 enable_gitops: false
 enable_minio: false
+enable_nro: false
 # Lists of packages for each operator
 cnv_operator:
   - kubevirt-hyperconverged
@@ -95,6 +96,8 @@ nmstate_operators:
   - kubernetes-nmstate-operator
 gitops_operator:
   - openshift-gitops-operator
+nro_operator:
+  - numaresources-operator
 dci_local_registry: |-
   {{ local_registry_host | default('') }}
   {%- if local_registry_port is defined %}
