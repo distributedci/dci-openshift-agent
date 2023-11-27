@@ -537,6 +537,21 @@
     - enable_acm | bool
     - enable_gitops | bool
 
+# NUMA Resources Operator - GA from 4.12.24
+- name: "deploy-operators : NUMA Resources Operator"
+  include_role:
+    name: redhatci.ocp.olm_operator
+  vars:
+    operator: numaresources-operator
+    source: "{{ opm_catalog_source_name }}"
+    namespace: openshift-numaresources
+    operator_group_spec:
+      targetNamespaces:
+        - openshift-numaresources
+  when:
+    - enable_nro | bool
+    - ocp_version is version("4.12.24", ">=")
+
 - name: "deploy-operators : All operators from a catalog"
   include_tasks: all-from-catalog.yml
   when:

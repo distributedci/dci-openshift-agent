@@ -76,6 +76,12 @@
   when:
     - enable_mlb | bool
 
+- name: "Add operators if enable_nro"
+  set_fact:
+    mirror_list: "{{ mirror_list + nro_operator }}"
+  when:
+    - enable_nro | bool
+
 - name: "Add operators if enable_nmstate"
   set_fact:
     mirror_list: "{{ mirror_list + nmstate_operators }}"
