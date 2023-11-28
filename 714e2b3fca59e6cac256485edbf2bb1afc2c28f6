@@ -33,6 +33,23 @@
       "message": "Thanks",
       "revId": "714e2b3fca59e6cac256485edbf2bb1afc2c28f6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "693c0d97_90daa3f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-28T00:36:55Z",
+      "side": 1,
+      "message": "Using this change to test another request from the same user related to https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/30",
+      "revId": "714e2b3fca59e6cac256485edbf2bb1afc2c28f6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
