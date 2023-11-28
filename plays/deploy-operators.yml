@@ -565,4 +565,9 @@
   when:
     - dci_ocp_custom_resources is defined
     - dci_ocp_custom_resources is list
+
+- name: "Setup NUMA Resource Operator"
+  include_tasks: plays/setup-nro.yml
+  when:
+    - enable_nro | bool
 ...
