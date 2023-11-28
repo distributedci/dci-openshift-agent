@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6cece0d_077a11a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-28T09:45:22Z",
+      "side": 1,
+      "message": "Change looks fine, according to the last test launched in https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/30. But in the last change tested there, mongodb operator was not launched, whereas, in the libvirt job launched in this change and that is failing: https://www.distributed-ci.io/jobs/13d77f58-d724-4f3e-b4fd-71321f17fd48/jobStates?sort\u003ddate\u0026task\u003df1ade8e4-7ab6-4390-bebe-aa74fe0288e3, mongodb operator is failing, and it looks like to be the reason of failure of the job, maybe not in a good shape for OCP 4.7?",
+      "revId": "4d271043194f9e070efbfd89d1173adb3451b391",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
