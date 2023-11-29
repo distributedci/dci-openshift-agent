@@ -16,6 +16,23 @@
       "message": "Tested in Assisted and in SNO-AI with the last job, both cases are working",
       "revId": "b4b36a0f142546c77153164f52e9beda3a8d21b4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af5b782e_e9a1b598",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T15:16:13Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "b4b36a0f142546c77153164f52e9beda3a8d21b4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
