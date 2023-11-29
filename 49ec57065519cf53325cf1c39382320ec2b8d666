@@ -16,6 +16,148 @@
       "message": "The part corresponding to this change is working fine in the above jobs. Issues are related to running on top of already deployed cluster a missing operator in the pipeline.",
       "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8906586_56384122",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "Use either: Operator\u0027s mirroring OR Operator mirroring\n\nI prefer the latter.\n\nSame for the titles of each step of the workflow",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f16ca814_146ad3cf",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "Operator\u0027s installation OR Operator installation",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a13ec011_03cdfc37",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "What about:\n\nThe `opm_mirror_list` variable, controls the operators that are mirrored when `dci_disconnected` is true. The Agent takes care of mirroring the required operator\u0027s images and creates a pruned catalog source for the OCP cluster.",
+      "range": {
+        "startLine": 463,
+        "startChar": 0,
+        "endLine": 464,
+        "endChar": 67
+      },
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "970eb1b4_a511cd10",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 466,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "What about:\n\n\\- Explicit definition (This is recommended)\n\nExample 1:\n\nDefinition of three operators. Two operators specify the channels, while the last `compliance-operator` includes all the channels.\n\n```yaml\nopm_mirror_list:\n  file-integrity-operator:\n    channel: stable\n  cluster-logging:\n    channel: stable-5.8\n  compliance-operator:\n```\n\nExample 2:\n\nSame three operators, this time all the channels are included.\n\n```yaml\nopm_mirror_list:\n  file-integrity-operator:\n  cluster-logging:\n  compliance-operator:\n```\n\n\\- Implicit definition, always includes all the channels (Prefer to use Example 2 above)\n\nA pruned catalog with all operator\u0027s channels.\n\n```yaml\nopm_mirror_list:\n  - compliance-operator\n  - file-integrity-operator\n  - cluster-logging\n```",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6014321_730c12a8",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 494,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "What about:\n\n\u003e\u003e NOTE: By default the catalog source name that can be used to create operator subscription is named `mirrored-redhat-operators`.\n\n\u003e\u003e NOTE: Some operators may have other operators dependencies, for such cases the dependencies must be added to the list.",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28eff0e5_044535f3",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "Use formatting to highlight the notice:\n\n\u003e\u003e IMPORTANT: ...\n\nCould you please give a more concrete example on what you mean by this?",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e38dc4b9_b416e350",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "typo: mirrored in `dci_disconnected` -\u003e mirrored when `dci_disconnected` AND `local_image_registry` is defined",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bba128ca_3bd67908",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-29T22:39:38Z",
+      "side": 1,
+      "message": "Suggestion: ... the corresponding ImageContentSourcePolicies (ICSPs).",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
