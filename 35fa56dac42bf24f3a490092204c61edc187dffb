@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7496292_40c62713",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T02:23:35Z",
+      "side": 1,
+      "message": "Thanks for this Manuel",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ddfb4715_135185c0",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T02:23:35Z",
+      "side": 1,
+      "message": "As you mentioned today there are some tasks duplicated with the performance profile playbook. Do you think that the common ones can be consolidated in a single play used on the 2 plays?",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ef375be_20d29284",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T02:23:35Z",
+      "side": 1,
+      "message": "We are going to separate the mirroring from the configuration. Is it worth validating that the operator CRDs or the operator subscription available before executing all this?",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0380beff_f5bea964",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T02:23:35Z",
+      "side": 1,
+      "message": "I read NUMA-aware is GA starting 4.12.23, do we need to validate that?",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cfb8bdbb_fbbeaea4",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T02:23:35Z",
+      "side": 1,
+      "message": "I have seem that images tagged as the OCP version may not be available specially when the release is not GA. Do you see issues using something fixed like latest?",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
