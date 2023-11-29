@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74a878e1_8c0d13bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-11-29T14:16:04Z",
+      "side": 1,
+      "message": "Tested in Assisted and in SNO-AI with the last job, both cases are working",
+      "revId": "b4b36a0f142546c77153164f52e9beda3a8d21b4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
