@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a3fc279_652bbc37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T21:26:42Z",
+      "side": 1,
+      "message": "The part corresponding to this change is working fine in the above jobs. Issues are related to running on top of already deployed cluster a missing operator in the pipeline.",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
