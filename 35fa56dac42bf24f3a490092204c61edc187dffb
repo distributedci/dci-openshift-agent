@@ -106,6 +106,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20d5632c_5a6cb28b",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T20:30:16Z",
+      "side": 1,
+      "message": "Done in patch-set 2",
+      "parentUuid": "187efc36_7715e289",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0380beff_f5bea964",
@@ -141,6 +159,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c422217_d1df3d9d",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T20:30:16Z",
+      "side": 1,
+      "message": "Done in patch-set 2",
+      "parentUuid": "db0ed2fa_cdf0cd58",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cfb8bdbb_fbbeaea4",
@@ -172,6 +208,24 @@
       "side": 1,
       "message": "oh, good point, I just checked and the image name and tags are a mess:\n4.12: openshift4/noderesourcetopology-scheduler-container-rhel8\n4.13: openshift4/noderesourcetopology-scheduler-container-rhel8\n4.14: openshift4/noderesourcetopology-scheduler-rhel9\n4.15: not yet available\n\nSo I\u0027ll probably go with latest, and I\u0027ll test if we can use the rhel9 image in 4.13 and below, otherwise I\u0027ll have to arrange the automation to use rhel8 image in ocp \u003c\u003d 4.13 and rhel9 in ocp \u003e\u003d 4.14",
       "parentUuid": "cfb8bdbb_fbbeaea4",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "009658d2_18a64eb6",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T20:30:16Z",
+      "side": 1,
+      "message": "I made the changes, testing in progress with patch-set 2",
+      "parentUuid": "d41b3843_c9f70299",
       "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
