@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "23ca9220_8b95c2b0",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T23:07:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f8906586_56384122",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f16ca814_146ad3cf",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-11-29T22:39:38Z",
       "side": 1,
       "message": "Operator\u0027s installation OR Operator installation",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db233cef_f88a5d88",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T23:07:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f16ca814_146ad3cf",
       "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -75,6 +111,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c74aa035_ae054b65",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T23:07:14Z",
+      "side": 1,
+      "message": "approved",
+      "parentUuid": "a13ec011_03cdfc37",
+      "range": {
+        "startLine": 463,
+        "startChar": 0,
+        "endLine": 464,
+        "endChar": 67
+      },
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "970eb1b4_a511cd10",
@@ -88,6 +148,24 @@
       "writtenOn": "2023-11-29T22:39:38Z",
       "side": 1,
       "message": "What about:\n\n\\- Explicit definition (This is recommended)\n\nExample 1:\n\nDefinition of three operators. Two operators specify the channels, while the last `compliance-operator` includes all the channels.\n\n```yaml\nopm_mirror_list:\n  file-integrity-operator:\n    channel: stable\n  cluster-logging:\n    channel: stable-5.8\n  compliance-operator:\n```\n\nExample 2:\n\nSame three operators, this time all the channels are included.\n\n```yaml\nopm_mirror_list:\n  file-integrity-operator:\n  cluster-logging:\n  compliance-operator:\n```\n\n\\- Implicit definition, always includes all the channels (Prefer to use Example 2 above)\n\nA pruned catalog with all operator\u0027s channels.\n\n```yaml\nopm_mirror_list:\n  - compliance-operator\n  - file-integrity-operator\n  - cluster-logging\n```",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "702ec32e_5827975e",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 466,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T23:07:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "970eb1b4_a511cd10",
       "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -128,6 +206,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e9b88510_7ba30d9d",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T23:07:14Z",
+      "side": 1,
+      "message": "reworded, please check. Thanks",
+      "parentUuid": "28eff0e5_044535f3",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e38dc4b9_b416e350",
         "filename": "README.md",
         "patchSetId": 6
@@ -139,6 +235,24 @@
       "writtenOn": "2023-11-29T22:39:38Z",
       "side": 1,
       "message": "typo: mirrored in `dci_disconnected` -\u003e mirrored when `dci_disconnected` AND `local_image_registry` is defined",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad9ba05c_1d3bb2a7",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T23:07:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e38dc4b9_b416e350",
       "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -156,6 +270,24 @@
       "writtenOn": "2023-11-29T22:39:38Z",
       "side": 1,
       "message": "Suggestion: ... the corresponding ImageContentSourcePolicies (ICSPs).",
+      "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27e0a447_bf4a0477",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-11-29T23:07:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bba128ca_3bd67908",
       "revId": "49ec57065519cf53325cf1c39382320ec2b8d666",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
