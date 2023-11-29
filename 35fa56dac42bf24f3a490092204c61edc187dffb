@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ef7e0fd_59d1325b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T18:59:51Z",
+      "side": 1,
+      "message": "Thanks for the initial review, I\u0027ll start working on the comments and submit a new patch soon",
+      "parentUuid": "d7496292_40c62713",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ddfb4715_135185c0",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-11-29T02:23:35Z",
       "side": 1,
       "message": "As you mentioned today there are some tasks duplicated with the performance profile playbook. Do you think that the common ones can be consolidated in a single play used on the 2 plays?",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "571342d3_e9ae6d99",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T18:59:51Z",
+      "side": 1,
+      "message": "sure, I think something can be done, there are also similar plays for the maxUnavailable change in the worker MCP, I think I can move that to another play",
+      "parentUuid": "ddfb4715_135185c0",
       "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -54,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "187efc36_7715e289",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T18:59:51Z",
+      "side": 1,
+      "message": "Good idea, I\u0027ll add that too",
+      "parentUuid": "1ef375be_20d29284",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0380beff_f5bea964",
         "filename": "plays/setup-nro.yml",
         "patchSetId": 1
@@ -71,6 +125,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "db0ed2fa_cdf0cd58",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T18:59:51Z",
+      "side": 1,
+      "message": "Well, before 4.12.24 is suppose to be TP, then I do not want to block folks from using it, but seeing that 4.11 will be out of support soon, I might add a condition to make sure that at least 4.12 is used.",
+      "parentUuid": "0380beff_f5bea964",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cfb8bdbb_fbbeaea4",
         "filename": "plays/setup-nro.yml",
         "patchSetId": 1
@@ -82,6 +154,24 @@
       "writtenOn": "2023-11-29T02:23:35Z",
       "side": 1,
       "message": "I have seem that images tagged as the OCP version may not be available specially when the release is not GA. Do you see issues using something fixed like latest?",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d41b3843_c9f70299",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-29T18:59:51Z",
+      "side": 1,
+      "message": "oh, good point, I just checked and the image name and tags are a mess:\n4.12: openshift4/noderesourcetopology-scheduler-container-rhel8\n4.13: openshift4/noderesourcetopology-scheduler-container-rhel8\n4.14: openshift4/noderesourcetopology-scheduler-rhel9\n4.15: not yet available\n\nSo I\u0027ll probably go with latest, and I\u0027ll test if we can use the rhel9 image in 4.13 and below, otherwise I\u0027ll have to arrange the automation to use rhel8 image in ocp \u003c\u003d 4.13 and rhel9 in ocp \u003e\u003d 4.14",
+      "parentUuid": "cfb8bdbb_fbbeaea4",
       "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
