@@ -33,6 +33,23 @@
       "message": "check dallas ocp-4.13-vanilla openshift-vanilla:ansible_extravars\u003ddci_ocp_channel:stable",
       "revId": "92c8cb13f3fcdee92593d3551fef5a27341ee6ce",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80ac0499_cceac75a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2023-11-29T17:57:00Z",
+      "side": 1,
+      "message": "could we test an upgrade with another chanel?",
+      "revId": "92c8cb13f3fcdee92593d3551fef5a27341ee6ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
