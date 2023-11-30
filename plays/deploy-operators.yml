@@ -208,6 +208,9 @@
     name: performanceprofiles.performance.openshift.io
   register: perf_profile_crd
 
+- name: Count Nodes in the cluster
+  include_tasks: plays/count_nodes.yml
+
 - name: "configure-operators : Apply Performance Profile"
   include_tasks: apply-pao-profile.yml
   when:
