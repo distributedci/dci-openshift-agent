@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "afcc8e67_af3490a0",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-11-30T18:00:24Z",
+      "side": 1,
+      "message": "I started a new CR dci-openshift-agent/+/30323 to separate common tasks, patch-set 3 make use of new files in the other change",
+      "parentUuid": "571342d3_e9ae6d99",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1ef375be_20d29284",
         "filename": "plays/setup-nro.yml",
         "patchSetId": 1
