@@ -313,13 +313,11 @@ if [ "$KIND" = gerrit ]; then
     URL="https://softwarefactory-project.io/r/#/c/$CHANGEID/"
     PIPELINENAME=gr-$PROJECT-$NUMBER
 else
-    PR=${CHANGEID##*-pr}
-    # Strip generated name
-    PR=${PR%-*}
     NUMBER=$(jq -r .number github.json)
-    TAG="github:$CHANGEID"
+    REPO_SHORT=$(jq -r .head.repo.name github.json)
+    TAG="github:$REPO_SHORT-$NUMBER"
     REPO=$(jq -r .head.repo.full_name github.json)
-    URL="https://github.com/$REPO/pull/$PR"
+    URL="https://github.com/$REPO/pull/$NUMBER"
     PIPELINENAME=pr-$REPO-$NUMBER
 fi
 
