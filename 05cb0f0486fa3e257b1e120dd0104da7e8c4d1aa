@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c492b96_b0c2fb2a",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-30T23:03:21Z",
+      "side": 1,
+      "message": "I think it is still needed to get the nodes (as you did in the upgrade-process.yml) because they are used in incerase_maxunavailable play (see below)",
+      "revId": "05cb0f0486fa3e257b1e120dd0104da7e8c4d1aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d6d7cb1_4171f6ba",
+        "filename": "plays/increase_maxunavailable.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-11-30T23:03:21Z",
+      "side": 1,
+      "message": "Here nodes are used from the apply-pao-profile.\n\nbut will work from the upgrade-process as it is counting the nodes",
+      "revId": "05cb0f0486fa3e257b1e120dd0104da7e8c4d1aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
