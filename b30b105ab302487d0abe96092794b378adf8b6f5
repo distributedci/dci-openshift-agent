@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23f4f855_ceb9c0fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-12-01T23:23:47Z",
+      "side": 1,
+      "message": "LGTM, I\u0027ll +2 after the upgrade test completes",
+      "revId": "b30b105ab302487d0abe96092794b378adf8b6f5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
