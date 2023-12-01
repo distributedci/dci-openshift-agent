@@ -16,6 +16,23 @@
       "message": "In previous job the part of the operators to mirror based on the enable flags was executed. Seems to be an issue with the storage network on the used cluster that is not related to this change",
       "revId": "4ead06cd617390f2117a328af044189d6da4dc0e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20ca9a99_af2a9c70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-01T19:22:05Z",
+      "side": 1,
+      "message": "Thanks Beto, LGTM",
+      "revId": "4ead06cd617390f2117a328af044189d6da4dc0e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
