@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "435739aa_c3b76207",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-01T19:38:04Z",
+      "side": 1,
+      "message": "Thanks, you\u0027re right, I moved it there, I had added it in the plays/deploy-operators.yml initially, but makes sense now. Fixed in path-set 3",
+      "parentUuid": "8c492b96_b0c2fb2a",
+      "revId": "05cb0f0486fa3e257b1e120dd0104da7e8c4d1aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d6d7cb1_4171f6ba",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-11-30T23:03:21Z",
       "side": 1,
       "message": "Here nodes are used from the apply-pao-profile.\n\nbut will work from the upgrade-process as it is counting the nodes",
+      "revId": "05cb0f0486fa3e257b1e120dd0104da7e8c4d1aa",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "282f6863_7c9c7a16",
+        "filename": "plays/increase_maxunavailable.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-01T19:38:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d6d7cb1_4171f6ba",
       "revId": "05cb0f0486fa3e257b1e120dd0104da7e8c4d1aa",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
