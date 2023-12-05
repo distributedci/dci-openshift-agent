@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e275bb9_06fc407c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-12-05T14:55:20Z",
+      "side": 1,
+      "message": "Hi team, the issue with the DCI job looks like to be related to an issue with Ansible facts introduced by this change in Crucible: https://github.com/redhat-partner-solutions/crucible/commit/d214ccff75ce3bd527aa420b79116ee0d08ea30a#diff-b0c7e0658341cfbba97e63063c70b6eb4aec934e85b927605f2aeaa1839a8434\n\nI\u0027ve created this change to try to fix it: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/30343. This would be required before working on this change.",
+      "revId": "65a2f9969bccf9ea2a9e267f570a60c4bf5c5310",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
