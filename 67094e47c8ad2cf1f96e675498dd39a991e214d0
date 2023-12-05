@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0161746f_e7caeb0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-12-05T15:07:14Z",
+      "side": 1,
+      "message": "Hi team, the change is passing the failing task reported in CILAB-1346 - https://www.distributed-ci.io/jobs/5710402b-22ba-4eef-8b9b-a67903d51ca5/jobStates?sort\u003ddate\u0026task\u003dad070669-900b-4838-94bc-795174321afb, the job will probably work",
+      "revId": "67094e47c8ad2cf1f96e675498dd39a991e214d0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
