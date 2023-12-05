@@ -50,6 +50,23 @@
       "message": "The failure in https://www.distributed-ci.io/jobs/5710402b-22ba-4eef-8b9b-a67903d51ca5/jobStates is unrelated to the failure we currently have, it\u0027s a resource not available right now. We\u0027ll see if this passes in a next job",
       "revId": "67094e47c8ad2cf1f96e675498dd39a991e214d0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c3271f6_e3d8fca7",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-12-05T19:10:02Z",
+      "side": 1,
+      "message": "It\u0027s easier to remove this line. As facts are always gathered by default unless not wanting them to be gathered[1]\n\n[1] https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html#disabling-facts",
+      "revId": "67094e47c8ad2cf1f96e675498dd39a991e214d0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
