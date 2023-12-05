@@ -264,6 +264,24 @@
       "parentUuid": "d41b3843_c9f70299",
       "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89031a16_286bec99",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-05T20:49:32Z",
+      "side": 1,
+      "message": "I couldn\u0027t use latest tag because of https://access.redhat.com/articles/4301321\nthe previous log failed because of that, so I\u0027m calculating the tag and introduced a variable to specify it when it does not exist, for example non-GA 4.15. More details in CILAB-1297",
+      "parentUuid": "009658d2_18a64eb6",
+      "revId": "35fa56dac42bf24f3a490092204c61edc187dffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
