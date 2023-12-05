@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "67094e47c8ad2cf1f96e675498dd39a991e214d0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1577dfac_0d13e29e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-12-05T15:16:53Z",
+      "side": 1,
+      "message": "The failure in https://www.distributed-ci.io/jobs/5710402b-22ba-4eef-8b9b-a67903d51ca5/jobStates is unrelated to the failure we currently have, it\u0027s a resource not available right now. We\u0027ll see if this passes in a next job",
+      "revId": "67094e47c8ad2cf1f96e675498dd39a991e214d0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
