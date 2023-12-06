@@ -17,6 +17,10 @@
     - ocp_version_maj|int == 4
     - ocp_version_min|int <= 10
 
+- name: Fail to troubleshoot
+  fail:
+    msg: Stopping here to understand what generates the rendered-worker-MCs
+
 - name: Create PerformanceProfile
   community.kubernetes.k8s:
     definition: "{{ lookup('file', performance_definition) }}"
