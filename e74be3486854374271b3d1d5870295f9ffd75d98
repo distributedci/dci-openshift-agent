@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef80be89_3ad48522",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-06T21:11:17Z",
+      "side": 1,
+      "message": "check dallas ocp-4.15-vanilla openshift-vanilla:ansible_extravars\u003dfallback_last_success:[]",
+      "revId": "e74be3486854374271b3d1d5870295f9ffd75d98",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
