@@ -25,62 +25,10 @@
   delay: 60
   until: profile_state is not failed
 
-- name: Wait (up to 5 mins) for Performance Profile KubeletConfig creation
-  community.kubernetes.k8s_info:
-    api: machineconfiguration.openshift.io/v1
-    kind: KubeletConfig
-    name: "performance-{{ profile_state.result.metadata.name }}"
-    namespace: default
-  register: kubelet
-  retries: 30
-  delay: 10
-  until:
-    - kubelet.resources is defined
-    - kubelet.resources | length == 1
-  failed_when:
-    - kubelet.resources | length != 1
+- name: Wait for KubeletConfig to be created in OCP <= 4.14
+  include_tasks: plays/check-kubeletconfig.yml
   when:
-    - profile_state is defined
-
-- name: Set Performance Profile KubeletConfig creation time
-  set_fact:
-    perf_kubelet_timestamp: "{{ kubelet.resources[0].metadata.creationTimestamp }}"
-
-- name: Wait (up to 10 mins) for rendered-worker MC triggered by Performance Profile
-  community.kubernetes.k8s_info:
-    api_version: machineconfiguration.openshift.io/v1
-    kind: MachineConfig
-  register: reg_worker_mc
-  vars:
-    worker_mc_query: "[?contains(metadata.name, 'rendered-worker')].metadata.creationTimestamp"
-    worker_mc_timestamp: "{{ reg_worker_mc.resources | to_json | from_json | json_query(worker_mc_query) | sort | last }}"
-  until:
-    - reg_worker_mc.resources is defined
-    - worker_mc_timestamp > perf_kubelet_timestamp
-  retries: 60
-  delay: 10
-  when:
-    - install_type is undefined or install_type != 'sno'
-    - reg_mcpool_worker.resources[0].status.machineCount >= 1
-    - profile_state.result.spec.nodeSelector is search('worker')
-
-- name: Wait (up to 10 mins) for rendered-controlplane MC triggered by Performance Profile
-  community.kubernetes.k8s_info:
-    api_version: machineconfiguration.openshift.io/v1
-    kind: MachineConfig
-  register: reg_controlplane_mc
-  vars:
-    controlplane_mc_query: "[?contains(metadata.name, 'rendered-master')].metadata.creationTimestamp"
-    controlplane_mc_timestamp: "{{ reg_controlplane_mc.resources | to_json | from_json | json_query(controlplane_mc_query) | sort | last }}"
-  until:
-    - reg_controlplane_mc.resources is defined
-    - controlplane_mc_timestamp >= perf_kubelet_timestamp
-  retries: 60
-  delay: 10
-  when:
-    - install_type is undefined or install_type != 'sno'
-    - reg_mcpool_controlplane.resources[0].status.machineCount >= 1
-    - profile_state.result.spec.nodeSelector is search('master')
+    - ocp_version is version("4.15", "<")
 
 - name: Pause 60 seconds to wait for MC triggered by Performance Profile starts the node changes
   pause:
@@ -95,7 +43,7 @@
   when:
     - control_plane_size | int == 1
 
-- name: Wait for MCP status
+- name: Wait for MCP status triggered by Performance Profile
   include_role:
     name: redhatci.ocp.check_resource
   vars:
@@ -103,6 +51,24 @@
     check_wait_retries: "{{ 16 * (groups['workers'] | default(groups['masters']) | length + 1 ) }}"
     check_wait_delay: 60
     check_reason: "PAO installation"
+
+# In OCP >= 4.15 the PerformanceProfile triggers a first reboot and after that is completed
+# the KubeletConfig object is created and nodes are rebooted again
+- name: Wait for KubeletConfig to be created in OCP >= 4.15
+  include_tasks: plays/check-kubeletconfig.yml
+  when:
+    - ocp_version is version("4.15", ">=")
+
+- name: Wait for MCP status triggered by KubeletConfig in OCP >= 4.15
+  include_role:
+    name: redhatci.ocp.check_resource
+  vars:
+    resource_to_check: "MachineConfigPool"
+    check_wait_retries: "{{ 16 * (groups['workers'] | default(groups['masters']) | length + 1 ) }}"
+    check_wait_delay: 60
+    check_reason: "PAO installation"
+  when:
+    - ocp_version is version("4.15", ">=")
 
 - name: Reset maxUnavailable count to default value 1
   community.kubernetes.k8s:

@@ -1,0 +1,59 @@
+---
+- name: Wait (up to 5 mins) for Performance Profile KubeletConfig creation
+  community.kubernetes.k8s_info:
+    api: machineconfiguration.openshift.io/v1
+    kind: KubeletConfig
+    name: "performance-{{ profile_state.result.metadata.name }}"
+    namespace: default
+  register: kubelet
+  retries: 30
+  delay: 10
+  until:
+    - kubelet.resources is defined 
+    - kubelet.resources | length == 1
+  failed_when:
+    - kubelet.resources | length != 1
+  when: 
+    - profile_state is defined
+    - ocp_version is
+    
+- name: Set Performance Profile KubeletConfig creation time
+  set_fact:
+    perf_kubelet_timestamp: "{{ kubelet.resources[0].metadata.creationTimestamp }}"
+
+- name: Wait (up to 10 mins) for rendered-worker MC to be triggered
+  community.kubernetes.k8s_info:
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+  register: reg_worker_mc
+  vars:
+    worker_mc_query: "[?contains(metadata.name, 'rendered-worker')].metadata.creationTimestamp"
+    worker_mc_timestamp: "{{ reg_worker_mc.resources | to_json | from_json | json_query(worker_mc_query) | sort | last }}"
+  until:
+    - reg_worker_mc.resources is defined
+    - worker_mc_timestamp > perf_kubelet_timestamp
+  retries: 60
+  delay: 10
+  when:
+    - install_type is undefined or install_type != 'sno'
+    - reg_mcpool_worker.resources[0].status.machineCount >= 1
+    - profile_state.result.spec.nodeSelector is search('worker')
+
+- name: Wait (up to 10 mins) for rendered-controlplane MC to be triggered
+  community.kubernetes.k8s_info:
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+  register: reg_controlplane_mc
+  vars:
+    controlplane_mc_query: "[?contains(metadata.name, 'rendered-master')].metadata.creationTimestamp"
+    controlplane_mc_timestamp: "{{ reg_controlplane_mc.resources | to_json | from_json | json_query(controlplane_mc_query) | sort | last }}"
+  until:
+    - reg_controlplane_mc.resources is defined
+    - controlplane_mc_timestamp >= perf_kubelet_timestamp
+  retries: 60
+  delay: 10
+  when:
+    - install_type is undefined or install_type != 'sno'
+    - reg_mcpool_controlplane.resources[0].status.machineCount >= 1
+    - profile_state.result.spec.nodeSelector is search('master')
+...
