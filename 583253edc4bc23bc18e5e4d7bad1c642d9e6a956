@@ -16,6 +16,23 @@
       "message": "rebased and re-testing after crucible merged",
       "revId": "583253edc4bc23bc18e5e4d7bad1c642d9e6a956",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06106357_874cfd09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-12-06T23:20:56Z",
+      "side": 1,
+      "message": "LGTM, thanks!",
+      "revId": "583253edc4bc23bc18e5e4d7bad1c642d9e6a956",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
