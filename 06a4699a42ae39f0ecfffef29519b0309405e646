@@ -97,6 +97,30 @@
       },
       "revId": "06a4699a42ae39f0ecfffef29519b0309405e646",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a0f05f8_1b568f50",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-07T17:13:27Z",
+      "side": 1,
+      "message": "addressed suggestion in patch-set 8, moved the mirroring image task upper",
+      "parentUuid": "a6dd4dae_385f6bfe",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 41
+      },
+      "revId": "06a4699a42ae39f0ecfffef29519b0309405e646",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
