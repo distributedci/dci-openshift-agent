@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.15-vanilla",
       "revId": "07b4ff385cd6ec430a3d4f81168ff2994684682e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a34f948_b9d618ec",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-12-07T18:49:29Z",
+      "side": 1,
+      "message": "Can we set this value to 60 and avoid the check_wait_delay variable, since is not used for anything else?",
+      "revId": "07b4ff385cd6ec430a3d4f81168ff2994684682e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a3e7ece_9dba3d0f",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-12-07T18:49:29Z",
+      "side": 1,
+      "message": "I think the default value must be a list",
+      "revId": "07b4ff385cd6ec430a3d4f81168ff2994684682e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
