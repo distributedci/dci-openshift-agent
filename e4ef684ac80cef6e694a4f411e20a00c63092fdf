@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89f6a5ea_fdca5991",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-07T03:01:34Z",
+      "side": 1,
+      "message": "check dallas ocp-4.15-vanilla",
+      "revId": "e4ef684ac80cef6e694a4f411e20a00c63092fdf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
