@@ -73,6 +73,30 @@
       },
       "revId": "06a4699a42ae39f0ecfffef29519b0309405e646",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6dd4dae_385f6bfe",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-07T14:53:35Z",
+      "side": 1,
+      "message": "Good point, I followed the steps from the openshift numa doc[1] but I agree with your suggestion, I\u0027ll do the changes\n\n[1] https://docs.openshift.com/container-platform/4.14//scalability_and_performance/cnf-numa-aware-scheduling.html",
+      "parentUuid": "03040339_e7065ea3",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 41
+      },
+      "revId": "06a4699a42ae39f0ecfffef29519b0309405e646",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
