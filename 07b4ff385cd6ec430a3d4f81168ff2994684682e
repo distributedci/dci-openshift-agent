@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45b93f48_6e0616f5",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-07T20:19:35Z",
+      "side": 1,
+      "message": "Thanks, Done",
+      "parentUuid": "98080caf_ca27c4f5",
+      "revId": "07b4ff385cd6ec430a3d4f81168ff2994684682e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a34f948_b9d618ec",
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce1a0ee1_f4b8ced9",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-07T20:19:35Z",
+      "side": 1,
+      "message": "Yes, Done",
+      "parentUuid": "6a34f948_b9d618ec",
+      "revId": "07b4ff385cd6ec430a3d4f81168ff2994684682e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3a3e7ece_9dba3d0f",
@@ -65,6 +101,24 @@
       "writtenOn": "2023-12-07T18:49:29Z",
       "side": 1,
       "message": "I think the default value must be a list",
+      "revId": "07b4ff385cd6ec430a3d4f81168ff2994684682e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72999810_840a82bd",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-07T20:19:35Z",
+      "side": 1,
+      "message": "Good catch, I changed it to a list",
+      "parentUuid": "3a3e7ece_9dba3d0f",
       "revId": "07b4ff385cd6ec430a3d4f81168ff2994684682e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
