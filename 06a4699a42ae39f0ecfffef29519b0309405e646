@@ -33,6 +33,46 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "06a4699a42ae39f0ecfffef29519b0309405e646",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a476b7e_e53d6902",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-12-07T10:10:56Z",
+      "side": 1,
+      "message": "LGTM, but just one suggestion in case you find it fine, but it\u0027s not mandatory to take it into account",
+      "revId": "06a4699a42ae39f0ecfffef29519b0309405e646",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03040339_e7065ea3",
+        "filename": "plays/setup-nro.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-12-07T10:10:56Z",
+      "side": 1,
+      "message": "Just curiosity: shouldn\u0027t we mirror images as a first step, then do the rest? Because maybe we have been doing some stuff before but if the mirror fails, all the previous work would be useless",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 41
+      },
+      "revId": "06a4699a42ae39f0ecfffef29519b0309405e646",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
