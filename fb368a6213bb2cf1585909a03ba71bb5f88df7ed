@@ -16,6 +16,23 @@
       "message": "Test of an upgrade without a previous install https://www.distributed-ci.io/jobs/1dfb5db5-7bff-47ae-96c0-a38884007a3c/jobStates?sort\u003ddate",
       "revId": "fb368a6213bb2cf1585909a03ba71bb5f88df7ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80ae0de3_87871350",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-09T06:18:41Z",
+      "side": 1,
+      "message": "Install and upgrade: https://www.distributed-ci.io/jobs/cd18e196-c20b-4460-bd8a-05206ce7add8/jobStates\nhttps://www.distributed-ci.io/jobs/6e9f22d9-20b3-439d-834a-f273d23cf0eb/jobStates?sort\u003ddate",
+      "revId": "fb368a6213bb2cf1585909a03ba71bb5f88df7ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
