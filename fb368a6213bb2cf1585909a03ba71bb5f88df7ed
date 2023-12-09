@@ -1,6 +1,40 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "920b218d_9fa0c7d0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-09T20:37:38Z",
+      "side": 1,
+      "message": "typo: only if",
+      "revId": "fb368a6213bb2cf1585909a03ba71bb5f88df7ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3e9aeb3_4a7166b3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-09T20:37:38Z",
+      "side": 1,
+      "message": "typo: extra \"the\" : )",
+      "revId": "fb368a6213bb2cf1585909a03ba71bb5f88df7ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "1c4ada99_029717f9",
@@ -31,6 +65,23 @@
       "writtenOn": "2023-12-09T06:18:41Z",
       "side": 1,
       "message": "Install and upgrade: https://www.distributed-ci.io/jobs/cd18e196-c20b-4460-bd8a-05206ce7add8/jobStates\nhttps://www.distributed-ci.io/jobs/6e9f22d9-20b3-439d-834a-f273d23cf0eb/jobStates?sort\u003ddate",
+      "revId": "fb368a6213bb2cf1585909a03ba71bb5f88df7ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10d89023_8e74c519",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-09T20:37:38Z",
+      "side": 1,
+      "message": "LGTM, just minor typos in the commit\n\nrecheck",
       "revId": "fb368a6213bb2cf1585909a03ba71bb5f88df7ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
