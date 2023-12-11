@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f65865fc_9d684ed9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-11T23:06:34Z",
+      "side": 1,
+      "message": "Tests performed:\n\n# - VCP 4.7 https://www.distributed-ci.io/jobs/87910142-a5fb-4a73-a003-2a85554867d6/jobStates?sort\u003ddate\n# - ACM hub  4.14 - https://www.distributed-ci.io/jobs/c5e07e70-fb56-42c9-851f-b6bdb2b324e2/jobStates\n# - ACM connected hub 4.14 - https://www.distributed-ci.io/jobs/8b0e9e0c-3f2a-43bb-a2de-54068d859ab7/jobStates\n# - VCP 4.14 - https://www.distributed-ci.io/jobs/87910142-a5fb-4a73-a003-2a85554867d6/jobStates\n# - Vanilla 4.14 All operators - https://www.distributed-ci.io/jobs/f76c82c9-0434-41dd-a8b0-d540474c513f/jobStates\n# - Vanilla 4.14 https://www.distributed-ci.io/jobs/1db606f6-a791-4a24-b7e9-905e87aa759c/jobStates\n\nPending to test the upgrade. This has dependency on CR30370",
+      "revId": "7e42e8409a93e7724a9c78da27106fc69bc8d540",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
