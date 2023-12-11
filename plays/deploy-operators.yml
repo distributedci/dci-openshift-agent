@@ -214,6 +214,9 @@
     - performance_definition is defined
     - perf_profile_crd.resources|length > 0
 
+- name: "Run cluster health checks"
+  include_tasks: plays/check-cluster-health.yml
+
 - name: "Deploy CNV and HCO Operators"
   block:
     - name: "deploy-operators : Install CNV operator"
