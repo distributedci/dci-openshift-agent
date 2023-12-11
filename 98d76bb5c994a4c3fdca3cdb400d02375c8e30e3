@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "664e80c8_cc7b3cb9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-11T22:44:39Z",
+      "side": 1,
+      "message": "In the job above we are detecting the Network issues before proceeding with operators installation.\n\nOn a separate change, the performance profile is been move after operators deployment",
+      "revId": "98d76bb5c994a4c3fdca3cdb400d02375c8e30e3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
