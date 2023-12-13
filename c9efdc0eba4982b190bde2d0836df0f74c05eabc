@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d189df6_faa4731f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-12-13T08:33:52Z",
+      "side": 1,
+      "message": "Hi Beto, overall it looks fine for me, just ping us when you think it\u0027s ready for review. For the moment, just leaving one minor comment",
+      "revId": "c9efdc0eba4982b190bde2d0836df0f74c05eabc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6023436a_bddb1ede",
+        "filename": "README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 1019,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2023-12-13T08:33:52Z",
+      "side": 1,
+      "message": "Since `enable_perf_addon` has been removed, should we reformulate this?",
+      "revId": "c9efdc0eba4982b190bde2d0836df0f74c05eabc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
