@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc9810f9_1c21b934",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-13T22:53:09Z",
+      "side": 1,
+      "message": "Looks good to me, I\u0027ll just wait for your last tests to add a +2",
+      "revId": "7c86e014a050638ea0270e0f07079dd02dc74f9e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd6075bb_71d34a5d",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-13T22:53:09Z",
+      "side": 1,
+      "message": "Beto, is this part required in case the job fails at this point right?",
+      "revId": "7c86e014a050638ea0270e0f07079dd02dc74f9e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d81956b_82c3b534",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2023-12-13T22:53:09Z",
+      "side": 1,
+      "message": "I wonder why, in this line we need to add the path \"plays\" and not in the others, when executing jobs looks like with or without works, and also interesting that the ansible lint in gerrit is not complaining as a few days ago",
+      "revId": "7c86e014a050638ea0270e0f07079dd02dc74f9e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
