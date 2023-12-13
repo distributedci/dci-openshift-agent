@@ -33,6 +33,24 @@
       "message": "Since `enable_perf_addon` has been removed, should we reformulate this?",
       "revId": "c9efdc0eba4982b190bde2d0836df0f74c05eabc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "032a28b8_18680027",
+        "filename": "README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 1019,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-13T15:19:02Z",
+      "side": 1,
+      "message": "Hello Ramon. I updated the example according to its purpose (upgrade example) and the post notes. I think it is okay to get rid of that partially controlling something that is not available. \n\nI think the change is good for review. I have done a lot of testing and the change that concerns me is https://github.com/dci-labs/dallas-pipelines/pull/957 because there are pipelines that we do not test much.\n\nI will generate a new summary of the relevant tests performed today.\n\nThanks!",
+      "parentUuid": "6023436a_bddb1ede",
+      "revId": "c9efdc0eba4982b190bde2d0836df0f74c05eabc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
