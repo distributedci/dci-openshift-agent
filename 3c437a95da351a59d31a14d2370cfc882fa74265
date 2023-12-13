@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90c3c51d_27c0d7ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-13T23:27:38Z",
+      "side": 1,
+      "message": "Some if the testing done:\n\n4.12 - https://www.distributed-ci.io/jobs/0ddaef32-58a7-4c0a-a5ee-e37c609fe72a/jobStates\n4.13 Upgrade - https://www.distributed-ci.io/jobs/f3045174-06c5-488b-8810-fff7613fc4f9/jobStates\n4.7-vcp - https://www.distributed-ci.io/jobs/32a3c713-db64-4043-a9d2-b2d54a2bd832/jobStates. Issue is not related to this change\n4.16 - https://www.distributed-ci.io/jobs/ecfe502a-7782-4302-b5ff-514d6013f38e/jobStates. Issue related with missing NRO image that has been fixed\n4.14-acm - https://www.distributed-ci.io/jobs/d3b0c90e-f851-40e9-aa2c-fd05f6b50d66/jobStates",
+      "revId": "3c437a95da351a59d31a14d2370cfc882fa74265",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
