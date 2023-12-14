@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f9c0409_12a58711",
+        "filename": "README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 1011,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-14T16:29:33Z",
+      "side": 1,
+      "message": "The example above is for the upgrade and we do not need dci_operators during the upgrade, only the opm_mirror_list. Better to remove the sentence.\n\nWe need to create a section with pipeline samples. I will review it. Thanks!",
+      "parentUuid": "0c6664f4_46a0d63b",
+      "revId": "3c437a95da351a59d31a14d2370cfc882fa74265",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "835508cf_27e34b1f",
@@ -65,6 +83,24 @@
       "writtenOn": "2023-12-14T08:06:07Z",
       "side": 1,
       "message": "Do you still use `enable_lso`? Because it was removed in the readme",
+      "revId": "3c437a95da351a59d31a14d2370cfc882fa74265",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd0451cf_4fc7040c",
+        "filename": "group_vars/all",
+        "patchSetId": 14
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-14T16:29:33Z",
+      "side": 1,
+      "message": "good catch, I removed it. Thanks",
+      "parentUuid": "835508cf_27e34b1f",
       "revId": "3c437a95da351a59d31a14d2370cfc882fa74265",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
