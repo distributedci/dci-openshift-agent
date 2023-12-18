@@ -200,4 +200,9 @@
               include_tasks: failure.yml
           delegate_to: localhost
           ignore_unreachable: true
+
+- name: "Run Assisted installer cleanup"
+  include_role:
+    name: redhatci.ocp.populate_mirror_registry
+    tasks_from: cleanup.yml
 ...
