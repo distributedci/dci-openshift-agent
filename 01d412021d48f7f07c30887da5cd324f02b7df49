@@ -16,6 +16,23 @@
       "message": "I\u0027ve been checking the affected tasks and how the job should behave and I think it\u0027s fine to go ahead",
       "revId": "01d412021d48f7f07c30887da5cd324f02b7df49",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff52ab25_59c585c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-12-19T19:28:24Z",
+      "side": 1,
+      "message": "This is fantastic!\n\nI see operators from both catalogs which is great. I was expecting to see sriov to use upstream catalog but instead is using pre-ga, after looking at the pipeline I see this is what\u0027s been requested, but I assume that it should pick it up if we would use upstream-operators-catalog, correct?\n\nSince the change is addressing mainly file catalogs and catalogs from registries I\u0027m +2",
+      "revId": "01d412021d48f7f07c30887da5cd324f02b7df49",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
