@@ -33,6 +33,24 @@
       "message": "This is fantastic!\n\nI see operators from both catalogs which is great. I was expecting to see sriov to use upstream catalog but instead is using pre-ga, after looking at the pipeline I see this is what\u0027s been requested, but I assume that it should pick it up if we would use upstream-operators-catalog, correct?\n\nSince the change is addressing mainly file catalogs and catalogs from registries I\u0027m +2",
       "revId": "01d412021d48f7f07c30887da5cd324f02b7df49",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88ebf004_1c7171ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2023-12-19T20:53:59Z",
+      "side": 1,
+      "message": "Yeah, from the pipeline we will need to set the catalog to pick during the subscription. Thanks!",
+      "parentUuid": "ff52ab25_59c585c2",
+      "revId": "01d412021d48f7f07c30887da5cd324f02b7df49",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
