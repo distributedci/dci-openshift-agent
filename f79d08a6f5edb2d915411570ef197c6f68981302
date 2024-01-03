@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.14-vanilla openshift-vanilla:ansible_extravars\u003ddci_sos_report_nodes:master-0,worker-0,worker-2",
       "revId": "f79d08a6f5edb2d915411570ef197c6f68981302",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddfe8bd3_ffb473e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-01-03T18:31:25Z",
+      "side": 1,
+      "message": "check dallas ocp-4.14-vanilla openshift-vanilla:ansible_extravars\u003ddci_sos_report_nodes:master-0,worker-0,worker-2",
+      "revId": "f79d08a6f5edb2d915411570ef197c6f68981302",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
