@@ -16,6 +16,24 @@
       "message": "Is it possible to have a more precise pattern?",
       "revId": "da9b340b10e83e40bd67cb063aefbeb624df2f66",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "615ce822_e37dcdd7",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-01-03T13:58:44Z",
+      "side": 1,
+      "message": "Sure is, can tailor it to sosreports, but I see we do the same for the rest[1] i.e. being wide open to catch all the matches, should we discuss that in another change?\n\n[1] ❯ grep pattern plays/get-logs.yml\n    patterns: \"*junit,*.xml\"\n    patterns: \u0027{{ cluster }}*\u0027\n    patterns: \"*.log,*.txt,*.html,*.yaml,*.trace,*.pcap,*.json\"\n    patterns: \"*.gz\"\n    patterns: \"*.tar.xz\"",
+      "parentUuid": "5fbdae70_4c71a2a0",
+      "revId": "da9b340b10e83e40bd67cb063aefbeb624df2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
