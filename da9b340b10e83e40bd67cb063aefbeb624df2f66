@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fbdae70_4c71a2a0",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-01-03T08:59:13Z",
+      "side": 1,
+      "message": "Is it possible to have a more precise pattern?",
+      "revId": "da9b340b10e83e40bd67cb063aefbeb624df2f66",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
