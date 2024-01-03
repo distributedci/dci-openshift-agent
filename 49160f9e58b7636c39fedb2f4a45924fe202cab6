@@ -16,6 +16,24 @@
       "message": "- Do we need to remove this? Maybe this is needed for the downgrade, since it uses the same upgrade logic.\n- If not requiring to remove this, should this be moved below `- name: \"Execute cluster upgrade command\"`?",
       "revId": "49160f9e58b7636c39fedb2f4a45924fe202cab6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "253e3e39_01991885",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-01-03T22:29:59Z",
+      "side": 0,
+      "message": "Hello Ramon, Thanks it looks I messed up the blocks identation.\n  \nGood catch, I will need to test the downgrades either. Cheers",
+      "parentUuid": "f74220e1_e5f26898",
+      "revId": "49160f9e58b7636c39fedb2f4a45924fe202cab6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
