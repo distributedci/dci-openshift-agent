@@ -16,6 +16,24 @@
       "message": "Do you need to mirror the support-tools image for disconnected environments?",
       "revId": "ed681f894de011e8242c2376c7139b41ce412875",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39452857_518dccd5",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-01-03T02:55:48Z",
+      "side": 1,
+      "message": "Please disregard this, I clicked too fast... 😞",
+      "parentUuid": "8acca3ff_093fd0b7",
+      "revId": "ed681f894de011e8242c2376c7139b41ce412875",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
