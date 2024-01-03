@@ -16,6 +16,23 @@
       "message": "This is failing because mongo-ent is not supported on this version. Need to find a another operator for the CI",
       "revId": "31d55de4a347f971d26fe6bab9865145efa8ff8f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "688c8607_76fa86ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-01-03T05:32:11Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla ocp-4.14-upgrade openshift-vanilla:components\u003docp\u003d\"4.12.45\" openshift-vanilla:ansible_extravars\u003ddci_teardown_on_success:false openshift-vanilla-upgrade-4.14:ansible_extravars\u003dforce_upgrade:true openshift-vanilla-upgrade-4.14:ansible_extravars\u003dupgrade_eus:true openshift-vanilla-upgrade-4.14:ansible_extravars\u003dversion_inter:\"4.13.26\" openshift-vanilla-upgrade-4.14:components\u003docp\u003d\"4.14.3\"",
+      "revId": "31d55de4a347f971d26fe6bab9865145efa8ff8f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
