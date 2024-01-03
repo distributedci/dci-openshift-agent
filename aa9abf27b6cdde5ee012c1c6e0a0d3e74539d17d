@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad8c3285_8bedc5e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-01-03T02:51:55Z",
+      "side": 1,
+      "message": "For an EUS upgrade from 4.12 to 4.14 we need to add the following admin-acks\n\nack-4.12-kube-1.26-api-removals-in-4.13\nack-4.13-kube-1.27-api-removals-in-4.14",
+      "revId": "aa9abf27b6cdde5ee012c1c6e0a0d3e74539d17d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
