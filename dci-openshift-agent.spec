@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.18.0
+Version:       0.19.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -83,6 +83,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Tue Jul 30 2024 Tony Garcia <tonyg@redhat.com> 0.19.0-1
+- Remove opm-auth util script
+
 * Fri Jul 26 2024 Tony Garcia <tonyg@redhat.com> 0.18.0-1
 - Requires redhatci.ocp >= 0.14.0 for efi_boot_mgr
 
