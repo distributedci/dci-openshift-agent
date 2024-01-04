@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cd31010_7ebd5371",
+        "filename": "test-runner",
+        "patchSetId": 6
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-01-04T09:14:28Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we don the same for extract-dependencies in dci-check-change? To consider the case where we have a change affecting to extract-dependencies too?",
+      "revId": "5472728c641a309ebbc35b6e3597be1998f8f829",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
