@@ -16,6 +16,24 @@
       "message": "Shouldn\u0027t we don the same for extract-dependencies in dci-check-change? To consider the case where we have a change affecting to extract-dependencies too?",
       "revId": "5472728c641a309ebbc35b6e3597be1998f8f829",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e2869fc_493c1b92",
+        "filename": "test-runner",
+        "patchSetId": 6
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2024-01-04T11:59:51Z",
+      "side": 1,
+      "message": "\u003e Shouldn\u0027t we don the same for extract-dependencies in dci-check-change? To consider the case where we have a change affecting to extract-dependencies too?\n\nI agree it should be done but I don\u0027t know how to do it. So I prefer to do it in another change.",
+      "parentUuid": "1cd31010_7ebd5371",
+      "revId": "5472728c641a309ebbc35b6e3597be1998f8f829",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
