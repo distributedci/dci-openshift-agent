@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.9.0
+Version:       0.9.1
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -96,6 +96,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Thu Jan  4 2024 Tony Garcia <tonyg@redhat.com> 0.9.1-1
+- Remove opm-auth util script
+
 * Tue Jan  2 2024 Frederic Lepied <flepied@redhat.com> 0.9.0-1
 - remove extract-dependencies and send-feedback to use the versions
   from dci-pipeline
