@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "880a05b80d3e53517619e13b98c927f7752fe56e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6d8233b_342ba329",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-01-05T14:21:50Z",
+      "side": 1,
+      "message": "The success of the upgrade pipeline is not been reported in Gerrit. \n\nThe full validation is:\n\nhttps://www.distributed-ci.io/jobs/55c612a6-f5c6-4b7a-88de-97c9026734a6/jobStates\n\nhttps://www.distributed-ci.io/jobs/c461f777-0c09-44be-bb92-79cc190e148d/jobStates?sort\u003ddate",
+      "revId": "880a05b80d3e53517619e13b98c927f7752fe56e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
