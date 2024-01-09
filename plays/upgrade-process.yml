@@ -11,7 +11,7 @@
     current_ver_query: "history[?state=='Completed'] | [0].version"
     full_ver: "{{ cluster_version.resources[0].status | json_query(current_ver_query) }}"
   when:
-    - full_ver is version(target_version, "<")
+    - full_ver is version(target_version, "<>")
   block:
     - name: "Debug upgrade information"
       debug:
