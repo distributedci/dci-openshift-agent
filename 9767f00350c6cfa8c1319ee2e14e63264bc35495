@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "9767f00350c6cfa8c1319ee2e14e63264bc35495",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf273f2c_e2b67134",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-01-12T01:16:50Z",
+      "side": 1,
+      "message": "LGTM, will do +2 after the running test\n\nOnce that\u0027s done, please remove the test hints so we can run a recheck to pass zuul checks and avoid re-running all the job again. Thanks!",
+      "revId": "9767f00350c6cfa8c1319ee2e14e63264bc35495",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
