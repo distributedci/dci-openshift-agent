@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d95be85_bb987697",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 91
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-01-15T11:49:11Z",
+      "side": 1,
+      "message": "[This job](https://www.distributed-ci.io/jobs/89927d13-1f5e-4700-b9f5-1ef88d881673/jobStates?sort\u003ddate) shows the execution of this CR when taking hints from a [github PR](https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/132).\n\nNext we\u0027ll test the common use case: taking hints from gerrit.",
+      "revId": "bbe3dff9659de821080a99e749b749ff655c7e78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
