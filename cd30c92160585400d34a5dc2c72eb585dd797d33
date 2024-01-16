@@ -16,6 +16,57 @@
       "message": "Now we have successful tests for the two use cases:\n\n- [IPMI+PXE](https://www.distributed-ci.io/jobs?limit\u003d20\u0026offset\u003d0\u0026sort\u003d-created_at\u0026where\u003dtags:queue-id:vpool.6764,state:active)\n- [Redfish+Virtualmedia](https://www.distributed-ci.io/jobs?limit\u003d20\u0026offset\u003d0\u0026sort\u003d-created_at\u0026where\u003dtags:queue-id:vpool.6771,state:active)\n\nThis PR is ready for reviews.",
       "revId": "cd30c92160585400d34a5dc2c72eb585dd797d33",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a1144af_d8c63ccd",
+        "filename": "samples/ocp_on_libvirt/ansible.cfg",
+        "patchSetId": 92
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-01-16T16:03:17Z",
+      "side": 1,
+      "message": "Do we really need assisted_deploy_repo? It\u0027s now built in the redhatci collections",
+      "revId": "cd30c92160585400d34a5dc2c72eb585dd797d33",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1445392_dc4493fb",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 92
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-01-16T16:03:17Z",
+      "side": 1,
+      "message": "Does enable_conserver need to be changed for Redfish usage? Because it was changed for the change in our inventories",
+      "revId": "cd30c92160585400d34a5dc2c72eb585dd797d33",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfa2d0e8_f1175dfc",
+        "filename": "test-runner",
+        "patchSetId": 92
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-01-16T16:03:17Z",
+      "side": 1,
+      "message": "Same: Do we really need assisted_deploy_repo? It\u0027s now built in the redhatci collections",
+      "revId": "cd30c92160585400d34a5dc2c72eb585dd797d33",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
