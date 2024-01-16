@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "bbe3dff9659de821080a99e749b749ff655c7e78",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cb0a902_39d0f2ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 91
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-01-16T09:07:27Z",
+      "side": 1,
+      "message": "[This is a successfull pipeline](https://www.distributed-ci.io/jobs?limit\u003d20\u0026offset\u003d0\u0026sort\u003d-created_at\u0026where\u003dtags:queue-id:vpool.6764,state:active) that deploy a libvirt environment using IPMI+PXE.",
+      "revId": "bbe3dff9659de821080a99e749b749ff655c7e78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
