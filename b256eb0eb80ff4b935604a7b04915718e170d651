@@ -33,6 +33,24 @@
       "message": "Although ansible-2-for-rhel-8-x86_64-rpms is available, the repository with the specific version, type, and architecture is still available. I prefer to keep it as now. With this change, we are asking to install debug, sources, and all for all 2* versions. Thanks\n\n```\n$ sudo subscription-manager repos --list|grep ansible-2\nRepo ID:   ansible-2.9-for-rhel-8-x86_64-rpms\nRepo ID:   ansible-2-for-rhel-8-x86_64-debug-rpms\nRepo ID:   ansible-2.9-for-rhel-8-x86_64-debug-rpms\nRepo ID:   ansible-2-for-rhel-8-x86_64-source-rpms\nRepo ID:   ansible-2.8-for-rhel-8-x86_64-source-rpms\nRepo ID:   ansible-2.8-for-rhel-8-x86_64-debug-rpms\nRepo ID:   ansible-2.9-for-rhel-8-x86_64-source-rpms\nRepo ID:   ansible-2-for-rhel-8-x86_64-rpms\nRepo ID:   ansible-2.8-for-rhel-8-x86_64-rpms\n```",
       "revId": "b256eb0eb80ff4b935604a7b04915718e170d651",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b49a6de3_868c3b9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1520
+      },
+      "writtenOn": "2024-01-16T10:37:36Z",
+      "side": 1,
+      "message": "For RHEL 8.9 I only get one version\n\n```\n# sudo subscription-manager repos --list|grep ansible-2\nRepo ID:   ansible-2-for-rhel-8-x86_64-rpms\n```",
+      "parentUuid": "d7ee2c22_862b40df",
+      "revId": "b256eb0eb80ff4b935604a7b04915718e170d651",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
