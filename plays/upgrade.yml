@@ -13,17 +13,6 @@
   when:
     - enable_gateway_mode | default(false) | bool
 
-- name: "Deactivate the upgrade of worker nodes - EUS"
-  community.kubernetes.k8s:
-    definition:
-      kind: MachineConfigPool
-      metadata:
-        name: worker
-      spec:
-        paused: true
-  when:
-    - upgrade_eus | default(false) | bool
-
 - name: "Upgrader: Running the Intermediate upgrade - EUS"
   vars:
     target_version: "{{ version_inter }}"
