@@ -71,6 +71,8 @@ finish() {
                 JOBSTATUS=$(jq -r .job.status <<< "${JOBJSON}")
                 MSG+="-  ${JOBNAME} -> ${JOBSTATUS}: ${JOBURL}\n"
             done
+            # get last job url
+            DCI_URL=${JOBURLS[-1]}
         fi
 
         # It could have failed before the information step
@@ -82,20 +84,18 @@ finish() {
         # Script failed before launching the agent
         [ $RET -ne 0 ] || RET=1
         LOCATION="preparation"
-    fi
-
-    if [ $RET = 0 ]; then
-        VOTE="+1"
-    else
-        VOTE="-1"
+        DCI_URL=
     fi
 
     if [ $RET = 0 ]; then
         VOTE_RESULT="SUCCESS"
+        STATUS="success"
     elif [ $RET -gt 128 ]; then
         VOTE_RESULT="KILLED"
+        STATUS="pending"
     else
         VOTE_RESULT="FAILURE"
+        STATUS="failure"
     fi
 
     if [ -n "$VIRT" ]; then
@@ -110,7 +110,11 @@ finish() {
         VOTE_RESULT="- dci-check-change $LOCATION : $VOTE_RESULT tested on $HWTYPE\n${MSG}"
     fi
 
-    $TOOLDIR/send-feedback $DIR "$VOTE_RESULT" "" $VOTE
+    $TOOLDIR/send_status $DIR "$STATUS" "$JOBSTATUS" $DCI_URL
+
+    if [ "$STATUS" != "cancelled" ]; then
+         $TOOLDIR/send_comment $DIR "$VOTE_RESULT"
+    fi
 
     if [ -n "$PID2" ]; then
         kill $PID2
@@ -341,8 +345,6 @@ if [ "$VIRT" = "no-check" ] ||
             'plays/scripts'
             'dci-check-change'
             'test-runner'
-            'send-feedback'
-            'extract-dependencies'
             'dci-openshift-(app-)?agent-ctl'
             '\.(yml|j2|py)'
         )
@@ -511,9 +513,8 @@ if [ -n "$GIT_REPOS" ]; then
     OPTS+=(-e "{\"dev_gits_to_components\":[$GIT_REPOS]}")
 fi
 
-FEEDBACK="Starting dci-check-change job."
-
-$TOOLDIR/send-feedback $DIR "$FEEDBACK" "" 0
+$TOOLDIR/send_status "$DIR" pending "Starting dci-check-change job"
+$TOOLDIR/send_comment "$DIR" "Starting dci-check-change job."
 
 if [ -z "$KCFG" ]; then
     . /etc/dci-openshift-agent/dcirc.sh
