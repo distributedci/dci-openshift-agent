@@ -142,17 +142,31 @@
           community.kubernetes.k8s:
             definition: '{{ lookup("url", "{{ webserver_url }}/{{ target_version }}/imagesource.yaml", split_lines=False) | from_yaml_all | list }}'
 
-        - name: "upgrader : Wait for nodes to become Ready"
+        - name: "Get cluster nodes"
           community.kubernetes.k8s_info:
             kind: Node
-          register: nodes_info
+          register: cluster_nodes
+
+
+        - name: "Wait for new ImageSources during upgrade"
+          include_role:
+            name: redhatci.ocp.check_resource
           vars:
-            status_query: "resources[*].status.conditions[?type=='Ready'].status"
-            nodes_status: "{{ nodes_info | json_query(status_query) | flatten | unique }}"
-          until:
-            - nodes_status == ['True']
-          retries: 10
-          delay: 30
+            resource_to_check: "MachineConfigPool"
+            check_wait_retries: "{{ 16 * cluster_nodes_count | int + 1  }}"
+            check_wait_delay: 30
+            check_reason: "ImageSources during upgrade"
+
+        - name: "Deactivate the upgrade of worker nodes - EUS"
+          community.kubernetes.k8s:
+            definition:
+              kind: MachineConfigPool
+              metadata:
+                name: worker
+              spec:
+                paused: true
+          when:
+            - upgrade_eus | default(false) | bool
 
         - name: "upgrader : Patch clusterversion to point to custom upstream graph"
           community.kubernetes.k8s:
