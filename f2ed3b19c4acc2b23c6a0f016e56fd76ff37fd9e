@@ -16,6 +16,24 @@
       "message": "Hi Beto, shouldn\u0027t we test this with EUS upgrade?",
       "revId": "f2ed3b19c4acc2b23c6a0f016e56fd76ff37fd9e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b55f3cfd_5fa3e6da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-01-24T18:36:59Z",
+      "side": 1,
+      "message": "Hello Ramón, yeah. I have been testing EUS on a reserver cluster but not sure why I am not getting results about the second job if it fails. \n\nhttps://www.distributed-ci.io/jobs?limit\u003d20\u0026offset\u003d0\u0026sort\u003d-created_at\u0026where\u003dtags:gerrit:dci-openshift-agent-30600,state:active",
+      "parentUuid": "e07f4615_059db4cc",
+      "revId": "f2ed3b19c4acc2b23c6a0f016e56fd76ff37fd9e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
