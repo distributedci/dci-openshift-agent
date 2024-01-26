@@ -16,6 +16,23 @@
       "message": "This is passing now, I identified a issue with NUMA operator, the index for an OCP version only contains the operator for that version. We need to figure out what to do on those cases and get it implemented on a separated change. \n\nIn mean time we can disable NUMA from been upgraded.",
       "revId": "639ecee18684e46049d9c66441aeeb9bb1062838",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0e2e441_167bc5aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-01-26T02:41:55Z",
+      "side": 1,
+      "message": "The upgrade job that is not been reported by gerrit: https://www.distributed-ci.io/jobs/03154571-dabf-4697-b783-965c02b54240/jobStates?sort\u003ddate",
+      "revId": "639ecee18684e46049d9c66441aeeb9bb1062838",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
