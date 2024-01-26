@@ -3,6 +3,46 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "6eef328f_31bd22a9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-01-26T02:52:29Z",
+      "side": 1,
+      "message": "intermediate :)",
+      "range": {
+        "startLine": 9,
+        "startChar": 19,
+        "endLine": 9,
+        "endChar": 30
+      },
+      "revId": "639ecee18684e46049d9c66441aeeb9bb1062838",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f10475f_c156ae18",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-01-26T02:52:29Z",
+      "side": 1,
+      "message": "Imagesources",
+      "revId": "639ecee18684e46049d9c66441aeeb9bb1062838",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "ccae2c90_e533bd26",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 9
@@ -31,6 +71,46 @@
       "writtenOn": "2024-01-26T02:41:55Z",
       "side": 1,
       "message": "The upgrade job that is not been reported by gerrit: https://www.distributed-ci.io/jobs/03154571-dabf-4697-b783-965c02b54240/jobStates?sort\u003ddate",
+      "revId": "639ecee18684e46049d9c66441aeeb9bb1062838",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46c66fbe_5a0a1716",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-01-26T02:52:29Z",
+      "side": 1,
+      "message": "Nice work, LGTM",
+      "revId": "639ecee18684e46049d9c66441aeeb9bb1062838",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86b5dae0_8d8a9fe9",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-01-26T02:52:29Z",
+      "side": 1,
+      "message": "extra \"for\"",
+      "range": {
+        "startLine": 2,
+        "startChar": 35,
+        "endLine": 2,
+        "endChar": 38
+      },
       "revId": "639ecee18684e46049d9c66441aeeb9bb1062838",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
