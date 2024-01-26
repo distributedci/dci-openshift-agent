@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a9fdd27_4fcb2ebb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-01-26T18:34:28Z",
+      "side": 1,
+      "message": "LGTM\n\nThanks Beto!",
+      "revId": "119f1d49d4c38d67235ea128c1066f5e284e6c04",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
