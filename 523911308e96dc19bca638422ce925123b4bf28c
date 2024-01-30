@@ -16,6 +16,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "523911308e96dc19bca638422ce925123b4bf28c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8a55321_0b27b477",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-01-30T20:33:25Z",
+      "side": 1,
+      "message": "This overrides any image passed in DCI_MUST_GATHER_IMAGES\n\nI like your idea of only using logging when needed but I think we have something similar in place that should work\n\nhttps://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/heads/master/plays/get-logs.yml#30\n\nThrough `dci_must_gather_images` you can specify the additional images to use, and iirc, mirroring also takes place from that variable.",
+      "revId": "523911308e96dc19bca638422ce925123b4bf28c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
