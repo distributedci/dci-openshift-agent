@@ -51,6 +51,24 @@
       "parentUuid": "d8a55321_0b27b477",
       "revId": "523911308e96dc19bca638422ce925123b4bf28c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b65c2a4f_4c9f88ae",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-01-30T21:59:36Z",
+      "side": 1,
+      "message": "My bad, you\u0027re right it will append.\n\nBut wouldn\u0027t the use of `dci_must_gather_images` should be preferred? In the case of logging it is requested through a pipeline file, there the gather image should be included when needed as in this case",
+      "parentUuid": "fefd34a3_cf0749af",
+      "revId": "523911308e96dc19bca638422ce925123b4bf28c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
