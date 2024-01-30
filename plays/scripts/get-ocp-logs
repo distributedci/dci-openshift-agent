@@ -52,8 +52,17 @@ for h in ${cluster_nodes}; do
   (echo "${h}"; ${oc_path} get nodes "${h}" -o yaml|grep -E 'desiredConfig|currentConfig') >> "${log_dir}/${prefix}machine-configs.txt";
 done
 
+# Must gather settings
+LOGGING_MUST_GATHER_IMAGE=$(${oc_path} -n openshift-logging get deployment.apps/cluster-logging-operator -o jsonpath='{.spec.template.spec.containers[?(@.name == "cluster-logging-operator")].image}')
+OSE_MUST_GATHER_IMAGE=registry.redhat.io/openshift4/ose-must-gather
+
+# Add Must gather Cluster logging image if present
+if [ -n "$LOGGING_MUST_GATHER_IMAGE" ]; then
+    DCI_MUST_GATHER_IMAGES+=" $OSE_MUST_GATHER_IMAGE $LOGGING_MUST_GATHER_IMAGE"
+fi
+
 # Collect must-gather
-for image in ${DCI_MUST_GATHER_IMAGES:-"registry.redhat.io/openshift4/ose-must-gather"}
+for image in ${DCI_MUST_GATHER_IMAGES:-"$OSE_MUST_GATHER_IMAGE"}
 do
     if [ -n "${REGISTRY}" ] && [ "${REGISTRY}" != ":" ]
     then
