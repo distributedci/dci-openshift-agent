@@ -166,6 +166,7 @@
         ol_endpoint: "{{ logs_endpoint |default('http://minio-service.minio:9000') }}"
         ol_region: "{{ logs_region | default('us-east-1') }}"
         ol_loki_size: "{{ logs_loki_size | default('1x.extra-small') }}"
+        ol_loki_replication: "{{ logs_loki_replication | default(1) }}"
         ol_storage_class: "{{ logs_storage_class | default('ocs-storagecluster-ceph-rbd') }}"
         ol_event_router_image: |-
           {%- if dci_disconnected | default(false) %}
