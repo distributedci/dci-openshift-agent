@@ -590,14 +590,15 @@ The following variables allow customizing the logs stack deployment. Please see 
 
 | Variable                        | Required | Type    | Default                                                        | Description
 | ------------------------------- | -------- | ------- | -------------------------------------------------------------- | ------------
-| logs_access_key_id              | False    | String  | undefined                                                      | Key ID for the Object storage system.
-| logs_access_key_secret          | False    | String  | undefined                                                      | Key Secret for the Object Storage system.
-| logs_bucket                     | False    | String  | undefined                                                      | Object Storage bucket name.
-| logs_endpoint                   | False    | String  | undefined                                                      | Object Storage endpoint.
-| logs_region                     | False    | String  | undefined                                                      | Object Storage region.
-| logs_loki_size                  | False    | String  | undefined                                                      | Loki Deployment Size. See [Sizing](https://docs.openshift.com/container-platform/4.13/logging/cluster-logging-loki.html#deployment-sizing_cluster-logging-loki) for more details.
-| logs_storage_class              | False    | String  | undefined                                                      | Cluster Storage class for Loki components.
-| logs_event_router_image         | False    | String  | registry.redhat.io/openshift-logging/eventrouter-rhel8:v5.2.1-1| Event Router image.
+| logs_access_key_id              | yes      | String  | undefined                                                      | Key ID for the Object storage system.
+| logs_access_key_secret          | yes      | String  | undefined                                                      | Key Secret for the Object Storage system.
+| logs_bucket                     | yes      | String  | undefined                                                      | Object Storage bucket name.
+| logs_endpoint                   | yes      | String  | undefined                                                      | Object Storage endpoint.
+| logs_region                     | yes      | String  | undefined                                                      | Object Storage region.
+| logs_loki_size                  | yes      | String  | undefined                                                      | Loki Deployment Size. See [Sizing](https://docs.openshift.com/container-platform/4.13/logging/cluster-logging-loki.html#deployment-sizing_cluster-logging-loki) for more details.
+| logs_loki_replication           | yes      | Int     | undefined                                                      | Loki replication factor
+| logs_storage_class              | yes      | String  | undefined                                                      | Cluster Storage class for Loki components.
+| logs_event_router_image         | No       | String  | registry.redhat.io/openshift-logging/eventrouter-rhel8:v5.2.1-1| Event Router image.
 | logs_settings                   | False    | String  | ""                                                             | An optional yaml file with the variables listed above. The variables defined there take precedence over the ones defined at role level
 
 Enabling the openshift `cluster-logging` components requires high amounts of storage available for data persistency, please take this in consideration during the sizing of the Object Storage provider.
