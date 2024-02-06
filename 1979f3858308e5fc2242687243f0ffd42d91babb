@@ -16,6 +16,23 @@
       "message": "Please check https://issues.redhat.com/browse/CILAB-1447 for more context, here we put the links to the Jira cards where we discovered this issue",
       "revId": "1979f3858308e5fc2242687243f0ffd42d91babb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c206a1ed_96d6c252",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-06T18:11:06Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "1979f3858308e5fc2242687243f0ffd42d91babb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
