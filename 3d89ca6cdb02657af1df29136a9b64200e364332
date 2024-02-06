@@ -33,6 +33,23 @@
       "message": "Thanks!",
       "revId": "3d89ca6cdb02657af1df29136a9b64200e364332",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7353c825_ad026bc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-06T16:32:05Z",
+      "side": 1,
+      "message": "Thanks Beto!",
+      "revId": "3d89ca6cdb02657af1df29136a9b64200e364332",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
