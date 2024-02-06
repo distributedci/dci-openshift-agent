@@ -290,7 +290,7 @@ all:
         vm_spec:
           cpu_cores: 8
           ram_mib: 16384
-          disk_size_gb: 150
+          disk_size_gb: 250
         network_config:
           interfaces:
             - name: enp1s0
@@ -313,7 +313,7 @@ all:
             vm_spec:
               cpu_cores: 16  # Use a bigger instance for SNO
               ram_mib: 32718  # Use a bigger instance for SNO
-              disk_size_gb: 200  # Use a bigger instance for SNO
+              disk_size_gb: 250
           hosts:
             sno:
               ansible_host: "{{ nodes['sno']['ip'] }}"
