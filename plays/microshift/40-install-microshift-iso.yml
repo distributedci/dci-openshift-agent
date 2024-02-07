@@ -1,0 +1,14 @@
+---
+- name: Setup a http server
+  vars:
+    http_dir: "{{ http_store }}"
+    http_data_dir: "{{ http_store }}/data"
+    inventory_validated: True
+  include_role:
+    name: redhatci.ocp.setup_http_store
+
+- name: Copy ISO image into http store
+  ansible.builtin.copy:
+    src: "/tmp/microshift.iso"
+    dest: "{{ http_store }}/data/"
+    remote_src: true

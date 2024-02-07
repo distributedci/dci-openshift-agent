@@ -1,0 +1,20 @@
+---
+- name: Install Packages needed
+  ansible.builtin.dnf:
+    state: latest
+    name:
+      - rsync
+  become: true
+
+- name: Install and set up sushy tools
+  vars:
+    bmc_user: "{{ sushy_tools_bmc_user }}"
+    bmc_password: "{{ sushy_tools_bmc_password }}"
+  import_role:
+    name: redhatci.ocp.sushy_tools_install_config
+
+- name: Create VMs that will receive Microshift
+  become: true
+  command: >-
+    virt-install --name={{ item.key }} --virt-type=kvm --memory={{ item.value.memory }} --vcpus={{ item.value.vcpu }} --network network=default --boot hd,cdrom --os-variant=rhel9-unknown --disk size={{ item.value.disk_size }} --wait=0
+  with_items: "{{ hostvars.localhost.system_inventory | dict2items }}"
