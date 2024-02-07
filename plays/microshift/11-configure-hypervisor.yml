@@ -1,0 +1,60 @@
+---
+- name: Check the variables needed when configuring the hypervisor
+  assert:
+    that: "{{ item }} is defined"
+    quiet: true
+  with_items:
+    - _suts
+    - _libvirt_pool_dir
+
+- name: Install Packages needed
+  ansible.builtin.package:
+    state: latest
+    name:
+      - virt-install
+  become: true
+
+- name: Get list of VMs
+  become: true
+  community.libvirt.virt:
+    command: info
+  register: vms_list
+
+- name: Destroy SUTs if they are running
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.name }}"
+    command: destroy
+  when: "item.name in vms_list.keys() and vms_list[item.name]['state'] == 'running'"
+  with_items: "{{ _suts }}"
+
+- name: Undefine the SUTs
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.name }}"
+    command: undefine
+    force: true
+  when: "item.name in vms_list.keys()"
+  with_items: "{{ _suts }}"
+
+- name: Delete the SUTs disk
+  become: true
+  file:
+    path: "{{ _libvirt_pool_dir }}/{{ item.name}}.qcow2"
+    state: absent
+  with_items: "{{ _suts }}"
+
+- name: Create VMs that will receive Microshift
+  become: true
+  command: >-
+    virt-install
+    --name={{ item.name }}
+    --virt-type=kvm
+    --memory={{ item.memory }}
+    --vcpus={{ item.vcpu }}
+    --network network=default
+    --boot=hd,cdrom
+    --os-variant=rhel9-unknown
+    --disk {{ _libvirt_pool_dir }}/{{ item.name}}.qcow2,size={{ item.disk_size }}
+    --wait=0
+  with_items: "{{ _suts }}"

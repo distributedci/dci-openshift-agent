@@ -9,6 +9,7 @@ UNITDIR = /usr/lib/systemd/system
 install:
 	install -p -D -m 644 ansible.cfg $(BUILDROOT)$(DATADIR)/dci-openshift-agent/ansible.cfg
 	install -p -D -m 644 dci-openshift-agent.yml  $(BUILDROOT)$(DATADIR)/dci-openshift-agent/dci-openshift-agent.yml
+	install -p -D -m 644 dci-microshift-agent.yml  $(BUILDROOT)$(DATADIR)/dci-openshift-agent/dci-microshift-agent.yml
 	install -p -D -m 644 dcirc.sh.dist $(BUILDROOT)$(SYSCONFDIR)/dci-openshift-agent/dcirc.sh.dist
 
 	for hook in hooks/*.yml; do \
@@ -26,6 +27,10 @@ install:
 	done
 
 	for cru_play in plays/crucible/*.yml; do \
+	  install -p -D -m 755 $$cru_play $(BUILDROOT)$(DATADIR)/dci-openshift-agent/$$cru_play; \
+	done
+
+	for cru_play in plays/microshift/*.yml; do \
 	  install -p -D -m 755 $$cru_play $(BUILDROOT)$(DATADIR)/dci-openshift-agent/$$cru_play; \
 	done
 
