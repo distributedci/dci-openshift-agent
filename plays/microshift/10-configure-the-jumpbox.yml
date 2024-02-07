@@ -1,0 +1,7 @@
+---
+- name: Install Packages needed
+  ansible.builtin.dnf:
+    state: latest
+    name:
+      - rsync
+  become: true

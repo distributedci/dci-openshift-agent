@@ -1,0 +1,178 @@
+---
+- name: Set dci variables
+  hosts: localhost
+  tags:
+    - job
+    - dci
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: Read credentials from env vars
+      set_fact:
+        dci_client_id: "{{ lookup('env','DCI_CLIENT_ID') }}"
+        dci_api_secret: "{{ lookup('env','DCI_API_SECRET') }}"
+        dci_cs_url: "{{ lookup('env','DCI_CS_URL') }}"
+        dci_ui_url: "{{ lookup('env','DCI_UI_URL') | default('https://www.distributed-ci.io', True) }}"
+      no_log: "{{ dci_hide_secrets }}"
+
+    - name: Set the job variable
+      set_fact:
+        job: "{{ job_info.job }}"
+
+    - name: Set the microshift component variable
+      set_fact:
+        microshift: "{{ job.components[0] }}"
+
+    - name: Set DCI tags for the current job
+      dci_job:
+        id: "{{ job.id }}"
+        tags: "{{ ['agent:microshift'] + dci_tags }}"
+
+- name: Set pre-run
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - pre-run
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: pre-run
+      dci_job:
+        id: "{{ hostvars.localhost.job.id }}"
+        status: "pre-run"
+      tags: [dci]
+
+- name: Pre-run
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - pre-run
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Configure the jumpbox
+          include_tasks: plays/microshift/10-configure-the-jumpbox.yml
+
+        - name: Bootstrap RDHE builder
+          include_tasks: plays/microshift/20-bootstrap_rhde_builder.yml
+
+      rescue: &teardown_error
+        - name: error
+          dci_job:
+            id: "{{ hostvars.localhost.job.id }}"
+            status: "error"
+          tags: [dci]
+          ignore_unreachable: true
+
+- name: Set status running
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - running
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: running
+      dci_job:
+        id: "{{ hostvars.localhost.job.id }}"
+        status: "running"
+      tags: [dci]
+
+- name: Build the OStree ISO
+  hosts: rhde_builder
+  tags:
+    - running
+    - build-image
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Build the Microshift ISO image
+          include_tasks: plays/microshift/30-build-microshift-iso.yml
+
+      rescue: &teardown_failure
+        - name: failure
+          dci_job:
+            id: "{{ hostvars.localhost.job.id }}"
+            status: "failure"
+          tags: [dci]
+          ignore_unreachable: true
+          delegate_to: localhost
+
+- name: Launch install
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - running
+    - installing
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Install Microshift ISO
+          include_tasks: plays/microshift/40-install-microshift-iso.yml
+
+      rescue: *teardown_failure
+
+- name: Set status post-run
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - post-run
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: post-run
+      dci_job:
+        id: "{{ hostvars.localhost.job.id }}"
+        status: "post-run"
+      tags: [dci]
+
+- name: Launch Red Hat tests
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - post-run
+    - testing
+    - redhat-testing
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Run tests
+          include_tasks: plays/microshift/50-run-tests.yml
+
+      rescue: *teardown_failure
+
+- name: Set status success
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - success
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: success
+      dci_job:
+        id: "{{ hostvars.localhost.job.id }}"
+        status: "success"
+      tags: [dci]
