@@ -1,0 +1,43 @@
+---
+- name: Install Packages needed
+  ansible.builtin.dnf:
+    state: latest
+    name:
+      - rsync
+      - virt-install
+  become: true
+
+- name: Install and set up sushy tools
+  vars:
+    bmc_user: "{{ sushy_tools_bmc_user }}"
+    bmc_password: "{{ sushy_tools_bmc_password }}"
+  import_role:
+    name: redhatci.ocp.sushy_tools_install_config
+
+- name: Get list of VMs
+  become: true
+  community.libvirt.virt:
+    command: info
+  register: vms_list
+
+- name: Destroy SUTs if they are running
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.key }}"
+    command: destroy
+  when: "item.key in vms_list.keys() and vms_list[item.key]['state'] == 'running'"
+  with_items: "{{ hostvars.localhost.system_inventory | dict2items }}"
+
+- name: Undefine the SUTs
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.key }}"
+    command: undefine
+    force: true
+  with_items: "{{ hostvars.localhost.system_inventory | dict2items }}"
+
+- name: Create VMs that will receive Microshift
+  become: true
+  command: >-
+    virt-install --name={{ item.key }} --virt-type=kvm --memory={{ item.value.memory }} --vcpus={{ item.value.vcpu }} --network network=default --boot hd,cdrom --os-variant=rhel9-unknown --disk size={{ item.value.disk_size }} --wait=0
+  with_items: "{{ hostvars.localhost.system_inventory | dict2items }}"
