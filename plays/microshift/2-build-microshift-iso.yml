@@ -1,0 +1,16 @@
+---
+- name: Debug distribution
+  debug:
+    var: ansible_distribution
+
+- name: Debug distribution version
+  debug:
+    var: ansible_distribution_version
+
+- name: Debug distribution major version
+  debug:
+    var: ansible_distribution_major_version
+
+- name: Build Microshift ISO
+  debug:
+    msg: "building..."
