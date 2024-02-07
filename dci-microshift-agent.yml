@@ -1,0 +1,200 @@
+---
+- name: Set dci variables
+  hosts: localhost
+  tags:
+    - job
+    - dci
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: Read credentials from env vars
+      ansible.builtin.set_fact:
+        dci_client_id: "{{ lookup('env','DCI_CLIENT_ID') }}"
+        dci_api_secret: "{{ lookup('env','DCI_API_SECRET') }}"
+        dci_cs_url: "{{ lookup('env','DCI_CS_URL') }}"
+        dci_ui_url: "{{ lookup('env','DCI_UI_URL') | default('https://www.distributed-ci.io', True) }}"
+      no_log: "{{ dci_hide_secrets }}"
+
+    - name: Set the job variable
+      ansible.builtin.set_fact:
+        job: "{{ job_info.job }}"
+
+    - name: Set the microshift component variable
+      ansible.builtin.set_fact:
+        microshift: "{{ job.components[0] }}"
+
+    - name: Set the http_store variable where we are going to save the microshift.iso image
+      ansible.builtin.set_fact:
+        http_store: "/opt/http_store"
+
+    - name: Set the ssh_public_key and ssh_private_key variables used to ssh in the SUTs
+      ansible.builtin.set_fact:
+        ssh_public_key: "{{ lookup('env', 'HOME') + '/.ssh/id_rsa.pub' }}"
+        ssh_private_key: "{{ lookup('env', 'HOME') + '/.ssh/id_rsa' }}"
+
+    - name: Set DCI tags for the current job
+      dci_job:
+        id: "{{ job.id }}"
+        tags: "{{ ['agent:microshift'] + dci_tags }}"
+
+- name: Pre-run
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - pre-run
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Set job status pre-run
+          dci_job:
+            id: "{{ hostvars.localhost.job.id }}"
+            status: "pre-run"
+          tags: [dci]
+
+        - name: Configure the jumpbox
+          include_tasks: plays/microshift/10-configure-the-jumpbox.yml
+
+        - name: Bootstrap RDHE builder
+          include_tasks: plays/microshift/20-bootstrap_rhde_builder.yml
+
+        - name: Set job status running
+          dci_job:
+            id: "{{ hostvars.localhost.job.id }}"
+            status: "running"
+          tags: [dci]
+
+      rescue: &teardown_error
+        - name: error
+          dci_job:
+            id: "{{ hostvars.localhost.job.id }}"
+            status: "error"
+          tags: [dci]
+          ignore_unreachable: true
+          delegate_to: localhost
+
+        - name: Error
+          fail:
+            msg: "Something went wrong. Review the log at: https://www.distributed-ci.io/jobs/{{ hostvars.localhost.job.id }}/jobStates"
+
+- name: Build the OStree ISO
+  hosts: rhde_builder
+  tags:
+    - running
+    - build-image
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Build the Microshift ISO image
+          include_tasks: plays/microshift/30-build-microshift-iso.yml
+
+      rescue: &teardown_failure
+        - name: failure
+          dci_job:
+            id: "{{ hostvars.localhost.job.id }}"
+            status: "failure"
+          tags: [dci]
+          ignore_unreachable: true
+          delegate_to: localhost
+
+        - name: Failure
+          fail:
+            msg: "Something went wrong. Review the log at: https://www.distributed-ci.io/jobs/{{ hostvars.localhost.job.id }}/jobStates"
+
+- name: Launch install
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - running
+    - installing
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Install Microshift ISO
+          include_tasks: plays/microshift/40-install-microshift-iso.yml
+
+      rescue: *teardown_failure
+
+- name: Run post-run tasks on jumpbox
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - post-run
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Set job status post-run
+          dci_job:
+            id: "{{ hostvars.localhost.job.id }}"
+            status: "post-run"
+          tags: [dci]
+
+        - name: Post-run tasks
+          include_tasks: plays/microshift/41-post-run-jumpbox.yml
+          with_items: "{{ hostvars.localhost.suts | dict2items }}"
+
+      rescue: *teardown_failure
+
+- name: Run post-run tasks on SUT nodes
+  hosts: microshift
+  gather_facts: true
+  tags:
+    - post-run
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Post-run tasks
+          include_tasks: plays/microshift/41-post-run-sut.yml
+
+      rescue: *teardown_failure
+
+- name: Launch Red Hat tests
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - post-run
+    - testing
+    - redhat-testing
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - block:
+        - name: Run tests
+          include_tasks: plays/microshift/50-run-tests.yml
+          with_fileglob: "{{ dci_cluster_configs_dir }}/kubeconfig-*"
+
+      rescue: *teardown_failure
+
+- name: Set status success
+  hosts: localhost
+  gather_facts: false
+  tags:
+    - success
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: success
+      dci_job:
+        id: "{{ hostvars.localhost.job.id }}"
+        status: "success"
+      tags: [dci]

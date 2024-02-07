@@ -1,0 +1,73 @@
+---
+- name: Install Packages needed
+  ansible.builtin.dnf:
+    state: latest
+    name:
+      - rsync
+      - virt-install
+  become: true
+
+- name: Install and set up sushy tools
+  vars:
+    bmc_user: "{{ sushy_tools_bmc_user }}"
+    bmc_password: "{{ sushy_tools_bmc_password }}"
+  import_role:
+    name: redhatci.ocp.sushy_tools_install_config
+
+- name: Get list of VMs
+  become: true
+  community.libvirt.virt:
+    command: info
+  register: vms_list
+
+- name: Destroy SUTs if they are running
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.key }}"
+    command: destroy
+  when: "item.key in vms_list.keys() and vms_list[item.key]['state'] == 'running'"
+  with_items: "{{ hostvars.localhost.suts | dict2items }}"
+
+- name: Undefine the SUTs
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.key }}"
+    command: undefine
+    force: true
+  with_items: "{{ hostvars.localhost.suts | dict2items }}"
+
+- name: Create VMs that will receive Microshift
+  become: true
+  command: >-
+    virt-install
+    --name={{ item.key }}
+    --virt-type=kvm
+    --memory={{ item.value.memory }}
+    --vcpus={{ item.value.vcpu }}
+    --network network=default
+    --boot=hd,cdrom
+    --os-variant=rhel9-unknown
+    --disk size={{ item.value.disk_size }}
+    --wait=0
+  with_items: "{{ hostvars.localhost.suts | dict2items }}"
+
+- name: Set cluster name fact
+  ansible.builtin.set_fact:
+    cluster: microshift
+
+- debug:  # noqa unnamed-task
+    var: dci_cluster_configs_dir  # from group_vars/all
+
+- name: Create clusterconfigs directory
+  ansible.builtin.file:
+    path: "{{ dci_cluster_configs_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Setup a http server
+  vars:
+    http_dir: "{{ http_store }}"
+    http_data_dir: "{{ http_store }}/data"
+    inventory_validated: true
+  include_role:
+    name: redhatci.ocp.setup_http_store
