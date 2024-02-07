@@ -1,0 +1,4 @@
+---
+- name: Install Microshift
+  debug:
+    msg: "installing..."

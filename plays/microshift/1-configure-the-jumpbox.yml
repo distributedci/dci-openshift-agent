@@ -1,0 +1,4 @@
+---
+- name: Debug Microshift component
+  debug:
+    var: hostvars.localhost.microshift
