@@ -1,0 +1,5 @@
+---
+- name: debug pre-run
+  debug:
+    msg: pre-run
+...
