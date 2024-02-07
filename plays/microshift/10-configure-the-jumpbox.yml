@@ -1,0 +1,84 @@
+---
+- name: Check the variables needed when configuring the jumpbox
+  assert:
+    that: "{{ item }} is defined"
+    quiet: true
+  with_items:
+    - _libvirt_pool_dir
+    - _suts
+    - _http_store
+    - _dci_cluster_configs_dir
+
+- name: Install Packages needed
+  ansible.builtin.package:
+    state: latest
+    name:
+      - rsync
+      - virt-install
+  become: true
+
+- name: Install and set up sushy tools
+  import_role:
+    name: redhatci.ocp.setup_sushy_tools
+
+- name: Get list of VMs
+  become: true
+  community.libvirt.virt:
+    command: info
+  register: vms_list
+
+- name: Destroy SUTs if they are running
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.name }}"
+    command: destroy
+  when: "item.name in vms_list.keys() and vms_list[item.name]['state'] == 'running'"
+  with_items: "{{ _suts }}"
+
+- name: Undefine the SUTs
+  become: true
+  community.libvirt.virt:
+    name: "{{ item.name }}"
+    command: undefine
+    force: true
+  when: "item.name in vms_list.keys()"
+  with_items: "{{ _suts }}"
+
+- name: Delete the SUTs disk
+  become: true
+  file:
+    path: "{{ _libvirt_pool_dir }}/{{ item.name}}.qcow2"
+    state: absent
+  with_items: "{{ _suts }}"
+
+- name: Create VMs that will receive Microshift
+  become: true
+  command: >-
+    virt-install
+    --name={{ item.name }}
+    --virt-type=kvm
+    --memory={{ item.memory }}
+    --vcpus={{ item.vcpu }}
+    --network network=default
+    --boot=hd,cdrom
+    --os-variant=rhel9-unknown
+    --disk {{ _libvirt_pool_dir }}/{{ item.name}}.qcow2,size={{ item.disk_size }}
+    --wait=0
+  with_items: "{{ _suts }}"
+
+- debug: # noqa unnamed-task
+    var: _dci_cluster_configs_dir # from group_vars/all
+
+- name: Create clusterconfigs directory
+  ansible.builtin.file:
+    path: "{{ _dci_cluster_configs_dir }}"
+    state: directory
+    mode: "0755"
+
+- name: Setup a http server
+  vars:
+    http_dir: "{{ _http_store }}"
+    http_data_dir: "{{ _http_store }}/data"
+    inventory_validated: true
+  include_role:
+    name: redhatci.ocp.setup_http_store
