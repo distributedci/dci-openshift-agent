@@ -1,0 +1,24 @@
+---
+# Proxy settings
+http_proxy: "{{ lookup('env','http_proxy') }}"
+https_proxy: "{{ lookup('env','https_proxy') }}"
+no_proxy_list: "{{ lookup('env','no_proxy') }}"
+
+# DCI settings
+dci_tags: []
+dci_hide_secrets: true
+
+# Microshift settings
+http_store: "/opt/http_store"
+dci_cluster_configs_dir: "~/clusterconfigs"
+libvirt_pool_dir: "/var/lib/libvirt/images"
+ssh_public_key: "{{ lookup('env', 'HOME') + '/.ssh/id_rsa.pub' }}"
+ssh_private_key: "{{ lookup('env', 'HOME') + '/.ssh/id_rsa' }}"
+
+# Undocumented variables
+# We are using setup_sushy_tools and vendors.kvm roles that require variables to be set
+secure_sushy_tools: false
+bmc_address: "localhost:8082"
+bmc_user: "bmc" # Needed because of default in roles/vendors/kvm/defaults/main.yml
+bmc_password: "bmc" # Needed because of default in roles/vendors/kvm/defaults/main.yml
+vm_name: "{{ target_host }}" # Needed to avoid redhatci.ocp.vendors.kvm getting vm_node_prefix
