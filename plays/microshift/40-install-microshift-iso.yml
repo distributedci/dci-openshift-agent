@@ -1,0 +1,21 @@
+---
+- name: Check the variables needed to install ISO on SUTs
+  assert:
+    that: "{{ item }} is defined"
+    quiet: true
+  with_items:
+    - _suts
+    - _bmc_address
+    - _bmc_user
+    - _bmc_password
+
+- name: Install ISO on SUTs
+  include_role:
+    name: redhatci.ocp.install_iso
+  vars:
+    boot_iso_url: http://localhost:80/microshift.iso
+    target_host: "{{ item.name }}"
+    bmc_address: "{{ _bmc_address }}"
+    bmc_user: "{{ _bmc_user }}"
+    bmc_password: "{{ _bmc_password }}"
+  with_items: "{{ _suts }}"
