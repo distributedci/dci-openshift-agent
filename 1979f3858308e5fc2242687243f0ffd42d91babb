@@ -33,6 +33,23 @@
       "message": "LGTM",
       "revId": "1979f3858308e5fc2242687243f0ffd42d91babb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cecefdf_8f6583a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-07T02:18:29Z",
+      "side": 1,
+      "message": "Ramon: the SNO disk was originally a good 50Gb bigger than \"normal\" nodes, are you comfortable with leaving them the same size now?",
+      "revId": "1979f3858308e5fc2242687243f0ffd42d91babb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
