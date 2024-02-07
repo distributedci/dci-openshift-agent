@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.12.0
+Version:       0.13.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -73,6 +73,7 @@ exit 0
 %{_datadir}/dci-openshift-agent/action_plugins/*
 %{_datadir}/dci-openshift-agent/utils/*
 %{_datadir}/dci-openshift-agent/plays/crucible/*
+%{_datadir}/dci-openshift-agent/plays/microshift/*
 %{_datadir}/dci-openshift-agent/plays/templates/*
 
 %{_datadir}/dci-openshift-agent/group_vars/all
@@ -84,6 +85,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Tue Mar 12 2024 Guillaume Vincent <gvincent@redhat.com> 0.13.0-1
+- Add Microshift support
+
 * Sun Feb 18 2024 Beto Rdz <josearod@redhat.com> 0.12.0-1
 - Add templates directory
 
