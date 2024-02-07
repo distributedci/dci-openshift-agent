@@ -1,0 +1,27 @@
+---
+- name: Update inventory based on virsh state
+  block:
+    - name: Fetch IP address given by libvirt
+      become: true
+      ansible.builtin.shell: >-
+        virsh domifaddr {{ item.key }} --source arp |
+        awk '/ipv4/ { gsub("/.*", "", $4); print $4 }'
+      register: virsh
+      until: virsh.rc == 0
+      retries: 30  # wait up to 5 minutes for the VM to get an address
+      delay: 10
+
+    - name: Register {{ item.key }} as a new ansible host
+      ansible.builtin.add_host:
+        name: "{{ item.key }}"
+        ansible_host: "{{ virsh.stdout }}"
+        ansible_user: redhat
+        ansible_ssh_command_args: "-o StrictHostKeyChecking=no"
+        ansible_ssh_private_key_file: "{{ ssh_private_key }}"
+        groups: microshift
+
+    - name: Wait for {{ item.key }} to be ready
+      ansible.builtin.wait_for:
+        host: "{{ virsh.stdout }}"
+        port: 22
+...

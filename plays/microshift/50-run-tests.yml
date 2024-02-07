@@ -1,0 +1,16 @@
+---
+- name: Test MicroShift
+  block:
+    - name: Testing OCP API
+      community.kubernetes.k8s_info:
+        kind: Node
+        kubeconfig: "{{ item }}"
+        validate_certs: false
+      register: cluster_nodes
+      ignore_errors: true
+
+    - name: Nodes in cluster
+      debug:
+        var: cluster_nodes
+      ignore_errors: true
+...
