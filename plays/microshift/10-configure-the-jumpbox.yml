@@ -1,0 +1,39 @@
+---
+- name: Check the variables needed when configuring the jumpbox
+  fail:
+    msg: "variable {{ item }} not defined"
+  when: item is not defined
+  with_items:
+    - _http_store
+
+- name: Install Packages needed
+  ansible.builtin.package:
+    state: latest
+    name:
+      - rsync
+  become: true
+
+- name: Install and set up sushy tools
+  vars:
+    bmc_user: "{{ sushy_tools_bmc_user }}"
+    bmc_password: "{{ sushy_tools_bmc_password }}"
+  import_role:
+    name: redhatci.ocp.sushy_tools_install_config
+
+- debug:  # noqa unnamed-task
+    var: dci_cluster_configs_dir  # from group_vars/all
+
+- name: Create clusterconfigs directory
+  ansible.builtin.file:
+    path: "{{ dci_cluster_configs_dir }}"
+    state: directory
+    mode: "0755"
+
+- name: Setup a http server
+  vars:
+    http_dir: "{{ _http_store }}"
+    http_data_dir: "{{ _http_store }}/data"
+    inventory_validated: true
+  include_role:
+    name: redhatci.ocp.setup_http_store
+...
