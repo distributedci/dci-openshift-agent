@@ -29,6 +29,10 @@ install:
 	  install -p -D -m 755 $$cru_play $(BUILDROOT)$(DATADIR)/dci-openshift-agent/$$cru_play; \
 	done
 
+	for cru_play in plays/microshift/*.yml; do \
+	  install -p -D -m 755 $$cru_play $(BUILDROOT)$(DATADIR)/dci-openshift-agent/$$cru_play; \
+	done
+
 	for template in plays/templates/*; do \
 	  install -p -D -m 755 $$template $(BUILDROOT)$(DATADIR)/dci-openshift-agent/$$template; \
 	done
