@@ -1,0 +1,29 @@
+---
+- name: Update inventory based on virsh state
+  block:
+    - name: Fetch IP address given by libvirt
+      ansible.builtin.shell: |-
+        set -o pipefail
+        virsh domifaddr {{ item.key }} | grep ipv4
+      register: virsh
+      until: virsh.rc == 0
+      retries: 30  # wait up to a minute for the VM to get an address
+      delay: 5
+
+    - debug:  # noqa unnamed-task
+        var: virsh
+        verbosity: 1
+
+    - name: Update SUT IP address
+      ansible.builtin.add_host:
+        hostname: "{{ virsh.output.strip().split(' ')[-1].split('/')[0] }}"
+        ansible_host: "{{ item.key }}"
+        ansible_user: redhat
+
+    - name: Wait for host to be ready
+      ansible.builtin.wait_for:
+        host: "{{ item.key }}"
+        port: 22
+
+  with_items: "{{ hostvars.localhost.system_inventory | dict2items }}"
+...

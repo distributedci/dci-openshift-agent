@@ -1,0 +1,15 @@
+---
+- name: Test MicroShift
+  block:
+    - name: Testing OCP API
+      community.kubernetes.k8s_info:
+        kind: Node
+        kubeconfig: "{{ item }}"
+      register: cluster_nodes
+
+    - name: Nodes in cluster
+      debug:
+        var: cluster_nodes
+
+  with_fileglob: "{{ dci_cluster_configs_dir }}/kubeconfig-*"
+...
