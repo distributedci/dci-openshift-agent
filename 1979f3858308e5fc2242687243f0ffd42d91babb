@@ -50,6 +50,24 @@
       "message": "Ramon: the SNO disk was originally a good 50Gb bigger than \"normal\" nodes, are you comfortable with leaving them the same size now?",
       "revId": "1979f3858308e5fc2242687243f0ffd42d91babb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79d1d0f4_e82f8cf3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-07T08:16:21Z",
+      "side": 1,
+      "message": "I just changed it to have the same size than the other nodes, so that all cases use 250GB, but I don\u0027t mind to return it to 200GB, as far as I know I have not seen issues in the SNO deployment with regards to disk size issue. I\u0027ll do that, thanks",
+      "parentUuid": "1cecefdf_8f6583a3",
+      "revId": "1979f3858308e5fc2242687243f0ffd42d91babb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
