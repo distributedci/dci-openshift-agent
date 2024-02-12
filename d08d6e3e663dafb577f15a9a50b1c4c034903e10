@@ -50,6 +50,23 @@
       "message": "Last job failed in the new task as expected, the idea is to catch these errors: https://www.distributed-ci.io/jobs/71b1098a-33f4-4fa0-beb5-aa8c1cdfd869/jobStates?sort\u003ddate\u0026task\u003db02a7d12-d17a-45f7-996a-15ad698eee94\n\nI\u0027ll test it with other versions of OCP to make it pass.",
       "revId": "d08d6e3e663dafb577f15a9a50b1c4c034903e10",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c484113a_95db1fa5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-02-12T15:18:25Z",
+      "side": 1,
+      "message": "check dallas ocp-4.12-vanilla",
+      "revId": "d08d6e3e663dafb577f15a9a50b1c4c034903e10",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
