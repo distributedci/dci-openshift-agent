@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52da8c9d_844ac768",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-13T09:02:20Z",
+      "side": 1,
+      "message": "Some minor comments from my side, but the rest looks fine. I\u0027ve also seen this is passing here: https://www.distributed-ci.io/jobs/42fc231d-bead-4afd-8de9-351be68a521c/jobStates",
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0ab4f2f_80664a0e",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 654,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-13T09:02:20Z",
+      "side": 1,
+      "message": "OpenShift",
+      "range": {
+        "startLine": 654,
+        "startChar": 13,
+        "endLine": 654,
+        "endChar": 22
+      },
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36edff63_b562dbd9",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 654,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-13T09:02:20Z",
+      "side": 1,
+      "message": "backend?",
+      "range": {
+        "startLine": 654,
+        "startChar": 302,
+        "endLine": 654,
+        "endChar": 308
+      },
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6742ecd_01272496",
+        "filename": "plays/create-minio-bucket.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-13T09:02:20Z",
+      "side": 1,
+      "message": "whitespaces",
+      "range": {
+        "startLine": 1,
+        "startChar": 3,
+        "endLine": 1,
+        "endChar": 7
+      },
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
