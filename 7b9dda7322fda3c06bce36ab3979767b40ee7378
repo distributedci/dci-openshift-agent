@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcd00110_f6f82acd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-02-13T14:11:53Z",
+      "side": 1,
+      "message": "LGTM, some minor suggestions to split long files into chunks. Thanks!",
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f0ab4f2f_80664a0e",
@@ -83,6 +100,57 @@
         "endLine": 1,
         "endChar": 7
       },
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "156485d6_e3f9ccc7",
+        "filename": "plays/create-minio-bucket.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-02-13T14:11:53Z",
+      "side": 1,
+      "message": "let\u0027s move this var to the template, I think it\u0027s long enough to deserve a separate file :)",
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb87746a_975ad4cb",
+        "filename": "plays/create-minio-bucket.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-02-13T14:11:53Z",
+      "side": 1,
+      "message": "and the same for the definition :)",
+      "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22b753e6_39ccfc84",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-02-13T14:11:53Z",
+      "side": 1,
+      "message": "should we move this block to a separate file?",
       "revId": "7b9dda7322fda3c06bce36ab3979767b40ee7378",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
