@@ -106,6 +106,15 @@
     check_wait_delay: 90
     check_reason: "PAO installation"
 
+- name: Create Tuned object
+  community.kubernetes.k8s:
+    definition: "{{ lookup('file', tuned_definition) }}"
+  register: tuned_state
+  retries: 5
+  delay: 60
+  until: tuned_state is not failed
+  when: tuned_definition is defined
+
 - name: Reset maxUnavailable count to default value 1
   community.kubernetes.k8s:
     definition:
