@@ -286,6 +286,27 @@
   when:
     - enable_acm | bool
 
+- name: "Configure the Network Observability Operator"
+  block:
+    - name: Create bucket for NetObserv
+      vars:
+        minio_access_key_id: minioadmin
+        minio_access_key_secret: minioadmin
+        minio_bucket_name: network
+        minio_namespace: minio
+        minio_endpoint: http://minio-service.minio:9000
+      ansible.builtin.include_tasks: create-minio-bucket.yml
+      when:
+        - enable_minio | bool
+
+    - name: Setup NetObserv stack
+      vars:
+        ocp_netobserv_conf_file: "{{ dci_netobserv_conf_file | default('') }}"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.ocp_netobserv
+  when:
+    - enable_netobserv | bool
+
 - name: "deploy-operators : Create defined Custom Resources"
   ansible.builtin.include_role:
     name: redhatci.ocp.deploy_cr
