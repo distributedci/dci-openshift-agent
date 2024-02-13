@@ -286,6 +286,11 @@
   when:
     - enable_acm | bool
 
+- name: "Setup the Network Observability Operator"
+  ansible.builtin.include_tasks: setup-netobserv.yml
+  when:
+    - enable_netobserv | bool
+
 - name: "deploy-operators : Create defined Custom Resources"
   ansible.builtin.include_role:
     name: redhatci.ocp.deploy_cr
