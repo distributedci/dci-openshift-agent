@@ -34,6 +34,24 @@
       "parentUuid": "85d9305f_c9fcf057",
       "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53185abf_e7a39200",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-02-14T21:19:33Z",
+      "side": 1,
+      "message": "@tony @manny if you look at the last check https://www.distributed-ci.io/jobs/288309ab-c190-42c1-b54d-8516e466e639/jobStates?sort\u003ddate\u0026task\u003d24596fc6-cb0e-4ef1-911b-0a2b17e37b86\nThe application of a new tuned object did not result in a new MC so the additional check is not so meaningful on the time of the job.",
+      "parentUuid": "d1eb2a00_5e524497",
+      "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
