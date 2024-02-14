@@ -70,6 +70,24 @@
       "parentUuid": "53185abf_e7a39200",
       "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2907cd20_a7232047",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-02-14T21:46:22Z",
+      "side": 1,
+      "message": "Thanks Charles, it was actually this one: https://www.distributed-ci.io/jobs/288309ab-c190-42c1-b54d-8516e466e639/jobStates?sort\u003ddate\u0026task\u003d2c55c7a7-19c0-40c7-a5ca-566863b1f6a1 but I see it :)\n\nIt\u0027s just odd that there is an MC created about the same time you created the Tuned profile, \n\u003e $ oc -n openshift-cluster-node-tuning-operator get Tuned configuration-nic -o yaml | grep creationTimestamp              \u003e creationTimestamp: \"2024-02-14T20:32:14Z\"\n\u003e\n\u003e $ oc get mc rendered-worker-7b3dc4ca4d4f143ab4cb5bac629a4f6a -o yaml | grep creationTimestamp                            \u003e creationTimestamp: \"2024-02-14T20:33:46Z\" \n\nBut I pulled the MC and compared it with the previous one and the only difference is something about \"RTE SELinux policy\", so I think it\u0027s safe to leave the check, maybe your change does not triggers a change in the MCP, but I wonder if others do. I mean, my concern is that maybe some Tuned changes require a reboot, for example the one in https://access.redhat.com/solutions/7027629, (that change it might not be a good practice) but it removes a setting from the kernel args, so I bet that bad boy will probably reboot the nodes.",
+      "parentUuid": "53185abf_e7a39200",
+      "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
