@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0a6a408_f7d1086d",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-02-14T21:12:02Z",
+      "side": 1,
+      "message": "I think it should be redhatci.ocp.setup_netobserv_stack now",
+      "revId": "338aea7d64c3e9fb2cf53cab649248030638afcb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
