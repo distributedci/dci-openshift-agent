@@ -52,6 +52,24 @@
       "parentUuid": "d1eb2a00_5e524497",
       "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a7c5138_d682ec58",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-02-14T21:35:58Z",
+      "side": 1,
+      "message": "Indeed, if we wanted to play safe, I don\u0027t see any inconvenient on leaving the check, since it could take a few seconds to complete in the best case scenario, but also it would catch any potential changes of mc and it that is also a good outcome.",
+      "parentUuid": "53185abf_e7a39200",
+      "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
