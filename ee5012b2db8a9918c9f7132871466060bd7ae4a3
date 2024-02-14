@@ -33,6 +33,29 @@
       "message": "LGTM",
       "revId": "ee5012b2db8a9918c9f7132871466060bd7ae4a3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5885d3fb_76eb2810",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-14T22:00:20Z",
+      "side": 1,
+      "message": "I will preffer not to rely on values from the inventory at this stage (after the installation), so we can run the operator\u0027s deployment on separated plays without any dependency. \n\nWe can query the cluster about the number of workers and set the retries based on that value:\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/b8afda6a87a071858ad564a646b8de5265f90add/plays/upgrade.yml#L104C1-L127C44 \n\nWe can later consolidate these facts and make them reusable in all places.",
+      "range": {
+        "startLine": 121,
+        "startChar": 7,
+        "endLine": 121,
+        "endChar": 103
+      },
+      "revId": "ee5012b2db8a9918c9f7132871466060bd7ae4a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
