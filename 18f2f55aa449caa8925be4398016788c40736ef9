@@ -16,6 +16,24 @@
       "message": "Charles, I see the tuned profile generated a MachineConfig, then it might be a good idea to add some wait tasks for the MCs to be rendered, and with the \"redhatci.ocp.check_resource\" role to make sure the configuration is rolled out across all servers in the pool (because some changes can cause a reboot). \n\n\u003e $ oc get mc | grep rendered-worker\n...\n\u003e rendered-worker-8e873dda128b6528ec09503fd1c05995\n3562d8acf8339013231e1fd1c2faa2352e254184   3.2.0             151m\n\u003e rendered-worker-fd6e95681fe2f5b4487b472d758d56bc 3562d8acf8339013231e1fd1c2faa2352e254184   3.2.0             173m\n\u003e\n\u003e $ oc get Tuned -A \n\u003e NAMESPACE                                NAME                                           AGE\n\u003e openshift-cluster-node-tuning-operator   configuration-nic                              151m\n\u003e openshift-cluster-node-tuning-operator   openshift-node-performance-blueprint-profile   173m\n...\n\u003e\n\u003e $ for m in 0 1 2 3; do echo \"\u003d\u003d\u003d worker-${m} \u003d\u003d\u003d\"; ssh core@worker-${m} \"last\" 2\u003e/dev/null; done\n\u003e \u003d\u003d\u003d worker-0 \u003d\u003d\u003d\n\u003e reboot   system boot  5.14.0-284.52.1. Tue Feb 13 19:06   still running\n\u003e reboot   system boot  5.14.0-284.52.1. Tue Feb 13 18:45 - 19:04  (00:19)\n\u003e ...\n\u003e \u003d\u003d\u003d worker-1 \u003d\u003d\u003d\n\u003e reboot   system boot  5.14.0-284.52.1. Tue Feb 13 19:08   still running\n\u003e reboot   system boot  5.14.0-284.52.1. Tue Feb 13 18:47 - 19:06  (00:18)\n\nI also see there are some objects in the Tuned operator to check the progress and what profile is using. Then maybe it\u0027s worth move it to its own play apply-tuned-profile.yml, so we run similar validations as when applying a PAO profile wdyt?\n\n\u003e $ oc -n openshift-cluster-node-tuning-operator get co/node-tuning \n\u003e NAME          VERSION                              AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE\n\u003e node-tuning   4.13.0-0.nightly-2024-02-12-182537   True        False         False      4h19m   \n\u003e\n\u003e $ oc -n openshift-cluster-node-tuning-operator get profile.tuned.openshift.io \n\u003e NAME       TUNED                     APPLIED   DEGRADED   AGE\n\u003e master-0   openshift-control-plane   True      False      4h19m\n\u003e master-1   openshift-control-plane   True      False      4h19m\n\u003e master-2   openshift-control-plane   True      False      4h19m\n\u003e worker-0   configuration-nic         True      False      3h52m\n\u003e worker-1   configuration-nic         True      False      3h51m\n\u003e worker-2   configuration-nic         True      False      3h52m\n\u003e worker-3   configuration-nic         True      False      3h53m",
       "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1eb2a00_5e524497",
+        "filename": "plays/apply-pao-profile.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-02-14T09:43:51Z",
+      "side": 1,
+      "message": "I wanted to check the status of the MCs after applying the tuned, in my example, the change is so quick to be applied, a check was not needed but I realize that it needs a proper check like the Performance Profile. I will update the CR 😊\n\nI don\u0027t want to move the application of a tuned object away from the apply-poa-profile.yml because you need to reference the performance profile in your tuned object, it cannot be applied independently.",
+      "parentUuid": "85d9305f_c9fcf057",
+      "revId": "18f2f55aa449caa8925be4398016788c40736ef9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
