@@ -16,6 +16,24 @@
       "message": "The conditionals to setup the playbooks are in both places, I think you should only keep the conditional in the main playbook and remove the `when` clause in the setup_* playbooks",
       "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0826040_daca91eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-15T22:20:34Z",
+      "side": 1,
+      "message": "The only case I see an enable_ is in setup-cnv.yml, which is required only when CNV is installed and the NFS storage provisioner is present. CNV cannot automatically create a Storage profile for NFS, so we have to create it.",
+      "parentUuid": "d62829d6_93ae2693",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
