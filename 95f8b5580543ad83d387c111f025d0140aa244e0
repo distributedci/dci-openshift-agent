@@ -70,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b78eb45_21a3852c",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-15T23:36:16Z",
+      "side": 1,
+      "message": "Agree with this one, this variable was deprecated and not in documented anymore.",
+      "parentUuid": "e06e2d3a_dfb5bf31",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "429bed3d_e3e04ff1",
@@ -83,6 +101,24 @@
       "writtenOn": "2024-02-15T22:43:30Z",
       "side": 1,
       "message": "add `- enable_nfs_storage | bool` here",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64547f8c_c17dde3a",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-15T23:36:16Z",
+      "side": 1,
+      "message": "That will make it mandatory to have both variables set to try and the creation of the storageprofile is only needed when we enable the storage class based on NFS",
+      "parentUuid": "429bed3d_e3e04ff1",
       "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -104,6 +140,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ba22c0e_9ce438b1",
+        "filename": "plays/setup-cnv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-15T23:36:16Z",
+      "side": 1,
+      "message": "This is required only for cases where the SC is NFS. That is and additional configuration to allow provisioning Datavolumes for VMs",
+      "parentUuid": "64ae024e_cbef8d22",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4f55d8f_2b51af69",
@@ -117,6 +171,24 @@
       "writtenOn": "2024-02-15T22:43:30Z",
       "side": 1,
       "message": "remove this `when` condition",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82b06df7_c28e0b8b",
+        "filename": "plays/setup-odf.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-15T23:36:16Z",
+      "side": 1,
+      "message": "Done, this variable is not in use or documented",
+      "parentUuid": "c4f55d8f_2b51af69",
       "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
