@@ -34,6 +34,91 @@
       "parentUuid": "d62829d6_93ae2693",
       "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a28c660b_6578c128",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-15T22:43:30Z",
+      "side": 1,
+      "message": "If there are 2 conditions for the playbook to actually run, both conditions should be listed in the `include_tasks` call",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e06e2d3a_dfb5bf31",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-15T22:43:30Z",
+      "side": 1,
+      "message": "add `- storage_cluster | bool` here",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "429bed3d_e3e04ff1",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-15T22:43:30Z",
+      "side": 1,
+      "message": "add `- enable_nfs_storage | bool` here",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64ae024e_cbef8d22",
+        "filename": "plays/setup-cnv.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-15T22:43:30Z",
+      "side": 1,
+      "message": "remove this `when` condition",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4f55d8f_2b51af69",
+        "filename": "plays/setup-odf.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-15T22:43:30Z",
+      "side": 1,
+      "message": "remove this `when` condition",
+      "revId": "95f8b5580543ad83d387c111f025d0140aa244e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
