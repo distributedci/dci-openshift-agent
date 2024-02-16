@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd0f764f_1c62738d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-16T10:21:42Z",
+      "side": 1,
+      "message": "Let\u0027s wait for the job to finish, but it looks good. Strange thing is that why the debug jobs for the network observability integration were working fine...",
+      "revId": "e06872a008a64f60ade7b95e9c0590d6c5f556ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
