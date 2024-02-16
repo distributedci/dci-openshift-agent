@@ -16,6 +16,24 @@
       "message": "Let\u0027s wait for the job to finish, but it looks good. Strange thing is that why the debug jobs for the network observability integration were working fine...",
       "revId": "e06872a008a64f60ade7b95e9c0590d6c5f556ad",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6df153ae_3f1ea48c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-02-16T10:27:38Z",
+      "side": 1,
+      "message": "I agree. I suspect that the modified path of the check cmd may have influenced the final behavior.",
+      "parentUuid": "dd0f764f_1c62738d",
+      "revId": "e06872a008a64f60ade7b95e9c0590d6c5f556ad",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
