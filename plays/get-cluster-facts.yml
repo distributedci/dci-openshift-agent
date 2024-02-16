@@ -1,0 +1,48 @@
+---
+- name: "Get cluster install-config"
+  community.kubernetes.k8s_info:
+    api: v1
+    kind: ConfigMap
+    name: cluster-config-v1
+    namespace: kube-system
+  register: install_config
+  until: "'resources' in install_config and install_config.resources != []"
+  retries: 12
+  delay: 5
+
+- name: Find ImageDigestMirrorSet in the cluster
+  community.kubernetes.k8s_info:
+    api_version: config.openshift.io/v1
+    kind: ImageDigestMirrorSet
+  register: idms_res
+
+- name: "Get Cluster Image Sources"
+  community.kubernetes.k8s_info:
+    api_version: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('v1', 'operator.openshift.io/v1alpha1') }}"
+    kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
+  register: cluster_is
+
+- name: "Set Cluster facts"
+  vars:
+    install_conf: "{{ install_config.resources[0].data['install-config'] | from_yaml }}"
+    cluster_query: "spec.*[*].mirrors[0]"
+  set_fact:
+    dci_control_plane_size: "{{ install_conf | json_query('controlPlane.replicas') }}"
+    dci_compute_size: "{{ install_conf | json_query('compute[? name==`worker` ].replicas') | first }}"
+    dci_control_plane_hosts: "{{ install_conf | json_query('platform.baremetal.hosts[? role==`master` ].name') }}"
+    dci_compute_hosts: "{{ install_conf | json_query('platform.baremetal.hosts[? role==`worker` ].name') }}"
+    dci_webserver_url: |-
+      {%- if install_conf.platform.baremetal.bootstrapOSImage is defined %}
+      {{ install_conf.platform.baremetal.bootstrapOSImage |
+      urlsplit('scheme') }}://{{ install_conf.platform.baremetal.bootstrapOSImage |
+      urlsplit('netloc') }}
+      {%- else %}
+      ''
+      {%- endif %}
+    dci_local_registry: |-
+      {%- if cluster_is is defined and cluster_is.resources | length %}
+      "docker://{{ cluster_is.resources[0] | json_query(cluster_query) | flatten | first }}" | urlsplit('netloc') }}
+      {%- else %}
+      ''
+      {%- endif %}
+...
