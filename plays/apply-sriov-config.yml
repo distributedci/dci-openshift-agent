@@ -13,13 +13,6 @@
     - install_type is defined
     - install_type == "sno"
 
-- name: "Get all worker nodes"
-  community.kubernetes.k8s_info:
-    kind: Node
-    label_selectors:
-      - "node-role.kubernetes.io/worker"
-  register: nodes
-
 - name: "Add SRIOV label to worker nodes"
   community.kubernetes.k8s:
     definition:
@@ -29,7 +22,7 @@
         name: "{{ item.metadata.name }}"
         labels:
           feature.node.kubernetes.io/network-sriov.capable: "true"
-  loop: "{{ nodes.resources }}"
+  loop: "{{ dci_compute_hosts }}"
 
 - name: "Check SriovNetworkNodeState application for all workers"
   include_role:
@@ -39,5 +32,4 @@
     check_wait_retries: 300
     check_wait_delay: 10
     check_reason: "After applying SRIOV config"
-
 ...
