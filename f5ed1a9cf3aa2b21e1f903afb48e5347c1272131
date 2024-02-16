@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1aff31b_23a572f4",
+        "filename": "plays/get-cluster-facts.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-02-16T23:05:42Z",
+      "side": 1,
+      "message": "Where is this one used?",
+      "revId": "f5ed1a9cf3aa2b21e1f903afb48e5347c1272131",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65d70f2c_97416f61",
+        "filename": "plays/get-cluster-facts.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-02-16T23:05:42Z",
+      "side": 1,
+      "message": "I agree this is needed during the upgrade, but not in other places, since it comes already from group_vars/all, would be a way to only do it for upgrade instead?",
+      "revId": "f5ed1a9cf3aa2b21e1f903afb48e5347c1272131",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
