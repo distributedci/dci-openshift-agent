@@ -16,6 +16,24 @@
       "message": "check dallas ocp-4.12-vanilla-sno openshift-vanilla:ansible_extravars\u003ddci_sno_sideload_kernel_uri:http://jumphost.dfwt5g.lab:8080/pub/projects/rt/kernel-rt-core-5.14.0-421.el9.x86_64.rpm",
       "revId": "48e90794574499cfaf65e39aba9136050780138b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52a58397_ce385a75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-02-16T04:25:31Z",
+      "side": 1,
+      "message": "I\u0027m afraid the \"check\" command will only run on the 8nodes queue and not the SNO queue 😐, besides I removed the sno1 resource in 2022/10 to give preference to SNO deployments with ACM 😭, we can restore it to test this 😊",
+      "parentUuid": "7df0e78c_de0b6c78",
+      "revId": "48e90794574499cfaf65e39aba9136050780138b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
