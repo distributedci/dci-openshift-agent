@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.11.0
+Version:       0.12.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -73,6 +73,7 @@ exit 0
 %{_datadir}/dci-openshift-agent/action_plugins/*
 %{_datadir}/dci-openshift-agent/utils/*
 %{_datadir}/dci-openshift-agent/plays/crucible/*
+%{_datadir}/dci-openshift-agent/plays/templates/*
 
 %{_datadir}/dci-openshift-agent/group_vars/all
 
