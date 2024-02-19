@@ -33,6 +33,24 @@
       "message": "Now that this file is just retrieving MCP status, should this playbook be renamed?",
       "revId": "70ab710754154641d83604f77fa6fc341790dab6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23965231_96aaa2e8",
+        "filename": "plays/count_nodes.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-19T20:14:38Z",
+      "side": 1,
+      "message": "Thanks, Ramon. Good point. Yeah, I see those registered vars are used to set up NRO and to apply the perf_profle. I moved those 2 to the new play and removed count_nodes.",
+      "parentUuid": "354d1687_9d63606b",
+      "revId": "70ab710754154641d83604f77fa6fc341790dab6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
