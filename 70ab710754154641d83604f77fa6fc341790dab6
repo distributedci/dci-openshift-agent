@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da1884b2_1fea1a0e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-19T08:50:39Z",
+      "side": 1,
+      "message": "LGTM, but just one observation from one of the modified files",
+      "revId": "70ab710754154641d83604f77fa6fc341790dab6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "354d1687_9d63606b",
+        "filename": "plays/count_nodes.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-19T08:50:39Z",
+      "side": 1,
+      "message": "Now that this file is just retrieving MCP status, should this playbook be renamed?",
+      "revId": "70ab710754154641d83604f77fa6fc341790dab6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
