@@ -16,6 +16,23 @@
       "message": "LGTM, I suppose it should be fine",
       "revId": "1f05bfc150fe19779d128d859c0ee84b9f28bd88",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11b09363_17fadc37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-02-19T08:44:59Z",
+      "side": 1,
+      "message": "Thanks Beto, I don\u0027t know if there is a way test this with our automation",
+      "revId": "1f05bfc150fe19779d128d859c0ee84b9f28bd88",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
