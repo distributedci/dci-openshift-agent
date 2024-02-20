@@ -16,6 +16,24 @@
       "message": "Looks nice, can we do the same for dci-openshift-app-agent and dci-pipeline?",
       "revId": "01029db4703a62a3efac68954f35913e6322dd5a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e0c4a57_897d4269",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-20T16:12:09Z",
+      "side": 1,
+      "message": "That\u0027s my plan, but I want to check if this actually works first (can\u0027t test it until it gets merged and mirrored to GH)",
+      "parentUuid": "63e4caf7_788d7890",
+      "revId": "01029db4703a62a3efac68954f35913e6322dd5a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
