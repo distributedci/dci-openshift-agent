@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63e4caf7_788d7890",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-02-20T07:04:41Z",
+      "side": 1,
+      "message": "Looks nice, can we do the same for dci-openshift-app-agent and dci-pipeline?",
+      "revId": "01029db4703a62a3efac68954f35913e6322dd5a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
