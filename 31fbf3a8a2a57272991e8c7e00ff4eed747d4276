@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0973cd76_3200511f",
+        "filename": "samples/ocp_on_libvirt/inventory/libvirt_resources.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-02-20T14:34:17Z",
+      "side": 1,
+      "message": "Thanks for the change request, I think we can actually go with a newer image, our default CI jobs[1] are using: CentOS-Stream-GenericCloud-8-20240122.1.x86_64.qcow2 and I see there are more recent images for example: https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-GenericCloud-8-20240212.0.x86_64.qcow2\n\nI\u0027ll update the image in our CI jobs to use the one from 20240212 to make sure it works.\n\n[1]\nhttps://github.com/dci-labs/bos2-ci-config/blob/main/files/ocp_on_libvirt/server02/server02-libvirt_resources.yml#L12",
+      "revId": "31fbf3a8a2a57272991e8c7e00ff4eed747d4276",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
