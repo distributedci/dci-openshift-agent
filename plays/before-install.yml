@@ -17,4 +17,9 @@
   set_fact:
     pullsecret: "{{ hostvars.localhost.dci_pullsecret | to_json }}"
     no_log: true
+
+- name: "Set password for core user"
+  ansible.builtin.include_tasks: set-console-pass.yml 
+  when:
+   - dci_set_console_pass | default(false) | bool
 ...
