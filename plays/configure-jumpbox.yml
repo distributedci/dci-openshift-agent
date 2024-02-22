@@ -49,20 +49,6 @@
   set_fact:
     roles_path: "{{ roles_path_cmd.stdout }}"
 
-- block:
-    - name: "Clean up {{ dci_cluster_configs_dir }}"
-      file:
-        path: "{{ dci_cluster_configs_dir }}"
-        state: absent
-
-    - name: "Create {{ dci_cluster_configs_dir }}"
-      file:
-        path: "{{ dci_cluster_configs_dir }}"
-        state: directory
-        mode: "0755"
-  when:
-    - dci_main == 'install'
-
 - name: "Download stable openshift clients"
   vars:
     ocp_clients_url: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable"
