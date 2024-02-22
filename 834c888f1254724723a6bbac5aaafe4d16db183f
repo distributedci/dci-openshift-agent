@@ -16,6 +16,23 @@
       "message": "Confirmed that password is enabled just after the MCP is applied.\n\n$ oc get nodes \nNAME       STATUS   ROLES                         AGE     VERSION\nmaster-0   Ready    control-plane,master,worker   3m53s   v1.27.10+c79e5e2\nmaster-1   Ready    control-plane,master,worker   5m3s    v1.27.10+c79e5e2\nmaster-2   Ready    control-plane,master,worker   5m2s    v1.27.10+c79e5e2\n$ oc get mc\nNAME                                               GENERATEDBYCONTROLLER                      IGNITIONVERSION   AGE\n\u003cTRIMMED\u003e\n05-master-core-password                                                                       3.4.0             63m\n05-worker-core-password                                                                       3.4.0             63m\n11-master-bonding                                                                             3.2.0             63m\n11-worker-bonding                                                                             rendered-master-f332f7bb26a095a832e49eaa551c65fb   \n\u003cTRIMMED\u003e\n$ for m in 0 1 2; do echo \"\u003d\u003d\u003d master-${m} \u003d\u003d\u003d\"; ssh -q core@master-${m} \"sudo grep -w core /etc/shadow\"; done\n\u003d\u003d\u003d master-0 \u003d\u003d\u003d\ncore:$6$redacted$96BDGgCnKnZ7Cudk82NUfdSllhkeiEnwOctdW2Oo15OVxjy9QPq3YKdnAm5PG5NZxkyI8EPC0hjdicMUMbpx10:19773:0:99999:7:::\n\u003d\u003d\u003d master-1 \u003d\u003d\u003d\ncore:$6$redacted$96BDGgCnKnZ7Cudk82NUfdSllhkeiEnwOctdW2Oo15OVxjy9QPq3YKdnAm5PG5NZxkyI8EPC0hjdicMUMbpx10:19773:0:99999:7:::\n\u003d\u003d\u003d master-2 \u003d\u003d\u003d\ncore:$6$redacted$96BDGgCnKnZ7Cudk82NUfdSllhkeiEnwOctdW2Oo15OVxjy9QPq3YKdnAm5PG5NZxkyI8EPC0hjdicMUMbpx10:19773:0:99999:7:::",
       "revId": "834c888f1254724723a6bbac5aaafe4d16db183f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30388868_9e289b6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-02-22T20:56:57Z",
+      "side": 1,
+      "message": "Thanks, LGTM",
+      "revId": "834c888f1254724723a6bbac5aaafe4d16db183f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
