@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd4a3dcd_640059c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-02-23T02:58:10Z",
+      "side": 1,
+      "message": "Finally it worked in 4.12. 4.13 and 4.14 were already validated.\n\nI will will the job the relevant test are done\n\n$ for m in 0 1 2; do echo \"\u003d\u003d\u003d master-${m} \u003d\u003d\u003d\"; ssh -q core@master-${m} \"sudo grep -w core /etc/shadow\"; done\n\u003d\u003d\u003d master-0 \u003d\u003d\u003d\ncore:$6$REDACTED$mKxGToZL9FSZw9fIg4eFF.CJ.vNwgaAhkymMjo/u2YGe0arB6tO0CZpTLxu3Zpep2E6fb1INhOLfjKgV2QxSL1:19776:0:99999:7:::\n\u003d\u003d\u003d master-1 \u003d\u003d\u003d\ncore:$6$REDACTED$mKxGToZL9FSZw9fIg4eFF.CJ.vNwgaAhkymMjo/u2YGe0arB6tO0CZpTLxu3Zpep2E6fb1INhOLfjKgV2QxSL1:19776:0:99999:7:::\n\u003d\u003d\u003d master-2 \u003d\u003d\u003d\ncore:$6$REDACTED$mKxGToZL9FSZw9fIg4eFF.CJ.vNwgaAhkymMjo/u2YGe0arB6tO0CZpTLxu3Zpep2E6fb1INhOLfjKgV2QxSL1:19776:0:99999:7:::\n$ oc get clusterversion\nNAME      VERSION   AVAILABLE   PROGRESSING   SINCE   STATUS\nversion             False       True          31m     Unable to apply 4.12.0-0.nightly-2024-02-22-204739: an unknown error has occurred: MultipleErrors\n$ oc get mc\nNAME                                               GENERATEDBYCONTROLLER                      IGNITIONVERSION   AGE\n00-master                                          27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n00-worker                                          27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n01-master-container-runtime                        27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n01-master-kubelet                                  27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n01-worker-container-runtime                        27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n01-worker-kubelet                                  27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n11-master-bonding                                                                             3.2.0             31m\n11-worker-bonding                                                                             3.2.0             31m\n20-master-core-password                                                                       3.2.0             31m\n20-worker-core-password                                                                       3.2.0             31m\n99-master-generated-registries                     27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n99-master-ssh                                                                                 3.2.0             31m\n99-worker-generated-registries                     27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             52s\n99-worker-ssh                                                                                 3.2.0             31m\nrendered-master-3df1c526516e0901dc400f0af6bc1c17   27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             49s\nrendered-worker-b78ba35816fddb338e4c9ea75a4dd298   27f73f8c5ee59abc6502318e50448b9536b3a67d   3.2.0             49s",
+      "revId": "2719562d778015cedf9902fb45c69f7d9953c28a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
