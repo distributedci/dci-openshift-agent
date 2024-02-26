@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75ec594a_ffd0a770",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-26T19:39:35Z",
+      "side": 1,
+      "message": "I don\u0027t think 2 variables are needed to control the execution of this playbook, simply by using a single dci_core_password variable: only set it if it\u0027s not empty. Is there any reason why you need 2 variables?",
+      "revId": "cb3b21d8b1864ce863f74ddaf34e0e1f156380ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
