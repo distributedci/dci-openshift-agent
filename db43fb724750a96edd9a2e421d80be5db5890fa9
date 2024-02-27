@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3935ad75_97e0c178",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-27T00:17:47Z",
+      "side": 1,
+      "message": "Few comments, good stuff so far",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f80224aa_b7006c5b",
+        "filename": "dci-microshift-agent.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-27T00:17:47Z",
+      "side": 1,
+      "message": "not convinced on the location of this playbook, if we want to move away from dci-openshift-agent.yml we should stop using top-level entrypoints. Maybe plays/microshift/main.yml or plays/microshift/site.yml are better alternatives",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a915deb_1d886ef4",
+        "filename": "dci-microshift-agent.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-27T00:17:47Z",
+      "side": 1,
+      "message": "I feel like this whole block until line 32 can be extracted to a common role we can reuse. Unrelated to this PR just food for thought",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "518243e0_ce0ece4c",
+        "filename": "dci-microshift-agent.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-27T00:17:47Z",
+      "side": 1,
+      "message": "why is this play split from the one above if the execution environment is the same? both on localhost, both have the same tags, etc.",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93c92d5e_3a47f961",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-27T00:17:47Z",
+      "side": 1,
+      "message": "use ansible.builtin.package",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7878e419_aecb64af",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-27T00:17:47Z",
+      "side": 1,
+      "message": "Since you\u0027re using YAML\u0027s block scalar indicator you can make this more readable by putting each argument in a new line https://yaml-multiline.info",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7618a4b5_492372cb",
+        "filename": "plays/microshift/40-install-microshift-iso.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-02-27T00:17:47Z",
+      "side": 1,
+      "message": "you can remove this task if you pass \"{{ http_store }}/data\" to microshift_generate_iso **or** you need to unset remote_src since you\u0027re assuming the host that is building the iso could be different from localhost, so stick with one approach",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
