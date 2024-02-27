@@ -67,6 +67,23 @@
       "message": "This is working as expected in connected and disconnected.",
       "revId": "a5694b80f09efcf6761ed12cf4e7a3a28232489d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64344257_277ec5e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-02-27T21:41:28Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "a5694b80f09efcf6761ed12cf4e7a3a28232489d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
