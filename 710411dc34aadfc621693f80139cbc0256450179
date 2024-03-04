@@ -33,6 +33,24 @@
       "message": "I think makes sense to remove from the get-logs part, if the failure is during the installation we should get the install-config file from the provisioner with the script plays/scripts/get-ipi-logs, and if the installation passes, then in the plays/after-install.yml we pull it from the configmap, so IMO either way we should be covered.",
       "revId": "710411dc34aadfc621693f80139cbc0256450179",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0721977f_7233055b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-04T17:09:12Z",
+      "side": 1,
+      "message": "I also think that if there is no API to get the CM, we can fallback to the install-config generated in the cluster-configs dir but that needs some testing maybe overkill. I am good with this fix. Thanks!",
+      "parentUuid": "ca32e7c9_058d27db",
+      "revId": "710411dc34aadfc621693f80139cbc0256450179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
