@@ -122,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "373eaca5_2e60be65",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-03-05T17:09:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "93c92d5e_3a47f961",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7878e419_aecb64af",
