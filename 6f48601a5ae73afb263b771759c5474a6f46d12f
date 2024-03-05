@@ -16,6 +16,24 @@
       "message": "@gvincent FTR copying here from Slack, so it doesn\u0027t get lost, you might want to join forces vs reinventing?\n\n@dpawlik said:\n\u003e we have a dedicated role to deploy Microshift\nsoftwarefactory-project.iosoftwarefactory-project.io\n\u003e https://github.com/openstack-k8s-operators/ansible-microshift-role/\n\u003e we are using it in for CI and not just for CI to deploy sf-operator",
       "revId": "6f48601a5ae73afb263b771759c5474a6f46d12f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "468c6d2b_598bc8e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-03-05T09:44:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a3dfd2b1_d53600c6",
+      "revId": "6f48601a5ae73afb263b771759c5474a6f46d12f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }

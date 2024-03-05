@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "49e55553_bf4facd7",
+        "filename": "dci-microshift-agent.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-03-05T09:44:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2a915deb_1d886ef4",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "518243e0_ce0ece4c",
@@ -65,6 +83,24 @@
       "writtenOn": "2024-02-27T00:17:47Z",
       "side": 1,
       "message": "why is this play split from the one above if the execution environment is the same? both on localhost, both have the same tags, etc.",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4291fb87_9362cbf8",
+        "filename": "dci-microshift-agent.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-03-05T09:44:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "518243e0_ce0ece4c",
       "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -103,6 +139,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "79f59525_891914ef",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-03-05T09:44:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7878e419_aecb64af",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7618a4b5_492372cb",
@@ -116,6 +170,24 @@
       "writtenOn": "2024-02-27T00:17:47Z",
       "side": 1,
       "message": "you can remove this task if you pass \"{{ http_store }}/data\" to microshift_generate_iso **or** you need to unset remote_src since you\u0027re assuming the host that is building the iso could be different from localhost, so stick with one approach",
+      "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45e3e3ae_31428f1a",
+        "filename": "plays/microshift/40-install-microshift-iso.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-03-05T09:44:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7618a4b5_492372cb",
       "revId": "db43fb724750a96edd9a2e421d80be5db5890fa9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
