@@ -1,4 +1,10 @@
 ---
+- name: "Add additional Registry CAs"
+  ansible.builtin.include_tasks: add-additional-ca.yml
+  when:
+    - dci_additional_trust_bundle | default("") | length
+    - dci_local_registry is defined
+
 - name: "Get cluster install-config"
   community.kubernetes.k8s_info:
     api: v1
