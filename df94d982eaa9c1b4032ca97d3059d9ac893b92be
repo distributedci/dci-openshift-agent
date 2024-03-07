@@ -16,6 +16,24 @@
       "message": "how does this interact with the already present `disconnected_registry_mirrors_file` variable? seems like duplicated functionality (sort of?)",
       "revId": "df94d982eaa9c1b4032ca97d3059d9ac893b92be",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6d32996_2a8b5764",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-03-07T18:25:21Z",
+      "side": 1,
+      "message": "I like your variable more as it seems more generic tbh, but there seems to be some overlap, maybe see if we can replace one with the other.",
+      "parentUuid": "15a83902_959f3659",
+      "revId": "df94d982eaa9c1b4032ca97d3059d9ac893b92be",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
