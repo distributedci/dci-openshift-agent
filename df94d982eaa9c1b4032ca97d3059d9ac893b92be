@@ -34,6 +34,24 @@
       "parentUuid": "15a83902_959f3659",
       "revId": "df94d982eaa9c1b4032ca97d3059d9ac893b92be",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13e4503c_2db34172",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-07T23:03:20Z",
+      "side": 1,
+      "message": "The problem is the CA bundle is managed differently assisted. Somehow the agent installer appends all the public root CAs to the additionalTrustBundle entry in install-config Confirm map. In IPI we only have one entry.\n\nAlso, the variables that we have for assisted/IPI are different. In assisted we pass a PEM file, but in IPI we pass a YAML with the cert + mirroring entries.\n\nI updated the change according to what is available from each install method—so, avoiding having a new variable.\n\nThanks",
+      "parentUuid": "a6d32996_2a8b5764",
+      "revId": "df94d982eaa9c1b4032ca97d3059d9ac893b92be",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
