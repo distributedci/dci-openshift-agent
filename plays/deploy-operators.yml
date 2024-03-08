@@ -68,6 +68,21 @@
   when:
     - enable_acm | bool
 
+- name: "Setup Openshift Gitops Operator"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.install_operator_gitops
+  vars:
+    iog_configure_only: true
+    disconnected_rhcos_images:
+      - cpuArchitecture: x86_64
+        openshiftVersion: "{{ job_info.job.topic.name.split('-')[1] }}"
+        rootFSUrl: "{{ rootfsimage }}"
+        url: "{{ metalosimage }}"
+        version: "{{ ocp_release_data.rhcos_version }}"
+    rhcos_images: "{{ dci_disconnected | default(false) | bool | ternary(disconnected_rhcos_images | to_json, null) }}"
+  when:
+    - enable_acm_ztp | bool
+
 - name: "Setup the Network Observability Operator"
   ansible.builtin.include_tasks: setup-netobserv.yml
   when:
