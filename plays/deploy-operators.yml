@@ -68,6 +68,12 @@
   when:
     - enable_acm | bool
 
+- name: "Setup Openshift Gitops Operator"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.install_operator_gitops
+  when:
+    - enable_gitops | bool
+
 - name: "Setup the Network Observability Operator"
   ansible.builtin.include_tasks: setup-netobserv.yml
   when:
