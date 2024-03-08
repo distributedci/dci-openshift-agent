@@ -63,6 +63,8 @@ mtc_operator:
 advanced_cluster_management:
   advanced-cluster-management:
   multicluster-engine:
+openshift_gitops_operator:
+  openshift-gitops-operator:
 odf_operator:
   odf-operator:
   mcg-operator:
