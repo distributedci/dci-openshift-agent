@@ -37,6 +37,10 @@
     - install_type is undefined or install_type != 'sno'
     - acm_cluster_type | default('') not in ['hypershift', 'sno']
 
+- name: Fail here to install NUMA resource operator manually
+  ansible.builtin.fail:
+    msg: "Troubleshootin NUMA secondary scheduler restart in 4.14"
+
 - name: Create NUMAResourcesOperator CRD
   vars:
     nro_def: |
