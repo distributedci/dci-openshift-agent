@@ -79,6 +79,12 @@ finish() {
         if [ -z "${JOBURLS}" ]; then
             [ $RET -ne 0 ] || RET=1
             LOCATION="pre-run"
+            # display the output file as sometimes, there are some
+            # missing lines before the tail command that are crucial
+            # for debugging
+            echo "================================================================================"
+            cat output
+            echo "================================================================================"
         fi
     else
         # Script failed before launching the agent
