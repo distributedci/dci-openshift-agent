@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d93fcfc_578b659e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-08T16:48:54Z",
+      "side": 1,
+      "message": "Nacho, to install new operators just update the `dci_operators` in the pipeline with the required values. No need to update code at DOA for that purpose, using the enable_flags to do mirror is not recommended anymore. The code that is in place is just for backward compatibility. The readme is updated about how to mirror operators. \n\nThanks",
+      "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c13a7837_ed25b090",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-08T16:48:54Z",
+      "side": 1,
+      "message": "ACM",
+      "range": {
+        "startLine": 17,
+        "startChar": 87,
+        "endLine": 17,
+        "endChar": 90
+      },
+      "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eba61fe0_b0bdda15",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-08T16:48:54Z",
+      "side": 1,
+      "message": "I see this is still WIP",
+      "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0135da88_891fb968",
+        "filename": "group_vars/all",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-08T16:48:54Z",
+      "side": 1,
+      "message": "We stopped using this varibles to control the operators mirroring some time ago, please use the dci_operators variable to defined which operators need to be installed.",
+      "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9115c2e4_64226900",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-08T16:48:54Z",
+      "side": 1,
+      "message": "dci_operators must be used to deploy the operators, we are trying to do the same process for all the operators. \n\nThe enable_flags should be used to configure the operators.\n\nAlso, checking the install_operator_gitops is doing stuff that we already have in the acm_setup that is executed before this block of code.",
+      "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
