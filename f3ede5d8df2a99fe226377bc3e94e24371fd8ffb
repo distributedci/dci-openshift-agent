@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ae365dc_997ddbe6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-03-11T14:53:40Z",
+      "side": 1,
+      "message": "I think the old ticket this time was: 30833 :P",
+      "revId": "f3ede5d8df2a99fe226377bc3e94e24371fd8ffb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
