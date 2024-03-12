@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41343daa_e78962c5",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-03-12T22:37:08Z",
+      "side": 1,
+      "message": "I can see `mirror_certificate: \"{{ lookup(\u0027file\u0027, local_mirror_certificate_path) }}\"` in the inventory file, shouldn\u0027t this check be performed there? otherwise it will fail when loading the inventory file, no?",
+      "revId": "c4cc056fa1a3dbdf8b354f7bc929c99ee9065a9e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
