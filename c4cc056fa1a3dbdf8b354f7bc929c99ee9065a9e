@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "37ca29ed_344b021a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-12T23:26:11Z",
+      "side": 1,
+      "message": "We do not use run this kind of validation in the inventories. The validation for the ABI certs vars is performed in the pre-check roles but we are not using them here.\n\nSo I think that best approch is to fix our inventories. No sense in having variables pointing to files that do not exist. \n\nAbandoning this",
+      "revId": "c4cc056fa1a3dbdf8b354f7bc929c99ee9065a9e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "41343daa_e78962c5",
