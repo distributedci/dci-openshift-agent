@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca0b7a28_cc882d9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 36
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-03-12T23:01:56Z",
+      "side": 1,
+      "message": "latest patch plus the latest commit on https://github.com/redhat-cip/ansible-collection-redhatci-ocp/commit/7a9167a5669b4fad689fce48db2193b5f4fd9e95 allow us to use the existing `setup_sushy_tools` role",
+      "revId": "d7f71a3f74a294a8c05dbb9ec2b26f5b93b2e799",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
