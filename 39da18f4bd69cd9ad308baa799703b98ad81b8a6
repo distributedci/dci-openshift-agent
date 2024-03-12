@@ -3,6 +3,40 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "4e254aba_e3c7a3a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-03-12T01:40:47Z",
+      "side": 1,
+      "message": "typo: creation",
+      "revId": "39da18f4bd69cd9ad308baa799703b98ad81b8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f50bc407_2e34ee48",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-03-12T01:40:47Z",
+      "side": 1,
+      "message": "typo: SRIOV",
+      "revId": "39da18f4bd69cd9ad308baa799703b98ad81b8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "608b9a73_8b799c09",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -31,6 +65,23 @@
       "writtenOn": "2024-03-12T01:19:32Z",
       "side": 1,
       "message": "Webhook, daemons and injector pods are been created now.\n\n```\n$ oc get pods \nNAME                                      READY   STATUS    RESTARTS   AGE\nnetwork-resources-injector-d5btt          1/1     Running   0          4m40s\nnetwork-resources-injector-p65hw          1/1     Running   0          4m40s\nnetwork-resources-injector-zdjwz          1/1     Running   0          4m40s\noperator-webhook-45gkq                    1/1     Running   0          4m40s\noperator-webhook-sjv8d                    1/1     Running   0          4m40s\noperator-webhook-t82wt                    1/1     Running   0          4m40s\nsriov-network-config-daemon-6mgd9         1/1     Running   0          4m40s\nsriov-network-config-daemon-fwgnm         1/1     Running   0          4m40s\nsriov-network-config-daemon-vzp2n         1/1     Running   0          4m40s\nsriov-network-config-daemon-zcpv6         1/1     Running   0          4m40s\nsriov-network-operator-699f587c9c-rlm48   1/1     Running   0          26m\n```",
+      "revId": "39da18f4bd69cd9ad308baa799703b98ad81b8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c389c636_6d0fbb5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-03-12T01:40:47Z",
+      "side": 1,
+      "message": "nice catch, LGTM, just minor typos in the commit if you want to address them :)",
       "revId": "39da18f4bd69cd9ad308baa799703b98ad81b8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
