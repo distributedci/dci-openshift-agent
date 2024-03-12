@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "fabcd9cb551bebe1153079edeb1ba19fea9ce179",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "217f20bc_3c70fa20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-03-12T08:19:43Z",
+      "side": 1,
+      "message": "looks like something weird is happening with zuul...",
+      "revId": "fabcd9cb551bebe1153079edeb1ba19fea9ce179",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
