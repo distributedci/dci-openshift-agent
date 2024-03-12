@@ -43,6 +43,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "fcae6872_2868e2e6",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-03-12T10:02:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c13a7837_ed25b090",
+      "range": {
+        "startLine": 17,
+        "startChar": 87,
+        "endLine": 17,
+        "endChar": 90
+      },
+      "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "eba61fe0_b0bdda15",
         "filename": "docs/gitops-ztp.md",
         "patchSetId": 3
@@ -88,6 +112,24 @@
       "writtenOn": "2024-03-08T16:48:54Z",
       "side": 1,
       "message": "dci_operators must be used to deploy the operators, we are trying to do the same process for all the operators. \n\nThe enable_flags should be used to configure the operators.\n\nAlso, checking the install_operator_gitops is doing stuff that we already have in the acm_setup that is executed before this block of code.",
+      "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff340b16_2cf5e431",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-03-12T10:02:50Z",
+      "side": 1,
+      "message": "We still need to call this role, since it includes some configuration actions.\nI\u0027ll updated the role, so it allows for choosing between installing and configure and only configure, so other teams may still use the role as it was originally intended.",
+      "parentUuid": "9115c2e4_64226900",
       "revId": "5f3f2b06e87026eca4bd1dc3bf9b7dd3d9d0b695",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
