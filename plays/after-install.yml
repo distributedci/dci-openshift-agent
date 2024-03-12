@@ -28,7 +28,7 @@
   when:
     - install_type in ['assisted']
     - dci_local_registry is defined
-    - mirror_certificate | default("")| length > 0
+    - lookup('fileglob', local_mirror_certificate_path, errors='warn')
 
 - name: "Save the install-config"
   vars:
