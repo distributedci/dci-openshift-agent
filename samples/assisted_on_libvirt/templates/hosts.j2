@@ -146,9 +146,17 @@ all:
     # provided mirror certificate logic, no need to change.
     local_mirror_certificate_path: "{% raw %}{{ (setup_registry_service == true) | ternary(
         fetched_dest + '/' + (hostvars['registry_host']['cert_file_prefix'] | default('registry')) + '.crt',
-        repo_root_path + '/mirror_certificate.txt')
+        repo_root_path + '/mirror_certificate.crt')
       }}{% endraw %}"
+{% set repo_root_path = dci_cluster_configs_dir | default(ansible_env.HOME) %}
+{% set fetched_dest = repo_root_path + '/fetched' %}
+{% set local_mirror_certificate_path = setup_registry_service | default('false') | bool | ternary(
+    fetched_dest + '/' + ((hostvars['registry_host']['cert_file_prefix']) | default('registry', True)) + '.crt',
+    repo_root_path + '/mirror_certificate.crt')
+%}
+{% if lookup('file', local_mirror_certificate_path, errors='warn') %}
     mirror_certificate: "{% raw %}{{ lookup('file', local_mirror_certificate_path) }}{% endraw %}"
+{% endif %}
 
     openshift_version: "{% raw %}{{ openshift_full_version.split('.')[:2] | join('.') }}{% endraw %}"
 
