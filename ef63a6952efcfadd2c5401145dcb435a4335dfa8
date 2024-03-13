@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89626358_8f19eb0c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-03-13T12:14:31Z",
+      "side": 1,
+      "message": "If I understood correctly, this line: `if ! dci-auto-launch $number \u003c\u003c\u003c \"$commitMessage\"; then`, it tries to run dci-auto-launch command with the content of the commit message, and if it\u0027s not able to launch it, then it runs dci-check-change? So, is it always trying to use dci-auto-launch anyway?",
+      "revId": "ef63a6952efcfadd2c5401145dcb435a4335dfa8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
