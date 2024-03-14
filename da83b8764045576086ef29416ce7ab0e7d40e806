@@ -84,6 +84,23 @@
       "message": "Thanks",
       "revId": "da83b8764045576086ef29416ce7ab0e7d40e806",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97be7333_fb290b11",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-03-14T13:21:06Z",
+      "side": 1,
+      "message": "I think this whole block should be a {%raw%} block, the reason why repo_root_path is not present here is because this is a template that will render another template.\nDon\u0027t re-declare repo_root_path and fetched_dest those will be present at the end",
+      "revId": "da83b8764045576086ef29416ce7ab0e7d40e806",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
