@@ -119,6 +119,24 @@
       "parentUuid": "97be7333_fb290b11",
       "revId": "da83b8764045576086ef29416ce7ab0e7d40e806",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcb1125f_d40fd768",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-03-14T15:17:03Z",
+      "side": 1,
+      "message": "I have been thinking a lot about this, I have been trying to make this work in connected but realized that even having this part working other pieces are missing to allow connected clusters to talk to other registries with private CAs. \n\nSo, this is just a quick fix only to create the CM in disconnected ends. As it is the only use case that we have.\n\nThanks",
+      "parentUuid": "7afc8dc3_c0d9851b",
+      "revId": "da83b8764045576086ef29416ce7ab0e7d40e806",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
