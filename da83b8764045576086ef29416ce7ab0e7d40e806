@@ -101,6 +101,24 @@
       "message": "I think this whole block should be a {%raw%} block, the reason why repo_root_path is not present here is because this is a template that will render another template.\nDon\u0027t re-declare repo_root_path and fetched_dest those will be present at the end",
       "revId": "da83b8764045576086ef29416ce7ab0e7d40e806",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7afc8dc3_c0d9851b",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-03-14T13:26:17Z",
+      "side": 1,
+      "message": "Meaning: you go and look at the rendered hosts inventory file and whatever logic you think is needed you put it here in {%raw%} blocks, otherwise you\u0027re missing rendering stages: one stage is when the inventory file is laid on disk and another stage is when the inventory file is evaluated. Rendering and re-declaring variables on both stages makes it more confusing",
+      "parentUuid": "97be7333_fb290b11",
+      "revId": "da83b8764045576086ef29416ce7ab0e7d40e806",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
