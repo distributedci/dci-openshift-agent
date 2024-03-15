@@ -16,6 +16,23 @@
       "message": "Checked the history of this change, it\u0027s fine for me to just disable the feature for the connected scenario since it\u0027s the only use case we currently have and we don\u0027t depend on other teams or partners",
       "revId": "17bfc26c45fb4287853bfaec2932318473725567",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05a07614_8590bb05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-03-15T17:41:01Z",
+      "side": 1,
+      "message": "regate",
+      "revId": "17bfc26c45fb4287853bfaec2932318473725567",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
