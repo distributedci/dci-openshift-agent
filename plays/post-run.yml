@@ -22,7 +22,7 @@
     - '"OCPBUGS-30899" in dci_workarounds'
   block:
     - name: Get OVN pods
-      community.kubernetes.k8s_info:
+      kubernetes.core.k8s_info:
         kind: Pod
         namespace: "openshift-ovn-kubernetes"
         label_selectors:
@@ -30,7 +30,7 @@
       register: pods_info
 
     - name:  Restart OVN pods
-      community.kubernetes.k8s:
+      kubernetes.core.k8s:
         wait: true
         state: absent
         definition:
@@ -47,7 +47,7 @@
       vars:
         containers_query: "resources[*].status.containerStatuses[*].ready"
         pods_query: "resources[*].status.phase"
-      community.kubernetes.k8s_info:
+      kubernetes.core.k8s_info:
         kind: Pod
         namespace: "openshift-ovn-kubernetes"
         label_selectors:
