@@ -142,7 +142,7 @@
         delegate_facts: true
 
       - name: Check if all cluster-operators are running correctly
-        community.kubernetes.k8s_info:
+        kubernetes.core.k8s_info:
           kind: ClusterOperator
         register: clusteroperator_info
         vars:
@@ -153,7 +153,7 @@
         until: cluster_operators_available == ['True']
 
       - name: Check if ClusterVersion is Complete
-        community.kubernetes.k8s_info:
+        kubernetes.core.k8s_info:
           api: config.openshift.io/v1
           kind: ClusterVersion
           name: version
