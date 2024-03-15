@@ -17,9 +17,9 @@
 PROJECTS=(
     ansible-collection-ansible-posix
     ansible-collection-community-general
-    ansible-collection-community-kubernetes
     ansible-collection-community-libvirt
     ansible-collection-containers-podman
+    ansible-collection-kubernetes-core
     ansible-role-dci-podman
     ansible-role-dci-sync-registry
     dci-ansible

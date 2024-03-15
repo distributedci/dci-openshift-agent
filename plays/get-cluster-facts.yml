@@ -1,6 +1,6 @@
 ---
 - name: "Get cluster install-config"
-  community.kubernetes.k8s_info:
+  kubernetes.core.k8s_info:
     api: v1
     kind: ConfigMap
     name: cluster-config-v1
@@ -20,14 +20,14 @@
     dci_compute_hosts: "{{ install_conf | json_query('platform.baremetal.hosts[? role==`worker` ].name') }}"
 
 - name: Get worker MCP status
-  community.kubernetes.k8s_info:
+  kubernetes.core.k8s_info:
     api_version: machineconfiguration.openshift.io/v1
     kind: MachineConfigPool
     name: worker
   register: reg_mcpool_worker
 
 - name: Get control-plane MCP status
-  community.kubernetes.k8s_info:
+  kubernetes.core.k8s_info:
     api_version: machineconfiguration.openshift.io/v1
     kind: MachineConfigPool
     name: master

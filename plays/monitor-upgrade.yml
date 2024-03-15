@@ -1,5 +1,5 @@
 - name: "upgrader : Get cluster version info"
-  community.kubernetes.k8s_info:
+  kubernetes.core.k8s_info:
     kind: ClusterVersion
     name: version
   register: cluster_version_info
