@@ -16,6 +16,24 @@
       "message": "I\u0027m confused here. Why we\u0027re using a kubeconfig and pointing to a really specific file? Is this WIP?",
       "revId": "c80e39a00b9d3e89abfa868043ff0ab5430cc9e5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a3dcfc9_f3a357f8",
+        "filename": "plays/get-cluster-facts.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-03-21T09:05:18Z",
+      "side": 1,
+      "message": "My bad, just a copy and paste error from the test code I used offline.",
+      "parentUuid": "740aaf40_2054243f",
+      "revId": "c80e39a00b9d3e89abfa868043ff0ab5430cc9e5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
