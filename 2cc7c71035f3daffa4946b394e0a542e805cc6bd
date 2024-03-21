@@ -50,6 +50,24 @@
       "message": "Here you\u0027re overwriting the \"nodes\" variable, so it will only contain the data from the last iteration of the loop. I think this code isn\u0027t doing what you want it to do.",
       "revId": "2cc7c71035f3daffa4946b394e0a542e805cc6bd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e41cb4b0_a91f23d0",
+        "filename": "plays/get-cluster-facts.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-03-21T18:46:07Z",
+      "side": 1,
+      "message": "I think a better way is to get *all* the nodes (remove label_selectors and the loop part) and then use json_query to count how many have role\u003d\u003dworker and how many have role\u003d\u003dmaster",
+      "parentUuid": "ee6af222_da3d6965",
+      "revId": "2cc7c71035f3daffa4946b394e0a542e805cc6bd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
