@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83ca4817_9f8c8fe7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 43
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-03-22T19:59:04Z",
+      "side": 1,
+      "message": "@GV I believe we don\u0027t need the install_iso role, we can just use the existing role/vendors/kvm/tasks/iso.yml, of which roles/install_iso/tasks/main.yml is a copy of.",
+      "revId": "6550b71fe98f6d33a49315b2363f70c3b645954e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
