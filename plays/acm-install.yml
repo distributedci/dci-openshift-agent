@@ -1,4 +1,95 @@
 ---
+- name: "Deploy a ZTP SNO node via ACM"
+  when:
+    - acm_cluster_type == 'ztp-sno'
+  block:
+    - name: Create podman_runner inventory group
+      ansible.builtin.add_host:
+        name: podman-runner
+        ansible_connection: local
+        ansible_user: "{{ lookup('env', 'USER')}}"
+
+    - name: Install local Git service
+      ansible.builtin.include_role:
+        name: redhatci.ocp.git_on_ocp
+        apply:
+          environment:
+            - KUBECONFIG: "{{ hub_kubeconfig_path }}"
+      when: enable_git_on_ocp | default(false) | bool
+
+    - name: Push the ZTP site-config manifest
+      ansible.builtin.include_role:
+        name: redhatci.ocp.configure_ztp_gitops_repo
+      vars:
+        target_ztp_gitops_repo_dst_branch: "{{ dci_gitops_sites_repo.branch }}"
+        target_ztp_gitops_repo_src_branch: "{{ dci_gitops_sites_repo.src_branch }}"
+        target_ztp_gitops_repo: "{{ dci_gitops_sites_repo.url }}"
+      when: dci_gitops_sites_repo.src_branch is defined
+
+    - name: Load the SSH key to access the repository
+      ansible.builtin.include_role:
+        name: redhatci.ocp.gitops_configure_repo
+      vars:
+        gitlab_ssh_known_hosts: "{{ dci_gitops_sites_repo.known_hosts }}"
+        gitlab_key_path: "{{ dci_gitops_sites_repo.key_path }}"
+        ztp_gitops_repo: "{{ dci_gitops_sites_repo.url }}"
+
+    - name: Create the Spoke cluster namespace
+      kubernetes.core.k8s:
+        definition:
+          apiVersion: v1
+          kind: Namespace
+          metadata:
+            name: "{{ dci_ztp_spoke_namespace }}"
+
+    - name: Create the Spoke cluster pull-secret
+      kubernetes.core.k8s:
+        definition:
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: assisted-deployment-pull-secret
+            namespace: "{{ dci_ztp_spoke_namespace }}"
+          data:
+            .dockerconfigjson: "{{ hub_pull_secret.resources[0].data['.dockerconfigjson'] }}"
+
+    - name: Create the Spoke cluster Baremetal Host credentials
+      kubernetes.core.k8s:
+        definition:
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: "{{ cluster }}-bmh-secret"
+            namespace: "{{ dci_ztp_spoke_namespace }}"
+          data:
+            username: "{{ hostvars[groups.spoke_nodes[0]].bmc_user | b64encode }}"
+            password: "{{ hostvars[groups.spoke_nodes[0]].bmc_password | b64encode }}"
+          type: Opaque
+
+    - name: Create the openshit-gitops-operator apps
+      ansible.builtin.include_role:
+        name: redhatci.ocp.configure_ztp_gitops_apps
+      vars:
+        kubeconfig_path: "{{ hub_kubeconfig_path }}"
+        ocp_pull_secret: "{{ lookup('ansible.builtin.file', dci_ztp_spoke_pullsecret_path) }}"
+        ztp_site_generator_image: registry.redhat.io/openshift4/ztp-site-generate-rhel8
+        ztp_site_generator_version: "v{{ job_info.job.topic.name | ansible.builtin.regex_replace('OCP-', '') }}"
+        ztp_sites_path: "{{ dci_gitops_sites_repo.path}}"
+        ztp_sites_gitops_repo: "{{ dci_gitops_sites_repo.url }}"
+        ztp_sites_branch: "{{ dci_gitops_sites_repo.branch }}"
+        ztp_policies_path: "{{ dci_gitops_policies_repo.path}}"
+        ztp_policies_gitops_repo: "{{ dci_gitops_policies_repo.url }}"
+        ztp_policies_branch: "{{ dci_gitops_policies_repo.branch }}"
+
+# TODO:
+#   - wait to discover the ACM cluster
+#   - wait for deployment to start
+#   - wait for deployment to complete
+#   - retrieve spoke kubeconfig file
+
+    - name: Export kubeconfig content
+      set_fact:
+        acm_kubeconfig_text: "TO EXPORT FROM ACM SPOKE CLUSTER"
 
 - name: "Deploy an SNO node via ACM"
   vars:
