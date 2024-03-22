@@ -1,4 +1,77 @@
 ---
+- name: "Deploy a ZTP SNO node via ACM"
+  when:
+    - acm_cluster_type == 'ztp-sno'
+  vars:
+    kubeconfig_path: "{{ hub_kubeconfig_path }}"
+    ocp_pull_secret: '{{ hub_pull_secret.resources[0].data[".dockerconfigjson"] | b64decode }}'
+    goo_ssh_authorized_keys: "{{ lookup('file', '/var/lib/dci-openshift-agent/.ssh/id_rsa.pub') }}"
+    ztp_site_generator_image: registry.redhat.io/openshift4/ztp-site-generate-rhel8
+    ztp_site_generator_version: "v{{ dci_topic | ansible.builtin.regex_replace('OCP-', '') }}"
+    ztp_sites_path: SiteConfig
+    ztp_sites_gitops_repo: "{{ goo_git_url }}"
+    ztp_sites_branch: "dci-ztp-{{ lookup('ansible.builtin.password', '/tmp/passwordfile', chars=['ascii_letters', 'digits'], length=8) }}"
+    ztp_policies_path: PolicyGenTemplates
+    ztp_policies_gitops_repo: "{{ ztp_sites_gitops_repo }}"
+    ztp_policies_branch: "{{ ztp_sites_branch }}"
+    target_ztp_gitops_repo: "{{ goo_git_url }}"
+    target_ztp_gitops_repo_dst_branch: "{{ ztp_sites_branch }}"
+    czgr_ssh_key_file: "/var/lib/dci-openshift-agent/.ssh/id_rsa"
+    czgr_sites_path: "{{ ztp_sites_path }}"
+    gitlab_ssh_known_hosts: "{{ goo_server_signature }}"
+    gitlab_key_path: "/var/lib/dci-openshift-agent/.ssh/id_rsa"
+    ztp_gitops_repo: "{{ ztp_sites_gitops_repo }}"
+
+  block:
+    - name: Create podman_runner inventory group
+      ansible.builtin.add_host:
+        name: podman-runner
+        ansible_connection: local
+        ansible_user: "{{ lookup('env', 'USER')}}"
+
+    - name: Install local Git service
+      ansible.builtin.include_role:
+        name: redhatci.ocp.git_on_ocp
+
+    - name: Create initial repo
+      ansible.builtin.shell: |
+        TEMPDIR=$(mktemp -d -t ztp-repo-XXXXXX)
+        git clone {{ goo_git_url }} ${TEMPDIR}/ztp-repo
+
+        git -C ${TEMPDIR}/ztp-repo checkout -b {{ target_ztp_gitops_repo_src_branch }}
+        mkdir ${TEMPDIR}/ztp-repo/{{ ztp_sites_path }}
+
+        cat > ${TEMPDIR}/ztp-repo/{{ ztp_sites_path }}/site_config_sno.yaml << EOF
+        {{ lookup('ansible.builtin.template', 'site_config_sno.yaml.j2') }}
+        EOF
+
+        cat > ${TEMPDIR}/ztp-repo/{{ ztp_sites_path }}/kustomization.yaml << EOF
+        apiVersion: kustomize.config.k8s.io/v1beta1
+        kind: Kustomization
+        generators:
+          - site_config_sno.yaml
+        EOF
+
+        git -C ${TEMPDIR}/ztp-repo add --all
+        git -C ${TEMPDIR}/ztp-repo commit -am "Created SNO site config manifest"
+        git -C ${TEMPDIR}/ztp-repo push -u origin {{ target_ztp_gitops_repo_src_branch }}
+        rm -rf $TEMPDIR
+
+    - name: Load the SSH key to access the repository
+      ansible.builtin.include_role:
+        name: redhatci.ocp.gitops_configure_repo
+
+    - name: Create the openshit-gitops-operator apps
+      ansible.builtin.include_role:
+        name: redhatci.ocp.configure_ztp_gitops_apps
+
+    - name: Push the ZTP site-config manifest
+      ansible.builtin.include_role:
+        name: redhatci.ocp.configure_ztp_gitops_repo
+
+    - name: Export kubeconfig content
+      set_fact:
+        acm_kubeconfig_text: "TO EXPORT FROM ACM SPOKE CLUSTER"
 
 - name: "Deploy an SNO node via ACM"
   vars:
