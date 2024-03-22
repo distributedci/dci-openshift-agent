@@ -1,4 +1,47 @@
 ---
+- name: "Deploy a ZTP SNO node via ACM"
+  when:
+    - acm_cluster_type == 'ztp-sno'
+  vars:
+    kubeconfig_path: "{{ hub_kubeconfig_path }}"
+    ocp_pull_secret: '{{ hub_pull_secret.resources[0].data[".dockerconfigjson"] | b64decode }}'
+    ztp_site_generator_image: registry.redhat.io/openshift4/ztp-site-generate-rhel8
+    ztp_site_generator_version: "v{{ dci_topic | ansible.builtin.regex_replace('OCP-', '') }}"
+    ztp_sites_path: SiteConfig
+    ztp_sites_gitops_repo: ssh://git@server01.partnerci.bos2.lab:2222/git/gitops-ztp.git
+    ztp_sites_branch: "dci-ztp-{{ lookup('ansible.builtin.password', '/tmp/passwordfile', chars=['ascii_letters', 'digits'], length=8) }}"
+    ztp_policies_path: PolicyGenTemplates
+    ztp_policies_gitops_repo: "{{ ztp_sites_gitops_repo }}"
+    ztp_policies_branch: "{{ ztp_sites_branch }}"
+    target_ztp_gitops_repo: "{{ ztp_sites_gitops_repo }}"
+    target_ztp_gitops_repo_src_branch: "dallas-sno"
+    target_ztp_gitops_repo_dst_branch: "{{ ztp_sites_branch }}"
+    gitlab_ssh_known_hosts: "[server01.partnerci.bos2.lab]:2222,[192.168.16.10]:2222 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK/5Hf7XDO6CqmKcOsd9atRPotKSoNhujVjDBFm9g2khaPt3mjsW+z7zZydZuF1M4Tkzvu406XG4k8Kk1XdKCuA="
+    gitlab_key_path: "/var/lib/dci-openshift-agent/.ssh/id_rsa"
+    ztp_gitops_repo: "jumpbox_git"
+
+  block:
+    - name: Create podman_runner inventory group
+      ansible.builtin.add_host:
+        name: podman-runner
+        ansible_connection: local
+        ansible_user: "{{ lookup('env', 'USER')}}"
+
+    - name: Load the SSH key to access the repository
+      ansible.builtin.include_role:
+        name: redhatci.ocp.gitops_configure_repo
+
+    - name: Create the openshit-gitops-operator apps
+      ansible.builtin.include_role:
+        name: redhatci.ocp.configure_ztp_gitops_apps
+
+    - name: Push the ZTP site-config manifest
+      ansible.builtin.include_role:
+        name: redhatci.ocp.configure_ztp_gitops_repo
+
+    - name: Export kubeconfig content
+      set_fact:
+        acm_kubeconfig_text: "TO EXPORT FROM ACM SPOKE CLUSTER"
 
 - name: "Deploy an SNO node via ACM"
   vars:
