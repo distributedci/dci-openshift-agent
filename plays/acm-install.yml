@@ -1,4 +1,32 @@
 ---
+- name: "Deploy a ZTP SNO node via ACM"
+  when:
+    - acm_cluster_type == 'ztp-sno'
+  vars:
+    kubeconfig_path: "{{ hub_kubeconfig_path }}"
+    ocp_pull_secret: '{{ hub_pull_secret.resources[0].data[".dockerconfigjson"] | b64decode }}'
+    ztp_site_generator_image: registry.redhat.io/openshift4/ztp-site-generate-rhel8
+    ztp_site_generator_version: "v{{ dci_topic | ansible.builtin.regex_replace('OCP-', '') }}"
+    ztp_sites_path: SiteConfig
+    ztp_sites_gitops_repo: https://github.com/nsilla/gitops_ztp.git
+    ztp_sites_branch: "dci-ztp-{{ lookup('ansible.builtin.password', '/tmp/passwordfile', chars=['ascii_letters', 'digits'], length=8) }}"
+    ztp_policies_path: PolicyGenTemplates
+    ztp_policies_gitops_repo: "{{ ztp_sites_gitops_repo }}"
+    ztp_policies_branch: "{{ ztp_sites_branch }}"
+  block:
+    - name: Create podman_runner inventory group
+      ansible.builtin.add_host:
+        name: podman-runner
+        ansible_connection: local
+        ansible_user: "{{ lookup('env', 'USER')}}"
+
+    - name: Create the openshit-gitops-operator apps
+      ansible.builtin.include_role:
+        name: redhatci.ocp.configure_ztp_gitops_apps
+
+    - name: Export kubeconfig content
+      set_fact:
+        acm_kubeconfig_text: "TO EXPORT FROM ACM SPOKE CLUSTER"
 
 - name: "Deploy an SNO node via ACM"
   vars:

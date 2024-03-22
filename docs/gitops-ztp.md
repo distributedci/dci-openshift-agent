@@ -58,10 +58,12 @@ The following settings must be provided to the SNO Spoke Cluster deployment job.
 
 ```
 
-### ACM SNO pipeline
+### ZTP SNO pipeline
 
 ```
-
+ansible_extravars:
+  install_type: acm
+  acm_cluster_type: ztp-sno
 ```
 
 ## Inventory examples
