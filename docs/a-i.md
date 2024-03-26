@@ -81,6 +81,10 @@ For the DCI Jumpbox you will need:
 
 ## Configuration
 
+Before anything else you will need to set `install_method: assisted` in your
+inventory or pipeline ansible extra variables. We do this because AI is not the
+default install method in the DCI OCP Agent.
+
 The first change you will notice right away is that the inventory file has a
 completely different format: instead of the INI-style format default
 configuration shows, it is a YAML file. The YAML file offers more capabilities
