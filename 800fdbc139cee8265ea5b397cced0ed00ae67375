@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "800fdbc139cee8265ea5b397cced0ed00ae67375",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79611be6_aae43f1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-03-26T17:47:24Z",
+      "side": 1,
+      "message": "LGTM,\n\nAlthough if you really want BOS2 jobs use that image, we need to change the URL in the libvirt resources[1], in the past I hesitated to use CentOS-*-latest image because once the image is downloaded in the destination path, it won\u0027t be updated because the image file name is always the same, but I haven\u0027t tested so it\u0027s worth to try first.\n\n[1]\nhttps://github.com/dci-labs/bos2-ci-config/blob/main/files/ocp_on_libvirt/server02/server02-libvirt_resources.yml#L12",
+      "revId": "800fdbc139cee8265ea5b397cced0ed00ae67375",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
