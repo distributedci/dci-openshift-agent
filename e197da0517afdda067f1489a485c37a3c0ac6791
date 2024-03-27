@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57ea2ebf_0b82f143",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 51
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2024-03-27T10:10:42Z",
+      "side": 1,
+      "message": "How can we test this change in CI?",
+      "revId": "e197da0517afdda067f1489a485c37a3c0ac6791",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c672925_6eadf797",
+        "filename": "docs/microshift.md",
+        "patchSetId": 51
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2024-03-27T10:10:42Z",
+      "side": 1,
+      "message": "could you name it microshift-pipeline.yml to be conform to the naming convention used by dci-pipeline-schedule and dci-pipeline-check?",
+      "revId": "e197da0517afdda067f1489a485c37a3c0ac6791",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
