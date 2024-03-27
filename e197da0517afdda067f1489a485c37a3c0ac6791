@@ -33,6 +33,24 @@
       "message": "could you name it microshift-pipeline.yml to be conform to the naming convention used by dci-pipeline-schedule and dci-pipeline-check?",
       "revId": "e197da0517afdda067f1489a485c37a3c0ac6791",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb7afd42_d5a0c55c",
+        "filename": "docs/microshift.md",
+        "patchSetId": 51
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-03-27T11:17:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c672925_6eadf797",
+      "revId": "e197da0517afdda067f1489a485c37a3c0ac6791",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
