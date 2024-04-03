@@ -52,6 +52,23 @@
       "parentUuid": "c8e87d2e_c961cb59",
       "revId": "f78e242a5562672d067b7614602cf459da0ec3d8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8bcdf29_b11ca437",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-04-03T18:20:19Z",
+      "side": 1,
+      "message": "This looks for 2 different kinds of files: `*junit` and `*.xml`, you\u0027re changing it only match a single pattern for files named `*junit*.xml` are you 100% sure that is the correct behavior?",
+      "revId": "f78e242a5562672d067b7614602cf459da0ec3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
