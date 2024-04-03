@@ -34,6 +34,24 @@
       "parentUuid": "f713ff5b_7b03d193",
       "revId": "f78e242a5562672d067b7614602cf459da0ec3d8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "800e88de_0d8ce5f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-04-03T12:40:02Z",
+      "side": 1,
+      "message": "It should not impact these JUNIT. There are generated into the JUNIT_OUTPUT_DIR directory, which is defined in dci-pipeline by /@tmpdir so it was not covered.",
+      "parentUuid": "c8e87d2e_c961cb59",
+      "revId": "f78e242a5562672d067b7614602cf459da0ec3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
