@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f713ff5b_7b03d193",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-03T12:19:10Z",
+      "side": 1,
+      "message": "I suppose it\u0027s good to go ahead with this, maybe with the change from the app-agent the JUnit file can be validated, since I don\u0027t remember specific deployments where we generate JUnit files in the agent itself",
+      "revId": "f78e242a5562672d067b7614602cf459da0ec3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
