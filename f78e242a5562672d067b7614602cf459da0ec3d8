@@ -87,6 +87,24 @@
       "parentUuid": "e8bcdf29_b11ca437",
       "revId": "f78e242a5562672d067b7614602cf459da0ec3d8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ce601e4_b8a6788b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-04-04T07:34:03Z",
+      "side": 1,
+      "message": "From what I know, the *junit was unused because a regular junit file is a XML file and the doc was mentioning the files that started with \"junit_\" which is another case.\nI think the *.xml was added to matched the JUNIT files generated automatically by the JUNIT callback plugin but, there are generated in another directory anyway (the variable /@tmpdir in dci-pipeline). I think it can be misleading to match all the xml files as Junit ones.\nI will update the CR description 😊",
+      "parentUuid": "466c5499_7989c5a8",
+      "revId": "f78e242a5562672d067b7614602cf459da0ec3d8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
