@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "2c0328adce87591ef6aa205f7f3b092cfa2379a3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2625f3f_14697826",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-04-04T21:48:43Z",
+      "side": 1,
+      "message": "Ah! good catch\n\nBut now I wonder if the `,` meant to be `_` as in the doc? to be `*junit_*.xml`",
+      "revId": "2c0328adce87591ef6aa205f7f3b092cfa2379a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
