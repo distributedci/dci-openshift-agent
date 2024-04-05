@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9f0666f_461b8ebb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-04-05T16:02:15Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2c0328adce87591ef6aa205f7f3b092cfa2379a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2625f3f_14697826",
@@ -49,6 +66,24 @@
       "side": 1,
       "message": "It is honestly confusing. Keeping the pattern as *junit*.xml should be compatible with the existing logic and makes more sense to me.",
       "parentUuid": "f2625f3f_14697826",
+      "revId": "2c0328adce87591ef6aa205f7f3b092cfa2379a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03bf10ad_c30e986e",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-04-05T16:02:15Z",
+      "side": 1,
+      "message": "Alright, if this new format is expected and we have it correctly documented, then it is good.",
+      "parentUuid": "3a736161_de559b27",
       "revId": "2c0328adce87591ef6aa205f7f3b092cfa2379a3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
