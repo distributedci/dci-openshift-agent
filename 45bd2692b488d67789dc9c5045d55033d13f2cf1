@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fc92738_d63f3495",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 60
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-04-05T01:14:43Z",
+      "side": 1,
+      "message": "https://www.distributed-ci.io/jobs/995de2a5-8e1c-4526-94d0-d2266514b1eb/jobStates?sort\u003ddate is the most recent run with all dependencies merged upstream\nOne caveat: the code as it is right now is not idempotent you still need to cleanup the VMs yourself before triggering again, need to think how to make this a repeatable build in CI",
+      "revId": "45bd2692b488d67789dc9c5045d55033d13f2cf1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
