@@ -33,6 +33,24 @@
       "message": "Ah! good catch\n\nBut now I wonder if the `,` meant to be `_` as in the doc? to be `*junit_*.xml`",
       "revId": "2c0328adce87591ef6aa205f7f3b092cfa2379a3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a736161_de559b27",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-04-05T13:07:42Z",
+      "side": 1,
+      "message": "It is honestly confusing. Keeping the pattern as *junit*.xml should be compatible with the existing logic and makes more sense to me.",
+      "parentUuid": "f2625f3f_14697826",
+      "revId": "2c0328adce87591ef6aa205f7f3b092cfa2379a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
