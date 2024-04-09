@@ -33,6 +33,57 @@
       "message": "check dallas ocp-4.14-vcp control-plane-example tnf-test-cnf",
       "revId": "f258f8aba22c9697c1e4a544689fe502107a85e1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73926328_43b7b9fd",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-04-09T19:26:09Z",
+      "side": 1,
+      "message": "do you need both pods from the ovnkube-master and ovnkube-node DaemonSets? or would the master be enough?",
+      "revId": "f258f8aba22c9697c1e4a544689fe502107a85e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a442b9d7_6f49108b",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-04-09T19:26:09Z",
+      "side": 1,
+      "message": "If you add `wait: true` in this task you don\u0027t need the random pause next",
+      "revId": "f258f8aba22c9697c1e4a544689fe502107a85e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85e2779f_6112fb51",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-04-09T19:26:09Z",
+      "side": 1,
+      "message": "You can also monitor the state of the owner DaemonSet(s) and compare `numberReady \u003d\u003d desiredNumberScheduled`",
+      "revId": "f258f8aba22c9697c1e4a544689fe502107a85e1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
