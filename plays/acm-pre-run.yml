@@ -1,5 +1,8 @@
 ---
 - name: "Get registry mirror registry details"
+  when:
+    - dci_disconnected | default(false) | bool
+    - acm_cluster_type in ['sno', 'hypershift']
   block:
     - name: Find ImageDigestMirrorSet in the cluster
       community.kubernetes.k8s_info:
@@ -48,9 +51,6 @@
         that:
           - hostvars.localhost.webserver_url | string
           - (hostvars.localhost.webserver_url | urlsplit('scheme')) in ('http', 'https',)
-  when:
-    - dci_disconnected | default(false) | bool
-    - acm_cluster_type == 'sno'
 
 - name: "Get cluster pull-secret"
   include_tasks: get-cluster-pullsecret.yml
@@ -58,6 +58,9 @@
 - name: "Mirror OCP release artifacts"
   vars:
     version_core: "{{ version.split('.')[:2] | join('.') }}"
+  when:
+    - dci_disconnected | default(false) | bool
+    - acm_cluster_type in ['sno', 'hypershift']
   block:
     - name: "Mirror OCP release artifacts - Disconnected"
       include_role:
@@ -76,6 +79,30 @@
         mor_write_custom_config: false
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
+
+    - name: "Apply target HCP's ICS to the Management cluster"
+      vars:
+        img_src_paths:
+          - "{{ provision_cache_store }}/{{ version }}/imagesource.yaml"
+          - "{{ provision_cache_store }}/{{ version }}/imagecontentsourcepolicy.yaml"
+        hub_src_path: "{{ lookup('first_found', img_src_paths) }}"
+      community.kubernetes.k8s:
+        state: present
+        src: "{{ hub_src_path }}"
+      when:
+        - acm_cluster_type in ['hypershift']
+
+    - name: "Wait for HCP's ICS to the Management cluster {{ version }}"
+      include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: 120
+        check_wait_delay: 10
+        check_reason: "Apply ICS for target hcp version {{ version }}"
+        cr_oc: "{{ oc_tool_path }}"
+      when:
+        - acm_cluster_type in ['hypershift']
 
     - name: "Convert Image Source to registries.conf format"
       vars:
@@ -133,7 +160,7 @@
         acm_metal_iso_location: "{{ hostvars.localhost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
         acm_rootfs_url: "{{ hostvars.localhost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
         acm_release_image: "{{ hub_registry | urlsplit('netloc') }}/{{ 'ocp-'+version_core+'/'+version }}:{{ version }}"
-        dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
+        dci_local_registry: "{{ ocp_release_data['container_image'] | quote }}"
 
     - name: "Mirror must gather images"
       include_role:
@@ -142,11 +169,10 @@
         images: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
         authfile: "{{ dci_pullsecret_file }}"
 
-  when:
-    - dci_disconnected | default(false) | bool
-    - acm_cluster_type == 'sno'
-
 - name: "Get OCP release artifacts"
+  when:
+    - not (dci_disconnected | default(false) | bool)
+    - acm_cluster_type == "sno"
   block:
     - name: Mirror release
       include_role:
@@ -170,7 +196,4 @@
         acm_metal_iso_location: "{{ ocp_release_data.rhcos_images.metal_iso_location }}"
         acm_rootfs_url: "{{ ocp_release_data.rhcos_images.metal_pxe_rootfs_location }}"
         acm_release_image: "{{ ocp_release_data['container_image'] | quote }}"
-  when:
-    - not (dci_disconnected | default(false) | bool)
-    - acm_cluster_type in ("sno")
 ...
