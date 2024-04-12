@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7903fdf1_9104d996",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 61
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-04-12T13:22:17Z",
+      "side": 1,
+      "message": "@jorge we delete the VM at the beginning of the job",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 27
+      },
+      "revId": "b43f8dcc9087b28b22fc90ce74ef71d9a2e3ef65",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
