@@ -50,7 +50,7 @@
           - (hostvars.localhost.webserver_url | urlsplit('scheme')) in ('http', 'https',)
   when:
     - dci_disconnected | default(false) | bool
-    - acm_cluster_type == 'sno'
+    - acm_cluster_type in ['sno', 'hypershift']
 
 - name: "Get cluster pull-secret"
   include_tasks: get-cluster-pullsecret.yml
@@ -144,7 +144,7 @@
 
   when:
     - dci_disconnected | default(false) | bool
-    - acm_cluster_type == 'sno'
+    - acm_cluster_type in ['sno', 'hypershift']
 
 - name: "Get OCP release artifacts"
   block:
