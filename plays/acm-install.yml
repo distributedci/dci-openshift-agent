@@ -31,8 +31,7 @@
       include_role:
         name: redhatci.ocp.metallb_setup
       vars:
-        mlb_ipaddr_pool:
-          - "{{ metallb_ipaddr_pool_l2 }}"
+        mlb_ipaddr_pool: "{{ metallb_ipaddr_pool_l2 }}"
       when:
         - metallb_ipaddr_pool_l2 | default('') | length
 
@@ -46,7 +45,6 @@
             - KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
   when:
     - acm_cluster_type == 'hypershift'
-    - not (dci_disconnected | default(false) | bool)
 
 - name: "Save the {{ acm_cluster_type }} kubeconfig"
   copy:
