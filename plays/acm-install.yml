@@ -46,7 +46,6 @@
             - KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
   when:
     - acm_cluster_type == 'hypershift'
-    - not (dci_disconnected | default(false) | bool)
 
 - name: "Save the {{ acm_cluster_type }} kubeconfig"
   copy:
