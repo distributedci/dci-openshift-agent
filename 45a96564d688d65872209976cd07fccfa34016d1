@@ -33,6 +33,24 @@
       "message": "is this verified? I remember Beto saying there was no guarantee",
       "revId": "45a96564d688d65872209976cd07fccfa34016d1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2e12a64_a08e4904",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-04-17T00:57:44Z",
+      "side": 1,
+      "message": "Correct, there is no guarantee that the restart will fix the issue OCPBUGS-30899, but till now it has been our only method to work-around this without hitting the OVN issue, restarting all pods (even the ovnkube-control-plane ones) was not getting better, so we decided to restart only the ovnkube-node pods, that at least is not making the things worse. The fix is getting back-ported from 4.16 and 4.15, so eventually we\u0027ll remove this.",
+      "parentUuid": "00eee7f7_7f95c8fe",
+      "revId": "45a96564d688d65872209976cd07fccfa34016d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
