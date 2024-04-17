@@ -16,6 +16,40 @@
       "message": "\u003e dci-check-change : SUCCESS tested on libvirt:assisted-abi\n\u003e * assisted-abi -\u003e success: https://www.distributed-ci.io/jobs/c253f5cf-2e25-43ed-aec2-f6f28ff28b4f/jobStates\n\u003e * control_plane_example -\u003e success: https://www.distributed-ci.io/jobs/415fdd82-722b-4f4e-a9db-308550f7d88a/jobStates\n\nIn this case, hosts file was generated without using the new vars defined in this change, so we\u0027re using the default values, e.g.:\n\n```\n[dci@server08 ~]$ sudo virsh dumpxml dciokd-worker-0 | grep cpu\n  \u003cvcpu placement\u003d\u0027static\u0027\u003e8\u003c/vcpu\u003e\n  \u003ccpu mode\u003d\u0027custom\u0027 match\u003d\u0027exact\u0027 check\u003d\u0027full\u0027\u003e\n  \u003c/cpu\u003e\n```\n\nHowever, in this another change:\n\n\u003e from change #131:\n\u003e \n\u003e * SUCCESS https://www.distributed-ci.io/jobs/bc0546c0-af1f-458f-88ed-7b6b97c27b35/jobStates\n\u003e * SUCCESS https://www.distributed-ci.io/jobs/d788d96b-9c23-4d33-b3a4-d1168c8cb703/jobStates\n\nWe can confirm the VMs has the expected sizing:\n\n```\n[dci@server02 ~]$ sudo virsh dumpxml dciokd-worker-0 | grep cpu\n  \u003cvcpu placement\u003d\u0027static\u0027\u003e24\u003c/vcpu\u003e\n  \u003ccpu mode\u003d\u0027custom\u0027 match\u003d\u0027exact\u0027 check\u003d\u0027full\u0027\u003e\n  \u003c/cpu\u003e\n\n```\n\nSo this is ready for review.",
       "revId": "fb6c8bddf5d9fd76356db8a9c3ada3f4b7c4b2a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28e974f2_269b4c51",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-04-17T17:58:34Z",
+      "side": 1,
+      "message": "👍",
+      "revId": "fb6c8bddf5d9fd76356db8a9c3ada3f4b7c4b2a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c383e1de_5b127a9f",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-04-17T17:58:34Z",
+      "side": 1,
+      "message": "I was thinking maybe to have a condition for each parameter, that way someone can define for example masters_vm_spec[\u0027cpu_cores\u0027] and not the other two vars, but I\u0027m ok to define all three or nothing, that\u0027s fine for a sample.",
+      "revId": "fb6c8bddf5d9fd76356db8a9c3ada3f4b7c4b2a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
