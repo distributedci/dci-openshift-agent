@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f99c85e_363bc097",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-04-17T14:36:35Z",
+      "side": 1,
+      "message": "If EPEL is not really needed in the provisioning node, can we throw a note in https://github.com/redhat-cip/dci-openshift-agent/blob/master/README.md#installation-of-ocp-provision-host because we advice to install EPEL, so maybe we just need to clarify that it\u0027s only for non-RHEL OS?",
+      "revId": "9fb8ecf34cee5e79ed7c6a7d00eb012804ac3f71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
