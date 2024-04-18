@@ -50,6 +50,24 @@
       "message": "I was thinking maybe to have a condition for each parameter, that way someone can define for example masters_vm_spec[\u0027cpu_cores\u0027] and not the other two vars, but I\u0027m ok to define all three or nothing, that\u0027s fine for a sample.",
       "revId": "fb6c8bddf5d9fd76356db8a9c3ada3f4b7c4b2a0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d8016fa_487cb9a8",
+        "filename": "samples/assisted_on_libvirt/templates/hosts.j2",
+        "patchSetId": 1
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-18T06:41:51Z",
+      "side": 1,
+      "message": "Yes, that was something I was thinking about yesterday,but then I decided to use an all-or-nothing clause, since it may be hard to read if we discriminate between different vars, since they are all linked by vm_spec. For the moment, I\u0027ll keep this in this way since it\u0027s mainly for us, but of course we can revisit it in case we need it.",
+      "parentUuid": "c383e1de_5b127a9f",
+      "revId": "fb6c8bddf5d9fd76356db8a9c3ada3f4b7c4b2a0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
