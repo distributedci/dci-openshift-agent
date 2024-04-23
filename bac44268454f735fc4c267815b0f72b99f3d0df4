@@ -33,6 +33,23 @@
       "message": "If there are still some debug work to do, I\u0027ll recommend to move the change to \"WIP\", just to be sure when the change is ready to be reviewed, thanks!",
       "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c331e009_13c447e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-04-23T14:30:01Z",
+      "side": 1,
+      "message": "@ramon, at this point the change is ready for reviews. If you don\u0027t have any questions or suggestions, please consider approving it.",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
