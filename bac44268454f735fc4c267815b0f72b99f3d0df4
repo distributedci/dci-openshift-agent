@@ -52,6 +52,126 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "03a29bf9_52b8e2a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-23T17:02:50Z",
+      "side": 1,
+      "message": "I see that the assisted-image-service-0 has containers not running. I think that is because the agent service is created with public OSimages https://www.distributed-ci.io/files/3409e967-293d-48de-b1f0-99b81af8ccb1\n\nIs that not affecting the spoke deployments?",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1759737c_9fab94d3",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-23T17:02:50Z",
+      "side": 1,
+      "message": "what do you think about enable_acm_ztp?",
+      "range": {
+        "startLine": 286,
+        "startChar": 2,
+        "endLine": 286,
+        "endChar": 15
+      },
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11747903_be349a23",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-23T17:02:50Z",
+      "side": 1,
+      "message": "description",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1691b969_e2284e89",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-23T17:02:50Z",
+      "side": 1,
+      "message": "does this paragraph needs to be moved to the section above?",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 227
+      },
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cbb1ca0_4c5e51d8",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-23T17:02:50Z",
+      "side": 1,
+      "message": "will the examples be added in a separated change?",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8d412d4_d562487d",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-23T17:02:50Z",
+      "side": 1,
+      "message": "This is not needed anymore, it is still here for backward compatibility. Now we append to the mirror_list directly from dci_operators https://github.com/redhat-cip/dci-openshift-agent/blob/998b25665579d601d0e788d01ae7907eb2d13ee3/plays/catalog-from-image.yml#L14-L20",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6730e3ca_dc81070c",
