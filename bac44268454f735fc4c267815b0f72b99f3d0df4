@@ -50,6 +50,23 @@
       "message": "@ramon, at this point the change is ready for reviews. If you don\u0027t have any questions or suggestions, please consider approving it.",
       "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6730e3ca_dc81070c",
+        "filename": "test-runner",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-04-23T15:58:10Z",
+      "side": 1,
+      "message": "Did you find this truly useful? My concern is that it could increase considerably the logs. And likely cause a malfunction in dci-queue dci-job.",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
