@@ -187,6 +187,24 @@
       "message": "Did you find this truly useful? My concern is that it could increase considerably the logs. And likely cause a malfunction in dci-queue dci-job.",
       "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58793bd2_e7c4eb2a",
+        "filename": "test-runner",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2024-04-24T09:50:56Z",
+      "side": 1,
+      "message": "\u003e Did you find this truly useful? My concern is that it could increase considerably the logs. And likely cause a malfunction in dci-queue dci-job.\n\nyes it is useful and very much needed as when this is happening we see nothing in the log. As it is only triggered in pre-run, the log isn\u0027t very big anyway.",
+      "parentUuid": "6730e3ca_dc81070c",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
