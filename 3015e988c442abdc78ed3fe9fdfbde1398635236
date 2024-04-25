@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0fc269c_8ca46e10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:52:19Z",
+      "side": 1,
+      "message": "Hi Nacho, don\u0027t know if the change is ready for review yet, since I observe there are still some pieces that need to be refactored. Leaving some comments from what I have checked.",
+      "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d84319a_60754505",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:52:19Z",
+      "side": 1,
+      "message": "if you\u0027re setting kubeconfig_path to hub_kubeconfig_path above, why using again hub_kubeconfig_path?",
+      "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d52daa1b_cefbdab8",
+        "filename": "plays/templates/site_config_sno.yaml.j2",
+        "patchSetId": 26
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:52:19Z",
+      "side": 1,
+      "message": "is this file an example and not a template (I cannot see any variable being rendered in this j2 file)? and is this a file that is really needed for all deployments? just wondering that because we\u0027re setting here \"partnerci.bos2.lab\", which is really related to our lab, but this is a change on a public repo such as dci-openshift-agent. I suppose this really needs to be refactored to be a generic file.",
+      "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
