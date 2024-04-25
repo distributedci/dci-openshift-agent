@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7693426_74cff3a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:44:43Z",
+      "side": 1,
+      "message": "I have mainly the same questions/thoughts than the ones expressed by Tony and Beto. My impression is that there are some work that needs to be done before considering this work as finished, e.g.",
+      "parentUuid": "c331e009_13c447e2",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1759737c_9fab94d3",
@@ -82,6 +100,30 @@
       "writtenOn": "2024-04-23T17:02:50Z",
       "side": 1,
       "message": "what do you think about enable_acm_ztp?",
+      "range": {
+        "startLine": 286,
+        "startChar": 2,
+        "endLine": 286,
+        "endChar": 15
+      },
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32a0ede6_7694ac50",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:44:43Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "1759737c_9fab94d3",
       "range": {
         "startLine": 286,
         "startChar": 2,
@@ -157,6 +199,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "92aa8290_0334b5f4",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:44:43Z",
+      "side": 1,
+      "message": "I\u0027d also like to know if these examples will be added in this change or not. I\u0027d say it would be better if we include the examples here now",
+      "parentUuid": "8cbb1ca0_4c5e51d8",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e8d412d4_d562487d",
         "filename": "plays/get-mirror-list.yml",
         "patchSetId": 6
@@ -168,6 +228,24 @@
       "writtenOn": "2024-04-23T17:02:50Z",
       "side": 1,
       "message": "This is not needed anymore, it is still here for backward compatibility. Now we append to the mirror_list directly from dci_operators https://github.com/redhat-cip/dci-openshift-agent/blob/998b25665579d601d0e788d01ae7907eb2d13ee3/plays/catalog-from-image.yml#L14-L20",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d80ec16c_de588d9a",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:44:43Z",
+      "side": 1,
+      "message": "this still applies",
+      "parentUuid": "e8d412d4_d562487d",
       "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a815c94f_eb2c81a0",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-25T07:44:43Z",
+      "side": 1,
+      "message": "missed information here",
+      "range": {
+        "startLine": 29,
+        "startChar": 1,
+        "endLine": 29,
+        "endChar": 2
+      },
+      "revId": "0ac48219f521a66785883b54f59d097999184b30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
