@@ -23,6 +23,12 @@
   when:
     - enable_acm | bool
 
+- name: "Add operators if enable_acm_ztp"
+  set_fact:
+    mirror_list: "{{ mirror_list | combine(openshift_gitops_operator) }}"
+  when:
+    - enable_acm_ztp | bool
+
 - name: "Add operators if enable_odf"
   set_fact:
     mirror_list: "{{ mirror_list | combine(odf_operator) }}"
