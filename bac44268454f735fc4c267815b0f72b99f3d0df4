@@ -252,6 +252,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "94ec95b5_df2365f3",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-26T19:06:43Z",
+      "side": 1,
+      "message": "could you please explain why this is still needed? We refactored many parts of this process to eliminate the use of the enable_x flags during the mirroring and mainly use dci_operators content to infer if the operator needs to be mirrored. Thanks",
+      "parentUuid": "d80ec16c_de588d9a",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6730e3ca_dc81070c",
         "filename": "test-runner",
         "patchSetId": 6
