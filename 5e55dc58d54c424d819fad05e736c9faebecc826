@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89f3e97b_6cd5aa6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-04-26T00:19:09Z",
+      "side": 1,
+      "message": "What\u0027s the default value for `acm_cluster_type` ? I don\u0027t see it in group_vars or any `| default()` filters here",
+      "revId": "5e55dc58d54c424d819fad05e736c9faebecc826",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f4647cc_275fbf74",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-04-26T00:19:09Z",
+      "side": 1,
+      "message": "acm_cluster_type \u003d\u003d \"sno\"",
+      "revId": "5e55dc58d54c424d819fad05e736c9faebecc826",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
