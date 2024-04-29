@@ -270,6 +270,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "413ac92d_c2196de8",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-04-29T05:34:59Z",
+      "side": 1,
+      "message": "I guess it\u0027s not needed at all. I didn\u0027t know this code was legacy when I added it. I\u0027ll remove it.",
+      "parentUuid": "94ec95b5_df2365f3",
+      "revId": "bac44268454f735fc4c267815b0f72b99f3d0df4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6730e3ca_dc81070c",
         "filename": "test-runner",
         "patchSetId": 6
