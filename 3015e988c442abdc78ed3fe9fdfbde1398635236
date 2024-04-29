@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4e07179a_fbf1cf41",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-04-29T13:21:39Z",
+      "side": 1,
+      "message": "So, the thing is hub_kubeconfig_path is how the ACM pipelines are set to pass the file path between from the hub to the spoke deployment stages.\n\nkubeconfig_path is the way the configure_ztp_gitops_apps role uses the variable, so I added the assignation in the block in case it could be reused by other roles, but since there\u0027s only one role using it I rather move the kubeconfig_path variable creation to the task importing the role, and using hub_kubeconfig_path everywhere else, to help differentiating between it and the spoke kubconfig file that will be created on deploying the spoke.\n\nI hope I made it clear.",
+      "parentUuid": "8d84319a_60754505",
+      "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d52daa1b_cefbdab8",
         "filename": "plays/templates/site_config_sno.yaml.j2",
         "patchSetId": 26
@@ -48,6 +66,24 @@
       "writtenOn": "2024-04-25T07:52:19Z",
       "side": 1,
       "message": "is this file an example and not a template (I cannot see any variable being rendered in this j2 file)? and is this a file that is really needed for all deployments? just wondering that because we\u0027re setting here \"partnerci.bos2.lab\", which is really related to our lab, but this is a change on a public repo such as dci-openshift-agent. I suppose this really needs to be refactored to be a generic file.",
+      "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce7356df_c2aa5506",
+        "filename": "plays/templates/site_config_sno.yaml.j2",
+        "patchSetId": 26
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-04-29T13:21:39Z",
+      "side": 1,
+      "message": "I\u0027m moving the template to the configure_ztp_gitops_repo in the ansible-collection. \n\nThis file may be removed.\n\nI\u0027ll delete it right away to avoid forgetting about it.",
+      "parentUuid": "d52daa1b_cefbdab8",
       "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
