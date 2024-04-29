@@ -16,6 +16,24 @@
       "message": "- Is this tested already? I mean, is ci.sh working if not using dci-check-change?\n- Should we change the documentation to remove the mentions to dci-check-change?",
       "revId": "369b27181dcf3460f19be9365ed943c21f3ff525",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12591232_7fa976bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2024-04-29T07:54:30Z",
+      "side": 1,
+      "message": "\u003e - Is this tested already? I mean, is ci.sh working if not using dci-check-change?\n\u003e - Should we change the documentation to remove the mentions to dci-check-change?\n\nNot yest tested. Which documentation are you referring to?",
+      "parentUuid": "9f7ce5bc_cef252f6",
+      "revId": "369b27181dcf3460f19be9365ed943c21f3ff525",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
