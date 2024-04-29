@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45fb7a5b_4016b0f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-29T07:23:50Z",
+      "side": 1,
+      "message": "Just found a whitespace to be removed. Also, I was wondering when this change is going to be merged, if there\u0027s any ETA for this or if there\u0027s still work to be done in other places before merging this. Thanks",
+      "revId": "2fa0cf23b399aba5ba630b831cf6dd07836d68a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3be83c6a_2a0a34ea",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-29T07:23:50Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 6,
+        "startChar": 7,
+        "endLine": 6,
+        "endChar": 8
+      },
+      "revId": "2fa0cf23b399aba5ba630b831cf6dd07836d68a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
