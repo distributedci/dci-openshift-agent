@@ -19,7 +19,7 @@ Requires: python3-dciclient >= 3.1.0
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-sync-registry
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 0.4.0
+Requires: ansible-collection-redhatci-ocp >= 0.9.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
