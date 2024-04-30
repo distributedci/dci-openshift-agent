@@ -16,6 +16,23 @@
       "message": "Please bump the version of the package and match the new version of the collection in the spec",
       "revId": "2e049ec55cff9c0a8d5cb7ef2c264f828c4be639",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80866117_fb6519a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-04-30T20:13:57Z",
+      "side": 1,
+      "message": "ocp-4.15-acm-hub ocp-4.15-acm-sno",
+      "revId": "2e049ec55cff9c0a8d5cb7ef2c264f828c4be639",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
