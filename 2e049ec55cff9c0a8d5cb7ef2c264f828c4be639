@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2ac3b32_6c1ca098",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-04-30T15:56:01Z",
+      "side": 1,
+      "message": "Please bump the version of the package and match the new version of the collection in the spec",
+      "revId": "2e049ec55cff9c0a8d5cb7ef2c264f828c4be639",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
