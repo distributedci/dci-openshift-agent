@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82ec5ea5_88d68e38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 28
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-30T11:35:20Z",
+      "side": 1,
+      "message": "Thanks for checking my comments, I\u0027ll wait for some tests before continuing the review",
+      "revId": "75b4e8d08123e208d25a998371d4c154e3b53c14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

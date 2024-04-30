@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9a73d79_74b7b816",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-30T11:35:20Z",
+      "side": 1,
+      "message": "clarified, thanks :)",
+      "parentUuid": "4e07179a_fbf1cf41",
+      "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d52daa1b_cefbdab8",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "I\u0027m moving the template to the configure_ztp_gitops_repo in the ansible-collection. \n\nThis file may be removed.\n\nI\u0027ll delete it right away to avoid forgetting about it.",
       "parentUuid": "d52daa1b_cefbdab8",
+      "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6766ab9e_ae28c63e",
+        "filename": "plays/templates/site_config_sno.yaml.j2",
+        "patchSetId": 26
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-04-30T11:35:20Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ce7356df_c2aa5506",
       "revId": "3015e988c442abdc78ed3fe9fdfbde1398635236",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
