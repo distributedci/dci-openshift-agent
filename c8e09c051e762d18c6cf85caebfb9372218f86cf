@@ -33,6 +33,23 @@
       "message": "Tests\n\nDisconnected:\nSUCCESS https://www.distributed-ci.io/jobs/d03e51e3-52ed-4fd8-9281-402caf4a5db0/jobStates\nSUCCESS https://www.distributed-ci.io/jobs/159a23f8-c3b7-4646-ba7e-46369731976f/jobStates\n\nConnected:\nhttps://www.distributed-ci.io/jobs?limit\u003d20\u0026offset\u003d0\u0026sort\u003d-created_at\u0026where\u003dname:acm-hub,state:active",
       "revId": "c8e09c051e762d18c6cf85caebfb9372218f86cf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95166db9_e3f96097",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-05-01T15:46:53Z",
+      "side": 1,
+      "message": "check dallas ocp-4.14-acm-hub ocp-4.14-acm-sno",
+      "revId": "c8e09c051e762d18c6cf85caebfb9372218f86cf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
