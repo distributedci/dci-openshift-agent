@@ -16,6 +16,23 @@
       "message": "This looks good to me, I think we can merge it",
       "revId": "055fe30bae334631b30c276336195abd2519b589",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0fa18fa_764e0a20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-02T07:47:43Z",
+      "side": 1,
+      "message": "Thanks for the reviews.",
+      "revId": "055fe30bae334631b30c276336195abd2519b589",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
