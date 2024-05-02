@@ -17,6 +17,7 @@
   vars:
     mfd_local_registry: "{{ dci_local_registry }}"
     mfd_operators_dir: "{{ operator_catalog_dir }}"
+    mfd_local_registry_path: "{{ operator_catalog_registry_path | default('prega') }}"
   when:
     - operator_catalog_dir is defined
     - operator_catalog_dir |length
