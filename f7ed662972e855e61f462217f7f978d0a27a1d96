@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4b87792_8e07f3b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-03T00:44:07Z",
+      "side": 1,
+      "message": "LGTM, let\u0027s wait for a sucessfull execution. \n\nMaybe test with a specific ocp component \u003c 05/01",
+      "revId": "f7ed662972e855e61f462217f7f978d0a27a1d96",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
