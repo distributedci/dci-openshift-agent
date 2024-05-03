@@ -16,6 +16,24 @@
       "message": "is there any scenario where index_image might be empty/undefined? would a default() filter be useful here?",
       "revId": "b196e1ebf73c43a6504def0d83a7a4d85ff98d30",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a5f5b22_db41eb05",
+        "filename": "plays/catalog-from-file.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-03T20:54:12Z",
+      "side": 1,
+      "message": "No, after loading the operators there is always a catalogsource manifest that contains the index for the operators imported. If something fails during the loading, we will see the error early.",
+      "parentUuid": "662ea3bd_8a10a476",
+      "revId": "b196e1ebf73c43a6504def0d83a7a4d85ff98d30",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
