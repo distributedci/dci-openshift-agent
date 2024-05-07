@@ -16,6 +16,24 @@
       "message": "This variable has not been removed in other parts of the agent.",
       "revId": "ecd74addb5e2bc56698642c111de55e058bac893",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30afa5fb_af82e22b",
+        "filename": "plays/get-cluster-facts.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-07T07:57:27Z",
+      "side": 0,
+      "message": "I believe this was addressed by Beto, who recollected the install-config data for other purposes different than getting the list of nodes, so that should be OK.",
+      "parentUuid": "c425cbfe_a522e878",
+      "revId": "ecd74addb5e2bc56698642c111de55e058bac893",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
