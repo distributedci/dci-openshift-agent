@@ -26,6 +26,7 @@
 
 - name: "Get logs from OCP deployment"
   environment:
+    MUST_GATHER_OPTS: "/usr/bin/gather since-time={{ job_info.job.created_at }}"
     DCI_MUST_GATHER_IMAGES: >-
       {{ dci_must_gather_images |
         default(["registry.redhat.io/openshift4/ose-must-gather"]) |

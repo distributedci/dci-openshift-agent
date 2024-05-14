@@ -86,14 +86,14 @@ do
     then
         image="${REGISTRY}/${image#*/}"
     fi
-    must_gather_opts="${must_gather_opts} --image=${image}"
+    MUST_GATHER_OPTS="${MUST_GATHER_OPTS} --image=${image}"
 done
 
 must_gather_dir="${log_dir}/${prefix}must_gather"
 mkdir -p "${must_gather_dir}"
 ${oc_path} adm must-gather \
   --dest-dir="${must_gather_dir}" \
-  ${must_gather_opts} \
+  ${MUST_GATHER_OPTS} \
   --timeout=15m \
   >/dev/null
 
