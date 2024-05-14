@@ -54,17 +54,6 @@
   when:
     - dci_disconnected | default(false) | bool
 
-- name: Override OpenShift (4.14+) install release for disconnected environments
-  vars:
-    reg_path: "{{ hostvars[groups['registry_host'][0]].local_repo | default( 'ocp-'+ version.split('.')[:2] | join('.') +'/'+ version, true) }}"
-    rel_img: "{{ dci_local_registry }}/{{ reg_path }}:{{ version }}"
-    override_img:
-      OPENSHIFT_INSTALL_RELEASE_IMAGE_OVERRIDE: "{{ rel_img }}"
-  set_fact:
-    disconnected_envs: "{{ version is version('4.14', '>=') | ternary(override_img, {}) }}"
-  when:
-    - dci_disconnected | default(false) | bool
-
 - name: "Public builds"
   when: hostvars.localhost.build != "nightly"
   block:
