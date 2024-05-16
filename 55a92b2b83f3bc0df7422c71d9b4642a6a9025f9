@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52494f81_29800b6c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-05-16T09:26:16Z",
+      "side": 1,
+      "message": "I\u0027m wondering if this change is really needed at the end, because I saw the depends-on for this change was already merged and ACM hub with ZTP works fine. Maybe we can reduce this change to document in the README the deployment of ZTP.",
+      "revId": "55a92b2b83f3bc0df7422c71d9b4642a6a9025f9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
