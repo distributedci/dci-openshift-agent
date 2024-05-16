@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2072c8bd_d306189f",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-05-16T17:54:31Z",
+      "side": 1,
+      "message": "wdyt of throwing a note here saying that this binaries are DEPRECATED juts in case someone asks why they are for.",
+      "revId": "12824a56a62b1634cc5cf9dbb44888dccf4cc81d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
