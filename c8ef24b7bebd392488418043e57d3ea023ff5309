@@ -33,6 +33,40 @@
       "message": "Question: can this command be passed to the must-gather exec? because we have this in the get-ocp-logs script:\n\n```\n${oc_path} adm must-gather \\\n  --dest-dir\u003d\"${must_gather_dir}\" \\\n  ${MUST_GATHER_OPTS} \\\n  --timeout\u003d15m \\\n  \u003e/dev/null\n```\n\nSo, for me, it\u0027s a bit strange that we can use a command as an argument of another command (`oc adm must-gather`)",
       "revId": "c8ef24b7bebd392488418043e57d3ea023ff5309",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b7e259f_44dd8fe9",
+        "filename": "plays/get-logs.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-05-16T13:40:24Z",
+      "side": 1,
+      "message": "I failed to find `since-time` option in `oc adm must-gather`, but I was looking into latest oc which is 4.15.13 atm.",
+      "revId": "c8ef24b7bebd392488418043e57d3ea023ff5309",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71494ef4_a72f05cc",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-05-16T13:40:24Z",
+      "side": 1,
+      "message": "I\u0027m afraid that this will add multiple times the $MUST_GATHER_OPTS from outside now that it has content, whenever there is more than 1 DCI_MUST_GATHER_IMAGES.\n\nYou might want to have a var for images and another for other options instead",
+      "revId": "c8ef24b7bebd392488418043e57d3ea023ff5309",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
