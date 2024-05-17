@@ -16,6 +16,24 @@
       "message": "wdyt of throwing a note here saying that this binaries are DEPRECATED juts in case someone asks why they are for.",
       "revId": "12824a56a62b1634cc5cf9dbb44888dccf4cc81d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31466929_f3b94de2",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-05-17T11:25:39Z",
+      "side": 1,
+      "message": "I\u0027ll point here to dci-pipeline, thanks for the check!",
+      "parentUuid": "2072c8bd_d306189f",
+      "revId": "12824a56a62b1634cc5cf9dbb44888dccf4cc81d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
