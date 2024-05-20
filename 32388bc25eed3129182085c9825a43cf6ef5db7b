@@ -16,6 +16,24 @@
       "message": "put a log message saying directory is skipped, then continue",
       "revId": "32388bc25eed3129182085c9825a43cf6ef5db7b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0410fad_2a961adb",
+        "filename": "utils/cleanup-scripts/cleanup.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-20T23:13:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8736bf0f_e1d422c8",
+      "revId": "32388bc25eed3129182085c9825a43cf6ef5db7b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
