@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff0d6f38_529f609a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-05-20T18:16:43Z",
+      "side": 1,
+      "message": "https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31487 takes care of this already, you can use the HEAD of the repo to get the rhel9 support",
+      "revId": "046ea449e89c497a4ff67079733025cba06cd6a1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
