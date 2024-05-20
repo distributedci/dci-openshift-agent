@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "75e58b8f_fec17a23",
+        "filename": "utils/cleanup-scripts/cleanup.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-20T22:26:02Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "18c419ab_b7e1ab60",
+      "revId": "0a5a4f151c8ccaf62eb524204f900f78eb552e43",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "542cfa01_4318f00b",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-05-20T20:36:45Z",
       "side": 1,
       "message": "nit: what about using \"exclude\" instead of \"skip\" ?",
+      "revId": "0a5a4f151c8ccaf62eb524204f900f78eb552e43",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62faa061_1f77d87b",
+        "filename": "utils/cleanup-scripts/cleanup.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-20T22:26:02Z",
+      "side": 1,
+      "message": "sounds good",
+      "parentUuid": "542cfa01_4318f00b",
       "revId": "0a5a4f151c8ccaf62eb524204f900f78eb552e43",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
