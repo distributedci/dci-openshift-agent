@@ -21,7 +21,6 @@ import re
 import shutil
 from distutils.version import LooseVersion
 
-
 def get_directories(directory, pattern):
     directories = dict()
     prog = re.compile(pattern)
@@ -35,8 +34,7 @@ def get_directories(directory, pattern):
               directories[m.group(1)] = ["%s" % currentFile]
     return directories
 
-
-def garbage_collect(directories, number, run, quiet):
+def garbage_collect(directories, number, run, quiet, skip_dirs):
     # Entries to skip from the end of the list
     if number > 0:
         number = number.__neg__()
@@ -44,11 +42,12 @@ def garbage_collect(directories, number, run, quiet):
         dir_version = sorted(directories[version], key=LooseVersion)
         if len(dir_version) > 1:
             for to_remove in dir_version[:number]:
+                if to_remove in skip_dirs:
+                    continue
                 if not quiet:
                     print(to_remove)
                 if run:
                     shutil.rmtree(to_remove)
-
 
 def main():
     default_regex = r'([0-9]+\.[0-9]+\.[0-9]+).*nightly.*'
@@ -70,13 +69,13 @@ def main():
     parser.add_argument('-q', '--quiet',
             action='store_true', dest='quiet', default=False,
             help='Be Quiet')
+    parser.add_argument('-s', '--skip', dest='skip', nargs='*',
+            default=[], help='Directories to skip from deletion')
 
     args = parser.parse_args()
 
-
     directories = get_directories(args.directory, args.pattern)
-    garbage_collect(directories, args.number, args.run, args.quiet)
+    garbage_collect(directories, args.number, args.run, args.quiet, args.skip)
 
 if __name__ == '__main__':
     sys.exit(main())
-
