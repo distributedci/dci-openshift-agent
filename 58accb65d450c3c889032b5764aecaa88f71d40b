@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58ec200c_dc54333a",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "May not need a block for a single task",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36735ad0_dd4b52ee",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "I do not see this role in the collection",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e782d50a_54e8a244",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "I do not think you need to do this here as it is already done the main play includes: https://github.com/redhat-cip/dci-openshift-agent/blob/af56c37ba8719d38c45037f55ab37004e28b2414/dci-openshift-agent.yml#L344-L351",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1cc61ac_ab6094e1",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "cluster?\n\nBoth should have the same value, but just for consistency.",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfdfea26_74566997",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "cluster?",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a32de5d_1f1cfb7e",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "cluster",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8328d00b_eff150d4",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "will this be available in disconnected? \n\nIf this is only for connected cases, please add the condition when you include this play.",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f93e970_0b8c79de",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-21T02:06:05Z",
+      "side": 1,
+      "message": "I think condition for this is missing",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
