@@ -16,6 +16,24 @@
       "message": "Nacho, I think I know why, in this change, it appears that files such as deploy-operators.yml are including new code, but in 31145, it\u0027s the opposite: it\u0027s because 31145 depends on this change, so that it\u0027s reflecting the modifications over this change.\nThat\u0027s why the rebase is not affecting here.\nMy recommendation would be to disassociate 31145 from this change and then do the rebase.",
       "revId": "8083da7618daf957ffd9bd37ac0da0ee63a28a38",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a6ef5eb_5a6224a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-05-21T06:12:20Z",
+      "side": 1,
+      "message": "Also, you will have to check these files that are not modified in 31154, if you need to move this code there or not:\n- docs/gitops-ztp.md\n- README.md\n- test-runner",
+      "parentUuid": "4a3ce157_600daf32",
+      "revId": "8083da7618daf957ffd9bd37ac0da0ee63a28a38",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
