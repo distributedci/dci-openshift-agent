@@ -50,6 +50,24 @@
       "message": "I saw a couple of jobs failing in some operator installation:\n- nfd - https://www.distributed-ci.io/jobs/d6c376ee-2eeb-4648-85a7-9dadc48bb85c/jobStates?sort\u003ddate\n- rhsso-operator - https://www.distributed-ci.io/jobs/4283d2ec-330e-479e-8a27-62f54da6e06a/jobStates?sort\u003ddate\nJust wondering if this is related or not to this change.\nAt least I can see gitops and metallb operator installation worked in OCP 4.16, which are the current failures in dailies, but I\u0027d like to clarify that too.",
       "revId": "b11b45801d9c1f0c0b18e57fa057606db7c17521",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27958b94_ad4c7e59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-22T15:24:36Z",
+      "side": 1,
+      "message": "- NDF has references to images that are not available, so I disabled it in the pipeline\n- rhsso is a dependency for MTA, so no need to install it in its own namespace as it is already installed.",
+      "parentUuid": "24c6a34e_6033a0d5",
+      "revId": "b11b45801d9c1f0c0b18e57fa057606db7c17521",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
