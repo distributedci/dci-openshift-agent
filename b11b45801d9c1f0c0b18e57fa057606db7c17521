@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80ce7afa_3b5c16f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-22T00:30:20Z",
+      "side": 1,
+      "message": "The ICSP/IDMS are working as expected in the test https://www.distributed-ci.io/jobs/5056d139-9959-4dd8-b3d8-06e5b3b8bb6f/jobStates\n\nThe failure is because of some missing config for acm_hubs, this change affects the part of installing the operators that completed successfully.",
+      "revId": "b11b45801d9c1f0c0b18e57fa057606db7c17521",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
