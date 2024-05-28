@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "39107fbc_11471ab3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 46
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "91ccb5ee_0994f0b4",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "46cb79d8_c8869b34",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 46
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "982612e8_4948949c",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 46
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceaa0e96_70c6830e",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "58ec200c_dc54333a",
@@ -69,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e63793c_74a91ba7",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "58ec200c_dc54333a",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "63963135_b73776a4",
@@ -82,6 +136,24 @@
       "writtenOn": "2024-05-21T09:27:16Z",
       "side": 1,
       "message": "At the beginning of this play, I\u0027ll add some asserts to check some requirements to run this role; among others, the presence of dci_gitops_sites_repo and its correct definition",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "844f1e32_c0b38b70",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63963135_b73776a4",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -121,6 +193,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74e9a934_ce5a0f56",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9f2ff78_e728badb",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e782d50a_54e8a244",
@@ -134,6 +224,24 @@
       "writtenOn": "2024-05-21T02:06:05Z",
       "side": 1,
       "message": "I do not think you need to do this here as it is already done the main play includes: https://github.com/redhat-cip/dci-openshift-agent/blob/af56c37ba8719d38c45037f55ab37004e28b2414/dci-openshift-agent.yml#L344-L351",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d97cee8_d4be5e2d",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Great! Thanks.",
+      "parentUuid": "e782d50a_54e8a244",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -155,6 +263,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9cc8ef4_00518e93",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "The configure_ztp_gitops_repo role assumes the deployment triggering action is when the repo branch (as defined in the gitops operator application) is created, for this is when the application will really be able to synchronize and start processing the manifests.\n\nThe way we currently deploy the spokes, assumes the branch already exists, so we don\u0027t need to run this role.\n\nIt\u0027d even be possible to define different spoke settings by defining branches with different contents, but this is out of the current work.\n\nActually, similar to the git_on_ocp role, I find that it\u0027d be better to keep it out of this change for now, and just add it when we really need it.",
+      "parentUuid": "165a6b0e_f6b24ea1",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "540566d2_5bf41da5",
@@ -168,6 +294,24 @@
       "writtenOn": "2024-05-21T09:27:16Z",
       "side": 1,
       "message": "This also includes the prev task, but remember `dci_gitops_sites_repo` var needs to be included in the README to reflect what\u0027s expected in that var to be provided",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef776311_14ed8be4",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "540566d2_5bf41da5",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -207,6 +351,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "da0ee146_062174fd",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "actually, in the inventory I use for the bos2 lab I  set dci_ztp_spoke_namespace to cluster.\n\nI created the dci_ztp_spoke_namespace because I wasn\u0027t sure in the long run we\u0027d be using the cluster name for the managed cluster namespace.\n\nThe way I see it, I\u0027d move to use cluster instead, since we don\u0027t know whether a dedicated name will be needed.",
+      "parentUuid": "c3fc94fc_a7c0c15e",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "36ea08f8_e56ad372",
@@ -220,6 +382,24 @@
       "writtenOn": "2024-05-21T09:27:16Z",
       "side": 1,
       "message": "use `no_log: true` since it\u0027s a secret",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9484c0e_566ca21e",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36ea08f8_e56ad372",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -241,6 +421,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59ee8fb2_3f4a36f7",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dfdfea26_74566997",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "838a8a79_214913fb",
@@ -254,6 +452,24 @@
       "writtenOn": "2024-05-21T09:27:16Z",
       "side": 1,
       "message": "is it checked that hub_pull_secret exists? maybe something to be added in an assert task at the beginning?",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06f10995_3e7ad70f",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "838a8a79_214913fb",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -275,6 +491,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82be3099_607fa6f2",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a868057b_5d5659e4",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a32de5d_1f1cfb7e",
@@ -288,6 +522,24 @@
       "writtenOn": "2024-05-21T02:06:05Z",
       "side": 1,
       "message": "cluster",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69443c4e_5af8e73a",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a32de5d_1f1cfb7e",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -309,6 +561,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bad6aaa7_3439534c",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0de085f7_26f15b44",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "424591b9_85533030",
@@ -322,6 +592,24 @@
       "writtenOn": "2024-05-21T09:27:16Z",
       "side": 1,
       "message": "I would check if hub_kubeconfig_path exists in an assert task at the beginning of the play",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0d73072_ba4f3917",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "424591b9_85533030",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -361,6 +649,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4505765_28da7c6f",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b053115_821c223a",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5f93e970_0b8c79de",
@@ -396,6 +702,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b4ee0f2_dfbc5193",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "I pushed that task without having finished it. But it shouldn\u0027t be needed anyway.\n\nI\u0027m removing it.",
+      "parentUuid": "79366b20_437f7d51",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5eb11c0b_97f88c48",
@@ -409,6 +733,24 @@
       "writtenOn": "2024-05-21T09:27:16Z",
       "side": 1,
       "message": "Are we going to check a particular status of the AgentClusterInstall resource? Or just to check that it\u0027s created and that\u0027s all? (because the AgentClusterInstall transitions towards different status while the spoke is deployed)",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b484fbc_241207cb",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "This is just a intermediate task that waits for the AgentClusterInstall object to be created. Otherwise, we jump to the installation monitor, which may fail if run too early.\n\nI thought of writing a finer grained monitor so we wait for each status change, but I\u0027m concerned of what may happen if the agent cluster install moves too fast between statuses.\n\nLet me know if you have further comments.",
+      "parentUuid": "5eb11c0b_97f88c48",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -430,6 +772,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "52d730fd_0f6af966",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "be173f1d_ddc5dd0d",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9c2c57cf_f80102ef",
@@ -443,6 +803,24 @@
       "writtenOn": "2024-05-21T09:27:16Z",
       "side": 1,
       "message": "As said in my main comment, you need to include the modifications from 31027, not the differences with that change\nThis will cause that this file change will disappear",
+      "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea5285ab_af155a0b",
+        "filename": "plays/get-mirror-list.yml",
+        "patchSetId": 46
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-05-28T08:43:35Z",
+      "side": 1,
+      "message": "I might be missing something here. This change does not depend on the operator mirroring feature, so I\u0027m not sure of what you mean.",
+      "parentUuid": "9c2c57cf_f80102ef",
       "revId": "58accb65d450c3c889032b5764aecaa88f71d40b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
