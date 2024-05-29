@@ -1,4 +1,9 @@
 ---
+- name: "Deploy a ZTP spoke cluster"
+  ansible.builtin.include_tasks:
+    file: acm-ztp-spoke.yml
+  when:
+    - acm_cluster_type == 'ztp-spoke'
 
 - name: "Deploy an SNO node via ACM"
   vars:
