@@ -9,7 +9,7 @@ There are some benefits of running the DCI OCP Agent:
 2. CI runs on your own hardware
 3. Red Hat doesn't have access to your hardware, the agent reports metrics/logs
    back to distributed-ci.io
-4. The agent leverages the OpenShift IPI/UPI/AI/ACM installers
+4. The agent leverages the OpenShift IPI/UPI/AI/ACM/ZTP installers
 5. You have access to all your jobs logs and metrics through distributed-ci.io
    where you can also set notifications for errors/exceptions
 
@@ -299,6 +299,7 @@ This is the dci-openshift-agent variables that can be set in the
 | enable_logs_stack               | False    | Boolean | False                                                          | Configures the OCP cluster logging subsystem using the Loki and ClusterLogging Operators. Please see the [Logging Stack settings](#logging-stack) section for more details.
 | enable_sriov                    | False    | Boolean | False                                                          | Configures the SRIOV Operator.
 | enable_acm                      | False    | Boolean | False                                                          | Configures the [ACM](https://www.redhat.com/en/technologies/management/advanced-cluster-management) Operator. It converts the cluster into an ACM Hub.
+| enable_gitops                   | False    | Boolean | False                                                          | Configured the [Gitops]() Operator. Combined with the ACM and TALM operators, it converts the cluster into a ZTP Hub.
 | enable_nfd                      | False    | Boolean | False                                                          | Configures the [NFD](https://docs.openshift.com/container-platform/4.10/hardware_enablement/psap-node-feature-discovery-operator.html) Operator.
 | enable_mlb                      | False    | Boolean | False                                                          | Configures MetalLB operator.
 | enable_nmstate                  | False    | Boolean | False                                                          | Configures the k8s NMstate operator and creates initial instance.
