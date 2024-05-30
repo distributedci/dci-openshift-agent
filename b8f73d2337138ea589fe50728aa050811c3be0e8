@@ -16,6 +16,24 @@
       "message": "If `mc_is_file` is checked in the next task, should it also be checked here?",
       "revId": "b8f73d2337138ea589fe50728aa050811c3be0e8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8a6d180_67aa385f",
+        "filename": "plays/pre-ga-catalog.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-05-30T13:06:32Z",
+      "side": 1,
+      "message": "Yes, that\u0027s best",
+      "parentUuid": "e775b2df_8fc93379",
+      "revId": "b8f73d2337138ea589fe50728aa050811c3be0e8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
