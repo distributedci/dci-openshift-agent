@@ -16,6 +16,40 @@
       "message": "check dallas ocp-4.16-vanilla",
       "revId": "40037e93d8735cf4c95814ddb54193bafd3931c8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a45e4dc4_76f8ffb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-05-31T21:37:56Z",
+      "side": 1,
+      "message": "Good catch!",
+      "revId": "40037e93d8735cf4c95814ddb54193bafd3931c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d218dfa0_c40f74d9",
+        "filename": "plays/pre-ga-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-05-31T21:37:56Z",
+      "side": 1,
+      "message": "nit, just in case there is a registry name with word source in it\n\n\u0027/source:/!b;/bundle/b;s,quay.io/prega/test/,registry.redhat.io/,\u0027",
+      "revId": "40037e93d8735cf4c95814ddb54193bafd3931c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
