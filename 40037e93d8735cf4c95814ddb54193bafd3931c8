@@ -50,6 +50,24 @@
       "message": "nit, just in case there is a registry name with word source in it\n\n\u0027/source:/!b;/bundle/b;s,quay.io/prega/test/,registry.redhat.io/,\u0027",
       "revId": "40037e93d8735cf4c95814ddb54193bafd3931c8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84ba4262_8fa96c79",
+        "filename": "plays/pre-ga-catalog.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-31T21:56:56Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d218dfa0_c40f74d9",
+      "revId": "40037e93d8735cf4c95814ddb54193bafd3931c8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
