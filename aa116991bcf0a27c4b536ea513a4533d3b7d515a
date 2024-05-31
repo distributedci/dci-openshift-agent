@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1cd98e7_72f5f29d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-05-31T17:34:38Z",
+      "side": 1,
+      "message": "canceled the revert. We will fix the IDMS for connected in a separate change",
+      "revId": "aa116991bcf0a27c4b536ea513a4533d3b7d515a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ],
   "submitRequirementResults": []
 }
