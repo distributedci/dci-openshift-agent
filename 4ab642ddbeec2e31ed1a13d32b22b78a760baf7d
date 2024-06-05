@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a89f56d6_8e9c6985",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-06-05T23:19:25Z",
+      "side": 1,
+      "message": "LGTM, just needs https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31665",
+      "revId": "4ab642ddbeec2e31ed1a13d32b22b78a760baf7d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
