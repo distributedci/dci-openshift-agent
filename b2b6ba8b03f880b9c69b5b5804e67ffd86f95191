@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "b2b6ba8b03f880b9c69b5b5804e67ffd86f95191",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8d34e75_ff116664",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-06-06T01:12:42Z",
+      "side": 1,
+      "message": "Disconnected:\n  IPI: https://www.distributed-ci.io/jobs/a23b164d-21c3-467c-8bcf-dce4f935793d\n  ABI: https://www.distributed-ci.io/jobs/52512923-9fa3-4b9b-a9e8-248e703c8a25\n\nConnected:\n  IPI: https://www.distributed-ci.io/jobs/c3749fd9-5e5d-43b8-9e11-267d8ec4fd53\n  ABI: https://www.distributed-ci.io/jobs/1d402f3e-77ed-40e8-8a46-6bc1f6d80ea4\n  Assisted: Pending... 8453 (dci-pipeline-check 31665 assisted)",
+      "revId": "b2b6ba8b03f880b9c69b5b5804e67ffd86f95191",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
