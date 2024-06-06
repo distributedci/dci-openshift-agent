@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3b10c171_7d8b452f",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "bae97936_429bae53",
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3bf61c97_27e02d31",
         "filename": "docs/gitops-ztp.md",
         "patchSetId": 1
@@ -112,6 +130,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c90c98e6_89f49ef2",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "I assume that, in our case, sno1 is just used by sno_baremetal, and I\u0027d say it makes sense if the directory is overriden since this would be a new cluster that replaces the previous one.",
+      "parentUuid": "20f70f09_cd795ff7",
+      "range": {
+        "startLine": 363,
+        "startChar": 13,
+        "endLine": 363,
+        "endChar": 17
+      },
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1fea101b_ae349c31",
         "filename": "plays/acm-install.yml",
         "patchSetId": 1
@@ -129,6 +171,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "58871b61_478cb417",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "+1, if disconnected mode is still not working for ztp-spoke, we should also include the dci_disconnected check",
+      "parentUuid": "1fea101b_ae349c31",
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "08398c22_7d4fda46",
         "filename": "plays/acm-ztp-spoke.yml",
         "patchSetId": 1
@@ -140,6 +200,24 @@
       "writtenOn": "2024-05-29T23:37:31Z",
       "side": 1,
       "message": "I thought that the pull secret and the BMC credentials should be stored in the GitHub repo. Do you know why this is not the case for these 2 manifests? Thanks!",
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "419da57e_7a07678a",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "From my side, I think it\u0027s fine to place the pull secret and BMC credentials creation here. There may be cases where ZTP config is applied using the collections role but not using DCI, so in these cases, it makes sense to provide these files in the repo, but in our case, since the files require info that is already in place in variables defined before, I think this will minimize the human errors.",
+      "parentUuid": "08398c22_7d4fda46",
       "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

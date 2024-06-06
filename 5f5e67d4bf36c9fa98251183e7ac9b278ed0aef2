@@ -33,6 +33,371 @@
       "message": "recheck",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee5d422c_e00bc882",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "Some comments from my side (mostly aligned with https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/268), we\u0027re near to the end!",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e14b559_a58a5094",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "Should we add a comment here to remark that this has been only validated currently in connected environments and cannot be used yet in disconnected?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22f24486_3f611e52",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "GitOps, and this applies to all the cases where \"Gitops\" is written instead of \"GitOps\" (do a replace for all cases and that would be all)",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 8
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abbc663f_20fb3327",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "description",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f39874a_1fe49d90",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "These",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01dd77eb_98eebc5b",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "tnf-test pipeline reference here should be removed",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1fc35e2_3a07653c",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "Maybe we can use a different server name for this example, just call it \"server\", maybe?\nThis applies to the rest of cases where this name appear.",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4aa16f65_1220af15",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "Just one question, this name is just used for this example, right? I mean, in the DCI jobs you\u0027ve launched the hub cluster, `partnerci.hub.lab` domain name was not used, right?\nJust to confirm we don\u0027t need to cover additional dependencies in the DNS confg\nThis applies to the rest of cases where this name appear.",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d87cf09_14f323c2",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 152,
+        "endChar": 4
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72eb3fa0_db3811d2",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "Same; this `partnerci.spoke.lab` domain is just defined for this example, right? Not used in our tests.",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c24c414_65d1fa63",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "should we expose this repo name? maybe to put a different one?",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0644a80_b5704f3f",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "should we expose this key path here? I\u0027d change this for another example",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f22c0dc7_534a35ae",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "same",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b6c1a04_32b137e7",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "same",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "544122a8_df524fd1",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "should we expose all these known hosts here?",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8641808_d58fc39d",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "- Apply the suggestions proposed for these vars in https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/268\n- The first two tasks are not checked in the previous `assert` task. Should you add a condition to call to this role only if these two vars are defined? Or include them in the `assert`?",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 54
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6fb4404_b9a8f149",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "Reminder here about kubernetes.core usage, same feeling that what I said in the collections\u0027 change. this applies to other tasks using kubernetes.core.",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "010c45f7_89fd820b",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "If the namespace\u0027s name will be the cluster name, we need to say in the README that users should take care when defining their SiteConfig and custom policies in the repo to also use that name",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d11ab86_8daa6557",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-06T11:00:49Z",
+      "side": 1,
+      "message": "as suggested in https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/268, these three vars should be prefixed with `ztp_`",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 48
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
