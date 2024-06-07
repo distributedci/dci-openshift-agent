@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9654ffd1_afea48e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T13:40:54Z",
+      "side": 1,
+      "message": "updates on some comments already addressed + adding some new ones",
+      "revId": "bc2ab9941d23a98c45543383ba3b3053c9d9d813",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27fcdfc7_887dddda",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T13:40:54Z",
+      "side": 1,
+      "message": "Since this variable looks like optional for gitops_configure_repo role but `dci_gitops_sites_repo.known_hosts` is not checked in the previous assert task, I\u0027d recommend here to set a default value if not provided (probably an empty string as def var:\n\n`gcr_ssh_known_hosts: \"{{ dci_gitops_sites_repo.known_hosts | default(\u0027\u0027)}}\"`",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 23
+      },
+      "revId": "bc2ab9941d23a98c45543383ba3b3053c9d9d813",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bec83e49_fe38e8c1",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T13:40:54Z",
+      "side": 1,
+      "message": "This variable is not checked in the previous assert task and must be checked since `gcr_ssh_key_path` is required",
+      "range": {
+        "startLine": 24,
+        "startChar": 26,
+        "endLine": 24,
+        "endChar": 56
+      },
+      "revId": "bc2ab9941d23a98c45543383ba3b3053c9d9d813",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

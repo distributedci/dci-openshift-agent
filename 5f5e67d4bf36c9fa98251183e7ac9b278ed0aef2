@@ -343,6 +343,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "52d022e4_a6c82e50",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T13:40:54Z",
+      "side": 1,
+      "message": "creating some new comments for pending tasks to be done here",
+      "parentUuid": "d8641808_d58fc39d",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 54
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6fb4404_b9a8f149",
@@ -356,6 +380,42 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "Reminder here about kubernetes.core usage, same feeling that what I said in the collections\u0027 change. this applies to other tasks using kubernetes.core.",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "765eaf2c_8c4205da",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T13:40:54Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f6fb4404_b9a8f149",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da45789d_ab790a9d",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T13:40:54Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f6fb4404_b9a8f149",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -390,6 +450,30 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "as suggested in https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/268, these three vars should be prefixed with `ztp_`",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 48
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98776828_e1ce45fe",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T13:40:54Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7d11ab86_8daa6557",
       "range": {
         "startLine": 66,
         "startChar": 0,
