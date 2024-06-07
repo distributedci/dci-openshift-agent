@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "a49643f3f8be223ca272151ae6c19cc20a3e9522",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c6a0412_31693990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-07T11:47:28Z",
+      "side": 1,
+      "message": "I think this change needs to have a TestX entry to have a vote from dcibot, so that this can be merged. Let me update that.\nSince Test-Hints: no-check is not working yet on Gerrit, I\u0027ll try with a vanilla job",
+      "revId": "a49643f3f8be223ca272151ae6c19cc20a3e9522",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
