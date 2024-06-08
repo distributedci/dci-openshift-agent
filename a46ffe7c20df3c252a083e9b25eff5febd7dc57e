@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be6eb597_f1cc5ddd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-06-08T01:01:01Z",
+      "side": 1,
+      "message": "Beto, is this change just to check? I guess then we\u0027ll add other changes to do something with the information collected?",
+      "revId": "a46ffe7c20df3c252a083e9b25eff5febd7dc57e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
