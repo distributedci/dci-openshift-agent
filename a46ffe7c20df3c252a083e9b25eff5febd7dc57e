@@ -16,6 +16,41 @@
       "message": "Beto, is this change just to check? I guess then we\u0027ll add other changes to do something with the information collected?",
       "revId": "a46ffe7c20df3c252a083e9b25eff5febd7dc57e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e025e8a9_b21a64cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-08T01:19:07Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "a46ffe7c20df3c252a083e9b25eff5febd7dc57e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fe9e590_fe148a3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-08T01:19:07Z",
+      "side": 1,
+      "message": "Hey Manny, This is the actual change. We already use idms_res to set the kind of image content source that we will apply to the cluster. The change is on how we decided if it should be IDMS or ICSP. We must use IDMS if the cluster has support for it (CRD imagedigestmirrorsets is present). With the current implementation, we apply ICSP only if the cluster already has an IDMS applied. \n\nFor example, all the clusters in a connected environment that get applied mirroring policies for the first time will get an ICSP even if the OCP version is 4.16. \n\nThis change only covers the mirroring config for operators, not for OCP as it is been checked on a separate change.\n\nThis is working as expected, the failure in Bos2 is because the loki pods cannot be evicted.  \n\n4.16 with IDMS https://www.distributed-ci.io/files/cad41874-41b1-4701-b3bb-beaefa2a3c1b\n4.15 with ICSP https://www.distributed-ci.io/files/0568fa7e-2fd6-46c7-9a22-d5b494d88fbf",
+      "parentUuid": "be6eb597_f1cc5ddd",
+      "revId": "a46ffe7c20df3c252a083e9b25eff5febd7dc57e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
