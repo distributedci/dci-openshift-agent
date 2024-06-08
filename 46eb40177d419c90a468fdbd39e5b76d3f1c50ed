@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc233b47_0d84d134",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b10c171_7d8b452f",
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bf61c97_27e02d31",
@@ -49,6 +67,30 @@
       "writtenOn": "2024-05-29T23:37:31Z",
       "side": 1,
       "message": "are",
+      "range": {
+        "startLine": 17,
+        "startChar": 147,
+        "endLine": 17,
+        "endChar": 149
+      },
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9dd675d2_132e74c3",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3bf61c97_27e02d31",
       "range": {
         "startLine": 17,
         "startChar": 147,
@@ -82,6 +124,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c8a4a86_16242bee",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b7d7397c_52f2914c",
+      "range": {
+        "startLine": 33,
+        "startChar": 104,
+        "endLine": 33,
+        "endChar": 110
+      },
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d677540_35f5baa8",
@@ -95,6 +161,30 @@
       "writtenOn": "2024-05-29T23:37:31Z",
       "side": 1,
       "message": "The section \"Inventory example for the ZTP ACM Hub Cluster\" is not clear to me.\n\nDo we need to add this additional setting to the inventory of the ACM hub? if so, I think we shouldn\u0027t mix parameters for the spoke with the ones for the hub.",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 49
+      },
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f87f273d_6466091b",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "I\u0027ll replace the examples for the hub inventory and pipeline with references to the acm documentation.",
+      "parentUuid": "3d677540_35f5baa8",
       "range": {
         "startLine": 97,
         "startChar": 0,
@@ -152,6 +242,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8555256_9d688969",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Just as Ramón describes it.",
+      "parentUuid": "c90c98e6_89f49ef2",
+      "range": {
+        "startLine": 363,
+        "startChar": 13,
+        "endLine": 363,
+        "endChar": 17
+      },
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1fea101b_ae349c31",
@@ -187,6 +301,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "01ffbf01_16acd866",
+        "filename": "plays/acm-install.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "As discussed, the disconected environments is one of the next use cases to implement, so there shouldn\u0027t really be a need to exclude the environments in the current implementation. However, I\u0027m thinking of following your advice, just to make sure any external teams know disconnected environments are not currently supported.\n\nI also updated the documentation accordingly.",
+      "parentUuid": "58871b61_478cb417",
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08398c22_7d4fda46",
@@ -218,6 +350,24 @@
       "side": 1,
       "message": "From my side, I think it\u0027s fine to place the pull secret and BMC credentials creation here. There may be cases where ZTP config is applied using the collections role but not using DCI, so in these cases, it makes sense to provide these files in the repo, but in our case, since the files require info that is already in place in variables defined before, I think this will minimize the human errors.",
       "parentUuid": "08398c22_7d4fda46",
+      "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0112a49_a5cdea07",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "I\u0027m trying moving the secrets to the ztp manifests repository.\nIt doesn\u0027t look like the most sound solution in terms of privacy, since the data is uploaded in plain text.",
+      "parentUuid": "419da57e_7a07678a",
       "revId": "46eb40177d419c90a468fdbd39e5b76d3f1c50ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

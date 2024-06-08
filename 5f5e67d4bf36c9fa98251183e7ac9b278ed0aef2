@@ -98,6 +98,54 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd3ff548_269b59f6",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "22f24486_3f611e52",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 8
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c0a2fca_12049dae",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "I added the comment as a requirement for the two cluster types.",
+      "parentUuid": "2e14b559_a58a5094",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "abbc663f_20fb3327",
@@ -111,6 +159,30 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "description",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25a6e603_8a77a8c2",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "abbc663f_20fb3327",
       "range": {
         "startLine": 7,
         "startChar": 11,
@@ -144,6 +216,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7419d0f2_e8daca31",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f39874a_1fe49d90",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01dd77eb_98eebc5b",
@@ -157,6 +253,24 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "tnf-test pipeline reference here should be removed",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d358ae98_48e6eae8",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "I removed the entire code block following one of Beto\u0027s comment.",
+      "parentUuid": "01dd77eb_98eebc5b",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -180,6 +294,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8a837a8b_a1d0ade7",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Same as for the previous comment. This is not relevant anymore, since the data for the ACM Hub is described in the acm.md file.",
+      "parentUuid": "c1fc35e2_3a07653c",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4aa16f65_1220af15",
         "filename": "docs/gitops-ztp.md",
         "patchSetId": 6
@@ -191,6 +323,24 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "Just one question, this name is just used for this example, right? I mean, in the DCI jobs you\u0027ve launched the hub cluster, `partnerci.hub.lab` domain name was not used, right?\nJust to confirm we don\u0027t need to cover additional dependencies in the DNS confg\nThis applies to the rest of cases where this name appear.",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4885436_46a6d258",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "The hub is not described in this file anymore. As for the spoke, I replace the domain with spoke.example.lab.",
+      "parentUuid": "4aa16f65_1220af15",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -218,6 +368,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "552fa6e2_9a5b5976",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d87cf09_14f323c2",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 152,
+        "endChar": 4
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "72eb3fa0_db3811d2",
@@ -231,6 +405,24 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "Same; this `partnerci.spoke.lab` domain is just defined for this example, right? Not used in our tests.",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcf7cdc8_a8fcd30c",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "72eb3fa0_db3811d2",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -252,6 +444,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "048b0344_71c75ba2",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7c24c414_65d1fa63",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d0644a80_b5704f3f",
@@ -265,6 +475,24 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "should we expose this key path here? I\u0027d change this for another example",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "794835b8_19dd030f",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d0644a80_b5704f3f",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -286,6 +514,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "22e92883_05814325",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f22c0dc7_534a35ae",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b6c1a04_32b137e7",
@@ -303,6 +549,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebf0c4c7_7c32fed3",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b6c1a04_32b137e7",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "544122a8_df524fd1",
@@ -316,6 +580,24 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "should we expose all these known hosts here?",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59614e84_9e0e0a12",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "Those are github\u0027s public data but I redacted it for the example.",
+      "parentUuid": "544122a8_df524fd1",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -433,6 +715,24 @@
       "writtenOn": "2024-06-06T11:00:49Z",
       "side": 1,
       "message": "If the namespace\u0027s name will be the cluster name, we need to say in the README that users should take care when defining their SiteConfig and custom policies in the repo to also use that name",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "501f531c_df0ce66a",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-08T20:59:22Z",
+      "side": 1,
+      "message": "After Beto\u0027s comment, we moved the creation of these resources to the gitops manifest repo, so this does not apply anymore.",
+      "parentUuid": "010c45f7_89fd820b",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
