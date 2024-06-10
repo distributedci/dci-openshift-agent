@@ -16,6 +16,23 @@
       "message": "LGTM from my side, thanks Nacho for all the great work here!",
       "revId": "3b3aa4531dde589c833fa313e92ad18d7ed33f5a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "746cfa2b_16d73fb7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-10T23:20:38Z",
+      "side": 1,
+      "message": "LGTM, thanks for all the work!",
+      "revId": "3b3aa4531dde589c833fa313e92ad18d7ed33f5a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
