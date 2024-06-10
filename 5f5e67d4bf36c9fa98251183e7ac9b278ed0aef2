@@ -146,6 +146,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7ec7d2a_7e604d62",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-10T11:16:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "1c0a2fca_12049dae",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "abbc663f_20fb3327",
@@ -275,6 +299,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "596c6813_2d2d135a",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-10T11:16:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d358ae98_48e6eae8",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c1fc35e2_3a07653c",
@@ -310,6 +352,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5ff3014_33ddfd85",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-10T11:16:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "8a837a8b_a1d0ade7",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4aa16f65_1220af15",
@@ -341,6 +401,24 @@
       "side": 1,
       "message": "The hub is not described in this file anymore. As for the spoke, I replace the domain with spoke.example.lab.",
       "parentUuid": "4aa16f65_1220af15",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6997b09a_33875dc7",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-10T11:16:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b4885436_46a6d258",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -733,6 +811,24 @@
       "side": 1,
       "message": "After Beto\u0027s comment, we moved the creation of these resources to the gitops manifest repo, so this does not apply anymore.",
       "parentUuid": "010c45f7_89fd820b",
+      "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2289b25_6a32a712",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-10T11:16:21Z",
+      "side": 1,
+      "message": "That\u0027s okey, but then, where\u0027s the namespace created? I can see this sno1-namespace.yml file here: https://github.com/dci-labs/bos2-gitops/blob/main/sites/sno1-namespace.yaml, but it looks like to be a dummy one. And I don\u0027t see this step in the automation.\nIs it created automatically anyway when launching the site config?\nLet me create a new comment to remark this.",
+      "parentUuid": "501f531c_df0ce66a",
       "revId": "5f5e67d4bf36c9fa98251183e7ac9b278ed0aef2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
