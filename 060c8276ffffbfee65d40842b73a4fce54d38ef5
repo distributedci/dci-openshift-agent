@@ -110,6 +110,30 @@
       },
       "revId": "060c8276ffffbfee65d40842b73a4fce54d38ef5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f50e518_af7fe8d9",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-10T13:15:04Z",
+      "side": 1,
+      "message": "ack, reviewed",
+      "parentUuid": "e5de305a_9491e686",
+      "range": {
+        "startLine": 33,
+        "startChar": 3,
+        "endLine": 33,
+        "endChar": 44
+      },
+      "revId": "060c8276ffffbfee65d40842b73a4fce54d38ef5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
