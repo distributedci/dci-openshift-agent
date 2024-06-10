@@ -65,6 +65,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7eecbb65_e0275fd1",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-10T12:53:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "851e7a48_522ec738",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 23
+      },
+      "revId": "bc2ab9941d23a98c45543383ba3b3053c9d9d813",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bec83e49_fe38e8c1",
@@ -102,6 +126,30 @@
       "side": 1,
       "message": "This is still pending.",
       "parentUuid": "bec83e49_fe38e8c1",
+      "range": {
+        "startLine": 24,
+        "startChar": 26,
+        "endLine": 24,
+        "endChar": 56
+      },
+      "revId": "bc2ab9941d23a98c45543383ba3b3053c9d9d813",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a432dcc4_fe8357b5",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-06-10T12:53:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a57bd2eb_b41c4157",
       "range": {
         "startLine": 24,
         "startChar": 26,
