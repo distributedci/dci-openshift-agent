@@ -33,6 +33,23 @@
       "message": "Should be good to go, let\u0027s wait for a green job just in case",
       "revId": "b4d68c03137aa1e5adeaefb27b9c766c384dba6b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3216c2e3_a1288eff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-11T15:14:40Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "b4d68c03137aa1e5adeaefb27b9c766c384dba6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
