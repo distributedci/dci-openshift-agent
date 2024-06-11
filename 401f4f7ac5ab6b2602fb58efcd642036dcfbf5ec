@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8cd33218_3b98b61e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-11T14:48:31Z",
+      "side": 1,
+      "message": "Change is working fine, I was able to launch hub and spoke cluster in the same call to dci-pipeline. This is ready.",
+      "revId": "401f4f7ac5ab6b2602fb58efcd642036dcfbf5ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
