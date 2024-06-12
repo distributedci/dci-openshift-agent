@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a474907_527f2df4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-12T21:25:18Z",
+      "side": 1,
+      "message": "check dallas ocp-4.14-vanilla",
+      "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4dbd0680_6c266e6d",
@@ -65,6 +82,24 @@
       "writtenOn": "2024-06-12T21:16:23Z",
       "side": 1,
       "message": "I see this worked fine in 4.15 with assisted, I guess it should work in 4.14 because we are not setting IDMS during the installation but rather doing a conversion at day2 right?",
+      "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f7d9863_dc744e1e",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-12T21:25:18Z",
+      "side": 1,
+      "message": "In 4.14-IPI it should skip the tasks as we should be using IDMS during the installation, so there will be nothing to migrate.\n\nIn \u003c4.14-IPI, the conversion should be skipped because of the OCP version. I am testing in 4.12. Let me test also in 4.14.\n\nThanks!",
+      "parentUuid": "4dbd0680_6c266e6d",
       "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
