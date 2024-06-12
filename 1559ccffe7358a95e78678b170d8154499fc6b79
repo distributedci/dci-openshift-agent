@@ -102,6 +102,24 @@
       "parentUuid": "4dbd0680_6c266e6d",
       "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14b36e4d_cf0e3f98",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-06-12T23:44:34Z",
+      "side": 1,
+      "message": "Thanks for testing 4.12, that confirms is not breaking any old releases, but what I meant is that in Assisted Installations with 4.14 we cannot pass IDMS at day1 because the installer does not interprets that, but since you do the conversion from ICSP to IDMS in day2 shouldn\u0027t be a problem. We could merge this but because the check dci-build-and-push-dci-pipeline-dev-container-job failed in the last run :( we\u0027ll have re-run, so please if you do, let\u0027s update the test in to commit to `TestDallas: ocp-4.14-acm-hub` and let\u0027s see how it goes.",
+      "parentUuid": "1f7d9863_dc744e1e",
+      "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
