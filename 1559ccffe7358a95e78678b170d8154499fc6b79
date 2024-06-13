@@ -138,6 +138,24 @@
       "parentUuid": "14b36e4d_cf0e3f98",
       "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d33a222d_1ed2cab0",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-06-13T12:20:30Z",
+      "side": 1,
+      "message": "Thanks, I see the results, the ICSP was converted to IDMS and we can see both in the cluster. No issues in 4.14 with assisted.",
+      "parentUuid": "a9fa577a_e446e4ed",
+      "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
