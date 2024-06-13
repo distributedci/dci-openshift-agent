@@ -120,6 +120,24 @@
       "parentUuid": "1f7d9863_dc744e1e",
       "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9fa577a_e446e4ed",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-13T00:04:56Z",
+      "side": 1,
+      "message": "yeah, converting the ICSP on day 2 won\u0027t affect the cluster ICSP created during the assisted installer. Those will be restored and co-exist. At some time we will need to get rid of the ICSP once they are finally unsupported. The only problem with that is that that will trigger node reboots.\n\nI updated the test hints as recommended. And there is another job for 4.14-ipi running.",
+      "parentUuid": "14b36e4d_cf0e3f98",
+      "revId": "1559ccffe7358a95e78678b170d8154499fc6b79",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
