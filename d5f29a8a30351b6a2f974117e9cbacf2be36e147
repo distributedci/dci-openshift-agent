@@ -84,6 +84,23 @@
       "message": "check dallas ocp-4.14-vanilla-abi",
       "revId": "d5f29a8a30351b6a2f974117e9cbacf2be36e147",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c4ed178_5edaf7ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-17T07:00:59Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "d5f29a8a30351b6a2f974117e9cbacf2be36e147",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
