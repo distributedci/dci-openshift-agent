@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7820a232_bb33e723",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1617
+      },
+      "writtenOn": "2024-06-18T15:30:31Z",
+      "side": 1,
+      "message": "Changed interpreter_python location",
+      "revId": "e60bbad10c9f5d362e2a8395942e096c8ad8e752",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
