@@ -16,6 +16,23 @@
       "message": "lgtm",
       "revId": "a881fc19db7c1eb89c21293b2bb36e4158a43cb5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf5b4662_678ff9bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-18T06:53:12Z",
+      "side": 1,
+      "message": "This worked as a charm now, merging this.",
+      "revId": "a881fc19db7c1eb89c21293b2bb36e4158a43cb5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
