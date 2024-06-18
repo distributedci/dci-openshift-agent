@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e541517_dd50417a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1617
+      },
+      "writtenOn": "2024-06-18T15:22:03Z",
+      "side": 1,
+      "message": "Choose the interpreter according to ansible execution environment",
+      "revId": "786a3dd89af812080a7b0a766cf0644e89e2391a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
