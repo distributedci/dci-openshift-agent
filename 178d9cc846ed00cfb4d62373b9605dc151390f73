@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f0b75a0_a8df0ea4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-06-19T14:19:42Z",
+      "side": 1,
+      "message": "Thanks Charles, The RPM macro for datadir by default points to /usr/share so in systems using our RPM that will use that path. https://docs.fedoraproject.org/en-US/packaging-guidelines/RPMMacros/\n\nBut that is a good point, I do not like the absolute paths, so maybe is a good idea to move the script inside plays/scripts. \n\nLet see if someone else has an opinion about it. Cheers!",
+      "revId": "178d9cc846ed00cfb4d62373b9605dc151390f73",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dd9eef7b_14fad7d0",
