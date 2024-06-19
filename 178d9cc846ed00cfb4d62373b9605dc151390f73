@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd9eef7b_14fad7d0",
+        "filename": "plays/pre-ga-catalog.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 673
+      },
+      "writtenOn": "2024-06-19T08:36:49Z",
+      "side": 1,
+      "message": "One question on the path of the script:\nwhen installing the agent, the spec file is using %{_datadir}, are we sure it will always be \u0027/usr/share/\u0027 or is it specific to the lab we are testing this?",
+      "revId": "178d9cc846ed00cfb4d62373b9605dc151390f73",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
