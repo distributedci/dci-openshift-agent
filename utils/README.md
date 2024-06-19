@@ -16,3 +16,7 @@ The [cleanup-scripts](cleanup-scripts/README.md) contains a set of scripts that 
 ## Upload logs to a DCI job
 
 The [upload-logs](upload-logs/README.md) contains an Ansible playbook that allows users to upload any file to a DCI job that may have not been submitted previously in the job.
+
+## Compare indexes
+
+The [compare-indexes](compare-indexes.sh) script is an utility to get the differences between operators available in 2 indexes. Comparison is based on its defaults channels and the latest bundle version.
