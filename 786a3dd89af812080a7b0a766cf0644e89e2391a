@@ -16,6 +16,23 @@
       "message": "Choose the interpreter according to ansible execution environment",
       "revId": "786a3dd89af812080a7b0a766cf0644e89e2391a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff72f1fc_5d33cea8",
+        "filename": "samples/ocp_on_libvirt/libvirt_up.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-06-19T01:00:41Z",
+      "side": 1,
+      "message": "I launched a test, and from the job error https://www.distributed-ci.io/jobs/d01c1dcf-0326-4a1d-8503-875227d09ff1/jobStates?sort\u003ddate\u0026task\u003d5ad887c6-6008-4c65-aaee-cd32b50c5c7f, I think we need to protect the word \u0027container\u0027 with simple quotes. \n\n@rhalle if you amend the change, please add this line in the commit message and it will trigger a test job automatically:\n\nTestBos2: virt",
+      "revId": "786a3dd89af812080a7b0a766cf0644e89e2391a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
