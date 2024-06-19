@@ -68,6 +68,24 @@
       "parentUuid": "dd9eef7b_14fad7d0",
       "revId": "178d9cc846ed00cfb4d62373b9605dc151390f73",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23ea22eb_a43921f4",
+        "filename": "plays/pre-ga-catalog.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-06-19T19:51:37Z",
+      "side": 1,
+      "message": "I also think the plays/script is a good place to start",
+      "parentUuid": "4997f73f_9242f74a",
+      "revId": "178d9cc846ed00cfb4d62373b9605dc151390f73",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
