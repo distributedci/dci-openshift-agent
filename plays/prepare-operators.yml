@@ -130,6 +130,9 @@
 
 - name: Pre-GA catalog
   ansible.builtin.include_tasks: pre-ga-catalog.yml
+    apply:
+      environment:
+        DOCKER_CONFIG: "{{ docker_conf.path }}"
   when:
     - dci_pre_ga_catalog | default('') | length
 
