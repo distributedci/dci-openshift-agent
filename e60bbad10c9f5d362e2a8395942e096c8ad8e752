@@ -16,6 +16,23 @@
       "message": "Changed interpreter_python location",
       "revId": "e60bbad10c9f5d362e2a8395942e096c8ad8e752",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d93a1a0c_9c873dff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-19T07:37:27Z",
+      "side": 1,
+      "message": "Hi Rei, I have the impression that this is a modification that should be on https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31772. You need to amend the change to the previous review, else you will create a separate change as this one. You have this blog post as a reference for using Gerrit: https://blog.distributed-ci.io/gerrit-for-github-users.html",
+      "revId": "e60bbad10c9f5d362e2a8395942e096c8ad8e752",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
