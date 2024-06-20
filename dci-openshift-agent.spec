@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       0.15.0
+Version:       0.16.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -10,13 +10,19 @@ Source0:       dci-openshift-agent-%{version}.tar.gz
 BuildRequires: systemd
 BuildRequires:  /usr/bin/pathfix.py
 Requires: /usr/bin/sudo
+
+%if 0%{?rhel} && 0%{?rhel} < 9
 Requires: dci-ansible >= 0.3.1
+%else
+Requires: ansible-core
+%endif
+
 %if 0%{?rhel} && 0%{?rhel} < 8
 Requires: python2-dciclient >= 3.1.0
 %else
 Requires: python3-dciclient >= 3.1.0
 %endif
-Requires: dci-pipeline >= 0.7.0
+Requires: dci-pipeline >= 0.9.0
 Requires: ansible-role-dci-podman
 Requires: ansible-collection-redhatci-ocp >= 0.11.0
 
@@ -83,6 +89,11 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Fri Jun 21 2024 Tony Garcia <tonyg@redhat.com> 0.16.0-1
+- Modify requirements for el9 package
+- Add ansible-core
+- Remove dci-ansible
+
 * Fri Jun 14 2024 Tony Garcia <tonyg@redhat.com> 0.15.0-1
 - Requires redhatci.ocp >= 0.11.0 for mirror_ocp_release
 
