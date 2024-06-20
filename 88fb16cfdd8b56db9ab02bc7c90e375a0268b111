@@ -16,6 +16,23 @@
       "message": "Change the way I determine if it\u0027s a container",
       "revId": "88fb16cfdd8b56db9ab02bc7c90e375a0268b111",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f9bf48e_e781397d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-20T06:53:31Z",
+      "side": 1,
+      "message": "1. I suppose https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31773 can be closed\n2. As Manuel said, you need to add `TestBos2: virt` in the commit message to test this.",
+      "revId": "88fb16cfdd8b56db9ab02bc7c90e375a0268b111",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
