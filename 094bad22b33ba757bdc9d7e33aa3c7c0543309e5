@@ -16,6 +16,24 @@
       "message": "Hi Rei, what\u0027s the purpose of this change? I\u0027ve been reading about Ansible Navigator, but I\u0027m not sure about the benefit of this tool in the agent, since it\u0027s mainly launched using dci-pipeline (an external tool), rather than launching the playbooks with ansible-playbook command.",
       "revId": "094bad22b33ba757bdc9d7e33aa3c7c0543309e5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a0e3be0_1df4969d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1617
+      },
+      "writtenOn": "2024-06-23T12:20:12Z",
+      "side": 1,
+      "message": "I know that currently dci-pipeline doesn\u0027t use navigator, but I hope it\u0027ll do it somewhere in the future. Maybe I can contribute to dci-pipeline and change the way. Either way I change it due to the uses of ansible-playbook in the documentations. They explain how to create libvirt environment by using Ansible-playbook and I think it\u0027s better to move to navigator, the real change is that navigator working inside the container and can save us from installing many requirement for the dci",
+      "parentUuid": "5d52f157_45187e7d",
+      "revId": "094bad22b33ba757bdc9d7e33aa3c7c0543309e5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
