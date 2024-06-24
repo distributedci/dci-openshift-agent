@@ -16,6 +16,24 @@
       "message": "I don\u0027t see us getting rid of dci-ansible in EL9, dci-ansible is required for all the dci_* modules in the code.",
       "revId": "580aceb78f165e2412ea2849e5b0aa1f5c6de0ff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79db50bc_62f2468b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-06-24T22:18:43Z",
+      "side": 1,
+      "message": "If dci-ansible is not yet ready for EL9 then that\u0027s a blocker, but I don\u0027t see this going forward without it.",
+      "parentUuid": "07799cc7_e711e8ea",
+      "revId": "580aceb78f165e2412ea2849e5b0aa1f5c6de0ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
