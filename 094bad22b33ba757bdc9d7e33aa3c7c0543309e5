@@ -34,6 +34,41 @@
       "parentUuid": "5d52f157_45187e7d",
       "revId": "094bad22b33ba757bdc9d7e33aa3c7c0543309e5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6eb18a5_a8a34176",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-24T08:06:20Z",
+      "side": 1,
+      "message": "I will include Fred and Tony here, I\u0027d like to hear their opinion on this",
+      "revId": "094bad22b33ba757bdc9d7e33aa3c7c0543309e5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cdfc42a_d86e3fb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-24T08:06:20Z",
+      "side": 1,
+      "message": "I think it would be nice to have an example about how ansible-navigator is launched in the agent, and also some documentation to understand what are the file structure of the ansible_ee directory, also including some comments in the main README.",
+      "parentUuid": "3a0e3be0_1df4969d",
+      "revId": "094bad22b33ba757bdc9d7e33aa3c7c0543309e5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
