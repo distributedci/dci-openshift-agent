@@ -69,6 +69,23 @@
       "parentUuid": "36da23e7_7627c953",
       "revId": "e96e102f6900dfe7c6fb78fc2a5137e59edcf086",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16889a83_48a3ce10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-06-24T12:44:40Z",
+      "side": 1,
+      "message": "I suspect we need special privileges to see that button :)",
+      "revId": "e96e102f6900dfe7c6fb78fc2a5137e59edcf086",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
