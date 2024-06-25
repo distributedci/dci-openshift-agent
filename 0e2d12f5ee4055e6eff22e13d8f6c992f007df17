@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65e093c5_b3c89cc0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-06-25T05:07:10Z",
+      "side": 1,
+      "message": "LGTM, I wonder if we can also test an upgrade scenario, and use BOS2, otherwise might be hard in DFW because a nice guy from NA has been reserving a lot of clusters lately, :P",
+      "revId": "0e2d12f5ee4055e6eff22e13d8f6c992f007df17",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
