@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e063d52_d155162a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-26T07:44:53Z",
+      "side": 1,
+      "message": "I think you have created a new change based on https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31784. Don\u0027t know what you did in this new patchset, but the idea is that, if you need to include new changes in your Gerrit review, you just need to add them and use `git commit --amend` and then `git-review`.\nAgain, adding here Tony and Fred so that they can give their opinion of the implications of ansible-navigator usage",
+      "revId": "e4cee3d78d1edd0e9570463afe3b8e61c0a2f78f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
