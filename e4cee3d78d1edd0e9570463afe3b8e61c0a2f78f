@@ -34,6 +34,24 @@
       "parentUuid": "5e063d52_d155162a",
       "revId": "e4cee3d78d1edd0e9570463afe3b8e61c0a2f78f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c03f9616_8802bf94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-06-27T07:14:41Z",
+      "side": 1,
+      "message": "No worries, we\u0027re here for helping in this Gerrit learning process!\n\nAlso, I think Manuel suggested this in a previous change, but it\u0027s better if you provide the TestXX entry at the end of the commit message, just before the Change-Id. So in your case, it should be:\n\n```\nCreate new directory with ansible execution-environment to be use with ansible-navigator\n\n\u003chere you can include a description commenting what\u0027s this change about, what you\u0027re changing, etc.\u003e\n\nTestBos2: virt\n\nChange-Id: I375439d7e80a11dbbc044426a19b3fea9f517840\n```",
+      "parentUuid": "a73b2e55_4c1b9ae4",
+      "revId": "e4cee3d78d1edd0e9570463afe3b8e61c0a2f78f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
