@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8e8e5c4d_671619e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-04T08:21:50Z",
+      "side": 1,
+      "message": "Two things here:\n\n- virt pipeline does not launch configure-provisioner tasks, you will need to test this with a different pipeline, e.g. `sno` could be good. So, you need to use the following: `TestBos2Sno: sno` (note you have to use now `TestBos2Sno` to refer to the proper dci-queue element)\n\n- Could you swap the order of the two lines you have in the commit message? It should be:\n\n```\nFix issue with CentOS yum repos and CentOS 7 EOL (issue #17)\n\nTestBos2Sno: sno\n```\n\nYou can do it by just executing `git commit --amend`, then you modify the commit message to fit in this format, then you launch `git-review`",
+      "revId": "f07128eeface7bb670e546a26b2639a4e02f9fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b2166a13_8571594d",
         "filename": "plays/configure-provisioner.yml",
         "patchSetId": 2
