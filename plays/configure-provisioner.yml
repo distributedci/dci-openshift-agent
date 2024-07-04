@@ -20,10 +20,13 @@
 
 - name: Install packages
   become: true
+  vars:
+    pytehon_version: >-
+      {{ (ansible_python.version.major == 3) | ternary('python3', 'python') }}
   package:
     name:
       - "{{ item }}"
     state: installed
-  with_items:
-    - "python{% if ansible_python.version.major == 3 %}3{% endif %}-openshift"
+  loop:
+    - "{{ pytehon_version }}-openshift"
 ...
