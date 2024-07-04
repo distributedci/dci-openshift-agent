@@ -16,6 +16,24 @@
       "message": "You need to break this line, it fails the syntax check test",
       "revId": "f07128eeface7bb670e546a26b2639a4e02f9fa9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce1a7e1c_537a17d6",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1617
+      },
+      "writtenOn": "2024-07-04T07:14:03Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b2166a13_8571594d",
+      "revId": "f07128eeface7bb670e546a26b2639a4e02f9fa9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
