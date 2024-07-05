@@ -33,6 +33,23 @@
       "message": "Confirming that, if outputs is not defined before, we define an outputs variable with the kubeconfig, which is the current behavior we have: https://www.distributed-ci.io/jobs/79a5d9f9-92c4-47ed-a1bf-5fd740cf7605/jobStates?sort\u003ddate\u0026task\u003d4cfcdf3c-6667-4dd7-b01f-d7552e1d7672",
       "revId": "e432acdb122889015190e2c7b27d8b9295e412e8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f738d1a_669f81db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-05T13:10:47Z",
+      "side": 1,
+      "message": "Full pipeline tested for ZTP is working and inputs-outputs have been passed correctly. I\u0027ll merge this.",
+      "revId": "e432acdb122889015190e2c7b27d8b9295e412e8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
