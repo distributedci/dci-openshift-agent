@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be955d3b_404bb9a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-05T16:12:03Z",
+      "side": 1,
+      "message": "I\u0027ve launched a default assisted job to confirm it\u0027s working fine, to have the +1 from the DCI bot",
+      "revId": "fe3d44bbf3b529142cdf964199fe1352aa332fc6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
