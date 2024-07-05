@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd7e0025_9cd1f51b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-05T13:05:06Z",
+      "side": 1,
+      "message": "Rei, could you please swap the lines in PR description? The TestXXX should be the last one. So:\n\n```\nRemove jinja template from playbook and change with_item to loop\n\nTestBos2: virt\n\nChange-Id: ...\n```\n\nYou should be able to do it with `git commit --amend` directly and then run `git-review` , without needing to checkout to another branch. Because I saw it happened the same in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31902 and you created a new change on https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31906. This operation should not imply to create a new change, it will just add a new review to the gerrit change and that\u0027s all",
+      "revId": "2753e7638cabdcc5d8aa21ac9f4ce7bccaf6f361",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
