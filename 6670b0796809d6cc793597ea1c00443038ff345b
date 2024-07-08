@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "6670b0796809d6cc793597ea1c00443038ff345b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91e23741_aaea94b4",
+        "filename": "group_vars/all",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-08T11:36:36Z",
+      "side": 1,
+      "message": "Where\u0027s is this ai_version value documented? do we have a pointer to the documentation?",
+      "revId": "6670b0796809d6cc793597ea1c00443038ff345b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
