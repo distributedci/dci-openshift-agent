@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "122f8562_d0c6fb73",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-08T11:52:39Z",
+      "side": 1,
+      "message": "Thanks for swapping the PR description. We only need one more change, because it\u0027s not enough with testing this code with `virt` scenario, we would need `assisted-abi` instead, because in `virt` mode, `configure-provisioner.yml` code is not called.\n\nCan you change the PR description to modify your `TestBos2` entry for this one?\n\n`TestBos2: assisted-abi`",
+      "revId": "fd5b045e2ec7ea483d394b87a010835c4e7bdfbd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
