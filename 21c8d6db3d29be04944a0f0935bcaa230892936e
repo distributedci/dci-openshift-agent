@@ -50,6 +50,24 @@
       "message": "This variable needs to be documented, and since is for the DCI agent, could you prefix it with dci_?",
       "revId": "21c8d6db3d29be04944a0f0935bcaa230892936e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8238606_187d7a2a",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-09T16:01:21Z",
+      "side": 1,
+      "message": "The variable is already documented, I did it in https://softwarefactory-project.io/r/c/dci-openshift-agent/+/31910, but since it should be prefixed with `dci_`, I\u0027ll recheck that in a new patchset.",
+      "parentUuid": "aa4e6602_357b2afc",
+      "revId": "21c8d6db3d29be04944a0f0935bcaa230892936e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
