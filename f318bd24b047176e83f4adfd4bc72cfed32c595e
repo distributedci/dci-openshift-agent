@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce5ab300_7a156854",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-09T16:42:09Z",
+      "side": 1,
+      "message": "I guess it\u0027s now good, I\u0027ll check tomorrow the DCI jobs",
+      "revId": "f318bd24b047176e83f4adfd4bc72cfed32c595e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
