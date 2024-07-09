@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89918d3f_8f5a3463",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-09T00:30:44Z",
+      "side": 1,
+      "message": "After some testing, we found that v2.26 is able to deploy 4.16 without enforcing the use of api_vips and egress_vips. \n\nOnce we need to upgrade to the latest version we will need too apply change to the crucible roles (install_cluster, create_cluster)",
+      "revId": "8ab0f2706f2e8db21f87cfaa124b5e389c2368e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
