@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f183d581_32003e05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-09T13:42:49Z",
+      "side": 1,
+      "message": "Hi Tatiana, Manuel, this is related to the secure boot testing, I also need this check for setup_sushy_tools, now testing in https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/367",
+      "revId": "21c8d6db3d29be04944a0f0935bcaa230892936e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
