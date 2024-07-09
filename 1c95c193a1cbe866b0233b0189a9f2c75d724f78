@@ -20,6 +20,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "601094ae_7a10bd2b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-09T15:45:07Z",
+      "side": 1,
+      "message": "Thanks!",
+      "revId": "1c95c193a1cbe866b0233b0189a9f2c75d724f78",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "f774a5c0_c388deaa",
         "filename": "plays/assisted-pre-run.yml",
         "patchSetId": 8
