@@ -16,6 +16,23 @@
       "message": "I guess it\u0027s now good, I\u0027ll check tomorrow the DCI jobs",
       "revId": "f318bd24b047176e83f4adfd4bc72cfed32c595e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a4b7f3c_b3b5c559",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-09T21:47:11Z",
+      "side": 1,
+      "message": "This needs a bump in the RPM spec to depend on the right version of the collections where this option is introduced. That implies bumping as well the version in your change https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/367",
+      "revId": "f318bd24b047176e83f4adfd4bc72cfed32c595e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
