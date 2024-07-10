@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41469f2f_e0ebbf59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-07-10T07:56:27Z",
+      "side": 1,
+      "message": "LGTM, I never liked the time comparison I introduced long ago :), but it was helping in certain scenarios, maybe this was only needed with old versions of OCP, we\u0027ll see.",
+      "revId": "d18460926f84dc1f65773293268223a85be16157",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
