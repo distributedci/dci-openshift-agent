@@ -33,6 +33,23 @@
       "message": "Hi Beto, thank you for the quick fix, the job is green.",
       "revId": "d18460926f84dc1f65773293268223a85be16157",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b02d2789_83e25ed0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-10T14:01:53Z",
+      "side": 1,
+      "message": "Thanks!",
+      "revId": "d18460926f84dc1f65773293268223a85be16157",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
