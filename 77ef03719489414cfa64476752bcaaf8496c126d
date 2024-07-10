@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "583fc777_dee36d96",
+        "filename": "docs/a-i.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-10T18:14:47Z",
+      "side": 1,
+      "message": "maybe\u003e You can disable Secure Boot (enabled by default) using the dci_assisted_disable_secure_boot flag.",
+      "revId": "77ef03719489414cfa64476752bcaaf8496c126d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
