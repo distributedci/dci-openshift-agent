@@ -16,6 +16,23 @@
       "message": "Change is ready for review again. Jobs are about to pass. Please see https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/367 to check the results.",
       "revId": "fea6a737599e93826df9f0cc18ee64f5bcc5f556",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49fd8191_234fd515",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-07-10T14:58:46Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "fea6a737599e93826df9f0cc18ee64f5bcc5f556",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
