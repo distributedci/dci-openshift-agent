@@ -52,7 +52,7 @@ all:
         boot_dev: hd
         cpu_mode: host-passthrough
         image_src: "{{ image_url }}"
-        disk_size: 42G
+        disk_size: 100G
         disk_cache: unsafe
         disk_bus: virtio_scsi
         networks:
