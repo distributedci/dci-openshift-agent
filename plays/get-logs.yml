@@ -34,6 +34,10 @@
     PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
   shell:
     cmd: >
+      ls -l &&
+      env &&
+      echo ${PATH} &&
+      echo ---------- &&
       timeout -v 20m
       plays/scripts/get-ocp-logs
       {% if install_type == 'acm' %}

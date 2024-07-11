@@ -68,6 +68,12 @@
   when:
     - acm_cluster_type | default('') != 'hypershift'
 
+## Test
+- name: Fail
+  ansible.builtin.fail:
+    msg: "Fail to generate logs"
+## Test
+
 - name: "Check all nodes have been provisioned"
   vars:
     install_config: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
