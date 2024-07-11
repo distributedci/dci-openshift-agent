@@ -60,6 +60,7 @@
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
 
+    # This may be require for ACM baremetal based installation
     - name: "Convert Image Source to registries.conf format"
       vars:
         img_src_paths:
@@ -110,6 +111,8 @@
 
             [[registry.mirror]]
               location = "{{ hub_registry | urlsplit('netloc') }}/multicluster-engine"
+      when:
+        - acm_cluster_type in ('sno')
 
     - name: "Set facts for install via ACM - disconnected"
       set_fact:
@@ -127,7 +130,7 @@
 
   when:
     - dci_disconnected | default(false) | bool
-    - acm_cluster_type == 'sno'
+    - acm_cluster_type in ('sno', 'hypershift')
 
 - name: "Get OCP release artifacts"
   block:
@@ -155,5 +158,5 @@
         acm_release_image: "{{ ocp_release_data['container_image'] | quote }}"
   when:
     - not (dci_disconnected | default(false) | bool)
-    - acm_cluster_type in ("sno")
+    - acm_cluster_type in ('sno', 'hypershift')
 ...
