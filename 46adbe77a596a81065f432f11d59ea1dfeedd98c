@@ -67,6 +67,24 @@
       "message": "Nice work. Are you going to add a dci_ flag to control this and update the inventories accordingly?",
       "revId": "46adbe77a596a81065f432f11d59ea1dfeedd98c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93cc22ad_fe30f917",
+        "filename": "plays/success.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-18T19:57:42Z",
+      "side": 1,
+      "message": "Thanks! Yes, I\u0027ll add a flag to default to not doing it, but enable it in the pipeline or in the inventory",
+      "parentUuid": "35a4516e_34b8d4bb",
+      "revId": "46adbe77a596a81065f432f11d59ea1dfeedd98c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
