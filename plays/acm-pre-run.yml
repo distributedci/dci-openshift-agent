@@ -110,6 +110,8 @@
 
             [[registry.mirror]]
               location = "{{ hub_registry | urlsplit('netloc') }}/multicluster-engine"
+      when:
+        - acm_cluster_type == 'sno'
 
     - name: "Set facts for install via ACM - disconnected"
       set_fact:
@@ -127,7 +129,6 @@
 
   when:
     - dci_disconnected | default(false) | bool
-    - acm_cluster_type == 'sno'
 
 - name: "Get OCP release artifacts"
   block:
