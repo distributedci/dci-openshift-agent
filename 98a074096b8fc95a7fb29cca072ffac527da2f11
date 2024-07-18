@@ -37,6 +37,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "bbb4d951_389503e7",
+        "filename": "plays/configure-jumpbox.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-18T18:46:53Z",
+      "side": 1,
+      "message": "Oh man, I should have been asleep at that time. Thanks for checking.",
+      "parentUuid": "1747508f_d2d8822f",
+      "revId": "98a074096b8fc95a7fb29cca072ffac527da2f11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "b77d1aa0_80ff3908",
         "filename": "plays/configure-jumpbox.yml",
         "patchSetId": 3
@@ -65,6 +83,24 @@
       "writtenOn": "2024-07-18T09:25:23Z",
       "side": 1,
       "message": "replace \"openshift-client-linux.tar.gz\" with \"openshift-client-linux-amd64-rhel{{ ansible_distribution_major_version }}.tar.gz\"",
+      "revId": "98a074096b8fc95a7fb29cca072ffac527da2f11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "825f0e22_08075262",
+        "filename": "plays/configure-jumpbox.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-18T18:46:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e957261d_f0dd6605",
       "revId": "98a074096b8fc95a7fb29cca072ffac527da2f11",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
