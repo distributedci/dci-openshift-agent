@@ -50,6 +50,23 @@
       "message": "check dallas ocp-4.12-vanilla",
       "revId": "46adbe77a596a81065f432f11d59ea1dfeedd98c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35a4516e_34b8d4bb",
+        "filename": "plays/success.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-18T19:14:37Z",
+      "side": 1,
+      "message": "Nice work. Are you going to add a dci_ flag to control this and update the inventories accordingly?",
+      "revId": "46adbe77a596a81065f432f11d59ea1dfeedd98c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
