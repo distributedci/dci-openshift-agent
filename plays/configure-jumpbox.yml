@@ -65,11 +65,17 @@
 
 - name: "Download stable openshift clients"
   vars:
-    ocp_clients_url: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.14"
+    ocp_clients_url:
+      "https://mirror.openshift.com/pub/openshift-v4/\
+      x86_64/clients/ocp/stable/openshift-client-linux-amd64-rhel\
+      {{ ansible_distribution_major_version }}.tar.gz"
   unarchive:
     src: "{{ item }}"
     dest: "{{ dci_cluster_configs_dir }}"
     remote_src: true
+    extra_opts:
+      - oc
+      - kubectl
     mode: 0755
   register: result
   retries: 3
