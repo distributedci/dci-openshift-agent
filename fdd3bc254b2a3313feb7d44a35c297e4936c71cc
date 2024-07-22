@@ -67,6 +67,23 @@
       "message": "regate",
       "revId": "fdd3bc254b2a3313feb7d44a35c297e4936c71cc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c15d253c_2ba49277",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-22T16:51:27Z",
+      "side": 1,
+      "message": "This one also needs this change merged first: https://softwarefactory-project.io/r/c/dci-jobs/+/32052",
+      "revId": "fdd3bc254b2a3313feb7d44a35c297e4936c71cc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
