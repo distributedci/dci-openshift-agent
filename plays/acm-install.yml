@@ -1,5 +1,5 @@
 ---
-- name: "Deploy a ZTP spoke cluster"
+- name: "Deploy ZTP spoke cluster"
   ansible.builtin.include_tasks:
     file: acm-ztp-spoke.yml
   when:
