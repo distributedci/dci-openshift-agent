@@ -10,7 +10,7 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - name: Display proxy settings
+    - name: Display proxy setting
       debug:
         msg: "http_proxy={{ http_proxy }} https_proxy={{ https_proxy }} no_proxy={{ no_proxy_list }}"
 
