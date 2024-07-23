@@ -1,4 +1,5 @@
 ---
+# TODO: password_hash requires passlib
 - name: Set DCI console password
   vars:
     core_password: "{{ dci_console_pass }}"
