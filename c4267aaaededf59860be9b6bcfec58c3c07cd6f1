@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e3cd280_8a59561a",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-25T20:19:36Z",
+      "side": 1,
+      "message": "Thanks for looking into it Ramon, I reverted back the renaming I did on vars with capital letters, I did not look into the redhatci.ocp collections where those variables with capital letters are expected. Instead I added exceptions in the code to avoid a linting error.\n\nOn the other issue related to querying the pruned index, Beto pointed me to the right problem that is at times the container is not ready when querying it, now because of setting pipeline on it, we are failing sooner. This is now solved with some retries.",
+      "parentUuid": "78bc4393_da3db293",
+      "revId": "c4267aaaededf59860be9b6bcfec58c3c07cd6f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "21b2d87a_8ac98ddb",
