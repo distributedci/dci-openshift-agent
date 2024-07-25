@@ -1,6 +1,40 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "348350e8_00778ea8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-25T14:47:16Z",
+      "side": 1,
+      "message": "found the two issues that are currently happening in the assisted jobs, some changes are required, setting -1",
+      "revId": "c4267aaaededf59860be9b6bcfec58c3c07cd6f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78bc4393_da3db293",
+        "filename": "plays/assisted-pre-run.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-25T14:47:16Z",
+      "side": 1,
+      "message": "This is not working as before. Because, in our daily jobs, this task is skipped: https://www.distributed-ci.io/jobs/4d3b7e18-f173-4960-a19c-b68d500c6cf5/jobStates?sort\u003ddate\u0026task\u003d63551701-a694-41bf-b2d1-6f7f3451a2e7\nBut now, this task is executed, and it failed at the very beginning of that role: https://www.distributed-ci.io/jobs/14c609c3-a6f1-4965-880f-001621f9ed83/jobStates?sort\u003ddate\u0026task\u003da49a1b20-c695-4087-900a-6d470f7b0e99\n\nI think I know what happens. In the assisted inventory, there are several variables in upper case, and probably now they\u0027re not being taken into account.\n\nIn our case, we generate the inventory based on this template: https://github.com/redhat-cip/dci-openshift-agent/blob/master/samples/assisted_on_libvirt/templates/hosts.j2, if you check it, you will see we have there the `SETUP_VM_BRIDGE` variable, which is false by default. Now, as it\u0027s not defined, we use `_setup_vms` variable which is probably `true`, and it caused the error.\n\nAlso, don\u0027t know if we should also check the roles from redhatci.ocp related to crucible, because I think there are also some upper case variables defined there too",
+      "revId": "c4267aaaededf59860be9b6bcfec58c3c07cd6f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "21b2d87a_8ac98ddb",
