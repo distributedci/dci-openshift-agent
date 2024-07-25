@@ -68,6 +68,24 @@
       "message": "This is really affecting to the current jobs. In fact, this task fails in the current deployments: https://www.distributed-ci.io/jobs/b4f43947-91fb-4c69-aeb0-52d0ab84ce4a/jobStates?sort\u003ddate\u0026task\u003dd6eb7211-adef-4931-a48b-842e4430381f, but this `set -o pipefail;` seems to be causing this task to fail.\n\nProbably this needs to be reviewed (and next tasks that depends on the output of this task) to make it pass again",
       "revId": "c4267aaaededf59860be9b6bcfec58c3c07cd6f1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "224773ef_305ccb95",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-25T20:20:06Z",
+      "side": 1,
+      "message": "This is solved with some retries. Thanks to Beto for pointing it out.",
+      "parentUuid": "21b2d87a_8ac98ddb",
+      "revId": "c4267aaaededf59860be9b6bcfec58c3c07cd6f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
