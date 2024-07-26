@@ -16,6 +16,23 @@
       "message": "This change would be ready for review, but I\u0027m having troubles with dci-agent-syntax-check job from Zuul, but that\u0027s not related to this change. I saw this is being reviewed in https://softwarefactory-project.io/r/c/dci-jobs/+/32052 but I tried to include it as Depends-On and it\u0027s not working.",
       "revId": "87816e0fe32d5a671525fcb319bb3c0deae95246",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4610cedb_41f81ac5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-26T16:16:35Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "87816e0fe32d5a671525fcb319bb3c0deae95246",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
