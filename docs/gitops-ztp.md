@@ -5,10 +5,8 @@ GitOps ZTP is an OpenShift cluster deployment method based on the principle of m
 ## Table of contents
 
 * [Process description](#process-description)
-* [Requirements](#requirements)
-* [Roles](#roles)
-* [Pipelines examples](#pipelines-examples)
-* [Inventory examples](#inventory-examples)
+* [ZTP ACM Hub Cluster](#ztp-acm-hb-cluster)
+* [ZTP Spoke Cluster](#ztp-spoke-cluster)
 
 ## Process description
 
@@ -24,16 +22,22 @@ These two stages are run through separate DCI jobs that may be pipeline stages.
 
 ### Requirements for the ZTP ACM Hub Cluster
 
-* The Hub Cluster is located in a connected environment.
-
 * A multi-node or compact cluster (minimum 3 control plane nodes).
 
 ### Configuration for the ZTP ACM Hub Cluster
 
-| Variable | Description |
-|----------|-------------|
-| dci_operators | List of the operators, along with their specific settings, to be installed in the Hub Cluster. This list must included, at minimum, the advanced-cluster-management, the openshift-gitops-operator and the topology-aware-lifecycle manager.
-| enable_acm | The variable must be set to True for the dci-openshift-agent to run the ACM hub cluster configuration tasks.
+| Variable                | Description |
+|-------------------------|-------------|
+| dci_operators           | List of the operators, along with their specific settings, to be installed in the Hub Cluster. This list must included, at minimum, the advanced-cluster-management, the openshift-gitops-operator and the topology-aware-lifecycle manager. |
+| enable_acm              | The variable must be set to "true" for the dci-openshift-agent to run the ACM hub cluster configuration tasks. |
+| enable_disconnected_git | For disconnected environments, set it to "true" to enabled the deployment of a Git server in the hub cluster so you may push your gitops manifests. |
+| sg_gitea_image          | URL to a Gitea image served by a registry accessible from the cluster. Only needed in disconnected environments. |
+| sg_username             | The internal Git server user name. |
+| sg_password             | The internal Git server user password. |
+| sg_email                | The internal Git server user e-mail address. |
+| sg_repository           | The name to be given to the internal Git repository. |
+| sg_repo_mirror_url      | URL to an external reference repository containing the manifests to push (mirror) into the internal Git repository. |
+
 
 ### Pipeline data for the ZTP ACM Hub Cluster
 
@@ -60,6 +64,14 @@ dci_operators:
     operator_group_name: "global-operators"
 # Operators to configure
 enable_acm: true
+# For disconnected environments
+#enable_disconnected_git: true
+#sg_gitea_image: registry.local:5000/gitea/gitea:latest-rootless
+#sg_username: gituser
+#sg_password: Git_Ops_1234
+#sg_email: gituser@example.com
+#sg_repository: gitops
+#sg_repo_mirror_url: git@github.com:gituser/gitops.git
 ```
 
 ### Inventory data for the ZTP ACM Hub Cluster
