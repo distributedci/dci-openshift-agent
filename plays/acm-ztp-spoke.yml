@@ -71,3 +71,14 @@
     tasks_from: get-credentials
   vars:
     acm_cluster_name: "{{ cluster }}"
+
+- name: Deploy the disconnected network Git server
+  ansible.builtin.include_role:
+    name: redhatci.ocp.setup_gitea
+  vars:
+    sg_username: testuser
+    sg_password: Test_User_1234
+    sg_email: testuser@example.com
+    sg_repository: gitops
+    sg_repo_mirror_url: git@github.com:dci-labs/bos2-gitops.git
+  when: enable_disconnected_git | default(False) | bool
