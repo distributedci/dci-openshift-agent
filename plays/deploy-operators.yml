@@ -68,6 +68,11 @@
   when:
     - enable_acm | bool
 
+- name: Deploy the disconnected network Git server
+  ansible.builtin.include_role:
+    name: redhatci.ocp.setup_gitea
+  when: enable_disconnected_git | default(False) | bool
+
 - name: "Setup the Network Observability Operator"
   ansible.builtin.include_tasks: setup-netobserv.yml
   when:
