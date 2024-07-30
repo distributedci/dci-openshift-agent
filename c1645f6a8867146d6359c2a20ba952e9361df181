@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ec5498c9_fb28aba8",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-30T14:46:38Z",
+      "side": 1,
+      "message": "Instead of looping them all, let\u0027s just do it on the partition holding /. This should help to get it the right partition:\n\nfindmnt -J / | jq -r .filesystems[].source | cut -d\\[ -f1\n\n\nThis will help on systems that does not have sdX, and might have nvme or may be virtual storage.",
+      "revId": "c1645f6a8867146d6359c2a20ba952e9361df181",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "29898694_79c49274",
         "filename": "plays/configure-provisioner.yml",
         "patchSetId": 1
