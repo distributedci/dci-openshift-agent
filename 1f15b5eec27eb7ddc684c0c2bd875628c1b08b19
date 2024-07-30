@@ -16,6 +16,24 @@
       "message": "Do you think this should be tied to ZTP? If this is generic enough we should be able to use it for other use cases. Maybe create a setup_gitea play and include it in https://github.com/redhat-cip/dci-openshift-agent/blob/14dc31f11bdd49cb0edaf8584c2ba55ea5ca2d19/plays/deploy-operators.yml#L62 ?\n\nThanks",
       "revId": "1f15b5eec27eb7ddc684c0c2bd875628c1b08b19",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bca3abfd_d117fc03",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-30T07:20:10Z",
+      "side": 1,
+      "message": "Same than Beto, and also:\n\n- maybe the variables that are provided here could fit better in an inventory file\n- shouldn\u0027t the git server be created before creating the gitops apps?",
+      "parentUuid": "9fb67568_9ac28c5b",
+      "revId": "1f15b5eec27eb7ddc684c0c2bd875628c1b08b19",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
