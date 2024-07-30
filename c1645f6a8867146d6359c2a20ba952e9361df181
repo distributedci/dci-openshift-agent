@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29898694_79c49274",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-07-30T07:25:57Z",
+      "side": 1,
+      "message": "Is this var documented? didn\u0027t find it after making a quick lookup",
+      "revId": "c1645f6a8867146d6359c2a20ba952e9361df181",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
