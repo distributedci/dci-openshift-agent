@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76d9292d_b7d5d03e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-30T21:55:27Z",
+      "side": 1,
+      "message": "Tests:\n\n- SNO - https://www.distributed-ci.io/jobs/1c180ddc-42f1-41b4-af51-82e4d520cc2a/jobStates\n- hypershfit: https://www.distributed-ci.io/jobs/1c180ddc-42f1-41b4-af51-82e4d520cc2a\n\nThe hub is deploying HCPs with OCP versions that differ from its installed version\n\n$ oc get clusterversion\nNAME      VERSION                              AVAILABLE   PROGRESSING   SINCE   STATUS\nversion   4.14.0-0.nightly-2024-07-29-182012   True        False         15h     Cluster version is 4.14.0-0.nightly-2024-07-29-182012\n\n$ oc get hc -A\nNAMESPACE   NAME         VERSION                              KUBECONFIG                    PROGRESS    AVAILABLE   PROGRESSING   MESSAGE\nclusters    0o5lo03ins   4.14.0-0.nightly-2024-07-30-054002   0o5lo03ins-admin-kubeconfig   Completed   True        False         The hosted control plane is available\nclusters    kvirt        4.14.0-0.nightly-2024-07-30-054002   kvirt-admin-kubeconfig        Completed   True        False         The hosted control plane is available\nclusters    w10ymhuin8   4.14.0-0.nightly-2024-07-30-054002   w10ymhuin8-admin-kubeconfig   Completed   True        False         The hosted control plane is available",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
