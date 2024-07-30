@@ -297,9 +297,8 @@
   become: true
   shell: |
     if grep 'Red Hat Enterprise Linux CoreOS' /etc/os-release; then
-      for disk in /dev/sd?; do
-        dd if=/dev/zero of=$disk bs=512 count=1
-      done
+      disk=$(findmnt -J / | jq -r .filesystems[].source | cut -d[ -f1)
+      dd if=/dev/zero of=$disk bs=512 count=1
     fi
   when:
     - dci_erase_bootloader_on_disk|default(False)|bool
