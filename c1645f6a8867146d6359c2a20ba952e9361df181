@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "53457f4d_dc662e3f",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-07-30T20:30:52Z",
+      "side": 1,
+      "message": "Good idea, I included this in patch-set#2",
+      "parentUuid": "ec5498c9_fb28aba8",
+      "revId": "c1645f6a8867146d6359c2a20ba952e9361df181",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "29898694_79c49274",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-07-30T07:25:57Z",
       "side": 1,
       "message": "Is this var documented? didn\u0027t find it after making a quick lookup",
+      "revId": "c1645f6a8867146d6359c2a20ba952e9361df181",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24c439e0_48791787",
+        "filename": "plays/configure-provisioner.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-07-30T20:30:52Z",
+      "side": 1,
+      "message": "Ack, I added the variable in the README.md",
+      "parentUuid": "29898694_79c49274",
       "revId": "c1645f6a8867146d6359c2a20ba952e9361df181",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
