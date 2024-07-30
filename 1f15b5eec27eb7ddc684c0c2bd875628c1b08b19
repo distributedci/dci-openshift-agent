@@ -34,6 +34,24 @@
       "parentUuid": "9fb67568_9ac28c5b",
       "revId": "1f15b5eec27eb7ddc684c0c2bd875628c1b08b19",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb4c0ce2_9a53f5b7",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-07-30T10:21:59Z",
+      "side": 1,
+      "message": "Sorry guys, I was working with the \"autopilot\" and didn\u0027t realize I added the task to the ztp-spoke play. I just moved it to the deploy-operators.\n\nAs Beto says, this role may be useful for other use cases.\n\nI\u0027ll update also the commit message.",
+      "parentUuid": "bca3abfd_d117fc03",
+      "revId": "1f15b5eec27eb7ddc684c0c2bd875628c1b08b19",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
