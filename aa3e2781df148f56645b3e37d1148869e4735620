@@ -439,6 +439,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "53403e71_3483e785",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T20:29:02Z",
+      "side": 1,
+      "message": "Ah, that make sense, didn\u0027t realize the task before is the one that includes docker in it. Another option is to be specific about it, since it will always contain docker, then `\u0027^docker://[^/]+\u0027 will simplify the regex, up to you since yours already tested.",
+      "parentUuid": "b8ea956e_99982e5a",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1581b626_2715cf41",
