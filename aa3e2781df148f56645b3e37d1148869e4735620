@@ -99,6 +99,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c6482ba_1588bddd",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Fixed, thanks!",
+      "parentUuid": "de51bb3b_e5433745",
+      "range": {
+        "startLine": 62,
+        "startChar": 70,
+        "endLine": 62,
+        "endChar": 78
+      },
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6b3ea88a_34af277a",
@@ -130,6 +154,24 @@
       "side": 1,
       "message": "+1",
       "parentUuid": "6b3ea88a_34af277a",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "274370a7_f4628a0e",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ee87bc5_60814d4f",
       "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -181,6 +223,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dab0d3d3_10187f67",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "I have reworded the sentence. Thanks!",
+      "parentUuid": "f5af7be3_58b24d8f",
+      "range": {
+        "startLine": 95,
+        "startChar": 34,
+        "endLine": 95,
+        "endChar": 36
+      },
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8f1879c_88a80163",
@@ -194,6 +260,24 @@
       "writtenOn": "2024-07-31T16:19:34Z",
       "side": 1,
       "message": "--\u003e \u003cipv6-start\u003e-\u003cipv6-end\u003e",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58346469_1b19a843",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d8f1879c_88a80163",
       "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -215,6 +299,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e68b3b0f_030751df",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "02318154_4ee37e79",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d850ebab_5af7fce6",
@@ -232,6 +334,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc8df9a6_77ce92bd",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Good catch, Thanks!",
+      "parentUuid": "d850ebab_5af7fce6",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0115b1d_5e65a56b",
@@ -245,6 +365,24 @@
       "writtenOn": "2024-07-31T16:19:34Z",
       "side": 1,
       "message": "---\u003e         - acm_cluster_type not in [\u0027hypershift\u0027]\n\nOR\n\n    - acm_cluster_type !\u003d \u0027hypershift\u0027",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c754658_31a585fc",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0115b1d_5e65a56b",
       "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -283,6 +421,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8ea956e_99982e5a",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "I like the Jinja template; thanks for that. However, since hub_registry includes a scheme (docker://), the result is something like ocp_release_path: //\u003chost\u003e:\u003cport\u003e/ocp-4.14/4.14.0-0.nightly-2024-07-30-054002.\n\nTherefore, I will keep the current regex as it works with and without a port.",
+      "parentUuid": "398fc6c1_7b3bef3f",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1581b626_2715cf41",
@@ -296,6 +452,24 @@
       "writtenOn": "2024-07-31T14:20:28Z",
       "side": 1,
       "message": "\"required\"",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f714f8d5_d7e10b0f",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1581b626_2715cf41",
       "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -317,6 +491,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a57216d8_4dfee41e",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c16be265_2d308a95",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6afb4f88_8677df2f",
@@ -330,6 +522,24 @@
       "writtenOn": "2024-07-31T16:19:34Z",
       "side": 1,
       "message": "---\u003e - acm_cluster_type in [\u0027sno\u0027, \u0027hypershift\u0027]",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66976867_130b4f19",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-07-31T16:59:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6afb4f88_8677df2f",
       "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
