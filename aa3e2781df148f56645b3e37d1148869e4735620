@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "87521f16_a1f4554e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-07-31T14:20:28Z",
+      "side": 1,
+      "message": "No blockers from my side. Just a few documentation corrections.",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "68e5d8a0_674ba027",
@@ -48,6 +65,30 @@
       "writtenOn": "2024-07-31T08:39:26Z",
       "side": 1,
       "message": "described",
+      "range": {
+        "startLine": 62,
+        "startChar": 70,
+        "endLine": 62,
+        "endChar": 78
+      },
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de51bb3b_e5433745",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-07-31T14:20:28Z",
+      "side": 1,
+      "message": "Not so important, but I think we should keep the same name of the reference section: Deploying operators.",
+      "parentUuid": "68e5d8a0_674ba027",
       "range": {
         "startLine": 62,
         "startChar": 70,
@@ -77,6 +118,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2ee87bc5_60814d4f",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-07-31T14:20:28Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "6b3ea88a_34af277a",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "384a0525_e673e6c1",
         "filename": "docs/acm.md",
         "patchSetId": 11
@@ -100,6 +159,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f5af7be3_58b24d8f",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-07-31T14:20:28Z",
+      "side": 1,
+      "message": "Either:\n- where the Hub cluster\u0027s are present.\n- where the Hub cluster is present.\nI reckon the first option catches better your meaning.",
+      "parentUuid": "384a0525_e673e6c1",
+      "range": {
+        "startLine": 95,
+        "startChar": 34,
+        "endLine": 95,
+        "endChar": 36
+      },
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d850ebab_5af7fce6",
         "filename": "plays/acm-pre-run.yml",
         "patchSetId": 11
@@ -111,6 +194,23 @@
       "writtenOn": "2024-07-31T08:39:26Z",
       "side": 1,
       "message": "The name of this task and the next one is a bit confusing, since it\u0027s referring to hub_registry but the variable name is ocp_release_path. Should this be changed?",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1581b626_2715cf41",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-07-31T14:20:28Z",
+      "side": 1,
+      "message": "\"required\"",
       "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
