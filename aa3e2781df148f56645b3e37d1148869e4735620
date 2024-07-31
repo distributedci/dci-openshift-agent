@@ -183,6 +183,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d8f1879c_88a80163",
+        "filename": "docs/acm.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T16:19:34Z",
+      "side": 1,
+      "message": "--\u003e \u003cipv6-start\u003e-\u003cipv6-end\u003e",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02318154_4ee37e79",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T16:19:34Z",
+      "side": 1,
+      "message": "---\u003e     - acm_cluster_type in [\u0027sno\u0027, \u0027hypershift\u0027]",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d850ebab_5af7fce6",
         "filename": "plays/acm-pre-run.yml",
         "patchSetId": 11
@@ -200,6 +234,57 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e0115b1d_5e65a56b",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T16:19:34Z",
+      "side": 1,
+      "message": "---\u003e         - acm_cluster_type not in [\u0027hypershift\u0027]\n\nOR\n\n    - acm_cluster_type !\u003d \u0027hypershift\u0027",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5dbc48c_f111a802",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T16:19:34Z",
+      "side": 1,
+      "message": "---\u003e         - acm_cluster_type in [\u0027hypershift\u0027]\n\nOR\n\n    - acm_cluster_type \u003d\u003d \u0027hypershift\u0027",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "398fc6c1_7b3bef3f",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T16:19:34Z",
+      "side": 1,
+      "message": "Another option is to use a single task with jinja2 template for it, e.g.\n\n    - name: \"Set hub_registry location\"\n      set_fact:\n        ocp_release_path: \u003e-\n          {%- if acm_cluster_type !\u003d \u0027hypershift\u0027 -%}\n          {{ acm_local_repo | default(\u0027ocp-\u0027 + version.split(\u0027.\u0027)[:2] | join(\u0027.\u0027) + \u0027/\u0027 + version, true) }}\n          {%- elif acm_cluster_type \u003d\u003d \u0027hypershift\u0027 -%}\n          {{ hub_registry | regex_replace(\u0027^[^/]+\u0027, \u0027\u0027) }}\n          {%- endif -%}\n\nPlease take a look to the regex replace, the previous expression didn\u0027t seem to work, as registries does not come with a scheme, i.e. they don\u0027t use https:// nor http:// The new regex will work for use cases like:\n\n- quay.io/some/path -\u003e /some/path\n- registry.local:1234/example -\u003e /example",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1581b626_2715cf41",
         "filename": "plays/acm-pre-run.yml",
         "patchSetId": 11
@@ -211,6 +296,40 @@
       "writtenOn": "2024-07-31T14:20:28Z",
       "side": 1,
       "message": "\"required\"",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c16be265_2d308a95",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T16:19:34Z",
+      "side": 1,
+      "message": "---\u003e - acm_cluster_type in [\u0027sno\u0027]\n\nOR\n\n    - acm_cluster_type \u003d\u003d \u0027sno\u0027",
+      "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6afb4f88_8677df2f",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 11
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-07-31T16:19:34Z",
+      "side": 1,
+      "message": "---\u003e - acm_cluster_type in [\u0027sno\u0027, \u0027hypershift\u0027]",
       "revId": "aa3e2781df148f56645b3e37d1148869e4735620",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
