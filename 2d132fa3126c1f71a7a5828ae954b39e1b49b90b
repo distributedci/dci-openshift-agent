@@ -16,6 +16,24 @@
       "message": "I\u0027m sorry, I might be missing something simple. but where VERSION_ID comes from?",
       "revId": "2d132fa3126c1f71a7a5828ae954b39e1b49b90b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3ab7600_8bfe37ad",
+        "filename": "plays/scripts/compare-indexes.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-08-08T15:44:14Z",
+      "side": 1,
+      "message": "It comes from /etc/os-release, it provides the VERSION_ID with the version of the OS, in this case it is only considered RH-based distros",
+      "parentUuid": "927407b2_2f913155",
+      "revId": "2d132fa3126c1f71a7a5828ae954b39e1b49b90b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
