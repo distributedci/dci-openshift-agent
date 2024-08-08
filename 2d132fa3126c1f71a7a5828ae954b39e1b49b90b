@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "927407b2_2f913155",
+        "filename": "plays/scripts/compare-indexes.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2024-08-08T14:28:50Z",
+      "side": 1,
+      "message": "I\u0027m sorry, I might be missing something simple. but where VERSION_ID comes from?",
+      "revId": "2d132fa3126c1f71a7a5828ae954b39e1b49b90b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
