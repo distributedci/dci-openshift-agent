@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "843db766_5a4c97fa",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-08-12T21:19:05Z",
+      "side": 1,
+      "message": "IMO, this role can be used in connected and disconnected environments. So maybe just name the task \"Deploy a hosted Gitea Server\". So I suggest changing the flag to something like enable_gitea.\n\nIn disconnected, we use to mirror the image the image into dci_local_registry https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/setup-minio.yml and pass the reference to the role. (if enable_gitea and dci_disconnected)\n\nI recommend creating a new play like: setup-gitea.yml\n\nThanks!",
+      "revId": "cce532939f377cb0b8189a076ae2437c112e15f5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
