@@ -67,7 +67,6 @@
         mor_install_type: "{{ install_type }}"
         mor_mirror_disk_images: "{{ dci_disconnected | default(False) | bool }}"
         mor_mirror_container_images: "{{ dci_disconnected | default(False) | bool }}"
-        mor_write_custom_config: false
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
 
