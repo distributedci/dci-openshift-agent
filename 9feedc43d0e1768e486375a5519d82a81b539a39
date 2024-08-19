@@ -68,6 +68,24 @@
       "parentUuid": "f8e1e285_41738e8a",
       "revId": "9feedc43d0e1768e486375a5519d82a81b539a39",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5760d507_c9002fcc",
+        "filename": "plays/catalog-from-image.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-08-19T17:34:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b56dab33_ecd5d6b6",
+      "revId": "9feedc43d0e1768e486375a5519d82a81b539a39",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
