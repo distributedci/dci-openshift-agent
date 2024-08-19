@@ -16,6 +16,23 @@
       "message": "nice, LGTM",
       "revId": "9feedc43d0e1768e486375a5519d82a81b539a39",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8e1e285_41738e8a",
+        "filename": "plays/catalog-from-image.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-08-19T08:01:42Z",
+      "side": 1,
+      "message": "shouldn\u0027t you use here `| default(\u0027mirrored-redhat-operators\u0027)`? or `opm_catalog_source_name` defined in `prepare-operators.yml`?",
+      "revId": "9feedc43d0e1768e486375a5519d82a81b539a39",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
