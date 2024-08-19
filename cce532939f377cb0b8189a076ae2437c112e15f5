@@ -34,6 +34,24 @@
       "parentUuid": "843db766_5a4c97fa",
       "revId": "cce532939f377cb0b8189a076ae2437c112e15f5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3451d8ad_ab4d8309",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-08-19T14:51:49Z",
+      "side": 1,
+      "message": "The dedicated play is just in case you add tasks to mirror the gitea images for disconnected environments before calling the role. I think that will be one of the extra tags around gitea service.",
+      "parentUuid": "43b3bed8_42dc9c7a",
+      "revId": "cce532939f377cb0b8189a076ae2437c112e15f5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
