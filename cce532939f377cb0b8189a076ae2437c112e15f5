@@ -16,6 +16,24 @@
       "message": "IMO, this role can be used in connected and disconnected environments. So maybe just name the task \"Deploy a hosted Gitea Server\". So I suggest changing the flag to something like enable_gitea.\n\nIn disconnected, we use to mirror the image the image into dci_local_registry https://github.com/redhat-cip/dci-openshift-agent/blob/master/plays/setup-minio.yml and pass the reference to the role. (if enable_gitea and dci_disconnected)\n\nI recommend creating a new play like: setup-gitea.yml\n\nThanks!",
       "revId": "cce532939f377cb0b8189a076ae2437c112e15f5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43b3bed8_42dc9c7a",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-08-19T14:16:38Z",
+      "side": 1,
+      "message": "Thanks for the comments.\n\nI agree and will implement all of the save for the last one, which I need to clarify.\n\nWhat would be the point on moving the role import to a dedicated play?\n\nIt may be that in the future we have to create some extra tasks around the gitea service and then it\u0027d make sense to move them to a dedicated play, but right now I rather not to add unrequired complexity.\n\nIn any case, let me know your reasoning so I can take the final decision.",
+      "parentUuid": "843db766_5a4c97fa",
+      "revId": "cce532939f377cb0b8189a076ae2437c112e15f5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
