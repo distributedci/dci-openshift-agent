@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a75731a_11e2960b",
+        "filename": "docs/microshift.md",
+        "patchSetId": 67
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-08-22T13:43:35Z",
+      "side": 1,
+      "message": "It\u0027s for documenting default value the partner can change",
+      "parentUuid": "184c4f11_0e8fb8f6",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "cbd7bfb6_9b058407",
@@ -218,6 +236,24 @@
       "writtenOn": "2024-08-22T13:37:39Z",
       "side": 1,
       "message": "does the \u0027undocumented\u0027 section mean that the readme is still to be updated?",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6d96423_2de68294",
+        "filename": "plays/microshift/group_vars/all",
+        "patchSetId": 67
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-08-22T13:43:35Z",
+      "side": 1,
+      "message": "No it means the user can\u0027t change the value, so I\u0027m not documenting this in the readme",
+      "parentUuid": "24d0f91f_329d7a47",
       "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
