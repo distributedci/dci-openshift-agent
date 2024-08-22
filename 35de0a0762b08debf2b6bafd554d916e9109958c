@@ -16,6 +16,227 @@
       "message": "LGTM but I\u0027d prefer to wait some more opinions to confirm it\u0027s fine to merge. If not having more reviews I\u0027ll give my +2",
       "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d82b4e27_8a4d6703",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 67
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "Hi Guillaume, LGTM, just some minor suggestions about the code structure but feel free to ignore them.",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "184c4f11_0e8fb8f6",
+        "filename": "docs/microshift.md",
+        "patchSetId": 67
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "is this commented block needed or we could remove it?",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbd7bfb6_9b058407",
+        "filename": "docs/microshift.md",
+        "patchSetId": 67
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "I like the invocation :)",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0956df7_c2ef388f",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "We could simplify this part: \n```\n- name: Ensure required variables are defined\n  assert:\n    that:\n      - _libvirt_pool_dir is defined\n      - _suts is defined\n      - _http_store is defined\n      - _dci_cluster_configs_dir is defined\n    quiet: true\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbf47382_a6111425",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "we could probably group in a block or even move the group of tasks into a separate playbook, to simplify the structure\n```\n- name: Ensure SSH key exists and has correct permissions\n  block:\n    - name: Check if id_rsa.pub exists\n      stat:\n        path: \"~/.ssh/id_rsa.pub\"\n      register: ssh_key_check\n\n    - name: Generate SSH key if not present\n      command: ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N \"\"\n      when: not ssh_key_check.stat.exists\n\n    - name: Ensure SSH public key file has correct permissions\n      file:\n        path: \"~/.ssh/id_rsa.pub\"\n        mode: \u00270644\u0027\n        owner: \"{{ ansible_user_id }}\"\n        group: \"{{ ansible_user_id }}\"\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4401ae37_5fda85c3",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "and the same for SUT VMs - we could structure the code as block or move it in a separate playbook\n```\n- name: Manage SUT VMs\n  block:\n    - name: Get list of VMs\n      become: true\n      community.libvirt.virt:\n        command: info\n      register: vms_list\n\n    - name: Destroy running SUTs\n      become: true\n      community.libvirt.virt:\n        name: \"{{ item.name }}\"\n        command: destroy\n      when: \"item.name in vms_list.keys() and vms_list[item.name][\u0027state\u0027] \u003d\u003d \u0027running\u0027\"\n      loop: \"{{ _suts }}\"\n\n    - name: Undefine the SUTs\n      become: true\n      community.libvirt.virt:\n        name: \"{{ item.name }}\"\n        command: undefine\n        force: true\n      when: \"item.name in vms_list.keys()\"\n      loop: \"{{ _suts }}\"\n\n    - name: Delete the SUTs disk\n      become: true\n      file:\n        path: \"{{ _libvirt_pool_dir }}/{{ item.name}}.qcow2\"\n        state: absent\n      loop: \"{{ _suts }}\"\n\n    - name: Create VMs for Microshift\n      become: true\n      command: \u003e-\n        virt-install\n        --name\u003d{{ item.name }}\n        --virt-type\u003dkvm\n        --memory\u003d{{ item.memory }}\n        --vcpus\u003d{{ item.vcpu }}\n        --network network\u003ddefault\n        --boot\u003dhd,cdrom\n        --os-variant\u003drhel9-unknown\n        --disk {{ _libvirt_pool_dir }}/{{ item.name}}.qcow2,size\u003d{{ item.disk_size }}\n        --wait\u003d0\n      loop: \"{{ _suts }}\"\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a2a08c9_806846aa",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "the same, block code structure\n```\n- name: Setup clusterconfigs directory and HTTP server\n  block:\n    - name: Create clusterconfigs directory\n      ansible.builtin.file:\n        path: \"{{ _dci_cluster_configs_dir }}\"\n        state: directory\n        mode: \"0755\"\n\n    - name: Setup HTTP server\n      vars:\n        http_dir: \"{{ _http_store }}\"\n        http_data_dir: \"{{ _http_store }}/data\"\n        inventory_validated: true\n      include_role:\n        name: redhatci.ocp.setup_http_store\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "51000f52_5cae7b62",
+        "filename": "plays/microshift/41-post-run-sut.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "it\u0027s probably better to set a mode here to avoid potential problems with permissions\n```\nmode: \u00270644\u0027\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef31bbec_b5739afa",
+        "filename": "plays/microshift/50-test-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "this could be simplified:\n```\n- name: Ensure required variables are defined for MicroShift testing\n  assert:\n    that:\n      - _kubeconfig is defined\n    quiet: true\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25c0198f_7c8c8229",
+        "filename": "plays/microshift/50-test-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "we could rename _cn to ocp_nodes for clarity",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4b2af7c_b70b12ef",
+        "filename": "plays/microshift/50-test-sut.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "do we really need the shell here, could we go with k8s_info instead?",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24d0f91f_329d7a47",
+        "filename": "plays/microshift/group_vars/all",
+        "patchSetId": 67
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "does the \u0027undocumented\u0027 section mean that the readme is still to be updated?",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3716829_2126306c",
+        "filename": "plays/microshift/main.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-08-22T13:37:39Z",
+      "side": 1,
+      "message": "do we need to add \u0027| bool\u0027 here?",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
