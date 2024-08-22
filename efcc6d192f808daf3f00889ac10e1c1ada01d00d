@@ -16,6 +16,24 @@
       "message": "Here we\u0027re talking about enable_gitea, but below we\u0027re talking about enable_disconnected_git, I suppose the docs need to be reviewed",
       "revId": "efcc6d192f808daf3f00889ac10e1c1ada01d00d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c305730e_95537c5b",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-08-22T08:08:22Z",
+      "side": 1,
+      "message": "You\u0027re right, Ramón.\n\nThis comes from Beto\u0027s suggestion not to restrict the scope of the gitea installation to the disconnected environments.\n\nThanks for the catch.",
+      "parentUuid": "7865463e_430e989c",
+      "revId": "efcc6d192f808daf3f00889ac10e1c1ada01d00d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
