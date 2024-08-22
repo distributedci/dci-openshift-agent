@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e358a9ed_39062686",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 67
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-08-22T07:27:18Z",
+      "side": 1,
+      "message": "LGTM but I\u0027d prefer to wait some more opinions to confirm it\u0027s fine to merge. If not having more reviews I\u0027ll give my +2",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
