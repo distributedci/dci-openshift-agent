@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7865463e_430e989c",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-08-22T07:59:21Z",
+      "side": 1,
+      "message": "Here we\u0027re talking about enable_gitea, but below we\u0027re talking about enable_disconnected_git, I suppose the docs need to be reviewed",
+      "revId": "efcc6d192f808daf3f00889ac10e1c1ada01d00d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
