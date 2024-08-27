@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "0dddbdb81c71a5d015c4764342d1462c36948880",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae73ebb4_a77566e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-08-27T06:46:12Z",
+      "side": 1,
+      "message": "I just wanted to ask, because I\u0027m not getting the purpose of the change.\nIf we add this new condition to the definition of the `mirror_list` variable (`dci_pre_ga_catalog exists and has length \u003e 0), which is eventually used for catalog prunning, doesn\u0027t it mean that the prunning is still being applied even though `dci_pre_ga_catalog` variable is provided?",
+      "revId": "0dddbdb81c71a5d015c4764342d1462c36948880",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
