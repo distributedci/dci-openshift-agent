@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06dfe933_eee7eee1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-08-28T08:11:52Z",
+      "side": 1,
+      "message": "LGTM, good to see a green job in the HCP pipeline 💯",
+      "revId": "788683eaae0b9621a8e672f6a8b9a5f6fdb5cea2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
