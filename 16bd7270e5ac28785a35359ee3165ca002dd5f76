@@ -20,6 +20,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "64863756_a7655d25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-08-29T10:29:05Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "16bd7270e5ac28785a35359ee3165ca002dd5f76",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "3fdb099d_70ea59e6",
         "filename": "docs/gitops-ztp.md",
         "patchSetId": 13
