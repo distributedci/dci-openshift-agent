@@ -30,7 +30,6 @@
   when:
     - acm_cluster_type == 'sno'
 
-
 - name: "Deploy a MetalLB and Hypershift cluster via ACM"
   when:
     - acm_cluster_type == 'hypershift'
@@ -68,7 +67,7 @@
           ansible.builtin.set_fact:
             acm_release_image: "{{ release_base_image }}@{{ release_digest.stdout }}"
 
-    - name: "Deploy a Hypershift cluster via ACM"
+    - name: "Deploy a Hosted cluster - kvirt"
       vars:
         ah_pullsecret_file: "{{ dci_pullsecret_file }}"
         ah_disconnected: "{{ dci_disconnected | default(False) | bool }}"
@@ -79,6 +78,30 @@
         apply:
           environment:
             - KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
+
+    - name: "Deploy a Hosted cluster - agent"
+      when:
+        - not (dci_disconnected | default(false) | bool)
+        - acm_cluster_type == 'hosted-agent'
+      block:
+        - name: "Create a Hosted cluster - connected"
+          include_role:
+            name: redhatci.ocp.hostedbm
+          vars:
+            hostedbm_kubeconfig_file: "{{ hostvars.localhost.hub_kubeconfig_path }}"
+            hostedbm_cluster_base_domain: "{{ hostvars.localhost.acm_base_domain }}"
+            hostedbm_cluster_name: "{{ hostvars.localhost.acm_cluster_name }}"
+            hostedbm_storage_class: "{{ hostvars.localhost.acm_storage_class }}"
+            hostedbm_guest_ingress_ip: "{{ hostvars.localhost.acm_guest_ingress_ip }}"
+            hostedbm_node_pool_replicas: "{{ hostvars.localhost.node_pool_replicas }}"
+            hostedbm_release_image: "{{ hostvars.localhost.acm_release_image }}"
+            hostedbm_inventory: "{{ hostvars.localhost.acm_inventory }}"
+
+        - name: Set hosted cluster outputs
+          ansible.builtin.set_fact:
+            acm_kubeconfig_text: "{{ hostedbm_acm_kubeconfig_text }}"
+            acm_kubeconfig_user: "{{ hostedbm_acm_kubeconfig_user }}"
+            acm_kubeconfig_pass: "{{ hostedbm_acm_kubeconfig_pass }}"
 
 - name: Save the kubeconfig ({{ acm_cluster_type }})
   copy:
