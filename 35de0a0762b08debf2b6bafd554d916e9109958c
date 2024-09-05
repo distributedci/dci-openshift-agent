@@ -72,6 +72,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "f4e8dee7_b402d531",
+        "filename": "docs/microshift.md",
+        "patchSetId": 67
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4a75731a_11e2960b",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "cbd7bfb6_9b058407",
         "filename": "docs/microshift.md",
         "patchSetId": 67
@@ -104,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8e0d5ef_51257d96",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0956df7_c2ef388f",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dbf47382_a6111425",
@@ -117,6 +153,24 @@
       "writtenOn": "2024-08-22T13:37:39Z",
       "side": 1,
       "message": "we could probably group in a block or even move the group of tasks into a separate playbook, to simplify the structure\n```\n- name: Ensure SSH key exists and has correct permissions\n  block:\n    - name: Check if id_rsa.pub exists\n      stat:\n        path: \"~/.ssh/id_rsa.pub\"\n      register: ssh_key_check\n\n    - name: Generate SSH key if not present\n      command: ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N \"\"\n      when: not ssh_key_check.stat.exists\n\n    - name: Ensure SSH public key file has correct permissions\n      file:\n        path: \"~/.ssh/id_rsa.pub\"\n        mode: \u00270644\u0027\n        owner: \"{{ ansible_user_id }}\"\n        group: \"{{ ansible_user_id }}\"\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6a5f889_f009931e",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dbf47382_a6111425",
       "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -138,6 +192,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c817db8c_6a3226ec",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4401ae37_5fda85c3",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4a2a08c9_806846aa",
@@ -151,6 +223,24 @@
       "writtenOn": "2024-08-22T13:37:39Z",
       "side": 1,
       "message": "the same, block code structure\n```\n- name: Setup clusterconfigs directory and HTTP server\n  block:\n    - name: Create clusterconfigs directory\n      ansible.builtin.file:\n        path: \"{{ _dci_cluster_configs_dir }}\"\n        state: directory\n        mode: \"0755\"\n\n    - name: Setup HTTP server\n      vars:\n        http_dir: \"{{ _http_store }}\"\n        http_data_dir: \"{{ _http_store }}/data\"\n        inventory_validated: true\n      include_role:\n        name: redhatci.ocp.setup_http_store\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b4bbbb7_9567796a",
+        "filename": "plays/microshift/10-configure-the-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Those 2 tasks are not related together",
+      "parentUuid": "4a2a08c9_806846aa",
       "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -172,6 +262,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b45d5be2_032b534c",
+        "filename": "plays/microshift/41-post-run-sut.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "51000f52_5cae7b62",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ef31bbec_b5739afa",
@@ -185,6 +293,24 @@
       "writtenOn": "2024-08-22T13:37:39Z",
       "side": 1,
       "message": "this could be simplified:\n```\n- name: Ensure required variables are defined for MicroShift testing\n  assert:\n    that:\n      - _kubeconfig is defined\n    quiet: true\n```",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59f515c4_643aaef3",
+        "filename": "plays/microshift/50-test-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ef31bbec_b5739afa",
       "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -206,6 +332,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4c88453_a4a0ddbb",
+        "filename": "plays/microshift/50-test-jumpbox.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25c0198f_7c8c8229",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4b2af7c_b70b12ef",
@@ -219,6 +363,24 @@
       "writtenOn": "2024-08-22T13:37:39Z",
       "side": 1,
       "message": "do we really need the shell here, could we go with k8s_info instead?",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ec28661_18cbf73d",
+        "filename": "plays/microshift/50-test-sut.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "this is not important right now, it\u0027s more for documenting the feature using the kubeconfig",
+      "parentUuid": "c4b2af7c_b70b12ef",
       "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -258,6 +420,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c20e70b_4d7edca1",
+        "filename": "plays/microshift/group_vars/all",
+        "patchSetId": 67
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e6d96423_2de68294",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b3716829_2126306c",
@@ -271,6 +451,24 @@
       "writtenOn": "2024-08-22T13:37:39Z",
       "side": 1,
       "message": "do we need to add \u0027| bool\u0027 here?",
+      "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23b32ea3_e4656a1d",
+        "filename": "plays/microshift/main.yml",
+        "patchSetId": 67
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2024-09-05T14:13:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3716829_2126306c",
       "revId": "35de0a0762b08debf2b6bafd554d916e9109958c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
