@@ -118,6 +118,24 @@
       "message": "LGTM, thanks! By the way, do we want to add this new skippable field to any operator in any of our pipelines? I remember there were issues with unavailable operators in past daily jobs, don\u0027t know if we should add this now to the pipelines or wait for new cases.",
       "revId": "67db0a30c195654f40a9e610e6c05cc5a6737b6c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "feab4387_5d300ef4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-09-05T13:56:00Z",
+      "side": 1,
+      "message": "Thanks! yeah we need to add this parameter to the regular offenders in the pre-ga pipelines. Cheers",
+      "parentUuid": "105aa2bf_d75016b7",
+      "revId": "67db0a30c195654f40a9e610e6c05cc5a6737b6c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
