@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef43448d_c53e85fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 69
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2024-09-05T21:31:03Z",
+      "side": 1,
+      "message": "Thank you for the changes Guillaume, looks good to me now",
+      "revId": "e4253f79e207c0c024f3e5177c7442fe54f5c9d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
