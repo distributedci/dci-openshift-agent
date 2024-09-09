@@ -7,7 +7,7 @@
   vars:
     destination_hosts:
       - bastion
-    pull_secret: "{{ hostvars['localhost']['pull_secret'] }}"
+    pull_secret: "{{ hostvars['jumphost']['pull_secret'] }}"
     extract_dest_path: "{{ dci_cluster_configs_dir }}/extract"
   vars_files:
     - ../../group_vars/all
