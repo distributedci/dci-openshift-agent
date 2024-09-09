@@ -1,6 +1,6 @@
 ---
 - name: Play to populate image_hashes for relevant images
-  hosts: localhost
+  hosts: jumphost
   vars:
     destination_hosts:
       - assisted_installer
@@ -26,7 +26,7 @@
 - name: Deploy OpenShift Assisted Installer On Prem
   hosts: assisted_installer
   vars:
-    pull_secret: "{{ hostvars['localhost']['pull_secret'] }}"
+    pull_secret: "{{ hostvars['jumphost']['pull_secret'] }}"
     _setup_assisted_installer: "{{ setup_assisted_installer | default(True) }}"
   vars_files:
     - ../../group_vars/all
