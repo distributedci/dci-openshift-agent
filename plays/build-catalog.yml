@@ -13,6 +13,14 @@
     msg: "All the required operators were not found"
   when: prune_count.stdout | int != mirror_list | length
 
+- name: Pblanc debug
+  debug:
+    msg: "dci_prune_index: {{ dci_prune_index }}"
+
+- name: Pblanc debug
+  debug:
+    msg: "job_info: {{ job_info }}"
+
 - name: "Create DCI component for pruned catalog"
   vars:
     catalog_version: "{{ dci_prune_index.split(':') | last | regex_replace('_.*', '') }}"
