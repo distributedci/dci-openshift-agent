@@ -118,6 +118,28 @@
         build: "ga"
       when: build == "candidate"
 
+    - name: Create jumphost host if it doesn't exist
+      add_host:
+        name: jumphost
+        groups: jumphost
+        hostname: localhost
+      when:
+        - "'jumphost' not in group_names"
+
+    - name: Set fact also in localhost host scope
+      set_fact:
+        version: "{{ version }}"
+        version_pull_url: "{{ version_pull_url }}"
+        job_id: "{{ job_id }}"
+        job_info: "{{ job_info }}"
+        dci_client_id: "{{ dci_client_id }}"
+        dci_api_secret: "{{ dci_api_secret }}"
+        dci_cs_url: "{{ dci_cs_url }}"
+        dci_ui_url: "{{ dci_ui_url }}"
+        build: "{{ build }}"
+      delegate_to: jumphost
+      delegate_facts: true
+ 
     - name: Pre-run
       dci_job:
         id: "{{ job_id }}"
@@ -160,7 +182,7 @@
 
 # Step 1a : pre run
 - name: 'Launch pre-run'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - pre-run
   environment:
@@ -168,6 +190,7 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
+
     - name: Pre-run
       block:
         - name: Configure jumpbox
@@ -195,7 +218,7 @@
 
       rescue: &teardown_error
         - name: Run the teardown error handler
-          delegate_to: localhost
+          delegate_to: jumphost
           ignore_unreachable: true
           block:
             - name: Error
@@ -207,7 +230,6 @@
 
             - name: Teardown hooks
               when: dci_teardown_on_failure|bool
-              delegate_to: localhost
               ignore_unreachable: true
               ignore_errors: true
               block:
@@ -226,7 +248,7 @@
 
 # Step 1b : hook pre run
 - name: 'Launch hook pre-run'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - pre-run
     - hook-pre-run
@@ -336,7 +358,7 @@
 
             - name: Teardown Hooks
               when: dci_teardown_on_failure|bool
-              delegate_to: localhost
+              delegate_to: jumphost
               ignore_unreachable: true
               ignore_errors: true
               block:
@@ -355,7 +377,7 @@
 
 # Step 3a-1 : installing
 - name: 'Launch ACM install'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - installing
@@ -400,7 +422,7 @@
 
 # Step 3a-1 : installing
 - name: 'Launch after install'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - installing
@@ -421,7 +443,7 @@
 
 # Step 3a-2 : deploy operators
 - name: 'Deploy operators to OCP cluster'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - operator-deployment
@@ -447,7 +469,7 @@
 
 # Step 3a-3 : hook installing
 - name: 'Launch hook install'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - hook-installing
@@ -473,7 +495,7 @@
 
 # Step 3b-1 : upgrading
 - name: 'Launch upgrade'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - upgrading
@@ -495,7 +517,7 @@
 
 # Step 3b-2 : hook upgrading
 - name: 'Launch hook upgrade'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - hook-upgrading
@@ -520,7 +542,7 @@
 
 # Step 4 : Red Hat testing
 - name: 'Launch Red Hat tests'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - testing
@@ -546,7 +568,7 @@
 
 # Step 5 : partner testing
 - name: 'Launch partner tests'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - testing
@@ -579,11 +601,12 @@
       dci_job:
         id: "{{ job_id }}"
         status: "post-run"
+      delegate_to: localhost
       tags: [dci]
 
 # Step 6 : post run
 - name: Launch post run
-  hosts: localhost
+  hosts: jumphost
   tags:
     - post-run
     - dci
@@ -610,11 +633,12 @@
       dci_job:
         id: "{{ job_id }}"
         status: "success"
+      delegate_to: localhost
       tags: [dci]
 
 # Step 7 : state "success"
 - name: 'Success'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - success
   environment:
