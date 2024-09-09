@@ -1,6 +1,6 @@
 ---
 - name: Assisted Pre-run
-  hosts: localhost
+  hosts: jumphost
   become: false
   gather_facts: false
   vars_files:
@@ -75,7 +75,7 @@
             setype: "container_file_t"
             mode: "0775"
           when:
-            - hostvars.localhost.provision_cache_store is undefined
+            - hostvars.jumphost.provision_cache_store is undefined
 
         - name: Mirror release
           include_role:
@@ -83,14 +83,14 @@
           vars:
             mor_version: "{{ version }}"
             mor_pull_url: "{{ version_pull_url }}"
-            mor_cache_dir: "{{ hostvars.localhost.provision_cache_store | default(ai_releases_dir) }}"
+            mor_cache_dir: "{{ hostvars.jumphost.provision_cache_store | default(ai_releases_dir) }}"
             mor_registry_url: "{{ dci_local_registry }}"
             mor_registry_path: >-
               {{ hostvars[groups['registry_host'][0]].local_repo |
               default('ocp-'+ version.split('.')[:2] |
               join('.') +'/'+ version, true) }}
             mor_auths_file: "{{ dci_pullsecret_file }}"
-            mor_force: "{{ (dci_force_mirroring | default(false)) or (hostvars.localhost.build == 'candidate') | bool }}"
+            mor_force: "{{ (dci_force_mirroring | default(false)) or (hostvars.jumphost.build == 'candidate') | bool }}"
             mor_install_type: "{{ install_type }}"
             mor_mirror_disk_images: "{{ dci_disconnected | default(False) | bool }}"
             mor_mirror_container_images: "{{ dci_disconnected | default(False) | bool }}"
@@ -102,27 +102,27 @@
           delegate_to: "{{ item }}"
           delegate_facts: true
           set_fact:
-            openshift_full_version: "{{ hostvars.localhost.version }}"
-            openshift_version: "{{ hostvars.localhost.version.split('.')[:2] | join('.') }}"
+            openshift_full_version: "{{ hostvars.jumphost.version }}"
+            openshift_version: "{{ hostvars.jumphost.version.split('.')[:2] | join('.') }}"
             supported_ocp_versions:
-              - "{{ hostvars.localhost.version }}"
+              - "{{ hostvars.jumphost.version }}"
             os_images:
-              - openshift_version: "{{ hostvars.localhost.version.split('.')[:2] | join('.') }}"
+              - openshift_version: "{{ hostvars.jumphost.version.split('.')[:2] | join('.') }}"
                 cpu_architecture: x86_64
-                url: "{{ hostvars.localhost.ocp_release_data.rhcos_images.metal_iso_location }}"
-                rootfs_url: "{{ hostvars.localhost.ocp_release_data.rhcos_images.metal_pxe_rootfs_location }}"
-                version: "{{ hostvars.localhost.ocp_release_data.rhcos_version }}"
+                url: "{{ hostvars.jumphost.ocp_release_data.rhcos_images.metal_iso_location }}"
+                rootfs_url: "{{ hostvars.jumphost.ocp_release_data.rhcos_images.metal_pxe_rootfs_location }}"
+                version: "{{ hostvars.jumphost.ocp_release_data.rhcos_version }}"
             release_images:
-              - openshift_version: "{{ hostvars.localhost.version.split('.')[:2] | join('.') }}"
+              - openshift_version: "{{ hostvars.jumphost.version.split('.')[:2] | join('.') }}"
                 cpu_architecture: x86_64
-                url: "{{ hostvars.localhost.ocp_release_data.container_image }}"
-                version: "{{ hostvars.localhost.version }}"
-                hash: "{{ hostvars.localhost.ocp_release_data.container_image.split('@')[1] }}"
+                url: "{{ hostvars.jumphost.ocp_release_data.container_image }}"
+                version: "{{ hostvars.jumphost.version }}"
+                hash: "{{ hostvars.jumphost.ocp_release_data.container_image.split('@')[1] }}"
           loop:
             - assisted_installer
             - registry_host
             - bastion
-            - localhost
+            - jumphost
 
         - name: "Prereq facts check"
           vars:
@@ -149,13 +149,13 @@
             name: redhatci.ocp.populate_mirror_registry
             tasks_from: prerequisites.yml
           vars:
-            downloads_path: "{{ hostvars.localhost.provision_cache_store | default(ai_releases_dir) }}"
+            downloads_path: "{{ hostvars.jumphost.provision_cache_store | default(ai_releases_dir) }}"
             release_image_remote: "{{ ocp_release_data['container_image'].split('@')[0] }}"
             config_file_path: "{{ dci_cluster_configs_dir }}"
             repo_root_path: "{{ dci_cluster_configs_dir }}"
       rescue: &teardown_error
         - name: Run the teardown error handler
-          delegate_to: localhost
+          delegate_to: jumphost
           ignore_unreachable: true
           block:
             - name: Error
@@ -167,7 +167,7 @@
 
             - name: Teardown hooks
               when: dci_teardown_on_failure|bool
-              delegate_to: localhost
+              delegate_to: jumphost
               ignore_unreachable: true
               ignore_errors: true
               block:
@@ -342,7 +342,7 @@
       rescue: *teardown_error
 
 - name: Play to populate image_hashes for relevant images
-  hosts: localhost
+  hosts: jumphost
   gather_facts: "{{ (setup_registry_service | default(True)) | bool }}"
   vars:
     destination_hosts:
@@ -373,7 +373,7 @@
     - ansible.posix
   gather_facts: "{{ (setup_registry_service | default(True)) | bool }}"
   vars:
-    downloads_path: "{{ hostvars.localhost.provision_cache_store | default(ai_releases_dir) }}"
+    downloads_path: "{{ hostvars.jumphost.provision_cache_store | default(ai_releases_dir) }}"
     config_file_path: "{{ dci_cluster_configs_dir }}"
     SETUP_REGISTRY_SERVICE: "{{ setup_registry_service | default(True)}}" # noqa var-naming[pattern]
   vars_files:
@@ -390,8 +390,8 @@
 
         - name: Set pull secret facts on the registry host
           set_fact:
-            local_pull_secret_path: "{{ hostvars.localhost.local_pull_secret_path }}"
-            pull_secret: "{{ hostvars.localhost.pull_secret }}"
+            local_pull_secret_path: "{{ hostvars.jumphost.local_pull_secret_path }}"
+            pull_secret: "{{ hostvars.jumphost.pull_secret }}"
 
         - name: Setup mirror registry
           vars:
