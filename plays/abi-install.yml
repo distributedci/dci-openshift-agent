@@ -50,7 +50,7 @@
 
 - name: "Prereq facts check"
   vars:
-    pull_secret: "{{ dci_pullsecret }}"
+    pull_secret: "{{ hostvars.jumphost.dci_pullsecret }}"
     ssh_public_check: "{{ not (generate_ssh_keys | default(true)) }}"
     mirror_certificate_check: "{{ (use_local_mirror_registry | default(false)) and
                                not (setup_registry_service | default(true)) | bool }}"
