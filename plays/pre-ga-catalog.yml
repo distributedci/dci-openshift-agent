@@ -39,6 +39,8 @@
 - name: Append the Pre-GA catalog to the list of custom catalogs
   ansible.builtin.set_fact:
     custom_catalogs: "{{ custom_catalogs | default([]) + [mc_catalog_digest] }}"
+  when:
+    - dci_main == 'install'
 
 - name: Create component for Pre-GA index
   dci_component:

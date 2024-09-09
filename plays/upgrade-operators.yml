@@ -45,12 +45,11 @@
     loop_var: sub
     label: "{{ sub.subscriptionName }}"
 
-- name: "Update disconnected catalogSources"
+- name: "Update disconnected catalogSource"
   include_role:
     name: redhatci.ocp.catalog_source
   vars:
     cs_name: "{{ opm_catalog_source_name }}"
-    cs_namespace: "{{ opm_catalog_source_namespace }}"
     cs_image: "{{ dci_prune_index }}"
   when:
     - dci_disconnected | default(false) | bool
@@ -58,6 +57,30 @@
     - mirror_list is defined
     - mirror_list | length
     - dci_prune_index is defined
+
+- name: "Override redhat-catalog source - connected"
+  when:
+    - dci_pre_ga_catalog | default('') | length
+    - not (dci_disconnected | default(false) | bool)
+  block:
+    - name: "Disable the managed redhat-operator source"
+      community.kubernetes.k8s:
+        definition:
+          apiVersion: config.openshift.io/v1
+          kind: OperatorHub
+          metadata:
+            name: cluster
+          spec:
+            sources:
+              - name: redhat-operators
+                disabled: true
+
+    - name: "Create a custom redhat-operator catalog"
+      include_role:
+        name: redhatci.ocp.catalog_source
+      vars:
+        cs_name: "{{ opm_catalog_source_name }}"
+        cs_image: "{{ dci_pre_ga_catalog }}"
 
 - name: "Upgrade-operators : Upgrade installed operators"
   include_tasks: upgrade-csv.yml

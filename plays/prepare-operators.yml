@@ -1,11 +1,18 @@
 ---
-- name: "Set catalog facts for disconnected"
+- name: "Set catalog path fact for mirrored index"
   set_fact:
     opm_local_registry_path: "/pruned/redhat-operator-index"
-    opm_catalog_source_name: "{{ dci_catalog_source_name | default('mirrored-redhat-operators') }}"
-    opm_catalog_source_namespace: "openshift-marketplace"
   when:
     - dci_disconnected | default(false) | bool
+
+- name: "Set catalog source name"
+  set_fact:
+    opm_catalog_source_name: |-
+      {%- if dci_disconnected | default(false) | bool -%}
+      mirrored-redhat-operators
+      {%- else -%}
+      redhat-operators
+      {%- endif -%}
 
 - name: "Get cluster version"
   community.kubernetes.k8s_info:
