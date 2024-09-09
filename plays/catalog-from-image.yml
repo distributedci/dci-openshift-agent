@@ -71,7 +71,6 @@
         name: redhatci.ocp.catalog_source
       vars:
         cs_name: "{{ opm_catalog_source_name }}"
-        cs_namespace: "{{ opm_catalog_source_namespace }}"
         cs_image: "{{ dci_prune_index }}"
         cs_publisher: "Red Hat Operators"
       when:
