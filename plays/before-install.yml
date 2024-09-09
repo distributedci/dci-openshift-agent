@@ -8,13 +8,13 @@
   when:
     - (extcidrnet is not defined or extcidrnet|length < 1)
 
-- name: "installer : Get version and build from localhost vars"
+- name: "installer : Get version and build from jumphost vars"
   set_fact:
     version: "{{ hostvars.localhost.version }}"
     build: "{{ hostvars.localhost.build }}"
 
-- name: "installer : Get pullsecret from localhost vars"
+- name: "installer : Get pullsecret from jumphost vars"
   set_fact:
-    pullsecret: "{{ hostvars.localhost.dci_pullsecret | to_json }}"
-  no_log: true
+    pullsecret: "{{ hostvars.jumphost.dci_pullsecret | to_json }}"
+  #no_log: true
 ...
