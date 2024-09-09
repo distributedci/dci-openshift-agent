@@ -1,6 +1,6 @@
 ---
 - name: Run the teardown error handler
-  delegate_to: localhost
+  delegate_to: jumphost
   ignore_unreachable: true
   block:
     - name: Error
@@ -12,7 +12,7 @@
 
     - name: Teardown hooks
       when: dci_teardown_on_failure|bool
-      delegate_to: localhost
+      delegate_to: jumphost
       ignore_unreachable: true
       ignore_errors: true
       block:
