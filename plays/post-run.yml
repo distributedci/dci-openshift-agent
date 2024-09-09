@@ -17,6 +17,7 @@
     src: "{{ outputs[item.key] }}"
     dest: "{{ item.value }}"
     mode: "0644"
+    remote_src: yes
   loop: "{{ job_info.outputs | dict2items }}"
   when:
     - job_info.outputs is defined
