@@ -101,8 +101,8 @@
       {%- else -%}
         icsp
       {%- endif -%}
-    mor_version: "{{ version }}"
-    mor_pull_url: "{{ version_pull_url }}"
+    mor_version: "{{ hostvars.localhost.version }}"
+    mor_pull_url: "{{ hostvars.localhost.version_pull_url }}"
     mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
     mor_webserver_url: "{{ webserver_url | default(None) }}"
     mor_registry_url: "{{ dci_local_registry }}"
