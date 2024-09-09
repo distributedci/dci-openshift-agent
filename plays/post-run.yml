@@ -13,11 +13,26 @@
 # - `outputs` local variable contains the entry defined in `outputs` pipeline field
 # This is to avoid making a job to fail because of a wrong outputs configuration.
 - name: Copy outputs if defined
-  copy:
-    src: "{{ outputs[item.key] }}"
-    dest: "{{ item.value }}"
-    mode: "0644"
-  loop: "{{ job_info.outputs | dict2items }}"
+  block:
+    - name: Create outputs directory
+      file:
+        path: "{{ item.value | dirname }}"
+        state: directory
+        recurse: yes
+      loop: "{{ job_info.outputs | dict2items }}"
+    - name: Copy outputs in Jumphost
+      copy:
+        src: "{{ outputs[item.key] }}"
+        dest: "{{ item.value }}"
+        mode: "0644"
+      loop: "{{ job_info.outputs | dict2items }}"
+    - name: Copy outputs in localhost
+      copy:
+        src: "{{ outputs[item.key] }}"
+        dest: "{{ item.value }}"
+        mode: "0644"
+      loop: "{{ job_info.outputs | dict2items }}"
+      delegate_to: localhost
   when:
     - job_info.outputs is defined
     - job_info.outputs != None
@@ -25,6 +40,7 @@
 
 - name: Get the differences from the previous DCI job
   shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
+  delegate_to: localhost
   ignore_errors: true
 
 ...
