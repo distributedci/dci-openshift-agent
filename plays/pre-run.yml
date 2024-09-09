@@ -78,6 +78,12 @@
     dci_pullsecret: "{{ mrc_auth_data }}"
   no_log: true
 
+- name: "Copy dci_pullsecret_file localy"
+  fetch:
+    src: "{{ dci_pullsecret_file }}"
+    dest: "/tmp"
+    flat: yes
+
 - name: "Create releases dir in home directory if needed"
   file:
     path: "{{ (ansible_env.HOME, 'releases') | join('/') }}"
@@ -92,17 +98,21 @@
     name: redhatci.ocp.mirror_ocp_release
   vars:
     is_type: >-
-      {%- if dci_main == 'upgrade' and version is version('4.15', '<') -%}
+      {%- if ( dci_main == 'upgrade' and 
+          hostvars.localhost.version is version('4.15', '<') ) -%}
         icsp
-      {%- elif dci_main == 'upgrade' and version is version('4.15', '>=') -%}
+      {%- elif ( dci_main == 'upgrade' and 
+      hostvars.localhost.version is version('4.15', '>=') ) -%}
         idms
-      {%- elif dci_main == 'install' and version is version('4.14', '>=') -%}
+      {%- elif ( dci_main == 'install' and 
+      hostvars.localhost.version is version('4.14', '>=') ) -%}
         idms
       {%- else -%}
         icsp
       {%- endif -%}
-    mor_version: "{{ version }}"
-    mor_pull_url: "{{ version_pull_url }}"
+    build: "{{ hostvars.localhost.build }}"
+    mor_version: "{{ hostvars.localhost.version }}"
+    mor_pull_url: "{{ hostvars.localhost.version_pull_url }}"
     mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
     mor_webserver_url: "{{ webserver_url | default(None) }}"
     mor_registry_url: "{{ dci_local_registry }}"
@@ -217,8 +227,12 @@
     ic_rpms: "{{ (dci_rpms_to_components + mandatory_rpms)|flatten }}"
     ic_gits: "{{ dci_gits_to_components|flatten }}"
     ic_dev_gits: "{{ dev_gits_to_components|flatten }}"
+    job_info: "{{ hostvars.localhost.job_info }}"
+    job_id: "{{ hostvars.localhost.job_id }}"
   include_role:
     name: redhatci.ocp.include_components
+    apply:
+      delegate_to: localhost
 
 - name: Append mirrors to trust bundle
   when:
