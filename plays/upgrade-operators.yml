@@ -59,6 +59,16 @@
     - mirror_list | length
     - dci_prune_index is defined
 
+- name: "Update catalogSources to pre-ga index"
+  include_role:
+    name: redhatci.ocp.catalog_source
+  vars:
+    cs_name: "{{ opm_catalog_source_name | default('redhat-operators') }}"
+    cs_namespace: "{{ opm_catalog_source_namespace | default('openshift-marketplace') }}"
+    cs_image: "{{ dci_pre_ga_catalog }}"
+  when:
+    - dci_pre_ga_catalog | default('') | length
+
 - name: "Upgrade-operators : Upgrade installed operators"
   include_tasks: upgrade-csv.yml
   when:
