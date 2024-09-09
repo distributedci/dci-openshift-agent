@@ -142,7 +142,7 @@
 
 # Step 1a : pre run
 - name: 'Launch pre-run'
-  hosts: localhost
+  hosts: jumpbox
   tags:
     - pre-run
   environment:
@@ -177,7 +177,7 @@
 
       rescue: &teardown_error
         - name: Run the teardown error handler
-          delegate_to: localhost
+          delegate_to: jumphost
           ignore_unreachable: true
           block:
             - name: Error
@@ -189,7 +189,6 @@
 
             - name: Teardown hooks
               when: dci_teardown_on_failure|bool
-              delegate_to: localhost
               ignore_unreachable: true
               ignore_errors: true
               block:
@@ -213,7 +212,7 @@
 
 # Step 1b : hook pre run
 - name: 'Launch hook pre-run'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - pre-run
     - hook-pre-run
@@ -323,7 +322,7 @@
 
             - name: Teardown Hooks
               when: dci_teardown_on_failure|bool
-              delegate_to: localhost
+              delegate_to: jumphost
               ignore_unreachable: true
               ignore_errors: true
               block:
@@ -342,7 +341,7 @@
 
 # Step 3a-1 : installing
 - name: 'Launch ACM install'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - installing
@@ -375,7 +374,7 @@
 
 # Step 3a-1 : installing
 - name: 'Launch after install'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - installing
@@ -396,7 +395,7 @@
 
 # Step 3a-2 : deploy operators
 - name: 'Deploy operators to OCP cluster'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - operator-deployment
@@ -422,7 +421,7 @@
 
 # Step 3a-3 : hook installing
 - name: 'Launch hook install'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - hook-installing
@@ -448,7 +447,7 @@
 
 # Step 3b-1 : upgrading
 - name: 'Launch upgrade'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - upgrading
@@ -470,7 +469,7 @@
 
 # Step 3b-2 : hook upgrading
 - name: 'Launch hook upgrade'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - hook-upgrading
@@ -495,7 +494,7 @@
 
 # Step 4 : Red Hat testing
 - name: 'Launch Red Hat tests'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - testing
@@ -521,7 +520,7 @@
 
 # Step 5 : partner testing
 - name: 'Launch partner tests'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - testing
@@ -558,7 +557,7 @@
 
 # Step 6 : post run
 - name: Launch post run
-  hosts: localhost
+  hosts: jumphost
   tags:
     - post-run
     - dci
@@ -589,7 +588,7 @@
 
 # Step 7 : state "success"
 - name: 'Success'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - success
   environment:

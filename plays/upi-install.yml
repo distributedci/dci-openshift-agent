@@ -8,6 +8,6 @@
     import_role:
       name: redhatci.ocp.upi_installer
     vars:
-      pull_url: "{{ hostvars.localhost.version_pull_url }}"
-      upi_pullsecret: "{{ hostvars.localhost.pullsecret | to_json }}"
+      pull_url: "{{ hostvars.jumphost.version_pull_url }}"
+      upi_pullsecret: "{{ hostvars.jumphost.pullsecret | to_json }}"
 ...

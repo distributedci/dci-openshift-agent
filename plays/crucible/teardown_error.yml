@@ -1,18 +1,18 @@
 ---
 - name: Run the teardown error handler
-  delegate_to: localhost
+  delegate_to: jumphost
   ignore_unreachable: true
   block:
     - name: Error
       dci_job:
-        id: "{{ hostvars.localhost.job_id }}"
+        id: "{{ hostvars.jumphost.job_id }}"
         status: "error"
-      delegate_to: localhost
+      delegate_to: jumphost
       tags: [dci]
 
     - name: Teardown hooks
       when: dci_teardown_on_failure|bool
-      delegate_to: localhost
+      delegate_to: jumphost
       ignore_unreachable: true
       ignore_errors: true
       block:
