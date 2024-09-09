@@ -17,6 +17,18 @@
     src: "{{ outputs[item.key] }}"
     dest: "{{ item.value }}"
     mode: "0644"
+  delegate_to: localhost
+  loop: "{{ job_info.outputs | dict2items }}"
+  when:
+    - job_info.outputs is defined
+    - job_info.outputs != None
+    - outputs[item.key] is defined
+
+- name: Copy outputs if defined in jumphost
+  copy:
+    src: "{{ item.value }}"
+    dest: "{{ item.value }}"
+    mode: "0644"
   loop: "{{ job_info.outputs | dict2items }}"
   when:
     - job_info.outputs is defined
@@ -25,6 +37,7 @@
 
 - name: Get the differences from the previous DCI job
   shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
+  delegate_to: localhost
   ignore_errors: true
 
 ...
