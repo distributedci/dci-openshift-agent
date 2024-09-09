@@ -17,6 +17,7 @@
     src: "{{ outputs[item.key] }}"
     dest: "{{ item.value }}"
     mode: "0644"
+  delegate_to: localhost
   loop: "{{ job_info.outputs | dict2items }}"
   when:
     - job_info.outputs is defined
@@ -25,6 +26,7 @@
 
 - name: Get the differences from the previous DCI job
   shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
+  delagate_to: localhost
   ignore_errors: true
 
 ...
