@@ -3,7 +3,7 @@
   hosts: bastion
   gather_facts: false
   vars:
-    pull_secret: "{{ hostvars['localhost']['pull_secret'] }}"
+    pull_secret: "{{ hostvars['jumphost']['pull_secret'] }}"
   vars_files:
     - ../../group_vars/all
   tasks:
