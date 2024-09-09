@@ -1,6 +1,6 @@
 ---
 - name: Validate we have all the pieces to run in disconnected mode
-  assert:
+  ansible.builtin.assert:
     that:
       - webserver_url is defined
       - groups['registry_host'] is defined
@@ -12,7 +12,7 @@
     - (install_type | default('ipi')) not in ['abi']
 
 - name: Validate we have all the pieces to run ABI in disconnected mode
-  assert:
+  ansible.builtin.assert:
     that:
       - boot_iso_url is defined
       - webserver_url is defined
@@ -23,7 +23,7 @@
     - (install_type | default('ipi')) in ['abi']
 
 - name: "Mirror operators from directory"
-  include_role:
+  ansible.builtin.include_role:
     name: redhatci.ocp.mirror_from_directory
     tasks_from: validation
   vars:
@@ -34,7 +34,7 @@
     - operator_catalog_dir |length
 
 - name: "Assert that operator_catalog_dir exists and has tar files"
-  find:
+  ansible.builtin.find:
     path: "{{ operator_catalog_dir }}"
     recurse: true
     patterns: "*.tar"
@@ -46,7 +46,7 @@
     - operator_catalog_dir | length
 
 - name: "Validate NFS provisioner variables"
-  assert:
+  ansible.builtin.assert:
     that:
       - nfs_server is defined
       - nfs_server | length > 0
@@ -62,19 +62,19 @@
     - enable_logs_stack | bool
   block:
     - name: "Check logs_settings file"
-      stat:
+      ansible.builtin.stat:
         path: "{{ logs_settings }}"
       register: file_stat
 
     - name: "Load logs_settings from vars file"
-      include_vars:
+      ansible.builtin.include_vars:
         file: "{{ logs_settings }}"
       when:
         - file_stat is defined
         - file_stat.stat.exists
 
 - name: "Read Disconnected auths"
-  include_vars:
+  ansible.builtin.include_vars:
     file: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_auths_file }}"
     name: disconnected_auths
   no_log: true
@@ -82,16 +82,28 @@
     - dci_disconnected | default(false) | bool
 
 - name: "Process pullsecrets"
-  include_tasks: pullsecrets.yml
+  ansible.builtin.include_tasks: pullsecrets.yml
 
 - name: "Set dci_pullsecret_file"
-  set_fact:
+  ansible.builtin.set_fact:
     dci_pullsecret_file: "{{ mrc_auth_file }}"
     dci_pullsecret: "{{ mrc_auth_data }}"
   no_log: true
 
+- name: "Copy dci_pullsecret_file localy"
+  ansible.builtin.fetch:
+    src: "{{ dci_pullsecret_file }}"
+    dest: "/tmp/"
+    flat: true
+
+- name: Set dci_pullsecret in localhost scope
+  ansible.builtin.set_fact:
+    dci_pullsecret: "{{ dci_pullsecret }}"
+  delegate_to: localhost
+  delegate_facts: true
+
 - name: "Create releases dir in home directory if needed"
-  file:
+  ansible.builtin.file:
     path: "{{ (ansible_env.HOME, 'releases') | join('/') }}"
     state: directory
     setype: "container_file_t"
@@ -100,21 +112,25 @@
     - provision_cache_store is undefined
 
 - name: Mirror release
-  include_role:
+  ansible.builtin.include_role:
     name: redhatci.ocp.mirror_ocp_release
   vars:
     is_type: >-
-      {%- if dci_main == 'upgrade' and version is version('4.15', '<') -%}
+      {%- if ( dci_main == 'upgrade' and 
+          hostvars.localhost.version is version('4.15', '<') ) -%}
         icsp
-      {%- elif dci_main == 'upgrade' and version is version('4.15', '>=') -%}
+      {%- elif ( dci_main == 'upgrade' and 
+      hostvars.localhost.version is version('4.15', '>=') ) -%}
         idms
-      {%- elif dci_main == 'install' and version is version('4.14', '>=') -%}
+      {%- elif ( dci_main == 'install' and 
+      hostvars.localhost.version is version('4.14', '>=') ) -%}
         idms
       {%- else -%}
         icsp
       {%- endif -%}
-    mor_version: "{{ version }}"
-    mor_pull_url: "{{ version_pull_url }}"
+    build: "{{ hostvars.localhost.build }}"
+    mor_version: "{{ hostvars.localhost.version }}"
+    mor_pull_url: "{{ hostvars.localhost.version_pull_url }}"
     mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
     mor_webserver_url: "{{ webserver_url | default(None) }}"
     mor_registry_url: "{{ dci_local_registry }}"
@@ -139,7 +155,7 @@
     - upgrade_eus | default(false) | bool
   block:
     - name: "Get intermediate release from Graph"
-      uri:
+      ansible.builtin.uri:
         url: https://api.openshift.com/api/upgrades_info/v1/graph?channel=eus-{{ version_core }}&arch=amd64
       register: version_inter_graph
 
@@ -147,14 +163,14 @@
       vars:
         graph_versions: "{{ version_inter_graph.json | json_query('nodes[*].version') }}"
         filter_inter: "^{{ major_inter }}"
-      set_fact:
+      ansible.builtin.set_fact:
         version_inter: "{{ graph_versions | select('match', filter_inter) | list | version_sort | last }}"
       when:
         - version_inter is undefined
         - version_inter_graph.json["nodes"] | length
 
     - name: "Fail when no intermediate version is provided in the graph"
-      fail:
+      ansible.builtin.fail:
         msg: "No intermediate version found, try defining one with: version_inter={{ major_inter }}.X"
       when:
         - version_inter is undefined
@@ -181,17 +197,17 @@
           register: inter_component
 
     - name: "Get image for intermediate version from DCI"
-      set_fact:
+      ansible.builtin.set_fact:
         image_inter: "{{ inter_component.components[0].data.pull_url }}"
       when: inter_component.components | length
 
     - name: "Fail when the intermediate version is not found in DCI"
-      fail:
+      ansible.builtin.fail:
         message: "Unable to find {{ version_inter }} in DCI"
       when: not inter_component.components | length
 
     - name: "Mirror intermediate OCP release"
-      include_role:
+      ansible.builtin.include_role:
         name: redhatci.ocp.mirror_ocp_release
       vars:
         mor_version: "{{ version_inter }}"
@@ -229,21 +245,25 @@
     ic_rpms: "{{ (dci_rpms_to_components + mandatory_rpms)|flatten }}"
     ic_gits: "{{ dci_gits_to_components|flatten }}"
     ic_dev_gits: "{{ dev_gits_to_components|flatten }}"
-  include_role:
+    job_info: "{{ hostvars.localhost.job_info }}"
+    job_id: "{{ hostvars.localhost.job_id }}"
+  ansible.builtin.include_role:
     name: redhatci.ocp.include_components
+    apply:
+      delegate_to: localhost
 
 - name: Append mirrors to trust bundle
   when:
     - dci_disconnected | default(false) | bool
   block:
     - name: Copy initial trust bundle
-      copy:
+      ansible.builtin.copy:
         src: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_mirrors_file }}"
         dest: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
         mode: "0644"
 
     - name: Use imageDigestSources in OCP 4.14+
-      replace:
+      ansible.builtin.replace:
         path: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
         regexp: "^imageContentSources:$"
         replace: "imageDigestSources:"
@@ -256,7 +276,7 @@
           - "{{ provision_cache_store }}/{{ version }}/imagecontentsourcepolicy.yaml"
         img_src_found: "{{ lookup('first_found', img_src_paths) }}"
         img_src_content: "{{ lookup('file', img_src_found) | from_yaml }}"
-      copy:
+      ansible.builtin.copy:
         dest: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
         mode: "0644"
         content: |
@@ -264,7 +284,7 @@
           {{ img_src_content | json_query('spec.*') | first | to_yaml }}
 
 - name: "Mirror must gather images"
-  include_role:
+  ansible.builtin.include_role:
     name: redhatci.ocp.mirror_images
   vars:
     mi_images: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
@@ -275,7 +295,7 @@
     (dci_local_mirror | default(false) | bool)
 
 - name: Mirror support-tools image
-  include_role:
+  ansible.builtin.include_role:
     name: redhatci.ocp.mirror_images
   vars:
     mi_images:
@@ -287,7 +307,7 @@
     (dci_local_mirror | default(false) | bool)
 
 - name: Mirror ubi9 image
-  include_role:
+  ansible.builtin.include_role:
     name: redhatci.ocp.mirror_images
   vars:
     mi_images:
@@ -302,7 +322,7 @@
 
 - name: Get provisioner SSH identity
   delegate_to: "{{ groups['provisioner'][0] }}"
-  fetch:
+  ansible.builtin.fetch:
     src: "~{{ hostvars[groups['provisioner'][0]].ansible_user }}/.ssh/id_rsa"
     dest: "~/.ssh/{{ cluster }}-provisioner_rsa"
     flat: true
@@ -314,7 +334,7 @@
 - name: Erase bootloader to prevent old OS to boot
   delegate_to: "{{ item }}"
   become: true
-  shell: |
+  ansible.builtin.shell: |
     if grep 'Red Hat Enterprise Linux CoreOS' /etc/os-release; then
       for disk in /dev/sd?; do
         dd if=/dev/zero of=$disk bs=512 count=1
@@ -328,7 +348,7 @@
   ignore_errors: true
 
 - name: Empty Console log files if present
-  command: dd if=/dev/null of="{{ item }}"
+  ansible.builtin.command: dd if=/dev/null of="{{ item }}"
   with_fileglob:
     - "/var/consoles/{{ cluster }}/{{ cluster }}*"
   when:
@@ -336,7 +356,7 @@
   become: true
 
 - name: "Storage service test (during upgrade only)"
-  include_role:
+  ansible.builtin.include_role:
     name: redhatci.ocp.storage_tester
     apply:
       environment:
