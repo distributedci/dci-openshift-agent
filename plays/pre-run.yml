@@ -92,17 +92,21 @@
     name: redhatci.ocp.mirror_ocp_release
   vars:
     is_type: >-
-      {%- if dci_main == 'upgrade' and version is version('4.15', '<') -%}
+      {%- if ( dci_main == 'upgrade' and 
+          hostvars.localhost.version is version('4.15', '<') ) -%}
         icsp
-      {%- elif dci_main == 'upgrade' and version is version('4.15', '>=') -%}
+      {%- elif ( dci_main == 'upgrade' and 
+      hostvars.localhost.version is version('4.15', '>=') ) -%}
         idms
-      {%- elif dci_main == 'install' and version is version('4.14', '>=') -%}
+      {%- elif ( dci_main == 'install' and 
+      hostvars.localhost.version is version('4.14', '>=') ) -%}
         idms
       {%- else -%}
         icsp
       {%- endif -%}
-    mor_version: "{{ version }}"
-    mor_pull_url: "{{ version_pull_url }}"
+    build: "{{ hostvars.localhost.build }}"
+    mor_version: "{{ hostvars.localhost.version }}"
+    mor_pull_url: "{{ hostvars.localhost.version_pull_url }}"
     mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
     mor_webserver_url: "{{ webserver_url | default(None) }}"
     mor_registry_url: "{{ dci_local_registry }}"
