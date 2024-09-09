@@ -48,15 +48,15 @@
 
     - name: "Print webserver_url"
       debug:
-        msg: "{{ hostvars.localhost.webserver_url }}"
+        msg: "{{ hostvars.jumphost.webserver_url }}"
       when:
-        - hostvars.localhost.webserver_url is defined
+        - hostvars.jumphost.webserver_url is defined
 
     - name: "Validate webserver_url variable is defined"
       assert:
         that:
-          - hostvars.localhost.webserver_url | string
-          - (hostvars.localhost.webserver_url | urlsplit('scheme')) in ('http', 'https',)
+          - hostvars.jumphost.webserver_url | string
+          - (hostvars.jumphost.webserver_url | urlsplit('scheme')) in ('http', 'https',)
 
     - name: "Mirror OCP release artifacts - Disconnected"
       include_role:
@@ -65,7 +65,7 @@
         mor_version: "{{ version }}"
         mor_pull_url: "{{ version_pull_url }}"
         mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
-        mor_webserver_url: "{{ hostvars.localhost.webserver_url | default(None) }}"
+        mor_webserver_url: "{{ hostvars.jumphost.webserver_url | default(None) }}"
         mor_registry_url: "{{ hub_registry | urlsplit('netloc') }}"
         mor_registry_path: "{{ ocp_release_path }}"
         mor_auths_file: "{{ dci_pullsecret_file }}"
@@ -132,8 +132,8 @@
 
     - name: "Set facts for install via ACM - disconnected"
       set_fact:
-        acm_metal_iso_location: "{{ hostvars.localhost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
-        acm_rootfs_url: "{{ hostvars.localhost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
+        acm_metal_iso_location: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
+        acm_rootfs_url: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
         acm_release_image: "{{ hub_registry | urlsplit('netloc') }}/{{ ocp_release_path }}:{{ version }}"
         dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
 
