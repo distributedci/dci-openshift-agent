@@ -4,8 +4,6 @@
   when:
     - dci_main == 'install'
 
-## Additional Job validations
-
 - name: "Validate NFS provisioner variables"
   ansible.builtin.assert:
     that:
