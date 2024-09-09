@@ -1,17 +1,17 @@
 ---
-- name: Copy facts from localhost to bastion
+- name: Copy facts from jumphost to bastion
   hosts: bastion
   tasks:
     - name: Set facts
       set_fact:
-        pull_secret: "{{ hostvars['localhost']['pull_secret'] }}"
+        pull_secret: "{{ hostvars['jumphost']['pull_secret'] }}"
 
     - name: Set registry_repository fact for install playbooks in disconnected mode
       set_fact:
         registry_repository: >
           {{ hostvars[groups['registry_host'][0]].local_repo |
-          default('ocp-'+ hostvars['localhost']['version'].split('.')[:2] |
-          join('.') +'/'+ hostvars['localhost']['version'], true) }}
+          default('ocp-'+ hostvars['jumphost']['version'].split('.')[:2] |
+          join('.') +'/'+ hostvars['jumphost']['version'], true) }}
       when: dci_disconnected | default(False) | bool
 
 - name: Deploy cluster Agent Based Installer
@@ -32,7 +32,7 @@
         cluster: "{{ cluster_name }}"
 
 - name: Get kubeconfig
-  hosts: localhost
+  hosts: jumphost
   vars:
     secure: false
     ASSISTED_INSTALLER_BASE_URL:  # noqa var-naming[pattern]
@@ -207,7 +207,7 @@
               include_tasks: failure.yml
 
 - name: Assisted installer Cleanup
-  hosts: localhost
+  hosts: jumphost
   vars_files:
     - ../group_vars/all
   tasks:
