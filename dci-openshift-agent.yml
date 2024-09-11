@@ -364,14 +364,31 @@
                 - acm-install
           when:
             - install_type == 'acm'
-
       rescue: *teardown_failure
 
+
 # Step 3a-1 : installing
-- name: 'Launch Assisted Install'
-  import_playbook: plays/assisted-install.yml
-  when:
-    - install_type == 'assisted'
+- name: 'Launch Assisted install'
+  hosts: localhost
+  tags:
+    - running
+    - installing
+    - assisted
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: Install with assisted
+      block:
+        - name: "ACM Installation"
+          include_tasks:
+            file: plays/assisted-install.yml
+              tags:
+                - assisted-install
+          when:
+             - install_type == 'assisted'
+      rescue: *teardown_failure
 
 # Step 3a-1 : installing
 - name: 'Launch after install'
