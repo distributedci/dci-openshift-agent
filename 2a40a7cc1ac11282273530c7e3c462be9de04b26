@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c26f5323_e1104fe3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-09-25T20:31:17Z",
+      "side": 1,
+      "message": "We are holding on this, as the current pre-ga catalog does not contain information about previous version and the proper upgrade paths this cannot be used for upgrades. \n\nA new catalog that includes the current and pre-ga version can be created to cover the requirement. At this time there is not a partner use case for upgrades to pre-ga.  \n\nDraft of proposed solution could be found here: https://docs.google.com/document/d/1rcMusi7GFrNY8eKMeO8ytvQ0hO9r7seLquDXQoPhGKs/edit#heading\u003dh.xc0ikwki2q0c",
+      "revId": "2a40a7cc1ac11282273530c7e3c462be9de04b26",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
