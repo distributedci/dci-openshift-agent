@@ -27,4 +27,5 @@
   always:
     - name: Run the failure process
       include_tasks: ../failure.yml
+      delegate_to: localhost
 ...
