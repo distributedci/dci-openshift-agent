@@ -4,6 +4,11 @@
 # repo_root_path in Assisted jobs, since there is no provisionhost in that deployment mode
 # install-config file is already retrieved from dci_cluster_configs_dir, not needing to retrieve
 # it here
+
+- name: Display the current playbook path
+  debug:
+    msg: "The current playbook is located at: {{ playbook_dir }}"
+
 - name: "Get config files from Assisted deployment"
   ignore_errors: true
   block:
@@ -31,6 +36,10 @@
         dest: "{{ job_logs.path }}/install-config.yaml"
         mode: '0644'
 
+- name: Display the current playbook path
+  debug:
+    msg: "The current playbook is located at: {{ playbook_dir }}"
+
 # For the rest of log files, run get-ai-logs script
 # Rendezvouz node is the first master node of the cluster
 - name: "Get logs from Assisted deployment"
@@ -41,9 +50,9 @@
     host_ip_keyword: ansible_host
     rendezvous_ip_address: "{{ hostvars[agent_based_installer_bootstrap_node][host_ip_keyword] }}"
     domain_name: "{{ cluster_name }}.{{ base_dns_domain }}"
-  script:
+  shell:
     cmd: >
-      ./scripts/get-ai-logs
+      plays/scripts/get-ai-logs
       {{ rendezvous_ip_address }}
       {{ domain_name }}
       {{ job_logs.path }}

@@ -4,6 +4,10 @@
   include_tasks: log-dir.yml
   when: job_logs is undefined
 
+- name: Display the current playbook path
+  debug:
+    msg: "The current playbook is located at: {{ playbook_dir }}"
+
 - name: "Get logs from IPI/UPI deployment"
   vars:
     provisioner_user: "{{ hostvars[groups['provisioner'][0]]['ansible_user'] }}"
@@ -19,6 +23,10 @@
   ignore_errors: true
   when:
     - install_type in ['ipi', 'upi']
+
+- name: Display the current playbook path
+  debug:
+    msg: "The current playbook is located at: {{ playbook_dir }}"
 
 - name: "Get logs from Assisted deployment"
   include_tasks: assisted-get-logs.yml
