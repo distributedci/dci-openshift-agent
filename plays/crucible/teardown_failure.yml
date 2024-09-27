@@ -7,7 +7,6 @@
       dci_job:
         id: "{{ hostvars.localhost.job_id }}"
         status: "failure"
-      delegate_to: localhost
       tags: [dci]
 
     - name: Run the failure process for partners
@@ -19,7 +18,6 @@
 
     - name: Teardown hooks
       when: dci_teardown_on_failure|bool
-      delegate_to: localhost
       ignore_unreachable: true
       ignore_errors: true
       block:
