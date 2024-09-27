@@ -41,9 +41,9 @@
     host_ip_keyword: ansible_host
     rendezvous_ip_address: "{{ hostvars[agent_based_installer_bootstrap_node][host_ip_keyword] }}"
     domain_name: "{{ cluster_name }}.{{ base_dns_domain }}"
-  script:
+  shell:
     cmd: >
-      ./scripts/get-ai-logs
+      plays/scripts/get-ai-logs
       {{ rendezvous_ip_address }}
       {{ domain_name }}
       {{ job_logs.path }}
