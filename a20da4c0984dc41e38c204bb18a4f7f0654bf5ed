@@ -16,6 +16,23 @@
       "message": "examples of the jobs where the script was not found (mainly assisted that failed)\n- https://www.distributed-ci.io/jobs/42647682-7711-414b-af4d-114e4b71b225/jobStates?sort\u003ddate\u0026task\u003d19851145-1c57-4962-af91-f553a4d20845\n- https://www.distributed-ci.io/jobs/712592f8-e841-4f94-be8e-f41a7279a05f/jobStates?sort\u003ddate\u0026task\u003dbed50596-91c5-40c2-9d3f-46929c05b068",
       "revId": "a20da4c0984dc41e38c204bb18a4f7f0654bf5ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c046c43_1a4e41fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-09-27T22:01:08Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "a20da4c0984dc41e38c204bb18a4f7f0654bf5ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
