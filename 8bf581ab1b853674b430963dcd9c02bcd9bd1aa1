@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "8bf581ab1b853674b430963dcd9c02bcd9bd1aa1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f48cfa46_123beea8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-10-03T02:41:40Z",
+      "side": 1,
+      "message": "Test jobs, I think this is working as expected on failures and success for assisted and non assisted. \n\nhttps://www.distributed-ci.io/jobs/8820dfa3-64ad-4813-95da-8c94ec942739/jobStates - success on libvirt, logs are collected\nhttps://www.distributed-ci.io/jobs/e3f9625f-c75a-4cd6-9750-9f66d49f7665/jobStates - success on assisted, logs are collected\nhttps://www.distributed-ci.io/jobs/9fc1d66e-2858-48a1-ad34-165d7e5a983a/jobStates?sort\u003ddate\u0026task\u003dbb6c9e88-143f-4abe-ba29-09a3636f3921 - forced failure, logs_script are found.",
+      "revId": "8bf581ab1b853674b430963dcd9c02bcd9bd1aa1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
