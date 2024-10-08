@@ -6,6 +6,27 @@
     - acm_cluster_type == 'ztp-spoke'
     - not (dci_disconnected | default(false) | bool)
 
+- name: "Deploy ACM based clusters"
+  when:
+    - acm_cluster_type == 'mno'
+  block:
+    - name: "Prepare ACM Agents"
+      include_role:
+        name: redhatci.ocp.setup_acm_agents
+      vars:
+        setup_acm_agents_infraenv_name: "{{ hostvars.localhost.acm_cluster_name }}"
+        setup_acm_agents_inventory: "{{ hostvars.localhost.acm_inventory }}"
+      when:
+        - hostvars.localhost.acm_inventory | default([] | length > 0
+
+    # - name: "Create cluster"
+    #   include_role:
+    #     name: redhatci.ocp.acm_create_cluster
+    #   vars:
+    #     setup_acm_agents_infraenv_name: "{{ hostvars.localhost.acm_cluster_name }}"
+    #     setup_acm_agents_inventory: "{{ hostvars.localhost.acm_inventory }}"
+
+
 - name: "Deploy an SNO node via ACM"
   vars:
     acm_ocp_version: "{{ hostvars.localhost.version }}"
