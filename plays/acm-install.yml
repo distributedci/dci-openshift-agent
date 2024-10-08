@@ -6,6 +6,32 @@
     - acm_cluster_type == 'ztp-spoke'
     - not (dci_disconnected | default(false) | bool)
 
+- name: "Deploy ACM based clusters"
+  when:
+    - acm_cluster_type in ['mno', 'sno']
+  block:
+    - name: "Prepare ACM Agents"
+      vars:
+        setup_acm_agents_infraenv_name: "{{ hostvars.localhost.acm_cluster_name }}"
+        setup_acm_agents_inventory: "{{ hostvars.localhost.acm_inventory }}"
+      include_role:
+        name: redhatci.ocp.setup_acm_agents
+        apply:
+          environment:
+            - KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
+      when:
+        - hostvars.localhost.acm_inventory | default([]) | length > 0
+
+    - name: "Set deployment type to SNO when inventory size is one"
+      set_fact:
+        acm_cluster_type: sno
+        acm_bmc_address: "{{ acm_inventory[0].address }}"
+        acm_boot_mac_address: "{{ acm_inventory[0].bootMACAddress }}"
+        acm_bmc_user: "{{ acm_inventory[0].username }}"
+        acm_bmc_pass: "{{ acm_inventory[0].password }}"
+      when:
+        - hostvars.localhost.acm_inventory | default([]) | length == 0
+
 - name: "Deploy an SNO node via ACM"
   vars:
     acm_ocp_version: "{{ hostvars.localhost.version }}"
@@ -29,7 +55,6 @@
         - KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
   when:
     - acm_cluster_type == 'sno'
-
 
 - name: "Deploy a MetalLB and Hypershift cluster via ACM"
   when:
