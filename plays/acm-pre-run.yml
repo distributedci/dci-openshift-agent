@@ -128,7 +128,7 @@
             [[registry.mirror]]
               location = "{{ hub_registry | urlsplit('netloc') }}/multicluster-engine"
       when:
-        - acm_cluster_type == 'sno'
+        - acm_cluster_type in ['sno', 'mno']
 
     - name: "Set facts for install via ACM - disconnected"
       set_fact:
