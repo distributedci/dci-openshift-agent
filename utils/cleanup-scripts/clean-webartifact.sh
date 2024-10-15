@@ -19,6 +19,8 @@
 # The Remore CI is used to confirm the Job status
 # Params: The path to a valid remote CI
 
+exec >> "$HOME"/containers-cleanup.log 2>&1
+
 function help(){
     echo "$(basename "$0") <remote_ci_path>"
     echo "Absolute path to remote CI is missing"
@@ -29,6 +31,9 @@ if [[ $# != 1 ]]; then
     help
     exit 1
 fi
+
+echo "================================================================================"
+date
 
 # Source the remote CI file
 remote_ci="${1}"
@@ -55,6 +60,7 @@ do
     port=$(podman inspect "${name}" | jq -r '.[].NetworkSettings.Ports."8080/tcp"[0].HostPort')
     sudo firewall-cmd --remove-port="${port}"/tcp
     podman rm -f "${name}"
+    echo "Removed container ${name}"
   fi
 done <<< "${containers}"
 
@@ -82,5 +88,6 @@ do
   job_status=$(dcictl --format json job-show "${job_id}" | jq -er .job.status)
   if [[ " ${fail_states[*]} " =~ ${job_status} ]]; then
     podman rmi -f "${name}"
+    echo "Removed image ${name}"
   fi
 done < /tmp/clean-images
