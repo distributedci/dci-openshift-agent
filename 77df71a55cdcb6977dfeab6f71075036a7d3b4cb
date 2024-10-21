@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e18cf93e_a3292da4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-21T18:28:11Z",
+      "side": 1,
+      "message": "Tested with `dci-pipeline-check 32484 bevo/acm-hub bevo/ztp-spoke-4.15`, job is about to pass",
+      "revId": "77df71a55cdcb6977dfeab6f71075036a7d3b4cb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
