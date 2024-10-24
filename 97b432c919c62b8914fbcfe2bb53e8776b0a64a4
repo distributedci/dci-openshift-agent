@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3971d22b_66c01f4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-24T09:17:36Z",
+      "side": 1,
+      "message": "Looks good to me but I\u0027ll wait for a green job before setting +2",
+      "revId": "97b432c919c62b8914fbcfe2bb53e8776b0a64a4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
