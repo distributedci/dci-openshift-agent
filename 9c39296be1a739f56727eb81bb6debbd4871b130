@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "982054f2_72d87d2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-25T14:22:16Z",
+      "side": 1,
+      "message": "Now that the job looks stable, providing some comments below",
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4309de68_c1eedeeb",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-25T14:22:16Z",
+      "side": 1,
+      "message": "docs/gitops-ztp.md needs to be updated to include these variables",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 50
+      },
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c7043c5_79d7ee5c",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-25T14:22:16Z",
+      "side": 1,
+      "message": "docs/gitops-ztp.md needs to be updated to include these variables",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 53
+      },
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f68eeb4_811267b9",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-25T14:22:16Z",
+      "side": 1,
+      "message": "Question: isn\u0027t it better to run the mirror plugin images tasks in the configure_ztp_gitops_apps role instead of doing this in the agent?\nI\u0027m asking this because, I think, the role itself should be compatible with both connected and disconnected modes, but if we just do the mirroring in the DCI agent, the only way to configure ZTP GitOps apps in disconnected mode would be with DCI, and with the role itself, it would be impossible.\nI don\u0027t mind to keep the mirroring tasks here or there but just to be clear with what we do.",
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c7c02a7_451264af",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-25T14:22:16Z",
+      "side": 1,
+      "message": "Is this variable used? It looks like it\u0027s not used.",
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
