@@ -22,7 +22,9 @@
             repo_root_path: "{{ dci_cluster_configs_dir }}"
           include_role:
             name: redhatci.ocp.get_image_hash
-          when: run_get_hash | bool
+          when:
+            - run_get_hash | bool
+            - not ((use_agent_based_installer | default(true)) | bool)
         - name: "Extract openshift installer"
           include_role:
             name: redhatci.ocp.extract_openshift_installer
