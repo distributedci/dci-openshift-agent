@@ -136,6 +136,8 @@
             repo_root_path: "{{ dci_cluster_configs_dir }}"
           include_role:
             name: redhatci.ocp.get_image_hash
+          when:
+            - not ((use_agent_based_installer | default(true)) | bool)
 
         - name: "Parse openshift version"
           vars:
@@ -361,7 +363,9 @@
             repo_root_path: "{{ dci_cluster_configs_dir }}"
           include_role:
             name: redhatci.ocp.get_image_hash
-          when: run_get_hash
+          when:
+            - run_get_hash
+            - not ((use_agent_based_installer | default(true)) | bool)
       rescue: *teardown_error
 
 - name: Play to install and setup mirror registry
