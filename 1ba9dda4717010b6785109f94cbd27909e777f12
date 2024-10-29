@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bdd81a9_e2f0aa30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-10-29T21:54:30Z",
+      "side": 1,
+      "message": "Aren\u0027t those tasks still run despite the conditional?  Because in order to get into this play (assisted-pre-run.yml) the `install_type` must be `assisted`\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/master/dci-openshift-agent.yml#L209-L212",
+      "revId": "1ba9dda4717010b6785109f94cbd27909e777f12",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
