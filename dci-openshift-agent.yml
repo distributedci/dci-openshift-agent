@@ -206,7 +206,7 @@
             - name: Run the error process
               include_tasks: plays/failure.yml
 
-- name: Assited pre-run
+- name: Assisted pre-run
   import_playbook: plays/assisted-pre-run.yml
   when:
     - install_type == 'assisted'
@@ -272,7 +272,7 @@
       rescue: *teardown_error
 
 # Step 3a-1 : installing
-- name: 'Launch [IPI/SNO/UPI] install'
+- name: 'Launch [IPI/SNO/UPI/ABI] install'
   hosts: provisioner
   tags:
     - running
@@ -364,7 +364,32 @@
                 - acm-install
           when:
             - install_type == 'acm'
+      rescue: *teardown_failure
 
+# Step 3a-1 : installing
+- name: 'Launch ABI install'
+  hosts: localhost
+  tags:
+    - running
+    - installing
+    - abi
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+  tasks:
+    - name: Install using ABI
+      block:
+        - name: "ABI Installation"
+          include_tasks:
+            file: plays/abi-install.yml
+            apply:
+              tags:
+                - abi-install
+          when:
+            - install_type == 'abi' or
+              (install_type == 'assisted' and
+              use_agent_based_installer | defatul(true) | bool)
       rescue: *teardown_failure
 
 # Step 3a-1 : installing
@@ -372,6 +397,7 @@
   import_playbook: plays/assisted-install.yml
   when:
     - install_type == 'assisted'
+    - not use_agent_based_installer | defatul(true) | bool
 
 # Step 3a-1 : installing
 - name: 'Launch after install'
