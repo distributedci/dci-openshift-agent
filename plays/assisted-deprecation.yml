@@ -1,0 +1,9 @@
+---
+- name: "Warning, assisted on-pre is deprecated"
+  ansible.builtin.debug:
+    msg: "Assisted on-prem is deprecated, switching to ABI"
+
+- name: "Switching to ABI installer"
+  ansible.builtin.set_fact:
+    install_type: abi
+...
