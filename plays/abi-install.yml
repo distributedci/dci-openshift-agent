@@ -1,0 +1,95 @@
+---
+
+# Validate that ocp version is > 4.12
+
+- name: Add Bastion host to provisioner group
+  add_host:
+    hostname: "{{ item }}"
+    groups:
+      - provisioner
+  loop: "{{ groups['bastions'] }}"
+  when:
+    - "'provisioner' not in groups"
+
+- name: Set installer path
+  vars:
+    installer_file: >-
+      {{ version is version('4.16', '>=') |
+      ternary('openshift-install', 'openshift-baremetal-install') }}
+  set_fact:
+    openshift_installer_path: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}/{{ version }}/{{ installer_file }}"
+
+- name: Check extracted installer has agent subcommand
+  ansible.builtin.shell:
+    cmd: "{{ openshift_installer_path }} agent --help"
+  register: agent_check
+  failed_when: false
+
+- name: Set registry_repository fact for install playbooks in disconnected mode
+  set_fact:
+    registry_repository: >
+      {{ hostvars[groups['registry_host'][0]].local_repo |
+      default('ocp-'+ version.split('.')[:2] |
+      join('.') +'/'+ version, true) }}
+  when: dci_disconnected | default(False) | bool
+
+- name: Generate_manifests
+  vars:
+    pull_secret: "{{ dci_pullsecret }}"
+    repo_root_path: "{{ dci_cluster_configs_dir }}"
+  include_role:
+    name: redhatci.ocp.generate_manifests
+
+- name: Generate agent iso
+  vars:
+    pull_secret: "{{ local_pull_secret }}"
+    repo_root_path: "{{ dci_cluster_configs_dir }}"
+    agent_based_installer_path: "{{ openshift_installer_path }}"
+  include_role:
+    name: redhatci.ocp.generate_agent_iso
+
+- name: "Boot nodes"
+  include_tasks:
+    file: abi-boot-iso.yml
+  loop: "{{ groups['workers'] | default([]) + groups['masters'] }}"
+  loop_control:
+    loop_var: inventory_hostname
+
+- name: Monitor Agent Based Installer
+  vars:
+    agent_based_installer_path: "{{ openshift_installer_path }}"
+    repo_root_path: "{{ dci_cluster_configs_dir }}"
+  include_role:
+    name: redhatci.ocp.monitor_agent_based_installer
+
+- name: Copy generated kubeconfig (ABI)
+  copy:
+    src: "{{ repo_root_path }}/generated/{{ cluster_name }}/auth/kubeconfig"
+    dest: "{{ kubeconfig_path }}"
+    mode: '0664'
+
+- name: Read Kubeadmin Credentials
+  slurp:
+    src: "{{ dci_cluster_configs_dir }}/generated/{{ cluster_name }}/auth/kubeadmin-password"
+  register: kubeadmin_password
+
+- name: Set credentials map
+  set_fact:
+    kubeadmin_credentials:
+      username: kubeadmin
+      password: "{{ kubeadmin_password.content | b64decode }}"
+      console_url: "https://console-openshift-console.apps.{{ cluster_name }}.{{ base_dns_domain }}"
+
+- name: Check if ClusterVersion is Complete
+  community.kubernetes.k8s_info:
+    api: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+  register: cluster_version
+  vars:
+    status_query: "resources[*].status.history[?state=='Completed'].state"
+    cluster_version_available: "{{ cluster_version | json_query(status_query) | flatten | unique }}"
+  retries: 90
+  delay: 10
+  until: cluster_version_available == ['Completed']
+...
