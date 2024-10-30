@@ -1,7 +1,6 @@
 all:
   vars:
     vm_node_prefix: ''
-    use_agent_based_installer: {{ use_agent_based_installer | default(true) | bool | string | lower }}  # uses ABI install instead of OnPrem
 
     # Flags to enable/disable prerequisite service setup
     # You will need to ensure alternatives are available for anything that will not be automatically set up
@@ -164,14 +163,8 @@ all:
     bastions: # n.b. Currently only a single bastion is supported
       hosts:
         bastion:
-{% if (use_agent_based_installer | default(true) | bool) %}
           ansible_host: "localhost"
           ansible_connection: "local"
-{% else %}
-          ansible_host: "{{ provisioner_hostname }}"
-          ansible_user: "{{ provisioner_username | default('root') }}"
-          ansible_connection: "{{ 'local' if provisioner_hostname == 'localhost' else 'ssh' }}"
-{% endif %}
 
     provisioner:
       hosts:
