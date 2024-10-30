@@ -1,0 +1,74 @@
+---
+
+# Validate that ocp version is > 4.12
+
+- name: Set installer path
+  vars:
+    installer_file: >-
+      {{ version is version('4.16', '>=') |
+      ternary('openshift-install', 'openshift-baremetal-install') }}
+  set_fact:
+    openshift_installer_path: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}/{{ version }}/{{ installer_file }}"
+
+- name: Check extracted installer has agent subcommand
+  ansible.builtin.shell:
+    cmd: "{{ openshift_installer_path }} agent --help"
+  register: agent_check
+  failed_when: false
+
+- name: Generate_manifests
+  vars:
+    pull_secret: "{{ dci_pullsecret }}"
+    repo_root_path: "{{ dci_cluster_configs_dir }}"
+  include_role:
+    name: redhatci.ocp.generate_manifests
+
+- name: Generate agent iso
+  vars:
+    repo_root_path: "{{ dci_cluster_configs_dir }}"
+  include_role:
+    name: redhatci.ocp.generate_agent_iso
+
+- name: Boot ISO
+  vars:
+    boot_iso_hosts: masters,workers
+  include_role:
+    name: redhatci.ocp.boot_iso
+
+- name: Monitor Agent Based Installer
+  vars:
+    repo_root_path: "{{ dci_cluster_configs_dir }}"
+  include_role:
+    name: redhatci.ocp.monitor_agent_based_installer
+
+- name: Copy generated kubeconfig (ABI)
+  copy:
+    src: "{{ repo_root_path }}/generated/{{ cluster_name }}/auth/kubeconfig"
+    dest: "{{ kubeconfig_path }}"
+    mode: '0664'
+
+- name: Read Kubeadmin Credentials
+  slurp:
+    src: "{{ dci_cluster_configs_dir }}/generated/{{ cluster_name }}/auth/kubeadmin-password"
+  register: kubeadmin_password
+
+- name: Set credentials map
+  set_fact:
+    kubeadmin_credentials:
+      username: kubeadmin
+      password: "{{ kubeadmin_password.content | b64decode }}"
+      console_url: "https://console-openshift-console.apps.{{ cluster_name }}.{{ base_dns_domain }}"
+
+- name: Check if ClusterVersion is Complete
+  community.kubernetes.k8s_info:
+    api: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+  register: cluster_version
+  vars:
+    status_query: "resources[*].status.history[?state=='Completed'].state"
+    cluster_version_available: "{{ cluster_version | json_query(status_query) | flatten | unique }}"
+  retries: 90
+  delay: 10
+  until: cluster_version_available == ['Completed']
+...
