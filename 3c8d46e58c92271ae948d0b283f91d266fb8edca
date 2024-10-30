@@ -50,6 +50,24 @@
       "message": "Last three jobs have failed because of the same reason: \"TASK [redhatci.ocp.kvm : Identify System Manager]\" Connection failure: [Errno 104] Connection reset by peer\", \"redirected\": false, \"status\": -1, \"url\": \"http://server0X-assisted.partnerci.bos2.lab:8082/redfish/v1/Systems/dciokd-master-0\n\nThe URL that fails to respond points to port 8082, that is sushy-tools, the service is running in the Hypervisor with HTTPS, but in the errors the queries are done with HTTP only, maybe this is the problem? \n\nI confirmed a query with HTTPS works, \n\n\u003e [dci@server07 ~]$ curl -u XXXXX:XXXXXXX -kLI https://server07- assisted.partnerci.bos2.lab:8082/redfish/v1/Systems/dciokd-master-0\n\u003e HTTP/1.0 200 OK\n\u003e Content-Type: application/json\n\u003e Content-Length: 0\n\u003e Server: Werkzeug/2.0.3 Python/3.6.8\n\u003e Date: Tue, 29 Oct 2024 10:34:06 GMT\n\nHTTP queries do not work:\n\u003e [dci@server07 ~]$ curl -u XXXXXX:XXXXXXX -vLI http://server07-assisted.partnerci.bos2.lab:8082/redfish/v1/Systems/dciokd-master-0\n\u003e *   Trying 192.168.16.16...\n\u003e * TCP_NODELAY set\n\u003e * Connected to server07-assisted.partnerci.bos2.lab (192.168.16.16) port 8082 (#0)\n\u003e * Server auth using Basic with user \u0027XXXXXX\u0027\n\u003e \u003e HEAD /redfish/v1/Systems/dciokd-master-0 HTTP/1.1\n\u003e \u003e Host: server07-assisted.partnerci.bos2.lab:8082\n\u003e \u003e Authorization: Basic XXXXXXXXXXXXXXXXXXXXXXX\n\u003e \u003e User-Agent: curl/7.61.1\n\u003e \u003e Accept: */*\n\u003e \u003e \n\u003e * Recv failure: Connection reset by peer\n\u003e * Closing connection 0\n\u003e curl: (56) Recv failure: Connection reset by peer",
       "revId": "3c8d46e58c92271ae948d0b283f91d266fb8edca",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26157bff_c9727f62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-30T12:58:41Z",
+      "side": 1,
+      "message": "Maybe we need to update the kvm role to use https instead?",
+      "parentUuid": "89cf5fff_6fa19704",
+      "revId": "3c8d46e58c92271ae948d0b283f91d266fb8edca",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
