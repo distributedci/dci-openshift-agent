@@ -294,6 +294,10 @@
     src: "~{{ hostvars[groups['provisioner'][0]].ansible_user }}/.ssh/id_rsa"
     dest: "~/.ssh/{{ cluster }}-provisioner_rsa"
     flat: true
+  when:
+    - "'provisioner' in groups"
+    - groups['provisioner'] | length > 0
+    - hostvars[groups['provisioner'][0]].ansible_user is defined
 
 - name: Erase bootloader to prevent old OS to boot
   delegate_to: "{{ item }}"
