@@ -3,8 +3,8 @@
   assert:
     that:
       - webserver_url is defined
-      - groups['registry_host'] is defined
-      - groups['registry_host'] | length > 0
+      - (groups['registry_host'] is defined or local_registry_host is defined)
+      - (groups['registry_host'] | length > 0 or local_registry_host is defined)
       - dci_local_registry | length
       - provision_cache_store is defined
   when:

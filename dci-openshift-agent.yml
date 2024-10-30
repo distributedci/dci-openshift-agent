@@ -206,7 +206,7 @@
             - name: Run the error process
               include_tasks: plays/failure.yml
 
-- name: Assited pre-run
+- name: Assisted pre-run
   import_playbook: plays/assisted-pre-run.yml
   when:
     - install_type == 'assisted'
@@ -272,7 +272,7 @@
       rescue: *teardown_error
 
 # Step 3a-1 : installing
-- name: 'Launch [IPI/SNO/UPI] install'
+- name: 'Launch [IPI/SNO/UPI/ABI] install'
   hosts: provisioner
   tags:
     - running
@@ -288,7 +288,7 @@
           include_tasks: "plays/{{ install_type }}-install.yml"
           when:
             - dci_main == 'install'
-            - install_type in ['ipi', 'upi', 'sno']
+            - install_type in ['ipi', 'upi', 'sno', 'abi']
 
         - name: "Get KUBECONFIG auth/creds from provisioner node"
           fetch:
