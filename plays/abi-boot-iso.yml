@@ -1,0 +1,8 @@
+---
+- name: "Boot iso"
+  vars:
+    strategy: "{{ use_boot_iso_strategy_free | default(True) | bool | ternary('free', omit) }}"
+    serial: "{{ use_boot_iso_strategy_free | default(True) | bool | ternary(omit, 1) }}"
+  include_role:
+    name: redhatci.ocp.boot_iso
+...
