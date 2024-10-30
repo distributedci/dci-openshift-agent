@@ -1,0 +1,74 @@
+---
+- name: Add Bastion host to provisioner group
+  add_host:
+    hostname: "{{ item }}"
+    groups:
+      - provisioner
+  loop: "{{ groups['bastions'] }}"
+  when:
+    - "'provisioner' not in groups"
+
+- name: Process KVM nodes
+  vars:
+    SETUP_VMS: "{{ setup_vms | default((kvm_nodes | default([])) |
+              length | int >= 1) }}"
+  import_role:
+    name: redhatci.ocp.process_kvm_nodes
+  delegate_to: bastion
+  when: SETUP_VMS | bool
+
+- name: Provision VMS
+  vars:
+    SETUP_VMS: "{{ setup_vms | default((kvm_nodes | default([])) |
+                length | int >= 1) }}"
+  block:
+    - name: Destroy VMs
+      include_role:
+        name: redhatci.ocp.destroy_vms
+      when: SETUP_VMS | bool
+      tags:
+        - destroy_vms
+
+    - name: Setup vm host network
+      include_role:
+        name: redhatci.ocp.setup_vm_host_network
+      when: (SETUP_VM_BRIDGE | default(SETUP_VMS)) | bool
+
+    - name: Configure firewall for vm_bridge_zone
+      when:
+        - (SETUP_VM_BRIDGE | default(SETUP_VMS)) | bool
+        - vm_bridge_zone is defined
+      become: true
+      block:
+        - name: Move bridge to designated firewall zone
+          community.general.nmcli:
+            conn_name: "{{ vm_bridge_name }}"
+            state: present
+            zone: "{{ vm_bridge_zone }}"
+
+        - name: Create Iptables NAT chain
+          iptables:
+            table: nat
+            chain: POSTROUTING
+            source: '{{ machine_network_cidr }}'
+            destination: '! {{ machine_network_cidr }}'
+            jump: MASQUERADE
+            protocol: all
+            comment: Ansible NAT Masquerade
+
+        - name: Manage IPv4 forwarding
+          ansible.posix.sysctl:
+            name: net.ipv4.ip_forward
+            value: '1'
+            state: present
+            reload: true
+
+    - name: Create vms
+      vars:
+        create_vms_disable_secure_boot: "{{ dci_assisted_disable_secure_boot | default(false) | bool }}"
+      include_role:
+        name: redhatci.ocp.create_vms
+      when: SETUP_VMS | bool
+      tags:
+        - setup_vms
+...
