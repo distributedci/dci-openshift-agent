@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "becded74_7a3d049d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-10-30T12:55:02Z",
+      "side": 1,
+      "message": "It\u0027s curious but in the last debug job, it failed because it ran the get_image_hash role, but in theory, use_agent_based_installer var should be true because it\u0027s defined in the inventories... don\u0027t know if there\u0027s something strange configured here and there that is causing this side effect",
+      "revId": "c93f6fafafcae64800a1ad8b5aebdbbee49dd2ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
