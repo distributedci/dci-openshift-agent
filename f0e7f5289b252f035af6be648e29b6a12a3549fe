@@ -39,6 +39,30 @@
       },
       "revId": "f0e7f5289b252f035af6be648e29b6a12a3549fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa5133da_51cfd3ef",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-04T14:37:06Z",
+      "side": 1,
+      "message": "Hello Ramon, \n\nWhat I am trying to do here is not break users already using ABI withuse_agent_based_installer. If they use assisted-on prem, we will show a warning and switch to ABI.",
+      "parentUuid": "458198e4_dc41a83d",
+      "range": {
+        "startLine": 390,
+        "startChar": 12,
+        "endLine": 392,
+        "endChar": 63
+      },
+      "revId": "f0e7f5289b252f035af6be648e29b6a12a3549fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
