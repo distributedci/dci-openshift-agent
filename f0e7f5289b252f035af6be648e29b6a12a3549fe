@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc1f18df_61d4f9a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-11-04T11:49:30Z",
+      "side": 1,
+      "message": "I know this is still on an early stage, but just wondering something that may impact in the refactor.",
+      "revId": "f0e7f5289b252f035af6be648e29b6a12a3549fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "458198e4_dc41a83d",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-11-04T11:49:30Z",
+      "side": 1,
+      "message": "should we homogeneize this, to avoid two different ways of referring to ABI?",
+      "range": {
+        "startLine": 390,
+        "startChar": 12,
+        "endLine": 392,
+        "endChar": 63
+      },
+      "revId": "f0e7f5289b252f035af6be648e29b6a12a3549fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
