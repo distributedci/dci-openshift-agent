@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6231229_0d2a0b35",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "23840d74_07d6d819",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e631642e_0ce5c8f3",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-11-05T19:35:17Z",
       "side": 1,
       "message": "let\u0027s start using FQCN for new code. -\u003e `ansible.builtin.include_tasks`",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76a51e47_dff912d7",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e631642e_0ce5c8f3",
       "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eec30405_20a11972",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "It is not needed. Removed",
+      "parentUuid": "8dc8b12b_712604d6",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1b64183a_e3daf213",
@@ -65,6 +119,24 @@
       "writtenOn": "2024-11-05T19:35:17Z",
       "side": 1,
       "message": "Can we rename this to \"Launch Assisted on-prem Install (deprecated)\"",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17918621_e951fc7c",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b64183a_e3daf213",
       "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +158,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1656452e_d8fec4ed",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9737f50e_f01618a8",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "202025c5_3fad83e6",
@@ -103,6 +193,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "93ac1b82_c355fe7e",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "It is not needed, as we check for the agent option in the binary",
+      "parentUuid": "202025c5_3fad83e6",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "83e71ae8_7f3f428e",
@@ -116,6 +224,24 @@
       "writtenOn": "2024-11-05T19:35:17Z",
       "side": 1,
       "message": "Please use FQCN in all the tasks",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8b882b5_80d63b47",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83e71ae8_7f3f428e",
       "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -154,6 +280,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "148df237_8cca9ab3",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Fixed the condition to fail is the agent is not available.",
+      "parentUuid": "0b0ab8fe_e6460cb8",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "068c0746_14460e3e",
@@ -167,6 +311,24 @@
       "writtenOn": "2024-11-05T19:35:17Z",
       "side": 1,
       "message": "nit: standardize the bool values to lower or Title cases.",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6de155e0_a9a46e85",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "068c0746_14460e3e",
       "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -188,6 +350,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04bf0d7b_f8bdad50",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "52acef40_9b4842c6",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2dd0bb7b_06fb4028",
@@ -201,6 +381,24 @@
       "writtenOn": "2024-11-05T19:35:17Z",
       "side": 1,
       "message": "Please add a no_log in the slurp",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26d444f5_199b22dc",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-05T21:28:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2dd0bb7b_06fb4028",
       "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
