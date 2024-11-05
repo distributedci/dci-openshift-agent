@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23840d74_07d6d819",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "I think ABI is not happening here after all, right?",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e631642e_0ce5c8f3",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "let\u0027s start using FQCN for new code. -\u003e `ansible.builtin.include_tasks`",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8dc8b12b_712604d6",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Should we apply tags here? I see we have them already at the play level",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b64183a_e3daf213",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Can we rename this to \"Launch Assisted on-prem Install (deprecated)\"",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9737f50e_f01618a8",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "typo: -\u003e `default(true)`",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "202025c5_3fad83e6",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Is this a TODO note or won\u0027t be needed?",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83e71ae8_7f3f428e",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Please use FQCN in all the tasks",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "51af0de6_f13cf975",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Why is it needed to add bastions to the provisioner group?",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b0ab8fe_e6460cb8",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Since is never failed, can we remove this verification?",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "068c0746_14460e3e",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "nit: standardize the bool values to lower or Title cases.",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52acef40_9b4842c6",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Maybe:\n\n```\n  mirror_certificate_check: \"{{ (use_local_mirror_registry | default(false)) and not (setup_registry_service | default(true)) | bool }}\"\n```",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dd0bb7b_06fb4028",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-05T19:35:17Z",
+      "side": 1,
+      "message": "Please add a no_log in the slurp",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
