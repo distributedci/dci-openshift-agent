@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f3b1262_17aea756",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-07T20:40:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5c14a1d4_eda9ca94",
+      "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c9e923f_ccdc44ce",
@@ -52,6 +70,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6d0731e_0e1424b1",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-07T20:40:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4c9e923f_ccdc44ce",
+      "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "094752cf_3698dd1b",
@@ -65,6 +101,24 @@
       "writtenOn": "2024-11-07T15:53:33Z",
       "side": 1,
       "message": "I am unsure if this is better than just failing the job and asking the user to switch to ABI manually in their configuration. On the one hand: this is more transparent for the user provided everything goes right, on the other hand it will be really confusing for the user to troubleshoot if things go wrong.",
+      "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11005642_151a42e1",
+        "filename": "plays/assisted-deprecation.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-11-07T20:40:25Z",
+      "side": 1,
+      "message": "Agree, let\u0027s finish the change and test on our stuff how this behaves/feels and decide then. Thanks",
+      "parentUuid": "094752cf_3698dd1b",
       "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
