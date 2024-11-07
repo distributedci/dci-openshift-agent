@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef8cbdfe_af105c94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 31
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-11-07T15:53:33Z",
+      "side": 1,
+      "message": "I think I\u0027d rather have the deprecation process to fail the job explicitly if using on-prem instead of trying to make it work for the user",
+      "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c14a1d4_eda9ca94",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-11-07T15:53:33Z",
+      "side": 1,
+      "message": "this should be under the same conditional as setup_http_store above",
+      "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c9e923f_ccdc44ce",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-11-07T15:53:33Z",
+      "side": 1,
+      "message": "s/msg\u003d/msg:/",
+      "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "094752cf_3698dd1b",
+        "filename": "plays/assisted-deprecation.yml",
+        "patchSetId": 31
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-11-07T15:53:33Z",
+      "side": 1,
+      "message": "I am unsure if this is better than just failing the job and asking the user to switch to ABI manually in their configuration. On the one hand: this is more transparent for the user provided everything goes right, on the other hand it will be really confusing for the user to troubleshoot if things go wrong.",
+      "revId": "e7e48a289ce0f0032bf46a4d7266c709e8295ece",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

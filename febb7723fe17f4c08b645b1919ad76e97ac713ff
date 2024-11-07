@@ -265,6 +265,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "660ce61e_71f06d79",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2024-11-07T15:53:33Z",
+      "side": 1,
+      "message": "this comes from the original implementation, it was easier than creating a new inventory, we were reusing the IPI nomenclature",
+      "parentUuid": "51af0de6_f13cf975",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0b0ab8fe_e6460cb8",
         "filename": "plays/abi-install.yml",
         "patchSetId": 26
