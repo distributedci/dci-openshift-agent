@@ -2,7 +2,7 @@
   debug:
     msg: "{{ sub.subscriptionName }}"
 
-- name: "Get updated package manifest"
+- name: "Get updated package manifest for {{ sub.subscriptionName }}"
   community.kubernetes.k8s_info:
     api: packages.operators.coreos.com/v1
     kind: PackageManifest
@@ -12,32 +12,29 @@
     field_selectors:
       - "metadata.name={{ sub.operatorName }}"
   register: packagemanifest
-  retries: 10
-  delay: 5
+  retries: 5
+  delay: 3
+  ignore_errors: true
   until:
     - packagemanifest.resources is defined
     - packagemanifest.resources | length == 1
 
-- name: "Get new operator's default channel name"
+- name: "Get new operator's CSV {{ sub.subscriptionName }}"
   vars:
     channels: "resources[*].status.defaultChannel"
-  set_fact:
     default_channel: "{{ packagemanifest | json_query(channels) | join('') | string }}"
-
-- name: "Get operator's CSV for desired channel"
-  vars:
     current_csv: "resources[*].status.channels[? name=='{{ default_channel }}' ].currentCSV | [0]"
   set_fact:
     operator_csv: "{{ packagemanifest | json_query(current_csv) | first  }}"
+  when:
+    - packagemanifest is defined
+    - packagemanifest.resources | default([]) | length == 1
 
 - name: "Upgrade operator if the current CSV is different to the installed one"
-  when: operator_csv != sub.installedCSV
+  when:
+    - operator_csv | default(sub.installedCSV) != sub.installedCSV
+    - packagemanifest.resources | default([]) | length == 1
   block:
-
-    # Versions may not follow the same convention between releases
-    # Need to delete the non approved install plan, once the subscriptions InstallPlan is set to Automatic
-    # the install plans will be automatically approved in order to get the latest CSV version according to what
-    # is defined in the upgrade graphs.
     - name: "Get Install plans"
       community.kubernetes.k8s_info:
         api: operators.coreos.com/v1alpha1
