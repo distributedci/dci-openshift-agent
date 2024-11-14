@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "590ca5fb_2257d6ad",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-14T20:58:44Z",
+      "side": 1,
+      "message": "packagemanifest should be always available up to this point even if there was an error, so you could avoid the default by validating it exists first, mabye?\n\n    - packagemanifest.resources is defined\n    - packagemanifest.resources | length \u003d\u003d 1",
+      "revId": "5234bcb75c03c1ad196705d1acd5cc07a497e6e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "575bea5d_b8fda519",
+        "filename": "plays/upgrade-csv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-11-14T20:58:44Z",
+      "side": 1,
+      "message": "would it make sense to default `operator_csv` to `sub.installedCSV` in its definition? line:28",
+      "revId": "5234bcb75c03c1ad196705d1acd5cc07a497e6e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
