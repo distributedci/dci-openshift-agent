@@ -16,6 +16,23 @@
       "message": "LGTM, I\u0027ll +2 after the test completes, thanks!",
       "revId": "659e1009a139a36f1b6743dc0410e2a6b08f5890",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfe70f6e_626f25e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-11-15T09:01:17Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "659e1009a139a36f1b6743dc0410e2a6b08f5890",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
