@@ -41,6 +41,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "62e996e2_8efb98e5",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-11-20T07:44:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4309de68_c1eedeeb",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 50
+      },
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5c7043c5_79d7ee5c",
@@ -54,6 +78,30 @@
       "writtenOn": "2024-10-25T14:22:16Z",
       "side": 1,
       "message": "docs/gitops-ztp.md needs to be updated to include these variables",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 53
+      },
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68310673_f06236b8",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-11-20T07:44:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5c7043c5_79d7ee5c",
       "range": {
         "startLine": 21,
         "startChar": 0,
@@ -83,6 +131,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "48e36d34_f54e8331",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-11-20T07:44:36Z",
+      "side": 1,
+      "message": "Just to unblock this, let\u0027s keep it as it is right now and we can think on moving these tasks to the collections role in a next change",
+      "parentUuid": "1f68eeb4_811267b9",
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5c7c02a7_451264af",
         "filename": "plays/acm-ztp-spoke.yml",
         "patchSetId": 23
@@ -94,6 +160,24 @@
       "writtenOn": "2024-10-25T14:22:16Z",
       "side": 1,
       "message": "Is this variable used? It looks like it\u0027s not used.",
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48621045_53d1257a",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-11-20T07:44:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5c7c02a7_451264af",
       "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
