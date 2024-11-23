@@ -1,0 +1,9 @@
+Code-Review+2: Tony Garcia <tonyg@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Verified+1: dci-ci-bot <dci-ci-bot@redhat.com>
+Workflow+1: Frederic Lepied <flepied@redhat.com>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Sat, 23 Nov 2024 08:35:10 +0000
+Reviewed-on: https://softwarefactory-project.io/r/c/dci-openshift-agent/+/32627
+Project: dci-openshift-agent
+Branch: refs/heads/master
