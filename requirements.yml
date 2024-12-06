@@ -5,6 +5,8 @@ roles:
     scm: git
 
 collections:
+  - name: kubernetes.core
+    version: 2.4.2
   - name: community.kubernetes
     version: 1.2.1
   - name: containers.podman
