@@ -1,4 +1,19 @@
 ---
+- name: List pip packages (To be deleted)
+  ansible.builtin.shell:
+    cmd: pip3 list
+
+- name: List ansible-galaxy collections (To be deleted)
+  become: true
+  ansible.builtin.shell:
+    cmd: >-
+      set -x;
+      cd ..;
+      chmod u+w .;
+      ansible-doc -t module kubernetes.core.k8s |
+      head -1;
+      chmod u-w .
+
 - name: Install helper tools
   vars:
     python_version: >-
