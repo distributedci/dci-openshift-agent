@@ -281,6 +281,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5b0a357_38fb6d7c",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 26
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-12-11T23:43:07Z",
+      "side": 1,
+      "message": "It is not needed anymore. Thanks for the clarifications.",
+      "parentUuid": "660ce61e_71f06d79",
+      "revId": "febb7723fe17f4c08b645b1919ad76e97ac713ff",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b0ab8fe_e6460cb8",
