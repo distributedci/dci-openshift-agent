@@ -80,6 +80,30 @@
       },
       "revId": "f0e7f5289b252f035af6be648e29b6a12a3549fe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc74bfb6_dfe0c70e",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 24
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-12-12T14:34:08Z",
+      "side": 1,
+      "message": "yeah, that is better. We will use install_type \u003d abi.",
+      "parentUuid": "aa5133da_51cfd3ef",
+      "range": {
+        "startLine": 390,
+        "startChar": 12,
+        "endLine": 392,
+        "endChar": 63
+      },
+      "revId": "f0e7f5289b252f035af6be648e29b6a12a3549fe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
