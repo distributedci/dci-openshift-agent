@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5b9be0f_3ed477cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 57
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-12-13T13:36:09Z",
+      "side": 1,
+      "message": "Thanks for all the work Beto, now giving some minor advices to finish the work",
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48bc9ce8_79c9071b",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 57
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-12-13T13:36:09Z",
+      "side": 1,
+      "message": "up to this point, do we still need this var, as it\u0027s deleted from the abi_on_libvirt sample? I know there may be people still using it, but this will force them to use the new var, maybe we can include a warning in the code to tell them that use_agent_based_installer is deprecated",
+      "range": {
+        "startLine": 397,
+        "startChar": 15,
+        "endLine": 397,
+        "endChar": 64
+      },
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60a58756_9b3bd3b0",
+        "filename": "docs/a-i.md",
+        "patchSetId": 57
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-12-13T13:36:09Z",
+      "side": 1,
+      "message": "typo: exists",
+      "range": {
+        "startLine": 56,
+        "startChar": 57,
+        "endLine": 56,
+        "endChar": 62
+      },
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c29e803_c1253fb0",
+        "filename": "docs/a-i.md",
+        "patchSetId": 57
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-12-13T13:36:09Z",
+      "side": 1,
+      "message": "whitespace to be deleted",
+      "range": {
+        "startLine": 139,
+        "startChar": 90,
+        "endLine": 139,
+        "endChar": 91
+      },
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84ad2cf2_606239a1",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 57
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-12-13T13:36:09Z",
+      "side": 1,
+      "message": "Can we clarify here what installer matches with this check?",
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
