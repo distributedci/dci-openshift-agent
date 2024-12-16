@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3aa6e5d9_367cb06a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 58
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2024-12-16T23:14:10Z",
+      "side": 1,
+      "message": "Beto, let\u0027s bump a version for this change to make it clear where the old assisted was used and when ABI is taking over.",
+      "revId": "d313d19dec41649586f06ba2a75e3fc49fdde1ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
