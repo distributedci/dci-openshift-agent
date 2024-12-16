@@ -65,6 +65,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "499c3d3a_6267588d",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 57
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-12-16T23:44:10Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "48bc9ce8_79c9071b",
+      "range": {
+        "startLine": 397,
+        "startChar": 15,
+        "endLine": 397,
+        "endChar": 64
+      },
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "60a58756_9b3bd3b0",
@@ -99,6 +123,30 @@
         "id": 667
       },
       "writtenOn": "2024-12-16T23:14:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60a58756_9b3bd3b0",
+      "range": {
+        "startLine": 56,
+        "startChar": 57,
+        "endLine": 56,
+        "endChar": 62
+      },
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe0d1946_6c21b734",
+        "filename": "docs/a-i.md",
+        "patchSetId": 57
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-12-16T23:44:10Z",
       "side": 1,
       "message": "Done",
       "parentUuid": "60a58756_9b3bd3b0",
@@ -159,6 +207,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "422292bc_4c78d2d1",
+        "filename": "docs/a-i.md",
+        "patchSetId": 57
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-12-16T23:44:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c29e803_c1253fb0",
+      "range": {
+        "startLine": 139,
+        "startChar": 90,
+        "endLine": 139,
+        "endChar": 91
+      },
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "84ad2cf2_606239a1",
@@ -172,6 +244,24 @@
       "writtenOn": "2024-12-13T13:36:09Z",
       "side": 1,
       "message": "Can we clarify here what installer matches with this check?",
+      "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17175535_c25045cb",
+        "filename": "plays/pre-run.yml",
+        "patchSetId": 57
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2024-12-16T23:44:10Z",
+      "side": 1,
+      "message": "Thanks, I think now is ok as these requirements are for all except ABI.",
+      "parentUuid": "84ad2cf2_606239a1",
       "revId": "1ead6f37ed53aebcc4cba4ffe2d89ad527503427",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
