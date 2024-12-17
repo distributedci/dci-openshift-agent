@@ -48,7 +48,7 @@
   until:
     - nodes_status == ['True']
   retries: 6
-  delay: 10
+  delay: 20
 
 - name: "Get cluster version information"
   kubernetes.core.k8s_info:
