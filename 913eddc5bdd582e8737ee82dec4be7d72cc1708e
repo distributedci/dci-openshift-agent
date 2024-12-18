@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7090ff22_6f196258",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 70
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2024-12-18T15:12:03Z",
+      "side": 1,
+      "message": "Pierre, this CR needes rebasing.",
+      "revId": "913eddc5bdd582e8737ee82dec4be7d72cc1708e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
