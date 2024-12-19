@@ -1,20 +1,24 @@
 ---
-- include_tasks: before-install.yml
+- name: "Before install"
+  ansible.builtin.include_tasks: before-install.yml
 
-- name: "installer: Check if .cache directory exists"
+- name: "Installer: Check if .cache directory exists"
   stat:
     path: "{{ ansible_user_dir }}/.cache"
   register: cache_directory
 
 - name: "installer: Cleanup old images"
+  when:
+    - cleanup_old_images | default(false) | bool
+    - cache_directory.stat.exists
   block:
     - name: "installer: Retrieve images older than max_images_age"
       find:
         paths: "{{ ansible_user_dir }}/.cache/openshift-installer/image_cache"
         file_type: file
         age: "{{ max_images_age | default('4w') | string }}"
-        recurse: no
-        use_regex: yes
+        recurse: false
+        use_regex: true
       register: old_images_to_delete
 
     - name: "installer: Delete images older than max_images_age"
@@ -22,9 +26,6 @@
         path: "{{ item.path }}"
         state: absent
       loop: "{{ old_images_to_delete.files }}"
-  when:
-    - cleanup_old_images | default(false) | bool
-    - cache_directory.stat.exists
 
 - name: "installer : Populate clusterosimage"
   set_fact:
@@ -68,33 +69,33 @@
 - name: "Public builds"
   when: hostvars.localhost.build != "nightly"
   block:
-  - name: "installer : Node preparation"
-    import_role:
-      name: redhatci.ocp.node_prep
+    - name: "Installer : Node preparation"
+      import_role:
+        name: redhatci.ocp.node_prep
 
-  - name: "installer : Run IPI installer"
-    environment: "{{ disconnected_envs | default({}) }}"
-    import_role:
-      name: redhatci.ocp.installer
+    - name: "Installer : Run IPI installer"
+      environment: "{{ disconnected_envs | default({}) }}"
+      import_role:
+        name: redhatci.ocp.installer
 
 - name: "Nightly builds"
   when: hostvars.localhost.build == "nightly"
   block:
-  - name: "Start artifact webserver"
-    vars:
-      cache_dir: >-
-        {{ hostvars.localhost.provision_cache_store |
-           default((hostvars.localhost.ansible_env.HOME, 'releases') |
-           join('/')) }}
-    containers.podman.podman_container:
-      name: "{{ hostvars.localhost.job_id }}"
-      image: quay.io/fedora/httpd-24:latest
-      state: started
-      publish_all: true
-      volumes:
-        - "{{ cache_dir }}:/var/www/html"
-    register: aw_container
-    delegate_to: localhost
+    - name: "Start artifact webserver"
+      vars:
+        cache_dir: >-
+          {{ hostvars.localhost.provision_cache_store |
+            default((hostvars.localhost.ansible_env.HOME, 'releases') |
+            join('/')) }}
+      containers.podman.podman_container:
+        name: "{{ hostvars.localhost.job_id }}"
+        image: quay.io/fedora/httpd-24:latest
+        state: started
+        publish_all: true
+        volumes:
+          - "{{ cache_dir }}:/var/www/html"
+      register: aw_container
+      delegate_to: localhost
 
   - name: "Get dynamic web port"
     set_fact:
@@ -134,7 +135,7 @@
   - name: "Allow HTTP traffic"
     when:
       - aw_zone | default('') != ''
-    firewalld:
+    ansible.posix.firewalld:
       port: "{{ aw_dynamic_port }}/tcp"
       permanent: false
       immediate: true
@@ -168,7 +169,7 @@
   - name: "Disallow HTTP traffic"
     when:
       - aw_zone | default('') != ''
-    firewalld:
+    ansible.posix.firewalld:
       port: "{{ aw_dynamic_port }}/tcp"
       permanent: false
       immediate: true
