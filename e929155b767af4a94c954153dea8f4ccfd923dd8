@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea3c641d_7dca6499",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2024-12-23T07:31:42Z",
+      "side": 1,
+      "message": "is 4.14 included? isn\u0027t it \u003c4.14 instead of \u003c\u003d4.14?",
+      "range": {
+        "startLine": 314,
+        "startChar": 224,
+        "endLine": 314,
+        "endChar": 238
+      },
+      "revId": "e929155b767af4a94c954153dea8f4ccfd923dd8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
