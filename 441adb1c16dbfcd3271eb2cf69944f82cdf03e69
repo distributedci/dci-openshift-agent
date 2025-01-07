@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2c659e5_b6c64777",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-07T10:46:37Z",
+      "side": 1,
+      "message": "Previous job is failing but the affected task in this change is passing: https://www.distributed-ci.io/jobs/f744ec7a-78fa-4d0c-a7dc-297a480b1040/jobStates?sort\u003ddate\u0026task\u003d31d1d64a-e207-44e1-b1b4-433df95d2417",
+      "revId": "441adb1c16dbfcd3271eb2cf69944f82cdf03e69",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
