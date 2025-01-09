@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86349243_e497fd78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-09T21:54:33Z",
+      "side": 1,
+      "message": "Please bump the version and the requirement for the redhatci.ocp RPM version as well.",
+      "revId": "bb297cb34a8937eef200e7f176a12ca053fc9fe9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
