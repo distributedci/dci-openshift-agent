@@ -3,6 +3,29 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "5d31803a_2ed72530",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-10T16:38:42Z",
+      "side": 1,
+      "message": "typo: available :)",
+      "range": {
+        "startLine": 10,
+        "startChar": 19,
+        "endLine": 10,
+        "endChar": 29
+      },
+      "revId": "c24a3d8d3edee0d1aa0e68bce87d965371982ec0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "c2228e43_339fd492",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 9
@@ -14,6 +37,23 @@
       "writtenOn": "2025-01-10T13:22:07Z",
       "side": 1,
       "message": "retest",
+      "revId": "c24a3d8d3edee0d1aa0e68bce87d965371982ec0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b09806f0_8ade8595",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-10T16:38:42Z",
+      "side": 1,
+      "message": "LGTM",
       "revId": "c24a3d8d3edee0d1aa0e68bce87d965371982ec0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
