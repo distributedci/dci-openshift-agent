@@ -33,6 +33,24 @@
       "message": "I\u0027d clarify that this is used for cluster-compare tool.",
       "revId": "bb297cb34a8937eef200e7f176a12ca053fc9fe9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d4f3b19_dbf052b0",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-10T17:54:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "763120c7_4fa3e60b",
+      "revId": "bb297cb34a8937eef200e7f176a12ca053fc9fe9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
