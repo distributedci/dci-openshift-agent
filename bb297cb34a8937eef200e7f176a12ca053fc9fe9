@@ -16,6 +16,23 @@
       "message": "Please bump the version and the requirement for the redhatci.ocp RPM version as well.",
       "revId": "bb297cb34a8937eef200e7f176a12ca053fc9fe9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "763120c7_4fa3e60b",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-10T09:20:21Z",
+      "side": 1,
+      "message": "I\u0027d clarify that this is used for cluster-compare tool.",
+      "revId": "bb297cb34a8937eef200e7f176a12ca053fc9fe9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
