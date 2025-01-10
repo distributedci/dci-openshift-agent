@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4eaf02c2_9ff77052",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 84
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-10T09:23:11Z",
+      "side": 1,
+      "message": "LGTM but as specified in Zuul output, needs to pass ansible-lint",
+      "revId": "ea4c0db4999ffe1f879a614dd2bf0e300daceefb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
