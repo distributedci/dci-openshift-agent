@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d2480d0_e2e46abf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-17T11:35:46Z",
+      "side": 1,
+      "message": "This is working in the scenario where we found the original issue - https://www.distributed-ci.io/jobs/2fa10b28-4881-4ab4-b4c0-0fd5a174f310/jobStates?sort\u003ddate\u0026task\u003dd244c1b7-c67e-4b48-b88e-6c384a0604c1 (the job failed in a different task not related to this change), so this is ready",
+      "revId": "75de60c613710f1ff4a8de22bd583b100a86f665",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
