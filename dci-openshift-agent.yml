@@ -375,6 +375,7 @@
                 KUBECONFIG: "{{ hub_kubeconfig_path }}"
           when:
             - (install_type | default('ipi')) == 'acm'
+            - dci_main == 'install'
       rescue: *teardown_failure
 
 # Step 3a-1 : installing
@@ -396,6 +397,7 @@
             file: plays/abi-install.yml
           when:
             - (install_type | default('ipi')) == 'abi'
+            - dci_main == 'install'
       rescue: *teardown_failure
 
 # Step 3a-1 : installing
