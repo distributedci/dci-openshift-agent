@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1e4be9d_27ab3a99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-20T18:03:44Z",
+      "side": 1,
+      "message": "This is to fix latest issue in CILAB-1591",
+      "revId": "750c4e4c29a833c139e276c2a30c616739fa79eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
