@@ -16,6 +16,23 @@
       "message": "This is to fix latest issue in CILAB-1591",
       "revId": "750c4e4c29a833c139e276c2a30c616739fa79eb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67c2f9cb_e6a43911",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-20T18:48:45Z",
+      "side": 1,
+      "message": "lgtm",
+      "revId": "750c4e4c29a833c139e276c2a30c616739fa79eb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
