@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d487a53_cadb19ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-21T14:26:07Z",
+      "side": 1,
+      "message": "Sorry, I missed adding information about tests done:\n\n- Upgrade from 4.17.0-0.nightly-2025-01-16-122318 to 4.18.0-rc.5 -\u003e https://www.distributed-ci.io/jobs/3b348196-0695-4467-8f25-04b6f2cf55a4/jobStates/?sort\u003ddate\u0026task\u003d8e352aa5-6ae2-4488-9671-8bb39f807865 - IPI Connected\n- Upgrade from 4.12.0-0.nightly-2025-01-17-100845 to 4.13.0-0.nightly-2025-01-11-022931 -\u003e https://www.distributed-ci.io/jobs/88e61d24-a519-4133-a8ce-2d6b4de89dc1/jobStates?sort\u003ddate\u0026task\u003d39f32a2b-5d29-445f-8772-5c9b67692ec4 - IPI disconnected\n- Upgrade from 4.17.0-0.nightly-2025-01-16-122318 to 4.18.0-rc.5 -\u003e https://www.distributed-ci.io/jobs/018b645f-79d3-4ea2-87de-1820bbb7d317/jobStates?sort\u003ddate\u0026task\u003d424e1fea-497f-47a6-a479-de17f8d0b2e7 - IPI connected\n- Upgrade from 4.17.0-0.nightly-2025-01-16-122318 to 4.18.0-rc.5 - https://www.distributed-ci.io/jobs/6abaaeee-df3e-4b9f-b1cb-3d4d96961ed9/jobStates?sort\u003ddate - ABI connected\n- Upgrade already completed, no action. https://www.distributed-ci.io/jobs/8421e806-4c28-4211-b613-577983bcde29/jobStates?sort\u003ddate\u0026task\u003d848b6782-b16b-4348-b17d-687c2ea8e533\n- Upgrade from 4.17.0-0.nightly-2025-01-16-122318 to 4.18.0-rc.5 - https://www.distributed-ci.io/jobs/3b348196-0695-4467-8f25-04b6f2cf55a4/jobStates?sort\u003ddate\u0026task\u003d8e352aa5-6ae2-4488-9671-8bb39f807865 - IPI Connected\n- Upgrade from 4.14.0-0.nightly-2025-01-19-193149 to 4.15.42 then OpenShift 4.16 nightly 2025-01-19 https://www.distributed-ci.io/jobs/0df4b58a-527d-4c78-a5ed-644e4c611be3/jobStates?sort\u003ddate\u0026task\u003dc0dce270-9ecc-4741-a62b-6bb51acef785 - EUS upgrade disconnected \n- Upgrade from 4.14.0-0.nightly-2025-01-20-073249 to 4.15.42 then OpenShift 4.16 nightly 2025-01-20 - https://www.distributed-ci.io/jobs/12688cce-9723-4e63-b17d-b39a20b4b60c/jobStates?sort\u003ddate\u0026task\u003d07485957-92a5-46c3-9e6a-9f231815042c - EUS upgrade: true\" - IPI connected",
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4af2a107_5e0366df",
