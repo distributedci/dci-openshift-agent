@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b60901c_300bcdc7",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-21T19:25:53Z",
+      "side": 0,
+      "message": "Beto, we talked about this yesterday, and I have a question, now that this part is removed would still be possible to upgrade a disconnected cluster without specifying a target version? I wonder if at that point this is required to calculate the target version? Or only the tasks in plays/upgrade-artifacts.yml are required for that?",
+      "revId": "fc0e334d8cf74c3e58e86831e9ae860288b0f8df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

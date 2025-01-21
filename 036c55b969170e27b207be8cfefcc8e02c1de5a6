@@ -52,6 +52,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee13bcd4_d667e68e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-21T19:25:53Z",
+      "side": 1,
+      "message": "Nice work Beto! I just spotted minor typos and a question before giving a +2",
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4af2a107_5e0366df",
@@ -95,6 +112,40 @@
         "endLine": 20,
         "endChar": 45
       },
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e29efc0_ae3b832a",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-21T19:25:53Z",
+      "side": 1,
+      "message": "typo: Validate the provision ...",
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd0aa941_4828163d",
+        "filename": "plays/upgrade.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-21T19:25:53Z",
+      "side": 1,
+      "message": "Typo: Prepare ...",
       "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
