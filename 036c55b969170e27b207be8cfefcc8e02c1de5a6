@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01742fb7_ed5700d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-21T07:44:03Z",
+      "side": 1,
+      "message": "Great work here Beto, just a question that I have. And also, I wonder if you can run a job in connected mode to confirm it works there too (unless you have already done that). Thanks!",
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4af2a107_5e0366df",
+        "filename": "plays/upgrade-artifacts.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-21T07:44:03Z",
+      "side": 1,
+      "message": "According to the current code, isn\u0027t this \u00274.15\u0027?",
+      "range": {
+        "startLine": 20,
+        "startChar": 41,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
