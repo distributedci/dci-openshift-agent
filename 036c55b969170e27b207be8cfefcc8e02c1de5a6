@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "21658d1b_84a6f688",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-21T18:17:28Z",
+      "side": 1,
+      "message": "ABI - EUS Connected https://www.distributed-ci.io/jobs?limit\u003d20\u0026offset\u003d0\u0026sort\u003d-created_at\u0026where\u003dpipeline_id:9513512f-7b23-4ff4-8792-578833ac25b4,state:active",
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4af2a107_5e0366df",
