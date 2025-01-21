@@ -193,3 +193,15 @@ all:
       username: ### USERNAME ###
       password: ### PASSWORD ###
 ```
+
+## Disconnected environments
+
+When working in restricted networks the DCI Agents must run a set of preliminary actions that otherwise would be run by the network administrators in order to set up the conditions to run Disconnected environment deployments.
+
+For the ZTP use cases, this involves mirroring the release images to a local registry where they can be accessed by both the hub and the spoke clusters.
+
+Furthermore, for the deployment to work, a Cluster Image Set must exist in the hub cluster with a name that matches the one specified in the ClusterImageSetNameRef variable from the Site Config manifests.
+
+The logic for these two operations is part of the dci-openshift-agent and is triggered by the presence of the dci_disconnected variable set to "true" in combination with the acm_cluster_type variable set to "ztp-spoke".
+
+No other "disconnected environment" specific variables are needed, since the credentials to the site config manifests are taken from the dci_gitops_sites_repo variable, and the OCP release number is infered from the DCI job components.
