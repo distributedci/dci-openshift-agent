@@ -73,6 +73,30 @@
       },
       "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc715cc3_40d2d958",
+        "filename": "plays/upgrade-artifacts.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-21T18:17:50Z",
+      "side": 1,
+      "message": "true, fixed. thanks",
+      "parentUuid": "4af2a107_5e0366df",
+      "range": {
+        "startLine": 20,
+        "startChar": 41,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "036c55b969170e27b207be8cfefcc8e02c1de5a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
