@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3806e387_f8c7fc3e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-22T07:57:27Z",
+      "side": 1,
+      "message": "I would not include a depends-on to a private repository here, it should be in the opposite direction: in dci-labs/inventories, add the depends-on clause to this public change",
+      "revId": "a37ecaa4cc842260c4d7aa9521fd3419644da126",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d83145aa_c2c5d3f1",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-22T07:57:27Z",
+      "side": 1,
+      "message": "Somehow this check is not passing.",
+      "revId": "a37ecaa4cc842260c4d7aa9521fd3419644da126",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
