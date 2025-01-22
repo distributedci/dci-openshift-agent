@@ -16,6 +16,23 @@
       "message": "LGTM, since there are more reviewers, I\u0027ll wait for their vote before giving a +2",
       "revId": "fa4a5dbef77696a91211198b6e041e69bd831f40",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48e851ef_3b919bbc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-22T13:58:41Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "fa4a5dbef77696a91211198b6e041e69bd831f40",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
