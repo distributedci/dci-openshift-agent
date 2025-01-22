@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f22729e_ece95f05",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-22T11:39:22Z",
+      "side": 1,
+      "message": "I\u0027ll do as you say.",
+      "parentUuid": "3806e387_f8c7fc3e",
+      "revId": "a37ecaa4cc842260c4d7aa9521fd3419644da126",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d83145aa_c2c5d3f1",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-01-22T07:57:27Z",
       "side": 1,
       "message": "Somehow this check is not passing.",
+      "revId": "a37ecaa4cc842260c4d7aa9521fd3419644da126",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb666327_86669ddc",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-22T11:39:22Z",
+      "side": 1,
+      "message": "Yes. I checked it with Beto yesterday. The problem is this ansible block is for connected environments, hence the \"not (dci_disconnected | default(false) | bool)\".\n\nI should have added the ztp-spoke cluster type to the line #9.",
+      "parentUuid": "d83145aa_c2c5d3f1",
       "revId": "a37ecaa4cc842260c4d7aa9521fd3419644da126",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
