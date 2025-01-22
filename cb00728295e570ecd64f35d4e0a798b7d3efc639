@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc29bf0a_80548063",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-22T08:05:40Z",
+      "side": 1,
+      "message": "Does this change require a version bump in this agent? As it was said that the collections version will be bumped too",
+      "revId": "cb00728295e570ecd64f35d4e0a798b7d3efc639",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
