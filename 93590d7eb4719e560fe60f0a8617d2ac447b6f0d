@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "511f720e_0482607c",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-23T19:12:53Z",
+      "side": 1,
+      "message": "It is correct, because the minor version is where the eject.yml is introduced. The patch version is generated automatically through epoch time and commit.",
+      "parentUuid": "b549c32f_5be25147",
+      "revId": "93590d7eb4719e560fe60f0a8617d2ac447b6f0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ec96dcc_11b188cd",
         "filename": "dci-openshift-agent.spec",
         "patchSetId": 4
