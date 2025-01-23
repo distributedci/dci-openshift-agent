@@ -69,6 +69,24 @@
       "message": "Isn\u0027t the same as the entry below?",
       "revId": "93590d7eb4719e560fe60f0a8617d2ac447b6f0d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff4e0828_8cb1fd1e",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-23T20:11:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec96dcc_11b188cd",
+      "revId": "93590d7eb4719e560fe60f0a8617d2ac447b6f0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
