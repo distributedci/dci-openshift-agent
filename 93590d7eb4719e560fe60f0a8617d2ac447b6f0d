@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b549c32f_5be25147",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-23T18:23:34Z",
+      "side": 1,
+      "message": "Beto, maybe is it \u003e\u003d 1.0.1? I see the latest rpm is ansible-collection-redhatci-ocp-1.0.1737564618-202501221650gitc5ac9390.el8.noarch",
+      "revId": "93590d7eb4719e560fe60f0a8617d2ac447b6f0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ec96dcc_11b188cd",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-23T18:23:34Z",
+      "side": 1,
+      "message": "Isn\u0027t the same as the entry below?",
+      "revId": "93590d7eb4719e560fe60f0a8617d2ac447b6f0d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
