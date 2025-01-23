@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b0a0946_0f592cf1",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-23T10:07:59Z",
+      "side": 1,
+      "message": "I guess the OCP version that is installed in the spoke cluster is the one extracted from the DCI component, is this correct?\nThen, if the clusterImageSet is retrieved from the SiteConfig in the collections change (https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/520/files#diff-9b70aa2204ce516c4e5ee720dd2717be68213ca37e3f0a47538dd316a6f32fcbR31), my question is: how do you ensure that the OCP component that you\u0027re providing here matches with the clusterImageSet that you\u0027ve defined in the SiteConfig? I suppose both have to be the same, right?",
+      "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

@@ -69,6 +69,24 @@
       "parentUuid": "d83145aa_c2c5d3f1",
       "revId": "a37ecaa4cc842260c4d7aa9521fd3419644da126",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbb67f99_dc042abf",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-23T10:07:59Z",
+      "side": 1,
+      "message": "Clarified, thanks.\nThen, if this change implies modifications in the connected workflow, we should also test this in connected.",
+      "parentUuid": "fb666327_86669ddc",
+      "revId": "a37ecaa4cc842260c4d7aa9521fd3419644da126",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
