@@ -16,6 +16,24 @@
       "message": "Do you know if ansible_env.PATH provides the right PATH for the right host? i.e. is there a guarantee that ansible_env.PATH is unique per target host rather than control host?\n\nWhat\u0027s the benefit of defining paths *after* ansible_env.PATH ? shouldn\u0027t those be already included\n\n    ❯ unset PATH; /usr/bin/bash --norc --noprofile -c \u0027echo $PATH\u0027\n    /usr/local/bin:/usr/bin",
       "revId": "0712ff81d78f7082be3be5116080a28d6868b274",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e48581d_1a4ffcc2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-27T20:11:53Z",
+      "side": 1,
+      "message": "Good points.\n\n- I removed the extra paths that should be already in place.\n- If the ansible_env.PATH is different across host, adding this path should affect as it automatically fallback to the other available entries in the PATH list.",
+      "parentUuid": "6b680c16_b138d773",
+      "revId": "0712ff81d78f7082be3be5116080a28d6868b274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
