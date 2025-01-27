@@ -16,6 +16,23 @@
       "message": "I\u0027m afraid we are not using this step in any of the pipelines we currently have.\nThis particular task used to be part of an upgrade to 4.8.\n\nThat storage_upgrade_tester setting was removed in this PR: https://github.com/dci-labs/dallas-pipelines/pull/749\n\nPerhaps we should remove this task?",
       "revId": "cbf970d68a441268ffdd2be26f62416b61457c21",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d8ced6b_1c79f696",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-27T17:40:55Z",
+      "side": 1,
+      "message": "Even when we are not using it, is part of the capabilities of the upgrade, let\u0027s go with ahead with your proposal and keep the task 👍",
+      "revId": "cbf970d68a441268ffdd2be26f62416b61457c21",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
