@@ -65,6 +65,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f5af191_20d70c1a",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-27T09:37:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4309de68_c1eedeeb",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 50
+      },
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5c7043c5_79d7ee5c",
@@ -112,6 +136,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6cb12cd_ccda2746",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-27T09:37:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5c7043c5_79d7ee5c",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 53
+      },
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1f68eeb4_811267b9",
@@ -147,6 +195,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdeb6978_498789a9",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-27T09:37:51Z",
+      "side": 1,
+      "message": "My reasoning to put the task here was that on a production environment the most likely scenario is that the jumpbox would not be in the DMZ, so any image mirroring would have been done before running the Spoke deployment operations so, in the context of DCI, mirroring would be more of a pre-run operation than an install one. Hence the separation.\n\nIf you still believe it makes more sense to move the mirroring to the role just let me know.",
+      "parentUuid": "1f68eeb4_811267b9",
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5c7c02a7_451264af",
@@ -177,6 +243,24 @@
       "writtenOn": "2024-11-20T07:44:36Z",
       "side": 1,
       "message": "Ack",
+      "parentUuid": "5c7c02a7_451264af",
+      "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb83911f_8f6a81f6",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 23
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-27T09:37:51Z",
+      "side": 1,
+      "message": "No, you\u0027re right. This variable is not needed since the local registry URLs are set from the facts in line 59.\n\nThanks for the catch.",
       "parentUuid": "5c7c02a7_451264af",
       "revId": "9c39296be1a739f56727eb81bb6debbd4871b130",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
