@@ -16,6 +16,24 @@
       "message": "I guess the OCP version that is installed in the spoke cluster is the one extracted from the DCI component, is this correct?\nThen, if the clusterImageSet is retrieved from the SiteConfig in the collections change (https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/520/files#diff-9b70aa2204ce516c4e5ee720dd2717be68213ca37e3f0a47538dd316a6f32fcbR31), my question is: how do you ensure that the OCP component that you\u0027re providing here matches with the clusterImageSet that you\u0027ve defined in the SiteConfig? I suppose both have to be the same, right?",
       "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "899f94a2_6065bc39",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-28T11:55:15Z",
+      "side": 1,
+      "message": "This comes from a coment from Beto. His idea when stating we should use the gitops repo as the source of truth was not that the gitops repo should indicate the OCP release to deploy, but that we should take the name of the image set from the gitops repo and create the CIS based on the OCP release indicated in the OCP component, and the name specified in the site config manifest.\n\nThus, we provide the ztp.setup_cluster_image_set role with the release image url and the repo specs, and the role retrieves the list of CIS and creates them accordingly.\n\nHope this clarifies the topic.",
+      "parentUuid": "1b0a0946_0f592cf1",
+      "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
