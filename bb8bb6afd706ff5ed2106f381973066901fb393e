@@ -33,6 +33,24 @@
       "message": "If this is only a requirement for new versions, should this be only included for a specific subset of OCP versions?",
       "revId": "bb8bb6afd706ff5ed2106f381973066901fb393e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33353b59_17b31f78",
+        "filename": "plays/setup-cnv.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-28T14:06:13Z",
+      "side": 1,
+      "message": "This is mandatory for new versions (which we cannot use because they have nested APIs). For the previous version, defining it does not affect it. The above job was with the old version. Thanks!",
+      "parentUuid": "011dde2f_50061342",
+      "revId": "bb8bb6afd706ff5ed2106f381973066901fb393e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
