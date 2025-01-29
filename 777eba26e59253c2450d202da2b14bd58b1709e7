@@ -34,6 +34,24 @@
       "parentUuid": "1b0a0946_0f592cf1",
       "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c4c975b_3150a053",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-29T10:46:56Z",
+      "side": 1,
+      "message": "Okey, so, just to confirm that I\u0027ve understood everything:\n\n- The release image we provide to ztp.setup_cluster_image_set is based on the DCI component (e.g. if DCI component points to OCP 4.16.20, the release image would be the one for OCP 4.16.20)\n- The ClusterImageSet name that we save in the SiteConfig of the gitops repository is not really meaningful, because the idea is to use that name to create a new ClusterImageSet with the release image we\u0027re providing. I mean, the CIS name should match the name of the OCP release we\u0027re using, but if this is not true, it doesn\u0027t really mind. E.g. in this job: https://www.distributed-ci.io/jobs/cb336400-5c7e-4b3a-932c-58c2f8a72922/jobStates?sort\u003ddate\u0026task\u003d8e21f38a-c6de-482f-bc90-487c88b05367, we extract this CIS name: img-sno1-4.16, but this matches OpenShift 4.16 nightly 2025-01-21 10:50, which is the OCP component we have\n- Consequently, just to confirm, does it mean that the really source of truth is the OCP component? Could we use a generic CIS name in the SiteConfig so that we match to \"any\" OCP component that may be used in the DCI job?\n\nIf that\u0027s true, I think it should be worth to document all this, so that people have this workflow clear.",
+      "parentUuid": "899f94a2_6065bc39",
+      "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
