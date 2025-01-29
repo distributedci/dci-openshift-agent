@@ -86,6 +86,23 @@
       "parentUuid": "9cc11e07_2c5f2f63",
       "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5d70d3e_e5685f77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-29T19:14:50Z",
+      "side": 1,
+      "message": "After discussing with Beto, we believe it is safe to go ahead with this change, it is required to have a cluster in the inventory, so we shouldn\u0027t have a case where it is not defined.",
+      "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
