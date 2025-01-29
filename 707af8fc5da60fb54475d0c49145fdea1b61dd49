@@ -33,6 +33,23 @@
       "message": "Thanks Beto!",
       "revId": "707af8fc5da60fb54475d0c49145fdea1b61dd49",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "612bcf9b_22d2c285",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-29T16:07:26Z",
+      "side": 1,
+      "message": "My bad, I missed this. It requires a change here to 1.2.0",
+      "revId": "707af8fc5da60fb54475d0c49145fdea1b61dd49",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
