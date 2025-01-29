@@ -33,6 +33,24 @@
       "message": "Not sure why this is needed, since the rest of the name is randomized already.\nSame with the rest of the tmp directories in this change.",
       "revId": "3bf22c3ebb79c901f51b18e3e0b5fb0e8bd36e2a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd2afa77_3750842f",
+        "filename": "plays/log-dir.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-29T23:20:10Z",
+      "side": 1,
+      "message": "That was just in case job_id is not defined, but making the default \"\" should be enough.",
+      "parentUuid": "dc7782f9_9b193830",
+      "revId": "3bf22c3ebb79c901f51b18e3e0b5fb0e8bd36e2a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
