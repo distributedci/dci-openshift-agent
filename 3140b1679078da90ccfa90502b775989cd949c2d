@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b9bac51_91cdcabe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-29T10:32:16Z",
+      "side": 1,
+      "message": "From my side, this looks fine, I also had issues with some partner deployments that didn\u0027t have a proper PATH variable and this should help for that",
+      "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
