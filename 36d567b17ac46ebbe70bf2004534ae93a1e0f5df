@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "072156b9_28612a84",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-01-29T10:49:28Z",
+      "side": 1,
+      "message": "I believe the ABI test did not run because of a minor typo, it should be TestBos2 :)\n\nLGTM",
+      "revId": "36d567b17ac46ebbe70bf2004534ae93a1e0f5df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
