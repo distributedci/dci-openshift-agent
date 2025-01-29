@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a006f7b_76af3149",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 18
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-29T00:17:52Z",
+      "side": 1,
+      "message": "abi-install is set to run in localhost. This may not be needed.",
+      "revId": "fd8c3b7f4078bc8c94ecd2adf43b105403e06591",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
