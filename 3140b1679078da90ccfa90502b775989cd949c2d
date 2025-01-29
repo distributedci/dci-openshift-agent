@@ -50,6 +50,24 @@
       "message": "The dci_cluster_configs_dir depends on the var `cluster` I\u0027d think there is no way to run the agent without that variable, but wondering if there is any case where `cluster` may not be defined, as it could cause an issue with `dci_cluster_configs_dir`",
       "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cc11e07_2c5f2f63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-29T17:30:08Z",
+      "side": 1,
+      "message": "Yeah, I do not think we have such cases. This is highly tied to how we call the playbooks from the DOA. It does not affect whether the playbook or roles are used separately. \n\nIn the remote possibility that the cluster is not defined and the agent runs, it will point to $HOME/cluster-configs-, without binaries or a non-existing directory, it will fallback to other path entries.",
+      "parentUuid": "a2bb2bcb_7cc52c02",
+      "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
