@@ -68,6 +68,24 @@
       "parentUuid": "a2bb2bcb_7cc52c02",
       "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3437d953_4df98972",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-29T18:04:05Z",
+      "side": 1,
+      "message": "I guess we don\u0027t have that case, and I believe dci-pipeline injects it from pipeline or inventory.\n\nI don\u0027t think it will result in `$HOME/cluster-configs-` because it will fail with cluster not defined as it does not have a default.\n\nI\u0027ll say, let\u0027s due the best to test different scenarios to avoid missing cases.",
+      "parentUuid": "9cc11e07_2c5f2f63",
+      "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
