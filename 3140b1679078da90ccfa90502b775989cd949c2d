@@ -33,6 +33,23 @@
       "message": "From my side, this looks fine, I also had issues with some partner deployments that didn\u0027t have a proper PATH variable and this should help for that",
       "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2bb2bcb_7cc52c02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-29T16:14:48Z",
+      "side": 1,
+      "message": "The dci_cluster_configs_dir depends on the var `cluster` I\u0027d think there is no way to run the agent without that variable, but wondering if there is any case where `cluster` may not be defined, as it could cause an issue with `dci_cluster_configs_dir`",
+      "revId": "3140b1679078da90ccfa90502b775989cd949c2d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
