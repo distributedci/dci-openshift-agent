@@ -52,6 +52,24 @@
       "parentUuid": "899f94a2_6065bc39",
       "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b5fddca_f28bdae8",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-01-29T11:00:33Z",
+      "side": 1,
+      "message": "It is exactly as you describe it. I have my reservations on whether we should allow the gitops repository to indicate OCP release we really want to deploy.\n\nAn alternative way would be to have the ClusterImageSet created by the gitops operator and have the DCI agent preparsing the object and mirroring the image.\n\nIn the end we\u0027re facing a chicken-egg dilemma, because any solution we want to go with, entails the agent reading data from the gitops repository, but also we need to be able to provide a means to control the installed versions by means of the DCI components.\n\nI can extend the ZTP documentation in the dci-openshift-agent with this information, but I\u0027m not sure this will have enough visibility. I had plans to document this process from the blog.",
+      "parentUuid": "2c4c975b_3150a053",
+      "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
