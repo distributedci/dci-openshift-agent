@@ -224,6 +224,9 @@
             - name: Run the error process
               include_tasks: plays/failure.yml
 
+            - name: Run agent cleanup
+              include_tasks: plays/agent-cleanup.yml
+
 # Step 1b : hook pre run
 - name: 'Launch hook pre-run'
   hosts: localhost
@@ -356,6 +359,9 @@
           always:
             - name: Run the failure process
               include_tasks: plays/failure.yml
+
+            - name: Run agent cleanup
+              include_tasks: plays/agent-cleanup.yml
 
 # Step 3a-1 : installing
 - name: 'Launch ACM install'
@@ -653,6 +659,9 @@
         - name: Run the success
           include_tasks: plays/success.yml
 
+        - name: Run agent cleanup
+          include_tasks: plays/agent-cleanup.yml
+
         - name: Teardown on success
           when: dci_teardown_on_success | bool
           block:
@@ -664,5 +673,4 @@
 
             - name: Run the teardown play
               include_tasks: plays/teardown.yml
-
 ...
