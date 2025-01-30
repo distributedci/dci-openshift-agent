@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e633b7ce_0ae9c9bd",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 662,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-30T23:18:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8442bd56_6a9a169f",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3ce4387_f96f9a98",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-01-30T22:50:53Z",
       "side": 1,
       "message": "Correct me if I\u0027m wrong but this will generate a random value between: /tmp/hps_0 and /tmp/hps_999, right? I think using password is a better option as with random is more likely to obtain the same value.",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7260355e_e61f6d58",
+        "filename": "plays/get-cluster-pullsecret.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-30T23:18:09Z",
+      "side": 1,
+      "message": "yeah, that will generate numbers in that range, but those are different. Those are too short, so changing this to use random. Thanks!",
+      "parentUuid": "d3ce4387_f96f9a98",
       "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -52,6 +88,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d36eed81_1229bc8a",
+        "filename": "plays/migrate-icsp.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-30T23:18:09Z",
+      "side": 1,
+      "message": "good eye!",
+      "parentUuid": "b23016b5_ffd04389",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "490e6b43_01845fc7",
@@ -65,6 +119,24 @@
       "writtenOn": "2025-01-30T22:58:31Z",
       "side": 1,
       "message": "This one is missing in the cleanup\n\n    bundle_tmp_dir",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "108e70b6_33af7a9f",
+        "filename": "plays/upstream-sriov-bundle.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-30T23:18:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "490e6b43_01845fc7",
       "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
