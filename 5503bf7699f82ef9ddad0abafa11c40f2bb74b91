@@ -33,6 +33,40 @@
       "message": "Correct me if I\u0027m wrong but this will generate a random value between: /tmp/hps_0 and /tmp/hps_999, right? I think using password is a better option as with random is more likely to obtain the same value.",
       "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b23016b5_ffd04389",
+        "filename": "plays/migrate-icsp.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-30T22:58:31Z",
+      "side": 1,
+      "message": "This is not included in the cleanup\n\n    icsp_tmp_dir",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "490e6b43_01845fc7",
+        "filename": "plays/upstream-sriov-bundle.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-30T22:58:31Z",
+      "side": 1,
+      "message": "This one is missing in the cleanup\n\n    bundle_tmp_dir",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
