@@ -70,6 +70,24 @@
       "parentUuid": "2c4c975b_3150a053",
       "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b830b2ea_0570e0c9",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-30T09:03:32Z",
+      "side": 1,
+      "message": "Agree on going ahead with what we\u0027re proposing in this change. Maybe it would be good to have a small reference in the repo docs regarding this fact, and then we can extend in a blog post.",
+      "parentUuid": "6b5fddca_f28bdae8",
+      "revId": "777eba26e59253c2450d202da2b14bd58b1709e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
