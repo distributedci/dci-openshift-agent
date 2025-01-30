@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d764541_c8fc1b0d",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-30T14:25:26Z",
+      "side": 1,
+      "message": "Thanks!, I placed it just after running the seccess hook in case those tasks still require the agent\u0027s files.",
+      "parentUuid": "cbf4f999_6736c892",
+      "revId": "8749931f3c2668288b50038ca9ce438ae632850d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e15f32cc_f03364a8",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-01-30T09:07:44Z",
       "side": 1,
       "message": "Should this also use `default(\u0027\u0027)`, same than in the other cases?",
+      "revId": "8749931f3c2668288b50038ca9ce438ae632850d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94ad944c_ff76d3f6",
+        "filename": "plays/get-cluster-pullsecret.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-01-30T14:25:26Z",
+      "side": 1,
+      "message": "Not here, in the other cases we are using the tmpfile module that provides the random ingredient to the file name. Cheers",
+      "parentUuid": "e15f32cc_f03364a8",
       "revId": "8749931f3c2668288b50038ca9ce438ae632850d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
