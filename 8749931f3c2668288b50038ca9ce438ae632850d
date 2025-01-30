@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cbf4f999_6736c892",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-30T09:07:44Z",
+      "side": 1,
+      "message": "To always run this task, it should be placed behind success playbook, because teardown could not be launched if `dci_teardown_on_success` is false",
+      "revId": "8749931f3c2668288b50038ca9ce438ae632850d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e15f32cc_f03364a8",
+        "filename": "plays/get-cluster-pullsecret.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-01-30T09:07:44Z",
+      "side": 1,
+      "message": "Should this also use `default(\u0027\u0027)`, same than in the other cases?",
+      "revId": "8749931f3c2668288b50038ca9ce438ae632850d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
