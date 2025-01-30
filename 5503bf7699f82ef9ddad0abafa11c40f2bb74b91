@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8442bd56_6a9a169f",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 662,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-30T22:50:53Z",
+      "side": 1,
+      "message": "Wouldn\u0027t be better to run this task after the teardown? So is consistent with failure and error\u0027s tasks?",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3ce4387_f96f9a98",
+        "filename": "plays/get-cluster-pullsecret.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-30T22:50:53Z",
+      "side": 1,
+      "message": "Correct me if I\u0027m wrong but this will generate a random value between: /tmp/hps_0 and /tmp/hps_999, right? I think using password is a better option as with random is more likely to obtain the same value.",
+      "revId": "5503bf7699f82ef9ddad0abafa11c40f2bb74b91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}

@@ -51,6 +51,24 @@
       "parentUuid": "dc7782f9_9b193830",
       "revId": "3bf22c3ebb79c901f51b18e3e0b5fb0e8bd36e2a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1b463aa_17717870",
+        "filename": "plays/log-dir.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-30T22:50:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd2afa77_3750842f",
+      "revId": "3bf22c3ebb79c901f51b18e3e0b5fb0e8bd36e2a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
