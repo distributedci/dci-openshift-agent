@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b217312_6fe0ad50",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-01-31T19:49:02Z",
+      "side": 1,
+      "message": "Completed testing on the following pipelines:\n    - TestDallas: ocp-4.16-vanilla-abi - https://www.distributed-ci.io/jobs/13012337-39fa-4c2c-a4a8-942cfcb48ba3\n    - TestDallas: ocp-4.14-vanilla-abi openshift-vanilla:ansible_extravars\u003ddci_workarounds:OCPBUGS-49157, - https://www.distributed-ci.io/jobs/520cf9aa-02de-4202-b377-c36e39ffeec7\n    - TestDallas: ocp-4.14-vanilla - https://www.distributed-ci.io/jobs/c9a5c610-faa0-4635-90a6-e3dc722c2998\n    - TestBos2: virt - https://www.distributed-ci.io/jobs/a8e49f08-3f14-4c3b-947d-9d520e008b9e",
+      "revId": "bd7d6f65cb30f62d125100a42e0c19d946a33f1f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
