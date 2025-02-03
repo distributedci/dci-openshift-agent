@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "963004e2_ec3664d4",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 88
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-03T17:29:49Z",
+      "side": 1,
+      "message": "Why the difference with this one?",
+      "revId": "3e24aca913a206b49b7b47826e77a9097bbb88d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
