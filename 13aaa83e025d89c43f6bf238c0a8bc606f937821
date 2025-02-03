@@ -34,6 +34,24 @@
       "parentUuid": "7fb5f8ee_ab4481e4",
       "revId": "13aaa83e025d89c43f6bf238c0a8bc606f937821",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74c29001_a155e204",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 87
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-03T15:43:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "513306e9_5cce019a",
+      "revId": "13aaa83e025d89c43f6bf238c0a8bc606f937821",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
