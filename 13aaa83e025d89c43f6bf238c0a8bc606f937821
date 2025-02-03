@@ -16,6 +16,24 @@
       "message": "I have some reservartions with this task.\n\nThe way I understand it, if you\u0027re running a regular dci job, this task makes the presence of the jumphost in the inventory optional. This is because in regular dci jobs the jumphost and the localhost are the same one.\n\nBut what\u0027 will happen when we run a dci-podman job over an inventory with a missing jumphost?",
       "revId": "13aaa83e025d89c43f6bf238c0a8bc606f937821",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "513306e9_5cce019a",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 87
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-03T15:39:52Z",
+      "side": 1,
+      "message": "Good point, I have to update the documentation, the jumphost host become mandatory in the inventory.\nThis task just add it in case it doesn\u0027t exist, to have a backward compatibility with all existing pipelines.",
+      "parentUuid": "7fb5f8ee_ab4481e4",
+      "revId": "13aaa83e025d89c43f6bf238c0a8bc606f937821",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
