@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "471a260e_e794cdc2",
+        "filename": "README.md",
+        "patchSetId": 89
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-04T14:05:34Z",
+      "side": 1,
+      "message": "yes, It adds complexity to do it differently, maybe in second step in can improve that",
+      "parentUuid": "c930dd17_4887985c",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "607e4df3_ee41bc33",
@@ -83,6 +101,24 @@
       "side": 1,
       "message": "Yes all temporary files are now store in the tmp directory of the home, if files exist after a deployment on this directory, we miss something in the teardown 😄",
       "parentUuid": "607e4df3_ee41bc33",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ec49dac_a5794da6",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 89
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-04T14:05:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6423de38_aacd75e1",
       "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
