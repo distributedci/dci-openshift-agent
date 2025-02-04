@@ -59,23 +59,16 @@
         - name: "Get and apply release signature"
           when: build != "nightly"
           block:
-            - name: "Fetch release.txt"
-              ansible.builtin.uri:
-                url: "{{ webserver_url }}/{{ target_version }}/release.txt"
-                return_content: true
-                timeout: 10
-              register: release_file
-              until: release_file.status == 200
-              retries: 6
-              delay: 10
-              failed_when:
-                - release_file.content|length == 0 or release_file.status >= 400
 
-            - name: "Release digest"
-              set_fact:
-                release_digest: "{{ release_file.content | regex_search('^Digest:\\s+sha256:(.*)$', '\\1', multiline=True) | first }}"
+            - name: Read the release file
+              slurp:
+                src: "{{ provision_cache_store | default(ansible_env.HOME + '/releases') }}/{{ target_version }}/release.txt"
+              register: release_file_raw
 
             - name: "Download the release signature"
+              vars:
+                release_file: "{{ release_file_raw['content'] | b64decode }}"
+                release_digest: "{{ release_file | regex_search('^Digest:\\s+sha256:(.*)$', '\\1', multiline=True) | first }}"
               ansible.builtin.uri:
                 url: "https://mirror.openshift.com/pub/openshift-v4/signatures/openshift/release/sha256={{ release_digest }}/signature-1"
                 return_content: true
