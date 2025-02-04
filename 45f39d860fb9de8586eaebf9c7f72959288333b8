@@ -16,6 +16,23 @@
       "message": "Thx for the review 😊",
       "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "607e4df3_ee41bc33",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 89
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-04T10:18:24Z",
+      "side": 1,
+      "message": "OK, so I\u0027ve been wondering why you use a temporary directory in the user home. My conclusion is this is so you can mount the host temporary directory in the container without having to deal with ownerships and permissions.\n\nSo far I don\u0027t see any problem with this in plays running from the dci-podman container. However this play runs from the jumphost.\n\nDoes it mean with this change we\u0027ll be force to maintain a tmp directory in the jumphost home and implement the logic to rotate it\u0027s contents?",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
