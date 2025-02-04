@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c930dd17_4887985c",
+        "filename": "README.md",
+        "patchSetId": 89
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-04T10:39:43Z",
+      "side": 1,
+      "message": "Not sure naming the group and the host the same is a best practice, but I take it\u0027s working.",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "607e4df3_ee41bc33",
         "filename": "dci-openshift-agent.yml",
         "patchSetId": 89
@@ -31,6 +48,74 @@
       "writtenOn": "2025-02-04T10:18:24Z",
       "side": 1,
       "message": "OK, so I\u0027ve been wondering why you use a temporary directory in the user home. My conclusion is this is so you can mount the host temporary directory in the container without having to deal with ownerships and permissions.\n\nSo far I don\u0027t see any problem with this in plays running from the dci-podman container. However this play runs from the jumphost.\n\nDoes it mean with this change we\u0027ll be force to maintain a tmp directory in the jumphost home and implement the logic to rotate it\u0027s contents?",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1947994_3c2b77da",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 89
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-04T10:39:43Z",
+      "side": 1,
+      "message": "Just a comment: I\u0027d like to know why we accessed this kind of variables this way in the first place. webserver_url is supposed to be a global variable, available to every host in the inventory, so I\u0027m guessing some kind of Ansible best practice is in play here, although I don\u0027t really see the benefit.\n\nIn any case, no actions required here from my side.",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f909dc4_fa9759ff",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 89
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-04T10:39:43Z",
+      "side": 1,
+      "message": "Don\u0027t forget to remove this before asking for the final approval.",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "588445eb_7b6a10b1",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 89
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-04T10:39:43Z",
+      "side": 1,
+      "message": "Likewise",
+      "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b190269d_541e13ff",
+        "filename": "plays/build-catalog.yml",
+        "patchSetId": 89
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-04T10:39:43Z",
+      "side": 1,
+      "message": "Why does this task need delegating?",
       "revId": "45f39d860fb9de8586eaebf9c7f72959288333b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
