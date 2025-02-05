@@ -34,6 +34,24 @@
       "parentUuid": "e9436873_847187bc",
       "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "062a80cd_e2c1e166",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-05T16:13:41Z",
+      "side": 1,
+      "message": "Thanks Beto, as we talked, let\u0027s add it in the doc and that way is clear that this is a required value for an upgrade.",
+      "parentUuid": "d0f367cc_92c6c3c5",
+      "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
