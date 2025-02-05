@@ -198,6 +198,7 @@
       block:
         - name: Configure jumpbox
           ansible.builtin.include_tasks: plays/configure-jumpbox.yml
+          when: dci_skip_configure | default(false) | bool
 
         - name: "Setup job_logs directory"
           ansible.builtin.include_tasks: plays/log-dir.yml
