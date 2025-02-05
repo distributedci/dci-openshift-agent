@@ -16,6 +16,24 @@
       "message": "I see a diff default value in the IPI installer, I wonder if there is not an issue on what\u0027s the expected value of this variable when not defined 😐\n\nhttps://github.com/redhatci/ansible-collection-redhatci-ocp/blob/main/roles/installer/defaults/main.yml#L4",
       "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0f367cc_92c6c3c5",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-05T15:05:53Z",
+      "side": 1,
+      "message": "In the agent, we always validate that the provision_cache_store is defined, so we always override the role\u0027s default. When the action is \"upgrade,\" we aren\u0027t referencing the installer role.",
+      "parentUuid": "e9436873_847187bc",
+      "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
