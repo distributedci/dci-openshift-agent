@@ -16,6 +16,24 @@
       "message": "I think is better to keep this note, even when we know that it \"should\" work on any install of OCP. The reality is that we only test upgrades from installs with DCI.",
       "revId": "820c30ad609b3df7502ae5ae28ffdeecc794c508",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab027693_a0cc69c1",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 1125,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-05T16:31:10Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "49b96ab0_2f57834c",
+      "revId": "820c30ad609b3df7502ae5ae28ffdeecc794c508",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
