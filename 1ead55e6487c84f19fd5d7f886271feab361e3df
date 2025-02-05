@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9436873_847187bc",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-05T01:15:24Z",
+      "side": 1,
+      "message": "I see a diff default value in the IPI installer, I wonder if there is not an issue on what\u0027s the expected value of this variable when not defined 😐\n\nhttps://github.com/redhatci/ansible-collection-redhatci-ocp/blob/main/roles/installer/defaults/main.yml#L4",
+      "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
