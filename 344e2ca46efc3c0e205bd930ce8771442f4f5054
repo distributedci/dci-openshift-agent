@@ -33,6 +33,40 @@
       "message": "LGTM",
       "revId": "344e2ca46efc3c0e205bd930ce8771442f4f5054",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e9983c0_246f2b74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-02-05T08:48:58Z",
+      "side": 1,
+      "message": "Sorry, I\u0027ve realised that maybe we can add something more in the docs, rest looks good.",
+      "revId": "344e2ca46efc3c0e205bd930ce8771442f4f5054",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "344acd0c_fe1519ad",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-02-05T08:48:58Z",
+      "side": 1,
+      "message": "I would also say here that the OCP version that is used for the ClusterImageSet is taken from the OCP component attached to the DCI job.",
+      "revId": "344e2ca46efc3c0e205bd930ce8771442f4f5054",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
