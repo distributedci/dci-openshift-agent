@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca3e9fc8_cd5da6cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-05T16:54:21Z",
+      "side": 1,
+      "message": "The upgrade has been validated, the job failed during operators mirroring due issues with metallb operator",
+      "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e9436873_847187bc",
@@ -50,6 +67,24 @@
       "side": 1,
       "message": "Thanks Beto, as we talked, let\u0027s add it in the doc and that way is clear that this is a required value for an upgrade.",
       "parentUuid": "d0f367cc_92c6c3c5",
+      "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43c84557_23c8c559",
+        "filename": "plays/upgrade-process.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-05T16:54:21Z",
+      "side": 1,
+      "message": "Sure, I would prefer to do that in a separated change. We need to simplify the requirements and document what is needed for regular and EUS upgrades.",
+      "parentUuid": "062a80cd_e2c1e166",
       "revId": "1ead55e6487c84f19fd5d7f886271feab361e3df",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
