@@ -16,6 +16,23 @@
       "message": "The previous verification job seemed to fail while waiting for the ACM CSV to be rolled out, but the CSV is OK in the must-gather archive. Let\u0027s try again.",
       "revId": "fbb79816054c24587e73cc0ad7c06d3d5f5c7fef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fd3f3b1_565de7e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-06T09:25:59Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "fbb79816054c24587e73cc0ad7c06d3d5f5c7fef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
