@@ -33,6 +33,23 @@
       "message": "I\u0027m confused here on why the CI bot rejected the CR if the job succeeded.\nLet\u0027s retry.",
       "revId": "1fa012662532aba1e852a6b798d88faa833edb6b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39637042_e90a66cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-06T14:37:37Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "1fa012662532aba1e852a6b798d88faa833edb6b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
