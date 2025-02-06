@@ -164,6 +164,8 @@
         - (install_type | default('ipi')) == 'abi'
 
     - name: "Requirements for ACM install_type"
+      delegate_to: jumphost
+      delegate_facts: true
       when:
         - (install_type | default('ipi')) == 'acm'
       block:
