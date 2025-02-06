@@ -168,6 +168,8 @@
         - (install_type | default('ipi')) == 'acm'
       block:
         - name: "Read HUB_KUBECONFIG path from env vars"
+          delegate_to: jumphost
+          delegate_facts: true
           ansible.builtin.set_fact:
             hub_kubeconfig_path: "{{ lookup('env','HUB_KUBECONFIG') }}"
           when: hub_kubeconfig_path is not defined
