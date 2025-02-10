@@ -3,7 +3,7 @@
 # this variable.
 # By default, we provide the kubeconfig as standard output.
 - name: Set outputs to be copied
-  set_fact:
+  ansible.builtin.set_fact:
     outputs:
       kubeconfig: "{{ dci_cluster_configs_dir }}/kubeconfig"
   when: outputs is not defined
