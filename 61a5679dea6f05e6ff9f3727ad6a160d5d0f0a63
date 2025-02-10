@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55661fcf_f30402ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-02-10T19:53:51Z",
+      "side": 1,
+      "message": "more details please see latest comments from CILAB-961",
+      "revId": "61a5679dea6f05e6ff9f3727ad6a160d5d0f0a63",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
