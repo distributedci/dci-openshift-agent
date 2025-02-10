@@ -1,4 +1,8 @@
 ---
+- name: Exercise5 To log a sample message
+  ansible.builtin.debug:
+    msg: Hello DCI
+    
 - name: Pre install
   include_tasks: pre-install.yml
   when:
