@@ -52,6 +52,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82117dcb_685e72e7",
+        "filename": "plays/upstream-sriov-bundle.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-11T18:35:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9839bbf_79bd287a",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "829434b7_b50337da",
@@ -65,6 +83,24 @@
       "writtenOn": "2025-02-11T18:09:35Z",
       "side": 1,
       "message": "Why these changes are needed in here?",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e4105d0_24a70e48",
+        "filename": "samples/libvirt_to_bridge/tasks/bridge.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-11T18:35:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "829434b7_b50337da",
       "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -86,6 +122,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5d52d20_a37c28c0",
+        "filename": "samples/ocp_on_libvirt/ocp-on-libvirt.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-11T18:35:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d74cd3a3_4e27a4f3",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c8e0c9c_4c70cc90",
@@ -99,6 +153,24 @@
       "writtenOn": "2025-02-11T18:09:35Z",
       "side": 1,
       "message": "Can you add back the newline between tasks?",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91ce4d59_ac593f34",
+        "filename": "samples/roles/local-registry/tasks/certificates.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-11T18:35:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c8e0c9c_4c70cc90",
       "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
