@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67d1e75c_4fe5c360",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T00:31:34Z",
+      "side": 1,
+      "message": "Please test on the installers that are affected by this change, e.g. abi, ipi, etc.",
+      "revId": "d387ecfe0698fa94ef72f4fd18b5b4b14d378893",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "975a1115_dfa19fd3",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T00:31:34Z",
+      "side": 1,
+      "message": "Please keep unrelated modifications of FQCN/linting in the other change",
+      "revId": "d387ecfe0698fa94ef72f4fd18b5b4b14d378893",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7420eeb4_da6b7a7c",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T00:31:34Z",
+      "side": 1,
+      "message": "Is this change needed or part of the other one?",
+      "revId": "d387ecfe0698fa94ef72f4fd18b5b4b14d378893",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
