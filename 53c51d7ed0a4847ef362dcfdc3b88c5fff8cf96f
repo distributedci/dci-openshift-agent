@@ -16,6 +16,91 @@
       "message": "Thx Tony for the review 😊",
       "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3c1dcc0_a11ea1e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T18:09:35Z",
+      "side": 1,
+      "message": "I see a lot more files have been added into this change, please don\u0027t forget to test as much as possible all the installers that use them and document them somewhere so is easier to keep track of what was tested and its results. Thanks",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9839bbf_79bd287a",
+        "filename": "plays/upstream-sriov-bundle.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T18:09:35Z",
+      "side": 1,
+      "message": "Are you sure the builtin git module is what is going to be used?\nYou might want to check jobs that used this task and see if a component was created, in such case you want to use the git from dci-ansible instead.",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "829434b7_b50337da",
+        "filename": "samples/libvirt_to_bridge/tasks/bridge.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T18:09:35Z",
+      "side": 1,
+      "message": "Why these changes are needed in here?",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d74cd3a3_4e27a4f3",
+        "filename": "samples/ocp_on_libvirt/ocp-on-libvirt.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T18:09:35Z",
+      "side": 1,
+      "message": "I think \u003c is a typo to support multiline in yaml, I don\u0027t believe is a redirect of the command.",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c8e0c9c_4c70cc90",
+        "filename": "samples/roles/local-registry/tasks/certificates.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-11T18:09:35Z",
+      "side": 1,
+      "message": "Can you add back the newline between tasks?",
+      "revId": "53c51d7ed0a4847ef362dcfdc3b88c5fff8cf96f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
