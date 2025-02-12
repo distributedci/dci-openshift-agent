@@ -86,6 +86,24 @@
       "parentUuid": "f6310c95_88c0efba",
       "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9666b2e_321811e0",
+        "filename": "samples/ocp_on_libvirt/ocp-on-libvirt.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-02-12T21:35:35Z",
+      "side": 1,
+      "message": "this is wrong, should be \u0027\u003e\u0027 and you only really need it for very long commands, this is yaml (not ansible) syntax https://www.yaml.info/learn/quote.html#block you can just remove the \u003c and put the command in the same line.",
+      "parentUuid": "40615d6a_47a74904",
+      "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
