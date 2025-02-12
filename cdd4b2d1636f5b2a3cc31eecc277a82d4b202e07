@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8966d4ac_bb049033",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-12T18:29:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fbabd77f_4fcc2c0f",
+      "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6310c95_88c0efba",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-02-12T15:51:36Z",
       "side": 1,
       "message": "I thought the \"\u003c\" character must go after the \"shell\" module call.",
+      "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40615d6a_47a74904",
+        "filename": "samples/ocp_on_libvirt/ocp-on-libvirt.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-02-12T18:29:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f6310c95_88c0efba",
       "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
