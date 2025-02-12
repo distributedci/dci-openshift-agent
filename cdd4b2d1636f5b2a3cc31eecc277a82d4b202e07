@@ -16,6 +16,40 @@
       "message": "Thx Tony for the review.\nI will document tests",
       "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbabd77f_4fcc2c0f",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-12T15:51:36Z",
+      "side": 1,
+      "message": "Not so important, but probably we should  add a blank line before the \"Prepare operators and catalogs\" task.",
+      "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6310c95_88c0efba",
+        "filename": "samples/ocp_on_libvirt/ocp-on-libvirt.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-02-12T15:51:36Z",
+      "side": 1,
+      "message": "I thought the \"\u003c\" character must go after the \"shell\" module call.",
+      "revId": "cdd4b2d1636f5b2a3cc31eecc277a82d4b202e07",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
