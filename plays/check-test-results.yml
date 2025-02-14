@@ -1,0 +1,12 @@
+---
+
+# if you change the name of this task, you need to do it in
+# dci-ansible/callback/dcijunit.py and in doaa too
+- name: Verify mandatory tests
+  ansible.builtin.include_role:
+    name: redhatci.ocp.verify_tests
+  when:
+    - tests_to_verify is defined
+    - tests_to_verify | length > 0
+
+...
