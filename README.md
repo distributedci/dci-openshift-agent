@@ -329,6 +329,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_encrypt_etcd                | False    | Boolean | False                                                          | Boolean to perform etcd data encryption. OCP versions earlier than 4.12 use the `aescbc` encryption type, OCP 4.13 and later uses `aesgcm`.
 | increase_unavailable_workers    | False    | Boolean | True                                                           | Boolean to define if the default maxUnavailable setting of the MCP worker should be increased from 1 to 2 (Only applied with 4 or more worker nodes are available.
 | dci_console_pass                | False    | String  |                                                                | Password for the core user. This is supported in IPI installer and requires `customize_extramanifests_path` defined.
+| tests\_to\_verify | False | List | undefined | List of expected test results. When defined, it triggers the validation of actual test results against the expectations. Please check [verify-tests readme](https://github.com/redhatci/ocp/tree/main/roles/verify_tests/README.md) to get more details and an example of the configuration.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
