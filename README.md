@@ -329,7 +329,7 @@ This is the dci-openshift-agent variables that can be set in the
 | increase_unavailable_workers    | False    | Boolean | True                                                           | Boolean to define if the default maxUnavailable setting of the MCP worker should be increased from 1 to 2 (Only applied with 4 or more worker nodes are available.
 | dci_console_pass                | False    | String  |                                                                | Password for the core user. This is supported in IPI installer and requires `customize_extramanifests_path` defined.
 | dci_ephemeral_http_store        | False    | Boolean | True                                                           | For ABI installations, specifies whether the web server container that hosts the discovery ISO is managed by Podman or Systemd. By default, an https_store container is created for each job and destroyed after the installation completes.
-
+| tests\_to\_verify | False | List | undefined | List of expected test results. When defined, it triggers the validation of actual test results against the expectations. Please check [verify-tests readme](https://github.com/redhatci/ocp/tree/main/roles/verify_tests/README.md) to get more details and an example of the configuration.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
