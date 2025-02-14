@@ -329,7 +329,7 @@ This is the dci-openshift-agent variables that can be set in the
 | increase_unavailable_workers    | False    | Boolean | True                                                           | Boolean to define if the default maxUnavailable setting of the MCP worker should be increased from 1 to 2 (Only applied with 4 or more worker nodes are available.
 | dci_console_pass                | False    | String  |                                                                | Password for the core user. This is supported in IPI installer and requires `customize_extramanifests_path` defined.
 | dci_ephemeral_http_store        | False    | Boolean | True                                                           | For ABI installations, specifies whether the web server container that hosts the discovery ISO is managed by Podman or Systemd. By default, an https_store container is created for each job and destroyed after the installation completes.
-
+| tests\_to\_verify | False | List | undefined | List of expected test results. When defined, it triggers the validation of actual test results against the expectations. Please check [verify-tests readme](https://github.com/redhatci/ocp/tree/main/roles/verify_tests/README.md) to get more details and an example of the configuration.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
@@ -1009,7 +1009,10 @@ Finally from the pod you started, you can run ironic baremetal commands
     - *tags: running, testing, partner-testing*
     - *runs on: localhost*
 
-6. "Post-run"
+6. "Validate tests"
+    - check mandatory tests using [`redhatci.ocp.verify_tests`](https://galaxy.ansible.com/ui/repo/published/redhatci/ocp/content/role/verify_tests/).
+
+7. "Post-run"
     - Start post-run to collect results: `/plays/post-run.yml` and
       `/hooks/post-run.yml`
     - *tags: post-run*
@@ -1018,7 +1021,7 @@ Finally from the pod you started, you can run ironic baremetal commands
    order to be properly uploaded to the DCI server. Test result files must follow the Junit format, must be stored within 
    the `{{ job_logs.path }}` directory and the file name must follow the pattern `*.xml`.
 
-7. "Success"
+8. "Success"
     - Launch additional tasks when the job is successful: `/hooks/success.yml`
     - *tags: success*
     - *runs on: localhost*
