@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8bafc91_d74a2186",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-15T02:48:18Z",
+      "side": 1,
+      "message": "- [x] TestDallas: ocp-4.17-vanilla-core - https://www.distributed-ci.io/jobs/114a3f00-4acb-4df2-bf8f-63ef32c59f5b\n\nTested in Core cluster.\nocp-4.17-vanilla-core openshift-vanilla:ansible_tags\u003ddci,job,operator-deployment,post-run,success",
+      "revId": "d1127db53c5fb1db2a13f0391cbe8ddd51f96460",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
