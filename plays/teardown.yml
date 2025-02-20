@@ -40,4 +40,15 @@
     name: redhatci.ocp.setup_netobserv_stack
   when:
     - enable_netobserv | bool
+
+- name: "Teardown ACM-SNO cluster"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.acm_sno
+    tasks_from: cleanup.yml
+    apply:
+      environment:
+        - KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
+  when:
+    - (install_type | default('ipi')) == 'acm'
+    - acm_cluster_type == 'sno'
 ...
