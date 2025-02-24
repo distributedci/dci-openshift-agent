@@ -207,6 +207,9 @@
               tags: [dci]
               delegate_to: localhost
 
+            - name: Upload logs
+              ansible.builtin.include_tasks: get-logs.yml
+
             - name: Teardown hooks
               when: dci_teardown_on_failure|bool
               delegate_to: localhost
@@ -335,6 +338,9 @@
                 status: "failure"
               delegate_to: localhost
               tags: [dci]
+
+            - name: Upload logs
+              ansible.builtin.include_tasks: get-logs.yml
 
             - name: Run the failure process for partners
               ansible.builtin.include_tasks: "{{ hookdir }}/hooks/failure.yml"
