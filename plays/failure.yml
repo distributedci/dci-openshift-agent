@@ -1,11 +1,4 @@
 ---
-- name: Remove pull secret file
-  ansible.builtin.file:
-    path: "{{ dci_pullsecret_file }}"
-    state: absent
-  when:
-    - dci_pullsecret_file is defined
-
 - name: Gathering results for storage service tester
   ansible.builtin.include_role:
     name: redhatci.ocp.storage_tester
@@ -20,8 +13,7 @@
     - dci_main == 'upgrade'
     - storage_upgrade_tester | default(false) | bool
 
-- name: Upload logs
-  ansible.builtin.include_tasks: get-logs.yml
 - name: Fail properly
   ansible.builtin.fail:
     msg: "Something went wrong. Review the log at: https://www.distributed-ci.io/jobs/{{ hostvars.localhost.job_info.job.id }}/jobStates"
+...
