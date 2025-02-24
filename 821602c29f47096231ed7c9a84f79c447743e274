@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cab52d3_e233c10d",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-24T22:44:38Z",
+      "side": 1,
+      "message": "I believe we had the logs called in the failure.yml task file because this way we allow hooks to collect logs as well.\n\nDoing logs collection before the hooks failure would not collect logs, if any, during those tasks.",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88d4471c_485181a6",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-24T22:44:38Z",
+      "side": 1,
+      "message": "Ditto",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca8d0c09_fd7d56e9",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-24T22:44:38Z",
+      "side": 1,
+      "message": "Dup line? 67 is doing the same.",
+      "range": {
+        "startLine": 68,
+        "startChar": 148,
+        "endLine": 68,
+        "endChar": 162
+      },
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55e7116b_23af0954",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-24T22:44:38Z",
+      "side": 1,
+      "message": "Is possible that not all the clusters have vmi CR, could we do something like\n\n    ${oc_path} get crd virtualmachineinstances.kubevirt.io \u0026\u003e/dev/null \u0026\u0026\n      ${oc_path} get vmi -A \u003e virtual-machines.txt\n      \nIt will also help to avoid having empty virtual-machines.txt files",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e1ddf57_b90d64e8",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-02-24T22:44:38Z",
+      "side": 1,
+      "message": "likewise:\n\n    ${oc_path} get crd virtualmachines.kubevirt.io \u0026\u003e/dev/null \u0026\u0026\n      ${oc_path} get vm -A \u003e\u003e virtual-machines.txt",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
