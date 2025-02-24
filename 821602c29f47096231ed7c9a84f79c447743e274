@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b53e5287_4a1f9f59",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-24T23:22:35Z",
+      "side": 1,
+      "message": "The agent does not process a hook/failure play.",
+      "parentUuid": "7cab52d3_e233c10d",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "88d4471c_485181a6",
         "filename": "dci-openshift-agent.yml",
         "patchSetId": 4
@@ -31,6 +49,24 @@
       "writtenOn": "2025-02-24T22:44:38Z",
       "side": 1,
       "message": "Ditto",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdecdc2d_58429280",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-24T23:22:35Z",
+      "side": 1,
+      "message": "I moved the log collection after the hook failure.",
+      "parentUuid": "88d4471c_485181a6",
       "revId": "821602c29f47096231ed7c9a84f79c447743e274",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -58,6 +94,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec3a89e1_76077d14",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-24T23:22:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ca8d0c09_fd7d56e9",
+      "range": {
+        "startLine": 68,
+        "startChar": 148,
+        "endLine": 68,
+        "endChar": 162
+      },
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "55e7116b_23af0954",
@@ -75,6 +135,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5adc0fae_c65f8bf0",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-24T23:22:35Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "55e7116b_23af0954",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e1ddf57_b90d64e8",
@@ -88,6 +166,24 @@
       "writtenOn": "2025-02-24T22:44:38Z",
       "side": 1,
       "message": "likewise:\n\n    ${oc_path} get crd virtualmachines.kubevirt.io \u0026\u003e/dev/null \u0026\u0026\n      ${oc_path} get vm -A \u003e\u003e virtual-machines.txt",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdf07594_55ac8d73",
+        "filename": "plays/scripts/get-ocp-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-24T23:22:35Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7e1ddf57_b90d64e8",
       "revId": "821602c29f47096231ed7c9a84f79c447743e274",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
