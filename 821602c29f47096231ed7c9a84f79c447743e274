@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "19dc6ac4_8beca010",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-25T03:30:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b53e5287_4a1f9f59",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "88d4471c_485181a6",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "I moved the log collection after the hook failure.",
       "parentUuid": "88d4471c_485181a6",
+      "revId": "821602c29f47096231ed7c9a84f79c447743e274",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5061695e_ccc0a4f2",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-25T03:30:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cdecdc2d_58429280",
       "revId": "821602c29f47096231ed7c9a84f79c447743e274",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
