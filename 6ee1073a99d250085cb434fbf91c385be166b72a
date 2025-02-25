@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "441db32c_97b9c77c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-02-25T11:10:33Z",
+      "side": 1,
+      "message": "I believe there is a typo, it should be TestBos2Sno: abi-sno",
+      "revId": "6ee1073a99d250085cb434fbf91c385be166b72a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "9e14bf10_7c65f684",
