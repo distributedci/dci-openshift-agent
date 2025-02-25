@@ -16,6 +16,23 @@
       "message": "Tested in\nacm-hcp: https://www.distributed-ci.io/jobs/bb6dec77-3992-493b-a3d9-9a864d07997a/jobStates?sort\u003ddate - on top cluster2\n\nacm-ztp: https://www.distributed-ci.io/jobs/bb6dec77-3992-493b-a3d9-9a864d07997a/jobStates?sort\u003ddate - on top sno2",
       "revId": "2e99b5d611352f676dbf53f37b56b49994d23971",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f07eaf8_e07abc2a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-02-25T11:26:21Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "2e99b5d611352f676dbf53f37b56b49994d23971",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
