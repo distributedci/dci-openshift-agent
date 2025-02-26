@@ -16,6 +16,41 @@
       "message": "Tested with:\n\n- ocp-4.16-ztp-sno ztp-spoke:ansible_extravars\u003ddci_teardown_on_success:true ztp-spoke:ansible_extravars\u003ddci_teardown_on_failure:true -\u003e https://www.distributed-ci.io/jobs/5535949f-3102-459f-95c3-2cf2e4f03746/jobStates?sort\u003ddate\n\n- ocp-4.16-acm-sno openshift-acm-sno:ansible_extravars\u003ddci_teardown_on_success:true openshift-acm-sno:ansible_extravars\u003ddci_teardown_on_failure:true -\u003e https://www.distributed-ci.io/jobs/790a9b7d-0510-4b70-90b5-1b7682b45bc8/jobStates?sort\u003ddate",
       "revId": "81ed3c59d5d71a04aafc9e3fb2ae3c57a80b99ac",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39613425_0c40dd56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-02-26T15:58:02Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "81ed3c59d5d71a04aafc9e3fb2ae3c57a80b99ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ead9d3de_65a77b71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-02-26T15:58:02Z",
+      "side": 1,
+      "message": "Beto, is it expected that in the job ocp-4.16-acm-sno the teardown of sno was skipped?\nhttps://www.distributed-ci.io/jobs/790a9b7d-0510-4b70-90b5-1b7682b45bc8/jobStates?sort\u003ddate\u0026task\u003d55022e66-8b2d-45ce-b048-4108dd5a2b32",
+      "parentUuid": "4692a724_804b11e3",
+      "revId": "81ed3c59d5d71a04aafc9e3fb2ae3c57a80b99ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
