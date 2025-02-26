@@ -51,6 +51,24 @@
       "parentUuid": "4692a724_804b11e3",
       "revId": "81ed3c59d5d71a04aafc9e3fb2ae3c57a80b99ac",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ec089e2_f54ae055",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-02-26T16:28:20Z",
+      "side": 1,
+      "message": "Thank Manny, yeah. The teardown will happen only for the cluster just deployed by the job. If it is deployed using acm-sno, ztp teardown will be skipped and acm-sno will be executed and the other way around.",
+      "parentUuid": "ead9d3de_65a77b71",
+      "revId": "81ed3c59d5d71a04aafc9e3fb2ae3c57a80b99ac",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
