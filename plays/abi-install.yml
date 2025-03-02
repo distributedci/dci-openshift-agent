@@ -133,6 +133,12 @@
   loop_control:
     loop_var: target_host
 
+- name: Making sure nmstate is installed
+  become: true
+  ansible.builtin.package:
+    name: nmstate
+    state: installed
+
 - name: Monitor Agent Based Installer
   vars:
     agent_based_installer_path: "{{ openshift_installer_path }}"
