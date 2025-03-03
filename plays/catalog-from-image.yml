@@ -25,7 +25,7 @@
     mirror_list: "{{ mirror_list | combine(opm_mirror_list) | default({}) }}"
   when:
     - dci_disconnected | default(false) | bool
-    - opm_mirror_list | type_debug == "dict"
+    - opm_mirror_list | type_debug in ["dict", "list"]
     - dci_pre_ga_catalog | default('') | length == 0
 
 - name: "Cleanup operators list"
