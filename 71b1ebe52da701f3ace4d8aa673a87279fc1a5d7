@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a97be211_beff5e3c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-03-05T23:55:42Z",
+      "side": 1,
+      "message": "This has been added to the collection https://github.com/redhatci/ansible-collection-redhatci-ocp/pull/593 \n\nBut we discussed that a dependency in the RPMs should be good too. \n\nIf you have the collection RPM updated, it should be good.",
+      "revId": "71b1ebe52da701f3ace4d8aa673a87279fc1a5d7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
