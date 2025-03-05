@@ -15,6 +15,15 @@
       - python3-passlib  # Comes from EPEL, required in redhatci.ocp/oc_setup
     state: installed
 
+- name: Install requirements for ABI install
+  become: true
+  ansible.builtin.package:
+    name:
+      - nmstate
+    state: present
+  when:
+    - (install_type | default('ipi')) == 'abi'
+
 - name: Install grpcurl when uninstalled
   block:
     - name: Check grpcurl is installed
