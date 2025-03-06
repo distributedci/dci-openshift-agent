@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "3259e2c7_8e384316",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-06T11:40:51Z",
+      "side": 1,
+      "message": "Note you\u0027re referring here to a private registry... maybe it would be better to have there the build-depends towards this gerrit change instead",
+      "revId": "50e16019be3877f567e92d1f14dae8fd9216d6ce",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "b5eefecd_b54cfac1",
