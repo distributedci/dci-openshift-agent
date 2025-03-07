@@ -16,6 +16,40 @@
       "message": "Do we have a job where we call validate_tests to confirm it\u0027s working?",
       "revId": "6673a8116f6e6b69df47ba2720911c5ec0ab64b9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a37d890_a28f8e12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-07T09:03:43Z",
+      "side": 1,
+      "message": "As said in https://softwarefactory-project.io/r/c/dci-pipeline/+/33200, can we include in this change some code in plays/get-logs to avoid removing the xml extension when uploading the logs to DCI? https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/heads/master/plays/get-logs.yml#141, same for dci-openshift-app-agent I guess",
+      "revId": "6673a8116f6e6b69df47ba2720911c5ec0ab64b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d78c9828_4125d11b",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-07T09:03:43Z",
+      "side": 1,
+      "message": "I think we have documented somewhere the steps followed by the dci-openshift-agent. Can we update that documentation to include this new step before the post-run?",
+      "revId": "6673a8116f6e6b69df47ba2720911c5ec0ab64b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
