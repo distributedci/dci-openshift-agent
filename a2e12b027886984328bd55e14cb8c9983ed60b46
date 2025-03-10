@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bd2d6fcd_6042e55c",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-10T15:22:13Z",
+      "side": 1,
+      "message": "Before ABI replaced AI-onprem as the default, we still needed an HTTP server to serve the install.iso to the nodes, but ABI does it by itself. So yeah right now it is only really needed for disconnected environments but not necessarily to serve the install.iso",
+      "parentUuid": "57ded726_dc8d2395",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "965d0174_a32a5577",
         "filename": "samples/abi_on_libvirt/templates/hosts.j2",
         "patchSetId": 2
@@ -31,6 +49,30 @@
       "writtenOn": "2025-03-10T10:55:45Z",
       "side": 1,
       "message": "I\u0027m not sure that we should put these two vars here. The play to provision the VMs is unrelated to the inventory that we call later on the ABI installation with DCI.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 84
+      },
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abf69252_ad31d0a0",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-10T15:22:13Z",
+      "side": 1,
+      "message": "These two vars are used in the attached infrastructure.yml playbook.\nThe samples in the samples directory should be focused on the end user and you can see the sample inventory does create a VM-base inventory, the fact that we abuse the assets in this directory for CI is a different issue altogether.\nSetting up conserver is just a different thing we optionally do, but it\u0027s really useful and we should push it by default",
+      "parentUuid": "965d0174_a32a5577",
       "range": {
         "startLine": 11,
         "startChar": 0,
@@ -60,6 +102,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5ae12182_b4f11a58",
+        "filename": "samples/configure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-10T15:22:13Z",
+      "side": 1,
+      "message": "yes, I have tested this heavily on my end on a fresh install of RHEL 8. The purpose of this playbook would be to set up a bare-bones jumpbox with dci-openshift-agent, you may even do it from your laptop. I will add some docs to the playbook itself",
+      "parentUuid": "334ded11_6fee1546",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98fa6521_58e9b28a",
         "filename": "samples/infrastructure.yml",
         "patchSetId": 2
@@ -71,6 +131,24 @@
       "writtenOn": "2025-03-10T10:55:45Z",
       "side": 1,
       "message": "We need to test that this file works. Right now, it\u0027s used in our BOS2 automation to provision ABI VMs: https://github.com/dci-labs/bos2-ci-config/blob/main/files/provision-abi-vms.yml, so that file needs to be updated with this content and check it.",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4673adc0_a5de005a",
+        "filename": "samples/infrastructure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-10T15:22:13Z",
+      "side": 1,
+      "message": "This file also works at least on a VM-based lab, I have been testing it as a second step after configure.yml. You can reflect the new content on provision-abi-vms.yml but again, end-user samples and CI should be treated by separate",
+      "parentUuid": "98fa6521_58e9b28a",
       "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -94,6 +172,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cc4e4cca_7bb9a5dd",
+        "filename": "samples/roles/local-registry/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-10T15:22:13Z",
+      "side": 1,
+      "message": "no, there\u0027s already a role that sets up a container registry in the collections",
+      "parentUuid": "d23cc530_53e82fb8",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "969f2cd6_6933ac53",
         "filename": "samples/roles/reposync/defaults/main.yml",
         "patchSetId": 2
@@ -105,6 +201,24 @@
       "writtenOn": "2025-03-10T10:55:45Z",
       "side": 1,
       "message": "Is it worth to move this reposync role to the collections?",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d986c8dc_b515d047",
+        "filename": "samples/roles/reposync/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-10T15:22:13Z",
+      "side": 1,
+      "message": "perhaps, this was used back when we supported centos, not sure if it\u0027s worth it now, there are other more redhat-y ways to do this e.g. satellite",
+      "parentUuid": "969f2cd6_6933ac53",
       "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
