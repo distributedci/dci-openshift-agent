@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57ded726_dc8d2395",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-10T10:55:45Z",
+      "side": 1,
+      "message": "Before, default value was true and we were always using http_store in our jobs. Is the reason of disabling it by default that it\u0027s only needed in disconnected? If that\u0027s true, don\u0027t know if this is documented in the ABI docs, that should be checked.",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "965d0174_a32a5577",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-10T10:55:45Z",
+      "side": 1,
+      "message": "I\u0027m not sure that we should put these two vars here. The play to provision the VMs is unrelated to the inventory that we call later on the ABI installation with DCI.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 84
+      },
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "334ded11_6fee1546",
+        "filename": "samples/configure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-10T10:55:45Z",
+      "side": 1,
+      "message": "Is this tested?",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98fa6521_58e9b28a",
+        "filename": "samples/infrastructure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-10T10:55:45Z",
+      "side": 1,
+      "message": "We need to test that this file works. Right now, it\u0027s used in our BOS2 automation to provision ABI VMs: https://github.com/dci-labs/bos2-ci-config/blob/main/files/provision-abi-vms.yml, so that file needs to be updated with this content and check it.",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d23cc530_53e82fb8",
+        "filename": "samples/roles/local-registry/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-10T10:55:45Z",
+      "side": 1,
+      "message": "Is it worth to move this local-registry role to the collections?",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "969f2cd6_6933ac53",
+        "filename": "samples/roles/reposync/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-10T10:55:45Z",
+      "side": 1,
+      "message": "Is it worth to move this reposync role to the collections?",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
