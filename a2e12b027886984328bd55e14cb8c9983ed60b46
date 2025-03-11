@@ -127,6 +127,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "af2c9f23_73aeb4b7",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-11T15:23:30Z",
+      "side": 1,
+      "message": "You use the same (generated) hosts file for both infrastructure and the main playbook, in fact the infrastructure playbook needs to know e.g. domain, number and size of KVM nodes, etc.",
+      "parentUuid": "5ad5f0e4_92180355",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 84
+      },
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "334ded11_6fee1546",
         "filename": "samples/configure.yml",
         "patchSetId": 2
