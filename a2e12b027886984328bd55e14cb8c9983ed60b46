@@ -36,6 +36,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42290af8_353c8584",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-11T10:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "bd2d6fcd_6042e55c",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "965d0174_a32a5577",
@@ -85,6 +103,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5ad5f0e4_92180355",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-11T10:41:21Z",
+      "side": 1,
+      "message": "What I still don\u0027t get is the following: what\u0027s the host file that is used to launch the infrastructure.yml playbook? Because, from what I understand, it\u0027s not this hosts file; this hosts file, firstly, it\u0027s a template to generate a new hosts file, which would eventually be used to deploy the OCP installation, but not the infrastructure.\nSo, if that\u0027s true, `setup_vms` and `setup_conserver` would only be used to create the infrastructure, but they\u0027re not used during the OCP installation.\nThat\u0027s why I\u0027m saying that I\u0027m not sure if these two vars should be placed here. But if you can correct me if I\u0027m wrong, just to understand the full picture, it would be great.",
+      "parentUuid": "abf69252_ad31d0a0",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 84
+      },
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "334ded11_6fee1546",
         "filename": "samples/configure.yml",
         "patchSetId": 2
@@ -114,6 +156,24 @@
       "side": 1,
       "message": "yes, I have tested this heavily on my end on a fresh install of RHEL 8. The purpose of this playbook would be to set up a bare-bones jumpbox with dci-openshift-agent, you may even do it from your laptop. I will add some docs to the playbook itself",
       "parentUuid": "334ded11_6fee1546",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ed702d2_dc20b2e1",
+        "filename": "samples/configure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-11T10:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5ae12182_b4f11a58",
       "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -153,6 +213,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "73427493_4c311662",
+        "filename": "samples/infrastructure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-11T10:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4673adc0_a5de005a",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d23cc530_53e82fb8",
@@ -188,6 +266,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42f77a07_69d3be6e",
+        "filename": "samples/roles/local-registry/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-11T10:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "cc4e4cca_7bb9a5dd",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "969f2cd6_6933ac53",
@@ -219,6 +315,24 @@
       "side": 1,
       "message": "perhaps, this was used back when we supported centos, not sure if it\u0027s worth it now, there are other more redhat-y ways to do this e.g. satellite",
       "parentUuid": "969f2cd6_6933ac53",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acbb52e5_e258f011",
+        "filename": "samples/roles/reposync/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-11T10:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d986c8dc_b515d047",
       "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
