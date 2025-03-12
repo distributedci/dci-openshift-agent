@@ -89,6 +89,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d52be28_8d430cc0",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-12T23:25:14Z",
+      "side": 1,
+      "message": "reverted to default of true along with other defaults that make sense for a sample VM lab, thanks for catching this Beto",
+      "parentUuid": "f0064cc0_c3bcc69c",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "965d0174_a32a5577",
