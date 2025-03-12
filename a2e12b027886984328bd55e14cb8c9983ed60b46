@@ -71,6 +71,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0064cc0_c3bcc69c",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-03-12T22:39:09Z",
+      "side": 1,
+      "message": "A web server for ABI is mandatory when connected and disconnected; the discovery ISO is copied to the web server and then mounted on the cluster nodes. \n\nThe ABI test job worked fine because it re-used an existing http_pod running in the jumphost. (some tech debt that we need to fix)\n\nhttps://www.distributed-ci.io/jobs/3caaf3cf-6b1e-4db7-818e-eebf2e1d31b6/jobStates?sort\u003ddate\u0026task\u003d5b43ad0d-dde1-4b7b-be41-0db73ac6b111",
+      "parentUuid": "42290af8_353c8584",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "965d0174_a32a5577",
