@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9a62c0a_89cb562d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-12T09:21:58Z",
+      "side": 1,
+      "message": "From my side, I\u0027m fine with your feedback Jorge. I\u0027ll vote +1 because I\u0027d like also to have other eyes in this change, to confirm I\u0027m not missing something. Thanks for your work!",
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "57ded726_dc8d2395",
@@ -139,6 +156,30 @@
       "side": 1,
       "message": "You use the same (generated) hosts file for both infrastructure and the main playbook, in fact the infrastructure playbook needs to know e.g. domain, number and size of KVM nodes, etc.",
       "parentUuid": "5ad5f0e4_92180355",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 84
+      },
+      "revId": "a2e12b027886984328bd55e14cb8c9983ed60b46",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "646b3d13_59eb1053",
+        "filename": "samples/abi_on_libvirt/templates/hosts.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-12T09:21:58Z",
+      "side": 1,
+      "message": "Okey, got it now, thanks. I was understanding this wrongly, now I can see the point. Thanks!",
+      "parentUuid": "af2c9f23_73aeb4b7",
       "range": {
         "startLine": 11,
         "startChar": 0,
