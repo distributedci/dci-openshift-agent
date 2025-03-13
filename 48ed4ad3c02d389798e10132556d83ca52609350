@@ -16,6 +16,23 @@
       "message": "Waiting for a green job to give +2. Thanks!",
       "revId": "48ed4ad3c02d389798e10132556d83ca52609350",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4d9d8b8_cc9b724b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-13T09:44:02Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "48ed4ad3c02d389798e10132556d83ca52609350",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
