@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e168b031_638758de",
+        "filename": "plays/scripts/get-abi-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-13T09:46:16Z",
+      "side": 1,
+      "message": "this script, since it belongs to the agent, should be generic and not pointing to any particular infrastructure resource",
+      "range": {
+        "startLine": 88,
+        "startChar": 16,
+        "endLine": 88,
+        "endChar": 22
+      },
+      "revId": "665fde543f87af1578c21d547be762543a05c37e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
