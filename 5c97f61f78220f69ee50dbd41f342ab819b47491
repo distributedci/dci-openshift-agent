@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8f3256d1_806f7c27",
+        "filename": "samples/infrastructure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-14T19:03:09Z",
+      "side": 1,
+      "message": "I\u0027m just reusing the same naming scheme we\u0027ve been using for ABI, which historically has been different from ours... if you look at the ABI inventories you\u0027ll see references to bastion",
+      "parentUuid": "2f463e48_01fa9bd2",
+      "revId": "5c97f61f78220f69ee50dbd41f342ab819b47491",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2bb9f9ae_91350180",
         "filename": "samples/infrastructure.yml",
         "patchSetId": 2
@@ -31,6 +49,24 @@
       "writtenOn": "2025-03-14T13:16:27Z",
       "side": 1,
       "message": "I\u0027ve seen we use \"enable_conserver\" in other examples, so can use that instead of \"setup_conserver\"?",
+      "revId": "5c97f61f78220f69ee50dbd41f342ab819b47491",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c111fec_061bc877",
+        "filename": "samples/infrastructure.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-03-14T19:03:09Z",
+      "side": 1,
+      "message": "I was using the same sort of scheme as the rest of the ABI flags e.g. `enable_*` but I can make it so it works with either",
+      "parentUuid": "2bb9f9ae_91350180",
       "revId": "5c97f61f78220f69ee50dbd41f342ab819b47491",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
