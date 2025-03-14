@@ -16,6 +16,24 @@
       "message": "LGTM, I can see the sno2 journal log\n\n\u003e for h in \\\"${nodes[@]}\\\"\", \"+ ssh -o StrictHostKeyChecking\u003dno -o UserKnownHostsFile\u003d/dev/null -o LogLevel\u003dERROR -o ConnectTimeout\u003d10 core@sno2.sno2.sno.dfwt5g.lab \u0027sudo journalctl --all --since \\\"4 hours ago\\\"\u0027\", \"ssh: Could not resolve hostname sno2.sno2.sno.dfwt5g.lab: Name or service not known\", \"+ \u0027[\u0027 255 -ne 0 \u0027]\u0027\", \"+ echo \u0027Attempting to collect logs again with hostname sno2.sno.dfwt5g.lab\u0027\", \"+ ssh -o StrictHostKeyChecking\u003dno -o UserKnownHostsFile\u003d/dev/null -o LogLevel\u003dERROR -o ConnectTimeout\u003d10 core@sno2.sno.dfwt5g.lab \u0027sudo journalctl --all --since \\\"4 hours ago\\\"\u0027\", \"+ grep -q worker\"], \"stdout\": \"Collect logs from rendezvous node if it is already in place",
       "revId": "a799d4b0b0e131a819604cff62c992477f006025",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "551b21f2_075de9bf",
+        "filename": "plays/scripts/get-abi-logs",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-03-14T11:29:02Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c373bf90_4825e8e9",
+      "revId": "a799d4b0b0e131a819604cff62c992477f006025",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
