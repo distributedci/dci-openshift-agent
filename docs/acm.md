@@ -19,8 +19,10 @@ This document will focus on explaining how the ACM can be used to install an Ope
 
 We are constantly adding new ways to deploy OCP, currently, the agent supports
 
-* SNO
-* Hypershfit (experimental)
+- Hypershift
+- SNO
+- ZTP
+  - ClusterInstance (SNO)
 
 ## Requirements
 
@@ -99,6 +101,18 @@ Please read the role's documentation for more information.
   1. The metallb setup can be skipped if there is one already running but it will validated during the hypershift installation.
 1. Use `dci_pipeline` or the DCI Agent to initiate the deployment using the values defined in the [`acm-hypershift-pipeline`](#acm-hypershift-pipeline).
 
+## ZTP
+
+### ClusterInstance
+
+> ⚠️ Currently, in disconnected environments, it is only supported the same version of spoke cluster as the Hub
+
+1. A Hub cluster is deployed with support for ACM. It can be achieved by setting `enable_acm=true` during an OCP deployment. Please see the example of an [ACM Hub pipeline](#acm-hub-pipeline).
+1. The Hub cluster must have the SiteConfig Operator enabled.
+1. The kubeconfig file of the Cluster Hub is exported as HUB_KUBECONFIG: `export HUB_KUBECONFIG=/<kubeconfig_path>`
+1. A directory with the templates to apply the ClusterInstance is required `dci_clusterinstance_template_dir`.
+1. Use `dci_pipeline` or the DCI Agent to initiate the deployment using the values defined in the [`acm-clusterinstance-pipeline`](#acm-clusterinstance-pipeline).
+
 ## Pipeline Examples
 
 ### ACM Hub pipeline
@@ -145,11 +159,12 @@ This pipeline includes NFS storage
 ```yaml
 ---
 - name: openshift-acm-sno
-  type: ocp
+  stage: acm-sno
+  prev_stages: [acm-hub]
   ansible_playbook: /usr/share/dci-openshift-agent/dci-openshift-agent.yml
   ansible_cfg: /var/lib/dci/pipelines/ansible.cfg
-  dci_credentials: /etc/dci-openshift-agent/<dci_credentials.yml>
-  pipeline_user: /etc/dci-openshift-agent/pipeline_user.yml
+  dci_credentials: ~/.config/dci-pipeline/<dci_credentials>.yml
+  pipeline_user: ~/.config/dci-pipeline/<pipeline_user>.yml
   ansible_inventory: /home/dciteam/inventories/<lab>/sno/<inventory_file.yml>
   ansible_extravars:
     install_type: acm
@@ -176,11 +191,12 @@ This pipeline includes NFS storage
 ```yaml
 ---
 - name: openshift-acm-hypershift
-  type: ocp
+  stage: acm-hcp
+  prev_stages: [acm-hub]
   ansible_playbook: /usr/share/dci-openshift-agent/dci-openshift-agent.yml
   ansible_cfg: /var/lib/dci/pipelines/ansible.cfg
-  dci_credentials: /etc/dci-openshift-agent/<dci_credentials.yml>
-  pipeline_user: /etc/dci-openshift-agent/pipeline_user.yml
+  dci_credentials: ~/.config/dci-pipeline/<dci_credentials>.yml
+  pipeline_user: ~/.config/dci-pipeline/<pipeline_user>.yml
   ansible_extravars:
     install_type: acm
     acm_cluster_type: hypershift
@@ -198,6 +214,44 @@ This pipeline includes NFS storage
   components:
     - ocp
   success_tag: ocp-acm-hypershift-4.14-ok
+```
+
+### ACM ClusterInstance pipeline
+
+```yaml
+---
+- name: openshift-acm-ztp-sno
+  stage: ztp-spoke
+  prev_stages: [acm-hub]
+  ansible_playbook: /usr/share/dci-openshift-agent/dci-openshift-agent.yml
+  ansible_cfg: /var/lib/dci/pipelines/ansible.cfg
+  dci_credentials: ~/.config/dci-pipeline/<dci_credentials>.yml
+  configuration: "@QUEUE"
+  pipeline_user: ~/.config/dci-pipeline/<pipeline_user>.yml
+  ansible_inventory: /var/lib/dci/inventories/@QUEUE/ztp/spoke/@RESOURCE
+  ansible_extravars:
+    install_type: acm
+    acm_cluster_type: ztp-spoke-clusterinstance
+    dci_local_log_dir: /var/lib/dci-pipeline/upload-errors
+    dci_gits_to_components:
+      - /var/lib/dci/<lab>-config/dci-openshift-agent
+      - /var/lib/dci/inventories
+      - /var/lib/dci/pipelines
+    dci_tags: []
+    dci_cache_dir: /var/lib/dci-pipeline
+    dci_base_ip: "{{ ansible_default_ipv4.address }}"
+    dci_baseurl: "http://{{ dci_base_ip }}"
+    dci_teardown_on_success: false
+    # ClusterInstance
+    dci_clusterinstance_template_dir: /var/lib/dci/inventories/@QUEUE/ztp/templates
+  topic: OCP-4.18
+  components:
+    - ocp
+  inputs:
+    kubeconfig: hub_kubeconfig_path
+  outputs:
+    kubeconfig: "kubeconfig"
+  success_tag: ocp-ztp-sno-4.18-ok
 ```
 
 ## Inventory Examples
@@ -247,4 +301,30 @@ all:
     acm_bmc_user: REDACTED
     acm_bmc_pass: REDACTED
     provision_cache_store: "/opt/cache"
+```
+
+### ACM ClusterInstance Inventory
+
+```yaml
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+    jumpbox:
+      ansible_connection: local
+      ansible_python_interpreter: "{{ ansible_playbook_python }}"
+      ansible_user: <user>
+  vars:
+    dci_disconnected: true
+    cluster: sno1
+    cluster_name: "{{ cluster }}"
+    ztp_namespace: "{{ cluster_name }}"
+    base_dns_domain: sno.<mydomain>
+    # Uses AI templates to deploy the cluster
+    cluster_template_ref: ai-cluster-templates-v1
+    node_template_ref:  ai-node-templates-v1
+    webserver_url: http://webcache.<mydomain>.lab:8080
+    provision_cache_store: /opt/cache
+    bmh_password: REDACTED
+    bmh_user: REDACTED
 ```
