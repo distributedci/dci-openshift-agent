@@ -16,6 +16,24 @@
       "message": "lgtm, an incomplete secret sauce!",
       "revId": "87233f57675252618e97515abff910f7245863ef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1468a546_d04b8f1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-03-25T22:09:50Z",
+      "side": 1,
+      "message": "😄",
+      "parentUuid": "aede6a5e_267a2964",
+      "revId": "87233f57675252618e97515abff910f7245863ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
