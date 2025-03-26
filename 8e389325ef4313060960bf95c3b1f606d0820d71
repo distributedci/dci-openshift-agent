@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ade5cb3b_1d65ed7a",
+        "filename": "docs/acm.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-03-26T01:41:59Z",
+      "side": 1,
+      "message": "HCO or Hosted Control Planes",
+      "revId": "8e389325ef4313060960bf95c3b1f606d0820d71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d532f1bc_77676e09",
+        "filename": "plays/acm-ztp-spoke-clusterinstance.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-03-26T01:41:59Z",
+      "side": 1,
+      "message": "are you going to use a flag to control this too? dci_force_spoke_deploy?\n\nyeah, we need to migrate all all acm_vars to dci_acm_vars",
+      "revId": "8e389325ef4313060960bf95c3b1f606d0820d71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
