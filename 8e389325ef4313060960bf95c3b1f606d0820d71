@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "81a753e5_9284c547",
+        "filename": "plays/acm-ztp-spoke-clusterinstance.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-03-26T18:00:59Z",
+      "side": 1,
+      "message": "I can start introducing the new vars here, I was using what was already defined.\n\nI think it would be better to start with the new vars at this moment, I\u0027ll make the change and document them in the acm.md doc.",
+      "parentUuid": "d532f1bc_77676e09",
+      "revId": "8e389325ef4313060960bf95c3b1f606d0820d71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "355db4f2_29a7e5c8",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-03-26T12:10:03Z",
       "side": 1,
       "message": "do we also need to add ztp-spoke in here?",
+      "revId": "8e389325ef4313060960bf95c3b1f606d0820d71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87d55908_0170b5bd",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-03-26T18:00:59Z",
+      "side": 1,
+      "message": "Quite likely, but that is for gitops, This change is only for clusterinstance.",
+      "parentUuid": "355db4f2_29a7e5c8",
       "revId": "8e389325ef4313060960bf95c3b1f606d0820d71",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
