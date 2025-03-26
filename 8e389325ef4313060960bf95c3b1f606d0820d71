@@ -33,6 +33,23 @@
       "message": "are you going to use a flag to control this too? dci_force_spoke_deploy?\n\nyeah, we need to migrate all all acm_vars to dci_acm_vars",
       "revId": "8e389325ef4313060960bf95c3b1f606d0820d71",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "355db4f2_29a7e5c8",
+        "filename": "plays/teardown.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-26T12:10:03Z",
+      "side": 1,
+      "message": "do we also need to add ztp-spoke in here?",
+      "revId": "8e389325ef4313060960bf95c3b1f606d0820d71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
