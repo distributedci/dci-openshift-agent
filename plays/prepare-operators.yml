@@ -128,6 +128,14 @@
   when:
     - custom_catalogs | default([]) | length
 
+- name: Get Pre-GA DCI component
+  ansible.builtin.set_fact:
+    dci_pre_ga_catalog: "{{ component.url }}"
+  loop: "{{ job_info.job.components + [custom_component|default('')] }}"
+  loop_control:
+    loop_var: component
+  when: component.type == 'prega-operator-index'
+
 - name: Pre-GA catalog
   ansible.builtin.include_tasks:
     file: pre-ga-catalog.yml
@@ -135,7 +143,7 @@
       environment:
         DOCKER_CONFIG: "{{ docker_conf.path }}"
   when:
-    - dci_pre_ga_catalog | default('') | length
+    - dci_pre_ga_catalog is defined
 
 - name: "Remove docker auths directory"
   ansible.builtin.file:
