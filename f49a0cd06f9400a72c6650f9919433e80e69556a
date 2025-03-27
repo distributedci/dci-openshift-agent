@@ -16,6 +16,24 @@
       "message": "These condition are to avoid having the cluster with GA and Pre-ga operators available at the same time.",
       "revId": "f49a0cd06f9400a72c6650f9919433e80e69556a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e3a9a39_70cd8a06",
+        "filename": "plays/catalog-from-image.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-03-27T22:03:46Z",
+      "side": 0,
+      "message": "Ack",
+      "parentUuid": "1f8b0d2c_8e3fda18",
+      "revId": "f49a0cd06f9400a72c6650f9919433e80e69556a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
