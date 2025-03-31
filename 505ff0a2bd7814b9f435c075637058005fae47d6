@@ -57,6 +57,30 @@
       },
       "revId": "505ff0a2bd7814b9f435c075637058005fae47d6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90465afa_d0713120",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-03-31T13:58:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b5035fa6_0eab7c0b",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 2
+      },
+      "revId": "505ff0a2bd7814b9f435c075637058005fae47d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
