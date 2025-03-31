@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bb4e9b0_ca65f09a",
+        "filename": "plays/catalog-from-image.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-03-31T13:43:26Z",
+      "side": 1,
+      "message": "Uh oh, I should not have changed this, glad you highlighted it. I\u0027ll revert this line.\n\nAbout custom_component is a way to allow custom components in the agent, it is documented here: https://doc.distributed-ci.io/dci-openshift-agent/#custom-builds",
+      "parentUuid": "acec042b_d68c32a1",
+      "revId": "505ff0a2bd7814b9f435c075637058005fae47d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b5035fa6_0eab7c0b",
