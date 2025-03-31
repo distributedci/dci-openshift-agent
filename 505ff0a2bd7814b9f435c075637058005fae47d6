@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acec042b_d68c32a1",
+        "filename": "plays/catalog-from-image.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-31T07:46:17Z",
+      "side": 1,
+      "message": "- Why not using the same condition that in prepare-operators.yml? ` job_info.job.components + ((custom_component | default([])) | list)`\n- Just asking, where is `custom_component` defined?",
+      "revId": "505ff0a2bd7814b9f435c075637058005fae47d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5035fa6_0eab7c0b",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-03-31T07:46:17Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 2
+      },
+      "revId": "505ff0a2bd7814b9f435c075637058005fae47d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
