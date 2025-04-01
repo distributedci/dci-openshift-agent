@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2618a206_8326fae1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-01T07:56:05Z",
+      "side": 1,
+      "message": "Pierre, could you make a summary on a new comment with all the tests made to confirm that all the failures we detected the last time this was merged are now fixed?",
+      "revId": "5eef048fdf350b4cb21a1f011523ece6eea123d9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
