@@ -186,7 +186,7 @@
 
 - name: After install for IPI/UPI/SNO
   when:
-    - (install_type | default('ipi')) in ['ipi', 'upi', 'sno']
+    - (install_type | default('ipi')) in ['ipi', 'upi', 'sno', 'abi']
   block:
     - name: "Merge all inventory hosts"
       ansible.builtin.set_fact:
