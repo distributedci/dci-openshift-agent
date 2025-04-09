@@ -126,10 +126,16 @@
 
 - name: Monitor installation
   ansible.builtin.include_role:
-    name: redhatci.ocp.acm_sno
+    name: redhatci.ocp.acm.utils
     tasks_from: monitor-install
   vars:
-    acm_cluster_name: "{{ cluster }}"
+    _ztp_nodes: >
+      {{ install_started.resources[0].spec.provisionRequirements.controlPlaneAgents | int }} +
+      {{ install_started.resources[0].spec.provisionRequirements.workerAgents | default(0) | int }}
+    utils_cluster_name: "{{ cluster }}"
+    utils_cluster_namespace: "{{ cluster }}"
+    utils_monitor_timeout: "{{ _ztp_nodes * 30 + 30 }}"
+    utils_monitor_wait_time: 10
 
 - name: Get Spoke cluster credentials
   ansible.builtin.include_role:
