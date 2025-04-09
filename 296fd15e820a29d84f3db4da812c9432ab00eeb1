@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b77901da_1bafddd7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-09T10:18:55Z",
+      "side": 1,
+      "message": "I believe we\u0027re ready to merge this, but please confirm in the next daily job so that everyone agrees on doing that. Thanks for your big work here!",
+      "revId": "296fd15e820a29d84f3db4da812c9432ab00eeb1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
