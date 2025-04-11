@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1776b55e_58aeba68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-11T09:50:51Z",
+      "side": 1,
+      "message": "LGTM, waiting for a passing test in dallas before giving +2",
+      "revId": "0d05cd04d295ade52c7140a5946b59048886f9e0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
