@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b2e748f_ee44dd56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-14T18:42:03Z",
+      "side": 1,
+      "message": "Where is prepare-odf-storage.yml called from?",
+      "revId": "65fdd68f0b70a548324c645e9122cfa7b5f5d9d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1819642_a371d59e",
+        "filename": "plays/prepare-odf-storage.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-14T18:42:03Z",
+      "side": 1,
+      "message": "Forgot to rename the task?",
+      "revId": "65fdd68f0b70a548324c645e9122cfa7b5f5d9d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d7255a2_7ac9dc3b",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-14T18:42:03Z",
+      "side": 1,
+      "message": "Maybe we can do as in here to get oc path? https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/heads/master/plays/scripts/get-ocp-logs#23",
+      "revId": "65fdd68f0b70a548324c645e9122cfa7b5f5d9d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
