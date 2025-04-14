@@ -21,4 +21,11 @@
   vars:
     ebm_nodes: "{{ dci_compute_hosts + dci_control_plane_hosts }}"
   when: dci_delete_uefi_boot_entries | default(false) | bool
+
+- name: Pre-GA tagging
+  ansible.builtin.include_tasks:
+    file: pre-ga-tagging.yml
+  when:
+    - dci_pre_ga_catalog is defined
+    - dci_pre_ga_authfile is defined
 ...
