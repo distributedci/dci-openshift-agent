@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcb02a53_e4349f0b",
+        "filename": "plays/prepare-odf-storage.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-04-14T18:55:24Z",
+      "side": 1,
+      "message": "added the incorrect file. I will call the task directly in after_install",
+      "parentUuid": "f1819642_a371d59e",
+      "revId": "65fdd68f0b70a548324c645e9122cfa7b5f5d9d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d7255a2_7ac9dc3b",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-04-14T18:42:03Z",
       "side": 1,
       "message": "Maybe we can do as in here to get oc path? https://softwarefactory-project.io/r/plugins/gitiles/dci-openshift-agent/+/refs/heads/master/plays/scripts/get-ocp-logs#23",
+      "revId": "65fdd68f0b70a548324c645e9122cfa7b5f5d9d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b1f4cfa_f3cbf355",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-04-14T18:55:24Z",
+      "side": 1,
+      "message": "Thanks",
+      "parentUuid": "4d7255a2_7ac9dc3b",
       "revId": "65fdd68f0b70a548324c645e9122cfa7b5f5d9d5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

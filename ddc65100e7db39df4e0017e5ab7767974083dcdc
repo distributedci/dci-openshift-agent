@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ce6c8a29_4a8fb87a",
+        "filename": "plays/prepare-odf-storage.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-04-14T18:55:24Z",
+      "side": 1,
+      "message": "I uploaded an incorrect file. should be fixed",
+      "parentUuid": "f6912a3d_61052450",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0c21d2c6_1f9fea30",
         "filename": "plays/scripts/wipe-odf-disks.sh",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2025-04-14T18:32:37Z",
       "side": 1,
       "message": "please, remove empty space at the end of the line",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73ba0503_a22c498e",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-04-14T18:55:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c21d2c6_1f9fea30",
       "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -69,6 +105,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "88c12a2d_ab486fd4",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-04-14T18:55:24Z",
+      "side": 1,
+      "message": "Done. I made this frecuently, will ask them to rename the product :P",
+      "parentUuid": "7c3d67f2_758cc871",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "03ca41d5_058d4b91",
@@ -82,6 +136,24 @@
       "writtenOn": "2025-04-14T18:32:37Z",
       "side": 1,
       "message": "Can we add a note that the script only works on disks larger than 100GB?",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91eaeb52_c80685fd",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-04-14T18:55:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03ca41d5_058d4b91",
       "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
