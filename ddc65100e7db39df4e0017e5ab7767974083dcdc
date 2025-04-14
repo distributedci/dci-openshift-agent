@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "861f425d_98b753fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-14T18:32:37Z",
+      "side": 1,
+      "message": "Nice work Beto",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6912a3d_61052450",
+        "filename": "plays/prepare-odf-storage.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-14T18:32:37Z",
+      "side": 1,
+      "message": "Let\u0027s update the task name to something about the disk clean up :P",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c21d2c6_1f9fea30",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-14T18:32:37Z",
+      "side": 1,
+      "message": "please, remove empty space at the end of the line",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c3d67f2_758cc871",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-14T18:32:37Z",
+      "side": 1,
+      "message": "typo: ODF",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03ca41d5_058d4b91",
+        "filename": "plays/scripts/wipe-odf-disks.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-14T18:32:37Z",
+      "side": 1,
+      "message": "Can we add a note that the script only works on disks larger than 100GB?",
+      "revId": "ddc65100e7db39df4e0017e5ab7767974083dcdc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
