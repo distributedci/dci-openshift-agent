@@ -1,0 +1,36 @@
+---
+- name: Check if Pre-GA authfile exists
+  ansible.builtin.stat:
+    path: "{{ dci_pre_ga_authfile }}"
+  register: prega_auth
+
+- name: Pre-GA tagging
+  when:
+    - prega_auth.stat.exists
+  block:
+    - name: Pull Pre-GA catalog index
+      containers.podman.podman_image:
+        name: "{{ dci_pre_ga_catalog }}"
+        state: present
+
+    - name: Create a DCI tag
+      containers.podman.podman_tag:
+        image: "{{ dci_pre_ga_catalog }}"
+        target_names:
+          - "{{ dci_pre_ga_catalog }}-dci"
+
+    - name: Push DCI Pre-GA catalog index
+      containers.podman.podman_image:
+        name: "{{ dci_pre_ga_catalog.split(':')[0] }}"
+        tag: "{{ dci_pre_ga_catalog.split(':')[-1] }}-dci"
+        auth_file: "{{ dci_pre_ga_authfile }}"
+        push: true
+
+    - name: Remove local Pre-GA indices
+      containers.podman.podman_image:
+        name: "{{ item }}"
+        state: absent
+      loop:
+        - "{{ dci_pre_ga_catalog }}"
+        - "{{ dci_pre_ga_catalog }}-dci"
+...
