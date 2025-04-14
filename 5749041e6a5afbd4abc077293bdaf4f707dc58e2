@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "185a1103_91d19949",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-14T21:45:25Z",
+      "side": 1,
+      "message": "maybe cast it to bool?",
+      "revId": "5749041e6a5afbd4abc077293bdaf4f707dc58e2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
