@@ -9,7 +9,6 @@
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Display proxy settings
       debug:
@@ -119,14 +118,6 @@
         build: "ga"
       when: build == "candidate"
 
-    - name: Create jumphost host if it doesn't exist
-      ansible.builtin.add_host:
-        name: jumphost
-        groups: jumphost
-        hostname: localhost
-      when:
-        - "'jumphost' not in group_names"
-
     - name: Pre-run
       dci_job:
         id: "{{ job_id }}"
@@ -148,29 +139,9 @@
         - version is version('4.12', '<')
         - (install_type | default('ipi')) == 'abi'
 
-    - name: "Requirements for  Hybrid"
+    - name: "Requirements for ACM install_type"
       when:
-        - ansible_env.KUBECONFIG is defined
-        - ansible_env.KUBECONFIG | length > 0
-      block:
-        - name: "Read KUBECONFIG path from env vars"
-          ansible.builtin.set_fact:
-            hub_kubeconfig_path: "{{ lookup('env','KUBECONFIG') }}"
-          when: hub_kubeconfig_path is not defined
-
-        - name: "Check if HUB_KUBECONFIG path exists"
-          ansible.builtin.stat:
-            path: "{{ hub_kubeconfig_path }}"
-          register: hub_kubeconfig
-
-        - name: "Fail if hub_kubeconfig NOT found"
-          ansible.builtin.fail:
-            msg: "hub_kubeconfig not found at {{ hub_kubeconfig_path }}"
-          when: not hub_kubeconfig.stat.exists
-
-    - name: "Requirements for ACM install_type or Hybrid"
-      when:
-        - ansible_env.HUB_KUBECONFIG is defined
+        - (install_type | default('ipi')) == 'acm'
       block:
         - name: "Read HUB_KUBECONFIG path from env vars"
           ansible.builtin.set_fact:
@@ -187,31 +158,15 @@
             msg: "hub_kubeconfig not found at {{ hub_kubeconfig_path }}"
           when: not hub_kubeconfig.stat.exists
 
-    - name: Set fact also in localhost host scope
-      ansible.builtin.set_fact:
-        version: "{{ version }}"
-        version_pull_url: "{{ version_pull_url }}"
-        job_id: "{{ job_id }}"
-        job_info: "{{ job_info }}"
-        dci_client_id: "{{ dci_client_id }}"
-        dci_api_secret: "{{ dci_api_secret }}"
-        dci_cs_url: "{{ dci_cs_url }}"
-        dci_ui_url: "{{ dci_ui_url }}"
-        install_type: "{{ (install_type | default('ipi')) }}"
-        build: "{{ build }}"
-      delegate_to: jumphost
-      delegate_facts: true
-
 # Step 1a : pre run
 - name: 'Launch pre-run'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - pre-run
   environment:
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
 
     - name: Pre-run
@@ -234,7 +189,7 @@
             file: plays/acm-pre-run.yml
             apply:
               environment:
-                KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
+                KUBECONFIG: "{{ hub_kubeconfig_path }}"
               tags:
                 - acm-pre-run
           when:
@@ -242,6 +197,7 @@
 
       rescue: &teardown_error
         - name: Run the teardown error handler
+          delegate_to: localhost
           ignore_unreachable: true
           block:
             - name: Error
@@ -256,6 +212,7 @@
 
             - name: Teardown hooks
               when: dci_teardown_on_failure|bool
+              delegate_to: localhost
               ignore_unreachable: true
               ignore_errors: true
               block:
@@ -277,7 +234,7 @@
 
 # Step 1b : hook pre run
 - name: 'Launch hook pre-run'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - pre-run
     - hook-pre-run
@@ -286,8 +243,6 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
-    KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path | default('')}}"
   tasks:
     - name: Pre-run hooks
       block:
@@ -396,7 +351,7 @@
 
             - name: Teardown Hooks
               when: dci_teardown_on_failure|bool
-              delegate_to: jumphost
+              delegate_to: localhost
               ignore_unreachable: true
               ignore_errors: true
               block:
@@ -418,7 +373,7 @@
 
 # Step 3a-1 : installing
 - name: 'Launch ACM install'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - installing
@@ -428,7 +383,6 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Install ACM
       block:
@@ -437,7 +391,7 @@
             file: plays/acm-install.yml
             apply:
               environment:
-                KUBECONFIG: "{{ hostvars.localhost.hub_kubeconfig_path }}"
+                KUBECONFIG: "{{ hub_kubeconfig_path }}"
           when:
             - (install_type | default('ipi')) == 'acm'
             - dci_main == 'install'
@@ -455,7 +409,6 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Install using ABI
       block:
@@ -469,7 +422,7 @@
 
 # Step 3a-1 : installing
 - name: 'Launch after install'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - installing
@@ -480,7 +433,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: After Install
       block:
@@ -492,7 +444,7 @@
 
 # Step 3a-2 : deploy operators
 - name: 'Deploy operators to OCP cluster'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - operator-deployment
@@ -502,7 +454,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Deploy operators
       when:
@@ -520,7 +471,7 @@
 
 # Step 3a-3 : hook installing
 - name: 'Launch hook install'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - hook-installing
@@ -530,7 +481,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Install Hooks
       when:
@@ -548,7 +498,7 @@
 
 # Step 3b-1 : upgrading
 - name: 'Launch upgrade'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - upgrading
@@ -558,7 +508,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Upgrade
       when:
@@ -572,7 +521,7 @@
 
 # Step 3b-2 : hook upgrading
 - name: 'Launch hook upgrade'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - hook-upgrading
@@ -582,7 +531,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Upgrade Hooks
       when:
@@ -599,7 +547,7 @@
 
 # Step 4 : Red Hat testing
 - name: 'Launch Red Hat tests'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - testing
@@ -610,7 +558,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Red Hat tests
       when:
@@ -627,7 +574,7 @@
 
 # Step 5 : partner testing
 - name: 'Launch partner tests'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - running
     - testing
@@ -638,7 +585,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Test Hooks
       when:
@@ -662,12 +608,11 @@
       dci_job:
         id: "{{ job_id }}"
         status: "post-run"
-      delegate_to: localhost
       tags: [dci]
 
 # Step 6 : post run
 - name: Launch post run
-  hosts: jumphost
+  hosts: localhost
   tags:
     - post-run
     - dci
@@ -677,7 +622,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Post-run
       block:
@@ -696,12 +640,11 @@
       dci_job:
         id: "{{ job_id }}"
         status: "success"
-      delegate_to: localhost
       tags: [dci]
 
 # Step 7 : state "success"
 - name: 'Success'
-  hosts: jumphost
+  hosts: localhost
   tags:
     - success
   environment:
@@ -710,7 +653,6 @@
     no_proxy: "{{ no_proxy_list }}"
     KUBECONFIG: "{{ kubeconfig_path }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Success
       ignore_unreachable: true
