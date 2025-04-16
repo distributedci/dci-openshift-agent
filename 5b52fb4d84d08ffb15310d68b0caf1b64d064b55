@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d868ca82_bc32515a",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 662,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-16T17:58:05Z",
+      "side": 1,
+      "message": "nit: Rename to match the tag and comment, e.g. Validate testing results step",
+      "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5cd3ed6_48891c08",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 663,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-16T17:58:05Z",
+      "side": 1,
+      "message": "localhost makes sense here, because filters only run in localhost and the redhatci.ocp.verify_tests uses a filter. And junit files are expected to be available in localhost as well, correct?",
+      "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1344af50_8df21677",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 667,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-16T17:58:05Z",
+      "side": 1,
+      "message": "nit: validate-testing to match the other tags (redhat-testing, partner-testing)",
+      "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23ffe1fa_b0fadd63",
+        "filename": "plays/check-test-results.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-16T17:58:05Z",
+      "side": 1,
+      "message": "Please prefix with dci_",
+      "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
