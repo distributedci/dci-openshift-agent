@@ -124,6 +124,12 @@ all:
     # You can comment out the line below if you want the kubeadmin credentials to be stored in plain text
     #kubeadmin_vault_password_file_path: "{{ '{{ repo_root_path }}/kubeadmin_vault_password_file' }}"
 
+{% if dci_inventory_vars is defined %}
+{% filter indent(width=4) %}
+{{ dci_inventory_vars }}
+{% endfilter %}
+{% endif %}
+
     ############################
     #    LOGIC: DO NOT TOUCH   #
     # vvvvvvvvvvvvvvvvvvvvvvvv #
