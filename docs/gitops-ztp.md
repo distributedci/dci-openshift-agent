@@ -36,9 +36,11 @@ Also, for disconnected environments you may need to have a Git repository served
 | dci_operators         | List of the operators, along with their specific settings, to be installed in the Hub Cluster. This list must included, at minimum, the advanced-cluster-management, the openshift-gitops-operator and the topology-aware-lifecycle manager.
 | enable_acm            | The variable must be set to "true" for the dci-openshift-agent to run the ACM hub cluster configuration tasks.
 | enable_gitea          | For disconnected environments, set it to "true" to enable the deployment of a Gitea server in the hub cluster so you may push your gitops manifests.
+| enable_ksops          | KSOPS is a kustomize plugin used to decrypt secrets stored in the GitOps repository.
 | dci_gitea_repo_sshkey | The sshkey to clone the initial repository when the repo requires ssh authentication.
 | dci_pullsecret_file   | In disconnected environments, paths to the pull-secret file to authenticate on the Gitea image registry.
 | dci_local_registry    | In disconnected environments, base URL to the local registry hosting the Gitea mirrored images.
+| sk_age_key            | If enable_ksops is set to true, sk_age_key contains the age key pair used to encrypt/decrypt the secrets in the GitOps repository.
 
 
 ### Pipeline data for the ZTP ACM Hub Cluster
@@ -68,13 +70,22 @@ dci_operators:
 enable_acm: true
 # For disconnected environments
 #enable_gitea: true
+# To encrypt/decrypt secrets in the GitOps repository
+#enable_ksops: true
 # For private repositories
 #dci_gitea_repo_sshkey: /path/to/ssh_private_key
 ```
 
 ### Inventory data for the ZTP ACM Hub Cluster
 
-No extra variables are needed in the ACM Hub Cluster inventory.
+```
+sk_age_key: |
+  # created: 2025-04-16T11:28:48Z
+  # public key: age1j24rsa89nhv86dstnl696pfhxlngktjl5gcvya6y6ykg8t5jkqgsv0ua36
+  AGE-SECRET-KEY-16NSYF9LSS3QZKLXFEYS5K36FPQC62QLZPNA02H7YWV0SFFVXF2PQNRZPNQ
+```
+
+Altough in this example the age key pair is displayed in clear text, it is strongly recommended to have the variable encrypted with dci-vault.
 
 ## ZTP spoke cluster
 
@@ -216,3 +227,87 @@ webserver_url         | Base URL to the local cache web server serving every oth
 provision_cache_store | Local path to the directory containing the resources served by the cache web server.
 local_registry_host   | FQDN to the local registry mirroring container images like the release image.
 local_registry_port   | (Optional) Network port the local registry is bound to.
+
+## Encrypting secrets in the GitOps repository
+
+For a spoke deployment to work, some secrets must be provided to the ACM hub cluster, in particular, the pull-secret and baremetal host BMC credentials. The DCI solution assumes these secrets are part of the GitOps repository and deployed along with the site config manifest, so no other operations need to be run or automated. This poses a challenge since storing secrets in code repositories is a bad practice.
+
+To overcome this, the DCI OpenShift Agent may enable the KSOPS kustomize plugin for the OpenShift GitOps Operator, which allows to encrypt the secret data in the GitOps repository using a key pair. The GitOps operator will decrypt this data when synchronizing with the repository, thus keeping the end to end encryption.
+
+To be able to use the KSOPS solution to protect the sensitive data in the repository, there are some operations that need to be run manually before the GitOps repository secrets are commited for the first time. In particular, the key pair must be created, for which we recommend to use the tool "age".
+
+Once the key pair is available, we may use the public key to encrypt the secrets in the GitOps repository and commit them.
+
+Finally, we may commit the private key to the Ansible inventory for the hub cluster in the sk_age_key variable as shown [above](#inventory-data-for-the-ztp-acm-hub-cluster).
+
+To create the key pair and encrypt the repository secrets follow this process:
+
+1. Install first the required binaries (age and [sops](https://github.com/getsops/sops/releases)):
+
+```
+dnf install age
+# Download the sops binary
+curl -LO https://github.com/getsops/sops/releases/download/v3.10.2/sops-v3.10.2.linux.amd64
+# Move the binary in to your PATH
+mv sops-v3.10.2.linux.amd64 /usr/local/bin/sops
+# Make the binary executable
+chmod +x /usr/local/bin/sops
+```
+
+2. Create a working directory:
+
+```
+mkdir sops
+cd sops
+```
+
+3. Create an age key:
+
+```
+age-keygen -o age.key
+``````
+
+4. Define the SOPS creation rules. The age public key is available in the age.key file:
+
+```
+cat <<EOF > .sops.yaml
+creation_rules:
+  - encrypted_regex: "^(data|stringData)$"
+    age: age1...< your age public key>
+EOF
+```
+
+5. Encrypt your secret files in your local copy of the GitOps repository:
+
+```
+sops --encrypt --in-place /path/to/gitops/bmh-secret.yaml
+sops --encrypt --in-place /path/to/gitops/pull-secret.yaml
+```
+
+6. Add a KSOPS generator to your repository:
+
+```
+cat <<EOF > secret-generator.yaml
+apiVersion: viaduct.ai/v1
+kind: ksops
+metadata:
+  name: secret-generator
+files:
+  - ./bmh-secret.yaml
+  - ./pull-secret.yaml
+EOF
+```
+
+7. Include the KSOPS generator in your kustomization file:
+
+```
+cat <<EOF > kustomization.yaml
+generators:
+  - ./site-config-generator.yaml
+  - ./secret-generator.yaml
+EOF
+```
+
+8. Add the new files to your git repository and commit the changes.
+
+9. Add the age key to the ACM hub cluster inventory, if possible, DCI-vault secured.
