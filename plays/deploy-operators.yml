@@ -68,6 +68,12 @@
   when:
     - enable_acm | bool
 
+- name: "Setup the KSOPS kustomize plugin for the GitOps operator"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.acm.setup_ksops
+  when:
+    - enable_ksops | default(false) | bool
+
 - name: "Setup a Gitea deployment"
   ansible.builtin.include_tasks: setup-gitea.yml
   when:
