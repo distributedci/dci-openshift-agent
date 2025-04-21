@@ -67,6 +67,24 @@
       "message": "Please prefix with dci_",
       "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88c86b08_b7d0b4ec",
+        "filename": "plays/check-test-results.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-21T08:27:59Z",
+      "side": 1,
+      "message": "then, we\u0027d need to update dci-openshift-agent too, wouldn\u0027t we?",
+      "parentUuid": "23ffe1fa_b0fadd63",
+      "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
