@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "308fa29d_abbaebe2",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-21T08:55:53Z",
+      "side": 1,
+      "message": "Although",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 9
+      },
+      "revId": "786ce9cba3c65f5090dd101ebe002faa24c5449a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e64b01e_89da67b0",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-21T08:55:53Z",
+      "side": 1,
+      "message": "from being",
+      "range": {
+        "startLine": 233,
+        "startChar": 320,
+        "endLine": 233,
+        "endChar": 325
+      },
+      "revId": "786ce9cba3c65f5090dd101ebe002faa24c5449a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16ce9a50_63c80c1f",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-21T08:55:53Z",
+      "side": 1,
+      "message": "As said in the collections change, are any of these steps needed to be automated? When are they expected to be executed, and where?",
+      "revId": "786ce9cba3c65f5090dd101ebe002faa24c5449a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
