@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07591d14_5cb029b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-23T19:35:39Z",
+      "side": 1,
+      "message": "Please set the Test hints in the commit so it can be tested and reviewed. Thanks!",
+      "revId": "01af8ca63643cdd5984d8e2a8d31f044756f7b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9db5433_010867ec",
+        "filename": "plays/abi-get-logs.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-04-23T19:35:39Z",
+      "side": 1,
+      "message": "Please use FQCNs, e.g. ansible.builtin.stat:",
+      "revId": "01af8ca63643cdd5984d8e2a8d31f044756f7b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
