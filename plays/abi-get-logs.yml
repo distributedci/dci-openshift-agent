@@ -42,6 +42,7 @@
       {{ job_logs.path }}
       {{ groups['nodes'] | join (' ') }}
   ignore_errors: true
+  when: lookup('pipe', 'test -f {{'~/clusterconfigs'}}-{{ cluster_name }}/kubeconfig  && echo true || echo false') == "true"
 
 - name: Upload to DCI remaining logs from previous jobs
   block:
