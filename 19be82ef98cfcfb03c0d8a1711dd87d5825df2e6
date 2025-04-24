@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a8ab8dd_dc2b31b1",
+        "filename": "plays/abi-get-logs.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-04-24T14:13:18Z",
+      "side": 1,
+      "message": "Just to make sure to use unique name I have added \"_\" as suffix, kubeconfig_stat_",
+      "parentUuid": "ffc6786d_61addb0d",
+      "revId": "19be82ef98cfcfb03c0d8a1711dd87d5825df2e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5cfadfa1_439e84b5",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-04-24T07:51:33Z",
       "side": 1,
       "message": "Same, `kubeconfig_stat`",
+      "revId": "19be82ef98cfcfb03c0d8a1711dd87d5825df2e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3921766_5e5ff36b",
+        "filename": "plays/abi-get-logs.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-04-24T14:13:18Z",
+      "side": 1,
+      "message": "Just to make sure to use unique name I have added \"_\" as suffix, kubeconfig_stat_",
+      "parentUuid": "5cfadfa1_439e84b5",
       "revId": "19be82ef98cfcfb03c0d8a1711dd87d5825df2e6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

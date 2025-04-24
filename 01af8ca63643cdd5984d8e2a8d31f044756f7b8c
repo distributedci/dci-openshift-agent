@@ -33,6 +33,24 @@
       "message": "Please use FQCNs, e.g. ansible.builtin.stat:",
       "revId": "01af8ca63643cdd5984d8e2a8d31f044756f7b8c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7538e471_afc154a8",
+        "filename": "plays/abi-get-logs.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-04-24T14:13:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9db5433_010867ec",
+      "revId": "01af8ca63643cdd5984d8e2a8d31f044756f7b8c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
