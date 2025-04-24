@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "428261fe_3788941b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-24T07:51:33Z",
+      "side": 1,
+      "message": "Checked the debug job, it worked fine: job failed just before generating a new kubeconfig from a freshly installed cluster, and the get-abi-logs script was not executed.\nJust adding some comments for cosmetic changes.",
+      "revId": "19be82ef98cfcfb03c0d8a1711dd87d5825df2e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ffc6786d_61addb0d",
+        "filename": "plays/abi-get-logs.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-24T07:51:33Z",
+      "side": 1,
+      "message": "`kubeconfig_stat` instead?",
+      "revId": "19be82ef98cfcfb03c0d8a1711dd87d5825df2e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cfadfa1_439e84b5",
+        "filename": "plays/abi-get-logs.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-24T07:51:33Z",
+      "side": 1,
+      "message": "Same, `kubeconfig_stat`",
+      "revId": "19be82ef98cfcfb03c0d8a1711dd87d5825df2e6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
