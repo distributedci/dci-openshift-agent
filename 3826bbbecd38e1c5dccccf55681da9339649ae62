@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d22fb69b_5b130e3d",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-24T07:59:18Z",
+      "side": 1,
+      "message": "Although",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 7
+      },
+      "revId": "3826bbbecd38e1c5dccccf55681da9339649ae62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18edb55e_488bb349",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-24T07:59:18Z",
+      "side": 1,
+      "message": "From my perspective, only thing that we\u0027re still missing here is to say where these commands must be executed: jumphost?",
+      "range": {
+        "startLine": 243,
+        "startChar": 58,
+        "endLine": 243,
+        "endChar": 77
+      },
+      "revId": "3826bbbecd38e1c5dccccf55681da9339649ae62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "359936fa_d49574de",
+        "filename": "docs/gitops-ztp.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-24T07:59:18Z",
+      "side": 1,
+      "message": "Do we need to modify our gitops repositories with the KSOPS generator included in a new commit? I don\u0027t see them in neither bos2-gitops nor dallas-gitops",
+      "range": {
+        "startLine": 311,
+        "startChar": 48,
+        "endLine": 311,
+        "endChar": 66
+      },
+      "revId": "3826bbbecd38e1c5dccccf55681da9339649ae62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38a162ae_80066200",
+        "filename": "plays/deploy-operators.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-24T07:59:18Z",
+      "side": 1,
+      "message": "I\u0027d add a reference to this variable in the main README -\u003e Ansible variables table, apart from what\u0027s documented in the gitops-ztp docs",
+      "range": {
+        "startLine": 75,
+        "startChar": 6,
+        "endLine": 75,
+        "endChar": 18
+      },
+      "revId": "3826bbbecd38e1c5dccccf55681da9339649ae62",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
