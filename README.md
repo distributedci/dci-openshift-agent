@@ -88,7 +88,6 @@ In any case, it must:
 - Be able to connect the following Web urls:
     - DCI API: <https://api.distributed-ci.io>
     - DCI Packages: <https://packages.distributed-ci.io>
-    - DCI Repository: <https://repo.distributed-ci.io>
     - EPEL: <https://dl.fedoraproject.org/pub/epel/>
     - Ansible Runner Repository: <https://releases.ansible.com/ansible-runner/>
     - QUAY: <https://quay.io>
@@ -114,6 +113,43 @@ In any case, it must:
 > NOTES:
  - Make sure rhel-8-for-x86_64-appstream-rpms repo provides access to libvirt => 6.0.0 packages
  - The installer may require access to other endpoint (CDNs). The list above is for well know URLs that be subject to change.
+
+### DCI Openshift agent inbound/outbound ports:
+
+#### Protocols used:
+- TCP
+- UDP
+- HTTP
+- HTTPS
+
+#### Required Inbound ports:
+- 67/UDP (DHCP)
+- 68/UDP (DCHP)
+- 69/UDP (PXE/TFTP)
+- 4011/TCP (PXE)
+ 
+#### Required Outbound ports:
+- 22/TCP (ssh)
+- 623/UDP (IPMI)
+- 80/TCP (HTTP)
+- 423/TCP (HTTPS)
+- 4011/TCP (PXE)
+
+#### Destination servers/endpoints:
+- 44.212.216.21
+- 13.219.163.247
+- https://dl.fedoraproject.org/pub/epel/
+- https://releases.ansible.com/ansible-runner/
+- https://quay.io
+- https://registry.ci.openshift.org
+- https://registry.redhat.io
+- https://access.redhat.com
+- https://catalog.redhat.com
+- https://rhcos.mirror.openshift.com 
+- https://mirror.openshift.com
+- https://github.com
+- https://softwarefactory-project.io
+- Access to cloudfront CDN
 
 ## Systems under test
 
