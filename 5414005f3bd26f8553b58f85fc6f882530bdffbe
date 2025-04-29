@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34216793_923acab0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-29T10:25:11Z",
+      "side": 1,
+      "message": "Some cosmetic changes.\nAlso, is this needed to be documented on dci-openshift-app-agent too?",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba75122d_d7fb21b9",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-29T10:25:11Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 1
+      },
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc6bb72b_c935cd72",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-04-29T10:25:11Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 150,
+        "startChar": 36,
+        "endLine": 150,
+        "endChar": 37
+      },
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
