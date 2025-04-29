@@ -20,6 +20,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a93ce4a4_633bcaa6",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-29T10:27:00Z",
+      "side": 1,
+      "message": "Michael, Do you think we should also include other ports for example web cache (80 or 8080 tcp), registry (443/tcp), DNS 53/udp, SSH 22/tcp?",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7499537_3831b9df",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-29T10:27:00Z",
+      "side": 1,
+      "message": "typo: DHCP",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ba75122d_d7fb21b9",
         "filename": "README.md",
         "patchSetId": 1
@@ -43,6 +77,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9eac3755_7a1717ef",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-29T10:27:00Z",
+      "side": 1,
+      "message": "please let\u0027s remove this Trailing whitespace",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be80434c_d967d3d2",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-29T10:27:00Z",
+      "side": 1,
+      "message": "just checking if this is a typo or you mean 443 :)",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bc6bb72b_c935cd72",
         "filename": "README.md",
         "patchSetId": 1
@@ -60,6 +128,23 @@
         "endLine": 150,
         "endChar": 37
       },
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e057392a_c3fba6d3",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-04-29T10:27:00Z",
+      "side": 1,
+      "message": "this one at the end of the line too",
       "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
