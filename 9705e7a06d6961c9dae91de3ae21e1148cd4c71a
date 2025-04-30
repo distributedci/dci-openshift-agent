@@ -16,6 +16,23 @@
       "message": "thanks!",
       "revId": "9705e7a06d6961c9dae91de3ae21e1148cd4c71a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b3e155d_f4487b8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-04-30T13:24:05Z",
+      "side": 1,
+      "message": "Look good to me, thanks for your change it simplify the structure of the code.",
+      "revId": "9705e7a06d6961c9dae91de3ae21e1148cd4c71a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
