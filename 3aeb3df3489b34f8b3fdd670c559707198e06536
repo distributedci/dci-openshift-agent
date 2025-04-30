@@ -24,6 +24,30 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "9169856b_abed1a2b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-04-30T14:40:03Z",
+      "side": 1,
+      "message": "This occurs when the server assigned as https_store differs from the control server. DOA is not required in this case. The server is only used to host the ISO for ABI, and creating a temporary directory in the user\u0027s home is unnecessary",
+      "parentUuid": "b3fdc81c_a48e536e",
+      "range": {
+        "startLine": 9,
+        "startChar": 2,
+        "endLine": 9,
+        "endChar": 71
+      },
+      "revId": "3aeb3df3489b34f8b3fdd670c559707198e06536",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "346e92e3_c50f48fa",
