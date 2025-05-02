@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "86cf2a03cd7fde831728c6c82e2edfd7c4eca949",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0f0c024_bb2398df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-02T12:20:45Z",
+      "side": 1,
+      "message": "The call to dci-pipeline is a bit weird, it\u0027s injected the pipeline name (sno-abi) somehow, so that makes dci-pipeline to fail:\n\n```\n$ dci-queue log sno 528\n...\n+ dci-pipeline @pipeline:name\u003dgr-dci-openshift-agent-33683 sno-abi:ansible_extravars\u003ddci_tags:debug,gerrit:dci-openshift-agent-33683, sno-abi sno-abi:url\u003dhttps://softwarefactory-project.io/r/#/c/33683/ sno-abi:ansible_extravars\u003ddev_gits_to_components:/home/dciteam/gerrit/33683-759433871fd7455916e770f28ac12df1/dci-openshift-agent, sno-abi:configuration\u003dsno sno-abi:ansible_extravars\u003ddci_change_dir:/home/dciteam/gerrit/33683-759433871fd7455916e770f28ac12df1 /home/dciteam/gerrit/33683-759433871fd7455916e770f28ac12df1/ocp-4.18-hub-abi-sno-pipeline.yml\n+ \u0027[\u0027 -d example-cnf-config \u0027]\u0027\n+ \u0027[\u0027 -d dci-openshift-agent \u0027]\u0027\n+ chmod -R ug+w dci-openshift-agent/samples\n+ PID2\u003d2480349\n+ wait 2480346\n+ tail -f output\n[WARNING]: log file at /home/dciteam/gerrit/33683-759433871fd7455916e770f28ac12df1/ansible.log is not writeable and we cannot create it, aborting\n\n2025-05-02 07:15:03,379 - dcipipeline.main - INFO - overload\u003d[{\u0027sno-abi\u0027: {\u0027ansible_extravars\u0027: {\u0027dci_tags\u0027: [\u0027debug\u0027, \u0027gerrit:dci-openshift-agent-33683\u0027]}}}, {\u0027sno-abi\u0027: {\u0027url\u0027: \u0027https://softwarefactory-project.io/r/#/c/33683/\u0027}}, {\u0027sno-abi\u0027: {\u0027ansible_extravars\u0027: {\u0027dev_gits_to_components\u0027: [\u0027/home/dciteam/gerrit/33683-759433871fd7455916e770f28ac12df1/dci-openshift-agent\u0027]}}}, {\u0027sno-abi\u0027: {\u0027configuration\u0027: \u0027sno\u0027}}, {\u0027sno-abi\u0027: {\u0027ansible_extravars\u0027: {\u0027dci_change_dir\u0027: \u0027/home/dciteam/gerrit/33683-759433871fd7455916e770f28ac12df1\u0027}}}] options\u003d{\u0027name\u0027: \u0027gr-dci-openshift-agent-33683\u0027}\nTraceback (most recent call last):\n  File \"/usr/bin/dci-pipeline\", line 11, in \u003cmodule\u003e\n    load_entry_point(\u0027dci-pipeline\u003d\u003d0.9.0\u0027, \u0027console_scripts\u0027, \u0027dci-pipeline\u0027)()\n  File \"/usr/lib/python3.6/site-packages/dcipipeline/main.py\", line 1337, in main\n    config_dir, pipeline, options \u003d get_config(args)\n  File \"/usr/lib/python3.6/site-packages/dcipipeline/main.py\", line 1031, in get_config\n    jobdefs \u003d load_jobdef_file(config, config_dir)\n  File \"/usr/lib/python3.6/site-packages/dcipipeline/main.py\", line 154, in load_jobdef_file\n    with open(os.path.expanduser(path)) as stream:\nFileNotFoundError: [Errno 2] No such file or directory: \u0027sno-abi\u0027\n\n...\n\n```",
+      "revId": "86cf2a03cd7fde831728c6c82e2edfd7c4eca949",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
