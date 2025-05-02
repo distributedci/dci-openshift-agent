@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "60924efbfd0160a774d80bbb8ff6fc2555b6f4f2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ce60382_4109b2dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-05-02T17:58:41Z",
+      "side": 1,
+      "message": "Tests:\n\n- [x] TestDallasSno: ocp-4.18-hub-abi-sno - https://www.distributed-ci.io/jobs/28fe0fd0-aaf5-4fe4-81d9-f90f73a48658\n- [x] TestBos2: abi - https://www.distributed-ci.io/jobs/e5012788-4f37-4729-87a8-0b922b019f3f\n- [x] TestBos2Sno: sno - https://www.distributed-ci.io/jobs/742df3e0-1410-437a-a0af-19ab36cc1430\n- [ ] TestBos2Sno: abi-sno - Not using this one as there are issues with NFS, unrelated to this change\n- [x] TestBos2: virt-prega-4.20 - https://www.distributed-ci.io/jobs/6eefe02a-3fee-4510-9b08-800d8fd78fd0",
+      "revId": "60924efbfd0160a774d80bbb8ff6fc2555b6f4f2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
