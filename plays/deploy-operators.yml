@@ -144,7 +144,9 @@
     - ocp_version is version("4.12", ">=")
 
 - name: Check if TALM pods are running
-  when: talm_operator | length > 0
+  when:
+    - dci_operators is defined
+    - talm_operator | length > 0
   vars:
     talm_operator: "{{ dci_operators | selectattr('name', 'equalto', 'topology-aware-lifecycle-manager') | list }}"
   block:
