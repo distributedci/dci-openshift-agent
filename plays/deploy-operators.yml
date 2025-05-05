@@ -117,7 +117,7 @@
 - name: Legacy support for performance profile in old OCP
   when:
     - performance_definition is defined
-    - version is version('4.16', '<')
+    - version is version('4.16', '<') or customize_extramanifests_path is undefined
     - perf_profile_crd.resources | length > 0
   block:
     - name: Apply the Performance Profile
