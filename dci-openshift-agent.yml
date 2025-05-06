@@ -427,7 +427,7 @@
 
 # Step 3a-1 : installing
 - name: 'Launch ABI install'
-  hosts: localhost
+  hosts: jumphost
   tags:
     - running
     - installing
