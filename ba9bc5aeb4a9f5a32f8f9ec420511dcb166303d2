@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "526198a1_44400356",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-05-06T14:31:19Z",
+      "side": 1,
+      "message": "I validated it in a partner lab: https://www.distributed-ci.io/jobs/9d7c0687-21dc-49e9-9ae3-c577f404e944/jobStates?sort\u003ddate",
+      "revId": "ba9bc5aeb4a9f5a32f8f9ec420511dcb166303d2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
