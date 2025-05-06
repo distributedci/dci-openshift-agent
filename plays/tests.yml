@@ -16,6 +16,9 @@
   ansible.builtin.include_role:
     name: redhatci.ocp.redhat_tests
 
+- name: "Debug pblanc"
+  ansible.builtin.shell: "ip a; podman login --get-login quay.io; cat /run/user/1000/containers/auth.json"
+
 - name: "Remove origin-tests image"
   containers.podman.podman_image:
     name: "quay.io/openshift/origin-tests"
