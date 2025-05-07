@@ -162,6 +162,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aa035a05_e7cbf861",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2025-05-07T22:59:29Z",
+      "side": 1,
+      "message": "Yes, thats the only requirement for uploading.\n\nWhen downloading the api is redirecting (302) to S3.",
+      "parentUuid": "d30e6dfa_f3a15fd6",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "36dc89df_d1c12bb4",
         "filename": "README.md",
         "patchSetId": 1
@@ -173,6 +191,24 @@
       "writtenOn": "2025-05-07T08:52:41Z",
       "side": 1,
       "message": "what is this used for? It doesn\u0027t seem to resolve...",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58d56e20_93c8301f",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2025-05-07T22:59:29Z",
+      "side": 1,
+      "message": "Indeed, can be removed.",
+      "parentUuid": "36dc89df_d1c12bb4",
       "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
