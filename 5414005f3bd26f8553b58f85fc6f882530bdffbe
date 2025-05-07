@@ -111,6 +111,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d8b8d5f_edbfc3c1",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-05-07T08:49:06Z",
+      "side": 1,
+      "message": "Could we separate what is needed to run the agent, update the packages and run OCP?",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d30e6dfa_f3a15fd6",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-05-07T08:49:06Z",
+      "side": 1,
+      "message": "Is it the only requirement for uploading files or do we need to open to S3 too?",
+      "revId": "5414005f3bd26f8553b58f85fc6f882530bdffbe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bc6bb72b_c935cd72",
         "filename": "README.md",
         "patchSetId": 1
