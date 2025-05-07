@@ -16,6 +16,24 @@
       "message": "The change is fine for me, but then I have a question. I can see that, in some inventories we have for ABI deployments (e.g. https://github.com/dci-labs/bos2-ci-config/blob/main/files/mno_baremetal/abi/cluster1), we have there some of the removed variables on this change. Are they going to be refactored too?",
       "revId": "df29522c2e82fb72638552bcab23e7d1c6d08c11",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2fa9bb3_24a90833",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-05-07T22:53:27Z",
+      "side": 1,
+      "message": "Yeah, some of those variables were already removed in a previous change. I will take care of making the template and ensuring that the inventory match.",
+      "parentUuid": "f5a7d4ec_f2d7d613",
+      "revId": "df29522c2e82fb72638552bcab23e7d1c6d08c11",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
