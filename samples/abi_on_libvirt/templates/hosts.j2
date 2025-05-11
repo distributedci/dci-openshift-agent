@@ -115,6 +115,9 @@ all:
     # You can comment out the line below if you want the kubeadmin credentials to be stored in plain text
     #kubeadmin_vault_password_file_path: "{{ '{{ repo_root_path }}/kubeadmin_vault_password_file' }}"
 
+    # SNO specific configuration
+    is_valid_single_node_openshift_config: "{% raw %}{{ (groups['nodes'] | length == 1) and (groups['masters'] | length == 1) }}{% endraw %}"
+
     ############################
     #    LOGIC: DO NOT TOUCH   #
     # vvvvvvvvvvvvvvvvvvvvvvvv #
