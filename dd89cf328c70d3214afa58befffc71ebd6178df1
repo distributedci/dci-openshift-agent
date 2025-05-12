@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc33f221_5187c9c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-12T11:39:26Z",
+      "side": 1,
+      "message": "Why is this needed again? Just to have some context before voting with +2",
+      "revId": "dd89cf328c70d3214afa58befffc71ebd6178df1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
