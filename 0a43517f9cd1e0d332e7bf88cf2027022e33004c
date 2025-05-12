@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ae42709_1d53a661",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-05-12T18:22:44Z",
+      "side": 1,
+      "message": "This CR will improve situations like this job where the locations were calculated up tp 100GB, but the disks are 1.7TB and we missed an extra disk location at 1TB.\n\nhttps://www.distributed-ci.io/jobs/693a3605-79b0-4221-aba4-cd9b4775d007/jobStates?sort\u003ddate\u0026task\u003dd5c8d456-630a-4b63-aefb-b97ede89ac0d",
+      "revId": "0a43517f9cd1e0d332e7bf88cf2027022e33004c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
