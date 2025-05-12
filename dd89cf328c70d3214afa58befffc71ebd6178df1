@@ -16,6 +16,24 @@
       "message": "Why is this needed again? Just to have some context before voting with +2",
       "revId": "dd89cf328c70d3214afa58befffc71ebd6178df1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be41cf01_0b32fd38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-05-12T13:48:34Z",
+      "side": 1,
+      "message": "Without it, ABI can\u0027t deploy SNO.",
+      "parentUuid": "dc33f221_5187c9c3",
+      "revId": "dd89cf328c70d3214afa58befffc71ebd6178df1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
