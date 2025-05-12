@@ -50,6 +50,24 @@
       "message": "I think we have documented somewhere the steps followed by the dci-openshift-agent. Can we update that documentation to include this new step before the post-run?",
       "revId": "6673a8116f6e6b69df47ba2720911c5ec0ab64b9",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebffa9a4_71a1870f",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-05-12T10:43:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d78c9828_4125d11b",
+      "revId": "6673a8116f6e6b69df47ba2720911c5ec0ab64b9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
