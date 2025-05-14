@@ -16,6 +16,23 @@
       "message": "In previous jobs I see new catalog and IMDS been created.\n\n\n$ oc get catsrc -A\nNAMESPACE               NAME                        DISPLAY                     TYPE   PUBLISHER           AGE\nopenshift-marketplace   certified-operators         certified-operators         grpc   Red Hat Operators   10m\nopenshift-marketplace   mirrored-redhat-operators   mirrored-redhat-operators   grpc   Red Hat Operators   3d8h\n$ oc get idms\nNAME                        AGE\ncertified-operators-0       37m\nimage-digest-mirror         3d10h\nnfv-example-cnf-catalog-0   2d9h\nredhat-operator-index-0     3d8h\nrhods                       3d7h",
       "revId": "149ea373c5e4e360b769fc57ddc3b9da22f720c0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c81ebe7_76f323a7",
+        "filename": "plays/prepare-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-05-14T21:42:58Z",
+      "side": 1,
+      "message": "since `/pruned/` is always needed, why not put it in the begining so the default value is the same here and in the line below:\n\n```\n\"/pruned/{{ dci_catalog_source_name | default(\u0027mirrored-redhat-operators\u0027) }}\"\n```",
+      "revId": "149ea373c5e4e360b769fc57ddc3b9da22f720c0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
