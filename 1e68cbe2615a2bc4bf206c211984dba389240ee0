@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3cdc7add_fa4075fc",
+        "filename": "plays/acm-pre-run.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-15T12:08:59Z",
+      "side": 1,
+      "message": "typo: registries",
+      "range": {
+        "startLine": 126,
+        "startChar": 36,
+        "endLine": 126,
+        "endChar": 46
+      },
+      "revId": "1e68cbe2615a2bc4bf206c211984dba389240ee0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
