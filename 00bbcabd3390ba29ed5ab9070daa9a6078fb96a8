@@ -16,6 +16,24 @@
       "message": "LGTM\nJust one question, regarding ztp-mno. Since this task is not executed for that case, do you think it would be needed there? Jobs have passed without requiring this, but we\u0027ve been using the same version than the hub. Don\u0027t know if we also want to test different versions than the hub cluster in MNO deployments.",
       "revId": "00bbcabd3390ba29ed5ab9070daa9a6078fb96a8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3545bd1_6ad10953",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-05-16T15:34:09Z",
+      "side": 1,
+      "message": "Once the other piece that\u0027s needed to support any version of spoke in a disconnected hub we can test that configuration. I\u0027d expect it to be required.",
+      "parentUuid": "60c605be_7e901bc5",
+      "revId": "00bbcabd3390ba29ed5ab9070daa9a6078fb96a8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
