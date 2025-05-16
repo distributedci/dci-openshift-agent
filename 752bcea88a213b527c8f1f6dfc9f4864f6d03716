@@ -16,6 +16,40 @@
       "message": "This is working, last job failed because the hub cluster was borrowed by another check.",
       "revId": "752bcea88a213b527c8f1f6dfc9f4864f6d03716",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3a9d2b4_ca462781",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-16T11:20:12Z",
+      "side": 1,
+      "message": "LGTM, just a minor comment",
+      "revId": "752bcea88a213b527c8f1f6dfc9f4864f6d03716",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf1f1a86_12ac920e",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-16T11:20:12Z",
+      "side": 1,
+      "message": "Is this variable documented in the README?",
+      "revId": "752bcea88a213b527c8f1f6dfc9f4864f6d03716",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
