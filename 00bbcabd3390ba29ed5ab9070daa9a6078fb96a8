@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60c605be_7e901bc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-16T10:53:16Z",
+      "side": 1,
+      "message": "LGTM\nJust one question, regarding ztp-mno. Since this task is not executed for that case, do you think it would be needed there? Jobs have passed without requiring this, but we\u0027ve been using the same version than the hub. Don\u0027t know if we also want to test different versions than the hub cluster in MNO deployments.",
+      "revId": "00bbcabd3390ba29ed5ab9070daa9a6078fb96a8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
