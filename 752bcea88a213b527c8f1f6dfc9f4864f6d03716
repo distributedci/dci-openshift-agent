@@ -50,6 +50,24 @@
       "message": "Is this variable documented in the README?",
       "revId": "752bcea88a213b527c8f1f6dfc9f4864f6d03716",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71311caf_ac897710",
+        "filename": "plays/acm-ztp-spoke.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-05-16T18:32:14Z",
+      "side": 1,
+      "message": "yes, it is in acm.md",
+      "parentUuid": "bf1f1a86_12ac920e",
+      "revId": "752bcea88a213b527c8f1f6dfc9f4864f6d03716",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
