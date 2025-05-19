@@ -16,6 +16,23 @@
       "message": "LGTM, the debug job launched on this change worked",
       "revId": "c7129d381f517a0d7c41736112026e058645b806",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9453b22a_72fc999a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-19T10:52:33Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "c7129d381f517a0d7c41736112026e058645b806",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
