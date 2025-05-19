@@ -33,6 +33,24 @@
       "message": "recheck",
       "revId": "c7129d381f517a0d7c41736112026e058645b806",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaf180f2_3cc93553",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-05-19T15:16:40Z",
+      "side": 1,
+      "message": "Thanks, yes the change works, in this last job my tuned profile get applied: https://www.distributed-ci.io/jobs/c7f17141-c87d-48d1-8bcc-1882d557fca6/jobStates?sort\u003ddate\u0026task\u003d2d2ac1ec-0cbe-44c4-9cac-03c2700be03a\n\nThe job failed because some issues with trident, but that\u0027s a diff issue.\n\nrecheck",
+      "parentUuid": "a7e97f90_69933de8",
+      "revId": "c7129d381f517a0d7c41736112026e058645b806",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
