@@ -35,6 +35,18 @@
     tasks_from: acm-pull-data.yml
   no_log: true
 
+- name: Configure Agent Service in disconnected mode
+  ansible.builtin.include_role:
+    name: redhatci.ocp.acm.utils
+    tasks_from: disconnect-agent
+  vars:
+    utils_registries: "{{ utils_acm_registries }}"
+    utils_ca_bundle: "{{ acm_user_ca_bundle }}"
+    utils_cm_name: mirror-registry-clusterinstance
+    utils_ocp_version: "{{ hostvars.jumphost.version }}"
+    utils_iso_url: "{{ hostvars.jumphost.acm_metal_iso_location }}"
+    utils_root_fs_url: "{{ hostvars.jumphost.acm_rootfs_url }}"
+
 - name: Create ns for the spoke ClusterInstance
   kubernetes.core.k8s:
     definition:
