@@ -34,6 +34,7 @@ fi
 rendezvous_ip_address=$1
 domain_name=$2
 log_dir="$3"
+base_domain_name=$(echo "$2" | cut -d"." -f2-)
 
 # Extra variables
 ssh_user="core"
@@ -87,8 +88,12 @@ echo "Gather host's journals"
 for h in "${nodes[@]}"; do
   ssh ${ssh_ops} core@"${h}.${domain_name}" 'sudo journalctl --all --since "4 hours ago"' > "${log_dir}/journal-${h}.log"
   if [ $? -ne 0 ]; then
-  echo "Attempting to collect logs again with hostname ${domain_name}"
+  echo "Attempting to collect logs using ${domain_name} as hostname"
   ssh ${ssh_ops} core@"${domain_name}" 'sudo journalctl --all --since "4 hours ago"' > "${log_dir}/journal-${h}.log"
+  	if [ $? -ne 0 ]; then
+        echo "Attempting to collect logs using ${base_domain_name}"
+        ssh ${ssh_ops} core@"${h}.${base_domain_name}" 'sudo journalctl --all --since "4 hours ago"' > "${log_dir}/journal-${h}.log"
+        fi
   fi
   # Get kernel parameters only from one worker in the list
   if grep -q "worker" <<< "${h}" &&
