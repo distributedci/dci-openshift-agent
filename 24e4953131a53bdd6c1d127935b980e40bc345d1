@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74f2867b_a10df311",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-05-22T00:56:26Z",
+      "side": 1,
+      "message": "Tested with different tags combinations:\n\n- ocp-4.18-vanilla openshift-vanilla:ansible_tags\u003ddci,job,operator-configuration,post-run,success - https://www.distributed-ci.io/jobs/72a0e5f9-347a-4317-a4a1-c113189adf1a/jobStates\n- ocp-4.18-vanilla openshift-vanilla:ansible_tags\u003ddci,job,operator-mirror,operator-install,post-run,success - https://www.distributed-ci.io/jobs/0e705471-7842-4fc6-8ece-cea97b0c6723/jobStates\n- ocp-4.18-vanilla openshift-vanilla:ansible_tags\u003ddci,job,operator-install,post-run,success - https://www.distributed-ci.io/jobs/2f1e4ff9-f28c-4531-a4e8-95ea373d69db/jobStates\n- ocp-4.18-vanilla openshift-vanilla:ansible_tags\u003ddci,job,post-run,success openshift-vanilla:ansible_skip_tags\u003doperator-deployment - https://www.distributed-ci.io/jobs/2f1e4ff9-f28c-4531-a4e8-95ea373d69db/jobStates\n\nAfter and initial review will updated the documentation accordingly.",
+      "revId": "24e4953131a53bdd6c1d127935b980e40bc345d1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
