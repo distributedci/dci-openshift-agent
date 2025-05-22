@@ -82,6 +82,20 @@
       when:
         - dci_ephemeral_http_store | default(true) | bool
 
+    - name: Remove http port, zone internal and public, for firewalld
+      vars:
+        http_port: "{{ http_store_port.stdout | default(hostvars['http_store']['http_port']) }}"
+      shell: |
+        set -x;
+        /usr/bin/firewall-cmd --remove-port={{ http_port }}/tcp --zone={{ item }}
+        /usr/bin/firewall-cmd --remove-port={{ http_port }}/tcp --permanent --zone={{ item }}
+      loop:
+        - internal
+        - public
+      become: true
+      when:
+        - dci_ephemeral_http_store | default (true) | bool
+
     - name: Fail configuring the http_store
       fail:
         msg: "http_store pod failed, cannot continue"
@@ -199,4 +213,19 @@
       delegate_to: http_store
       when:
         - dci_ephemeral_http_store | default(true) | bool
+
+    - name: "Remove http port, zone internal and public, for firewalld"
+      vars:
+        http_port: "{{ http_store_port.stdout | default(hostvars['http_store']['http_port']) }}"
+      shell: |
+        set -x;
+        /usr/bin/firewall-cmd --remove-port={{ http_port }}/tcp --zone={{ item }}
+        /usr/bin/firewall-cmd --remove-port={{ http_port }}/tcp --permanent --zone={{ item }}
+      loop:
+        - internal
+        - public
+      become: true
+      when:
+        - dci_ephemeral_http_store | default (true) | bool
+
 ...
