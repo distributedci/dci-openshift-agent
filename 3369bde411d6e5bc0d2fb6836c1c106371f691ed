@@ -16,6 +16,23 @@
       "message": "LGTM, will +2 after the validation",
       "revId": "3369bde411d6e5bc0d2fb6836c1c106371f691ed",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16ffa809_718ea6eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-05-26T11:23:21Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "3369bde411d6e5bc0d2fb6836c1c106371f691ed",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
