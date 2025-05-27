@@ -222,6 +222,11 @@
           when:
             - (install_type | default('ipi')) == 'acm'
 
+        - name: Remove the nested resource from the dci-queue pool
+          shell: "dci-queue remove-resource {{ dci_queue_nested_pool }} {{ cluster }} 'install in progress' || :"
+          when:
+            - dci_queue_nested_pool is defined
+
       rescue: &teardown_error
         - name: Run the teardown error handler
           ignore_unreachable: true

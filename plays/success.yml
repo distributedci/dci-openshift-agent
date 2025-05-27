@@ -1,4 +1,5 @@
 ---
+
 - name: "Gathering results for storage service tester"
   include_role:
     name: redhatci.ocp.storage_tester
@@ -21,4 +22,10 @@
   vars:
     ebm_nodes: "{{ dci_compute_hosts + dci_control_plane_hosts }}"
   when: dci_delete_uefi_boot_entries | default(false) | bool
+
+- name: Add the nested resource to the dci-queue pool
+  command: "dci-queue add-resource {{ dci_queue_nested_pool }} {{ cluster }}"
+  when:
+    - dci_queue_nested_pool is defined
+
 ...
