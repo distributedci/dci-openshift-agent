@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "2dfadc9e7af70c74fda72b0697d55dd840889ec2",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "340107e9_175b9702",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-05-29T07:49:44Z",
+      "side": 1,
+      "message": "I saw we already create a pre-ga DCI component and this variable just takes the component description. What\u0027s the expected usage for this new variable dci_pre_ga_component?",
+      "revId": "2dfadc9e7af70c74fda72b0697d55dd840889ec2",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
