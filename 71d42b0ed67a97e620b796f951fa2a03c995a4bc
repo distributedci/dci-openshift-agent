@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fe75845_d52cec68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-06-02T09:01:04Z",
+      "side": 1,
+      "message": "Validated the console passwords via virt-manager, just minor comment below.",
+      "revId": "71d42b0ed67a97e620b796f951fa2a03c995a4bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "864b86ef_35568ba8",
+        "filename": "plays/set-core-user-pass.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-06-02T09:01:04Z",
+      "side": 1,
+      "message": "remove extra word \"with\"",
+      "revId": "71d42b0ed67a97e620b796f951fa2a03c995a4bc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
