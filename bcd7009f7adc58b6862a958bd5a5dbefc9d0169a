@@ -33,6 +33,23 @@
       "message": "I\u0027ll move to +1 instead because I\u0027ve seen dci_extra_manifests var is also affecting SNO in:\n- Dallas: https://www.distributed-ci.io/jobs/a86e3b5f-19b8-438d-b401-555ab421912b/jobStates\n- BOS2: https://www.distributed-ci.io/jobs/27a6e9d3-1bc1-49e0-a842-0274d43f90be/jobStates\n\nCould you check these cases too?",
       "revId": "bcd7009f7adc58b6862a958bd5a5dbefc9d0169a",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f046da95_28806252",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-06-03T13:25:45Z",
+      "side": 1,
+      "message": "Just stressing Ramon\u0027s point on having this change tested in Dallas as well.",
+      "revId": "bcd7009f7adc58b6862a958bd5a5dbefc9d0169a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
