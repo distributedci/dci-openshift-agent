@@ -35,6 +35,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce057515_1e370722",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-03T16:13:09Z",
+      "side": 1,
+      "message": "Thanks",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2eb70528_03ebf59d",
@@ -48,6 +65,24 @@
       "writtenOn": "2025-06-03T16:01:57Z",
       "side": 1,
       "message": "Can we have a single task to merge extra_manifests into dci_extra_manifests, then all the other task can use conditionals to append or not manifests to it?",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e938040_4039a93c",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-03T16:13:09Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2eb70528_03ebf59d",
       "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
@@ -69,6 +104,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "adb501a0_f84be215",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-03T16:13:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e2d14d24_72d334fc",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "63125d07_78da6ebd",
@@ -86,6 +139,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a14f1b8d_b9e9a291",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-03T16:13:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63125d07_78da6ebd",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e321b9da_57e08d9c",
@@ -99,6 +170,24 @@
       "writtenOn": "2025-06-03T16:01:57Z",
       "side": 1,
       "message": "dci_extra_manifests will be always defined:\n```\n  manifest_templates: \"{{ dci_extra_manifests }}\"\n```",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e760af89_cf2312d1",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-03T16:13:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e321b9da_57e08d9c",
       "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
