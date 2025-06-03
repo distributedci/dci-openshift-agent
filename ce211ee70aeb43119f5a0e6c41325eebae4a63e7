@@ -33,6 +33,74 @@
       "message": "Updated tests for connected and disonnected:\n\nocp-4.18-hub-abi-sno sno-abi:ansible_skip_tags\u003doperator-deployment -\u003e https://www.distributed-ci.io/jobs/97c7a1fb-45e7-4730-985e-9a14a87126fb/jobStates?sort\u003ddate (disconnected)\nabi-sno abi-sno:ansible_skip_tags\u003doperator-deployment -\u003e https://www.distributed-ci.io/jobs/e6318700-5c63-4f51-99fc-743c6562b6cf/jobStates?sort\u003ddate (connected)",
       "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2eb70528_03ebf59d",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-03T16:01:57Z",
+      "side": 1,
+      "message": "Can we have a single task to merge extra_manifests into dci_extra_manifests, then all the other task can use conditionals to append or not manifests to it?",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2d14d24_72d334fc",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-03T16:01:57Z",
+      "side": 1,
+      "message": "If you leave the core Password task on its own, then it can be written as:\n\n```\n- name: Add core_password manifests to extra_manifests\n  ansible.builtin.set_fact:\n    dci_extra_manifests: \"{{ dci_extra_manifest + hostvars.jumphost.core_password_manifests }}\"\n  when:\n    - hostvars.jumphost.core_password_manifests | default([]) | length \u003e 0\n```",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63125d07_78da6ebd",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-03T16:01:57Z",
+      "side": 1,
+      "message": "Samiliarly, if dci_extra_manifests is already defined then you simplify it like:\n\n```\n  dci_extra_manifests: \"{{ dci_extra_manifests + [manifest_file] }}\"\n```",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e321b9da_57e08d9c",
+        "filename": "plays/abi-install.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-03T16:01:57Z",
+      "side": 1,
+      "message": "dci_extra_manifests will be always defined:\n```\n  manifest_templates: \"{{ dci_extra_manifests }}\"\n```",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
