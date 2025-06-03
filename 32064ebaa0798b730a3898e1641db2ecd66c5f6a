@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdf14244_97ddae25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-03T03:06:03Z",
+      "side": 1,
+      "message": "Tested in:\n\nabi abi:ansible_skip_tags\u003doperator-deployment abi:ansible_extravars\u003ddci_core_user_pass:abcdef - https://www.distributed-ci.io/jobs/2c493200-308b-424a-8a0d-f1130975ddbc/jobStates?sort\u003ddate\nabi abi:ansible_skip_tags\u003doperator-deployment - abi:ansible_extravars\u003ddci_core_user_pass:abcdefhttps://www.distributed-ci.io/jobs/524e973f-0653-4b32-b100-13085fd39bca/jobStates?sort\u003ddate\n\nPending IPI.",
+      "revId": "32064ebaa0798b730a3898e1641db2ecd66c5f6a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
