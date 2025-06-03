@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f590445a_4c86aebd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-03T16:00:34Z",
+      "side": 1,
+      "message": "Updated tests for connected and disonnected:\n\nocp-4.18-hub-abi-sno sno-abi:ansible_skip_tags\u003doperator-deployment -\u003e https://www.distributed-ci.io/jobs/97c7a1fb-45e7-4730-985e-9a14a87126fb/jobStates?sort\u003ddate (disconnected)\nabi-sno abi-sno:ansible_skip_tags\u003doperator-deployment -\u003e https://www.distributed-ci.io/jobs/e6318700-5c63-4f51-99fc-743c6562b6cf/jobStates?sort\u003ddate (connected)",
+      "revId": "ce211ee70aeb43119f5a0e6c41325eebae4a63e7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
