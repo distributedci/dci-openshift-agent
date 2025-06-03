@@ -143,7 +143,7 @@
       vars:
         pull_secret: "{{ dci_pullsecret }}"
         repo_root_path: "{{ dci_cluster_configs_dir }}"
-        manifest_templates: "{{ hostvars.jumphost.dci_extra_manifests }}"
+        manifest_templates: "{{ hostvars.jumphost.dci_extra_manifests | default([]) }}"
       ansible.builtin.include_role:
         name: redhatci.ocp.generate_manifests
 
