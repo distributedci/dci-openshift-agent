@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f76b4d3_b5f12b1a",
+        "filename": "plays/agent-cleanup.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-04T16:37:01Z",
+      "side": 1,
+      "message": "I think we weet to pass boot_iso_url that was used during the boot, so that will match with what is trying to be ejected:\n\nvars:\n    boot_iso_url: \"{{ discovery_iso_server }}:{{ http_store_port.stdout |\n                      default(hostvars[\u0027http_store\u0027][\u0027http_port\u0027]) }}/{{ discovery_iso_name }}\"",
+      "revId": "54dab215040a5a5dc5d2fbbbc89f6b256ffde4ee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
