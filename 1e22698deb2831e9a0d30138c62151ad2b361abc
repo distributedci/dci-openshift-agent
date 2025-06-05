@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "604d261b_b9813fd8",
+        "filename": "plays/scripts/get-abi-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-05T16:06:06Z",
+      "side": 1,
+      "message": "I wonder if 60s would be enough fro 4hrs of logs.\n\nIf you have tested it already let\u0027s go with it, if not would you mind testing and see if that would be enough? Thanks!",
+      "revId": "1e22698deb2831e9a0d30138c62151ad2b361abc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
