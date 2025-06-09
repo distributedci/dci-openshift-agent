@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13ad9be7_c22c09f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-06-09T09:40:35Z",
+      "side": 1,
+      "message": "This change is no longer needed, since issue is fixed by adding timeout 60sec",
+      "revId": "37516b58c7fe21bd7492768ec9cff6f9bd1e5586",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
