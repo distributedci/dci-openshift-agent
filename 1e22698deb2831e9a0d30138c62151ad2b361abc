@@ -16,6 +16,24 @@
       "message": "I wonder if 60s would be enough fro 4hrs of logs.\n\nIf you have tested it already let\u0027s go with it, if not would you mind testing and see if that would be enough? Thanks!",
       "revId": "1e22698deb2831e9a0d30138c62151ad2b361abc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68c67b7e_6ed3df9f",
+        "filename": "plays/scripts/get-abi-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-06-09T18:39:54Z",
+      "side": 1,
+      "message": "this is a good point, I\u0027d split this into 2 calls: one with timeout doing a simple uptime or whoami, then the actual log fetch (which could be without timeout, since you already asserted connectivity, but up to you)",
+      "parentUuid": "604d261b_b9813fd8",
+      "revId": "1e22698deb2831e9a0d30138c62151ad2b361abc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
