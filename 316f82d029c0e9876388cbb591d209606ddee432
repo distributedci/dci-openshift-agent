@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8722b702_10d98599",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-06-09T09:39:01Z",
+      "side": 1,
+      "message": "This change is no longer needed, since issue is fixed by adding jumphost IP to DNS",
+      "revId": "316f82d029c0e9876388cbb591d209606ddee432",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6406364d_1f20a980",
@@ -31,6 +48,24 @@
       "writtenOn": "2025-06-07T18:42:13Z",
       "side": 1,
       "message": "Rajesh, my point above is that I\u0027m not sure that this change is really needed, If you already added the jumphost IP as its own DNS should be good.",
+      "parentUuid": "6406364d_1f20a980",
+      "revId": "316f82d029c0e9876388cbb591d209606ddee432",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44019ef7_fb592e4a",
+        "filename": "plays/scripts/get-abi-logs",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-06-09T09:39:01Z",
+      "side": 1,
+      "message": "Thanks Manny. I updated DNS config file as below. \n[dci@jumphost ~]$ cat /etc/resolv.conf \n\n\nnameserver 192.168.12.10\nnameserver 192.168.254.20\nnameserver 192.168.254.21\n[dci@jumphost ~]$ \n\nAs you have mentioned, ssh connection worked for master-0 \u0026 master-1. But didnt work for master-2\n\n[dci@jumphost ~]$ dig @192.168.12.10 rack310-master-2.rack310.samsung.ran.lab +short\n[dci@jumphost ~]$ ssh core@rack310-master-2.rack310.samsung.ran.lab\nssh: Could not resolve hostname rack310-master-2.rack310.samsung.ran.lab: Name or service not known\n[dci@jumphost ~]$",
       "parentUuid": "6406364d_1f20a980",
       "revId": "316f82d029c0e9876388cbb591d209606ddee432",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
