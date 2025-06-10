@@ -16,6 +16,40 @@
       "message": "The empty agent is useful when the partner has everything to install OCP on their side, thus using the empty agent make it easy to plug their automation with us (by filling the hooks).",
       "revId": "a5c72a66104a0de937c891cb7a4923fbdf6fd2c1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f8c2f39_7d22fe62",
+        "filename": "plays/empty-agent/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-10T20:33:58Z",
+      "side": 1,
+      "message": "Please use FQCN here and all the other dci tasks.\n\n```\nansible.legacy.dci_job:\n```",
+      "revId": "a5c72a66104a0de937c891cb7a4923fbdf6fd2c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "303e2f72_8bec1d87",
+        "filename": "plays/empty-agent/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-10T20:33:58Z",
+      "side": 1,
+      "message": "FQCN also for non-dci tasks, e.g.\n```\n    ansible.builtin.include_tasks: \"{{ pre_run_hook_path }}\"\n```",
+      "revId": "a5c72a66104a0de937c891cb7a4923fbdf6fd2c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
