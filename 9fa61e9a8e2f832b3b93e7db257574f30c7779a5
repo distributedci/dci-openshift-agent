@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e236dc31_b0015cab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-10T17:09:43Z",
+      "side": 1,
+      "message": "This is working as expected. During the initial boot this may fail and rescued because the previous job may used a different port. But once the install is completed the eject works using the same port used for booting.",
+      "revId": "9fa61e9a8e2f832b3b93e7db257574f30c7779a5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
