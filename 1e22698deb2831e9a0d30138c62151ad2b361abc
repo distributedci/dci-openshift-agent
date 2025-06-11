@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8470abfe_6cd06299",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-06-11T13:23:57Z",
+      "side": 1,
+      "message": "Thanks Jorge. I would like to keep this as it is.",
+      "revId": "1e22698deb2831e9a0d30138c62151ad2b361abc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "604d261b_b9813fd8",
@@ -31,6 +48,24 @@
       "writtenOn": "2025-06-09T18:39:54Z",
       "side": 1,
       "message": "this is a good point, I\u0027d split this into 2 calls: one with timeout doing a simple uptime or whoami, then the actual log fetch (which could be without timeout, since you already asserted connectivity, but up to you)",
+      "parentUuid": "604d261b_b9813fd8",
+      "revId": "1e22698deb2831e9a0d30138c62151ad2b361abc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb6c831b_1b0ed683",
+        "filename": "plays/scripts/get-abi-logs",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1631
+      },
+      "writtenOn": "2025-06-11T13:23:57Z",
+      "side": 1,
+      "message": "Yes.I have tested this manually and also checked previous DCI jobs where journal logs collected from 3 masters + 3 worker nodes of each 10MB size took 13 sec.So, 60 sec timeout should be fine.Thanks",
       "parentUuid": "604d261b_b9813fd8",
       "revId": "1e22698deb2831e9a0d30138c62151ad2b361abc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
