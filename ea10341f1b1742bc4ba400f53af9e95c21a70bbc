@@ -50,6 +50,23 @@
       "message": "recheck",
       "revId": "ea10341f1b1742bc4ba400f53af9e95c21a70bbc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62617684_d407bd86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-06-11T12:32:07Z",
+      "side": 1,
+      "message": "there was a problem in the Dallas jumphost to contact rhel9 repos, I temporally disabled them. \n\nrecheck",
+      "revId": "ea10341f1b1742bc4ba400f53af9e95c21a70bbc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
