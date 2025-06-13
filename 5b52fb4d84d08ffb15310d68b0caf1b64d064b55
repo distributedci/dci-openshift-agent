@@ -175,6 +175,24 @@
       "parentUuid": "24a1653e_39db3be5",
       "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f605311_cf9e51b5",
+        "filename": "plays/check-test-results.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-06-13T04:02:24Z",
+      "side": 1,
+      "message": "yes I used the same naming as in dci-openshift-app-agent for consistency.",
+      "parentUuid": "3077637c_aa3d7e32",
+      "revId": "5b52fb4d84d08ffb15310d68b0caf1b64d064b55",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
