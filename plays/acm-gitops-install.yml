@@ -1,0 +1,86 @@
+---
+- name: Force deletion of ArgoCD Application
+  when:
+    - app.force | default(false) | bool
+  ansible.builtin.include_role:
+    name: redhatci.ocp.argocd_config
+    tasks_from: config-app
+  vars:
+    ac_action: delete-cascade
+    ac_app_name: "{{ app.name }}"
+
+- name: Create ArgoCD Project
+  ansible.builtin.import_role:
+    name: redhatci.ocp.argocd_config
+    tasks_from: config-project
+  vars:
+    ac_project_name: "{{ app.project }}"
+    ac_namespace: "{{ app.namespace }}"
+
+- name: Grant ArgoCD Default Permissions
+  ansible.builtin.import_role:
+    name: redhatci.ocp.argocd_config
+    tasks_from: config-permissions
+  vars:
+    ac_namespace: "{{ app.namespace }}"
+
+- name: Create temporary directory for the repo
+  ansible.builtin.tempfile:
+    state: directory
+    prefix: dci_gitops_dir.
+  register: tmp_gitops
+
+- name: Clone the source gitops repo
+  # Use DCI git plugin to create component
+  ansible.legacy.git:
+    repo: "{{ app.source_repo }}"
+    dest: "{{ tmp_gitops.path }}"
+    version: "{{ app.source_branch }}"
+    key_file: "{{ app.source_repo_key | default(omit) }}"
+    force: true
+
+- name: Copy and render the site configuration
+  ansible.builtin.include_role:
+    name: redhatci.ocp.copy_and_render
+  vars:
+    car_source_dir: "{{ tmp_gitops.path }}/{{ app.source_path }}"
+    car_target_dir: "{{ tmp_gitops.path }}/{{ app.target_path }}"
+
+- name: Commit and push changes to the rendered branch
+  ansible.builtin.shell:
+    cmd: >
+      set -eo pipefail;
+      cd {{ tmp_gitops.path }};
+      git config user.name "DCI OpenShift Agent";
+      branch="{{ app.target_branch }}";
+      git checkout -b ${branch} || true;
+      git add {{ app.target_repo }};
+      git commit -m "Render site-config for {{ app.namespace }}/{{ app.name }}";
+      if [ -n "{{ app.target_repo_key | default(omit) }}" ]; then
+        export GIT_SSH_COMMAND="ssh -i {{ app.target_repo_key }} -o StrictHostKeyChecking=no";
+      fi;
+      git push origin ${branch} --force;
+  register: gitops_push
+  changed_when: gitops_push.rc == 0
+  no_log: "{{ dci_hide_secrets | bool }}"
+
+- name: Config rendered ArgoCD Repo
+  ansible.builtin.include_role:
+    name: redhatci.ocp.argocd_config
+    tasks_from: config-repo
+  vars:
+    ac_repo: "{{ app.target_repo }}"
+    ac_repo_branch: "{{ app.target_branch }}"
+    ac_ssh_key: "{{ app.target_repo_key | default(omit) }}"
+
+- name: Create rendered ArgoCD Application
+  ansible.builtin.import_role:
+    name: redhatci.ocp.argocd_config
+    tasks_from: config-app
+  vars:
+    ac_action: create
+    ac_app_name: "{{ app.name }}"
+    ac_app_namespace: "{{ app.namespace }}"
+    ac_app_path: "{{ app.target_path }}"
+    ac_repo: "{{ app.target_repo }}"
+    ac_repo_branch: "{{ app.target_branch }}"
