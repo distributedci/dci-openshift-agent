@@ -12,6 +12,7 @@
 - name: Force deletion of Managed Cluster
   when:
     - dci_force_deploy_spoke | default(false) | bool
+    - not dci_use_gitops | default(false) | bool
   block:
     - name: Get previous ManagedCluster
       kubernetes.core.k8s_info:
@@ -58,24 +59,22 @@
   when:
     - dci_disconnected | default(false) | bool
 
-- name: Create ns for the spoke ClusterInstance
-  kubernetes.core.k8s:
-    definition:
-      apiVersion: v1
-      kind: Namespace
-      metadata:
-        name: "{{ cluster_name }}"
-    wait: true
+- name: Deploy spoke using ClusterInstance
+  ansible.builtin.include_tasks:
+    file: acm-clusterinstance-install.yml
+  when:
+    - not dci_use_gitops | default(false) | bool
+    - dci_clusterinstance_template_dir | default('') | length > 0
 
-- name: Apply templates to create the spoke ClusterInstance
-  vars:
-    clusterinstance_namespace: "{{ cluster_name }}"
-  kubernetes.core.k8s:
-    state: present
-    template: "{{ item }}"
-    wait: true
-  with_fileglob:
-    - "{{ dci_clusterinstance_template_dir }}/{{ cluster_name }}-*.j2"
+- name: Deploy the spoke using GitOps + ClusterInstance
+  ansible.builtin.include_tasks:
+    file: acm-gitops-install.yml
+  loop: "{{ dci_gitops_apps | default([]) }}"
+  loop_control:
+    loop_var: app
+    label: "{{ app.name }}"
+  when:
+    - dci_use_gitops | default(false) | bool
 
 - name: Wait for the deployment to start
   kubernetes.core.k8s_info:
