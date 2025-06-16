@@ -1,0 +1,19 @@
+---
+- name: Create ns for the spoke ClusterInstance
+  kubernetes.core.k8s:
+    definition:
+      apiVersion: v1
+      kind: Namespace
+      metadata:
+        name: "{{ cluster_name }}"
+    wait: true
+
+- name: Apply ClusterInstance templates to create spoke
+  vars:
+    clusterinstance_namespace: "{{ cluster_name }}"
+  kubernetes.core.k8s:
+    state: present
+    template: "{{ item }}"
+    wait: true
+  with_fileglob:
+    - "{{ dci_clusterinstance_template_dir }}/{{ cluster_name }}-*.j2"
