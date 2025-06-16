@@ -1,0 +1,110 @@
+---
+# Inputs:
+# - dci_gitops_repo: the gitops repo to copy from
+# - dci_gitops_branch: the branch to copy from, defaults to 'HEAD'
+# - dci_gitops_path: the path to the site configuration in the repo
+# - dci_gitops_target: the target path to copy the rendered site configuration to
+# - dci_gitops_target_branch: the branch to create the target in, defaults to job_id
+# - dci_gitops_ssh_key: the SSH key to use for git operations if needed
+# 
+- name: Create ArgoCD Project
+  kubernetes.core.k8s:
+    definition:
+      apiVersion: argoproj.io/v1alpha1
+      kind: AppProject
+      metadata:
+        name: siteconfig-v2
+        namespace: openshift-gitops
+      spec:
+        clusterResourceWhitelist:
+          - group: ""
+            kind: Namespace
+        namespaceResourceWhitelist:
+          - group: ""
+            kind: ConfigMap
+          - group: ""
+            kind: Secret
+          - group: siteconfig.open-cluster-management.io
+            kind: ClusterInstance
+        sourceRepos:
+          - '*'
+        destinations:
+          - namespace: '*'
+            server: '*'  
+
+- name: Grant ArgoCD Permissions
+  kubernetes.core.k8s:
+    definition:
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      metadata:
+        name: gitops-cluster
+      roleRef:
+        apiGroup: rbac.authorization.k8s.io
+        kind: ClusterRole
+        name: cluster-admin
+      subjects:
+      - kind: ServiceAccount
+        name: openshift-gitops-argocd-application-controller
+        namespace: openshift-gitops
+
+- name: Force deletion of Managed Cluster
+  when:
+    - dci_force_deploy_spoke | default(false) | bool
+  block:
+    - name: Remove managed cluster from ArgoCD
+      vars:
+        asm_action: "delete-ztp-by-ref"
+        asm_source_repo: "{{ dci_gitops_repo }}"
+        asm_target_revision: "{{ dci_gitops_target_branch }}"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.acm_spoke_mgmt
+
+- name: Create temporary directory for the repo
+  ansible.builtin.tempfile:
+    state: directory
+    suffix: dci_gitops_dir.
+  register: tmp_gitops
+
+- name: Clone the gitops repo
+  ansible.builtin.git:
+    repo: "{{ dci_gitops_repo }}"
+    dest: "{{ tmp_gitops.path }}"
+    version: "{{ dci_gitops_branch | default('HEAD') }}"
+    key_file: "{{ dci_gitops_ssh_key | default(omit) }}"
+    force: true
+
+- name: Copy and render the site configuration
+  ansible.builtin.include_role:
+    name: redhatci.ocp.copy_and_render
+  vars:
+    car_source_dir: "{{ tmp_gitops.path }}/{{ dci_gitops_path }}"
+    car_target_dir: "{{ tmp_gitops.path }}/{{ dci_gitops_target }}"
+
+- name: Commit and push changes to the target branch
+  ansible.builtin.cmd:
+    cmd: >
+      set -eo pipefail;
+      cd {{ tmp_gitops.path }};
+      git config user.name "DCI OpenShift Agent";
+      branch="{{ dci_gitops_target_branch | default(job_id) }}";
+      git checkout -b ${branch} || true;
+      git add {{ dci_gitops_target }};
+      git commit -m "Update site configuration for {{ cluster_name }}";
+      if [ -n "{{ dci_gitops_ssh_key | default(omit) }}" ]; then
+        export GIT_SSH_COMMAND="ssh -i {{ dci_gitops_ssh_key }} -o StrictHostKeyChecking=no";
+      fi;
+      git push origin ${branch} --force;
+  register: gitops_push
+  changed_when: gitops_push.rc == 0
+  no_log: dci_hide_secrets | bool
+
+- name: Create ArgoCD Application
+  ansible.builtin.import_role:
+    name: redhatci.ocp.argocd_config
+  vars:
+    ac_repo: "{{ dci_gitops_repo }}"
+    ac_target_revision: "{{ dci_gitops_target_branch | default(job_id) }}"
+    ac_path: "{{ dci_gitops_target }}"
+
+# Add the repo to the dci component? (see acm-pre-run.yml line: 21-48)

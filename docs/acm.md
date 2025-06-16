@@ -26,8 +26,8 @@ We are constantly adding new ways to deploy OCP, currently, the agent supports
 
 ## Requirements
 
-* An installed OCP cluster configured with the ACM operator and its dependencies. A default storage class is mandatory to save information about the clusters managed by ACM. This will act as the Hub Cluster.
-* A `kubeconfig` file to interact with the Hub Cluster. There's no need for a provisioning node or a dedicated jumphost when using ACM.
+* An installed OCP cluster configured with the ACM operator and its dependencies (Please see [ACM Hub pipeline](#acm-hub-pipeline)). A default storage class is mandatory to save information about the clusters managed by ACM. This will act as the Hub Cluster.
+* A `kubeconfig` file to interact with the Hub Cluster. There's no need for a provisioning node when using ACM.
 
 ### SNO requirements
 
@@ -105,15 +105,14 @@ Please read the role's documentation for more information.
 
 ### ClusterInstance
 
-> ⚠️ Currently, in disconnected environments, it is only supported the same version of spoke cluster as the Hub
+Additional requirements:
 
-1. A Hub cluster is deployed with support for ACM. It can be achieved by setting `enable_acm=true` during an OCP deployment. Please see the example of an [ACM Hub pipeline](#acm-hub-pipeline).
 1. The Hub cluster must have the SiteConfig Operator enabled.
 1. The kubeconfig file of the Cluster Hub is exported as HUB_KUBECONFIG: `export HUB_KUBECONFIG=/<kubeconfig_path>`
 1. A directory with the templates to apply the ClusterInstance is required `dci_clusterinstance_template_dir`.
 1. Use `dci_pipeline` or the DCI Agent to initiate the deployment using the values defined in the [`acm-clusterinstance-pipeline`](#acm-clusterinstance-pipeline).
 
-#### Variables for ACM-based deployments
+#### Variables for ClusterInstance deployments through ACM
 
 | Name                             | Required | Default | Description
 | -------------------------------- | -------- | ------- | -----------
@@ -138,6 +137,30 @@ Here the links to the documention for each of the manifests required:
 - [BMH-Secret](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-create-bmc-secret)
 - [ClusterInstance](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-render-manifests)
 
+### GitOps + ClusterInstance
+
+Additional requirements:
+
+1. The Hub cluster must have the SiteConfig Operator enabled.
+1. The Hub cluster must have the ArgoCD Operator enabled.
+1. The kubeconfig file of the Cluster Hub is exported as HUB_KUBECONFIG: `export HUB_KUBECONFIG=/<kubeconfig_path>`
+1. Provide a repository where the site-conf is available.
+1. The repository might or might not have jinja2 templates that will be rendered with the agent.
+1. Use `dci_pipeline` or the DCI Agent to initiate the deployment using the values defined in the [`acm-gitops-pipeline`](#acm--pipeline).
+
+#### Variables for GitOps + ClusterInstance deployments through ACM
+
+| Name                             | Required | Default    | Description
+| -------------------------------- | -------- | ---------- | -----------
+| acm_cluster_type                 | Yes      | None       | The type of cluster to deploy through ACM. Must use: `ztp-spoke-clusterinstance`
+| dci_force_deploy_spoke           | No       | False      | Whether or not force an installation of a and Spoke cluster
+| dci_use_gitops                   | Yes      | False      | Whether or not to use GitOps, must be set to True to use it.
+| dci_gitops_repo                  | Yes      | None       | The repository to add to ArgoCD as an Application
+| dci_gitops_branch                | No       | HEAD       | The branch of the repo to use as a source
+| dci_gitops_path                  | Yes      | None       | The path to the site-config in the repository
+| dci_gitops_target                | Yes      | None       | The path to the target directory in the repository, where the site-configs will be rendered and copied.
+| dci_gitops_target_branch         | No       | \<job_id\> | The branch to use as the target for ArgoCD to track changes. By default is the DCI `job_id`.
+| dci_gitops_ssh_key               | No       | None       | The path to the private sshkey to use in the repository.
 
 ## Pipeline Examples
 
@@ -280,6 +303,44 @@ This pipeline includes NFS storage
   success_tag: ocp-ztp-clusterinstance-4.18-ok
 ```
 
+### ACM GitOps pipeline
+
+```yaml
+---
+- name: openshift-ztp-gitops
+  stage: ztp-spoke
+  prev_stages: [acm-hub]
+  ansible_playbook: /usr/share/dci-openshift-agent/dci-openshift-agent.yml
+  ansible_cfg: /var/lib/dci/pipelines/ansible.cfg
+  dci_credentials: ~/.config/dci-pipeline/<dci_credentials>.yml
+  configuration: "@QUEUE"
+  pipeline_user: ~/.config/dci-pipeline/<pipeline_user>.yml
+  ansible_inventory: /var/lib/dci/inventories/@QUEUE/ztp/spoke/@RESOURCE-clusterinstance
+  ansible_extravars:
+    install_type: acm
+    acm_cluster_type: ztp-spoke-clusterinstance
+    dci_local_log_dir: /var/lib/dci-pipeline/upload-errors
+    dci_gits_to_components:
+      - /var/lib/dci/<lab>-config/dci-openshift-agent
+      - /var/lib/dci/inventories
+      - /var/lib/dci/pipelines
+    dci_tags: []
+    dci_cache_dir: /var/lib/dci-pipeline
+    dci_base_ip: "{{ ansible_default_ipv4.address }}"
+    dci_baseurl: "http://{{ dci_base_ip }}"
+    dci_teardown_on_success: false
+    # GitOps
+    dci_use_gitops: true
+  topic: OCP-4.18
+  components:
+    - ocp
+  inputs:
+    kubeconfig: hub_kubeconfig_path
+  outputs:
+    kubeconfig: "kubeconfig"
+  success_tag: ocp-ztp-clusterinstance-4.18-ok
+```
+
 ## Inventory Examples
 
 ### ACM HCP kvirt Inventory file
@@ -352,4 +413,29 @@ all:
     provision_cache_store: /opt/cache
     bmh_password: REDACTED
     bmh_user: REDACTED
+```
+
+### ACM GitOPs Inventory
+
+```yaml
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+    jumphost:
+      ansible_connection: local
+      ansible_python_interpreter: "{{ ansible_playbook_python }}"
+      ansible_user: <user>
+  vars:
+    dci_disconnected: true
+    cluster: sno1
+    cluster_name: "{{ cluster }}"
+    base_dns_domain: sno.<mydomain>
+    # GitOps
+    dci_gitops_repo: my.repo/org/repo
+    dci_gitops_branch: my-custom-branch
+    dci_gitops_path: path/to/site-config
+    dci_gitops_target: path/to/target
+    dci_gitops_target_branch: my-custom-target-branch
+    dci_gitops_ssh_key: path/to/private/sshkey
 ```
