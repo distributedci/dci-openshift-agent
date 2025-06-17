@@ -16,6 +16,24 @@
       "message": "The only concern I have is if we set on the inventory these variables, but we don\u0027t intend to enable odf+lso it will wipe any disk set in there. Do you see any issue with that?\n\nI think the problem is the default for dci_wipe_local_storage, but changing it, will imply breaking changes.",
       "revId": "012d7a4c6a664e6b141b9804d96b11cfc4d4b7d5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c32b2f95_5efe4fca",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-17T20:03:39Z",
+      "side": 1,
+      "message": "I think that setting those variables in the inventory is intended to have them ready for ODF, and it is mandatory to have those disks wiped to be able to deploy ODF using the setup_odf role or via a hook.",
+      "parentUuid": "a8ba2149_6bd3e2d1",
+      "revId": "012d7a4c6a664e6b141b9804d96b11cfc4d4b7d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
