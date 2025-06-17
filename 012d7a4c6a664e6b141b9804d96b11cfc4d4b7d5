@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "415f98a7_052fba8b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-17T21:21:13Z",
+      "side": 1,
+      "message": "LGTM, thanks\n\nrecheck",
+      "revId": "012d7a4c6a664e6b141b9804d96b11cfc4d4b7d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8ba2149_6bd3e2d1",
@@ -32,6 +49,24 @@
       "side": 1,
       "message": "I think that setting those variables in the inventory is intended to have them ready for ODF, and it is mandatory to have those disks wiped to be able to deploy ODF using the setup_odf role or via a hook.",
       "parentUuid": "a8ba2149_6bd3e2d1",
+      "revId": "012d7a4c6a664e6b141b9804d96b11cfc4d4b7d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da125567_b4aae64f",
+        "filename": "plays/after-install.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-17T21:21:13Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c32b2f95_5efe4fca",
       "revId": "012d7a4c6a664e6b141b9804d96b11cfc4d4b7d5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
