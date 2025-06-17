@@ -16,6 +16,24 @@
       "message": "I think it should retain perf profile related vars as a requirement, i.e.\n```\n  - performance_definition is defined\n  - perf_profile_crd.resources | length \u003e 0\n  - version is version(\u00274.16\u0027, \u0027\u003c\u0027) or install_type | default(\u0027ipi\u0027) \u003d\u003d \u0027acm\u0027\n```\n\nwdyt?",
       "revId": "98e2f5cdc6f6c6b82384900fa20f14a2a4b79cea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1415d34_404d047f",
+        "filename": "plays/configure-operators.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-06-17T16:23:36Z",
+      "side": 1,
+      "message": "yes, thanks!",
+      "parentUuid": "7497c8e0_f3b6d55a",
+      "revId": "98e2f5cdc6f6c6b82384900fa20f14a2a4b79cea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
