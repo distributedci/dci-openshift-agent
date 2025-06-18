@@ -157,6 +157,7 @@
       when:
         - "'component' in kernel_component"
         - "'id' in kernel_component.component"
+  delegate_to: localhost
 
 - name: "Patch clusterversion update channel"
   vars:
