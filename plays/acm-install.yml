@@ -1,4 +1,11 @@
 ---
+- name: "Apply manifests for the spoke on the Hub"
+  kubernetes.core.k8s:
+    state: present
+    src: "{{ item }}"
+  loop: "{{ dci_spoke_manifest_files | default([]) }}"
+  when: (dci_spoke_manifest_files | default([])) | length > 0
+
 - name: Deploy a ZTP spoke cluster with SiteConf Operator
   ansible.builtin.include_tasks:
     file: acm-ztp-spoke-clusterinstance.yml
