@@ -33,6 +33,40 @@
       "message": "recheck",
       "revId": "5d4ce880c1c9ac21648f8b1837f17cf9d8cb1d92",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a23fa12_57767d13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2025-06-18T08:48:36Z",
+      "side": 1,
+      "message": "the jobs are green, thank you Beto!\n\nhttps://www.distributed-ci.io/jobs/c30864e5-b6da-4be0-8f9f-fbabafd4140b/jobStates\nhttps://www.distributed-ci.io/jobs/99bc587e-ff2b-4d15-a6b2-f7d0bd1321f8/jobStates\n\nI would do a minor change the readme though",
+      "revId": "5d4ce880c1c9ac21648f8b1837f17cf9d8cb1d92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23441cdc_3b0f6cfb",
+        "filename": "docs/acm.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 938
+      },
+      "writtenOn": "2025-06-18T08:48:36Z",
+      "side": 1,
+      "message": "Hi Beto, the documentation is not clear:\n\n\u003e manifest that must be applied to the Hub cluster\n\nI believe that should be changed to \"applied to the spoke cluster during its installation\"",
+      "revId": "5d4ce880c1c9ac21648f8b1837f17cf9d8cb1d92",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
