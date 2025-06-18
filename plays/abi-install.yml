@@ -57,9 +57,6 @@
         http_port: "{{ http_store_port.stdout | default(hostvars['http_store']['http_port']) }}"
       ansible.builtin.include_role:
         name: redhatci.ocp.setup_http_store
-        apply:
-          environment:
-            TMPDIR: ""
 
     - name: Validate http store
       vars:
