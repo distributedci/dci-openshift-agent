@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "5f928aa50822ecfaa6ddd890147c2fd8d88b5273",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cf83c23_c739b5c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-06-19T11:03:46Z",
+      "side": 1,
+      "message": "it would be great if we could test an abi job from a dci on podman container to see if these vars are really needed.",
+      "revId": "5f928aa50822ecfaa6ddd890147c2fd8d88b5273",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
