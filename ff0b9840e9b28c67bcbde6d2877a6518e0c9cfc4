@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a109b2ad_940672ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-06-24T13:54:18Z",
+      "side": 1,
+      "message": "LGTM\n\nnit: I think the commit message should be changed to mention that this is done in node_prep role, instead of the installer one.",
+      "revId": "ff0b9840e9b28c67bcbde6d2877a6518e0c9cfc4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
