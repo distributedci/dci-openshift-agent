@@ -66,7 +66,10 @@
     cluster_operators_available: "{{ clusteroperator_info | json_query(status_query) | flatten | unique }}"
   retries: 15
   delay: 10
-  until: cluster_operators_available == ['True']
+  until:
+    - clusteroperator_info.resources is defined
+    - clusteroperator_info.resources | length > 0
+    - cluster_operators_available == ['True']
   when:
     - acm_cluster_type | default('') != 'hypershift'
 
