@@ -16,6 +16,24 @@
       "message": "Need to use the new variable names:\n```\nsg_ztp_tag\nsg_mce_tag\n```",
       "revId": "aac83de377c89af439a7d474644aee38c39670bf",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aaa9cc53_76515740",
+        "filename": "plays/configure-operators.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-01T21:58:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "30d6214e_c53ed288",
+      "revId": "aac83de377c89af439a7d474644aee38c39670bf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
