@@ -202,11 +202,8 @@
         boot_iso_url: "{{ discovery_iso_server }}:{{ http_store_port.stdout |
                       default(hostvars['http_store']['http_port']) }}/{{ discovery_iso_name }}"
       ansible.builtin.include_role:
-        name: "redhatci.ocp.vendors.{{ hostvars[target_host]['vendor'] | lower }}"
+        name: "redhatci.ocp.vendors.{{ hostvars[inventory_hostname]['vendor'] | lower }}"
         tasks_from: iso.yml
-      loop: "{{ groups['nodes'] }}"
-      loop_control:
-        loop_var: target_host
 
     - name: Monitor Agent Based Installer
       vars:
