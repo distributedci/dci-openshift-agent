@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70b7152a_5362395f",
+        "filename": "plays/configure-operators.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-01T16:00:23Z",
+      "side": 1,
+      "message": "dci_local_registry default value is already \u0027\u0027, set in group_vars/all",
+      "revId": "f89a755a8c2b409c1bfb9f70e7a94fd84f27124c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
