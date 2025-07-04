@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "f7ebe386c433e8ede820b03a99d265fac8fef57d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a4c6f3b_d54fa57e",
+        "filename": "plays/post-run.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-04T13:20:47Z",
+      "side": 1,
+      "message": "Since everything needs to run in local host, can you create a block and put the delegate there, it will simplify all the tasks a bit.\n\nAlso please set no_log: true in any task that sets fact to avoid printing secrets.",
+      "revId": "f7ebe386c433e8ede820b03a99d265fac8fef57d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
