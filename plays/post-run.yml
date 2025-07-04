@@ -16,6 +16,8 @@
     - kubeconfig_path is defined
   set_fact:
     kubeconfig: "{{ kubeconfig_path }}"
+  delegate_to: localhost
+  delegate_facts: true
 
 - name: Copy outputs if defined
   when:
