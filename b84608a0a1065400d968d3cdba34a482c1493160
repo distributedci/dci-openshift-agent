@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "b84608a0a1065400d968d3cdba34a482c1493160",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cec9e7a1_d0a01519",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-07-07T13:48:34Z",
+      "side": 1,
+      "message": "Here is a job executed with podman:\nhttps://www.distributed-ci.io/jobs/3b419cfe-fee6-4ecd-89e0-fa0682ea5248/jobStates?sort\u003ddate",
+      "revId": "b84608a0a1065400d968d3cdba34a482c1493160",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
