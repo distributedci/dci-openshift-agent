@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "51cb14b63b2db040b1cfddb8ccd5ea836fcb0a14",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23a6d338_eca7d3fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-07-08T22:56:02Z",
+      "side": 1,
+      "message": "here is a job started with on podman:\nhttps://www.distributed-ci.io/jobs/e61e008e-694e-440f-8025-5c612cd5d68a/jobStates?sort\u003ddate\nThe tag is well applied.",
+      "revId": "51cb14b63b2db040b1cfddb8ccd5ea836fcb0a14",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
