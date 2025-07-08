@@ -69,6 +69,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "54e8be38_7f0f4acb",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-07-08T18:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7b815082_350cb660",
+      "revId": "59212092245e663774b24e32911b676426210060",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4601e0a5_37e9ff12",
@@ -82,6 +100,24 @@
       "writtenOn": "2025-07-08T13:46:23Z",
       "side": 1,
       "message": "when always setting the variable the use of it, becomes easier:\n```\n    [ run_in_container | ternary(\"use-dci-container\", \"\") ] +\n```",
+      "revId": "59212092245e663774b24e32911b676426210060",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55afff64_4cd62f89",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 5
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-07-08T18:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4601e0a5_37e9ff12",
       "revId": "59212092245e663774b24e32911b676426210060",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
