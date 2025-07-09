@@ -81,19 +81,39 @@
   when:
     - enable_nmstate | bool
 
-- name: "Create defined Custom Resources"
-  ansible.builtin.include_role:
-    name: redhatci.ocp.deploy_cr
-  vars:
-    api_version: "{{ item.api_version }}"
-    kind: "{{ item.kind }}"
-    namespace: "{{ item.namespace }}"
-    name: "{{ item.name }}"    # noqa var-naming[no-reserved] TODO: rename input var in deploy_cr
-    spec: "{{ item.spec }}"
-  with_list: "{{ dci_ocp_custom_resources }}"
+- name: Create defined Custom Resources
   when:
     - dci_ocp_custom_resources is defined
-    - dci_ocp_custom_resources is list
+    - dci_ocp_custom_resources | default([]) | length > 0
+  block:
+    - name: Create defined Custom Resources
+      ansible.builtin.include_role:
+        name: redhatci.ocp.deploy_cr
+      vars:
+        dc_api_version: "{{ cr.api_version | default('') }}"
+        dc_kind: "{{ cr.kind | default('') }}"
+        dc_namespace: "{{ cr.namespace | default(omit) }}"
+        dc_name: "{{ cr.name | default('') }}"
+        dc_spec: "{{ cr.spec | default('') }}"
+        dc_wait_condition: "{{ cr.wait_condition | default(false) }}"
+      loop: "{{ dci_ocp_custom_resources }}"
+      loop_control:
+        loop_var: cr
+
+    - name: Pause 60 seconds to wait for MC triggered by Custom Resources
+      pause:
+        seconds: 60
+      when:
+        - (install_type | default('ipi')) != 'sno'
+      no_log: true
+
+    - name: Wait for MCP status triggered by Custom Resources if any
+      include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | length + 1 ) }}"
+        check_wait_delay: 90
 
 - name: "Validate if the Performance Profile CRD is present"
   kubernetes.core.k8s_info:
