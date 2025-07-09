@@ -85,15 +85,18 @@
   ansible.builtin.include_role:
     name: redhatci.ocp.deploy_cr
   vars:
-    api_version: "{{ item.api_version }}"
-    kind: "{{ item.kind }}"
-    namespace: "{{ item.namespace }}"
-    name: "{{ item.name }}"    # noqa var-naming[no-reserved] TODO: rename input var in deploy_cr
-    spec: "{{ item.spec }}"
-  with_list: "{{ dci_ocp_custom_resources }}"
+    dc_api_version: "{{ cr.api_version | default('') }}"
+    dc_kind: "{{ cr.kind | default('') }}"
+    dc_namespace: "{{ cr.namespace | default(omit) }}"
+    dc_name: "{{ cr.name | default('') }}"
+    dc_spec: "{{ cr.spec | default('') }}"
+    dc_wait_condition: "{{ cr.wait_condition | default(false) }}"
+  loop: "{{ dci_ocp_custom_resources }}"
+  loop_control:
+    loop_var: cr
   when:
     - dci_ocp_custom_resources is defined
-    - dci_ocp_custom_resources is list
+    - dci_ocp_custom_resources | default([]) | length > 0
 
 - name: "Validate if the Performance Profile CRD is present"
   kubernetes.core.k8s_info:
