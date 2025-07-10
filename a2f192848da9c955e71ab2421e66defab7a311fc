@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e85281dc_0bb0051d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-10T19:00:52Z",
+      "side": 1,
+      "message": "Before merging, please provide a test for dci podman where the added task is not skipped.",
+      "revId": "a2f192848da9c955e71ab2421e66defab7a311fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
