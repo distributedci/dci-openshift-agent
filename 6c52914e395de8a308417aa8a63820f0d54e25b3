@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91431304_91391315",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-11T14:35:52Z",
+      "side": 1,
+      "message": "The idea of this role was actually to do not use the name of the cluster (there are other roles for that). \n\nIn the actual GitOps implementation the name of the cluster is set in the repo, what is defined in the agent could be something different. So that is why the parameters for the removal are the repo and the targetRef. By default we patch the ArgoApps finalizers to remove all the resources it created in cascade and if if confirmed as working in our daily tests, where we launch 3 clusters in a row and we delete the previous one.",
+      "revId": "6c52914e395de8a308417aa8a63820f0d54e25b3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
