@@ -53,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b99f6cb2_71adbf15",
+        "filename": "plays/configure-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-11T20:32:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2dadbe4e_14e0966a",
+      "revId": "c988e5c0d5ccf0c3d550fe51342e168ca4f5be64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3b47aa89_a84e7c64",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "Good point, it will be easier to let the role wait for those kinds. The problem is that the changes are not directly to a MachineConfig; there are changes in CRs that trigger an MC update.\n\nAnyway, it\u0027s better to move this check to cr_deploy.",
       "parentUuid": "3b47aa89_a84e7c64",
+      "revId": "c988e5c0d5ccf0c3d550fe51342e168ca4f5be64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3eb6afb_cbfffc12",
+        "filename": "plays/configure-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-11T20:32:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "236d3840_cb5af33e",
       "revId": "c988e5c0d5ccf0c3d550fe51342e168ca4f5be64",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
