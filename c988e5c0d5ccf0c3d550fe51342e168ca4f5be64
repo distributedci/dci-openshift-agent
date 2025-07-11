@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2d07620_26535870",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-11T05:07:12Z",
+      "side": 1,
+      "message": "This requires a bump in the version to avoid breaking changes.",
+      "revId": "c988e5c0d5ccf0c3d550fe51342e168ca4f5be64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d75aa0e5_106fb3e9",
+        "filename": "plays/configure-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-11T05:07:12Z",
+      "side": 1,
+      "message": "Is this default correct? Seems like dc_wait_condition is expecting a dict.\n\nDid you mean dc_wait_for_cr instead?",
+      "revId": "c988e5c0d5ccf0c3d550fe51342e168ca4f5be64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b47aa89_a84e7c64",
+        "filename": "plays/configure-operators.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-11T05:07:12Z",
+      "side": 1,
+      "message": "This waiting and checking seems very specific to machineConfigs. I would be nice if the deploy_cr new how to wait for those resources.\n\nOr at least it would be nice if these settings would run only when deploying machineConfigs\n\nSomething like\n\n(pseudocode)\n\n```\n- dci_ocp_custom_resources[] | json_query(.kind \u003d\u003d MachineConfig)\n```",
+      "revId": "c988e5c0d5ccf0c3d550fe51342e168ca4f5be64",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
