@@ -16,6 +16,24 @@
       "message": "typo? \n```\n\u003e\u003d 2.7\n```",
       "revId": "3a4c70d74ef81c4e1d38c09b59b1af99a7f2fe0c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9e85f16_28cdb5b5",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-15T21:06:07Z",
+      "side": 1,
+      "message": "😞",
+      "parentUuid": "a6e7d63e_587a84fb",
+      "revId": "3a4c70d74ef81c4e1d38c09b59b1af99a7f2fe0c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
