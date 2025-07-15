@@ -33,6 +33,24 @@
       "message": "My bad, I see you\u0027re making the change in 2.7, it has to match where the changes are done.",
       "revId": "4cd99d8e975edc7748943b5357f467882e5de70e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd6ce62b_2ec02bfd",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-15T18:13:10Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "dafefa3e_4555ae77",
+      "revId": "4cd99d8e975edc7748943b5357f467882e5de70e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
