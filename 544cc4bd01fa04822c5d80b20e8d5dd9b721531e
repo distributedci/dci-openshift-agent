@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4de232a_594709e7",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-15T16:53:09Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "53e0b70c_0a3a1241",
+      "revId": "544cc4bd01fa04822c5d80b20e8d5dd9b721531e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6e694b30_d2514e43",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-07-15T15:48:35Z",
       "side": 1,
       "message": "typo:\n```\nredhatci.ocp \u003e\u003d 2.6\n```",
+      "revId": "544cc4bd01fa04822c5d80b20e8d5dd9b721531e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cf1ecdb_1d04ac72",
+        "filename": "dci-openshift-agent.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-15T16:53:09Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "6e694b30_d2514e43",
       "revId": "544cc4bd01fa04822c5d80b20e8d5dd9b721531e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
