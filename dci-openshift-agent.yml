@@ -343,6 +343,40 @@
       rescue: *teardown_error
 
 # Step 3a-1 : installing
+- name: 'Custom install Hooks'
+  hosts: jumphost
+  tags:
+    - running
+    - custom-install
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+    KUBECONFIG: "{{ hub_kubeconfig_path | default('') }}"
+  tasks:
+    - name: Custom install
+      when:
+        - dci_main == 'install'
+      loop: "{{ dci_config_dirs }}"
+      loop_control:
+        loop_var: hookdir
+      block:
+        - name: Verify custom install hook
+          ansible.builtin.stat:
+            file: '{{ hookdir }}/hooks/custom-install.yml'
+          register: _custom_install_hook
+
+        - name: Set custom install var
+          ansible.builtin.set_fact:
+            custom_install_hook: '{{ _custom_install_hook.stat.exists }}'
+
+        - name: Custom Install Hooks
+          ansible.builtin.include_tasks: '{{ hookdir }}/hooks/custom-install.yml'
+          when:
+            - custom_install_hook
+      rescue: *teardown_failure
+
+# Step 3a-1 : installing
 - name: 'Launch [IPI/SNO/UPI] install'
   hosts: provisioner
   tags:
@@ -356,6 +390,7 @@
     - name: Install IPI/SNO/UPI
       when:
         - dci_main == 'install'
+        - not custom_install_hook | default(false) | bool
       block:
         - name: Launch install {{ (install_type | default('ipi'))}}
           ansible.builtin.include_tasks: "plays/{{ (install_type | default('ipi')) }}-install.yml"
@@ -442,6 +477,7 @@
           when:
             - (install_type | default('ipi')) == 'acm'
             - dci_main == 'install'
+            - not custom_install_hook | default(false) | bool
       rescue: *teardown_failure
 
 # Step 3a-1 : installing
@@ -466,6 +502,7 @@
           when:
             - (install_type | default('ipi')) == 'abi'
             - dci_main == 'install'
+            - not custom_install_hook | default(false) | bool
       rescue: *teardown_failure
 
 # Step 3a-1 : installing
