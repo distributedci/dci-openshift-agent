@@ -16,6 +16,24 @@
       "message": "These will include also the enforced ones, is that expected otherwise I\u0027d expect it to be something like\n```\nspec.remediationAction !\u003d \u0027enforce\u0027\n```",
       "revId": "41b383eb46c75f85ce2b390ecd273c5db2180374",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4b121ed_a7faae5d",
+        "filename": "plays/validate-acm-policies.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-07-22T20:03:24Z",
+      "side": 1,
+      "message": "That is the expectation: to review policies that are enforced but not compliant. Those will require some investigation into why the cluster was unable to apply the configuration.\n\nThen, check if all the policies are compliant. Maybe a bit redundant, but I think it is important to give more priority to things that are supposed to be enforced.",
+      "parentUuid": "8d93453a_afbb2f80",
+      "revId": "41b383eb46c75f85ce2b390ecd273c5db2180374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
