@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "acc4e3f7_c0993311",
+        "filename": "docs/empty-agent.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2025-07-22T06:35:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f35e8df6_a21cbf40",
+      "revId": "a5c72a66104a0de937c891cb7a4923fbdf6fd2c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9f8c2f39_7d22fe62",
@@ -35,6 +53,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ce2b13d_2c12c3fe",
+        "filename": "plays/empty-agent/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2025-07-22T06:35:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f8c2f39_7d22fe62",
+      "revId": "a5c72a66104a0de937c891cb7a4923fbdf6fd2c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "303e2f72_8bec1d87",
@@ -48,6 +84,24 @@
       "writtenOn": "2025-06-10T20:33:58Z",
       "side": 1,
       "message": "FQCN also for non-dci tasks, e.g.\n```\n    ansible.builtin.include_tasks: \"{{ pre_run_hook_path }}\"\n```",
+      "revId": "a5c72a66104a0de937c891cb7a4923fbdf6fd2c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff8497f0_ca0efd3c",
+        "filename": "plays/empty-agent/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1440
+      },
+      "writtenOn": "2025-07-22T06:35:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "303e2f72_8bec1d87",
       "revId": "a5c72a66104a0de937c891cb7a4923fbdf6fd2c1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
