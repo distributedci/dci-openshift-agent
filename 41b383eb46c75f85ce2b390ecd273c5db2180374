@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d93453a_afbb2f80",
+        "filename": "plays/validate-acm-policies.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-22T19:34:43Z",
+      "side": 1,
+      "message": "These will include also the enforced ones, is that expected otherwise I\u0027d expect it to be something like\n```\nspec.remediationAction !\u003d \u0027enforce\u0027\n```",
+      "revId": "41b383eb46c75f85ce2b390ecd273c5db2180374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
