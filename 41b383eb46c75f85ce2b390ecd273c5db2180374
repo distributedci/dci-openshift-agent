@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "959337dc_dac9a2b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-22T21:09:11Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "41b383eb46c75f85ce2b390ecd273c5db2180374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8d93453a_afbb2f80",
@@ -50,6 +67,24 @@
       "side": 1,
       "message": "Shouldn\u0027t they be different? i.e. from all the non compliant policies a subset should be enforced and a different one not enforced?\n\nBecause the way it is right now `non_compliant_enforced_policies` is a subset of `non_compliant_policies` which include them both.",
       "parentUuid": "a4b121ed_a7faae5d",
+      "revId": "41b383eb46c75f85ce2b390ecd273c5db2180374",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1be90ac2_9572aa54",
+        "filename": "plays/validate-acm-policies.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-22T21:09:11Z",
+      "side": 1,
+      "message": "The logic is fine, so it does not matter if is one way or another.",
+      "parentUuid": "548f8654_8fac51eb",
       "revId": "41b383eb46c75f85ce2b390ecd273c5db2180374",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
