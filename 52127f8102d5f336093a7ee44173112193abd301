@@ -16,6 +16,23 @@
       "message": "Test successful here:\nhttps://www.distributed-ci.io/jobs/64ad37ce-2ac0-45c0-94ec-e4da47dd3c57/jobStates",
       "revId": "52127f8102d5f336093a7ee44173112193abd301",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6802f74_249abf9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-22T16:29:22Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "52127f8102d5f336093a7ee44173112193abd301",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
