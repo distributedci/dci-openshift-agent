@@ -16,6 +16,23 @@
       "message": "lgtm, thanks",
       "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94679e20_3837aa76",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 648
+      },
+      "writtenOn": "2025-07-30T23:39:56Z",
+      "side": 1,
+      "message": "question (and I haven\u0027t tested this) but isn\u0027t it enough to just include_tasks with ignore_errors: true ? or is this because ignore_errors would serve as catch-all for all possible errors in the custom install?",
+      "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
