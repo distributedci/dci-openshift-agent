@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb497e0e_090670ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-07-31T13:44:37Z",
+      "side": 1,
+      "message": "see https://issues.redhat.com/browse/CILAB-2231 for more details",
+      "revId": "f2c2fae2bfce658b01d6cb77cb2a8eb0581be324",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
