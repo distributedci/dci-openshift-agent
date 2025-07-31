@@ -1,4 +1,20 @@
 ---
+- name: Get oc version output
+  environment:
+    KUBECONFIG: "{{ kubeconfig_path }}"
+  ansible.builtin.shell: |
+    {{ oc_tool_path }} version
+  register: oc_version_str
+  delegate_to: jumphost
+
+- name: Get OCP version
+  ansible.builtin.set_fact:
+    ocp_version: "{{ '.'.join(item.split(':')[1].strip().split('.')[0:2]) }}"
+    ocp_version_major: "{{ item.split(':')[1].strip().split('.')[0] }}"
+    ocp_version_minor: "{{ item.split(':')[1].strip().split('.')[1] }}"
+  when: "'Server Version' in item"
+  loop: "{{ oc_version_str.stdout_lines }}"
+
 - name: "Run the Red Hat Test Suites"
   vars:
     ts_e2e_image: "quay.io/openshift/origin-tests"
