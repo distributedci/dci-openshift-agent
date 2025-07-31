@@ -33,6 +33,24 @@
       "message": "question (and I haven\u0027t tested this) but isn\u0027t it enough to just include_tasks with ignore_errors: true ? or is this because ignore_errors would serve as catch-all for all possible errors in the custom install?",
       "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb7f043c_144ed72d",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-07-31T17:57:49Z",
+      "side": 1,
+      "message": "Good observation, I believe it will only ignore errors if the called task has an issue, the problem with that is that it could not trigger the teardown/failure.\n\nI really need to check for the hook file as it will set a fact for other install methods to not be triggered, that\u0027s why I don\u0027t ignore a failure in it.",
+      "parentUuid": "94679e20_3837aa76",
+      "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
