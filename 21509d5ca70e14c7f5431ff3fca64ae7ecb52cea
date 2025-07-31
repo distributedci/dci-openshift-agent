@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "077b910c_aedcdc68",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 908
+      },
+      "writtenOn": "2025-07-31T22:30:25Z",
+      "side": 1,
+      "message": "LGTM, question, from now on, we will need to create a custom-install.yml file in all our hooks?",
+      "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "94679e20_3837aa76",
         "filename": "dci-openshift-agent.yml",
         "patchSetId": 8
