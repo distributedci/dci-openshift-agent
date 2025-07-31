@@ -5,11 +5,15 @@
       - webserver_url is defined
       - groups['registry_host'] is defined
       - groups['registry_host'] | length > 0
-      - dci_local_registry | length
+      - dci_local_registry is defined
       - provision_cache_store is defined
   when:
     - dci_disconnected | default(false) | bool
     - (install_type | default('ipi')) not in ['abi']
+
+- name: Get type of dci_local_registry
+  debug:
+    msg: "dci_local_registry is of value '{{ dci_local_registry }}' and type '{{ dci_local_registry | type_debug }}'"
 
 - name: Validate we have all the pieces to run ABI in disconnected mode
   ansible.builtin.assert:
