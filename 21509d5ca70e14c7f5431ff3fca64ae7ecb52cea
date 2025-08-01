@@ -18,6 +18,23 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd54abd9_4315df14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-08-01T19:00:58Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "077b910c_aedcdc68",
@@ -31,6 +48,24 @@
       "writtenOn": "2025-07-31T22:30:25Z",
       "side": 1,
       "message": "LGTM, question, from now on, we will need to create a custom-install.yml file in all our hooks?",
+      "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b27674e_e614bfc7",
+        "filename": "dci-openshift-agent.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-08-01T19:00:58Z",
+      "side": 1,
+      "message": "No, it\u0027s optional, if someone wants to have a custom-install through hooks, then the file is needed, otherwise is not expected.",
+      "parentUuid": "077b910c_aedcdc68",
       "revId": "21509d5ca70e14c7f5431ff3fca64ae7ecb52cea",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
