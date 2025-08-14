@@ -31,6 +31,38 @@
   when: mc_is_file is defined
   changed_when: false
 
+- name: Append mirror extra mirrors entries for ODF
+  ansible.builtin.blockinfile:
+    path: "{{ mc_is_file.path }}"
+    block: |
+      - mirrors:
+        - quay.io/prega/test/rhceph-dev/odf4-odf-console-rhel9
+        source: registry.redhat.io/odf4/odf-console-rhel9
+      - mirrors:
+        - quay.io/prega/test/rhceph-dev/odf4-odf-rhel9-operator
+        source: registry.redhat.io/odf4/odf-rhel9-operator
+    marker: "# {mark} ANSIBLE MANAGED - ODF mirrors"
+    insertafter: EOF
+  when:
+    - mc_is_file is defined
+    - not (dci_disconnected | default(false) | bool)
+
+- name: Append mirror extra mirrors entries for ODF
+  ansible.builtin.blockinfile:
+    path: "{{ mc_is_file.path }}"
+    block: |
+      - mirrors:
+        - {{ dci_local_registry }}/prega/test/rhceph-dev/odf4-odf-console-rhel9
+        source: registry.redhat.io/odf4/odf-console-rhel9
+      - mirrors:
+        - {{ dci_local_registry }}/test/rhceph-dev/odf4-odf-rhel9-operator
+        source: registry.redhat.io/odf4/odf-rhel9-operator
+    marker: "# {mark} ANSIBLE MANAGED - ODF mirrors"
+    insertafter: EOF
+  when:
+    - mc_is_file is defined
+    - dci_disconnected | default(false) | bool
+
 - name: Append to list of Image Source files
   ansible.builtin.set_fact:
     is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
