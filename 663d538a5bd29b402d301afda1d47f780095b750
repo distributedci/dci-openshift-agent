@@ -50,6 +50,23 @@
       "message": "regate",
       "revId": "663d538a5bd29b402d301afda1d47f780095b750",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c94a661_3b57f3da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-08-27T06:24:27Z",
+      "side": 1,
+      "message": "Pierre, today\u0027s daily jobs were fine, is the revert of this change still needed?",
+      "revId": "663d538a5bd29b402d301afda1d47f780095b750",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
