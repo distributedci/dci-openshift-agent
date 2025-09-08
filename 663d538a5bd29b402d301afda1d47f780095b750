@@ -67,6 +67,24 @@
       "message": "Pierre, today\u0027s daily jobs were fine, is the revert of this change still needed?",
       "revId": "663d538a5bd29b402d301afda1d47f780095b750",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "598701da_57c5e0c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 821
+      },
+      "writtenOn": "2025-09-08T19:16:51Z",
+      "side": 1,
+      "message": "I used this patch to validate the change, everything is good now, yes I can close it. thx",
+      "parentUuid": "4c94a661_3b57f3da",
+      "revId": "663d538a5bd29b402d301afda1d47f780095b750",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
