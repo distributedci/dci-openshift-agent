@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "f6a10046ce894e0682ab5118c141487177ab6fa5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b07d5759_09ab1022",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-09-09T21:27:39Z",
+      "side": 1,
+      "message": "What\u0027s the benefit of changing the definition of the var in ipi-install.yml to pre-run.yml? For IPI it does not changes any behavior, just changes the place where it is defined.\n\nIt is mentioned that is now in a single location for SNO and IPI, but in sno-install the change is not using that variable.\n\nWhat difference would be if this patch included only  the change in sno-install.yml?",
+      "revId": "f6a10046ce894e0682ab5118c141487177ab6fa5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
