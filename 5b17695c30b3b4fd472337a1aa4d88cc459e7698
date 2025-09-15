@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9de32e7_25819533",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 724
+      },
+      "writtenOn": "2025-09-15T23:39:13Z",
+      "side": 1,
+      "message": "Dry run test results of the proposed code\n\n$ podman pod ps --sort created --filter \u0027name\u003dhttp_store*\u0027\nPOD ID        NAME                                                 STATUS      CREATED         INFRA ID      # OF CONTAINERS\n54ec84851cf8  http_store_pod_656de995-9e70-4038-bf99-acf22e76d9a4  Running     22 minutes ago  d631f9df0326  2\nbc4afde507a4  http_store_pod_1d01b8c3-8e69-466f-b1be-0da3b9d88cde  Running     22 minutes ago  1e9ce4e00d0d  2\n468afbe2c6aa  http_store_pod_b1935580-e7c0-4b4f-893b-ee4d4ec83dec  Running     3 days ago      9bf4311f4940  1\n9da5d8e87b63  http_store_pod_a5dc65ed-fbe5-4455-91a4-f16d934899d1  Running     3 days ago      22646598f2cf  1\n4048ae65427d  http_store_pod_49c98f45-98e2-42e0-b48c-9e797deb50a0  Running     4 days ago      668f6c9c8270  1\ncf5ca0a6e32d  http_store_pod_e4d13bc4-eafa-4a36-afc9-87125348ed55  Running     4 days ago      8bcecea4f5ff  1\n178d08dd4d65  http_store_pod_f96344ca-feb0-40ee-80fa-b24630c82192  Running     4 days ago      259f75c7380a  1\n2930345e079f  http_store_pod_de7f5128-0b47-4d49-b3d3-ac0f8f0fc736  Running     5 days ago      3801749ac308  1\na837b6cbccee  http_store_pod_cf7e6c06-3440-4bd7-9b7b-046cb1ef6c2a  Running     5 days ago      3c0a9228f3de  1\n1c8b510fe40a  http_store_pod_79dcddd3-bd49-4458-9cb1-fa6238b91f05  Running     5 days ago      9430b41e75f3  1\n664373ab4daf  http_store_pod_f58cf53f-a21e-4812-8aed-63be59f97219  Running     5 days ago      494d7c0aee4b  1\n7783bae14756  http_store_pod_1a87bf73-d8cc-44d7-aee5-f64d54e7c9b0  Running     5 days ago      92d691506c80  1\nfaf18c451be6  http_store_pod_561864e4-af2e-41b1-b4c6-7d1beb4032b9  Running     5 days ago      c7f5172312c0  1\n876ca8be43c3  http_store_pod_0eb387cf-9863-4baa-ba9e-2b6a52604374  Running     5 days ago      f4c90ab60e48  1\n7702ef00a0ad  http_store_pod_679921db-dea5-4c39-85ba-d3270ba05ec5  Running     6 days ago      8d150e713688  1\n\n$ cat clean_pod.sh \nhttpd_pods\u003d$(podman pod ps --sort created --filter \u0027name\u003dhttp_store*\u0027 --format \"{{.Name}}\"|cut -d \"_\" -f4-)\nwhile read -r name\ndo\n  fail_states\u003d( failure error killed )\n  job_status\u003d$(dcictl --format json job-show \"${name}\" | jq -er .job.status)\n  if [[ -n \"$job_status\" \u0026\u0026 \" ${fail_states[*]} \" \u003d~ ${job_status} ]]; then\n    #podman pod rm -f \"${name}\"\n    echo \"Removed pod ${name}\"\n  fi\ndone \u003c\u003c\u003c \"${httpd_pods}\"\n$ bash clean_pod.sh \nRemoved pod b1935580-e7c0-4b4f-893b-ee4d4ec83dec\nRemoved pod a5dc65ed-fbe5-4455-91a4-f16d934899d1\nRemoved pod 49c98f45-98e2-42e0-b48c-9e797deb50a0\nRemoved pod e4d13bc4-eafa-4a36-afc9-87125348ed55\nRemoved pod f96344ca-feb0-40ee-80fa-b24630c82192\nRemoved pod de7f5128-0b47-4d49-b3d3-ac0f8f0fc736\nRemoved pod cf7e6c06-3440-4bd7-9b7b-046cb1ef6c2a\nRemoved pod 79dcddd3-bd49-4458-9cb1-fa6238b91f05\nRemoved pod f58cf53f-a21e-4812-8aed-63be59f97219\nRemoved pod 1a87bf73-d8cc-44d7-aee5-f64d54e7c9b0\nRemoved pod 561864e4-af2e-41b1-b4c6-7d1beb4032b9\nRemoved pod 0eb387cf-9863-4baa-ba9e-2b6a52604374\nRemoved pod 679921db-dea5-4c39-85ba-d3270ba05ec5",
+      "revId": "5b17695c30b3b4fd472337a1aa4d88cc459e7698",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
