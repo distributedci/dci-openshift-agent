@@ -27,6 +27,18 @@
     - cnf_test_suites is defined
     - cnf_test_suites | length
 
+- name: Run eco-gotests
+  vars:
+    eco_gotests_test_suites: "{{ eco_test_suites }}"
+    eco_gotests_registry_auth_file: "{{ dci_pullsecret_file }}"
+    eco_gotests_log_dir: "{{ job_logs.path }}"
+    eco_gotests_kubconfig_dir: "{{ dci_cluster_configs_dir }}"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.eco_gotests
+  when:
+    - eco_test_suites is defined
+    - eco_test_suites | length
+
 - name: Run cluster-compare
   vars:
     cc_infra_type: "{{ dci_infra_type | default('core') }}"
