@@ -1,0 +1,99 @@
+---
+- name: "Get current date"
+  ansible.builtin.command: date +%Y%m%d-%H%M%S
+  register: date
+
+- name: "Create reports directory"
+  ansible.builtin.file:
+    path: "{{ job_logs.path }}/{{ date.stdout }}/eco_gotests/{{ item | lower }}"
+    state: directory
+    mode: '0755'
+  loop: "{{ eco_test_suites | list }}"
+
+- name: "Run PTP tests with eco-gotests"
+  environment:
+    REGISTRY_AUTH_FILE: "{{ dci_pullsecret_file }}"
+  ansible.builtin.shell:
+    cmd: >
+      podman run -it --rm --net=host
+      -e KUBECONFIG=/kubeconfig/kubeconfig
+      -e ECO_TEST_FEATURES=ptp
+      -v {{ dci_cluster_configs_dir }}/:/kubeconfig:Z
+      -v {{ job_logs.path }}/{{ date.stdout }}/eco_gotests/ptp:/tmp/reports:Z
+      quay.io/ocp-edge-qe/eco-gotests:latest
+  ignore_errors: true
+  when:
+    - '"ptp" in ( eco_test_suites | lower )'
+
+- name: "Run SRIOV tests with eco-gotests"
+  environment:
+    REGISTRY_AUTH_FILE: "{{ dci_pullsecret_file }}"
+  ansible.builtin.shell:
+    cmd: >
+      podman run -it --rm --net=host
+      --security-opt label=disable
+      -e KUBECONFIG=/kubeconfig/kubeconfig
+      -e ECO_REPORTS_DUMP_DIR=/tmp/reports
+      -e ECO_VERBOSE_LEVEL=100
+      -e ECO_TEST_VERBOSE=true
+      -e ECO_DUMP_FAILED_TESTS=true
+      -e ECO_TEST_FEATURES=sriov
+      -e ECO_TEST_LABELS=sriov-hw-enabled
+      -e ECO_WORKER_LABEL={{ eco_worker_label | default('workercnf') }}
+      -e ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST={{ eco_sriov_interface_list | default('ens1f0,ens1f1') }}
+      -e ECO_CNF_CORE_NET_TEST_CONTAINER={{ eco_network_test_container | default('quay.io/ocp-edge-qe/eco-gotests-network-client:v4.19') }}
+      -e ECO_CNF_CORE_NET_DPDK_TEST_CONTAINER={{ eco_dpdk_test_container | default('quay.io/ocp-edge-qe/eco-gotests-rootless-dpdk:v4.16.0') }}
+      -e ECO_CNF_CORE_NET_FRR_IMAGE={{ eco_frr_image | default('quay.io/ocp-edge-qe/frr:stable_7.5') }}
+      -v {{ dci_cluster_configs_dir }}/:/kubeconfig:Z
+      -v {{ job_logs.path }}/{{ date.stdout }}/eco_gotests/sriov:/tmp/reports:Z
+      quay.io/ocp-edge-qe/eco-gotests:latest
+      --timeout=12h
+      --keep-going
+  ignore_errors: true
+  when:
+    - '"sriov" in ( eco_test_suites | lower )'
+
+- name: "Rename junit XML files with the feature name"
+  ansible.builtin.shell: |
+    for d in ptp sriov; do
+      if [ -d "{{ job_logs.path }}/{{ date.stdout }}/eco_gotests/${d}" ]; then
+        cd "{{ job_logs.path }}/{{ date.stdout }}/eco_gotests/${d}"
+        for i in *; do mv "${i}" "${d}_${i}"; done
+      fi
+    done
+
+- name: "Check if SRIOV test reports exist"
+  ansible.builtin.find:
+    paths: "{{ job_logs.path }}/{{ date.stdout }}/eco_gotests"
+    file_type: file
+    recurse: yes
+  register: sriov_test_reports
+  when:
+    - '"sriov" in ( eco_test_suites | lower )'
+
+- name: "Create tar archive of SRIOV test reports"
+  ansible.builtin.archive:
+    path: "{{ job_logs.path }}/{{ date.stdout }}/eco_gotests"
+    dest: "{{ job_logs.path }}/{{ date.stdout }}/eco_gotests_sriov_reports_{{ date.stdout }}.tar.gz"
+    format: gz
+    mode: '0644'
+  register: sriov_tar_created
+  when:
+    - '"sriov" in ( eco_test_suites | lower )'
+    - sriov_test_reports.files | length > 0
+
+- name: "Upload SRIOV test reports tar to DCI"
+  environment:
+    DCI_CLIENT_ID: "{{ dci_client_id }}"
+    DCI_API_SECRET: "{{ dci_api_secret }}"
+    DCI_CS_URL: "{{ dci_cs_url }}"
+  dci_file:
+    path: "{{ sriov_tar_created.dest }}"
+    name: "eco_gotests_sriov_reports_{{ date.stdout }}.tar.gz"
+    job_id: "{{ job_id }}"
+    mime: "application/gzip"
+  delegate_to: localhost
+  when:
+    - '"sriov" in ( eco_test_suites | lower )'
+    - sriov_tar_created is succeeded
+    - sriov_tar_created.dest is defined
