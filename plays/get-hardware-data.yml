@@ -1,0 +1,74 @@
+---
+
+- name: Get list of nodes from cluster
+  kubernetes.core.k8s_info:
+    api_version: v1
+    kind: Node
+  register: nodes_info
+  ignore_errors: true
+
+- name: Get kernel information for all nodes
+  vars:
+    node_name: "{{ item.metadata.name }}"
+  ansible.builtin.shell:
+    cmd: >
+      {{ oc_tool_path }} debug node/{{ node_name }}
+      -- chroot /host sh -c 'echo "{\"node\": \"{{ node_name }}\", \"version\": \"$(uname -r)\", \"params\": \"$(cat /proc/cmdline)\"}"'
+  register: kernel_info
+  ignore_errors: true
+  loop: "{{ nodes_info.resources | default([]) }}"
+  when:
+    - nodes_info.resources is defined
+    - item.status.conditions | selectattr('type', 'equalto', 'Ready') | selectattr('status', 'equalto', 'True') | list | length > 0
+
+- name: Save kernel information to files
+  ansible.builtin.copy:
+    content: >-
+      {{ { 'kernel': {
+        'node': (item.stdout | from_json).node,
+        'version': (item.stdout | from_json).version,
+        'params': (((item.stdout | from_json).params | default('') | cmdline_to_json | from_json))
+      } } | to_json }}
+    dest: "{{ job_logs.path }}/dci-extra.kernel.{{ item.item.metadata.name }}.json"
+    mode: '0644'
+  ignore_errors: true
+  loop: "{{ kernel_info.results | default([]) }}"
+  when:
+    - item is defined
+    - item.rc is defined
+    - item.rc == 0
+    - item.stdout is defined
+    - (item.stdout | length) > 0
+
+- name: "Run lshw using UBI10 container"
+  vars:
+    node_name: "{{ item.metadata.name }}"
+  ansible.builtin.shell:
+    cmd: >
+      {{ oc_tool_path }} debug node/{{ node_name }}
+      --image="{{ dci_local_registry | default('registry.access.redhat.com', true) }}/ubi10"
+      -- sh -c 'dnf install -y lshw > /dev/null && lshw -json -sanitize -numeric'
+  register: hardware_info
+  ignore_errors: true
+  loop: "{{ nodes_info.resources | default([]) }}"
+  when:
+    - nodes_info.resources is defined
+    - item.status.conditions | selectattr('type', 'equalto', 'Ready') | selectattr('status', 'equalto', 'True') | list | length > 0
+
+- name: "Save hardware information to files"
+  ansible.builtin.copy:
+    content: >-
+      {{ { 'hardware': {
+        'node': item.item.metadata.name,
+        'data': (item.stdout | from_json | dot_to_underscore) if (item.stdout is defined and item.rc == 0) else (null | default('')),
+        'error': item.stderr if item.rc != 0 else (null | default(''))
+      } } | to_json }}
+    dest: "{{ job_logs.path }}/dci-extra.hardware.{{ item.item.metadata.name }}.json"
+    mode: '0644'
+  ignore_errors: true
+  loop: "{{ hardware_info.results | default([]) }}"
+  when:
+    - hardware_info.results is defined
+    - item is defined
+
+...
