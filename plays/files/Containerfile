@@ -1,0 +1,15 @@
+FROM registry.redhat.io/ubi10/ubi:latest
+
+# Install lshw and other useful tools
+RUN dnf update -y && \
+    dnf install -y lshw && \
+    dnf clean all
+
+# Set working directory
+WORKDIR /workspace
+
+# Ensure container runs as root
+USER root
+
+# Default command - run lshw
+CMD ["/usr/sbin/lshw"]
