@@ -33,6 +33,24 @@
       "message": "What\u0027s the benefit of changing the definition of the var in ipi-install.yml to pre-run.yml? For IPI it does not changes any behavior, just changes the place where it is defined.\n\nIt is mentioned that is now in a single location for SNO and IPI, but in sno-install the change is not using that variable.\n\nWhat difference would be if this patch included only  the change in sno-install.yml?",
       "revId": "f6a10046ce894e0682ab5118c141487177ab6fa5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c910622f_8f0ca058",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 789
+      },
+      "writtenOn": "2025-09-17T13:00:24Z",
+      "side": 1,
+      "message": "Hi, Tony,\n\nWhy do you say sno_installer does not use the variable?\n\nIt\u0027s used in the role\u0027s disconnected registry plays file:\n\nhttps://github.com/redhatci/ansible-collection-redhatci-ocp/blob/90caab375faa1225c1068609d90492d2aea4bcb8/roles/sno_installer/tasks/15_disconnected_registry_existing.yml#L16",
+      "parentUuid": "b07d5759_09ab1022",
+      "revId": "f6a10046ce894e0682ab5118c141487177ab6fa5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
