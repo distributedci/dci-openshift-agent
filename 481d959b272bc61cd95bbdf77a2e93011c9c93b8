@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3888be25_d3a79d3c",
+        "filename": "plays/mirror-job-tools.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-09-17T14:26:32Z",
+      "side": 1,
+      "message": "You can define where the org should go, e.g. In the end this is the org where it is stored in the registry.\n\n```\nmi_dst_org: library\n```\n\n\nBut I think is best to use the full path that is: registry.access.redhat.com/ubi10/ubi:latest\n\nAlthough it would be also nice to use a smaller image if that is not an issue:\nregistry.access.redhat.com/ubi10/ubi-micro:latest",
+      "revId": "481d959b272bc61cd95bbdf77a2e93011c9c93b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
