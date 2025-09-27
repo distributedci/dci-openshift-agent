@@ -35,6 +35,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1dd42b3_0de6bfd6",
+        "filename": "plays/get-hardware-data.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-09-27T15:39:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9698321_bb9e7763",
+      "revId": "a9966f93458110883940a4c0259afe9bd19ee38b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9964b521_a7f872bc",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-09-16T17:19:52Z",
       "side": 1,
       "message": "These conditionals sideload_kernel_ are for the previous tasks, not for this one, right?",
+      "revId": "a9966f93458110883940a4c0259afe9bd19ee38b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "980c9cff_61175243",
+        "filename": "plays/mirror-job-tools.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-09-27T15:39:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9964b521_a7f872bc",
       "revId": "a9966f93458110883940a4c0259afe9bd19ee38b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }

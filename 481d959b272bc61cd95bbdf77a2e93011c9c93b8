@@ -18,6 +18,24 @@
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df029c68_a0e06f8d",
+        "filename": "plays/get-hardware-data.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-09-27T15:39:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d38e9047_cf7729c4",
+      "revId": "481d959b272bc61cd95bbdf77a2e93011c9c93b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3888be25_d3a79d3c",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-09-17T14:26:32Z",
       "side": 1,
       "message": "You can define where the org should go, e.g. In the end this is the org where it is stored in the registry.\n\n```\nmi_dst_org: library\n```\n\n\nBut I think is best to use the full path that is: registry.access.redhat.com/ubi10/ubi:latest\n\nAlthough it would be also nice to use a smaller image if that is not an issue:\nregistry.access.redhat.com/ubi10/ubi-micro:latest",
+      "revId": "481d959b272bc61cd95bbdf77a2e93011c9c93b8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1da4f2c0_be164fc1",
+        "filename": "plays/mirror-job-tools.yml",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2025-09-27T15:39:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3888be25_d3a79d3c",
       "revId": "481d959b272bc61cd95bbdf77a2e93011c9c93b8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
