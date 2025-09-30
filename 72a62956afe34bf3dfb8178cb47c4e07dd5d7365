@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "72a62956afe34bf3dfb8178cb47c4e07dd5d7365",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8929ad2_43ca8ebc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 800
+      },
+      "writtenOn": "2025-09-30T12:40:46Z",
+      "side": 1,
+      "message": "We could promote this change to the ansible.cfg file we have in our repos (e.g. bos2-ci-config), couldn\u0027t we? Because pipelines are currently consuming from that ansible.cfg and not from the agent\u0027s one.",
+      "revId": "72a62956afe34bf3dfb8178cb47c4e07dd5d7365",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
     }
   ]
 }
