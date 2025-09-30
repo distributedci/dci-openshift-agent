@@ -55,6 +55,7 @@
         http_store_pod_name: "{{ store_pod_name }}"
         http_store_ephemeral: "{{ dci_ephemeral_http_store | default (true) }}"
         http_port: "{{ http_store_port.stdout | default(hostvars['http_store']['http_port']) }}"
+        http_store_ip: "{{ hostvars['http_store']['ansible_host'] }}"
       ansible.builtin.include_role:
         name: redhatci.ocp.setup_http_store
         apply:
