@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87528509_f424a9b0",
+        "filename": "plays/prune-catalog.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-10-02T22:06:16Z",
+      "side": 1,
+      "message": "use the fullpath instead, we install it in: /usr/local/bin/grpcurl\n\nhttps://github.com/redhat-cip/dci-openshift-agent/blob/72a62956afe34bf3dfb8178cb47c4e07dd5d7365/plays/configure-jumphost.yml#L26-L45\n\nThe job you used in the commit message shows it was already in that path: https://www.distributed-ci.io/jobs/88410dcb-2ece-4e47-a5f4-f5c3559fc3b8/jobStates?sort\u003ddate\u0026task\u003deaa98f7e-b99d-4fc9-9220-7f59caa77a4a",
+      "revId": "27400c0fc8783687ded850085e44575c38003082",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
