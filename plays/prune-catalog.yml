@@ -63,11 +63,17 @@
           jq -r '.[].NetworkSettings.Ports."50051/tcp"[].HostPort'
       register: grpc_port
 
+    - name: "Get installed path for grpcurl"
+      ansible.builtin.command: which grpcurl
+      register: grpcurl_path
+      changed_when: false
+      failed_when: grpcurl_path.rc != 0
+    
     - name: "Get the operators available in the pruned catalog"
       shell:
         cmd: >-
           set -o pipefail;
-          grpcurl -plaintext
+          {{ grpcurl_path }} -plaintext
           jumphost:{{ grpc_port.stdout }}
           api.Registry/ListPackages |
           jq ".name"
