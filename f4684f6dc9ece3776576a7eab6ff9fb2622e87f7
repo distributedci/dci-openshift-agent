@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75121548_f402c5a3",
+        "filename": "plays/eco-gotests-run.yml",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2025-10-07T22:43:12Z",
+      "side": 1,
+      "message": "Use find to avoid globbing issues:\n```\nfind \"{{ job_logs.path }}/{{ date.stdout }}/eco_gotests/\" -maxdepth 1 -type f -execdir mv -v \u0027{}\u0027 \"${d}_{}\" \\;\n```",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 8
+      },
+      "revId": "f4684f6dc9ece3776576a7eab6ff9fb2622e87f7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0"
+    }
+  ]
+}
