@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.18.0
+Version:       1.19.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 2.10.0
+Requires: ansible-collection-redhatci-ocp >= 2.11.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Mon Oct 27 2025 Manuel Rodriguez <manrodri@redhat.com> - 1.19.0-1.VERS
+- Version bump for setup_lvms role addition in redhatci.ocp >= 2.11
+
 * Thu Sep 25 2025 Frederic Lepied <flepied@redhat.com> - 1.18.0-1.VERS
 - Include %{_datadir}/dci-openshift-agent/plays/files
 

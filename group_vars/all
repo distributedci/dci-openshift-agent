@@ -52,6 +52,7 @@ enable_nro: false
 enable_netobserv: false
 enable_rhoai: false
 enable_gitops: false
+enable_lvms: false
 # Lists of packages for each operator
 cnv_operator:
   kubevirt-hyperconverged:
@@ -89,6 +90,8 @@ nmstate_operators:
   kubernetes-nmstate-operator:
 gitops_operator:
   openshift-gitops-operator:
+lvms_operator:
+  lvms-operator:
 dci_local_registry: |-
   {{ local_registry_host | default('') }}
   {%- if local_registry_port is defined %}
