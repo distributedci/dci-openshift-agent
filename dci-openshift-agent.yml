@@ -11,7 +11,7 @@
     no_proxy: "{{ no_proxy_list }}"
     TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
-    - name: Display proxy settings
+    - name: Display proxy settings 2
       debug:
         msg: "http_proxy={{ http_proxy }} https_proxy={{ https_proxy }} no_proxy={{ no_proxy_list }}"
 
