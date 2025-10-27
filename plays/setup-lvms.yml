@@ -1,0 +1,17 @@
+---
+- name: "Cleanup the LVM Storage Operator volumes"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.setup_lvms
+  vars:
+    sl_dev_class_name: "{{ dci_lvms_dev_class_name }}"
+    sl_dev_selector_path: "{{ dci_lvms_dev_selector_path }}"
+    sl_action: "cleanup"
+
+- name: "Setup the LVM Storage Operator"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.setup_lvms
+  vars:
+    sl_dev_class_name: "{{ dci_lvms_dev_class_name }}"
+    sl_dev_selector_path: "{{ dci_lvms_dev_selector_path }}"
+    sl_storage_class: "{{ dci_lvms_storage_class | default('') }}"
+...

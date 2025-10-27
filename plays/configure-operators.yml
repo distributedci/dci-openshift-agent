@@ -14,6 +14,11 @@
   when:
     - enable_nfs_storage | bool
 
+- name: "Enable LVM Storage Operator"
+  ansible.builtin.include_tasks: setup-lvms.yml
+  when:
+    - enable_lvms | bool
+
 - name: "Setup CNV and HCO Operators"
   ansible.builtin.include_tasks: setup-cnv.yml
   when:
