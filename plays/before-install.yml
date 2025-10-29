@@ -30,6 +30,7 @@
     - performance_definition is defined
     - customize_extramanifests_path is defined
     - version is version('4.16', '>=')
+    - dci_pao_on_install | default(true) | bool
   delegate_to: localhost
   block:
     - name: Verify performance profile file exists

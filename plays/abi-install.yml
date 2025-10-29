@@ -149,6 +149,7 @@
       when:
         - performance_definition is defined
         - version is version('4.16', '>=')
+        - dci_pao_on_install | default(true) | bool
 
     - name: Generate_manifests
       vars:
