@@ -320,6 +320,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_mce_tag                     | False    | String  | v2.13                                                          | Tag for Multicluster Engine subscription image.
 | nfs_server                      | False    | String  |                                                                | NFS server's FQDN or IP Address. eg. my-nfs.mylab.local
 | nfs_path                        | False    | String  |                                                                | NFS export path. e.g. /exports/nfs-provisioner
+| dci_pao_on_install              | Fals     | Bool    | True                                                           | Whether to apply the Performance Addon Operator during the installation of the cluster or after install. Used together with `performance_definition` (see below).
 | performance_definition          | False    | String  |                                                                | Path of a Performance Profile YAML to apply during install (4.16 and above) or after the OCP install (4.15 and below). For non-ABI installers the `customize_extramanifests_path` must be defined.
 | tuned_definition                | False    | String  |                                                                | Path of Tuned YAML to apply after the application of the Performance Profile.
 | cnf_test_suites                 | False    | List    |                                                                | List of CNF Tests to perform: ['sctp','ptp','performance','sriov','dpdk'].
@@ -336,6 +337,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_core_user_pass              | False    | String  |                                                                | Password for the core user on the OCP nodes. Supported by both IPI and ABI installers, this only permits access via the console — not SSH.
 | dci_ephemeral_http_store        | False    | Boolean | True                                                           | For ABI installations, specifies whether the web server container that hosts the discovery ISO is managed by Podman or Systemd. By default, an https_store container is created for each job and destroyed after the installation completes.
 | dci_ocp_custom_resources        | False    | List    | []                                                             | Allows creating custom resources on cluster after it has been installed.
+| dci_http_store_ip_version       | False    | String  | ipv4                                                           | For ABI installations, either `ipv4` or `ipv6`. Specifies whether the web server container that hosts the discovery ISO will listen on IPv4 or IPv6.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
