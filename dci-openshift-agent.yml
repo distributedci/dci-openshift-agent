@@ -556,7 +556,6 @@
     - name: Mirror operators and configure catalog sources
       when:
         - dci_main == 'install'
-        - acm_cluster_type | default('') != 'hypershift'
       block:
         - name: "Run cluster health checks"
           ansible.builtin.include_tasks: plays/check-cluster-health.yml
@@ -587,7 +586,7 @@
     - name: Deploy operators
       when:
         - dci_main == 'install'
-        - acm_cluster_type | default('') != 'hypershift'
+        - acm_cluster_type | default('') not in ('hypershift', 'HostedControlPlane')
       block:
         - name: "Setup job_logs directory"
           ansible.builtin.include_tasks: plays/log-dir.yml
@@ -616,7 +615,7 @@
     - name: Configure operators
       when:
         - dci_main == 'install'
-        - acm_cluster_type | default('') != 'hypershift'
+        - acm_cluster_type | default('') not in ('hypershift', 'HostedControlPlane')
       block:
         - name: "Setup job_logs directory"
           ansible.builtin.include_tasks: plays/log-dir.yml
@@ -644,7 +643,6 @@
     - name: Install Hooks
       when:
         - dci_main == 'install'
-        - acm_cluster_type | default('') != 'hypershift'
       block:
         - name: "Run cluster health checks"
           ansible.builtin.include_tasks: plays/check-cluster-health.yml
@@ -752,8 +750,6 @@
     TMPDIR: "{{ ansible_env.HOME }}/tmp"
   tasks:
     - name: Test Hooks
-      when:
-        - acm_cluster_type | default('') != 'hypershift'
       block:
         - name: "Run cluster health checks"
           ansible.builtin.include_tasks: plays/check-cluster-health.yml
