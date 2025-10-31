@@ -117,7 +117,7 @@ Please read the role's documentation for more information.
 
 | Name                             | Required | Default | Description
 | -------------------------------- | -------- | ------- | -----------
-| acm_cluster_type                 | Yes      | None    | The type of cluster to deploy through ACM. Must use: `ztp-spoke-clusterinstance`
+| acm_cluster_type                 | Yes      | None    | The type of cluster to deploy through ACM. Must use: ztp-spoke-clusterinstance, SNO, HostedControlPlane, HighAvailable
 | dci_clusterinstance_template_dir | Yes      | None    | Directory that holds the [ClusterInstance templates](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-clusters-preq)
 | dci_force_deploy_spoke           | No       | False   | Whether or not force an installation of a and Spoke cluster
 | dci_spoke_manifest_files         | No       | []      | A list of rendered manifest that must be applied to the Hub cluster before a Gitops managed spoke installation. ie: pull_secrets, BMC credentials, etc.
@@ -241,44 +241,6 @@ This pipeline includes NFS storage
   components:
     - ocp
   success_tag: ocp-acm-hcp-4.14-ok
-```
-
-### ACM ClusterInstance pipeline
-
-```yaml
----
-- name: openshift-ztp-clusterinstance
-  stage: ztp-spoke
-  prev_stages: [acm-hub]
-  ansible_playbook: /usr/share/dci-openshift-agent/dci-openshift-agent.yml
-  ansible_cfg: /var/lib/dci/pipelines/ansible.cfg
-  dci_credentials: ~/.config/dci-pipeline/<dci_credentials>.yml
-  configuration: "@QUEUE"
-  pipeline_user: ~/.config/dci-pipeline/<pipeline_user>.yml
-  ansible_inventory: /var/lib/dci/inventories/@QUEUE/ztp/spoke/@RESOURCE-clusterinstance
-  ansible_extravars:
-    install_type: acm
-    acm_cluster_type: ztp-spoke-clusterinstance
-    dci_local_log_dir: /var/lib/dci-pipeline/upload-errors
-    dci_gits_to_components:
-      - /var/lib/dci/<lab>-config/dci-openshift-agent
-      - /var/lib/dci/inventories
-      - /var/lib/dci/pipelines
-    dci_tags: []
-    dci_cache_dir: /var/lib/dci-pipeline
-    dci_base_ip: "{{ ansible_default_ipv4.address }}"
-    dci_baseurl: "http://{{ dci_base_ip }}"
-    dci_teardown_on_success: false
-    # ClusterInstance
-    dci_clusterinstance_template_dir: /var/lib/dci/inventories/@QUEUE/ztp/spoke/templates
-  topic: OCP-4.18
-  components:
-    - ocp
-  inputs:
-    kubeconfig: hub_kubeconfig_path
-  outputs:
-    kubeconfig: "kubeconfig"
-  success_tag: ocp-ztp-clusterinstance-4.18-ok
 ```
 
 ## Inventory Examples

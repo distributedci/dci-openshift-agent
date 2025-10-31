@@ -36,20 +36,6 @@
       ansible.builtin.fail:
         msg: "The following Cluster Operators are degraded {{ degraded_operators }}"
 
-- name: "Check that control-plane nodes are ready"
-  kubernetes.core.k8s_info:
-    kind: Node
-    label_selectors:
-      - "node-role.kubernetes.io/master"
-  register: nodes_info
-  vars:
-    status_query: "resources[*].status.conditions[?type=='Ready'].status"
-    nodes_status: "{{ nodes_info | json_query(status_query) | flatten | unique }}"
-  until:
-    - nodes_status == ['True']
-  retries: 3
-  delay: 10
-
 - name: "Check that Worker nodes are ready"
   kubernetes.core.k8s_info:
     kind: Node
@@ -79,32 +65,51 @@
   ansible.builtin.fail:
     msg: "Install or upgrade is not Completed"
   when:
-    upgrade_state != "Completed"
+    - upgrade_state != "Completed"
   retries: 3
   delay: 10
 
-- name: "Check machine-config clusteroperator latest status"
-  kubernetes.core.k8s_info:
-    api_version: config.openshift.io/v1
-    kind: ClusterOperator
-    name: machine-config
-  register: co
-  retries: 120
-  delay: 10
-  until:
-    - co | json_query('resources[*].status.conditions[]')| sort(attribute='lastTransitionTime') | last | json_query('status')
+- name: Non-Hosted control plane checks
+  when:
+    - acm_cluster_type | default('') != "HostedControlPlane"
+  block:
 
-- name: "Get Machine Config Pools status"
-  kubernetes.core.k8s_info:
-    api_version: machineconfiguration.openshift.io/v1
-    kind: MachineConfigPool
-  register: reg_mcpool_status
-  vars:
-    status_query: "resources[*].status.conditions[?type=='Updated'].status"
-    update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
-  until:
-    - reg_mcpool_status.resources is defined
-    - update_status == ['True']
-  retries: 180
-  delay: 10
+    - name: "Check that control-plane nodes are ready"
+      kubernetes.core.k8s_info:
+        kind: Node
+        label_selectors:
+          - "node-role.kubernetes.io/master"
+      register: nodes_info
+      vars:
+        status_query: "resources[*].status.conditions[?type=='Ready'].status"
+        nodes_status: "{{ nodes_info | json_query(status_query) | flatten | unique }}"
+      until:
+        - nodes_status == ['True']
+      retries: 3
+      delay: 10
+
+    - name: "Check machine-config clusteroperator latest status"
+      kubernetes.core.k8s_info:
+        api_version: config.openshift.io/v1
+        kind: ClusterOperator
+        name: machine-config
+      register: co
+      retries: 120
+      delay: 10
+      until:
+        - co | json_query('resources[*].status.conditions[]')| sort(attribute='lastTransitionTime') | last | json_query('status')
+
+    - name: "Get Machine Config Pools status"
+      kubernetes.core.k8s_info:
+        api_version: machineconfiguration.openshift.io/v1
+        kind: MachineConfigPool
+      register: reg_mcpool_status
+      vars:
+        status_query: "resources[*].status.conditions[?type=='Updated'].status"
+        update_status: "{{ reg_mcpool_status | json_query(status_query) | flatten | unique }}"
+      until:
+        - reg_mcpool_status.resources is defined
+        - update_status == ['True']
+      retries: 180
+      delay: 10
 ...
