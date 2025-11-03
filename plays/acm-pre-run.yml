@@ -53,7 +53,7 @@
 - name: "Get registry mirror registry details"
   when:
     - dci_disconnected | default(false) | bool
-    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'hypershift', 'ztp-spoke', 'SNO', 'HostedControlPlane, 'HighAvailable']
+    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'hypershift', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
 
   block:
     - name: Check if IDMS is supported
