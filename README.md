@@ -338,6 +338,8 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_ephemeral_http_store        | False    | Boolean | True                                                           | For ABI installations, specifies whether the web server container that hosts the discovery ISO is managed by Podman or Systemd. By default, an https_store container is created for each job and destroyed after the installation completes.
 | dci_ocp_custom_resources        | False    | List    | []                                                             | Allows creating custom resources on cluster after it has been installed.
 | dci_http_store_ip_version       | False    | String  | ipv4                                                           | For ABI installations, either `ipv4` or `ipv6`. Specifies whether the web server container that hosts the discovery ISO will listen on IPv4 or IPv6.
+| dci_mirror_latest_operators     | False    | Boolean | False                                                          | Use oc-mirror plugin to mirror only the default version of the operators listed in `opm_mirror_list` + `dci_operators` variables available in the `operators_index`.
+
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)

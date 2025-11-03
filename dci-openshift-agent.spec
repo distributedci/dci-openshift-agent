@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.18.0
+Version:       1.19.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Tue Nov  4 2025 Beto Rdz <josearod@redhat.com>  1.19.EPOCH-VERS
+- Allow mirroring with oc-mirror and Imasetconfigs
+
 * Thu Sep 25 2025 Frederic Lepied <flepied@redhat.com> - 1.18.0-1.VERS
 - Include %{_datadir}/dci-openshift-agent/plays/files
 
