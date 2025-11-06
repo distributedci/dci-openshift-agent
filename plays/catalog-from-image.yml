@@ -47,7 +47,7 @@
   ansible.builtin.debug:
     var: mirror_list
 
-- name: "Mirror latest operators using oc-mirror and Imagesetconfig"
+- name: Mirror latest operators
   when:
     - dci_mirror_latest_operators | default(false) | bool
     - mirror_list is defined
