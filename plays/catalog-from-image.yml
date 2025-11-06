@@ -116,4 +116,6 @@
     cs_publisher: "Red Hat Operators"
   when:
     - dci_disconnected | default(false) | bool
+    - mirror_list is defined
+    - mirror_list | length
 ...
