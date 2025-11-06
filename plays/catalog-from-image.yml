@@ -55,7 +55,7 @@
     - dci_disconnected | default(false) | bool
   block:
 
-    - name: "Mirror latest operators using oc-mirror and Imagesetconfig"
+    - name: Mirror latest operators
       ansible.builtin.include_role:
         name: redhatci.ocp.imageset_mirroring
       vars:
@@ -66,7 +66,7 @@
         im_allow_insecure_registries: true
         im_auths_file: "{{ dci_pullsecret_file }}"
 
-    - name: "Append the Image Source file"
+    - name: Append the Image Source file
       ansible.builtin.set_fact:
         is_files: "{{ is_files | default([]) + [im_image_source_file] }}"
 

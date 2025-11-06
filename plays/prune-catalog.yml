@@ -1,7 +1,7 @@
 ---
 - name: "Loop control for pruning"
   vars:
-    index_tag: "v{{ ocp_version_maj }}.{{ ocp_version_min }}_{{ ansible_date_time.iso8601_basic }}"
+    index_tag: "v{{ ocp_major }}.{{ ocp_minor }}_{{ ansible_date_time.iso8601_basic }}"
   set_fact:
     fallback_counter: "{{ fallback_counter | int + 1 }}"
     dci_prune_index: "{{ dci_local_registry }}{{ opm_local_registry_path }}:{{ index_tag }}"
@@ -10,7 +10,7 @@
   include_role:
     name: redhatci.ocp.prune_catalog
   vars:
-    pc_source_catalog: "{{ operators_index | default('registry.redhat.io/redhat/redhat-operator-index:v' + ocp_version_maj + '.' + ocp_version_min) }}"
+    pc_source_catalog: "{{ operators_index | default('registry.redhat.io/redhat/redhat-operator-index:v' + ocp_major + '.' + ocp_minor) }}"
     pc_destination_catalog: "{{ dci_prune_index }}"
     pc_operators: "{{ mirror_list }}"
     pc_expire: "{{ dci_catalogimage_expire | default(true) }}"
