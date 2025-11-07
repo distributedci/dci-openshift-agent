@@ -76,7 +76,7 @@
         name: "{{ dci_local_registry }}/dci/lshw"
         path: "{{ build_dir.path }}"
         state: build
-        tag: "latest"
+        tag: "{{ job_id | default('latest') }}"
         force: true
         push: true
         auth_file: "{{ dci_pullsecret_file }}"
@@ -92,12 +92,20 @@
         path: "{{ build_dir.path }}"
         state: absent
 
+    - name: Cleanup local lshw image
+      containers.podman.podman_image:
+        name: "{{ dci_local_registry }}/dci/lshw"
+        tag: "{{ job_id | default('latest') }}"
+        state: absent
+
 - name: Extract hw details
   vars:
     hw_img: >-
       {{
         (dci_disconnected | default(false) | bool) |
-        ternary(dci_local_registry ~ '/dci/lshw:latest', 'registry.access.redhat.com/ubi10/ubi-minimal:latest')
+        ternary(
+          dci_local_registry ~ '/dci/lshw:' ~ job_id | default('latest'),
+          'registry.access.redhat.com/ubi10/ubi-minimal:latest')
       }}
   environment:
     preinstall: >-
