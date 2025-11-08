@@ -47,8 +47,36 @@
   ansible.builtin.debug:
     var: mirror_list
 
+- name: Mirror latest operators
+  when:
+    - dci_mirror_latest_operators | default(false) | bool
+    - mirror_list is defined
+    - mirror_list | length
+    - dci_disconnected | default(false) | bool
+  block:
+
+    - name: Mirror latest operators
+      ansible.builtin.include_role:
+        name: redhatci.ocp.imageset_mirroring
+      vars:
+        im_task: latest
+        im_source_index: "{{ operators_index | default('registry.redhat.io/redhat/redhat-operator-index:v' + ocp_version_maj + '.' + ocp_version_min) }}"
+        im_target: "{{ dci_local_registry }}"
+        im_operators: "{{ mirror_list }}"
+        im_allow_insecure_registries: true
+        im_auths_file: "{{ dci_pullsecret_file }}"
+
+    - name: Append the Image Source file
+      ansible.builtin.set_fact:
+        is_files: "{{ is_files | default([]) + [im_image_source_file] }}"
+
+    - name: "Extract catalog digest from CatalogSource manifest"
+      ansible.builtin.set_fact:
+        dci_prune_index: "{{ (lookup('file', im_catalog_source_file) | from_yaml).spec.image }}"
+
 - name: "Prune catalog and mirror the Red Hat operators"
   when:
+    - not dci_mirror_latest_operators | default(false) | bool
     - dci_disconnected | default(false) | bool
     - mirror_list is defined
     - mirror_list | length
@@ -78,15 +106,16 @@
         is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
       when: mc_is_file is defined
 
-    - name: "Create Red Hat disconnected catalogSource"
-      ansible.builtin.include_role:
-        name: redhatci.ocp.catalog_source
-      vars:
-        cs_name: "{{ opm_catalog_source_name }}"
-        cs_namespace: "{{ opm_catalog_source_namespace }}"
-        cs_image: "{{ dci_prune_index }}"
-        cs_publisher: "Red Hat Operators"
-      when:
-        - mirror_list is defined
-        - mirror_list | length
+- name: "Create Red Hat disconnected catalogSource"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.catalog_source
+  vars:
+    cs_name: "{{ opm_catalog_source_name }}"
+    cs_namespace: "{{ opm_catalog_source_namespace }}"
+    cs_image: "{{ dci_prune_index }}"
+    cs_publisher: "Red Hat Operators"
+  when:
+    - dci_disconnected | default(false) | bool
+    - mirror_list is defined
+    - mirror_list | length
 ...
