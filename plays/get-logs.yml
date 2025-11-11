@@ -3,7 +3,7 @@
   ansible.builtin.include_tasks: log-dir.yml
   when: job_logs is undefined
 
-- name: "Build and deploy hardware data collection container"
+- name: Collect hardware data
   ansible.builtin.include_tasks: get-hardware-data.yml
 
 - name: "Find the scripts directory"

@@ -4,3 +4,5 @@ FROM registry.access.redhat.com/ubi10/ubi-minimal:latest
 RUN microdnf update -y && \
     microdnf install -y lshw && \
     microdnf clean all
+
+LABEL quay.expires-after=6h
