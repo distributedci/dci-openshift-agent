@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.16.0
+Version:       1.20.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 2.7.0
+Requires: ansible-collection-redhatci-ocp >= 2.14.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -51,6 +51,7 @@ exit 0
 %{_sysconfdir}/dci-openshift-agent/dcirc.sh.dist
 
 %{_datadir}/dci-openshift-agent/plays/*.yml
+%{_datadir}/dci-openshift-agent/plays/files/*
 %{_datadir}/dci-openshift-agent/plays/scripts/*
 %{_datadir}/dci-openshift-agent/action_plugins/*
 %{_datadir}/dci-openshift-agent/utils/*
@@ -65,6 +66,18 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Wed Nov 12 2025 Manuel Rodriguez <manrodri@redhat.com> - 1.20.EPOCH-VERS
+- Version bump for setup_lvms role addition in redhatci.ocp >= 2.14
+
+* Tue Nov  4 2025 Beto Rdz <josearod@redhat.com>  1.19.EPOCH-VERS
+- Allow mirroring with oc-mirror and Imasetconfigs
+
+* Thu Sep 25 2025 Frederic Lepied <flepied@redhat.com> - 1.18.EPOCH-VERS
+- Include %{_datadir}/dci-openshift-agent/plays/files
+
+* Fri Sep 19 2025 Tony Garcia <tonyg@redhat.com> - 1.17.EPOCH-VERS
+- Version bump for redhatci.ocp.redact in redhatci.ocp >= 2.10
+
 * Fri Aug  1 2025 Tony Garcia <tonyg@redhat.com> - 1.16.EPOCH-VERS
 - New custom install step for hooks
 

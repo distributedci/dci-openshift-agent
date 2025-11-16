@@ -157,6 +157,13 @@
       loop_control:
         loop_var: is_file
 
+- name: "Check if MachineConfigPools exist in the cluster"
+  kubernetes.core.k8s_info:
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfigPool
+  register: mcp_check
+  failed_when: false
+
 - name: "Wait for updated MCP after applying ICSP"
   ansible.builtin.include_role:
     name: redhatci.ocp.check_resource
@@ -164,6 +171,9 @@
     resource_to_check: "MachineConfigPool"
     check_wait_retries: 120
     check_wait_delay: 10
+  when:
+    - mcp_check.resources is defined
+    - mcp_check.resources | length > 0
 
 - name: "Clean-up the Image Source list"
   ansible.builtin.set_fact:

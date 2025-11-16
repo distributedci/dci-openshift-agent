@@ -52,6 +52,7 @@ enable_nro: false
 enable_netobserv: false
 enable_rhoai: false
 enable_gitops: false
+enable_lvms: false
 # Lists of packages for each operator
 cnv_operator:
   kubevirt-hyperconverged:

@@ -1,0 +1,10 @@
+---
+- name: "Setup the LVM Storage Operator"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.setup_lvms
+  vars:
+    sl_dev_class_name: "{{ dci_lvms_dev_class_name }}"
+    sl_dev_selector_paths: "{{ dci_lvms_dev_selector_paths }}"
+    sl_storage_class: "{{ dci_lvms_storage_class | default('') }}"
+    sl_force_wipe_devices: "{{ dci_lvms_force_wipe_devices | default(false) }}"
+...

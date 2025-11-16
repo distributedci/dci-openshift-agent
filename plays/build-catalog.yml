@@ -2,8 +2,8 @@
 - name: "Set facts for index fallback - Try up to 3 previous versions"
   ansible.builtin.set_fact:
     fallback_counter: 0
-    ocp_major: "{{ ocp_version.split('.')[0] }}"
-    ocp_minor: "{{ ocp_version.split('.')[1] }}"
+    ocp_major: "{{ ocp_version_maj }}"
+    ocp_minor: "{{ ocp_version_min }}"
 
 - name: "Prune catalog - recursive"
   ansible.builtin.include_tasks: prune-catalog.yml

@@ -13,25 +13,26 @@
   no_log: true
 
 - name: "Add additional Registry CAs for Image Service"
-  vars:
-    install_conf: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
-    additional_ca: "{{ install_conf | json_query('additionalTrustBundle') }}"
-  ansible.builtin.include_tasks: add-additional-ca.yml
   when:
     - dci_disconnected | default(false) | bool
-    - (install_type | default('ipi')) not in ['abi']
     - dci_local_registry is defined
-    - additional_ca | default("")| length > 0
+  block:
+    - name: "Add additional Registry CAs for Image Service - Standard"
+      vars:
+        install_conf: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
+        additional_ca: "{{ install_conf | json_query('additionalTrustBundle') }}"
+      ansible.builtin.include_tasks: add-additional-ca.yml
+      when:
+        - (install_type | default('ipi')) not in ['abi']
+        - additional_ca | default("")| length > 0
 
-- name: "Add additional Registry CAs for Image Service - ABI"
-  vars:
-    additional_ca: "{{ mirror_certificate }}"
-  ansible.builtin.include_tasks: add-additional-ca.yml
-  when:
-    - dci_disconnected | default(false) | bool
-    - (install_type | default('ipi')) in ['abi']
-    - dci_local_registry is defined
-    - mirror_certificate | default("")| length > 0
+    - name: "Add additional Registry CAs for Image Service - ABI"
+      vars:
+        additional_ca: "{{ mirror_certificate }}"
+      ansible.builtin.include_tasks: add-additional-ca.yml
+      when:
+        - (install_type | default('ipi')) in ['abi']
+        - mirror_certificate | default("")| length > 0
 
 - name: "Save the install-config"
   vars:
@@ -88,9 +89,9 @@
   vars:
     install_config: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
     requested_compute: "{{ install_config | json_query('compute[? name==`worker` ].replicas') | first }}"
-    query: "resources[*].status.provisioning.state"
+    prov_query: "resources[*].status.provisioning.state"
     bmh_states: >
-      {% for s in bmh_info | json_query(query) | unique %}
+      {% for s in bmh_info | json_query(prov_query) | unique %}
         {{ s.split() | last }}
       {% endfor %}
     bmh_unique_states: "{{ bmh_states.split() | unique }}"
@@ -105,41 +106,88 @@
   when:
     - (install_type | default('ipi')) in ['ipi', 'upi']
 
-- name: "Check control plane nodes matches requested"
-  vars:
-    control_nodes_count: "{{ control_nodes.resources | length }}"
-    install_config: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
-    requested_control: "{{ install_config | json_query('controlPlane.replicas') }}"
-  kubernetes.core.k8s_info:
-    kind: Node
-    label_selectors:
-      - "node-role.kubernetes.io/master"
-  register: control_nodes
-  retries: "{{ (requested_control | int + 1) * 10 }}"
-  no_log: true
-  delay: 10
-  until:
-    - ( control_nodes_count | int ) == ( requested_control | int )
+- name: "Check cluster nodes match requested configuration"
   when:
-    - acm_cluster_type | default('') != 'hypershift'
+    - acm_cluster_type | default('') not in ['hypershift', 'sno', "HostedControlPlane"]
+  block:
+    - name: "Check control plane nodes matches requested"
+      vars:
+        control_nodes_count: "{{ control_nodes.resources | length }}"
+        install_config: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
+        requested_control: "{{ install_config | json_query('controlPlane.replicas') }}"
+      kubernetes.core.k8s_info:
+        kind: Node
+        label_selectors:
+          - "node-role.kubernetes.io/master"
+      register: control_nodes
+      retries: "{{ (requested_control | int + 1) * 10 }}"
+      no_log: true
+      delay: 10
+      until:
+        - ( control_nodes_count | int ) == ( requested_control | int )
 
-- name: "Check compute plane nodes matches requested"
-  vars:
-    compute_nodes_count: "{{ compute_nodes.resources | length }}"
-    install_config: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
-    requested_compute: "{{ install_config | json_query('compute[? name==`worker` ].replicas') | first }}"
-  kubernetes.core.k8s_info:
-    kind: Node
-    label_selectors:
-      - "node-role.kubernetes.io/worker"
-  register: compute_nodes
-  no_log: true
-  retries: "{{ (requested_compute | int + 1) * 10 }}"
-  delay: 20
-  until:
-    - ( compute_nodes_count | int ) >= ( requested_compute | int )
-  when:
-    - acm_cluster_type | default('') not in ['hypershift', 'sno']
+    - name: "Check compute plane nodes matches requested"
+      vars:
+        compute_nodes_count: "{{ compute_nodes.resources | length }}"
+        install_config: "{{ ic.resources[0].data['install-config'] | from_yaml }}"
+        requested_compute: "{{ install_config | json_query('compute[? name==`worker` ].replicas') | first }}"
+      kubernetes.core.k8s_info:
+        kind: Node
+        label_selectors:
+          - "node-role.kubernetes.io/worker"
+      register: compute_nodes
+      no_log: true
+      retries: "{{ (requested_compute | int + 1) * 10 }}"
+      delay: 20
+      until:
+        - ( compute_nodes_count | int ) >= ( requested_compute | int )
+
+    - name: "Patch clusterversion update channel"
+      vars:
+        base_version: "{{ version.split('.')[0] }}.{{ version.split('.')[1] }}"
+      kubernetes.core.k8s:
+        state: present
+        name: version
+        definition:
+          kind: ClusterVersion
+          spec:
+            channel: "{{ dci_ocp_channel | default('fast') }}-{{ base_version }}"
+      register: patch_channel_result
+      until: patch_channel_result is not failed
+      retries: 6
+      delay: 10
+
+    - name: "Disable provisioning"
+      when:
+        - dci_disable_provisioning | default(false) | bool
+      block:
+        - name: "Get provisioning"
+          kubernetes.core.k8s_info:
+            api_version: metal3.io/v1alpha1
+            kind: Provisioning
+            name: provisioning-configuration
+          register: provisioning_cr
+
+        - name: Disable provisioning
+          kubernetes.core.k8s:
+            definition:
+              apiVersion: metal3.io/v1alpha1
+              kind: Provisioning
+              metadata:
+                name: provisioning-configuration
+              spec:
+                provisioningNetwork: Disabled
+          when:
+            - provisioning_cr.resources | length
+
+    - name: "Setup additional credentials to OCP"
+      vars:
+        oau_dir: "{{ dci_cluster_configs_dir }}"
+        oau_users:
+          - "admin:admin"
+          - "nonadmin:none"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.ocp_add_users
 
 - name: "Create a DCI component for the rhcos_kernel"
   ignore_errors: true
@@ -175,23 +223,6 @@
         - "'component' in kernel_component"
         - "'id' in kernel_component.component"
 
-- name: "Patch clusterversion update channel"
-  vars:
-    base_version: "{{ version.split('.')[0] }}.{{ version.split('.')[1] }}"
-  kubernetes.core.k8s:
-    state: present
-    name: version
-    definition:
-      kind: ClusterVersion
-      spec:
-        channel: "{{ dci_ocp_channel | default('fast') }}-{{ base_version }}"
-  register: patch_channel_result
-  until: patch_channel_result is not failed
-  retries: 6
-  delay: 10
-  when:
-    - acm_cluster_type | default('') != 'hypershift'
-
 - name: After install for IPI/UPI/SNO/ABI
   when:
     - (install_type | default('ipi')) in ['ipi', 'upi', 'sno', 'abi']
@@ -207,54 +238,21 @@
       vars:
         hosts_list: "{{ all_hosts | list | unique }}"
 
-- name: "Disable provisioning"
-  when:
-    - dci_disable_provisioning | default(false) | bool
-    - acm_cluster_type | default('') != 'hypershift'
-  block:
-    - name: "Get provisioning"
-      kubernetes.core.k8s_info:
-        api_version: metal3.io/v1alpha1
-        kind: Provisioning
-        name: provisioning-configuration
-      register: provisioning_cr
-
-    - name: Disable provisioning
-      kubernetes.core.k8s:
-        definition:
-          apiVersion: metal3.io/v1alpha1
-          kind: Provisioning
-          metadata:
-            name: provisioning-configuration
-          spec:
-            provisioningNetwork: Disabled
-      when:
-        - provisioning_cr.resources | length
-
-- name: "Setup additional credentials to OCP"
-  vars:
-    oau_dir: "{{ dci_cluster_configs_dir }}"
-    oau_users:
-      - "admin:admin"
-      - "nonadmin:none"
-  ansible.builtin.include_role:
-    name: redhatci.ocp.ocp_add_users
-
-- name: "Upload additional credentials to DCI Control Server"
-  tags:
-    - dci
-  environment:
-    DCI_CLIENT_ID: "{{ dci_client_id }}"
-    DCI_API_SECRET: "{{ dci_api_secret }}"
-    DCI_CS_URL: "{{ dci_cs_url }}"
-  dci_file:
-    path: "{{ item }}"
-    name: "{{ item | basename }}"
-    job_id: "{{ job_id }}"
-    mime: "text/plain"
-  loop:
-    - "{{ dci_cluster_configs_dir }}/ocp_creds.txt"
-  delegate_to: localhost
+    - name: "Upload additional credentials to DCI Control Server"
+      tags:
+        - dci
+      environment:
+        DCI_CLIENT_ID: "{{ dci_client_id }}"
+        DCI_API_SECRET: "{{ dci_api_secret }}"
+        DCI_CS_URL: "{{ dci_cs_url }}"
+      dci_file:
+        path: "{{ item }}"
+        name: "{{ item | basename }}"
+        job_id: "{{ job_id }}"
+        mime: "text/plain"
+      loop:
+        - "{{ dci_cluster_configs_dir }}/ocp_creds.txt"
+      delegate_to: localhost
 
 - name: Set override fact for ACM hubs
   ansible.builtin.set_fact:
@@ -330,5 +328,4 @@
     - ocs_install_type is defined
     - ocs_install_type == 'internal'
     - local_storage_devices | default([]) | length
-
 ...
