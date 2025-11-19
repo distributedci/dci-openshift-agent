@@ -546,7 +546,7 @@ The opm_mirror_list variable controls the operators that are mirrored when dci_d
 
 Example 1:
 
-Definition of three operators. Two operators specify the channels, while the last compliance-operator includes all the channels.
+Definition of three operators. Two operators specify the channels, while the last compliance-operator includes all the channels. SRIOV FEC operator will be taken from `certified-operator-index`
 
 ```yaml
 opm_mirror_list:
@@ -555,6 +555,8 @@ opm_mirror_list:
   cluster-logging:
     channel: stable-5.8
   compliance-operator:
+  sriov-fec:
+    catalog: "registry.redhat.io/redhat/certified-operator-index:<tag>"
 ```
 
 Example 2:
