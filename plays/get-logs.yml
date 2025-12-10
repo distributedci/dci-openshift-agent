@@ -3,9 +3,6 @@
   ansible.builtin.include_tasks: log-dir.yml
   when: job_logs is undefined
 
-- name: Collect hardware data
-  ansible.builtin.include_tasks: get-hardware-data.yml
-
 - name: "Find the scripts directory"
   ansible.builtin.find:
     paths:
@@ -15,6 +12,9 @@
     patterns: "scripts"
     recurse: true
   register: scripts_dir
+
+- name: Collect hardware data
+  ansible.builtin.include_tasks: get-hardware-data.yml
 
 - name: "Get logs from IPI/UPI deployment"
   vars:
