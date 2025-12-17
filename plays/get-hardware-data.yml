@@ -1,4 +1,5 @@
 ---
+
 - name: Gather cluster hardware/kernel data (best-effort, errors ignored)
   ignore_errors: true
   block:
@@ -146,3 +147,15 @@
         dest: "{{ job_logs.path }}/dci-extra.hardware.{{ item.node_name }}.json"
         mode: '0644'
       loop: "{{ hardware_info.results | default([]) }}"
+
+    - name: Normalize hardware data
+      ansible.builtin.shell:
+        cmd: |
+          set -xe
+          mkdir -p "{{ job_logs.path }}/normalized"
+          python3 {{ scripts_dir.files[0].path }}/normalize-hardware-data.py --copy-originals -o {{ job_logs.path }}/normalized "{{ job_logs.path }}/dci-extra.hardware".*.json
+          rm -f "{{ job_logs.path }}/dci-extra.hardware".*.json
+          mv "{{ job_logs.path }}/normalized/"* "{{ job_logs.path }}/"
+          rmdir "{{ job_logs.path }}/normalized"
+
+...
