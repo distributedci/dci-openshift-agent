@@ -71,8 +71,8 @@
 
 - name: "Setup GitOps"
   vars:
-    sg_ztp_tag: "{{ dci_gitops_ztp_tag | default('v4.19.0') }}"
-    sg_mce_tag: "{{ dci_gitops_mce_tag | default('v2.13') }}"
+    sg_ztp_tag: "{{ dci_gitops_ztp_tag | default('v4.20.0') }}"
+    sg_mce_tag: "{{ dci_gitops_mce_tag | default('v2.15.0') }}"
     sg_local_registry: "{{ dci_local_registry }}"
     sg_pullsecret_file: "{{ dci_pullsecret_file | default('') }}"
   ansible.builtin.include_role:
