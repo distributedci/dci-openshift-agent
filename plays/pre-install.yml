@@ -134,6 +134,7 @@
     mor_write_custom_config: "{{ dci_disconnected | default(False) | bool }}"
     mor_build: "{{ build }}"
     mor_oc: "{{ oc_tool_path }}"
+    mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
 
 - name: Append mirrors to trust bundle
   when:

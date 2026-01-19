@@ -122,6 +122,7 @@
         mor_mirror_container_images: "{{ dci_disconnected | default(False) | bool }}"
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
+        mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
 
     - name: Convert Image Source to registries.conf format
       vars:
@@ -172,6 +173,7 @@
         mor_write_custom_config: false
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
+        mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
 
     - name: "Set facts for install via ACM - connected"
       ansible.builtin.set_fact:
