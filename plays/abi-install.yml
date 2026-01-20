@@ -151,11 +151,30 @@
         - version is version('4.16', '>=')
         - dci_pao_on_install | default(true) | bool
 
+    - name: Extract image source content from mirroring outputs
+      vars:
+        img_src_paths:
+          - "{{ provision_cache_store }}/{{ version }}/imagesource.yaml"
+          - "{{ provision_cache_store }}/{{ version }}/imagecontentsourcepolicy.yaml"
+        img_src_found: "{{ lookup('first_found', img_src_paths, errors='ignore') }}"
+        img_src_content: "{{ lookup('file', img_src_found) | from_yaml }}"
+        img_src_mirrors_icsp: "{{ img_src_content.spec.repositoryDigestMirrors | default([]) }}"
+        img_src_mirrors_idms: "{{ img_src_content.spec.imageDigestMirrors | default([]) }}"
+        img_src_mirrors: "{{ img_src_mirrors_icsp if img_src_mirrors_icsp | length > 0 else img_src_mirrors_idms }}"
+      ansible.builtin.set_fact:
+        mirroring_image_sources: |
+          imageContentSources:
+          {{ img_src_mirrors | to_yaml | indent(2, first=true) }}
+      when:
+        - dci_disconnected | default(false) | bool
+        - img_src_found | length > 0
+
     - name: Generate_manifests
       vars:
         pull_secret: "{{ dci_pullsecret }}"
         repo_root_path: "{{ dci_cluster_configs_dir }}"
         manifest_templates: "{{ dci_extra_manifests }}"
+        gm_image_sources: "{{ mirroring_image_sources | default('') }}"
       ansible.builtin.include_role:
         name: redhatci.ocp.generate_manifests
 
