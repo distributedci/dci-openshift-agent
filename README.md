@@ -818,7 +818,7 @@ A DCI job produces a set of relevant configuration files, logs, reports, and tes
 | virtual-machines.txt                            | Files   | List of VMs and VMIs allocated on the host cluster                                        |
 | pvc.txt                                         | Files   | List of allocated Persistent Volume Claims                                                |
 
- [^1]: Only available in `{{ dci_cluster_configs_dir }}`, not updated to DCI control server
+ [^1]: Only available in `{{ dci_cluster_configs_dir }}`, not uploaded to DCI control server
 
 You may find extra files for the case of Assisted jobs:
 
