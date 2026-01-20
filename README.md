@@ -800,12 +800,9 @@ A DCI job produces a set of relevant configuration files, logs, reports, and tes
 | dci-openshift-agent-\<timestamp\>               | Files   | `dci-openshift-agent` tests report as JUnit format                                        |
 | clusterversion.txt                              | Files   | Report of the OCP version applied to the cluster                                          |
 | events.txt                                      | Files   | Output of the `oc get events -A` command                                                  |
-| kubeadmin-password                              | Files   | Password assigned to the `kubeadmin` user                                                 |
-| kubeconfig                                      | Files   | Kubeconfig file to interact with the deployed OCP cluster                                 |
 | nodes.txt                                       | Files   | Output of the `oc get nodes` command                                                      |
 | pods.txt                                        | Files   | Output of the `oc get pods -A` command                                                    |
 | must_gather.tar.gz                              | Files   | Cluster state information. Useful for support cases or troubleshooting with [O Must Gather tool](https://github.com/kxr/o-must-gather) |
-| ocp_creds.txt                                   | Files   | A set of admin and non-admin credentials attached to an httpasswd identity provider       |
 | openshift_install.log                           | Files   | OpenShift installation log file                                                           |
 | version.txt                                     | Files   | Report of the OCP client and server version used during the deployment                   |
 | diff-jobs.txt                                   | Files   | A report that compares the `current` and `previous` job's components of the same type     |
