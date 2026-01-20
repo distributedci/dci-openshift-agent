@@ -60,6 +60,12 @@
           ansible.builtin.set_fact:
             custom_component: "{{ lookup('file', dci_custom_component_file) | from_json }}"
 
+        - name: Set extra flags for custom release mirroring
+          ansible.builtin.set_fact:
+            dci_oc_mirror_extra_flags: >-
+              {{ (dci_oc_mirror_extra_flags + ' ') if dci_oc_mirror_extra_flags is defined else '' }}
+              {{ '--skip-verification=true' }}
+
     - name: Set the job id
       ansible.builtin.set_fact:
         job_id: '{{ job_info.job.id }}'

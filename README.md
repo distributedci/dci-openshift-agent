@@ -268,6 +268,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_ocp_channel                 | False    | String  | fast                                                           | [Update channel](https://docs.openshift.com/container-platform/4.14/updating/understanding_updates/understanding-update-channels-release.html#understanding-update-channels_understanding-update-channels-releases) to use in the cluster, see `upgrade_eus` variable for EUS channel.
 | dci_custom_component            | False    | Boolean | False                                                          | Used to enable the use of custom OCP builds.
 | dci_custom_component_file       | False    | String  | Undefined                                                      | A file that contains the custom OCP information in json. See [custom builds](#custom-builds) for details.
+| dci_oc_mirror_extra_flags       | False    | String  | --skip-verification=true                                       | Extra flags to pass to the `oc adm catalog mirror` command when mirroring OCP releases.
 | dci_disconnected                | False    | Boolean | False                                                          | Signals that the OCP agent will run in disconnected.
 | dci_preserve_default_catalogs   | False    | Boolean | False                                                          | When set to true, preserves the default catalog sources in disconnected deployments.
 | dci_force_mirroring             | False    | Boolean | False                                                          | Force the copy of the OCP release images to the local_registry_host.
@@ -347,6 +348,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_ocp_custom_resources        | False    | List    | []                                                             | Allows creating custom resources on cluster after it has been installed.
 | dci_http_store_ip_version       | False    | String  | ipv4                                                           | For ABI installations, either `ipv4` or `ipv6`. Specifies whether the web server container that hosts the discovery ISO will listen on IPv4 or IPv6.
 | dci_mirror_latest_operators     | False    | Boolean | False                                                          | Use oc-mirror plugin to mirror only the default version of the operators listed in `opm_mirror_list` + `dci_operators` variables available in the `operators_index`.
+
 
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
