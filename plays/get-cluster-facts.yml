@@ -1,7 +1,7 @@
 ---
 - name: "Get list of compute and control plane nodes"
   kubernetes.core.k8s_info:
-    api: v1
+    api_version: v1
     kind: Node
     label_selectors:
       - "{{ item }}"
@@ -12,7 +12,7 @@
 
 - name: "Get cluster version"
   kubernetes.core.k8s_info:
-    api: config.openshift.io/v1
+    api_version: config.openshift.io/v1
     kind: ClusterVersion
     name: version
   register: cluster_version
