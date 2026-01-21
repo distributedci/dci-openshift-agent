@@ -26,7 +26,7 @@
   vars:
     check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | length + 1 ) }}"
   kubernetes.core.k8s_info:
-    api: machineconfiguration.openshift.io/v1
+    api_version: machineconfiguration.openshift.io/v1
     kind: KubeletConfig
     name: "performance-{{ profile_state.result.metadata.name }}"
     namespace: default
@@ -64,6 +64,7 @@
 - name: Reset maxUnavailable count to default value 1
   kubernetes.core.k8s:
     definition:
+      api_version: machineconfiguration.openshift.io/v1
       kind: MachineConfigPool
       metadata:
         name: worker
