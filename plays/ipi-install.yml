@@ -27,11 +27,6 @@
         state: absent
       loop: "{{ old_images_to_delete.files }}"
 
-- name: Populate clusterosimage
-  ansible.builtin.set_fact:
-    clusterosimage: "{{ hostvars.jumphost.clusterosimage }}"
-  when: hostvars.jumphost.clusterosimage is defined
-
 - name: Populate bootstraposimage
   ansible.builtin.set_fact:
     bootstraposimage: "{{ hostvars.jumphost.bootstraposimage }}"
