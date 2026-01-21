@@ -11,6 +11,7 @@
 
 - name: Check if the SRIOV CRDs are present
   kubernetes.core.k8s_info:
+    api_version: apiextensions.k8s.io/v1
     kind: CustomResourceDefinition
     name: "sriovnetworks.sriovnetwork.openshift.io"
   register: sriov_crd
@@ -34,7 +35,7 @@
 
     - name: Get list of SRIOV policies
       kubernetes.core.k8s_info:
-        api: sriovnetwork.openshift.io/v1
+        api_version: sriovnetwork.openshift.io/v1
         kind: SriovNetworkNodePolicy
         namespace: openshift-sriov-network-operator
       register: sriov_policies

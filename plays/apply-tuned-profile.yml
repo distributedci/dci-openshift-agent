@@ -11,7 +11,7 @@
   vars:
     check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | length + 1 ) }}"
   kubernetes.core.k8s_info:
-    api: tuned.openshift.io/v1
+    api_version: tuned.openshift.io/v1
     kind: Tuned
     name: "{{ tuned_state.result.spec.profile[0].name }}"
     namespace: openshift-cluster-node-tuning-operator
