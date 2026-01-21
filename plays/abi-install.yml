@@ -163,7 +163,6 @@
         img_src_mirrors: "{{ img_src_mirrors_icsp if img_src_mirrors_icsp | length > 0 else img_src_mirrors_idms }}"
       ansible.builtin.set_fact:
         mirroring_image_sources: |
-          imageContentSources:
           {{ img_src_mirrors | to_yaml | indent(2, first=true) }}
       when:
         - dci_disconnected | default(false) | bool
