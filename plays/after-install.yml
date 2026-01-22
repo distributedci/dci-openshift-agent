@@ -79,8 +79,8 @@
     - clusteroperator_info.resources is defined
     - clusteroperator_info.resources | length > 0
     - co_available_count == co_count
-  retries: 15
-  delay: 10
+  retries: 60
+  delay: 20
   no_log: true
 
 - name: "Check all nodes have been provisioned"
