@@ -33,9 +33,30 @@ ssh_ops="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel
 prov_cmd="timeout -v 20m ssh ${ssh_ops} ${user_at_provisioner}"
 
 # Copy openshift install log_dir and rendered install config
-scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/.openshift_install.log "${log_dir}/openshift_install.log"
-scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/install-config.yaml.bkup "${log_dir}/install-config-yaml.txt"
-scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/.openshift_install_state.json "${log_dir}/openshift_install_state.json"
+scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/.openshift_install.log "${log_dir}/openshift_install.log.orig"
+scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/install-config.yaml.bkup "${log_dir}/install-config-yaml.txt.orig"
+scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/.openshift_install_state.json "${log_dir}/openshift_install_state.json.orig"
+
+# Redact secrets
+keys='["username", "Username", "password", "Password"]'
+set +x
+# openshift_install.log
+sed -e 's,^\(.*password:\s*\).*$,\1REDACTED",' \
+    "${log_dir}/openshift_install.log.orig" > "${log_dir}/openshift_install.log"
+
+## install-config.yaml
+sed -e 's,^\(\s*username:\s*\).*$,\1REDACTED,' \
+    -e 's,^\(\s*password:\s*\).*$,\1REDACTED,' \
+    "${log_dir}/install-config-yaml.txt.orig" > "${log_dir}/install-config-yaml.txt"
+
+## openshift_install_state.json
+jq --argjson keys "$keys" \
+  'walk(if type == "object" then with_entries(if .key | IN($keys[]) then .value = "REDACTED" else . end) else . end) |
+   walk(if type == "object" and .Filename == "auth/kubeadmin-password" then .Data = "REDACTED" else . end)' \
+  "${log_dir}/openshift_install_state.json.orig" > "${log_dir}/openshift_install_state.json"
+
+sed -i -E 's/ (password|username): [^\\]*(\\n)/ \1: REDACTED\2/g' "${log_dir}/openshift_install_state.json"
+set -x
 
 # Get all possible IPs used by bootstrap VM
 ips=()
