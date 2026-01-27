@@ -136,6 +136,12 @@
     mor_oc: "{{ oc_tool_path }}"
     mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
 
+- name: "Mirror release images for custom OCP component"
+  ansible.builtin.include_tasks: mirror-release-images.yml
+  when:
+    - dci_disconnected | default(false) | bool
+    - dci_custom_component | default(false) | bool
+
 - name: Append mirrors to trust bundle
   when:
     - dci_disconnected | default(false) | bool
