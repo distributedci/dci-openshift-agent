@@ -63,8 +63,11 @@
 
 - name: Reset maxUnavailable count to default value 1
   kubernetes.core.k8s:
+    state: present
+    merge_type: ['merge']
+    api_version: machineconfiguration.openshift.io/v1
+    kind: MachineConfigPool
     definition:
-      api_version: machineconfiguration.openshift.io/v1
       kind: MachineConfigPool
       metadata:
         name: worker
