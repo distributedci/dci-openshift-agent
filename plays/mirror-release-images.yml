@@ -1,0 +1,33 @@
+---
+- name: Read release.txt file
+  ansible.builtin.slurp:
+    src: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}/{{ version }}/release.txt"
+  register: release_file
+
+- name: Filter release images with digest
+  ansible.builtin.set_fact:
+    release_images: "{{ release_images | default([]) + [item.split()[1]] }}"
+  loop: "{{ (release_file.content | b64decode | string).split('\n') }}"
+  when:
+    - item.split() | length == 2
+    - item.split()[1] is match('^[a-zA-Z0-9._:-]+(/[a-zA-Z0-9._-]+)+@sha256:[a-f0-9]+')
+
+- name: "Mirror custom release images"
+  vars:
+    dst_image_path:  >-
+      {{
+        hostvars[groups['registry_host'][0]]['local_repo']
+        if groups.get('registry_host') and groups['registry_host'] and
+          'local_repo' in hostvars[groups['registry_host'][0]]
+        else 'ocp-' + (version.split('.')[:2] | join('.')) + '/' + version
+      }}
+    image_path: "{{ item.split('@')[0].split('/', 1)[1] }}"
+    image_trimmed_digest: "{{ item.split('sha256:')[1][:10] }}"
+    dest_image: "{{ dci_local_registry }}/{{ dst_image_path }}:{{ image_trimmed_digest }}"
+    auth_opt: "{{ '--authfile ' + dci_pullsecret_file if dci_pullsecret_file is defined else '' }}"
+  ansible.builtin.shell: |
+      skopeo copy {{ auth_opt }} \
+        docker://{{ item }} \
+        docker://{{ dest_image }} \
+        --preserve-digests --all --src-tls-verify=false --dest-tls-verify=false
+  loop: "{{ release_images | default([]) }}"
