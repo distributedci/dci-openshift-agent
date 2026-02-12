@@ -14,7 +14,7 @@
 
 - name: "Mirror custom release images"
   vars:
-    dst_image_path:  >-
+    dst_image_path: >-
       {{
         hostvars[groups['registry_host'][0]]['local_repo']
         if groups.get('registry_host') and groups['registry_host'] and

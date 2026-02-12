@@ -14,7 +14,16 @@
   register: scripts_dir
 
 - name: Collect hardware data
-  ansible.builtin.include_tasks: get-hardware-data.yml
+  ansible.builtin.include_role:
+    name: redhatci.ocp.node_info
+  vars:
+    ni_oc_tool_path: "{{ oc_tool_path }}"
+    ni_job_logs_path: "{{ job_logs.path }}"
+    ni_disconnected: "{{ dci_disconnected | default(false) }}"
+    ni_local_registry: "{{ dci_local_registry }}"
+    ni_local_img_path: "{{ dci_hardware_img_path | default('/dci/lshw') }}"
+    ni_pullsecret_file: "{{ dci_pullsecret_file | default('') }}"
+    ni_tag: "{{ dci_hardware_tag | default('latest') }}"
   when:
     - dci_collect_hardware | default(true) | bool
 
@@ -146,27 +155,27 @@
 - name: Find deployment logs (text)
   ansible.builtin.find:
     paths: "{{ job_logs.path }}"
-    patterns: "*.log,*.txt,*.html,*.yaml,*.trace,*.pcap,*.json"
+    patterns: "*.log,*.txt,*.html,*.yaml,*.trace,*.pcap"
   register: logs_matched
 
 - name: "Upload text logs"
   vars:
     mime_type: "text/plain"
   ansible.builtin.include_tasks: upload-log.yml
-  when: not (item.path | regex_search(".*_sig-storage.*|dci-extra\..*\.json$"))
+  when: not (item.path | regex_search(".*_sig-storage.*"))
   with_items: "{{ logs_matched.files }}"
 
-- name: Find DCI analytics files
+- name: Find JSON files
   ansible.builtin.find:
     paths: "{{ job_logs.path }}"
-    patterns: "dci-extra.*.json"
-  register: dci_analytics_matched
+    patterns: "*.json"
+  register: json_matched
 
-- name: "Upload DCI analytics files"
+- name: "Upload JSON files"
   vars:
-    mime_type: "application/dci-analytics+json"
+    mime_type: "application/json"
   ansible.builtin.include_tasks: upload-log.yml
-  with_items: "{{ dci_analytics_matched.files }}"
+  with_items: "{{ json_matched.files }}"
 
 - name: Find deployment logs (compressed)
   ansible.builtin.find:
