@@ -18,9 +18,11 @@
         path: "{{ dci_local_log_dir }}/{{ hostvars.localhost.job_id }}"
         state: directory
         mode: "0775"
+      delegate_to: jumphost
 
     - name: Copy locally ({{ item.path | basename }})
       ansible.builtin.copy:
         src: "{{ item.path }}"
         dest: "{{ dci_local_log_dir }}/{{ hostvars.localhost.job_id }}/"
         mode: "0640"
+      delegate_to: jumphost
