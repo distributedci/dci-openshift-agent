@@ -100,7 +100,7 @@
         - dci_ephemeral_http_store | default (true) | bool
 
     - name: Fail configuring the http_store
-      fail:
+      ansible.builtin.fail:
         msg: "http_store pod failed, cannot continue"
 
 - name: "ABI install"
