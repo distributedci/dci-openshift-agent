@@ -1,0 +1,51 @@
+---
+- name: Set directory path for disable signatures validation manifests
+  set_fact:
+    signatures_manifests: "{{ customize_extramanifests_path | default ('/tmp/signatures_manifests/' + job_id | default('') ) }}"
+
+- name: Create directory for disable signatures validation manifests
+  ansible.builtin.file:
+    path: "{{ signatures_manifests }}"
+    state: directory
+    mode: '0755'
+    recurse: true
+
+- name: Disable signatures validation (master and worker)
+  ansible.builtin.copy:
+    content: |
+      apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      metadata:
+        labels:
+          machineconfiguration.openshift.io/role: "{{ item.role }}"
+        name: "99-{{ item.role }}-insecure-policy"
+      spec:
+        config:
+          ignition:
+            version: 3.2.0
+          storage:
+            files:
+            - contents:
+                source: data:text/plain;base64,ewogICAgImRlZmF1bHQiOiBbCiAgICAgICAgewogICAgICAgICAgICAidHlwZSI6ICJpbnNlY3VyZUFjY2VwdEFueXRoaW5nIgogICAgICAgIH0KICAgIF0sCiAgICAidHJhbnNwb3J0cyI6CiAgICAgICAgewogICAgICAgICAgICAiZG9ja2VyLWRhZW1vbiI6CiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIiI6IFt7InR5cGUiOiJpbnNlY3VyZUFjY2VwdEFueXRoaW5nIn1dCiAgICAgICAgICAgICAgICB9CiAgICAgICAgfQp9Cgo=
+              mode: 420
+              overwrite: true
+              path: /etc/containers/policy.json
+    dest: "{{ signatures_manifests }}/99-{{ item.role }}-insecure-policy.yaml"
+    mode: "0644"
+  loop:
+    - { role: master }
+    - { role: worker }
+
+- name: Prepare manifest entries
+  set_fact:
+    disable_signatures_validation_manifests: >-
+      {{
+        disable_signatures_validation_manifests | default([]) +
+        [
+          {'file': signatures_manifests ~ '/99-master-insecure-policy.yaml'},
+          {'file': signatures_manifests ~ '/99-worker-insecure-policy.yaml'}
+        ]
+      }}
+  when:
+    - install_type | default ('ipi') == 'abi'
+...

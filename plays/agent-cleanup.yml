@@ -62,6 +62,16 @@
         - aw_dynamic_port is defined
         - aw_zone is defined
 
+- name: "Remove signatures validation manifest files"
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - "{{ signatures_manifests }}/99-master-insecure-policy.yaml"
+    - "{{ signatures_manifests }}/99-worker-insecure-policy.yaml"
+  when:
+    - signatures_manifests is defined
+
 - name: "Delete logs directory"
   ansible.builtin.file:
     path: "{{ job_logs.path }}"

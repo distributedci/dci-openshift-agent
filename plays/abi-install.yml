@@ -140,6 +140,12 @@
       when:
         - hostvars.jumphost.core_password_manifests | default([]) | length > 0
 
+    - name: Add disable signatures validation manifests to dci_extra_manifests
+      ansible.builtin.set_fact:
+        dci_extra_manifests: "{{ dci_extra_manifests + hostvars.jumphost.disable_signatures_validation_manifests }}"
+      when:
+        - hostvars.jumphost.disable_signatures_validation_manifests | length > 0
+
     - name: Add performance profile to extra manifests in ABI
       vars:
         manifest_file:
