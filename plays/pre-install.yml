@@ -140,7 +140,6 @@
   ansible.builtin.include_tasks: mirror-release-images.yml
   when:
     - dci_disconnected | default(false) | bool
-    - dci_custom_component | default(false) | bool
 
 - name: Append mirrors to trust bundle
   when:
