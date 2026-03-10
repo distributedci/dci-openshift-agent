@@ -66,7 +66,7 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
-* Tue March 10 2026 Beto <josearod@redhat.com> 1.25.EPOCH-1.VERS
+* Tue Mar 10 2026 Beto <josearod@redhat.com> 1.25.EPOCH-1.VERS
 - Disable image signatures validation in non-GA versions
 
 * Fri Feb  6 2026 Frederic Lepied <flepied@redhat.com> 1.24.EPOCH-1.VERS
