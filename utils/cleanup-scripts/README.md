@@ -29,3 +29,9 @@ This script requires as parameter the dci-credentials in order to verify the sta
 ```ShellSession
 ./cleanup.py -r <provision_cache_store>
 ```
+
+`clean_stale_dci_containers.sh`: Cleans stale running dci-pipeline containers (image `quay.io/distributedci/dci-pipeline:latest`) that have been up for more than 24 hours. Useful to avoid long-lived pipeline containers accumulating on the host. Supports `--dry-run` to list what would be stopped without actually stopping containers.
+
+```ShellSession
+./clean_stale_dci_containers.sh [--dry-run]
+```
