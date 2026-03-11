@@ -776,6 +776,28 @@
           ansible.builtin.include_tasks: plays/check-cluster-health.yml
       rescue: *teardown_failure
 
+# Step 6 : "Validate tests" step
+- name: "Check test results step"
+  hosts: localhost
+  tags:
+    - running
+    - testing
+    - validate-tests
+  environment:
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: "{{ no_proxy_list }}"
+    KUBECONFIG: "{{ kubeconfig_path }}"
+    PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
+  tasks:
+    - name: Test results
+      block:
+
+        - name: "Check test results"
+          ansible.builtin.include_tasks: plays/check-test-results.yml
+
+      rescue: *teardown_failure
+
     - name: Post-run
       dci_job:
         id: "{{ job_id }}"
@@ -783,7 +805,7 @@
       delegate_to: localhost
       tags: [dci]
 
-# Step 6 : post run
+# Step 7 : post run
 - name: Launch post run
   hosts: jumphost
   tags:
@@ -817,7 +839,7 @@
       delegate_to: localhost
       tags: [dci]
 
-# Step 7 : state "success"
+# Step 8 : state "success"
 - name: 'Success'
   hosts: jumphost
   tags:
