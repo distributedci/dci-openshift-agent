@@ -1635,3 +1635,28 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/rhceph-dev/rhceph-9-rhel9
     source: registry.redhat.io/rhceph/rhceph-9-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-pipelines/pipelines-rhel9-operator
+    source: registry.redhat.io/openshift-pipelines/pipelines-rhel9-operator
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-pipelines/pipelines-operator-webhook-rhel9
+    source: registry.redhat.io/openshift-pipelines/pipelines-operator-webhook-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/advanced-cluster-security/rhacs-operator-bundle
+    source: quay.io/prega/test/advanced-cluster-security/rhacs-operator-bundle
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/advanced-cluster-security/rhacs-rhel8-operator
+    source: registry.redhat.io/advanced-cluster-security/rhacs-rhel8-operator
+---
+apiVersion: config.openshift.io/v1
+kind: ImageTagMirrorSet
+metadata:
+  name: prega-itms
+spec:
+  imageTagMirrors:
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-logging/cluster-logging-operator-bundle
+    source: quay.io/prega/test/openshift-logging/cluster-logging-operator-bundle
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-logging/loki-operator-bundle
+    source: quay.io/prega/test/openshift-logging/loki-operator-bundle
