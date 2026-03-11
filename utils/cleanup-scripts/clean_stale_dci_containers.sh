@@ -14,7 +14,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-# Kill dci-pipeline containers that have been up for more than 24 hours
+# Clean stale dci-pipeline containers that have been up for more than 24 hours
 
 set -e
 
