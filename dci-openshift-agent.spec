@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.25.0
+Version:       1.26.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 2.20.0
+Requires: ansible-collection-redhatci-ocp >= 2.21.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Thu Mar 12 2026 Beto <josearod@redhat.com> 1.26.EPOCH-1.VERS
+- Bump for changes in mirror_ocp_role to support oc-mirror
+
 * Tue Mar 10 2026 Beto <josearod@redhat.com> 1.25.EPOCH-1.VERS
 - Disable image signatures validation in non-GA versions
 
