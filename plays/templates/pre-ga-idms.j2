@@ -1647,6 +1647,30 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/advanced-cluster-security/rhacs-rhel8-operator
     source: registry.redhat.io/advanced-cluster-security/rhacs-rhel8-operator
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/gitops-rhel9-operator
+    source: registry.redhat.io/openshift-gitops-1/gitops-rhel9-operator
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/gitops-rhel9
+    source: registry.redhat.io/openshift-gitops-1/gitops-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/console-plugin-rhel9
+    source: registry.redhat.io/openshift-gitops-1/console-plugin-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/argocd-rhel9
+    source: registry.redhat.io/openshift-gitops-1/argocd-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/dex-rhel9
+    source: registry.redhat.io/openshift-gitops-1/dex-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/cluster-observability-operator/coo-prometheus-rhel8-operator
+    source: registry.redhat.io/cluster-observability-operator/coo-prometheus-rhel8-operator
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/cluster-observability-operator/coo-admission-webhook-rhel8
+    source: registry.redhat.io/cluster-observability-operator/coo-admission-webhook-rhel8
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/cluster-observability-operator/cluster-observability-rhel8-operator
+    source: registry.redhat.io/cluster-observability-operator/cluster-observability-rhel8-operator
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
