@@ -217,7 +217,7 @@
         loop_var: node_image
 
     - name: "Attach node image component to the job"
-      dci_job_component:
+      ansible.legacy.dci_job_component:
         component_id: "{{ item.component.id }}"
         job_id: "{{ job_id }}"
       register: job_node_image_result
