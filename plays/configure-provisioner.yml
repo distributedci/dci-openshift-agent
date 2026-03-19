@@ -1,4 +1,11 @@
 ---
+- name: Get provisioner SSH identity
+  delegate_to: "{{ groups['provisioner'][0] }}"
+  ansible.builtin.fetch:
+    src: "~{{ hostvars[groups['provisioner'][0]].ansible_user }}/.ssh/id_rsa"
+    dest: "~/.ssh/{{ cluster }}-provisioner_rsa"
+    flat: true
+
 - name: Find all of the files inside this directory
   ansible.builtin.find:
     paths: "/etc/yum.repos.d/"
