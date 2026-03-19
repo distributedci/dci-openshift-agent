@@ -205,7 +205,7 @@
     kernel_versions: "{{ _node_list | map(attribute='status') | map(attribute='nodeInfo') | map(attribute='kernelVersion') | unique | list }}"
   block:
     - name: "Create component with the node image version"
-      ansible.legacy.dci_component:
+      dci_component:
         display_name: "{{ node_image }}"
         version: "{{ node_image | regex_search('(\\d+\\.\\d+\\.\\d+-\\d+)') }}"
         team_id: "{{ job_info['job']['team_id'] }}"
@@ -218,7 +218,7 @@
         loop_var: node_image
 
     - name: "Attach node image component to the job"
-      ansible.legacy.dci_job_component:
+      dci_job_component:
         component_id: "{{ item.component.id }}"
         job_id: "{{ job_id }}"
       register: job_node_image_result
@@ -231,7 +231,7 @@
         - item.component.id is defined
 
     - name: "Create component with the kernel version"
-      ansible.legacy.dci_component:
+      dci_component:
         display_name: "rhcos_kernel {{ kernel_version }}"
         version: "{{ kernel_version }}"
         team_id: "{{ job_info['job']['team_id'] }}"
@@ -244,7 +244,7 @@
         loop_var: kernel_version
 
     - name: "Attach kernel component to the job"
-      ansible.legacy.dci_job_component:
+      dci_job_component:
         component_id: "{{ item.component.id }}"
         job_id: "{{ job_id }}"
       register: job_kernel_result
