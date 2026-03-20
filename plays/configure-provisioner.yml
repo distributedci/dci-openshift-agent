@@ -1,14 +1,11 @@
 ---
 - name: Get provisioner SSH identity
-  delegate_to: "{{ groups['provisioner'][0] }}"
   ansible.builtin.fetch:
-    src: "~{{ hostvars[groups['provisioner'][0]].ansible_user }}/.ssh/id_rsa"
+    src: "~{{ ansible_user }}/.ssh/id_rsa"
     dest: "~/.ssh/{{ cluster }}-provisioner_rsa"
     flat: true
   when:
-    - "'provisioner' in groups"
-    - groups['provisioner'] | length > 0
-    - hostvars[groups['provisioner'][0]].ansible_user is defined
+    - ansible_user is defined
 
 - name: Find all of the files inside this directory
   ansible.builtin.find:
