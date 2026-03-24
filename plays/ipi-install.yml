@@ -47,10 +47,18 @@
     worker_network_config_template: "{{ hostvars.jumphost.worker_network_config_template }}"
   when: hostvars.jumphost.worker_network_config_template is defined
 
+# oc-mirror from 4.20+ places release images under .../openshift/release-images.
+# The release image uses the sha256 digest of the image as the tag.
+- name: "Set the path for the OCP release"
+  ansible.builtin.set_fact:
+    ocp_release_path: "{{ (hostvars[groups['registry_host'][0]].local_repo |
+                       default(((version is version('4.20', '>=')) |
+                       ternary('ocp-' ~ (version.split('.')[:2] | join('.')) ~ '/' ~ version ~ '/openshift/release-images', 'ocp-' ~ (version.split('.')[:2] | join('.')) ~ '/' ~ version)), true)) |
+                       trim }}"
+
 - name: Override OpenShift (4.14+) install release for disconnected environments
   vars:
-    reg_path: "{{ hostvars[groups['registry_host'][0]].local_repo | default( 'ocp-'+ version.split('.')[:2] | join('.') +'/'+ version, true) }}"
-    rel_img: "{{ dci_local_registry }}/{{ reg_path }}:{{ version }}"
+    rel_img: "{{ dci_local_registry }}/{{ ocp_release_path }}@{{ hostvars.jumphost.release_digest }}"
     override_img:
       OPENSHIFT_INSTALL_RELEASE_IMAGE_OVERRIDE: "{{ rel_img }}"
   ansible.builtin.set_fact:
