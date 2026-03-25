@@ -52,7 +52,7 @@
 - name: "Set the path for the OCP release"
   vars:
     extra_path: "/openshift/release-images"
-    short_ver: "{{ version.split('.')[:2] | join('.')) }}"
+    short_ver: "{{ version.split('.')[:2] | join('.') }}"
     above_420: "{{ version is version('4.20', '>=') }}"
     default_ocp_path: "ocp-{{ short_ver }}/{{ version }}{{ above_420 | bool | ternary(extra_path, '') }}"
   ansible.builtin.set_fact:
