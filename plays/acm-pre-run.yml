@@ -143,7 +143,7 @@
       ansible.builtin.set_fact:
         acm_metal_iso_location: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
         acm_rootfs_url: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
-        acm_release_image: "{{ hub_registry | urlsplit('netloc') }}/{{ ocp_release_path }}:{{ version }}"
+        acm_release_image: "{{ ocp_release_data['container_image'] | quote }}"
         dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
 
     - name: "Mirror must gather images"

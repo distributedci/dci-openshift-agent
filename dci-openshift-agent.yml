@@ -122,6 +122,7 @@
         version: "{{ item.version }}"
         version_pull_url: "{{ item['data']['pull_url'] }}"
         ocp_product_id: "{{ item['id'] }}"
+        release_digest: "{{ item['data']['digest'] | first }}"
       with_items: "{{ job_info.job.components + [custom_component] if custom_component is defined else job_info.job.components }}"
       when: item["type"] == "ocp"
 
@@ -210,6 +211,7 @@
         dci_ui_url: "{{ dci_ui_url }}"
         install_type: "{{ (install_type | default('ipi')) }}"
         build: "{{ build }}"
+        release_digest: "{{ release_digest }}"
       delegate_to: jumphost
       delegate_facts: true
       no_log: "{{ dci_hide_secrets }}"
