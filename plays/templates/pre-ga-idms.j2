@@ -1671,6 +1671,12 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/cluster-observability-operator/cluster-observability-rhel8-operator
     source: registry.redhat.io/cluster-observability-operator/cluster-observability-rhel8-operator
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/acm-d/acm-cluster-permission-rhel9
+    source: registry.redhat.io/multicluster-engine/acm-cluster-permission-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/cluster-observability-operator/coo-console-logging-plugin-rhel8
+    source: registry.redhat.io/cluster-observability-operator/coo-console-logging-plugin-rhel8
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
