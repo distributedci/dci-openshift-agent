@@ -130,6 +130,9 @@
     - cluster_icsp.resources | length > 0
     - version is version("4.14", ">=")
 
+- name: Get cluster facts after upgrade
+  ansible.builtin.include_tasks: get-cluster-facts.yml
+
 - name: Pre-upgrade operators tasks
   ansible.builtin.include_tasks: pre-upgrade.yml
 
