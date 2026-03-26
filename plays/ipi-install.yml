@@ -58,6 +58,11 @@
   ansible.builtin.set_fact:
     ocp_release_path: >-
       {{ (hostvars[groups['registry_host'][0]].local_repo | default(default_ocp_path, true)) | trim }}
+  when:
+    - version is defined
+    - groups['registry_host'] is defined
+    - groups['registry_host'] | length > 0
+    - hostvars[groups['registry_host'][0]] is defined
 
 - name: Override OpenShift (4.14+) install release for disconnected environments
   vars:
