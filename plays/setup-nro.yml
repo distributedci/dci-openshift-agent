@@ -34,7 +34,7 @@
   when:
     - increase_unavailable_workers | default(True) | bool
     - (install_type | default('ipi')) != 'sno'
-    - acm_cluster_type | default('') not in ['hypershift', 'sno']
+    - acm_cluster_type | default('') not in ['sno']
 
 - name: Create NUMAResourcesOperator CRD
   vars:

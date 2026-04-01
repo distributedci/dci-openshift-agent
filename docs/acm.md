@@ -42,7 +42,6 @@ The ACM integration with DCI uses the [acm_setup](https://github.com/redhatci/an
 And the following roles are used to deploy different types of clusters through ACM
 
 * [acm_sno](https://github.com/redhatci/ansible-collection-redhatci-ocp/tree/main/roles/acm_sno) to deploy SNO instances.
-* [acm_hypershift](https://github.com/redhatci/ansible-collection-redhatci-ocp/tree/main/roles/acm_hypershift) to deploy HCP (Hosted Control Planes) instances.
 
 Please read the role's documentation for more information.
 
