@@ -6,19 +6,79 @@
     name: imagedigestmirrorsets.config.openshift.io
   register: idms_res
 
-- name: Copy images or create manifests only for Pre-GA
-  ansible.builtin.include_role:
-    name: redhatci.ocp.mirror_catalog
-  vars:
-    mc_oc_tool_path: "{{ oc_tool_path }}"
-    mc_catalog: "{{ dci_pre_ga_catalog }}"
-    mc_registry: "{{ dci_local_registry | default('quay.io', true) }}"
-    mc_pullsecret: "{{ dci_pullsecret_file }}"
-    mc_is_type: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('idms', 'icsp') }}"
-    mc_manifest_only: "{{ not (dci_disconnected | default(false) | bool) }}"
-    mc_max_components: 8
+- name: "Get Pre-GA catalog digest from reference"
+  ansible.builtin.set_fact:
+    dci_pre_ga_catalog_resolved: >-
+      {{
+        (dci_pre_ga_catalog | regex_replace('^docker://', '') | split('@') | first)
+        ~ '@' ~
+        (dci_pre_ga_catalog | regex_replace('^docker://', '') | split('@') | last | trim)
+      }}
+  when:
+    - dci_local_registry is defined
+    - dci_pre_ga_catalog is defined
+    - dci_pre_ga_catalog is search('@sha[0-9]+:')
 
-- name: "Apply pre-ga IDMS"
+- name: "Inspect Pre-GA catalog image to get digest when reference has a tag"
+  ansible.builtin.command: >
+    skopeo inspect
+    --no-tags
+    {% if dci_pullsecret_file is defined %}
+    --authfile {{ dci_pullsecret_file }}
+    {% endif %}
+    {%- if dci_pre_ga_catalog_allow_insecure | default(true) | bool %}
+    --tls-verify=false
+    {%- endif %}
+    --format '{{ "{{" }} .Digest {{ "}}" }}'
+    docker://{{ dci_pre_ga_catalog | regex_replace('^docker://', '') }}
+  register: _skopeo_prega_catalog
+  changed_when: false
+  retries: 3
+  delay: 10
+  until: _skopeo_prega_catalog.rc == 0
+  when:
+    - dci_local_registry is defined
+    - dci_pre_ga_catalog is defined
+    - not (dci_pre_ga_catalog is search('@sha[0-9]+:'))
+
+- name: "Set Pre-GA catalog image@digest"
+  ansible.builtin.set_fact:
+    dci_pre_ga_catalog_digest: >-
+      {{
+        (dci_pre_ga_catalog | regex_replace('^docker://', '') | regex_replace(':[^:@]+$', ''))
+        ~ '@' ~
+        (_skopeo_prega_catalog.stdout | trim)
+      }}
+  when:
+    - not (dci_pre_ga_catalog is search('@sha[0-9]+:'))
+    - _skopeo_prega_catalog is defined
+    - _skopeo_prega_catalog.rc == 0
+
+- name: Mirror Pre-GA latest operators
+  ansible.builtin.include_role:
+    name: redhatci.ocp.oci_mirror
+  vars:
+    om_target_versions: "latest"
+    om_source_index: "{{ dci_pre_ga_catalog }}"
+    om_target: "{{ dci_local_registry }}"
+    om_allow_insecure_registries: true
+    om_auths_file: "{{ dci_pullsecret_file }}"
+  when:
+    - dci_local_registry is defined
+    - dci_disconnected | default(false) | bool
+
+# om_output_dir manifests are not usable here, so we remove the directory.
+- name: Remove oc-mirror output directory
+  ansible.builtin.file:
+    path: "{{ om_output_dir }}"
+    state: absent
+  when: om_output_dir is defined
+
+- name: Append the Pre-GA catalog to the list of custom catalogs
+  ansible.builtin.set_fact:
+    custom_catalogs: "{{ custom_catalogs | default([]) + [dci_pre_ga_catalog_digest] }}"
+
+- name: "Apply pre-ga IDMS from template"
   vars:
     prega_mirror: "{{ dci_disconnected | default(false) | bool |
                 ternary (dci_local_registry,
@@ -26,10 +86,6 @@
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'pre-ga-idms.j2') }}"
-
-- name: Append the Pre-GA catalog to the list of custom catalogs
-  ansible.builtin.set_fact:
-    custom_catalogs: "{{ custom_catalogs | default([]) + [mc_catalog_digest] }}"
 
 - name: Get differences between GA and daily Pre-GA
   environment:
