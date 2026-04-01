@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.28.0
+Version:       1.29.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 2.21.0
+Requires: ansible-collection-redhatci-ocp >= 3.0.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+
+* Tue Apr 21 2026 Beto <josearod@redhat.com> 1.29.EPOCH-1.VERS
+- Use oci_mirror role
 
 * Thu Apr  2 2026 Tony Garcia <tonyg@redhat.com> 1.28.EPOCH-1.VERS
 - Fix operator install
