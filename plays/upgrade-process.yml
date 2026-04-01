@@ -45,7 +45,7 @@
         - increase_unavailable_workers | default(True) | bool
         - (install_type | default('ipi')) != 'sno'
         - acm_cluster_type |
-          default('') not in ['hypershift', 'sno']
+          default('') not in ['sno']
 
     - name: Force upgrade for nightly builds
       ansible.builtin.set_fact:

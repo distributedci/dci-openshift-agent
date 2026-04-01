@@ -4,7 +4,7 @@
   when:
     - increase_unavailable_workers | default(True) | bool
     - install_type is undefined or (install_type | default('ipi')) != 'sno'
-    - acm_cluster_type | default('') not in ['hypershift', 'sno']
+    - acm_cluster_type | default('') not in ['sno']
 
 - name: Wait for Performance Addon Operator endpoint to become available
   pause:
