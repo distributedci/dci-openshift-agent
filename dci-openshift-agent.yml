@@ -599,7 +599,7 @@
     - name: Deploy operators
       when:
         - dci_main == 'install'
-        - acm_cluster_type | default('') not in ('HostedControlPlane')
+        - (acm_cluster_type | default('')) not in ['HostedControlPlane']
       block:
         - name: "Setup job_logs directory"
           ansible.builtin.include_tasks: plays/log-dir.yml
@@ -628,7 +628,7 @@
     - name: Configure operators
       when:
         - dci_main == 'install'
-        - acm_cluster_type | default('') not in ('HostedControlPlane')
+        - (acm_cluster_type | default('')) not in ['HostedControlPlane']
       block:
         - name: "Setup job_logs directory"
           ansible.builtin.include_tasks: plays/log-dir.yml
