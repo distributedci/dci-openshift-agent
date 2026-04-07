@@ -37,18 +37,16 @@
   no_log: "{{ dci_hide_secrets }}"
   loop: "{{ dci_spoke_manifest_files | default([]) }}"
   when:
-    - (dci_spoke_manifest_files | default([])) | length > 0
     - item is search('\.j2$')
 
 - name: "Create required resources for the spoke on the Hub (plain YAML)"
   kubernetes.core.k8s:
     state: present
-    definition: "{{ lookup('file', item) | from_yaml_all | list }}"
+    src: "{{ item }}"
     wait: true
   no_log: "{{ dci_hide_secrets }}"
   loop: "{{ dci_spoke_manifest_files | default([]) }}"
   when:
-    - (dci_spoke_manifest_files | default([])) | length > 0
     - not item is search('\.j2$')
 
 - name: Get ACM hub data used to render ClusterInstance templates
