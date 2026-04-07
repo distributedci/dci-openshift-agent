@@ -38,14 +38,25 @@
           environment:
             - KUBECONFIG: "{{ hub_kubeconfig_path }}"
 
-- name: "Create required resources for the spoke on the Hub"
+- name: "Create required resources for the spoke on the Hub (Jinja templates)"
+  kubernetes.core.k8s:
+    state: present
+    template: "{{ item }}"
+    wait: true
+  no_log: "{{ dci_hide_secrets }}"
+  loop: "{{ dci_spoke_manifest_files | default([]) }}"
+  when:
+    - item is search('\.j2$')
+
+- name: "Create required resources for the spoke on the Hub (plain YAML)"
   kubernetes.core.k8s:
     state: present
     src: "{{ item }}"
     wait: true
-  no_log: true
+  no_log: "{{ dci_hide_secrets }}"
   loop: "{{ dci_spoke_manifest_files | default([]) }}"
-  when: (dci_spoke_manifest_files | default([])) | length > 0
+  when:
+    - not item is search('\.j2$')
 
 - name: Create the spoke cluster image sets
   ansible.builtin.include_role:

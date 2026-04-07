@@ -119,7 +119,7 @@ Please read the role's documentation for more information.
 | acm_cluster_type                 | Yes      | None    | The type of cluster to deploy through ACM. Must use: ztp-spoke-clusterinstance, SNO, HostedControlPlane, HighAvailable
 | dci_clusterinstance_template_dir | Yes      | None    | Directory that holds the [ClusterInstance templates](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-clusters-preq)
 | dci_force_deploy_spoke           | No       | False   | Whether or not force an installation of a and Spoke cluster
-| dci_spoke_manifest_files         | No       | []      | A list of rendered manifest that must be applied to the Hub cluster before a Gitops managed spoke installation. ie: pull_secrets, BMC credentials, etc.
+| dci_spoke_manifest_files         | No       | []      | Paths to manifest files on the controller, applied to the Hub before a GitOps-managed spoke install (e.g. pull secrets, BMC credentials). Files with `.j2` extension are rendered as jinja templates.
 
 #### ClusterInstance Templates
 
