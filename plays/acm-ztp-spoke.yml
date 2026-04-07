@@ -43,7 +43,7 @@
     state: present
     template: "{{ item }}"
     wait: true
-  no_log: true
+  no_log: "{{ dci_hide_secrets }}"
   loop: "{{ dci_spoke_manifest_files | default([]) }}"
   when:
     - item is search('\.j2$')
