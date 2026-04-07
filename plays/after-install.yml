@@ -106,7 +106,7 @@
 
 - name: "Check cluster nodes match requested configuration"
   when:
-    - acm_cluster_type | default('') not in ['hypershift', 'sno', "HostedControlPlane"]
+    - acm_cluster_type | default('') not in ['sno', 'HostedControlPlane']
   block:
     - name: "Check control plane nodes matches requested"
       vars:

@@ -108,10 +108,22 @@
           --force
           {{ dci_prune_index }}
 
+  # Adjust OCP version for next prune fallback (5 and 4.x steps down; 5.0 to 4.23)
 - name: "Set new minor version when operators are missing"
-  set_fact:
-    ocp_minor: "{{ ocp_minor | int -1 }}"
-  when: operators_count | int != mirror_list | length
+  ansible.builtin.set_fact:
+    ocp_major: "{{ (_next_ver | trim).split('.')[0] }}"
+    ocp_minor: "{{ (_next_ver | trim).split('.')[1] }}"
+  when:
+    - operators_count | int != mirror_list | length
+  vars:
+    _next_ver: >-
+      {%- if ocp_major | int == 5 and ocp_minor | int == 0 -%}
+      {{- "4.23" -}}
+      {%- elif ocp_minor | int > 0 -%}
+      {{- (ocp_major | int) ~ '.' ~ (ocp_minor | int - 1) -}}
+      {%- else -%}
+      {{- ocp_major | trim -}}.{{- ocp_minor | trim -}}
+      {%- endif -%}
 
 - name: "Prune a catalog - Fallback"
   include_tasks: prune-catalog.yml

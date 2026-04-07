@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.26.0
+Version:       1.28.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -66,6 +66,13 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+
+* Thu Apr  2 2026 Tony Garcia <tonyg@redhat.com> 1.28.EPOCH-1.VERS
+- Fix operator install
+
+* Wed Apr  1 2026 Beto <josearod@redhat.com> 1.27.EPOCH-1.VERS
+- Remove Hypershift in favor of HCP via GitOps
+
 * Thu Mar 12 2026 Beto <josearod@redhat.com> 1.26.EPOCH-1.VERS
 - Bump for changes in mirror_ocp_role to support oc-mirror
 

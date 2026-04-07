@@ -53,7 +53,7 @@
 - name: "Get registry mirror registry details"
   when:
     - dci_disconnected | default(false) | bool
-    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'hypershift', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
+    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
 
   block:
     - name: Check if IDMS is supported
@@ -80,11 +80,7 @@
     - name: "Set the path for the OCP release"
       ansible.builtin.set_fact:
         ocp_release_path: >-
-          {%- if acm_cluster_type != 'hypershift' -%}
           {{ acm_local_repo | default('ocp-' + version.split('.')[:2] | join('.') + '/' + version, true) }}
-          {%- elif acm_cluster_type == 'hypershift' -%}
-          {{ hub_registry | regex_replace('^.*?://[^/]+(:[0-9]+)?/', '') }}
-          {%- endif -%}
 
     - name: "Set hub mirrors"
       vars:
@@ -157,7 +153,7 @@
 - name: "Get OCP release artifacts"
   when:
     - not (dci_disconnected | default(false) | bool)
-    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'hypershift', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
+    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
   block:
     - name: Mirror release
       ansible.builtin.include_role:
