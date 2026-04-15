@@ -9,7 +9,7 @@
 
 - name: Wait for the tuned creation
   vars:
-    check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | length + 1 ) }}"
+    check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | int + 1 ) }}"
   kubernetes.core.k8s_info:
     api_version: tuned.openshift.io/v1
     kind: Tuned
@@ -29,5 +29,5 @@
     name: redhatci.ocp.check_resource
   vars:
     resource_to_check: "MachineConfigPool"
-    check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | length + 1 ) }}"
+    check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | int + 1 ) }}"
     check_wait_delay: 90
