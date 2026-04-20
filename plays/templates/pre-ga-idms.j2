@@ -1677,6 +1677,12 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/cluster-observability-operator/coo-console-logging-plugin-rhel8
     source: registry.redhat.io/cluster-observability-operator/coo-console-logging-plugin-rhel8
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/oadp/oadp-cli-binaries-rhel9
+    source: registry.redhat.io/oadp/oadp-cli-binaries-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/oadp/oadp-vmdp-binaries-rhel9
+    source: registry.redhat.io/oadp/oadp-vmdp-binaries-rhel9
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
