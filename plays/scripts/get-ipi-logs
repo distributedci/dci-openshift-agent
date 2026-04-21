@@ -47,6 +47,7 @@ sed -e 's,^\(.*password:\s*\).*$,\1REDACTED",' \
 ## install-config.yaml
 sed -e 's,^\(\s*username:\s*\).*$,\1REDACTED,' \
     -e 's,^\(\s*password:\s*\).*$,\1REDACTED,' \
+    -e 's,^\(\s*pullSecret:\s*\).*$,\1REDACTED,' \
     "${log_dir}/install-config-yaml.txt.orig" > "${log_dir}/install-config-yaml.txt"
 
 ## openshift_install_state.json
