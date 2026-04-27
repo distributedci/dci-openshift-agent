@@ -17,13 +17,14 @@
     - dci_main == 'upgrade'
     - storage_upgrade_tester | default(false) | bool
 
-- name: "Cleanup minio resources"
+- name: "Cleanup s3 resources"
   vars:
-    sm_action: 'cleanup'
+    ss_state: absent
+    ss_mode: k8s
   ansible.builtin.include_role:
-    name: redhatci.ocp.setup_minio
+    name: redhatci.ocp.s3_setup
   when:
-    - enable_minio | bool
+    - enable_s3 | bool
 
 - name: "Cleanup ClusterLogging resources"
   vars:

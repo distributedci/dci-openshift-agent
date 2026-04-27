@@ -47,7 +47,7 @@ enable_sriov: false
 enable_nfs_storage: false
 enable_mlb: false
 enable_nmstate: false
-enable_minio: false
+enable_s3: false
 enable_nro: false
 enable_netobserv: false
 enable_rhoai: false
