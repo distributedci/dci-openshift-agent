@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.29.0
+Version:       2.0.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 2.22.0
+Requires: ansible-collection-redhatci-ocp >= 3.0.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Tue May  5 2026 Tony Garcia <tonyg@redhat.com> 2.0.EPOCH-1.VERS
+- New version due to migration from setup_minio to s3_setup role
+
 * Fri May  1 2026 Tony Garcia <tonyg@redhat.com> 1.29.EPOCH-1.VERS
 - Bump version to align to redhatci.ocp.acm_setup collection
 

@@ -24,10 +24,10 @@
   when:
     - enable_cnv | bool
 
-- name: "Setup a Minio deployment"
-  ansible.builtin.include_tasks: setup-minio.yml
+- name: "Setup a s3-compatible storage deployment"
+  ansible.builtin.include_tasks: setup-s3.yml
   when:
-    - enable_minio | bool
+    - enable_s3 | bool
 
 - name: "Setup OCP logging stack"
   ansible.builtin.include_tasks: setup-logs-stack.yml
