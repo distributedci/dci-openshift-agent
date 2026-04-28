@@ -1,0 +1,31 @@
+---
+- name: S3-compatible storage setup
+  vars:
+    s3_base_image: cgr.dev/chainguard/minio
+    s3_image: "{{ (dci_disconnected | default(false)) | ternary(dci_local_registry ~ '/chainguard/minio', s3_base_image) }}"
+  block:
+    - name: Mirror the s3 image
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_images
+      vars:
+        mi_images:
+          - "{{ s3_base_image }}"
+        mi_authfile: "{{ dci_pullsecret_file }}"
+        mi_registry: "{{ dci_local_registry }}"
+      when:
+        - dci_disconnected | default(false) | bool
+
+    - name: Setup s3 instance in-cluster
+      ansible.builtin.include_role:
+        name: redhatci.ocp.s3_setup
+      vars:
+        ss_mode: k8s
+        ss_storage_class: "{{ dci_s3_storage_class | default('ocs-storagecluster-cephfs') }}"
+        ss_claim_size: "{{ dci_s3_claim_size | default('10Gi') }}"
+        ss_namespace: "{{ dci_s3_namespace | default('minio') }}"
+        ss_username: "{{ dci_s3_username | default('minioadmin') }}"
+        ss_password: "{{ dci_s3_password | default('minioadmin') }}"
+        ss_buckets:
+          - "{{ dci_s4_bucket_name | default('loki') }}"
+        ss_image: "{{ s3_image }}"
+...

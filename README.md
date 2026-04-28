@@ -672,24 +672,24 @@ The `operator_catalog_dir` variable should be set to a valid directory that cont
 
 Subscriptions for the mirrored operators can be defined using the `dci_operators` variable as explained above.
 
-## Minio deployment
+## S3 storage deployment
 
-Some workloads like Migration Toolkit for Containers or Loki may require an Object Storage provider. For such cases, a [Minio](https://min.io/) instance can be deployed on the OCP cluster by setting `true` to the `enable_minio` flag.
+Some workloads like Migration Toolkit for Containers or Loki may require an Object Storage provider. For such cases, a s3 compatible instance can be deployed on the OCP cluster by setting `true` to the `enable_s3` flag.
 
 In the DCI OpenShift Agent integration, an initial bucket named `loki` is deployed and is used for the [logging](#logging-stack) if no information about an external Object provider are provided.
 
-The following variables allow customizing the Minio deployment. Please see the [minio_setup](https://github.com/redhatci/ansible-collection-redhatci-ocp/tree/main/roles/setup_minio) role for additional details.
+The following variables allow customizing the s3 storage deployment *in cluster*. Please see the [s3_setup](https://github.com/redhatci/ansible-collection-redhatci-ocp/tree/main/roles/s3_setup) role for additional details.
 
-| Variable                               | Default                       | Required   | Description                                   |
-| -------------------------------------- | ----------------------------- | ---------- | ----------------------------------------------|
-| minio_claim_size                       | 10Gi                          | No         | Requested storage for Minio                   |
-| minio_storage_class                    | undefined                     | Yes        | A storage Class with Support for RWX volumes  |
-| minio_namespace                        | minio                         | No         | Deployment Namespace                          |
-| minio_access_key_id                    | minioadmin                    | No         | Minio's Initial Username                      |
-| minio_access_key_secret                | minioadmin                    | No         | Minio's Initial Password                      |
-| minio_bucket_name                      | minio                         | No         | Initial Bucket name                           |
+| Variable              | Default     | Required  | Description
+| --------------------- | ----------- | --------- | -----------
+| dci_s3_claim_size     | 10Gi        | No        | Requested storage
+| dci_s3_storage_class  | undefined   | Yes       | A storage Class with Support for RWX volumes
+| dci_s3_namespace      | minio       | No        | Deployment Namespace
+| dci_s3_username       | minioadmin  | No        | Username for the s3 storage
+| dci_s3_password       | minioadmin  | No        | Password for the s3 storage
+| dci_s3_buckets        | [loki]      | No        | List of initial Buckets
 
-The workloads that require Object Storage, can use the `http://minio-service.minio:9000` endpoint and the default credentials set in the [minio_setup](https://github.com/redhatci/ansible-collection-redhatci-ocp/tree/main/roles/setup_minio) role to start shipping data to Minio.
+The workloads that require Object Storage, can use the `http://s3-server.<namespace>:9000` endpoint and the provided credentials set in the [s3_setup](https://github.com/redhatci/ansible-collection-redhatci-ocp/tree/main/roles/s3_setup) role to start shipping data to the s3-compatible storage instance.
 
 ## Logging stack
 
@@ -734,14 +734,14 @@ setup_netobserv_stackloki_tls_insecure_skip_verify| true                        
 setup_netobserv_stackaccess_key_id                | minioadmin                      | No          | Access Key ID for the object storage backend
 setup_netobserv_stackaccess_key_secret            | minioadmin                      | No          | Secret Key for the object storage backend
 setup_netobserv_stackbucket                       | network                         | No          | Bucket for the Network Observability
-setup_netobserv_stackendpoint                     | http://minio-service.minio:9000 | No          | Object Storage Endpoint. It must exist and be reachable
+setup_netobserv_stackendpoint                     | http://s3-server.minio:9000     | No          | Object Storage Endpoint. It must exist and be reachable
 setup_netobserv_stackregion                       | us-east-1                       | No          | Object Storage region
 setup_netobserv_stackloki_size                    | 1x.extra-small                  | No          | Loki Stack size. See: [Sizing](https://docs.openshift.com/container-platform/4.13/logging/cluster-logging-loki.html#deployment-sizing_cluster-logging-loki) for details
 setup_netobserv_stackstorage_class                | managed-nfs-storage             | No          | Storage class for the Loki Stack
 
 The configuration setting can be passed using the `dci_netobserv_conf_file` containing the variables listed above.
 
-Enabling the OpenShift `Network observability Operator` requires high amounts of storage available for data persistency, please take this into consideration during the sizing of the Object Storage provider. By default, the stack is configured to use the internal [Minio deployment](#minio-deployment) as a backend.
+Enabling the OpenShift `Network observability Operator` requires high amounts of storage available for data persistency, please take this into consideration during the sizing of the Object Storage provider. By default, the stack is configured to use the internal [s3 storage deployment](#s3-storage-deployment) as a backend.
 
 ## Interacting with your RHOCP Cluster
 
