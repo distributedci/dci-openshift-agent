@@ -57,22 +57,28 @@
 
     - name: Mirror latest operators
       ansible.builtin.include_role:
-        name: redhatci.ocp.imageset_mirroring
+        name: redhatci.ocp.oci_mirror
       vars:
-        im_task: latest
-        im_source_index: "{{ operators_index | default('registry.redhat.io/redhat/redhat-operator-index:v' + ocp_version_maj + '.' + ocp_version_min) }}"
-        im_target: "{{ dci_local_registry }}"
-        im_operators: "{{ mirror_list }}"
-        im_allow_insecure_registries: true
-        im_auths_file: "{{ dci_pullsecret_file }}"
+        om_target_versions: "latest"
+        om_source_index: "{{ operators_index | default('registry.redhat.io/redhat/redhat-operator-index:v' + ocp_version_maj + '.' + ocp_version_min) }}"
+        om_target: "{{ dci_local_registry }}"
+        om_operators: "{{ mirror_list }}"
+        om_allow_insecure_registries: true
+        om_auths_file: "{{ dci_pullsecret_file }}"
 
     - name: Append the Image Source file
       ansible.builtin.set_fact:
-        is_files: "{{ is_files | default([]) + [im_image_source_file] }}"
+        is_files: "{{ is_files | default([]) + [om_output_dir + '/idms-oc-mirror.yaml'] }}"
 
-    - name: "Extract catalog digest from CatalogSource manifest"
+    - name: Find generated CatalogSource manifest
+      ansible.builtin.find:
+        paths: "{{ om_output_dir }}"
+        patterns: "cs-*.yaml"
+      register: _om_cat_for_digest
+
+    - name: Get image from CatalogSource manifest
       ansible.builtin.set_fact:
-        dci_prune_index: "{{ (lookup('file', im_catalog_source_file) | from_yaml).spec.image }}"
+        dci_prune_index: "{{ (lookup('file', _om_cat_for_digest.files[0].path) | from_yaml_all | list | first).spec.image }}"
 
 - name: "Prune catalog and mirror the Red Hat operators"
   when:
