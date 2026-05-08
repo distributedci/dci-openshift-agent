@@ -1683,6 +1683,9 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/oadp/oadp-vmdp-binaries-rhel9
     source: registry.redhat.io/oadp/oadp-vmdp-binaries-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/odf4-ocs-tls-profiles-operator-bundle
+    source: quay.io/prega/test/odf4-ocs-tls-profiles-operator-bundle
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
