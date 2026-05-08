@@ -67,16 +67,36 @@
     - dci_local_registry is defined
     - dci_disconnected | default(false) | bool
 
-# om_output_dir manifests are not usable here, so we remove the directory.
+- name: Find generated CatalogSource manifest
+  ansible.builtin.find:
+    paths: "{{ om_output_dir }}"
+    patterns: "cs-*.yaml"
+  register: _om_cat_for_digest
+  when:
+    - om_output_dir is defined
+    - dci_disconnected | default(false) | bool
+
+- name: Append the Pre-GA catalog to the list of custom catalogs
+  vars:
+    prega_catalog_image: >-
+      {{
+        (
+          lookup('file', _om_cat_for_digest.files[0].path)
+          | from_yaml_all
+          | list
+          | first
+        ).spec.image
+        if dci_disconnected | default(false) | bool
+        else dci_pre_ga_catalog
+      }}
+  ansible.builtin.set_fact:
+    custom_catalogs: "{{ custom_catalogs | default([]) + [prega_catalog_image] }}"
+
 - name: Remove oc-mirror output directory
   ansible.builtin.file:
     path: "{{ om_output_dir }}"
     state: absent
   when: om_output_dir is defined
-
-- name: Append the Pre-GA catalog to the list of custom catalogs
-  ansible.builtin.set_fact:
-    custom_catalogs: "{{ custom_catalogs | default([]) + [dci_pre_ga_catalog_digest] }}"
 
 - name: "Apply pre-ga IDMS from template"
   vars:
