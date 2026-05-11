@@ -47,7 +47,6 @@
     name: redhatci.ocp.acm_setup
   vars:
     hub_disconnected: "{{ dci_disconnected | default(false) | bool }}"
-    hub_use_configmap: "{{ build not in ['ga', 'candidate', 'dev'] }}"
   when:
     - enable_acm | bool
 
