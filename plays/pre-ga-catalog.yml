@@ -92,20 +92,24 @@
   ansible.builtin.set_fact:
     custom_catalogs: "{{ custom_catalogs | default([]) + [prega_catalog_image] }}"
 
-- name: Remove oc-mirror output directory
-  ansible.builtin.file:
-    path: "{{ om_output_dir }}"
-    state: absent
-  when: om_output_dir is defined
+- name: Append the Image Source file
+  ansible.builtin.set_fact:
+    is_files: "{{ is_files | default([]) + [om_output_dir + '/idms-oc-mirror.yaml'] }}"
 
-- name: "Apply pre-ga IDMS from template"
-  vars:
-    prega_mirror: "{{ dci_disconnected | default(false) | bool |
-                ternary (dci_local_registry,
-                'quay.io') }}"
-  kubernetes.core.k8s:
-    state: present
-    definition: "{{ lookup('template', 'pre-ga-idms.j2') }}"
+# - name: Remove oc-mirror output directory
+#   ansible.builtin.file:
+#     path: "{{ om_output_dir }}"
+#     state: absent
+#   when: om_output_dir is defined
+
+# - name: "Apply pre-ga IDMS from template"
+#   vars:
+#     prega_mirror: "{{ dci_disconnected | default(false) | bool |
+#                 ternary (dci_local_registry,
+#                 'quay.io') }}"
+#   kubernetes.core.k8s:
+#     state: present
+#     definition: "{{ lookup('template', 'pre-ga-idms.j2') }}"
 
 - name: Get differences between GA and daily Pre-GA
   environment:
