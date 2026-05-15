@@ -47,71 +47,59 @@
   ansible.builtin.debug:
     var: mirror_list
 
-- name: Mirror latest operators
-  when:
-    - dci_mirror_latest_operators | default(false) | bool
-    - mirror_list is defined
-    - mirror_list | length
-    - dci_disconnected | default(false) | bool
-  block:
-
-    - name: Mirror latest operators
-      ansible.builtin.include_role:
-        name: redhatci.ocp.oci_mirror
-      vars:
-        om_target_versions: "latest"
-        om_source_index: "{{ operators_index | default('registry.redhat.io/redhat/redhat-operator-index:v' + ocp_version_maj + '.' + ocp_version_min) }}"
-        om_target: "{{ dci_local_registry }}"
-        om_operators: "{{ mirror_list }}"
-        om_allow_insecure_registries: true
-        om_auths_file: "{{ dci_pullsecret_file }}"
-
-    - name: Append the Image Source file
-      ansible.builtin.set_fact:
-        is_files: "{{ is_files | default([]) + [om_output_dir + '/idms-oc-mirror.yaml'] }}"
-
-    - name: Find generated CatalogSource manifest
-      ansible.builtin.find:
-        paths: "{{ om_output_dir }}"
-        patterns: "cs-*.yaml"
-      register: _om_cat_for_digest
-
-    - name: Get image from CatalogSource manifest
-      ansible.builtin.set_fact:
-        dci_prune_index: "{{ (lookup('file', _om_cat_for_digest.files[0].path) | from_yaml_all | list | first).spec.image }}"
-
 - name: "Prune catalog and mirror the Red Hat operators"
   when:
-    - not dci_mirror_latest_operators | default(false) | bool
     - dci_disconnected | default(false) | bool
     - mirror_list is defined
     - mirror_list | length
   block:
+
     - name: "Build pruned catalog"
       ansible.builtin.include_tasks: build-catalog.yml
 
-    - name: Check if IDMS is supported
-      kubernetes.core.k8s_info:
-        api_version: apiextensions.k8s.io/v1
-        kind: CustomResourceDefinition
-        name: imagedigestmirrorsets.config.openshift.io
-      register: idms_res
+    - name: "Mirror catalog before 4.20"
+      when: ocp_version is version('4.20', '<')
+      block:
+        - name: Check if IDMS is supported
+          kubernetes.core.k8s_info:
+            api_version: apiextensions.k8s.io/v1
+            kind: CustomResourceDefinition
+            name: imagedigestmirrorsets.config.openshift.io
+          register: idms_res
 
-    - name: "Mirror pruned catalog"
-      ansible.builtin.include_role:
-        name: redhatci.ocp.mirror_catalog
-      vars:
-        mc_oc_tool_path: "{{ oc_tool_path }}"
-        mc_catalog: "{{ dci_prune_index }}"
-        mc_registry: "{{ dci_local_registry }}"
-        mc_pullsecret: "{{ dci_pullsecret_file }}"
-        mc_is_type: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('idms', 'icsp') }}"
-        mc_continue_on_error: "{{ dci_continue_on_mirror_error  | default(false) }}"
+        - name: "Mirror pruned catalog"
+          ansible.builtin.include_role:
+            name: redhatci.ocp.mirror_catalog
+          vars:
+            mc_oc_tool_path: "{{ oc_tool_path }}"
+            mc_catalog: "{{ dci_prune_index }}"
+            mc_registry: "{{ dci_local_registry }}"
+            mc_pullsecret: "{{ dci_pullsecret_file }}"
+            mc_is_type: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('idms', 'icsp') }}"
+            mc_continue_on_error: "{{ dci_continue_on_mirror_error  | default(false) }}"
 
-    - name: "Append the Image Source file"
-      ansible.builtin.set_fact:
-        is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
-      when: mc_is_file is defined
+        - name: "Append the Image Source file"
+          ansible.builtin.set_fact:
+            is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
+          when: mc_is_file is defined
+
+    - name: "Mirror catalog after 4.19"
+      when: ocp_version is version('4.20', '>=')
+      block:
+        - name: Mirror latest operators
+          ansible.builtin.include_role:
+            name: redhatci.ocp.oci_mirror
+          vars:
+            om_target_versions: "{{ dci_mirror_latest_operators | default(false) | bool | ternary('latest', 'all') }}"
+            om_source_index: "{{ dci_prune_index }}"
+            om_target: "{{ dci_local_registry }}"
+            om_operators: "{{ mirror_list }}"
+            om_allow_insecure_registries: true
+            om_auths_file: "{{ dci_pullsecret_file }}"
+
+        - name: Append the Image Source file
+          ansible.builtin.set_fact:
+            is_files: "{{ is_files | default([]) + [om_output_dir + '/idms-oc-mirror.yaml'] }}"
 
 - name: "Create Red Hat disconnected catalogSource"
   ansible.builtin.include_role:
