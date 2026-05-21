@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2020-2023 Red Hat, Inc.
+# Copyright (C) 2020-2026 Red Hat, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
@@ -21,14 +21,15 @@
 set -x
 
 if [ $# -lt 3 ]; then
-    echo "Usage: $0 <provisioner_user@<provisioner_host> <log_dir_dir> <servers>" 1>&2
-    echo "Eg: kni@provisioner.lab /tmp/logs master-0.cluster.lab master-1.cluster.lab master-2.cluster.lab"
+    echo "Usage: $0 <provisioner_user@<provisioner_host> <log_dir> <servers>" 1>&2
+    echo "Eg: $0 kni@provisioner.lab /tmp/logs master-0.cluster.lab master-1.cluster.lab master-2.cluster.lab"
     exit 1
 fi
 
 user_at_provisioner=$1
 log_dir="$2"
 
+mkdir -p "${log_dir}"
 ssh_ops="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=10"
 prov_cmd="timeout -v 20m ssh ${ssh_ops} ${user_at_provisioner}"
 
@@ -107,8 +108,9 @@ if [ -n "${active_ip}" ]; then
   core="ssh ${ssh_ops} core@${active_ip}"
 
   # Installer logs
+  nodes_param=""
   for nodes in "${nodes[@]}"; do
-    nodes_param+=" --master $nodes.$domain"
+    nodes_param+=" --master ${nodes}.${domain}"
   done
 
   # Collect the bootstrap logs
@@ -119,7 +121,7 @@ if [ -n "${active_ip}" ]; then
 
   # Collect services logs
   for serv in release-image bootkube; do
-    $prov_cmd "${core}" journalctl -b -u $serv.service > "${log_dir}"/$serv.log
+    $prov_cmd "${core}" journalctl -b -u ${serv}.service > "${log_dir}"/${serv}.log
   done
 
   # Log for  dnsmasq, httpd, ironic-api, ironic-conductor, ironic-inspector pods
