@@ -1,0 +1,30 @@
+---
+- name: Apply insecure policy MachineConfigs on cluster (upgrade)
+  vars:
+    _insecure_policy_source: >-
+      data:text/plain;base64,ewogICAgImRlZmF1bHQiOiBbCiAgICAgICAgewogICAgICAgICAgICAidHlwZSI6ICJpbnNlY3VyZUFjY2VwdEFueXRoaW5nIgogICAgICAgIH0KICAgIF0sCiAgICAidHJhbnNwb3J0cyI6CiAgICAgICAgewogICAgICAgICAgICAiZG9ja2VyLWRhZW1vbiI6CiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIiI6IFt7InR5cGUiOiJpbnNlY3VyZUFjY2VwdEFueXRoaW5nIn1dCiAgICAgICAgICAgICAgICB9CiAgICAgICAgfQp9Cgo=
+  kubernetes.core.k8s:
+    state: present
+    definition:
+      apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      metadata:
+        labels:
+          machineconfiguration.openshift.io/role: "{{ item.role }}"
+        name: "99-{{ item.role }}-insecure-policy"
+      spec:
+        config:
+          ignition:
+            version: 3.2.0
+          storage:
+            files:
+              - contents:
+                  source: "{{ _insecure_policy_source }}"
+                mode: 420
+                overwrite: true
+                path: /etc/containers/policy.json
+  loop:
+    - { role: master }
+    - { role: worker }
+  loop_control:
+    label: "{{ item.role }}"
