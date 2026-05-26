@@ -6,6 +6,42 @@
     name: version
   register: cluster_version
 
+- name: "Get target topic and component from DCI"
+  vars:
+    ocp_major: "{{ target_version.split('.')[0] }}"
+    ocp_minor: "{{ target_version.split('.')[1] }}"
+    topic_target_version: "OCP-{{ ocp_major }}.{{ ocp_minor }}"
+  environment:
+    DCI_CLIENT_ID: "{{ dci_client_id }}"
+    DCI_API_SECRET: "{{ dci_api_secret }}"
+    DCI_CS_URL: "{{ dci_cs_url }}"
+  block:
+    - name: "Get target topic"
+      dci_topic:
+        state: search
+        name: "{{ topic_target_version }}"
+      register: target_topic
+      no_log: true
+
+    - name: "Get target component"
+      dci_component:
+        state: search
+        topic_id: "{{ target_topic.topics[0].id }}"
+        type: "ocp"
+        version: "{{ target_version }}"
+      register: target_component
+      no_log: true
+
+- name: "Disable image signatures in > 4.21"
+  vars:
+    target_build: "{{ target_component.components[0].tags |
+                    select('match', '^build:') | first |
+                    regex_search('^build:(.*)$', '\\1') | first }}"
+  ansible.builtin.include_tasks: disable-signatures-validation-upgrade.yml
+  when:
+    - target_version is version('4.22', '>=')
+    - target_build != 'ga'
+
 - name: "Cluster upgrade"
   vars:
     current_ver_query: "history[?state=='Completed'] | [0].version"
@@ -46,11 +82,6 @@
         - (install_type | default('ipi')) != 'sno'
         - acm_cluster_type |
           default('') not in ['sno']
-
-    - name: Force upgrade for nightly builds
-      ansible.builtin.set_fact:
-        force_upgrade: true
-      when: build == "nightly"
 
     - name: "Apply manifests for disconnected environments"
       when:

@@ -69,6 +69,7 @@
             state: search
             name: "OCP-{{ major_inter }}"
           register: inter_topic
+          no_log: true
 
         - name: "Get intermediate component"
           dci_component:
@@ -77,6 +78,7 @@
             type: "ocp"
             version: "{{ version_inter }}"
           register: inter_component
+          no_log: true
 
     - name: "Get image for intermediate version from DCI"
       ansible.builtin.set_fact:
