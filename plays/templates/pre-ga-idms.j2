@@ -1689,6 +1689,18 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/odf4/ocs-tls-profiles-operator-bundle
     source: quay.io/prega/test/odf4/ocs-tls-profiles-operator-bundle
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-adapter-rhel8
+    source: quay.io/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-adapter-rhel8
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-admission-webhooks-rhel8
+    source: quay.io/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-admission-webhooks-rhel8
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-operator-bundle
+    source: quay.io/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-operator-bundle
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-rhel8-operator
+    source: registry.redhat.io/custom-metrics-autoscaler/custom-metrics-autoscaler-rhel8-operator
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
