@@ -28,6 +28,7 @@
     - dci_main == 'install'
     - dci_disconnected | default(false) | bool
     - not dci_preserve_default_catalogs | default(false) | bool
+    - (acm_cluster_type | default('')) not in ['HostedControlPlane']
   block:
     - name: "Disable default catalog sources for disconnected deployment"
       kubernetes.core.k8s:
