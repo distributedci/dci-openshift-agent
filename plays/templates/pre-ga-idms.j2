@@ -1702,8 +1702,8 @@ spec:
     - {{ prega_mirror }}/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-rhel8-operator
     source: registry.redhat.io/custom-metrics-autoscaler/custom-metrics-autoscaler-rhel8-operator
   - mirrors:
-      - {{ prega_mirror }}/prega/test/acm-d/cluster-permission-rhel9
-      source: registry.redhat.io/multicluster-engine/cluster-permission-rhel9
+    - {{ prega_mirror }}/prega/test/acm-d/cluster-permission-rhel9
+    source: registry.redhat.io/multicluster-engine/cluster-permission-rhel9
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
