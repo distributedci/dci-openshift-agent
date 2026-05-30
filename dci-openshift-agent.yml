@@ -845,6 +845,13 @@
         - name: Run the success
           ansible.builtin.include_tasks: plays/success.yml
 
+    - name: Upload logs
+      ansible.builtin.include_tasks: plays/get-logs.yml
+
+    - name: Success teardown and cleanup
+      ignore_unreachable: true
+      ignore_errors: true
+      block:
         - name: Teardown on success
           when: dci_teardown_on_success | bool
           block:
