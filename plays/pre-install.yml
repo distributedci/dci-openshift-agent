@@ -90,7 +90,7 @@
 - name: "Copy dci_pullsecret_file localy"
   ansible.builtin.fetch:
     src: "{{ dci_pullsecret_file }}"
-    dest: "/tmp/"
+    dest: "{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}/"
     flat: true
 
 - name: Set dci_pullsecret in localhost scope
