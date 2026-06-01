@@ -1,5 +1,5 @@
 ---
-- name: Upload logs
+- name: Upload logs ({{ item.path | basename }})
   block:
     - name: Upload to DCI Control Server ({{ item.path | basename }})
       environment:
@@ -8,21 +8,39 @@
         DCI_CS_URL: "{{ hostvars.localhost.dci_cs_url }}"
       dci_file:
         path: "{{ item.path }}"
-        name: "{{ item.path | basename }}"
+        name: "{{ (remove_ext | default(False) | bool) | ternary(item.path | basename | splitext | first, item.path | basename) }}"
         job_id: "{{ hostvars.localhost.job_id }}"
         mime: "{{ mime_type }}"
+      register: _dci_upload_result
+      delegate_to: localhost
 
   rescue:
-    - name: Create a local log directory
+    - name: Ensure local log directories exist
       ansible.builtin.file:
-        path: "{{ dci_local_log_dir }}/{{ hostvars.localhost.job_id }}"
+        path: "{{ dir }}"
         state: directory
-        mode: "0775"
+        mode: '0755'
+        owner: "{{ ansible_user_uid }}"
+        group: "{{ ansible_user_gid }}"
+      become: true
       delegate_to: jumphost
+      loop:
+        - "{{ dci_local_log_dir }}"
+        - "{{ dci_local_log_dir }}/{{ hostvars.localhost.job_id }}"
+      loop_control:
+        loop_var: dir
+        label: "{{ dir }}"
 
     - name: Copy locally ({{ item.path | basename }})
       ansible.builtin.copy:
         src: "{{ item.path }}"
         dest: "{{ dci_local_log_dir }}/{{ hostvars.localhost.job_id }}/"
-        mode: "0640"
+        mode: '0644'
       delegate_to: jumphost
+
+    - name: Report DCI upload failure
+      ansible.builtin.debug:
+        msg: >-
+          Failed to upload {{ item.path | basename }} to DCI
+          ({{ _dci_upload_result.msg | default(_dci_upload_result) }}); saved under
+          {{ dci_local_log_dir }}/{{ hostvars.localhost.job_id }}/
