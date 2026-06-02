@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.29.0
+Version:       1.31.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 3.0.0
+Requires: ansible-collection-redhatci-ocp >= 3.3.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,7 +66,10 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
-* Tue May  5 2026 Beto <josearod@redhat.com> 1.30.EPOCH-1.VERS
+* Tue Jun  2 2026 Tony Garcia <tonyg@redhat.com> 1.31.EPOCH-1.VERS
+- Bump for changes in redhatci.ocp collections to support find_available_port
+
+* Tue May  5 2026 Beto Rdz <josearod@redhat.com> 1.30.EPOCH-1.VERS
 - Use oci_mirror role
 
 * Fri May  1 2026 Tony Garcia <tonyg@redhat.com> 1.29.EPOCH-1.VERS
@@ -75,13 +78,13 @@ exit 0
 * Thu Apr  2 2026 Tony Garcia <tonyg@redhat.com> 1.28.EPOCH-1.VERS
 - Fix operator install
 
-* Wed Apr  1 2026 Beto <josearod@redhat.com> 1.27.EPOCH-1.VERS
+* Wed Apr  1 2026 Beto Rdz <josearod@redhat.com> 1.27.EPOCH-1.VERS
 - Remove Hypershift in favor of HCP via GitOps
 
-* Thu Mar 12 2026 Beto <josearod@redhat.com> 1.26.EPOCH-1.VERS
+* Thu Mar 12 2026 Beto Rdz <josearod@redhat.com> 1.26.EPOCH-1.VERS
 - Bump for changes in mirror_ocp_role to support oc-mirror
 
-* Tue Mar 10 2026 Beto <josearod@redhat.com> 1.25.EPOCH-1.VERS
+* Tue Mar 10 2026 Beto Rdz <josearod@redhat.com> 1.25.EPOCH-1.VERS
 - Disable image signatures validation in non-GA versions
 
 * Fri Feb  6 2026 Frederic Lepied <flepied@redhat.com> 1.24.EPOCH-1.VERS
