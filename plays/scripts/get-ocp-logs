@@ -111,7 +111,7 @@ if [[ -n "${DCI_MUST_GATHER_SINCE_TIME}" ]]; then
   if ${oc_path} adm must-gather --help 2>&1 | grep -q '\-\-since-time'; then
     must_gather_opts="${must_gather_opts} --since-time=${DCI_MUST_GATHER_SINCE_TIME}"
   else
-    printf "Warning: oc does not support --since-time; collecting full must-gather logs\n" >&2
+    echo "Warning: oc does not support --since-time; collecting full must-gather logs" >&2
   fi
 fi
 
