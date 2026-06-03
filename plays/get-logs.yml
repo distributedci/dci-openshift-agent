@@ -60,26 +60,13 @@
   ansible.builtin.include_tasks: abi-get-logs.yml
   when: (install_type | default('ipi')) in ['abi']
 
-- name: Convert job created_at to RFC3339 for must-gather
-  ansible.builtin.command:
-    argv:
-      - date
-      - -u
-      - -d
-      - "{{ job_info.job.created_at }}"
-      - "+%Y-%m-%dT%H:%M:%SZ"
-  register: _dci_mg_since_time_from_job
-  changed_when: false
-  when:
-    - dci_must_gather_since_time is undefined
-
 - name: Set must-gather since-time for log collection
-  vars:
+  ansible.builtin.set_fact:
     _dci_mg_since_time: >-
       {{
         (dci_must_gather_since_time | trim)
         if (dci_must_gather_since_time is defined and (dci_must_gather_since_time | trim | length) > 0)
-        else (_dci_mg_since_time_from_job.stdout | default('') | trim)
+        else (job_info.job.created_at | to_datetime('%Y-%m-%dT%H:%M:%S.%f')).strftime('%Y-%m-%dT%H:%M:%SZ')
       }}
 
 - name: "Get logs from OCP deployment"
