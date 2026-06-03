@@ -262,6 +262,7 @@ This is the dci-openshift-agent variables that can be set in the
 |---------------------------------| -------- | ------- | -------------------------------------------------------------- | ------------
 | install_type                    | False    | String  | ipi                                                            | OpenShift Installer type.
 | dci_must_gather_images          | False    | List    |["registry.redhat.io/openshift4/ose-must-gather"]               | List of the must-gather images to use when retrieving "logs.\*".
+| dci_must_gather_since_time      | False    | String  | job `created_at`                                               | RFC3339 timestamp for `oc adm must-gather --since-time`
 | dci_teardown_on_failure         | False    | Boolean | False                                                          | Whether or not execute the teardown hook on a failure.
 | dci_teardown_on_success         | False    | Boolean | True                                                           | Whether or not execute the teardown hook on success.
 | dci_openshift_agent_conformance | False    | String  |                                                                | If defined it will run that category of conformance test.
