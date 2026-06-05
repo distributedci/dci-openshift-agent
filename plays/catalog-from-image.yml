@@ -113,4 +113,5 @@
     - dci_disconnected | default(false) | bool
     - mirror_list is defined
     - mirror_list | length
+    - acm_cluster_type | default('') not in ['HostedControlPlane']
 ...
