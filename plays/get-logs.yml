@@ -60,22 +60,13 @@
   ansible.builtin.include_tasks: abi-get-logs.yml
   when: (install_type | default('ipi')) in ['abi']
 
-- name: Set must-gather since-time for log collection
-  ansible.builtin.set_fact:
-    _dci_mg_since_time: >-
-      {{
-        (dci_must_gather_since_time | trim)
-        if (dci_must_gather_since_time is defined and (dci_must_gather_since_time | trim | length) > 0)
-        else (job_info.job.created_at | to_datetime('%Y-%m-%dT%H:%M:%S.%f')).strftime('%Y-%m-%dT%H:%M:%SZ')
-      }}
-
 - name: "Get logs from OCP deployment"
   environment:
     DCI_MUST_GATHER_IMAGES: >-
       {{ dci_must_gather_images |
         default(["registry.redhat.io/openshift4/ose-must-gather"]) |
         join(" ") }}
-    DCI_MUST_GATHER_SINCE_TIME: "{{ _dci_mg_since_time | default('') }}"
+    DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
     REGISTRY: "{{ dci_local_registry }}"
     PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
   ansible.builtin.shell:
@@ -103,7 +94,7 @@
       {{ dci_must_gather_images |
         default(["registry.redhat.io/openshift4/ose-must-gather"]) |
         join(" ") }}
-    DCI_MUST_GATHER_SINCE_TIME: "{{ _dci_mg_since_time | default('') }}"
+    DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
     REGISTRY: "{{ dci_local_registry }}"
     KUBECONFIG: "{{ hub_kubeconfig_path }}"
     PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin:/usr/local/bin/"

@@ -107,14 +107,6 @@ do
     must_gather_opts="${must_gather_opts} --image=${image}"
 done
 
-if [[ -n "${DCI_MUST_GATHER_SINCE_TIME}" ]]; then
-  if ${oc_path} adm must-gather --help 2>&1 | grep -q '\-\-since-time'; then
-    must_gather_opts="${must_gather_opts} --since-time=${DCI_MUST_GATHER_SINCE_TIME}"
-  else
-    echo "Warning: oc does not support --since-time; collecting full must-gather logs" >&2
-  fi
-fi
-
 must_gather_dir="${log_dir}/${prefix}must_gather"
 mkdir -p "${must_gather_dir}"
 ${oc_path} adm must-gather \
@@ -122,6 +114,54 @@ ${oc_path} adm must-gather \
   ${must_gather_opts} \
   --timeout=15m \
   >/dev/null
+
+# Trim log files to only keep entries since the job start time
+if [ -n "${DCI_MUST_GATHER_SINCE_TIME}" ]; then
+  # Strip sub-second precision and timezone to get a comparable prefix (YYYY-MM-DDTHH:MM:SS)
+  cutoff="${DCI_MUST_GATHER_SINCE_TIME%%.*}"
+  cutoff="${cutoff%%Z}"
+  # Extract "MM DD HH:MM:SS" for syslog-format logs
+  cutoff_syslog="${cutoff:5:2} ${cutoff:8:2} ${cutoff#*T}"
+
+  # Filter log files by timestamp
+  find "${must_gather_dir}" -name '*.log' -type f | while read -r logfile; do
+    first_line=$(head -1 "$logfile")
+    if [[ "$first_line" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}T ]]; then
+      # RFC3339 format (container logs)
+      awk -v cutoff="$cutoff" '
+        substr($0, 1, 19) >= cutoff { found=1 }
+        found { print }
+      ' "$logfile" > "${logfile}.tmp" && mv "${logfile}.tmp" "$logfile"
+    elif [[ "$first_line" =~ ^[A-Z][a-z]{2}\ [0-9]{2}\ [0-9]{2}: ]]; then
+      # Syslog format: "Jun 04 16:18:22.772978 hostname ..."
+      awk -v cutoff="$cutoff_syslog" '
+        BEGIN {
+          split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", m)
+          for (i in m) mon[m[i]] = sprintf("%02d", i)
+        }
+        {
+          ts = mon[$1] " " $2 " " substr($3, 1, 8)
+          if (ts >= cutoff) print
+        }
+      ' "$logfile" > "${logfile}.tmp" && mv "${logfile}.tmp" "$logfile"
+    fi
+  done
+
+  # Handle rotated container logs (filename pattern: N.log.YYYYMMDD-HHMMSS[.gz])
+  # The timestamp is when the file stopped receiving entries.
+  cutoff_rotated="${cutoff:0:4}${cutoff:5:2}${cutoff:8:2}-${cutoff:11:2}${cutoff:14:2}${cutoff:17:2}"
+  find "${must_gather_dir}" -path '*/logs/rotated/*' -type f | while read -r rotated; do
+    rot_ts=$(basename "$rotated" | grep -oE '[0-9]{8}-[0-9]{6}')
+    if [ -n "$rot_ts" ] && [ "$rot_ts" '<' "$cutoff_rotated" ]; then
+      rm -f "$rotated"
+    elif [ -n "$rot_ts" ] && [[ "$rotated" != *.gz ]]; then
+      awk -v cutoff="$cutoff" '
+        substr($0, 1, 19) >= cutoff { found=1 }
+        found { print }
+      ' "$rotated" > "${rotated}.tmp" && mv "${rotated}.tmp" "$rotated"
+    fi
+  done
+fi
 
 # Compress must-gather
 tar \
