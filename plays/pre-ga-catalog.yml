@@ -58,7 +58,7 @@
   ansible.builtin.include_role:
     name: redhatci.ocp.oci_mirror
   vars:
-    om_target_versions: "latest"
+    om_target_versions: "all"
     om_source_index: "{{ dci_pre_ga_catalog }}"
     om_target: "{{ dci_local_registry }}"
     om_allow_insecure_registries: true
