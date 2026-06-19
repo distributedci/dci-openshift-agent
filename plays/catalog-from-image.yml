@@ -83,8 +83,8 @@
             is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
           when: mc_is_file is defined
 
-    - name: "Mirror catalog from 4.20+"
-      when: ocp_version is version('4.20', '>=')
+    - name: "Mirror catalog from 4.14+"
+      when: ocp_version is version('4.14', '>=')
       block:
         - name: Mirror latest operators
           ansible.builtin.include_role:
