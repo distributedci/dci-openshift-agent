@@ -33,7 +33,7 @@
     eco_gotests_test_suites: "{{ eco_test_suites }}"
     eco_gotests_registry_auth_file: "{{ dci_pullsecret_file }}"
     eco_gotests_log_dir: "{{ job_logs.path }}"
-    eco_gotests_kubconfig_dir: "{{ dci_cluster_configs_dir }}"
+    eco_gotests_kubeconfig_dir: "{{ dci_cluster_configs_dir }}"
   ansible.builtin.include_role:
     name: redhatci.ocp.eco_gotests
   when:
