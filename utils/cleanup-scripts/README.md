@@ -35,3 +35,8 @@ This script requires as parameter the dci-credentials in order to verify the sta
 ```ShellSession
 ./clean_stale_dci_containers.sh [--dry-run]
 ```
+
+`clean-quay.sh`: # A shell script that deletes repositories from a Quay image registry if the OCP release directory is not present in the cache_directory.
+```ShellSession
+./clean-quay.sh <bearer_code> <registry_url> [cache_dir]
+```

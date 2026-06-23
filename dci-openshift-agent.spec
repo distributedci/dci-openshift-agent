@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.31.0
+Version:       1.32.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Mon Jun 22 2026 Beto Rdz <josearod@redhat.com> 1.32.EPOCH-1.VERS
+- Bump for clean_namepace role and FQCNs changes in redhatci.ocp collections
+
 * Tue Jun  2 2026 Tony Garcia <tonyg@redhat.com> 1.31.EPOCH-1.VERS
 - Bump for changes in redhatci.ocp collections to support find_available_port
 
