@@ -96,6 +96,7 @@
             om_operators: "{{ mirror_list }}"
             om_allow_insecure_registries: true
             om_auths_file: "{{ dci_pullsecret_file }}"
+            om_remove_signatures: "{{ dci_remove_operator_signatures | default(false) }}"
 
         - name: Append the Image Source file
           ansible.builtin.set_fact:
