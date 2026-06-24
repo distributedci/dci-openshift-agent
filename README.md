@@ -352,6 +352,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_http_store_ip_version       | False    | String  | ipv4                                                           | For ABI installations, either `ipv4` or `ipv6`. Specifies whether the web server container that hosts the discovery ISO will listen on IPv4 or IPv6.
 | dci_pre_ga_catalog              | False    | String  |                                                                | Pre-ga catalog image.
 | dci_mirror_latest_operators     | False    | Boolean | False                                                          | When true, mirrors only the latest/default bundle per operator. When false, mirrors all versions. Available in OCP ≥ 4.14. Default: `false`; for Pre-GA mirroring defaults to `true`.
+| dci_remove_operator_signatures  | False    | Boolean | False                                                          | Removes operator signatures during mirroring. Enable it when operator images are unsigned or not fully cosign-signed.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
