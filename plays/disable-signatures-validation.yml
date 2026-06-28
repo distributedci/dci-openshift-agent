@@ -1,7 +1,7 @@
 ---
 - name: Set directory path for disable signatures validation manifests
   set_fact:
-    signatures_manifests: "{{ customize_extramanifests_path | default ('/tmp/signatures_manifests/' + job_id | default('') ) }}"
+    signatures_manifests: "{{ customize_extramanifests_path | default ((lookup('env', 'TMPDIR') | default('/tmp', true)) + '/signatures_manifests/' + job_id | default('') ) }}"
 
 - name: Create directory for disable signatures validation manifests
   ansible.builtin.file:
