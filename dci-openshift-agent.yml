@@ -35,7 +35,7 @@
 
     # Schedule a new job only if not passed via dci-pipeline
     - name: Schedule a new job
-      dci_job:
+      ansible.legacy.dci_job:
         components: "{{ dci_components }}"
         components_by_query: "{{ dci_components_by_query }}"
         topic: "{{ dci_topic }}"
@@ -83,7 +83,7 @@
         msg: 'Follow the log at: {{ dci_ui_url }}/jobs/{{ hostvars.localhost.job_info.job.id }}/jobStates' # noqa 204
 
     - name: Set DCI tags for the current job
-      dci_job:
+      ansible.legacy.dci_job:
         id: '{{ job_id }}'
         tags: >
           {{
@@ -97,7 +97,7 @@
       no_log: "{{ dci_hide_secrets }}"
 
     - name: Add cluster tag to the current job
-      dci_job:
+      ansible.legacy.dci_job:
         id: '{{ job_id }}'
         tags:
           - cluster:{{ cluster }}
@@ -105,7 +105,7 @@
       no_log: "{{ dci_hide_secrets }}"
 
     - name: Count workarounds
-      dci_job:
+      ansible.legacy.dci_job:
         id: "{{ job_id }}"
         key: "workarounds"
         value: "{{ dci_workarounds | length }}"
@@ -150,7 +150,7 @@
         - "'jumphost' not in group_names"
 
     - name: Pre-run
-      dci_job:
+      ansible.legacy.dci_job:
         id: "{{ job_id }}"
         status: "pre-run"
 
@@ -259,7 +259,7 @@
           ignore_unreachable: true
           block:
             - name: Error
-              dci_job:
+              ansible.legacy.dci_job:
                 id: "{{ hostvars.localhost.job_id }}"
                 status: "error"
               tags: [dci]
@@ -321,7 +321,7 @@
     - running
   tasks:
     - name: Running
-      dci_job:
+      ansible.legacy.dci_job:
         id: "{{ hostvars.localhost.job_id }}"
         status: "running"
       delegate_to: localhost
@@ -404,7 +404,7 @@
           ignore_unreachable: true
           block:
             - name: Failure
-              dci_job:
+              ansible.legacy.dci_job:
                 id: "{{ hostvars.localhost.job_id }}"
                 status: "failure"
               delegate_to: localhost
@@ -779,7 +779,7 @@
       rescue: *teardown_failure
 
     - name: Post-run
-      dci_job:
+      ansible.legacy.dci_job:
         id: "{{ job_id }}"
         status: "post-run"
       delegate_to: localhost
@@ -813,7 +813,7 @@
       rescue: *teardown_error
 
     - name: Success
-      dci_job:
+      ansible.legacy.dci_job:
         id: "{{ job_id }}"
         status: "success"
       delegate_to: localhost

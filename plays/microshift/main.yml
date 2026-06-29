@@ -37,7 +37,7 @@
         error_hook: "{{ hooks_dir }}/error.yml"
 
     - name: Set job tags
-      dci_job:
+      ansible.legacy.dci_job:
         id: "{{ hostvars.localhost.job.id }}"
         tags: "{{ ['agent:microshift'] + hostvars.localhost.dci_tags }}"
 
@@ -53,7 +53,7 @@
   tasks:
     - block:
         - name: Set job status pre-run
-          dci_job:
+          ansible.legacy.dci_job:
             id: "{{ hostvars.localhost.job.id }}"
             status: "pre-run"
           tags: [dci]
@@ -81,14 +81,14 @@
           when: hostvars.localhost.pre_run_hook is file
 
         - name: Set job status running
-          dci_job:
+          ansible.legacy.dci_job:
             id: "{{ hostvars.localhost.job.id }}"
             status: "running"
           tags: [dci]
 
       rescue: &teardown_error
         - name: Set job status error
-          dci_job:
+          ansible.legacy.dci_job:
             id: "{{ hostvars.localhost.job.id }}"
             status: "error"
           tags: [dci]
@@ -129,7 +129,7 @@
 
       rescue: &teardown_failure
         - name: Set job status failure
-          dci_job:
+          ansible.legacy.dci_job:
             id: "{{ hostvars.localhost.job.id }}"
             status: "failure"
           tags: [dci]
@@ -185,7 +185,7 @@
   tasks:
     - block:
         - name: Set job status post-run
-          dci_job:
+          ansible.legacy.dci_job:
             id: "{{ hostvars.localhost.job.id }}"
             status: "post-run"
           tags: [dci]
@@ -288,7 +288,7 @@
     no_proxy: "{{ no_proxy_list }}"
   tasks:
     - name: Set job status success
-      dci_job:
+      ansible.legacy.dci_job:
         id: "{{ hostvars.localhost.job.id }}"
         status: "success"
       tags: [dci]

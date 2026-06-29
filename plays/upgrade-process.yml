@@ -17,14 +17,14 @@
     DCI_CS_URL: "{{ dci_cs_url }}"
   block:
     - name: "Get target topic"
-      dci_topic:
+      ansible.legacy.dci_topic:
         state: search
         name: "{{ topic_target_version }}"
       register: target_topic
       no_log: true
 
     - name: "Get target component"
-      dci_component:
+      ansible.legacy.dci_component:
         state: search
         topic_id: "{{ target_topic.topics[0].id }}"
         type: "ocp"

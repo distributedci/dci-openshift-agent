@@ -19,7 +19,7 @@
       delegate_to: localhost
 
 - name: "Create component for GitOps repository"
-  dci_component:
+  ansible.legacy.dci_component:
     display_name: "GitOps Sites"
     version: "{{ dci_gitops_sites_repo.branch | default('main') }}"
     type: "gitops-sites"
@@ -34,7 +34,7 @@
   delegate_to: localhost
 
 - name: "Attach GitOps Sites component to the job"
-  dci_job_component:
+  ansible.legacy.dci_job_component:
     component_id: "{{ gitops_repo_component.component.id }}"
     job_id: "{{ job_id }}"
   register: job_component_result
@@ -102,14 +102,14 @@
         DCI_CS_URL: "{{ dci_cs_url }}"
       block:
         - name: "Get Hub OCP topic"
-          dci_topic:
+          ansible.legacy.dci_topic:
             state: search
             name: "OCP-{{ hub_ocp_version_short }}"
           register: hub_ocp_topic
           no_log: "{{ dci_hide_secrets | default(true) | bool }}"
 
         - name: "Get Hub OCP component"
-          dci_component:
+          ansible.legacy.dci_component:
             state: search
             topic_id: "{{ hub_ocp_topic.topics[0].id }}"
             type: "ocp"

@@ -65,14 +65,14 @@
         DCI_CS_URL: "{{ dci_cs_url }}"
       block:
         - name: "Get intermediate topic"
-          dci_topic:
+          ansible.legacy.dci_topic:
             state: search
             name: "OCP-{{ major_inter }}"
           register: inter_topic
           no_log: true
 
         - name: "Get intermediate component"
-          dci_component:
+          ansible.legacy.dci_component:
             state: search
             topic_id: "{{ inter_topic.topics[0].id }}"
             type: "ocp"

@@ -16,7 +16,7 @@
 - name: "Create DCI component for pruned catalog"
   vars:
     catalog_version: "{{ dci_prune_index.split(':') | last | regex_replace('_.*', '') }}"
-  dci_component:
+  ansible.legacy.dci_component:
     display_name: "{{ dci_prune_index | regex_replace('.*/(.*):([^_]+).*', '\\1:\\2') }}"
     version: "{{ catalog_version }}"
     team_id: "{{ job_info['job']['team_id'] }}"
@@ -27,7 +27,7 @@
   register: index_component
 
 - name: "Attach pruned catalog to the component's job"
-  dci_job_component:
+  ansible.legacy.dci_job_component:
     component_id: " {{ index_component.component.id }} "
     job_id: " {{ job_id }} "
   register: job_component_result
