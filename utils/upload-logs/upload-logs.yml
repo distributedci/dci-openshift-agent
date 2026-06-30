@@ -22,10 +22,6 @@
     register: files_to_upload
 
   - name: "Upload files to DCI Control Server"
-    environment:
-      - DCI_CLIENT_ID: "{{ dci_client_id }}"
-      - DCI_API_SECRET: "{{ dci_api_secret }}"
-      - DCI_CS_URL: "{{ dci_cs_url }}"
     dci_file:
       path: "{{ item.path }}"
       name: "{{ item.path | basename }}"
