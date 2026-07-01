@@ -93,7 +93,7 @@
             om_target_versions: "{{ dci_mirror_latest_operators | default(false) | bool | ternary('latest', 'all') }}"
             om_source_index: "{{ dci_prune_index }}"
             om_target: "{{ dci_local_registry }}"
-            om_operators: "{{ mirror_list }}"
+            om_operators: "{{ dict((mirror_list.keys() | list) | zip([{}] * mirror_list | length)) }}"
             om_allow_insecure_registries: true
             om_auths_file: "{{ dci_pullsecret_file }}"
             om_remove_signatures: "{{ dci_remove_operator_signatures | default(false) }}"
