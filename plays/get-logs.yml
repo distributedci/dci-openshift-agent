@@ -103,6 +103,7 @@
       {{ scripts_dir.files[0].path }}/get-ocp-logs
       {{ job_logs.path }}
   ignore_errors: true
+  delegate_to: jumphost
   when:
     - (install_type | default('ipi')) in ['acm']
 
