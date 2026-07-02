@@ -1,7 +1,5 @@
 ---
 - name: "Check cluster operators status"
-  vars:
-    status_check: Degraded
   block:
     - name: "Check if all cluster-operators are running correctly"
       vars:
@@ -30,11 +28,22 @@
   rescue:
     - name: "Some Cluster operators are degraded"
       vars:
-        degraded_operators: "{{ clusteroperator_info | json_query(query) }}"
-        query: "resources[?status.conditions[?type=='{{ status_check }}' && status=='True']].
-                {name: metadata.name, message: status.conditions[?type=='{{ status_check }}'].message}"
+        degraded_operators: "{{ clusteroperator_info | json_query(degraded_query) }}"
+        degraded_query: >-
+          resources[?status.conditions[?type=='Degraded' && status=='True']].
+          {name: metadata.name, message: status.conditions[?type=='Degraded'].message}
       ansible.builtin.fail:
-        msg: "The following Cluster Operators are degraded {{ degraded_operators }}"
+        msg: "The following Cluster Operators are degraded: {{ degraded_operators }}"
+      when: degraded_operators | length > 0
+
+    - name: "Some Cluster operators are not available"
+      vars:
+        unavailable_operators: "{{ clusteroperator_info | json_query(unavailable_query) }}"
+        unavailable_query: >-
+          resources[?status.conditions[?type=='Available' && status!='True']].
+          {name: metadata.name, message: status.conditions[?type=='Available'].message}
+      ansible.builtin.fail:
+        msg: "The following Cluster Operators are not available: {{ unavailable_operators }}"
 
 - name: "Check that Worker nodes are ready"
   kubernetes.core.k8s_info:
