@@ -56,6 +56,7 @@
     - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
 
   block:
+
     - name: Check if IDMS is supported
       kubernetes.core.k8s_info:
         api_version: apiextensions.k8s.io/v1
@@ -154,24 +155,6 @@
           - hostvars.jumphost.webserver_url | string
           - (hostvars.jumphost.webserver_url | urlsplit('scheme')) in ('http', 'https',)
 
-    - name: "Mirror OCP release Hub artifacts - Disconnected"
-      ansible.builtin.include_role:
-        name: redhatci.ocp.mirror_ocp_release
-      vars:
-        mor_version: "{{ hub_version }}"
-        mor_pull_url: "{{ hub_pull_url }}"
-        mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
-        mor_webserver_url: "{{ hostvars.jumphost.webserver_url | default(None) }}"
-        mor_registry_url: "{{ hub_registry | urlsplit('netloc') }}"
-        mor_registry_path: "{{ hub_ocp_release_path }}"
-        mor_auths_file: "{{ dci_pullsecret_file }}"
-        mor_force: "{{ (dci_force_mirroring | default(false)) | bool }}"
-        mor_mirror_disk_images: false
-        mor_mirror_container_images: "{{ dci_disconnected | default(False) | bool }}"
-        mor_build: "{{ build }}"
-        mor_oc: "{{ oc_tool_path }}"
-        mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
-
     - name: "Mirror OCP release Spoke artifacts - Disconnected"
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_ocp_release
@@ -190,6 +173,13 @@
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
         mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
+
+    - name: "Set facts for install via ACM - disconnected"
+      ansible.builtin.set_fact:
+        acm_metal_iso_location: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
+        acm_rootfs_url: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
+        acm_release_image: "{{ ocp_release_data['container_image'] | quote }}"
+        dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
 
     - name: Apply IDMS from target version to the Hub cluster
       vars:
@@ -210,6 +200,39 @@
         check_wait_retries: 30
         check_wait_delay: 10
 
+    - name: "Get Hub Image Source Type"
+      kubernetes.core.k8s_info:
+        api_version: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('config.openshift.io/v1', 'operator.openshift.io/v1alpha1') }}"
+        kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
+      register: hub_is
+      no_log: true
+
+    - name: "Set hub mirrors"
+      vars:
+        hub_mirrors_type: "resources[*].spec.*[*].{mirrors: mirrors, source: source}"
+      ansible.builtin.set_fact:
+        hub_mirrors: "{{ hub_is | json_query(hub_mirrors_type) | flatten }}"
+      when: hub_is | length > 0
+      no_log: true
+
+    - name: "Mirror OCP release Hub artifacts - Disconnected"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_ocp_release
+      vars:
+        mor_version: "{{ hub_version }}"
+        mor_pull_url: "{{ hub_pull_url }}"
+        mor_cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
+        mor_webserver_url: "{{ hostvars.jumphost.webserver_url | default(None) }}"
+        mor_registry_url: "{{ hub_registry | urlsplit('netloc') }}"
+        mor_registry_path: "{{ hub_ocp_release_path }}"
+        mor_auths_file: "{{ dci_pullsecret_file }}"
+        mor_force: "{{ (dci_force_mirroring | default(false)) | bool }}"
+        mor_mirror_disk_images: false
+        mor_mirror_container_images: "{{ dci_disconnected | default(False) | bool }}"
+        mor_build: "{{ build }}"
+        mor_oc: "{{ oc_tool_path }}"
+        mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
+
     - name: Convert Image Source to registries.conf format
       vars:
         img_src_paths:
@@ -223,13 +246,6 @@
         tasks_from: image-sources
       when:
         - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance','sno', 'SNO', 'HostedControlPlane', 'HighAvailable']
-
-    - name: "Set facts for install via ACM - disconnected"
-      ansible.builtin.set_fact:
-        acm_metal_iso_location: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}"
-        acm_rootfs_url: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
-        acm_release_image: "{{ ocp_release_data['container_image'] | quote }}"
-        dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
 
     - name: "Mirror must gather images"
       ansible.builtin.include_role:
