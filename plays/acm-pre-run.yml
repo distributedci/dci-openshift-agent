@@ -172,7 +172,7 @@
         mor_oc: "{{ oc_tool_path }}"
         mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
 
-    - name: "Mirror OCP release artifacts - Disconnected"
+    - name: "Mirror OCP release Spoke artifacts - Disconnected"
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_ocp_release
       vars:
@@ -190,6 +190,25 @@
         mor_build: "{{ build }}"
         mor_oc: "{{ oc_tool_path }}"
         mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
+
+    - name: Apply IDMS from target version to the Hub cluster
+      vars:
+        cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
+      kubernetes.core.k8s:
+        state: present
+        src: "{{ cache_dir }}/{{ version }}/imagesource.yaml"
+
+    - name: "Wait 10 seconds for IMDS changes to be applied"
+      pause:
+        seconds: 10
+
+    - name: "Check MachineConfigPool status changes"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: 30
+        check_wait_delay: 10
 
     - name: Convert Image Source to registries.conf format
       vars:
