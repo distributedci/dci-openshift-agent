@@ -1707,6 +1707,20 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/advanced-cluster-security/rhacs-rhel9-operator
     source: registry.redhat.io/advanced-cluster-security/rhacs-rhel9-operator
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift5
+    source: registry.redhat.io/openshift5
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/rhceph-dev
+    source: quay.io/rhceph-dev
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/quay
+    source: registry.redhat.io/quay
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift5
+    source: quay.io/prega/test/openshift5
+
+
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
