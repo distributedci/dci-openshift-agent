@@ -176,9 +176,10 @@
 - name: "Disable image signatures in > 4.21"
   ansible.builtin.include_tasks: disable-signatures-validation.yml
   when:
-    - version is version('4.22', '>=')
-    - build != 'ga'
     - (install_type | default('ipi')) in ['ipi', 'abi', 'sno']
+    - >-
+      (dci_disable_signatures_validation | default(false) | bool) or
+      (version is version('4.22', '>=') and build != 'ga')
 
 - name: "Set password for core user"
   ansible.builtin.include_tasks: set-core-user-pass.yml
