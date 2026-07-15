@@ -354,7 +354,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_mirror_latest_operators     | False    | Boolean | False                                                          | When true, mirrors only the latest/default bundle per operator. When false, mirrors all versions. Available in OCP ≥ 4.14. Default: `false`; for Pre-GA mirroring defaults to `true`.
 | dci_remove_operator_signatures  | False    | Boolean | False                                                          | Removes operator signatures during mirroring. Enable it when operator images are unsigned or not fully cosign-signed.
 | dci_disable_signatures_validation| False   | Boolean | False                                                          | Disable image signature validation on cluster nodes. Set to `true` in 4.22+.
-
+| dci_prune_prega_catalog         | False    | Boolean | False                                                          | When `dci_disconnected` is true, prunes `dci_pre_ga_catalog` to the operators in `opm_mirror_list` and `dci_operators`, then mirrors and uses that pruned catalog instead of the full Pre-GA catalog. List all required operators and their dependencies.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
