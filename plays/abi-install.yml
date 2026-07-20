@@ -239,6 +239,16 @@
         name: redhatci.ocp.monitor_agent_based_installer
 
   always:
+    - name: Eject Media
+      ansible.builtin.include_role:
+        name: "redhatci.ocp.vendors.{{ hostvars[target_host]['vendor'] | lower }}"
+        tasks_from: eject.yml
+      loop: "{{ groups['nodes'] | default([]) }}"
+      loop_control:
+        loop_var: target_host
+      when:
+        - "'vendor' in hostvars[target_host]"
+
     - name: "Remove http_store pod"
       environment:
         TMPDIR: ""
@@ -265,14 +275,4 @@
       become: true
       when:
         - dci_ephemeral_http_store | default (true) | bool
-
-    - name: Eject Media
-      ansible.builtin.include_role:
-        name: "redhatci.ocp.vendors.{{ hostvars[target_host]['vendor'] | lower }}"
-        tasks_from: eject.yml
-      loop: "{{ groups['nodes'] | default([]) }}"
-      loop_control:
-        loop_var: target_host
-      when:
-        - "'vendor' in hostvars[target_host]"
 ...
