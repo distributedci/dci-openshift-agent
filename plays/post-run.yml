@@ -30,9 +30,6 @@
         mode: "0644"
       loop: "{{ job_info.outputs | dict2items }}"
 
-    - name: Get the differences from the previous DCI job
-      ansible.builtin.shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
-      ignore_errors: true
 
 - name: Save job info in the cluster
   when: dci_cluster_metadata | default(true) | bool
