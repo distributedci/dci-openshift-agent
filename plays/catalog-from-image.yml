@@ -44,6 +44,13 @@
             mc_is_type: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('idms', 'icsp') }}"
             mc_continue_on_error: "{{ dci_continue_on_mirror_error  | default(false) }}"
 
+        - name: Rename IDMS manifest according catalog source name
+          ansible.builtin.shell: >
+            set -o pipefail;
+            sed -e 's/name:.*/name: catalog-{{ opm_catalog_source_name }}/'
+            "{{ mc_is_file.path }}"
+          changed_when: false
+
         - name: "Append the Image Source file"
           ansible.builtin.set_fact:
             is_files: "{{ is_files | default([]) + [mc_is_file.path] }}"
@@ -63,6 +70,13 @@
             om_allow_insecure_registries: true
             om_auths_file: "{{ dci_pullsecret_file }}"
             om_remove_signatures: "{{ dci_remove_operator_signatures | default(false) }}"
+
+        - name: Rename IDMS manifest according catalog source name
+          ansible.builtin.shell: >
+            set -o pipefail;
+            sed -e 's/name:.*/name: catalog-{{ opm_catalog_source_name }}/'
+            "{{ om_output_dir + '/idms-oc-mirror.yaml' }}"
+          changed_when: false
 
         - name: Append the Image Source file
           ansible.builtin.set_fact:
