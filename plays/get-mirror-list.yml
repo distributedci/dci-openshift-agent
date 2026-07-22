@@ -26,7 +26,7 @@
 
 - name: "Cleanup operators list"
   ansible.builtin.set_fact:
-    mirror_list: "{{ mirror_list | dict2items | unique | items2dict }}"
+    mirror_list: "{{ mirror_list | unique }}"
 
 - name: "Operators to be mirrored"
   ansible.builtin.debug:
