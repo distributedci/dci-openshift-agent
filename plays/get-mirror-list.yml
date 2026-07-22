@@ -5,7 +5,7 @@
 
 - name: "Get operators defined in dci_operators"
   ansible.builtin.set_fact:
-    mirror_list: "{{ mirror_list | combine({ item: {} }) }}"
+    mirror_list: "{{ mirror_list | default({}) | combine({ item: {} }) }}"
   loop: "{{ dci_operators | selectattr('catalog_source', 'equalto', opm_catalog_source_name)  | map(attribute='name') | list }}"
   when:
 
