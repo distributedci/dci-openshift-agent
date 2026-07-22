@@ -20,14 +20,12 @@
     - opm_mirror_list | type_debug == "dict"
 
 - name: "Get the operators to mirror from a list"
-  vars:
-    mirr_list: "{{ dict(opm_mirror_list | zip([None] * opm_mirror_list | length)) }}"
   ansible.builtin.set_fact:
-    mirror_list: "{{ mirror_list | combine(mirr_list) }}"
+    mirror_list: "{{ mirror_list + (opm_mirror_list | default([])) }}"
   when:
     - dci_disconnected | default(false) | bool
+    - opm_mirror_list is defined
     - opm_mirror_list | type_debug == "list"
-    - opm_mirror_list | length
 
 - name: "Cleanup operators list"
   ansible.builtin.set_fact:
