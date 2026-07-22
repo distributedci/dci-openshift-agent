@@ -8,7 +8,6 @@
     mirror_list: "{{ mirror_list | default({}) | combine({ item: {} }) }}"
   loop: "{{ dci_operators | selectattr('catalog_source', 'equalto', opm_catalog_source_name)  | map(attribute='name') | list }}"
   when:
-
     - dci_operators | default([]) | length
 
 - name: "Get the operators to mirror from a dict"
