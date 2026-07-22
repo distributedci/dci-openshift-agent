@@ -1,8 +1,4 @@
 ---
-- name: Set mirror variable
-  ansible.builtin.set_fact:
-    mirror_list: {}
-
 - name: "Get operators defined in dci_operators"
   ansible.builtin.set_fact:
     mirror_list: "{{ mirror_list | default({}) | combine({ item: {} }) }}"
