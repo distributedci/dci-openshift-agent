@@ -3,7 +3,7 @@
 
 - name: "Set pruned Pre-GA catalog destination in local registry"
   ansible.builtin.set_fact:
-    dci_pre_ga_catalog_pruned: >-
+    pre_ga_catalog_pruned: >-
       {{ dci_local_registry }}/{{
         dci_pre_ga_catalog | regex_replace('^[^/]+/', '')
       }}-pruned
@@ -13,7 +13,7 @@
     name: redhatci.ocp.prune_catalog
   vars:
     pc_source_catalog: "{{ dci_pre_ga_catalog }}"
-    pc_destination_catalog: "{{ dci_pre_ga_catalog_pruned }}"
+    pc_destination_catalog: "{{ pre_ga_catalog_pruned }}"
     pc_operators: "{{ mirror_list }}"
     pc_expire: "{{ dci_catalogimage_expire | default(true) }}"
     pc_expire_time: "{{ dci_catalog_image_expiration | default('360h') }}"
@@ -22,13 +22,13 @@
 
 - name: "Check if the pruned catalog was built"
   containers.podman.podman_image_info:
-    name: "{{ dci_pre_ga_catalog_pruned }}"
+    name: "{{ pre_ga_catalog_pruned }}"
   register: pruned_info
 
 - name: "Push and validate the pruned Pre-GA catalog"
   ansible.builtin.include_tasks: push-validate-catalog.yml
   vars:
-    pvc_catalog: "{{ dci_pre_ga_catalog_pruned }}"
+    pvc_catalog: "{{ pre_ga_catalog_pruned }}"
     pvc_fail_on_missing: true
     pvc_remove_local: true
   when:
