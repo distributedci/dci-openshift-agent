@@ -4,6 +4,9 @@
     mirror_list: "{{ mirror_list | default({}) | combine({ item: {} }) }}"
   loop: "{{ dci_operators | selectattr('catalog_source', 'equalto', opm_catalog_source_name)  | map(attribute='name') | list }}"
   when:
+    - dci_disconnected | default(false) | bool
+    - dci_operators | default([]) | length
+    - dci_pre_ga_catalog is undefined
 
 - name: "Get the operators to mirror from a dict"
   ansible.builtin.set_fact:
