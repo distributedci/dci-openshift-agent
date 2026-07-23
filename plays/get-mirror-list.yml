@@ -1,35 +1,34 @@
----
 - name: Set mirror variable
   ansible.builtin.set_fact:
     mirror_list: {}
 
 - name: "Get operators defined in dci_operators"
   ansible.builtin.set_fact:
-    mirror_list: "{{ mirror_list | default({}) | combine({ item: {} }) }}"
+    mirror_list: "{{ mirror_list | combine({ item: {} }) }}"
   loop: "{{ dci_operators | selectattr('catalog_source', 'equalto', opm_catalog_source_name)  | map(attribute='name') | list }}"
   when:
-    - dci_disconnected | default(false) | bool
     - dci_operators | default([]) | length
 
 - name: "Get the operators to mirror from a dict"
   ansible.builtin.set_fact:
-    mirror_list: "{{ mirror_list + (opm_mirror_list | default({})).keys() | list }}"
+    mirror_list: "{{ mirror_list | combine(opm_mirror_list) | default({}) }}"
   when:
     - dci_disconnected | default(false) | bool
-    - opm_mirror_list is defined
     - opm_mirror_list | type_debug == "dict"
 
 - name: "Get the operators to mirror from a list"
+  vars:
+    mirr_list: "{{ dict(opm_mirror_list | zip([None] * opm_mirror_list | length)) }}"
   ansible.builtin.set_fact:
-    mirror_list: "{{ mirror_list + (opm_mirror_list | default([])) }}"
+    mirror_list: "{{ mirror_list | combine(mirr_list) }}"
   when:
     - dci_disconnected | default(false) | bool
-    - opm_mirror_list is defined
     - opm_mirror_list | type_debug == "list"
+    - opm_mirror_list | length
 
 - name: "Cleanup operators list"
   ansible.builtin.set_fact:
-    mirror_list: "{{ mirror_list | unique }}"
+    mirror_list: "{{ mirror_list | dict2items | unique | items2dict }}"
 
 - name: "Operators to be mirrored"
   ansible.builtin.debug:
