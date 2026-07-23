@@ -11,7 +11,7 @@
 - name: "Required operators not found"
   ansible.builtin.fail:
     msg: "All the required operators were not found"
-  when: prune_count.stdout | int != mirror_list | length
+  when: operators_count | int != mirror_list | length
 
 - name: "Create DCI component for pruned catalog"
   vars:
