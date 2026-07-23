@@ -1,0 +1,62 @@
+---
+- name: "Push the new index image to the local registry"
+  containers.podman.podman_image:
+    name: "{{ pvc_catalog }}"
+    push: true
+    auth_file: "{{ dci_pullsecret_file | default(omit) }}"
+  register: cat_push
+  retries: 3
+  delay: 10
+  until: cat_push is succeeded
+
+- name: "Get operators available in the pruned catalog"
+  ansible.builtin.shell:
+    cmd: >
+      set -eo pipefail;
+      {{ opm_tool_path }}
+      --skip-tls-verify=true
+      render {{ pvc_catalog }} |
+      jq -r 'select(.schema == "olm.package") | .name' |
+      sort -u
+  environment:
+    DOCKER_CONFIG: "{{ docker_conf.path }}"
+  register: packages_list
+  retries: 3
+  delay: 10
+  until: packages_list.rc == 0
+  changed_when: false
+
+- name: "Extract package names from opm render output"
+  ansible.builtin.set_fact:
+    pruned_packages: "{{ _pvc_packages }}"
+    operators_count: "{{ _pvc_packages | length }}"
+  vars:
+    _pvc_packages: >-
+      {{
+        packages_list.stdout_lines
+        | map('trim')
+        | reject('equalto', '')
+        | unique
+        | list
+      }}
+
+- name: "List operators available in the pruned catalog"
+  ansible.builtin.debug:
+    var: pruned_packages
+
+- name: "Fail if required operators are missing from the pruned catalog"
+  ansible.builtin.fail:
+    msg: >-
+      Operators missing from pruned catalog {{ pvc_catalog }}:
+      {{ missing_ops | join(', ') }}
+  vars:
+    missing_ops: "{{ mirror_list.keys() | list | difference(pruned_packages) }}"
+  when:
+    - pvc_fail_on_missing | default(false) | bool
+    - missing_ops | length > 0
+
+- name: "Remove local index image"
+  containers.podman.podman_image:
+    name: "{{ pvc_catalog }}"
+    state: absent
+  when: pvc_remove_local | default(false) | bool

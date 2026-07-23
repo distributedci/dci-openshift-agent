@@ -2,12 +2,12 @@
 - name: "Loop control for pruning"
   vars:
     index_tag: "v{{ ocp_major }}.{{ ocp_minor }}_{{ ansible_date_time.iso8601_basic }}"
-  set_fact:
+  ansible.builtin.set_fact:
     fallback_counter: "{{ fallback_counter | int + 1 }}"
     dci_prune_index: "{{ dci_local_registry }}{{ opm_local_registry_path }}:{{ index_tag }}"
 
 - name: "Prune a catalog"
-  include_role:
+  ansible.builtin.include_role:
     name: redhatci.ocp.prune_catalog
   vars:
     pc_source_catalog: "{{ operators_index | default('registry.redhat.io/redhat/redhat-operator-index:v' + ocp_major + '.' + ocp_minor) }}"
@@ -24,91 +24,19 @@
   register: pruned_info
 
 - name: "Set index found flag"
-  set_fact:
+  ansible.builtin.set_fact:
     index_found: "{{ pruned_info.images | length == 1 }}"
     operators_count: 0
 
-- name: Push index
+- name: "Push and validate the pruned catalog"
+  ansible.builtin.include_tasks: push-validate-catalog.yml
+  vars:
+    pvc_catalog: "{{ dci_prune_index }}"
+    pvc_remove_local: true
   when:
     - index_found
-  block:
-    - name: "Push the new index image to the local registry"
-      shell:
-        cmd: >
-          podman push
-          {{ dci_prune_index }}
-          {% if dci_pullsecret_file is defined %}
-          --authfile {{ dci_pullsecret_file }}
-          {% endif %}
-      register: cat_push
-      retries: 3
-      delay: 10
-      until: cat_push.rc == 0
 
-    - name: "Use the grpc API to explore the pruned catalog index"
-      shell:
-        cmd: >
-          podman run
-          --rm
-          --detach
-          --publish 50051
-          {{ dci_prune_index }}
-      register: grpc_container_id
-
-    - name: "Get dynamic port assigned to grpc"
-      shell:
-        cmd: >-
-          set -o pipefail;
-          podman inspect {{ grpc_container_id.stdout }} |
-          jq -r '.[].NetworkSettings.Ports."50051/tcp"[].HostPort'
-      register: grpc_port
-
-    - name: "Get the operators available in the pruned catalog"
-      shell:
-        cmd: >-
-          set -o pipefail;
-          /usr/local/bin/grpcurl -plaintext
-          jumphost:{{ grpc_port.stdout }}
-          api.Registry/ListPackages |
-          jq ".name"
-      register: packages_list
-      retries: 3
-      delay: 10
-      until: packages_list.rc == 0
-
-    - name: "List operators available in the pruned catalog"
-      debug:
-        msg: "{{ packages_list.stdout }}"
-
-    - name: "Get the number of operators in the pruned catalog"
-      shell:
-        cmd: >
-          set -o pipefail;
-          grpcurl -plaintext
-          jumphost:{{ grpc_port.stdout }}
-          api.Registry/ListPackages |
-          jq -s length
-      register: prune_count
-
-    - name: "Set pruned operator count"
-      set_fact:
-        operators_count: "{{ prune_count.stdout }}"
-
-    - name: "Remove grpc-api container"
-      shell:
-        cmd: >
-          podman stop
-          --ignore
-          {{ grpc_container_id.stdout }}
-
-    - name: "Remove local index image"
-      shell:
-        cmd: >
-          podman rmi
-          --force
-          {{ dci_prune_index }}
-
-  # Adjust OCP version for next prune fallback (5 and 4.x steps down; 5.0 to 4.23)
+# Adjust OCP version for next prune fallback (5 and 4.x steps down; 5.0 to 4.23)
 - name: "Set new minor version when operators are missing"
   ansible.builtin.set_fact:
     ocp_major: "{{ (_next_ver | trim).split('.')[0] }}"
@@ -126,7 +54,7 @@
       {%- endif -%}
 
 - name: "Prune a catalog - Fallback"
-  include_tasks: prune-catalog.yml
+  ansible.builtin.include_tasks: prune-catalog.yml
   when:
     - fallback_counter | int <= 3
     - operators_count | int != mirror_list | length

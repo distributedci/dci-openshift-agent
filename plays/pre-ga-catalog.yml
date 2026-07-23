@@ -54,12 +54,18 @@
     - _skopeo_prega_catalog is defined
     - _skopeo_prega_catalog.rc == 0
 
+- name: "Prune Pre-GA catalog image"
+  ansible.builtin.include_tasks: prune-pre-ga-catalog.yml
+  when:
+    - dci_disconnected | default(false) | bool
+    - dci_prune_prega_catalog | default(false) | bool
+
 - name: Mirror Pre-GA latest operators
   ansible.builtin.include_role:
     name: redhatci.ocp.oci_mirror
   vars:
     om_target_versions: "{{ dci_mirror_latest_operators | default(true) | bool | ternary('latest', 'all') }}"
-    om_source_index: "{{ dci_pre_ga_catalog }}"
+    om_source_index: "{{ (pre_ga_catalog_pruned is defined) | ternary(pre_ga_catalog_pruned, dci_pre_ga_catalog) }}"
     om_target: "{{ dci_local_registry }}"
     om_allow_insecure_registries: true
     om_auths_file: "{{ dci_pullsecret_file }}"
