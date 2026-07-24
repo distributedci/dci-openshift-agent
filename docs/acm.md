@@ -138,6 +138,32 @@ Here the links to the documention for each of the manifests required:
 - [BMH-Secret](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-create-bmc-secret)
 - [ClusterInstance](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-render-manifests)
 
+#### Facts available for spoke deployments
+
+These facts are set before spoke installations. Use them in ClusterInstance templates, inventory Jinja, or later ACM plays.
+
+| Fact                       | Disconnected | Connected | Purpose
+| -------------------------- | ------------ | --------- | -------
+| `hub_version`              | Yes          | Yes       | Full Hub OCP version
+| `hub_ocp_version`          | Yes          | Yes       | Hub version with any pre-release suffix stripped
+| `hub_ocp_version_short`    | Yes          | Yes       | Hub major.minor (e.g. `4.16`)
+| `spoke_version`            | Yes          | Yes       | Full spoke OCP version from the DCI job `version` component
+| `spoke_ocp_version`        | Yes          | Yes       | Spoke version with any pre-release suffix stripped
+| `spoke_ocp_version_short`  | Yes          | Yes       | Spoke major.minor (e.g. `4.16`)
+| `dci_pullsecret`           | Yes          | Yes       | Merged pull-secret data
+| `dci_pullsecret_file`      | Yes          | Yes       | Path to the merged pull-secret auth file used for mirroring and registry auth
+| `ocp_release_path`         | Yes          | No        | Registry path for the spoke OCP release
+| `hub_ocp_release_path`     | Yes          | No        | Registry path for the Hub OCP release
+| `hub_pull_url`             | Yes          | No        | Hub OCP release pull URL from the matching DCI OCP component (when found)
+| `hub_registry`             | Yes          | No        | Hub mirror registry as `docker://<first-mirror>` from Hub IDMS/ICSP
+| `hub_mirrors`              | Yes          | No        | List of Hub `{source, mirrors}` entries from IDMS/ICSP; used to build spoke registry config
+| `dci_local_registry`       | Yes          | No        | Hub registry host:port; target for mirrored images
+| `acm_metal_iso_location`   | Yes          | Yes       | RHCOS metal ISO URL for ACM install
+| `acm_rootfs_url`           | Yes          | Yes       | RHCOS live rootfs URL for PXE/assisted boot
+| `acm_release_image`        | Yes          | Yes       | Spoke OCP release container image pullspec used by ACM/MCE installation
+| `utils_acm_registries`     | Yes          | No        | `registries.conf`-style content combining Hub and spoke image mirrors (from `redhatci.ocp.acm.utils` image-sources)
+
+> Spoke install facts (`acm_*`, registry/mirror facts) are only set when `acm_cluster_type` is one of: `sno`, `ztp-spoke`, `SNO`, `HostedControlPlane`, `HighAvailable`.
 
 ## Pipeline Examples
 

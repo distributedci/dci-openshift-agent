@@ -47,6 +47,39 @@
   ignore_errors: true
   delegate_to: localhost
 
+- name: Get hub ClusterVersion
+  kubernetes.core.k8s_info:
+    api_version: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+  register: hub_clusterversion
+  retries: 3
+  delay: 10
+  until: hub_clusterversion.resources | default([]) | length > 0
+  no_log: "{{ dci_hide_secrets | default(true) | bool }}"
+
+- name: Set hub release facts from Hub ClusterVersion
+  vars:
+    completed_ver_query: "history[?state=='Completed'] | [0].version"
+    hub_completed_version: "{{ hub_clusterversion.resources[0].status | json_query(completed_ver_query) }}"
+    hub_desired_version: "{{ hub_clusterversion.resources[0].status.desired.version | default('') }}"
+    hub_version_full: "{{ hub_desired_version | default(hub_completed_version, true) }}"
+    hub_ocp_version: "{{ hub_version_full.split('-')[0] }}"
+    hub_ocp_version_short: "{{ hub_ocp_version.split('.')[:2] | join('.') }}"
+  ansible.builtin.set_fact:
+    hub_version: "{{ hub_version_full }}"
+    hub_ocp_version: "{{ hub_ocp_version }}"
+    hub_ocp_version_short: "{{ hub_ocp_version_short }}"
+
+- name: Set spoke release facts from version
+  vars:
+    spoke_ocp_version: "{{ version.split('-')[0] }}"
+    spoke_ocp_version_short: "{{ spoke_ocp_version.split('.')[:2] | join('.') }}"
+  ansible.builtin.set_fact:
+    spoke_version: "{{ version }}"
+    spoke_ocp_version: "{{ spoke_ocp_version }}"
+    spoke_ocp_version_short: "{{ spoke_ocp_version_short }}"
+
 - name: "Get cluster pull-secret"
   ansible.builtin.include_tasks: get-cluster-pullsecret.yml
 
@@ -54,7 +87,6 @@
   when:
     - dci_disconnected | default(false) | bool
     - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
-
   block:
 
     - name: Check if IDMS is supported
@@ -71,30 +103,6 @@
         kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
       register: hub_is
       no_log: true
-
-    - name: Get hub ClusterVersion
-      kubernetes.core.k8s_info:
-        api_version: config.openshift.io/v1
-        kind: ClusterVersion
-        name: version
-      register: hub_clusterversion
-      retries: 3
-      delay: 10
-      until: hub_clusterversion.resources | default([]) | length > 0
-      no_log: "{{ dci_hide_secrets | default(true) | bool }}"
-
-    - name: Set hub release facts from Hub ClusterVersion
-      vars:
-        completed_ver_query: "history[?state=='Completed'] | [0].version"
-        hub_completed_version: "{{ hub_clusterversion.resources[0].status | json_query(completed_ver_query) }}"
-        hub_desired_version: "{{ hub_clusterversion.resources[0].status.desired.version | default('') }}"
-        hub_version_full: "{{ hub_desired_version | default(hub_completed_version, true) }}"
-        hub_ocp_version: "{{ hub_version_full.split('-')[0] }}"
-        hub_ocp_version_short: "{{ hub_ocp_version.split('.')[:2] | join('.') }}"
-      ansible.builtin.set_fact:
-        hub_version: "{{ hub_version_full }}"
-        hub_ocp_version: "{{ hub_ocp_version }}"
-        hub_ocp_version_short: "{{ hub_ocp_version_short }}"
 
     - name: "Get Hub OCP component from DCI"
       environment:
@@ -121,7 +129,7 @@
     - name: "Set the path for the OCP release"
       ansible.builtin.set_fact:
         ocp_release_path: >-
-          {{ acm_local_repo | default('ocp-' + version.split('.')[:2] | join('.') + '/' + version, true) }}
+          {{ acm_local_repo | default('ocp-' + spoke_ocp_version_short + '/' + spoke_version, true) }}
         hub_ocp_release_path: "{{ acm_local_repo | default('ocp-' + hub_ocp_version_short + '/' + hub_version, true) }}"
 
     - name: "Get Hub OCP pull URL"
