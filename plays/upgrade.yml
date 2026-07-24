@@ -72,78 +72,82 @@
         check_wait_retries: "{{ 16 * (dci_control_plane_size + dci_compute_size) | int + 1 }}"
         check_wait_delay: 30
 
-- name: Deactivate the upgrade of worker nodes - EUS
-  kubernetes.core.k8s:
-    definition:
-      kind: MachineConfigPool
-      metadata:
-        name: worker
-      spec:
-        paused: true
+- name: Upgrade process
   when:
-    - upgrade_eus | default(false) | bool
+    - install_type not in ['acm']
+  block:
+    - name: Deactivate the upgrade of worker nodes - EUS
+      kubernetes.core.k8s:
+        definition:
+          kind: MachineConfigPool
+          metadata:
+            name: worker
+          spec:
+            paused: true
+      when:
+        - upgrade_eus | default(false) | bool
 
-- name: Running the Intermediate upgrade - EUS
-  vars:
-    target_version: "{{ version_inter }}"
-    version_pull_url: "{{ image_inter }}"
-  ansible.builtin.include_tasks: upgrade-process.yml
-  when:
-    - upgrade_eus | default(false) | bool
+    - name: Running the Intermediate upgrade - EUS
+      vars:
+        target_version: "{{ version_inter }}"
+        version_pull_url: "{{ image_inter }}"
+      ansible.builtin.include_tasks: upgrade-process.yml
+      when:
+        - upgrade_eus | default(false) | bool
 
-- name: Running the upgrade
-  vars:
-    target_version: "{{ version }}"
-  ansible.builtin.include_tasks: upgrade-process.yml
+    - name: Running the upgrade
+      vars:
+        target_version: "{{ version }}"
+      ansible.builtin.include_tasks: upgrade-process.yml
 
-- name: Reactivate the upgrade of worker nodes - EUS
-  kubernetes.core.k8s:
-    definition:
-      kind: MachineConfigPool
-      metadata:
-        name: worker
-      spec:
-        paused: false
-  when:
-    - upgrade_eus | default(false) | bool
+    - name: Reactivate the upgrade of worker nodes - EUS
+      kubernetes.core.k8s:
+        definition:
+          kind: MachineConfigPool
+          metadata:
+            name: worker
+          spec:
+            paused: false
+      when:
+        - upgrade_eus | default(false) | bool
 
-- name: Wait for Worker's MCPs reconciliation
-  ansible.builtin.include_role:
-    name: redhatci.ocp.check_resource
-  vars:
-    resource_to_check: "MachineConfigPool"
-    check_wait_retries: "{{ 32 * dci_compute_size | int + 1 }}"
-    check_wait_delay: 90
-  when:
-    - upgrade_eus | default(false) | bool
+    - name: Wait for Worker's MCPs reconciliation
+      ansible.builtin.include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: "{{ 32 * dci_compute_size | int + 1 }}"
+        check_wait_delay: 90
+      when:
+        - upgrade_eus | default(false) | bool
 
-- name: Check for ICSPs that need to be migrated
-  kubernetes.core.k8s_info:
-    api_version: operator.openshift.io/v1alpha1
-    kind: ImageContentSourcePolicy
-  register: cluster_icsp
+    - name: Check for ICSPs that need to be migrated
+      kubernetes.core.k8s_info:
+        api_version: operator.openshift.io/v1alpha1
+        kind: ImageContentSourcePolicy
+      register: cluster_icsp
 
-- name: Migrate ICSP to IDMS
-  ansible.builtin.include_tasks: migrate-icsp.yml
-  when:
-    - cluster_icsp is defined
-    - cluster_icsp.resources | length > 0
-    - version is version("4.14", ">=")
+    - name: Migrate ICSP to IDMS
+      ansible.builtin.include_tasks: migrate-icsp.yml
+      when:
+        - cluster_icsp is defined
+        - cluster_icsp.resources | length > 0
+        - version is version("4.14", ">=")
 
-- name: Get cluster facts after upgrade
-  ansible.builtin.include_tasks: get-cluster-facts.yml
+    - name: Get cluster facts after upgrade
+      ansible.builtin.include_tasks: get-cluster-facts.yml
 
-- name: Pre-upgrade operators tasks
-  ansible.builtin.include_tasks: pre-upgrade.yml
+    - name: Pre-upgrade operators tasks
+      ansible.builtin.include_tasks: pre-upgrade.yml
 
-- name: Prepare operators and catalogs
-  ansible.builtin.include_tasks: prepare-operators.yml
+    - name: Prepare operators and catalogs
+      ansible.builtin.include_tasks: prepare-operators.yml
 
-- name: Start the upgrade of the installed operators
-  ansible.builtin.include_tasks: upgrade-operators.yml
-  when:
-    - upgrade_operators | default(true) | bool
+    - name: Start the upgrade of the installed operators
+      ansible.builtin.include_tasks: upgrade-operators.yml
+      when:
+        - upgrade_operators | default(true) | bool
 
-- name: Run cluster health checks
-  ansible.builtin.include_tasks: check-cluster-health.yml
+    - name: Run cluster health checks
+      ansible.builtin.include_tasks: check-cluster-health.yml
 ...
