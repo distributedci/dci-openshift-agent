@@ -156,12 +156,12 @@ These facts are set before spoke installations. Use them in ClusterInstance temp
 | `hub_ocp_release_path`     | Yes          | No        | Registry path for the Hub OCP release
 | `hub_pull_url`             | Yes          | No        | Hub OCP release pull URL from the matching DCI OCP component (when found)
 | `hub_registry`             | Yes          | No        | Hub mirror registry as `docker://<first-mirror>` from Hub IDMS/ICSP
-| `hub_mirrors`              | Yes          | No        | List of Hub `{source, mirrors}` entries from IDMS/ICSP; used to build spoke registry config
+| `hub_mirrors`              | Yes          | Yes       | List of Hub `{source, mirrors}` entries from IDMS/ICSP for spoke registry config
 | `dci_local_registry`       | Yes          | No        | Hub registry host:port; target for mirrored images
 | `acm_metal_iso_location`   | Yes          | Yes       | RHCOS metal ISO URL for ACM install
 | `acm_rootfs_url`           | Yes          | Yes       | RHCOS live rootfs URL for PXE/assisted boot
 | `acm_release_image`        | Yes          | Yes       | Spoke OCP release container image pullspec used by ACM/MCE installation
-| `utils_acm_registries`     | Yes          | No        | `registries.conf`-style content combining Hub and spoke image mirrors (from `redhatci.ocp.acm.utils` image-sources)
+| `utils_acm_registries`     | Yes          | Yes       | `registries.conf` content from merged Hub (+ spoke, when disconnected) image mirrors via `redhatci.ocp.acm.utils` `image-sources`
 
 > Spoke install facts (`acm_*`, registry/mirror facts) are only set when `acm_cluster_type` is one of: `sno`, `ztp-spoke`, `SNO`, `HostedControlPlane`, `HighAvailable`.
 
