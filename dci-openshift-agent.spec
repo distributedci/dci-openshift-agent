@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.33.0
+Version:       1.34.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 4.0.0
+Requires: ansible-collection-redhatci-ocp >= 4.2.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Wed Aug  5 2026 Beto Rdz <josearod@redhat.com> 1.34.EPOCH-1.VERS
+- Remove support for Gitea, using imagesources mirrored images
+
 * Thu Jul 30 2026 Beto Rdz <josearod@redhat.com> 1.33.EPOCH-1.VERS
 - Bump for changes in acm.utils role
 

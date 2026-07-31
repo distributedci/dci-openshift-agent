@@ -84,26 +84,23 @@ ${oc_path} get events --all-namespaces --sort-by='.metadata.creationTimestamp' -
   column -t -s $'\t' \
   > "${log_dir}/${prefix}events.txt"
 
-# Check for ImageDigestMirrorSets
-idms=$(\
-    ${oc_path} get imagedigestmirrorset -o json 2>/dev/null ||
-    echo "{}"
-)
-
-# Get ImageContentSourcePolicies if no ImageDigestMirrorSets are found
-if [[ $(jq '.items | length // 0' <<< "${idms}") -eq 0 ]]; then
-  ${oc_path} get imagecontentsourcepolicies -o yaml 2>/dev/null > "${log_dir}/${prefix}image-sources.yaml"
-else
-  ${oc_path} get imagedigestmirrorset -o yaml 2>/dev/null > "${log_dir}/${prefix}image-sources.yaml"
+# Collect image source resources (IDMS, ITMS, ICSP). Missing APIs are ignored.
+image_sources="${log_dir}/${prefix}image-sources.yaml"
+: > "${image_sources}"
+for kind in imagedigestmirrorset imagetagmirrorset imagecontentsourcepolicy; do
+  if out=$(${oc_path} get "${kind}" -o yaml 2>/dev/null) && [[ -n "${out}" ]]; then
+    printf '%s\n' "${out}" >> "${image_sources}"
+    printf -- '---\n' >> "${image_sources}"
+  fi
+done
+# Drop trailing document separator if anything was written
+if [[ -s "${image_sources}" ]]; then
+  sed -i '$ { /^---$/d; }' "${image_sources}"
 fi
 
 # Collect must-gather
 for image in ${DCI_MUST_GATHER_IMAGES:-"registry.redhat.io/openshift4/ose-must-gather"}
 do
-    if [ -n "${REGISTRY}" ] && [ "${REGISTRY}" != ":" ]
-    then
-        image="${REGISTRY}/${image#*/}"
-    fi
     must_gather_opts="${must_gather_opts} --image=${image}"
 done
 

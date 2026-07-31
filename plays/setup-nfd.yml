@@ -1,19 +1,7 @@
 ---
-- name: "Mirroring ose-node-feature-discovery image"
-  ansible.builtin.include_role:
-    name: redhatci.ocp.mirror_images
-  vars:
-    mi_images: ["{{ nfd_image }}"]
-    mi_authfile: "{{ dci_pullsecret_file }}"
-    mi_registry: "{{ dci_local_registry }}"
-  when:
-    - dci_disconnected | default(false) | bool
-
 - name: "Configure the Node Discovery Operator"
   vars:
-    image_ref: "{{  dci_disconnected | default(false) | bool |
-                ternary (dci_local_registry+'/openshift4/ose-node-feature-discovery:latest',
-                nfd_image) }}"
+    image_ref: "{{ nfd_image }}"
     ndf_def: |
   kubernetes.core.k8s:
     state: present

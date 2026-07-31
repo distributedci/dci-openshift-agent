@@ -1,0 +1,62 @@
+---
+- name: Mirror and apply feature images
+  when:
+    - dci_disconnected | default(false) | bool
+    - dci_local_registry is defined
+    - dci_local_registry | length > 0
+  vars:
+    # ICSP for OCP <= 4.14, IDMS for > 4.14
+    _mfi_is_type: >-
+      {{
+        ((ocp_version_maj ~ '.' ~ ocp_version_min) is version('4.14', '<=')) |
+        ternary('icsp', 'idms')
+      }}
+    _mfi_candidates: >-
+      {{
+        feature_images
+        | selectattr('enabled', 'equalto', true)
+        | map(attribute='image')
+        | list
+        | unique
+      }}
+  block:
+    - name: Mirror feature images
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_images
+      vars:
+        mi_images: "{{ _mfi_candidates }}"
+        mi_authfile: "{{ dci_pullsecret_file }}"
+        mi_registry: "{{ dci_local_registry }}"
+        mi_is_type: "{{ _mfi_is_type }}"
+      when:
+        - _mfi_candidates | length > 0
+
+    - name: Apply feature Image Source manifest
+      kubernetes.core.k8s:
+        state: present
+        definition: "{{ lookup('ansible.builtin.file', mi_is_file.path) | from_yaml_all | list }}"
+      when:
+        - _mfi_candidates | length > 0
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+
+    - name: Wait for Image Source to roll out
+      ansible.builtin.include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: 120
+        check_wait_delay: 10
+      when:
+        - _mfi_candidates | length > 0
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+
+    - name: Remove temporary feature Image Source file
+      ansible.builtin.file:
+        path: "{{ mi_is_file.path }}"
+        state: absent
+      when:
+        - _mfi_candidates | length > 0
+        - mi_is_file is defined
+        - mi_is_file.path is defined
