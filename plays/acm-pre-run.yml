@@ -83,26 +83,34 @@
 - name: "Get cluster pull-secret"
   ansible.builtin.include_tasks: get-cluster-pullsecret.yml
 
+- name: Check if IDMS is supported
+  kubernetes.core.k8s_info:
+    api_version: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    name: imagedigestmirrorsets.config.openshift.io
+  register: idms_res
+  no_log: true
+
+- name: "Get Hub Image Source Type"
+  kubernetes.core.k8s_info:
+    api_version: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('config.openshift.io/v1', 'operator.openshift.io/v1alpha1') }}"
+    kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
+  register: hub_is
+  no_log: true
+
+- name: "Set hub mirrors"
+  vars:
+    hub_mirrors_type: "resources[*].spec.*[*].{mirrors: mirrors, source: source}"
+  ansible.builtin.set_fact:
+    hub_mirrors: "{{ hub_is | json_query(hub_mirrors_type) | flatten }}"
+  when: hub_is | length > 0
+  no_log: true
+
 - name: "Get registry mirror registry details"
   when:
     - dci_disconnected | default(false) | bool
     - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
   block:
-
-    - name: Check if IDMS is supported
-      kubernetes.core.k8s_info:
-        api_version: apiextensions.k8s.io/v1
-        kind: CustomResourceDefinition
-        name: imagedigestmirrorsets.config.openshift.io
-      register: idms_res
-      no_log: true
-
-    - name: "Get Hub Image Source Type"
-      kubernetes.core.k8s_info:
-        api_version: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('config.openshift.io/v1', 'operator.openshift.io/v1alpha1') }}"
-        kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
-      register: hub_is
-      no_log: true
 
     - name: "Get Hub OCP component from DCI"
       delegate_to: localhost
@@ -139,14 +147,6 @@
         hub_query: "spec.*[*].mirrors[0]"
       ansible.builtin.set_fact:
         hub_registry: "docker://{{ hub_is.resources[0] | json_query(hub_query) | flatten | first }}"
-
-    - name: "Set hub mirrors"
-      vars:
-        hub_mirrors_type: "resources[*].spec.*[*].{mirrors: mirrors, source: source}"
-      ansible.builtin.set_fact:
-        hub_mirrors: "{{ hub_is | json_query(hub_mirrors_type) | flatten }}"
-      when: hub_is | length > 0
-      no_log: true
 
     - name: "Print webserver_url"
       ansible.builtin.debug:
@@ -186,7 +186,7 @@
         acm_release_image: "{{ ocp_release_data['container_image'] | quote }}"
         dci_local_registry: "{{ hub_registry | urlsplit('netloc') }}"
 
-    - name: Apply IDMS from target version to the Hub cluster
+    - name: Apply IDMS for target version to the Hub cluster
       vars:
         cache_dir: "{{ provision_cache_store | default((ansible_env.HOME, 'releases') | join('/')) }}"
       kubernetes.core.k8s:
@@ -204,21 +204,6 @@
         resource_to_check: "MachineConfigPool"
         check_wait_retries: 30
         check_wait_delay: 10
-
-    - name: "Get Hub Image Source Type"
-      kubernetes.core.k8s_info:
-        api_version: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('config.openshift.io/v1', 'operator.openshift.io/v1alpha1') }}"
-        kind: "{{ idms_res.resources is defined and idms_res.resources | length | ternary('ImageDigestMirrorSet', 'ImageContentSourcePolicy') }}"
-      register: hub_is
-      no_log: true
-
-    - name: "Set hub mirrors"
-      vars:
-        hub_mirrors_type: "resources[*].spec.*[*].{mirrors: mirrors, source: source}"
-      ansible.builtin.set_fact:
-        hub_mirrors: "{{ hub_is | json_query(hub_mirrors_type) | flatten }}"
-      when: hub_is | length > 0
-      no_log: true
 
     - name: "Mirror OCP release Hub artifacts - Disconnected"
       ansible.builtin.include_role:
@@ -243,9 +228,10 @@
         img_src_paths:
           - "{{ provision_cache_store }}/{{ version }}/imagesource.yaml"
           - "{{ provision_cache_store }}/{{ version }}/imagecontentsourcepolicy.yaml"
-        utils_hub_mirrors: "{{ hub_mirrors }}"
-        utils_imagesource_file: "{{ lookup('first_found', img_src_paths) }}"
-        utils_registry: "{{ hub_registry }}"
+        _imagesource_file: "{{ lookup('first_found', img_src_paths) }}"
+        _spoke_query: "spec.*[*].{mirrors: mirrors, source: source}"
+        _spoke_mirrors: "{{ lookup('file', _imagesource_file) | from_yaml | json_query(_spoke_query) | flatten }}"
+        utils_image_mirrors: "{{ (hub_mirrors | default([])) + (_spoke_mirrors | default([])) }}"
       ansible.builtin.include_role:
         name: redhatci.ocp.acm.utils
         tasks_from: image-sources
@@ -259,6 +245,16 @@
         mi_images: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
         mi_authfile: "{{ dci_pullsecret_file }}"
         mi_registry: "{{ dci_local_registry }}"
+
+- name: Convert Image Source to registries.conf for connected
+  vars:
+    utils_image_mirrors: "{{ hub_mirrors | default([]) }}"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.acm.utils
+    tasks_from: image-sources
+  when:
+    - not (dci_disconnected | default(false) | bool)
+    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'SNO', 'HostedControlPlane', 'HighAvailable']
 
 - name: "Get OCP release artifacts"
   when:
@@ -287,4 +283,3 @@
         acm_metal_iso_location: "{{ ocp_release_data.rhcos_images.metal_iso_location }}"
         acm_rootfs_url: "{{ ocp_release_data.rhcos_images.metal_pxe_rootfs_location }}"
         acm_release_image: "{{ ocp_release_data['container_image'] | quote }}"
-...
