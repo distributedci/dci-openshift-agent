@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 3.7.0
+Requires: ansible-collection-redhatci-ocp >= 4.0.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,7 +66,7 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
-* Mon Jul 30 2026 Beto Rdz <josearod@redhat.com> 1.33.EPOCH-1.VERS
+* Thu Jul 30 2026 Beto Rdz <josearod@redhat.com> 1.33.EPOCH-1.VERS
 - Bump for changes in acm.utils role
 
 * Mon Jun 22 2026 Beto Rdz <josearod@redhat.com> 1.32.EPOCH-1.VERS
