@@ -61,7 +61,16 @@
   when: (install_type | default('ipi')) in ['abi']
 
 - name: Mirror log collection images
-  ansible.builtin.include_tasks: mirror-log-images.yml
+  ansible.builtin.include_tasks: mirror-images.yml
+  vars:
+    mi_candidates: >-
+      {{
+        (
+          [must_gather_image] +
+          (dci_must_gather_images | default([])) +
+          [support_tools_image]
+        ) | unique | list
+      }}
 
 - name: "Get logs from OCP deployment"
   environment:
@@ -118,6 +127,7 @@
   ansible.builtin.include_role:
     name: redhatci.ocp.sos_report
   vars:
+    sos_report_image: "{{ support_tools_image }}"
     sos_report_nodes: "{{ dci_sos_report_nodes }}"
     sos_report_dir: "{{ job_logs.path }}"
     sos_report_oc_path: "{{ oc_tool_path }}"

@@ -18,6 +18,7 @@ dci_openshift_csi_test_manifest: ''
 dci_do_cni_tests: false
 dci_do_virt_tests: false
 dci_hide_secrets: true
+cnf_tests_image: ''
 dci_cluster_configs_dir: "{{'~/clusterconfigs' | expanduser}}-{{ cluster }}"
 dci_rpms_to_components: []
 dci_gits_to_components: "{{ dci_config_dirs }}"
@@ -55,18 +56,18 @@ enable_gitops: false
 enable_lvms: false
 
 # Default must-gather images
-must_gather_image: "registry.redhat.io/openshift4/ose-must-gather@sha256:26fe3781e9b02e4f7c864a54056837e3e9175b6a299c43638e4947803844a841" # latest
-support_tools_image: "registry.redhat.io/rhel9/support-tools"
+must_gather_image: "registry.redhat.io/openshift4/ose-must-gather@sha256:26fe3781e9b02e4f7c864a54056837e3e9175b6a299c43638e4947803844a841" # latest, date: 20260805
+support_tools_image: "registry.redhat.io/rhel9/support-tools@sha256:f3a8b6d3c4a0231be20332e18eaf9754cde2db6badce55c6ab2564f36466c38b" # 9.8-1785950698
 
 # Feature images used by setup plays.
 minio_image: "quay.io/minio/minio@sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e" # RELEASE.2025-09-07T16-13-09Z
 minio_client_image: "quay.io/minio/mc@sha256:a7fe349ef4bd8521fb8497f55c6042871b2ae640607cf99d9bede5e9bdf11727" # RELEASE.2025-08-13T08-35-41Z
 nfs_provisioner_image: "registry.k8s.io/sig-storage/nfs-subdir-external-provisioner@sha256:63d5e04551ec8b5aae83b6f35938ca5ddc50a88d85492d9731810c31591fa4c9" # v4.0.2
-nfd_image: "registry.redhat.io/openshift4/ose-node-feature-discovery@sha256:57a132bdf888ea95345027876c952d09ad72f43a5b4488794bf4f6c45f8520da" # latest
+nfd_image: "registry.redhat.io/openshift4/ose-node-feature-discovery@sha256:57a132bdf888ea95345027876c952d09ad72f43a5b4488794bf4f6c45f8520da" # latest, date: 20260805
 eventrouter_image: "registry.redhat.io/openshift-logging/eventrouter-rhel8@sha256:4acc0e5cb837972d812ceb6ce3be5938b121c167f4668ef7b8b626e353296014" # v5.2.1-1
 odf_gatherer_image: "registry.access.redhat.com/ubi8/ubi@sha256:efe7eaa64e1efb79c34d0e9ec4ac6d0a95f512dfa8673c2d0d7dfa78a6787efe" # 8.10-1
 
-# Catalog consumed by mirror-feature-images.yml
+# Catalog consumed by enabled flags
 feature_images:
   - image: "{{ minio_image }}"
     enabled: "{{ enable_minio | bool }}"
