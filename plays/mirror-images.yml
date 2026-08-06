@@ -1,11 +1,12 @@
 ---
 - name: Mirror and apply images
+  vars:
+    _mi_is_type: "{{ (ocp_version | default(version)) is version('4.14', '>') | ternary('idms', 'icsp') }}"
   when:
     - dci_disconnected | default(false) | bool
     - dci_local_registry is defined
     - dci_local_registry | length > 0
     - mi_candidates | default([]) | length > 0
-    _mi_is_type: "{{ ocp_version is version('4.14', '>') | ternary('idms', 'icsp')  }}" 
   delegate_to: jumphost
   block:
     - name: Mirror images to local registry
@@ -18,6 +19,8 @@
         mi_authfile: "{{ dci_pullsecret_file }}"
         mi_registry: "{{ dci_local_registry }}"
         mi_is_type: "{{ _mi_is_type }}"
+      when:
+        - dci_pullsecret_file is defined
 
     - name: Apply Image Source manifest
       kubernetes.core.k8s:
