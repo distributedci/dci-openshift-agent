@@ -5,15 +5,7 @@
     - dci_local_registry is defined
     - dci_local_registry | length > 0
     - mi_candidates | default([]) | length > 0
-  vars:
-    _mi_maj: "{{ ocp_version_maj | default(version.split('.')[0]) }}"
-    _mi_min: "{{ ocp_version_min | default(version.split('.')[1]) }}"
-    # ICSP for OCP <= 4.14, IDMS for > 4.14
-    _mi_is_type: >-
-      {{
-        ((_mi_maj ~ '.' ~ _mi_min) is version('4.14', '<=')) |
-        ternary('icsp', 'idms')
-      }}
+    _mi_is_type: "{{ ocp_version is version('4.14', '>') | ternary('idms', 'icsp')  }}" 
   delegate_to: jumphost
   block:
     - name: Mirror images to local registry
