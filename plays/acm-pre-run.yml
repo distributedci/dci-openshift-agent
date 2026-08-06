@@ -251,12 +251,7 @@
           }}
         mi_authfile: "{{ dci_pullsecret_file }}"
         mi_registry: "{{ dci_local_registry }}"
-        mi_is_type: >-
-          {{
-            ((ocp_version_maj | default(version.split('.')[0]) ~ '.' ~
-              ocp_version_min | default(version.split('.')[1]))
-             is version('4.14', '<=')) | ternary('icsp', 'idms')
-          }}
+        mi_is_type: "{{ ocp_version is version('4.14', '>') | ternary('idms', 'icsp')  }}" 
 
 - name: Convert Image Source to registries.conf for connected
   vars:
