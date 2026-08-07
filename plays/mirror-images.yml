@@ -12,8 +12,6 @@
     - name: Mirror images to local registry
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_images
-        apply:
-          delegate_to: jumphost
       vars:
         mi_images: "{{ mi_candidates }}"
         mi_authfile: "{{ dci_pullsecret_file }}"
@@ -33,8 +31,6 @@
     - name: Wait for Image Source to roll out
       ansible.builtin.include_role:
         name: redhatci.ocp.check_resource
-        apply:
-          delegate_to: jumphost
       vars:
         resource_to_check: "MachineConfigPool"
         check_wait_retries: 120

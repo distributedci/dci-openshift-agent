@@ -3,19 +3,6 @@
   ansible.builtin.include_tasks: log-dir.yml
   when: job_logs is undefined
 
-- name: "Gathering results for storage service tester"
-  include_role:
-    name: redhatci.ocp.storage_tester
-    tasks_from: gathering-logs.yml
-    apply:
-      environment:
-        REGISTRY: "{% if dci_local_registry is defined %}{{ dci_local_registry }}{% else %}registry.redhat.io{% endif %}"
-        OC_PATH: "{{ oc_tool_path }}"
-  when:
-    - dci_main is defined
-    - dci_main == 'upgrade'
-    - storage_upgrade_tester | default(false) | bool
-
 - name: "Find the scripts directory"
   ansible.builtin.find:
     paths:
@@ -25,20 +12,6 @@
     patterns: "scripts"
     recurse: true
   register: scripts_dir
-
-- name: Collect hardware data
-  ansible.builtin.include_role:
-    name: redhatci.ocp.node_info
-  vars:
-    ni_oc_tool_path: "{{ oc_tool_path }}"
-    ni_job_logs_path: "{{ job_logs.path }}"
-    ni_disconnected: "{{ dci_disconnected | default(false) }}"
-    ni_local_registry: "{{ dci_local_registry }}"
-    ni_local_img_path: "{{ dci_hardware_img_path | default('/dci/lshw') }}"
-    ni_pullsecret_file: "{{ dci_pullsecret_file | default('') }}"
-    ni_tag: "{{ dci_hardware_tag | default('latest') }}"
-  when:
-    - dci_collect_hardware | default(true) | bool
 
 - name: "Get logs from IPI/UPI deployment"
   vars:
@@ -60,47 +33,104 @@
   ansible.builtin.include_tasks: abi-get-logs.yml
   when: (install_type | default('ipi')) in ['abi']
 
-- name: Mirror log collection images
-  ansible.builtin.include_tasks: mirror-images.yml
-  vars:
-    mi_candidates: >-
-      {{
-        (
-          [must_gather_image] +
-          (dci_must_gather_images | default([])) +
-          [support_tools_image]
-        ) | unique | list
-      }}
-
-- name: "Get logs from OCP deployment"
-  environment:
-    DCI_MUST_GATHER_IMAGES: >-
-      {{
-        (
-          [must_gather_image] +
-          (dci_must_gather_images | default([]))
-        ) | unique | join(" ")
-      }}
-    DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
-    PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
-  ansible.builtin.shell:
+- name: Check if cluster API is reachable
+  ansible.builtin.command:
     cmd: >
-      timeout -v 20m
-      {{ scripts_dir.files[0].path }}/get-ocp-logs
-      {% if (install_type | default('ipi')) == 'acm' %}
-      -p {{ acm_cluster_type }}
-      {% endif %}
-      {{ job_logs.path }}
-  ignore_errors: true
+      timeout 10
+      {{ oc_tool_path | default('oc') }}
+      get --raw=/readyz
+  environment:
+    PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
+  register: _cluster_api_readyz
+  failed_when: false
+  changed_when: false
   delegate_to: jumphost
 
-- name: "Remove the must-gather directory"
-  vars:
-    dir_prefix: "{{ acm_cluster_type | default('', True) }}"
-    dir_name: "{{ ((install_type | default('ipi')) == 'acm') | ternary(dir_prefix+'_must_gather', 'must_gather') }}"
-  file:
-    path: "{{ job_logs.path }}/{{ dir_name }}"
-    state: absent
+- name: Collect logs that require cluster API
+  when:
+    - _cluster_api_readyz.rc == 0
+  delegate_to: jumphost
+  block:
+    - name: "Gathering results for storage service tester"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.storage_tester
+        tasks_from: gathering-logs.yml
+        apply:
+          environment:
+            REGISTRY: "{% if dci_local_registry is defined %}{{ dci_local_registry }}{% else %}registry.redhat.io{% endif %}"
+            OC_PATH: "{{ oc_tool_path }}"
+      when:
+        - dci_main is defined
+        - dci_main == 'upgrade'
+        - storage_upgrade_tester | default(false) | bool
+
+    - name: Collect hardware data
+      ansible.builtin.include_role:
+        name: redhatci.ocp.node_info
+      vars:
+        ni_oc_tool_path: "{{ oc_tool_path }}"
+        ni_job_logs_path: "{{ job_logs.path }}"
+        ni_disconnected: "{{ dci_disconnected | default(false) }}"
+        ni_local_registry: "{{ dci_local_registry }}"
+        ni_local_img_path: "{{ dci_hardware_img_path | default('/dci/lshw') }}"
+        ni_pullsecret_file: "{{ dci_pullsecret_file | default('') }}"
+        ni_tag: "{{ dci_hardware_tag | default('latest') }}"
+      when:
+        - dci_collect_hardware | default(true) | bool
+
+    - name: Mirror log collection images
+      ansible.builtin.include_tasks: mirror-images.yml
+      vars:
+        mi_candidates: >-
+          {{
+            (
+              [must_gather_image] +
+              (dci_must_gather_images | default([])) +
+              [support_tools_image]
+            ) | unique | list
+          }}
+
+    - name: "Get logs from OCP deployment"
+      environment:
+        DCI_MUST_GATHER_IMAGES: >-
+          {{
+            (
+              [must_gather_image] +
+              (dci_must_gather_images | default([]))
+            ) | unique | join(" ")
+          }}
+        DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
+        PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
+      ansible.builtin.shell:
+        cmd: >
+          timeout -v 20m
+          {{ scripts_dir.files[0].path }}/get-ocp-logs
+          {% if (install_type | default('ipi')) == 'acm' %}
+          -p {{ acm_cluster_type }}
+          {% endif %}
+          {{ job_logs.path }}
+      ignore_errors: true
+      delegate_to: jumphost
+
+    - name: "Remove the must-gather directory"
+      vars:
+        dir_prefix: "{{ acm_cluster_type | default('', True) }}"
+        dir_name: "{{ ((install_type | default('ipi')) == 'acm') | ternary(dir_prefix+'_must_gather', 'must_gather') }}"
+      ansible.builtin.file:
+        path: "{{ job_logs.path }}/{{ dir_name }}"
+        state: absent
+
+    - name: Generate SOS reports
+      ansible.builtin.include_role:
+        name: redhatci.ocp.sos_report
+      vars:
+        sos_report_image: "{{ support_tools_image }}"
+        sos_report_nodes: "{{ dci_sos_report_nodes }}"
+        sos_report_dir: "{{ job_logs.path }}"
+        sos_report_oc_path: "{{ oc_tool_path }}"
+      when:
+        - dci_sos_report_nodes is defined
+        - dci_sos_report_nodes | length
 
 - name: "Get logs from ACM-Hub"
   environment:
@@ -122,31 +152,6 @@
   delegate_to: jumphost
   when:
     - (install_type | default('ipi')) in ['acm']
-
-- name: Generate SOS reports
-  ansible.builtin.include_role:
-    name: redhatci.ocp.sos_report
-  vars:
-    sos_report_image: "{{ support_tools_image }}"
-    sos_report_nodes: "{{ dci_sos_report_nodes }}"
-    sos_report_dir: "{{ job_logs.path }}"
-    sos_report_oc_path: "{{ oc_tool_path }}"
-  when:
-    - dci_sos_report_nodes is defined
-    - dci_sos_report_nodes | length
-
-- name: Gathering results for storage service tester
-  ansible.builtin.include_role:
-    name: redhatci.ocp.storage_tester
-    tasks_from: gathering-logs.yml
-    apply:
-      environment:
-        REGISTRY: "{% if dci_local_registry is defined %}{{ dci_local_registry }}{% else %}registry.redhat.io{% endif %}"
-        OC_PATH: "{{ oc_tool_path }}"
-  when:
-    - dci_main is defined
-    - dci_main == 'upgrade'
-    - storage_upgrade_tester | default(false) | bool
 
 - name: Get the differences from the previous DCI job
   ansible.builtin.shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
