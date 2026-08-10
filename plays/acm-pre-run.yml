@@ -242,9 +242,16 @@
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_images
       vars:
-        mi_images: "{{ dci_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
+        mi_images: >-
+          {{
+            (
+              [must_gather_image] +
+              (dci_must_gather_images | default([]))
+            ) | unique | list
+          }}
         mi_authfile: "{{ dci_pullsecret_file }}"
         mi_registry: "{{ dci_local_registry }}"
+        mi_is_type: "{{ version is version('4.14', '>') | ternary('idms', 'icsp')  }}"
 
 - name: Convert Image Source to registries.conf for connected
   vars:

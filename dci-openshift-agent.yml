@@ -545,6 +545,8 @@
   tasks:
     - name: After Install
       block:
+        - name: "Get Cluster facts"
+          ansible.builtin.include_tasks: plays/get-cluster-facts.yml
         - name: "Launch after install"
           ansible.builtin.include_tasks: "plays/after-install.yml"
           when:

@@ -1,0 +1,48 @@
+---
+- name: Mirror and apply images
+  vars:
+    _mi_is_type: "{{ (ocp_version | default(version)) is version('4.14', '>') | ternary('idms', 'icsp') }}"
+  when:
+    - dci_disconnected | default(false) | bool
+    - dci_local_registry is defined
+    - dci_local_registry | length > 0
+    - mi_candidates | default([]) | length > 0
+  delegate_to: jumphost
+  block:
+    - name: Mirror images to local registry
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_images
+      vars:
+        mi_images: "{{ mi_candidates }}"
+        mi_authfile: "{{ dci_pullsecret_file }}"
+        mi_registry: "{{ dci_local_registry }}"
+        mi_is_type: "{{ _mi_is_type }}"
+      when:
+        - dci_pullsecret_file is defined
+
+    - name: Apply Image Source manifest
+      kubernetes.core.k8s:
+        state: present
+        definition: "{{ lookup('ansible.builtin.file', mi_is_file.path) | from_yaml_all | list }}"
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+
+    - name: Wait for Image Source to roll out
+      ansible.builtin.include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: 120
+        check_wait_delay: 10
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+
+    - name: Remove temporary Image Source file
+      ansible.builtin.file:
+        path: "{{ mi_is_file.path }}"
+        state: absent
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined

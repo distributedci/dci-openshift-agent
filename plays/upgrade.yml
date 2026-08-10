@@ -44,8 +44,17 @@
       when:
         - cluster_is.resources | length
 
-    - name: Mirror Job support tools
-      ansible.builtin.include_tasks: mirror-job-tools.yml
+    - name: Mirror feature images and apply Image Source
+      ansible.builtin.include_tasks: mirror-images.yml
+      vars:
+        mi_candidates: >-
+          {{
+            feature_images
+            | selectattr('enabled', 'equalto', true)
+            | map(attribute='image')
+            | list
+            | unique
+          }}
 
 - name: Prepare OCP releases for the upgrade
   ansible.builtin.include_tasks: upgrade-artifacts.yml
