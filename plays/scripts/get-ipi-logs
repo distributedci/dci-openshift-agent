@@ -35,7 +35,7 @@ prov_cmd="timeout -v 20m ssh ${ssh_ops} ${user_at_provisioner}"
 
 # Copy openshift install log_dir and rendered install config
 scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/.openshift_install.log "${log_dir}/openshift_install.log.orig"
-scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/install-config.yaml.bkup "${log_dir}/install-config-yaml.txt.orig"
+scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/install-config.yaml.bkup "${log_dir}/install-config.yaml.orig"
 scp ${ssh_ops} "${user_at_provisioner}":clusterconfigs/.openshift_install_state.json "${log_dir}/openshift_install_state.json.orig"
 
 # Redact secrets
@@ -49,7 +49,7 @@ sed -e 's,^\(.*password:\s*\).*$,\1REDACTED",' \
 sed -e 's,^\(\s*username:\s*\).*$,\1REDACTED,' \
     -e 's,^\(\s*password:\s*\).*$,\1REDACTED,' \
     -e 's,^\(\s*pullSecret:\s*\).*$,\1REDACTED,' \
-    "${log_dir}/install-config-yaml.txt.orig" > "${log_dir}/install-config-yaml.txt"
+    "${log_dir}/install-config.yaml.orig" > "${log_dir}/install-config.yaml"
 
 ## openshift_install_state.json
 jq --argjson keys "$keys" \

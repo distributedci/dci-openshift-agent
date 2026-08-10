@@ -37,6 +37,16 @@ log_dir="$3"
 
 mkdir -p "${log_dir}"
 
+# Redact secrets from install-config.yaml (copied into log_dir by abi-get-logs.yml)
+if [ -f "${log_dir}/install-config.yaml" ]; then
+  set +x
+  sed -i -e 's,^\(\s*username:\s*\).*$,\1REDACTED,' \
+    -e 's,^\(\s*password:\s*\).*$,\1REDACTED,' \
+    -e 's,^\(\s*pullSecret:\s*\).*$,\1REDACTED,' \
+    "${log_dir}/install-config.yaml"
+  set -x
+fi
+
 # Extra variables
 ssh_user="core"
 ssh_ops="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=10"
