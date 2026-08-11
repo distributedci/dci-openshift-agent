@@ -23,17 +23,19 @@
     mode: "0640"
     remote_src: true
 
-- name: Mirror feature images and apply Image Source
-  ansible.builtin.include_tasks: mirror-images.yml
-  vars:
+- name: Build feature image candidates
+  ansible.builtin.set_fact:
     mi_candidates: >-
       {{
-        feature_images
+        feature_images | default([])
         | selectattr('enabled', 'equalto', true)
         | map(attribute='image')
         | list
         | unique
       }}
+
+- name: Mirror feature images and apply Image Source
+  ansible.builtin.include_tasks: mirror-images.yml
 
 - name: "Disable default catalog sources for disconnected deployment"
   when:

@@ -78,9 +78,8 @@
       when:
         - dci_collect_hardware | default(true) | bool
 
-    - name: Mirror log collection images
-      ansible.builtin.include_tasks: mirror-images.yml
-      vars:
+    - name: Build log collection image candidates
+      ansible.builtin.set_fact:
         mi_candidates: >-
           {{
             (
@@ -89,6 +88,9 @@
               [support_tools_image]
             ) | unique | list
           }}
+
+    - name: Mirror log collection images
+      ansible.builtin.include_tasks: mirror-images.yml
 
     - name: "Get logs from OCP deployment"
       environment:
