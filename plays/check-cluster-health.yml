@@ -77,8 +77,6 @@
     msg: "Install or upgrade is not Completed"
   when:
     - upgrade_state != "Completed"
-  retries: 3
-  delay: 10
 
 - name: Non-Hosted control plane checks
   when:
