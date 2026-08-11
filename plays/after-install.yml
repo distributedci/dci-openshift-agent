@@ -34,26 +34,6 @@
         - (install_type | default('ipi')) in ['abi']
         - mirror_certificate | default("")| length > 0
 
-- name: "Save the install-config"
-  vars:
-    install_config: '{{ ic.resources[0].data["install-config"] }}'
-  ansible.builtin.copy:
-    content: "{{ install_config }}"
-    dest: "{{ dci_cluster_configs_dir }}/cluster-install-config.yml"
-    mode: "0600"
-
-- name: "Upload cluster's files to DCI Control Server"
-  tags:
-    - dci
-  dci_file:
-    path: "{{ item }}"
-    name: "{{ item | basename }}"
-    job_id: "{{ job_id }}"
-    mime: "text/plain"
-  loop:
-    - "{{ dci_cluster_configs_dir }}/cluster-install-config.yml"
-  delegate_to: localhost
-
 - name: "Check if all cluster-operators are running correctly"
   vars:
     co_available_count: "{{
