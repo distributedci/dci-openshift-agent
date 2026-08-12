@@ -44,17 +44,19 @@
       when:
         - cluster_is.resources | length
 
-    - name: Mirror feature images and apply Image Source
-      ansible.builtin.include_tasks: mirror-images.yml
-      vars:
+    - name: Build feature image candidates
+      ansible.builtin.set_fact:
         mi_candidates: >-
           {{
-            feature_images
+            feature_images | default([])
             | selectattr('enabled', 'equalto', true)
             | map(attribute='image')
             | list
             | unique
           }}
+
+    - name: Mirror feature images and apply Image Source
+      ansible.builtin.include_tasks: mirror-images.yml
 
 - name: Prepare OCP releases for the upgrade
   ansible.builtin.include_tasks: upgrade-artifacts.yml
