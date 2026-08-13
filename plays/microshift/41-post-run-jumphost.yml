@@ -11,6 +11,7 @@
     - name: Fetch IP address given by libvirt
       become: true
       ansible.builtin.shell: >-
+        set -o pipefail &&
         virsh domifaddr {{ _sut.name }} --source arp |
         awk '/ipv4/ { gsub("/.*", "", $4); print $4 }'
       register: virsh
@@ -18,7 +19,7 @@
       retries: 60 # wait up to 15 minutes for the VM to get an address
       delay: 15
 
-    - name: Register {{ _sut.name }} as a new ansible host
+    - name: Register new ansible host {{ _sut.name }}
       ansible.builtin.add_host:
         name: "{{ _sut.name }}"
         ansible_host: "{{ virsh.stdout }}"
@@ -27,7 +28,7 @@
         ansible_ssh_private_key_file: "{{ _ssh_private_key }}"
         groups: microshift_suts
 
-    - name: Wait for {{ _sut.name }} to be ready
+    - name: Wait for SUT to be ready {{ _sut.name }}
       ansible.builtin.wait_for:
         host: "{{ virsh.stdout }}"
         port: 22

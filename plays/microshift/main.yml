@@ -51,7 +51,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run pre-run phase
+      block:
         - name: Set job status pre-run
           dci_job:
             id: "{{ hostvars.localhost.job.id }}"
@@ -70,9 +71,9 @@
         - name: Bootstrap RHDE builder
           include_tasks: ./20-bootstrap-rhde-builder.yml
           vars:
-            - _rhsm_offline_token: "{{ rhsm_offline_token }}"
-            - _rhsm_org_id: "{{ rhsm_org_id }}"
-            - _rhsm_activation_key: "{{ rhsm_activation_key }}"
+            _rhsm_offline_token: "{{ rhsm_offline_token }}"
+            _rhsm_org_id: "{{ rhsm_org_id }}"
+            _rhsm_activation_key: "{{ rhsm_activation_key }}"
           tags: [pre-run, setup-rhde-builder]
 
         - name: Run the pre-run hook
@@ -95,13 +96,14 @@
           ignore_unreachable: true
           delegate_to: localhost
 
-        - block:
-            - name: Run the error hook
-              include_tasks: "{{ hostvars.localhost.error_hook }}"
-              tags: [partner-error-hook]
+        - name: Run the error hook block
           when: hostvars.localhost.error_hook is file
           delegate_to: localhost
           ignore_unreachable: true
+          block:
+            - name: Run the error hook
+              include_tasks: "{{ hostvars.localhost.error_hook }}"
+              tags: [partner-error-hook]
 
         - name: Error
           fail:
@@ -117,14 +119,15 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Build the Microshift ISO image phase
+      block:
         - name: Build the Microshift ISO image
           include_tasks: ./30-build-microshift-iso.yml
           vars:
-            - _microshift: "{{ hostvars.localhost.microshift }}"
-            - _job: "{{ hostvars.localhost.job }}"
-            - _http_store: "{{ hostvars.localhost.http_store | default('/opt/http_store') }}"
-            - _ssh_public_key_content: "{{ lookup('ansible.builtin.file', hostvars.localhost.ssh_public_key) }}"
+            _microshift: "{{ hostvars.localhost.microshift }}"
+            _job: "{{ hostvars.localhost.job }}"
+            _http_store: "{{ hostvars.localhost.http_store | default('/opt/http_store') }}"
+            _ssh_public_key_content: "{{ lookup('ansible.builtin.file', hostvars.localhost.ssh_public_key) }}"
           tags: [running, build-image]
 
       rescue: &teardown_failure
@@ -136,13 +139,14 @@
           ignore_unreachable: true
           delegate_to: localhost
 
-        - block:
-            - name: Run the failure hook
-              include_tasks: "{{ hostvars.localhost.failure_hook }}"
-              tags: [partner-failure-hook]
+        - name: Run the failure hook block
           when: hostvars.localhost.failure_hook is file
           delegate_to: localhost
           ignore_unreachable: true
+          block:
+            - name: Run the failure hook
+              include_tasks: "{{ hostvars.localhost.failure_hook }}"
+              tags: [partner-failure-hook]
 
         - name: Failure
           fail:
@@ -158,7 +162,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run install phase
+      block:
         - name: Install Microshift ISO
           include_tasks: ./40-install-microshift-iso.yml
           vars:
@@ -183,7 +188,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run post-run jumphost phase
+      block:
         - name: Set job status post-run
           dci_job:
             id: "{{ hostvars.localhost.job.id }}"
@@ -217,7 +223,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run post-run SUT phase
+      block:
         - name: Post-run tasks
           include_tasks: ./41-post-run-sut.yml
           vars:
@@ -239,7 +246,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run test jumphost phase
+      block:
         - name: Run tests
           include_tasks: ./50-test-jumphost.yml
           tags: [test, test-jumphost, redhat-test-jumphost]
@@ -265,7 +273,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run test SUT phase
+      block:
         - name: Run tests
           include_tasks: ./50-test-sut.yml
           tags: [test, test-sut, redhat-test-sut]
