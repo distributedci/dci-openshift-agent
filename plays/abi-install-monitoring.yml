@@ -1,0 +1,67 @@
+---
+- name: "Monitor Agent Based Installer"
+  block:
+    - name: Wait for API to be available
+      ansible.builtin.uri:
+        url: "https://api.{{ cluster }}.{{ base_dns_domain }}:6443/readyz"
+        validate_certs: false
+        return_content: true
+      register: _api_ready
+      until:
+        - "'ok' in _api_ready.content"
+        - _api_ready.status == 200
+      retries: 180
+      delay: 10
+
+    - name: Wait for bootstrap complete
+      ansible.builtin.command:
+        cmd: "{{ openshift_installer_path }} --log-level=debug agent wait-for bootstrap-complete"
+        chdir: "{{ dci_cluster_configs_dir }}/generated/{{ cluster_name }}"
+      changed_when: false
+
+    - name: Check installation and gather logs on failure
+      block:
+        - name: Wait for install complete - without retries
+          ansible.builtin.command:
+            cmd: >-
+              {{ openshift_installer_path }} --log-level=debug agent
+              wait-for install-complete
+            chdir: "{{ dci_cluster_configs_dir }}/generated/{{ cluster_name }}"
+          when:
+            - "not ('retry_install_complete_check' in dci_workarounds)"
+
+        - name: Wait for install complete - with retries
+          ansible.builtin.command:
+            cmd: >-
+              {{ openshift_installer_path }} --log-level=debug agent
+              wait-for install-complete
+            chdir: "{{ dci_cluster_configs_dir }}/generated/{{ cluster_name }}"
+          when:
+            - "'retry_install_complete_check' in dci_workarounds"
+          register: _abi_install_output
+          retries: 10
+          delay: 60
+          until: >-
+            'Attempted to gather ClusterOperator status after wait failure: Listing ClusterOperator objects'
+            not in _abi_install_output.stderr
+            or 'No events logged from the Agent Rest API' in _abi_install_output.stderr
+            or 'x509: certificate has expired or is not yet valid' in _abi_install_output.stderr
+
+      rescue:
+        - name: Gather logs from installation
+          ansible.builtin.command:
+            cmd: >-
+              {{ openshift_installer_path }} --log-level=debug gather bootstrap
+              --bootstrap {{ hostvars[groups.get('masters', [''])[0]]['ansible_host'] }}
+            chdir: "{{ dci_cluster_configs_dir }}"
+          register: _abi_gather_result
+          until: _abi_gather_result.rc == 0
+          retries: 6
+          delay: 20
+          failed_when: false
+          changed_when: false
+
+        - name: Fail because installation was not completed
+          ansible.builtin.fail:
+            msg: "ABI installation was not completed"
+...
