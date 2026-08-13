@@ -1,0 +1,12 @@
+---
+- name: Configure conserver on lab jumphosts
+  hosts: "{{ conserver_jumphost | default('jumphost') }}"
+  gather_facts: false
+  tasks:
+    - name: "Configure conserver for cluster {{ item }}"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.conserver
+      vars:
+        cluster: "{{ item }}"
+        cluster_nodes: "{{ groups[item] | default([]) }}"
+      loop: "{{ conserver_clusters }}"
