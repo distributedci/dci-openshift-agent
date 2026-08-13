@@ -2,3 +2,4 @@ openrc.sh
 ansible.log
 dev-ansible.cfg
 samples/*/hosts
+.ansible/
