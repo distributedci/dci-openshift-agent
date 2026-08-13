@@ -124,7 +124,11 @@ The following settings must be provided to the SNO Spoke Cluster deployment job.
     acm_cluster_type: ztp-spoke
     dci_tags: [debug, sno, ztp, spoke, baremetal]
     dci_must_gather_images:
-      - registry.redhat.io/openshift4/ose-must-gather
+      - ose-must-gather
+    dci_hub_must_gather_images:
+      - ose-must-gather
+      - acm
+      - openshift-gitops
     dci_teardown_on_success: false
     acm_vm_external_network: False # False when running on ACM Hubs deployed by ABI
   topic: OCP-4.15

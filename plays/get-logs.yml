@@ -78,13 +78,28 @@
       when:
         - dci_collect_hardware | default(true) | bool
 
+    - name: Resolve must-gather image short names
+      block:
+        - name: Resolve must-gather short names to full image references
+          ansible.builtin.include_role:
+            name: redhatci.ocp.resolve_must_gather_images
+          vars:
+            rmgi_images: "{{ dci_must_gather_images | default([]) }}"
+      rescue:
+        - name: Log must-gather resolve failure
+          ansible.builtin.debug:
+            msg: "Failed to resolve must-gather images: {{ ansible_failed_result.msg | default('unknown error') }}"
+        - name: Fall back to default must-gather image
+          ansible.builtin.set_fact:
+            rmgi_resolved_images:
+              - registry.redhat.io/openshift4/ose-must-gather
+
     - name: Build log collection image candidates
       ansible.builtin.set_fact:
         mi_candidates: >-
           {{
             (
-              [must_gather_image] +
-              (dci_must_gather_images | default([])) +
+              (rmgi_resolved_images | default(dci_must_gather_images | default([]))) +
               [support_tools_image]
             ) | unique | list
           }}
@@ -96,10 +111,7 @@
       environment:
         DCI_MUST_GATHER_IMAGES: >-
           {{
-            (
-              [must_gather_image] +
-              (dci_must_gather_images | default([]))
-            ) | unique | join(" ")
+            (rmgi_resolved_images | default(dci_must_gather_images | default([]))) | unique | join(" ")
           }}
         DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
         PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
@@ -134,14 +146,36 @@
         - dci_sos_report_nodes is defined
         - dci_sos_report_nodes | length
 
+- name: Resolve hub must-gather images for log collection
+  when:
+    - (install_type | default('ipi')) in ['acm']
+    - rmgi_hub_resolved_images is not defined
+  block:
+    - name: Resolve hub must-gather short names for log collection
+      ansible.builtin.include_role:
+        name: redhatci.ocp.resolve_must_gather_images
+      vars:
+        rmgi_images: "{{ dci_hub_must_gather_images | default([]) }}"
+      environment:
+        KUBECONFIG: "{{ hub_kubeconfig_path }}"
+
+    - name: Cache hub resolved images from log-collection resolve
+      ansible.builtin.set_fact:
+        rmgi_hub_resolved_images: "{{ rmgi_resolved_images }}"
+
+  rescue:
+    - name: Log hub must-gather resolve failure (log collection)
+      ansible.builtin.debug:
+        msg: "Failed to resolve hub must-gather images for log collection: {{ ansible_failed_result.msg | default('unknown error') }}"
+    - name: Fall back to hub must-gather defaults
+      ansible.builtin.set_fact:
+        rmgi_hub_resolved_images: "{{ dci_hub_must_gather_images | default(['registry.redhat.io/openshift4/ose-must-gather']) }}"
+
 - name: "Get logs from ACM-Hub"
   environment:
     DCI_MUST_GATHER_IMAGES: >-
       {{
-        (
-          [must_gather_image] +
-          (dci_must_gather_images | default([]))
-        ) | unique | join(" ")
+        (rmgi_hub_resolved_images | default(dci_hub_must_gather_images | default([]))) | unique | join(" ")
       }}
     DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
     KUBECONFIG: "{{ hub_kubeconfig_path }}"

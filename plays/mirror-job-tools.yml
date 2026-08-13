@@ -22,3 +22,31 @@
       when:
         - mi_is_file is defined
         - mi_is_file.path is defined
+
+- name: Resolve and mirror must-gather images
+  when:
+    - (dci_disconnected | default(false) | bool) or
+      (dci_local_registry is defined and dci_local_registry != '')
+    - dci_must_gather_images | default([]) | length > 0
+  block:
+    - name: Resolve must-gather short names
+      ansible.builtin.include_role:
+        name: redhatci.ocp.resolve_must_gather_images
+      vars:
+        rmgi_images: "{{ dci_must_gather_images }}"
+
+    - name: Mirror must-gather images
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_images
+      vars:
+        mi_images: "{{ rmgi_resolved_images | default(dci_must_gather_images) | unique | list }}"
+        mi_authfile: "{{ dci_pullsecret_file }}"
+        mi_registry: "{{ dci_local_registry }}"
+
+    - name: Remove temporary Image Source file
+      ansible.builtin.file:
+        path: "{{ mi_is_file.path }}"
+        state: absent
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined

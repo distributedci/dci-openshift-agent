@@ -238,20 +238,45 @@
       when:
         - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance','sno', 'SNO', 'HostedControlPlane', 'HighAvailable']
 
-    - name: "Mirror must gather images"
+    - name: Resolve and save hub must-gather images
+      block:
+        - name: Resolve hub must-gather short names to full image references
+          ansible.builtin.include_role:
+            name: redhatci.ocp.resolve_must_gather_images
+            apply:
+              environment:
+                KUBECONFIG: "{{ hub_kubeconfig_path }}"
+          vars:
+            rmgi_images: "{{ dci_hub_must_gather_images }}"
+          when: dci_hub_must_gather_images is defined
+
+        - name: Save hub resolved images
+          ansible.builtin.set_fact:
+            rmgi_hub_resolved_images: "{{ rmgi_resolved_images }}"
+          when: dci_hub_must_gather_images is defined
+
+      rescue:
+        - name: Log hub must-gather resolve failure
+          ansible.builtin.debug:
+            msg: "Failed to resolve hub must-gather images: {{ ansible_failed_result.msg | default('unknown error') }}"
+        - name: Fall back to default hub must-gather image
+          ansible.builtin.set_fact:
+            rmgi_hub_resolved_images:
+              - registry.redhat.io/openshift4/ose-must-gather
+
+    - name: Mirror hub must-gather images
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_images
       vars:
         mi_images: >-
           {{
-            (
-              [must_gather_image] +
-              (dci_must_gather_images | default([]))
-            ) | unique | list
+            (rmgi_hub_resolved_images | default(
+              dci_hub_must_gather_images
+            )) | unique | list
           }}
         mi_authfile: "{{ dci_pullsecret_file }}"
         mi_registry: "{{ dci_local_registry }}"
-        mi_is_type: "{{ version is version('4.14', '>') | ternary('idms', 'icsp')  }}"
+        mi_is_type: "{{ version is version('4.14', '>') | ternary('idms', 'icsp') }}"
 
 - name: Convert Image Source to registries.conf for connected
   vars:
