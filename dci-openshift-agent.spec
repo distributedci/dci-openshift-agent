@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.35.0
+Version:       1.36.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Fri Aug 14 2026 Frederic Lepied <flepied@redhat.com> 1.36.EPOCH-1.VERS
+- Resolve must-gather short names via CSV relatedImages (redhatci.ocp >= 3.7.0)
+
 * Fri Aug 07 2026 Frederic Lepied <flepied@redhat.com> 1.35.EPOCH-1.VERS
 - Implement ABI monitoring as a dedicated play; requires ansible-collection-redhatci-ocp >= 5.0.0
 
