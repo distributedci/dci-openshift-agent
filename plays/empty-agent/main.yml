@@ -61,7 +61,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run pre-run phase
+      block:
         - name: Set job status pre-run
           ansible.legacy.dci_job:
             id: "{{ _job.id }}"
@@ -86,13 +87,14 @@
           ignore_unreachable: true
           delegate_to: localhost
 
-        - block:
-            - name: Run the error hook
-              ansible.builtin.include_tasks: "{{ error_hook_path }}"
-              tags: [partner-error-hook]
+        - name: Run error hook if present
           when: error_hook_path is file
           delegate_to: localhost
           ignore_unreachable: true
+          block:
+            - name: Run the error hook
+              ansible.builtin.include_tasks: "{{ error_hook_path }}"
+              tags: [partner-error-hook]
 
         - name: Error
           fail:
@@ -108,7 +110,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run install phase
+      block:
         - name: Set job status running
           ansible.legacy.dci_job:
             id: "{{ _job.id }}"
@@ -133,13 +136,14 @@
           ignore_unreachable: true
           delegate_to: localhost
 
-        - block:
-            - name: Run the failure hook
-              ansible.builtin.include_tasks: "{{ failure_hook_path }}"
-              tags: [partner-failure-hook]
+        - name: Run failure hook if present
           when: failure_hook_path is file
           delegate_to: localhost
           ignore_unreachable: true
+          block:
+            - name: Run the failure hook
+              ansible.builtin.include_tasks: "{{ failure_hook_path }}"
+              tags: [partner-failure-hook]
 
         - name: Failure
           fail:
@@ -155,7 +159,8 @@
     https_proxy: "{{ https_proxy }}"
     no_proxy: "{{ no_proxy_list }}"
   tasks:
-    - block:
+    - name: Run post-run phase
+      block:
         - name: Set job status post-run
           ansible.legacy.dci_job:
             id: "{{ _job.id }}"
