@@ -6,832 +6,290 @@ metadata:
 spec:
   imageDigestMirrors:
   - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d
-    source: registry.redhat.io/acm-d
-  - mirrors:
     - {{ prega_mirror }}/prega/test/advanced-cluster-security
     source: registry.redhat.io/advanced-cluster-security
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/advanced-cluster-security
+    source: registry.stage.redhat.io/advanced-cluster-security
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/ansible-automation-platform
+    source: registry.redhat.io/ansible-automation-platform
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/ansible-automation-platform
+    source: registry.stage.redhat.io/ansible-automation-platform
   - mirrors:
     - {{ prega_mirror }}/prega/test/ansible-automation-platform-25
     source: registry.redhat.io/ansible-automation-platform-25
   - mirrors:
+    - {{ prega_mirror }}/prega/test/ansible-automation-platform-25
+    source: registry.stage.redhat.io/ansible-automation-platform-25
+  - mirrors:
     - {{ prega_mirror }}/prega/test/ansible-automation-platform-26
     source: registry.redhat.io/ansible-automation-platform-26
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/ansible-automation-platform-26
+    source: registry.stage.redhat.io/ansible-automation-platform-26
   - mirrors:
     - {{ prega_mirror }}/prega/test/cert-manager
     source: registry.redhat.io/cert-manager
   - mirrors:
+    - {{ prega_mirror }}/prega/test/cert-manager
+    source: registry.stage.redhat.io/cert-manager
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/cli-manager
+    source: registry.redhat.io/cli-manager
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/cli-manager
+    source: registry.stage.redhat.io/cli-manager
+  - mirrors:
     - {{ prega_mirror }}/prega/test/cluster-observability-operator
     source: registry.redhat.io/cluster-observability-operator
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/cluster-observability-operator
+    source: registry.stage.redhat.io/cluster-observability-operator
   - mirrors:
     - {{ prega_mirror }}/prega/test/compliance
     source: registry.redhat.io/compliance
   - mirrors:
-    - {{ prega_mirror }}/prega/test/custom-metrics-autoscaler/custom-metrics-autoscaler-rhel8-operator
-    source: registry.redhat.io/custom-metrics-autoscaler/custom-metrics-autoscaler-rhel8-operator
+    - {{ prega_mirror }}/prega/test/compliance
+    source: registry.stage.redhat.io/compliance
   - mirrors:
     - {{ prega_mirror }}/prega/test/kmm
     source: registry.redhat.io/kmm
   - mirrors:
+    - {{ prega_mirror }}/prega/test/kmm
+    source: registry.stage.redhat.io/kmm
+  - mirrors:
     - {{ prega_mirror }}/prega/test/lvms4
     source: registry.redhat.io/lvms4
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/lvms4
+    source: registry.stage.redhat.io/lvms4
   - mirrors:
     - {{ prega_mirror }}/prega/test/migration-toolkit-virtualization
     source: registry.redhat.io/migration-toolkit-virtualization
   - mirrors:
+    - {{ prega_mirror }}/prega/test/migration-toolkit-virtualization
+    source: registry.stage.redhat.io/migration-toolkit-virtualization
+  - mirrors:
     - {{ prega_mirror }}/prega/test/mta
     source: registry.redhat.io/mta
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/mta
+    source: registry.stage.redhat.io/mta
   - mirrors:
     - {{ prega_mirror }}/prega/test/mtr
     source: registry.redhat.io/mtr
   - mirrors:
+    - {{ prega_mirror }}/prega/test/mtr
+    source: registry.stage.redhat.io/mtr
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/multicluster-engine
+    source: registry.redhat.io/multicluster-engine
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/multicluster-engine
+    source: registry.stage.redhat.io/multicluster-engine
+  - mirrors:
     - {{ prega_mirror }}/prega/test/noo
     source: registry.redhat.io/noo
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/noo
+    source: registry.stage.redhat.io/noo
   - mirrors:
     - {{ prega_mirror }}/prega/test/oadp
     source: registry.redhat.io/oadp
   - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-gitops-1
-    source: registry.redhat.io/openshift-gitops-1
+    - {{ prega_mirror }}/prega/test/oadp
+    source: registry.stage.redhat.io/oadp
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/odf4
+    source: registry.redhat.io/odf4
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/odf4
+    source: registry.stage.redhat.io/odf4
   - mirrors:
     - {{ prega_mirror }}/prega/test/openshift-logging
     source: registry.redhat.io/openshift-logging
   - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-logging
+    source: registry.stage.redhat.io/openshift-logging
+  - mirrors:
     - {{ prega_mirror }}/prega/test/openshift-pipelines
     source: registry.redhat.io/openshift-pipelines
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-pipelines
+    source: registry.stage.redhat.io/openshift-pipelines
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-serverless-1
+    source: registry.redhat.io/openshift-serverless-1
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-serverless-1
+    source: registry.stage.redhat.io/openshift-serverless-1
   - mirrors:
     - {{ prega_mirror }}/prega/test/openshift-service-mesh
     source: registry.redhat.io/openshift-service-mesh
   - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-service-mesh-dev-preview-beta/istio-ztunnel-rhel9
-    source: registry.redhat.io/openshift-service-mesh-dev-preview-beta/istio-ztunnel-rhel9
+    - {{ prega_mirror }}/prega/test/openshift-service-mesh
+    source: registry.stage.redhat.io/openshift-service-mesh
   - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-service-mesh-tech-preview/istio-ztunnel-rhel9
-    source: registry.redhat.io/openshift-service-mesh-tech-preview/istio-ztunnel-rhel9
+    - {{ prega_mirror }}/prega/test/openshift-service-mesh-tech-preview
+    source: registry.redhat.io/openshift-service-mesh-tech-preview
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-service-mesh-tech-preview
+    source: registry.stage.redhat.io/openshift-service-mesh-tech-preview
   - mirrors:
     - {{ prega_mirror }}/prega/test/openshift-update-service
     source: registry.redhat.io/openshift-update-service
   - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift-update-service
+    source: registry.stage.redhat.io/openshift-update-service
+  - mirrors:
     - {{ prega_mirror }}/prega/test/openshift4
     source: registry.redhat.io/openshift4
   - mirrors:
+    - {{ prega_mirror }}/prega/test/openshift4
+    source: registry.stage.redhat.io/openshift4
+  - mirrors:
     - {{ prega_mirror }}/prega/test/quay
     source: registry.redhat.io/quay
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/quay
+    source: registry.stage.redhat.io/quay
   - mirrors:
     - {{ prega_mirror }}/prega/test/rh-sso-7
     source: registry.redhat.io/rh-sso-7
   - mirrors:
+    - {{ prega_mirror }}/prega/test/rh-sso-7
+    source: registry.stage.redhat.io/rh-sso-7
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/rhacm2
+    source: registry.redhat.io/rhacm2
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/rhacm2
+    source: registry.stage.redhat.io/rhacm2
+  - mirrors:
     - {{ prega_mirror }}/prega/test/rhbk
     source: registry.redhat.io/rhbk
   - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev
-    source: registry.redhat.io/rhceph-dev
+    - {{ prega_mirror }}/prega/test/rhbk
+    source: registry.stage.redhat.io/rhbk
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/rhceph
+    source: registry.redhat.io/rhceph
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/rhceph
+    source: registry.stage.redhat.io/rhceph
   - mirrors:
     - {{ prega_mirror }}/prega/test/rhel8
     source: registry.redhat.io/rhel8
   - mirrors:
+    - {{ prega_mirror }}/prega/test/rhel8
+    source: registry.stage.redhat.io/rhel8
+  - mirrors:
     - {{ prega_mirror }}/prega/test/rhel9
     source: registry.redhat.io/rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/rhel9
+    source: registry.stage.redhat.io/rhel9
   - mirrors:
     - {{ prega_mirror }}/prega/test/rhosdt
     source: registry.redhat.io/rhosdt
   - mirrors:
-    - {{ prega_mirror }}/prega/test/ubi9/ubi-minimal
-    source: registry.redhat.io/ubi9/ubi-minimal
+    - {{ prega_mirror }}/prega/test/rhosdt
+    source: registry.stage.redhat.io/rhosdt
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/source-to-image
+    source: registry.redhat.io/source-to-image
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/source-to-image
+    source: registry.stage.redhat.io/source-to-image
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/ubi8
+    source: registry.redhat.io/ubi8
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/ubi8
+    source: registry.stage.redhat.io/ubi8
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/ubi9
+    source: registry.redhat.io/ubi9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/ubi9
+    source: registry.stage.redhat.io/ubi9
   - mirrors:
     - {{ prega_mirror }}/prega/test/workload-availability
     source: registry.redhat.io/workload-availability
   - mirrors:
-    - {{ prega_mirror }}/prega/prega-operator-index
-    source: quay.io/prega/prega-operator-index
+    - {{ prega_mirror }}/prega/test/workload-availability
+    source: registry.stage.redhat.io/workload-availability
   - mirrors:
     - {{ prega_mirror }}/prega/test/acm-d
-    source: quay.io/prega/test/acm-d
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/advanced-cluster-security/rhacs-operator-bundle
-    source: quay.io/prega/test/advanced-cluster-security/rhacs-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/ansible-automation-platform
-    source: quay.io/prega/test/ansible-automation-platform
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/cert-manager/cert-manager-operator-bundle
-    source: quay.io/prega/test/cert-manager/cert-manager-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/cluster-observability-operator/cluster-observability-operator-bundle
-    source: quay.io/prega/test/cluster-observability-operator/cluster-observability-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/compliance
-    source: quay.io/prega/test/compliance
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/custom-metrics-autoscaler
-    source: quay.io/prega/test/custom-metrics-autoscaler
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/kmm
-    source: quay.io/prega/test/kmm
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/lvms4/lvms-operator-bundle
-    source: quay.io/prega/test/lvms4/lvms-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/migration-toolkit-virtualization/mtv-operator-bundle
-    source: quay.io/prega/test/migration-toolkit-virtualization/mtv-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/mta/mta-operator-bundle
-    source: quay.io/prega/test/mta/mta-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/mtr/mtr-operator-bundle
-    source: quay.io/prega/test/mtr/mtr-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/noo/node-observability-operator-bundle-rhel8
-    source: quay.io/prega/test/noo/node-observability-operator-bundle-rhel8
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/oadp/oadp-operator-bundle
-    source: quay.io/prega/test/oadp/oadp-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/odf4/ocs-tls-profiles-operator-bundle
-    source: quay.io/prega/test/odf4/ocs-tls-profiles-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/odf4-ocs-tls-profiles-operator-bundle
-    source: quay.io/prega/test/odf4-ocs-tls-profiles-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-gitops-1
-    source: quay.io/prega/test/openshift-gitops-1
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-logging
-    source: quay.io/prega/test/openshift-logging
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-pipelines/pipelines-operator-bundle
-    source: quay.io/prega/test/openshift-pipelines/pipelines-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-service-mesh
-    source: quay.io/prega/test/openshift-service-mesh
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-update-service/cincinnati-operator-bundle
-    source: quay.io/prega/test/openshift-update-service/cincinnati-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift4
-    source: quay.io/prega/test/openshift4
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/quay
-    source: quay.io/prega/test/quay
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads
-    source: quay.io/prega/test/redhat-user-workloads
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rh-sso-7/sso7-rhel8-operator-bundle
-    source: quay.io/prega/test/rh-sso-7/sso7-rhel8-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhbk/keycloak-operator-bundle
-    source: quay.io/prega/test/rhbk/keycloak-operator-bundle
+    source: {{ prega_mirror }}/acm-d
   - mirrors:
     - {{ prega_mirror }}/prega/test/rhceph-dev
-    source: quay.io/prega/test/rhceph-dev
+    source: {{ prega_mirror }}/rhceph-dev
   - mirrors:
-    - {{ prega_mirror }}/prega/test/rhosdt/tempo-operator-bundle
-    source: quay.io/prega/test/rhosdt/tempo-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/workload-availability
-    source: quay.io/prega/test/workload-availability
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-rhel9-operator
-    source: registry.redhat.io/odf4/odf-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-console-rhel9
-    source: registry.redhat.io/odf4/odf-console-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-ocs-rhel9-operator
-    source: registry.redhat.io/odf4/ocs-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-cephcsi-rhel9-operator
-    source: registry.redhat.io/odf4/cephcsi-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-csi-addons-rhel9-operator
-    source: registry.redhat.io/odf4/odf-csi-addons-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-ocs-client-rhel9-operator
-    source: registry.redhat.io/odf4/ocs-client-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-ocs-metrics-exporter-rhel9
-    source: registry.redhat.io/odf4/ocs-metrics-exporter-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-external-snapshotter-rhel9-operator
-    source: registry.redhat.io/odf4/odf-external-snapshotter-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-rook-ceph-rhel9-operator
-    source: registry.redhat.io/odf4/rook-ceph-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/openshift-ose-oauth-proxy-rhel9
-    source: registry.redhat.io/openshift4/ose-oauth-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-cloudnative-pg-rhel9-operator
-    source: registry.redhat.io/odf4/odf-cloudnative-pg-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-mcg-rhel9-operator
-    source: registry.redhat.io/odf4/mcg-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-ocs-client-console-rhel9
-    source: registry.redhat.io/odf4/ocs-client-console-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-csi-addons-sidecar-rhel9
-    source: registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-cephcsi-rhel9
-    source: registry.redhat.io/odf4/cephcsi-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-external-snapshotter-sidecar-rhel9
-    source: registry.redhat.io/odf4/odf-external-snapshotter-sidecar-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/openshift-ose-csi-external-provisioner-rhel9
-    source: registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/openshift-ose-csi-external-resizer-rhel9
-    source: registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/openshift-ose-csi-external-attacher-rhel9
-    source: registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/openshift-ose-csi-node-driver-registrar-rhel9
-    source: registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-mcg-core-rhel9
-    source: registry.redhat.io/odf4/mcg-core-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/rhceph-8-rhel9
-    source: registry.redhat.io/rhceph/rhceph-8-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/openshift-ose-csi-external-snapshotter-rhel9
-    source: registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-must-gather-rhel9
-    source: registry.redhat.io/odf4/odf-must-gather-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multiclusterhub-rhel9
-    source: registry.redhat.io/rhacm2/multiclusterhub-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-search-v2-rhel9
-    source: registry.redhat.io/rhacm2/acm-search-v2-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-image-set-controller-rhel9
-    source: registry.redhat.io/multicluster-engine/cluster-image-set-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multicluster-operators-channel-rhel9
-    source: registry.redhat.io/rhacm2/multicluster-operators-channel-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multicluster-role-assignment-rhel9
-    source: registry.redhat.io/rhacm2/multicluster-role-assignment-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/prometheus-rhel9
-    source: registry.redhat.io/rhacm2/prometheus-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/assisted-image-service-rhel9
-    source: registry.redhat.io/multicluster-engine/assisted-image-service-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-curator-controller-rhel9
-    source: registry.redhat.io/multicluster-engine/cluster-curator-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/rbac-query-proxy-rhel9
-    source: registry.redhat.io/rhacm2/rbac-query-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-backup-rhel9-operator
-    source: registry.redhat.io/rhacm2/cluster-backup-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-api-provider-kubevirt-rhel9
-    source: registry.redhat.io/multicluster-engine/cluster-api-provider-kubevirt-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-cli-rhel9
-    source: registry.redhat.io/rhacm2/acm-cli-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/insights-metrics-rhel9
-    source: registry.redhat.io/rhacm2/insights-metrics-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-governance-policy-addon-controller-rhel9
-    source: registry.redhat.io/rhacm2/acm-governance-policy-addon-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/provider-credential-controller-rhel9
-    source: registry.redhat.io/multicluster-engine/provider-credential-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/governance-policy-propagator-rhel9
-    source: registry.redhat.io/rhacm2/governance-policy-propagator-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multicluster-operators-subscription-rhel9
-    source: registry.redhat.io/rhacm2/multicluster-operators-subscription-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/thanos-receive-controller-rhel9
-    source: registry.redhat.io/rhacm2/thanos-receive-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/discovery-rhel9
-    source: registry.redhat.io/multicluster-engine/discovery-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/registration-operator-rhel9
-    source: registry.redhat.io/multicluster-engine/registration-operator-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/search-collector-rhel9
-    source: registry.redhat.io/rhacm2/search-collector-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multicluster-operators-application-rhel9
-    source: registry.redhat.io/rhacm2/multicluster-operators-application-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/metrics-collector-rhel9
-    source: registry.redhat.io/rhacm2/metrics-collector-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/grafana-dashboard-loader-rhel9
-    source: registry.redhat.io/rhacm2/grafana-dashboard-loader-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-proxy-addon-rhel9
-    source: registry.redhat.io/multicluster-engine/cluster-proxy-addon-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/config-policy-controller-rhel9
-    source: registry.redhat.io/rhacm2/config-policy-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-search-v2-api-rhel9
-    source: registry.redhat.io/rhacm2/acm-search-v2-api-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/backplane-rhel9-operator
-    source: registry.redhat.io/multicluster-engine/backplane-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-api-provider-agent-rhel9
-    source: registry.redhat.io/multicluster-engine/cluster-api-provider-agent-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/memcached-exporter-rhel9
-    source: registry.redhat.io/rhacm2/memcached-exporter-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/hive-rhel9
-    source: registry.redhat.io/multicluster-engine/hive-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/console-mce-rhel9
-    source: registry.redhat.io/multicluster-engine/console-mce-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/addon-manager-rhel9
-    source: registry.redhat.io/multicluster-engine/addon-manager-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/kube-rbac-proxy-mce-rhel9
-    source: registry.redhat.io/multicluster-engine/kube-rbac-proxy-mce-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/registration-rhel9
-    source: registry.redhat.io/multicluster-engine/registration-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/assisted-installer-agent-rhel9
-    source: registry.redhat.io/multicluster-engine/assisted-installer-agent-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/mce-capi-webhook-config-rhel9
-    source: registry.redhat.io/multicluster-engine/mce-capi-webhook-config-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/submariner-addon-rhel9
-    source: registry.redhat.io/rhacm2/submariner-addon-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/image-based-install-rhel9
-    source: registry.redhat.io/multicluster-engine/image-based-install-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/endpoint-monitoring-rhel9-operator
-    source: registry.redhat.io/rhacm2/endpoint-monitoring-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-must-gather-rhel9
-    source: registry.redhat.io/rhacm2/acm-must-gather-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/assisted-installer-rhel9
-    source: registry.redhat.io/multicluster-engine/assisted-installer-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-multicluster-observability-addon-rhel9
-    source: registry.redhat.io/rhacm2/acm-multicluster-observability-addon-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/observatorium-rhel9-operator
-    source: registry.redhat.io/rhacm2/observatorium-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cert-policy-controller-rhel9
-    source: registry.redhat.io/rhacm2/cert-policy-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/placement-rhel9
-    source: registry.redhat.io/multicluster-engine/placement-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/hypershift-addon-rhel9-operator
-    source: registry.redhat.io/multicluster-engine/hypershift-addon-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/mtv-integrations-rhel9
-    source: registry.redhat.io/rhacm2/mtv-integrations-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multicloud-integrations-rhel9
-    source: registry.redhat.io/rhacm2/multicloud-integrations-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-search-indexer-rhel9
-    source: registry.redhat.io/rhacm2/acm-search-indexer-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multicluster-observability-rhel9-operator
-    source: registry.redhat.io/rhacm2/multicluster-observability-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-prometheus-config-reloader-rhel9
-    source: registry.redhat.io/rhacm2/acm-prometheus-config-reloader-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-prometheus-rhel9
-    source: registry.redhat.io/rhacm2/acm-prometheus-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/kube-rbac-proxy-rhel9
-    source: registry.redhat.io/rhacm2/kube-rbac-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/assisted-installer-controller-rhel9
-    source: registry.redhat.io/multicluster-engine/assisted-installer-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/kube-state-metrics-rhel9
-    source: registry.redhat.io/rhacm2/kube-state-metrics-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/hypershift-rhel9-operator
-    source: registry.redhat.io/multicluster-engine/hypershift-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/must-gather-rhel9
-    source: registry.redhat.io/multicluster-engine/must-gather-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/thanos-rhel9
-    source: registry.redhat.io/rhacm2/thanos-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/assisted-service-8-rhel8
-    source: registry.redhat.io/multicluster-engine/assisted-service-8-rhel8
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/insights-client-rhel9
-    source: registry.redhat.io/rhacm2/insights-client-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/klusterlet-addon-controller-rhel9
-    source: registry.redhat.io/rhacm2/klusterlet-addon-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/assisted-service-9-rhel9
-    source: registry.redhat.io/multicluster-engine/assisted-service-9-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-volsync-addon-controller-rhel9
-    source: registry.redhat.io/rhacm2/acm-volsync-addon-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-grafana-rhel9
-    source: registry.redhat.io/rhacm2/acm-grafana-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/work-rhel9
-    source: registry.redhat.io/multicluster-engine/work-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/volsync-rhel9
-    source: registry.redhat.io/rhacm2/volsync-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-governance-policy-framework-addon-rhel9
-    source: registry.redhat.io/rhacm2/acm-governance-policy-framework-addon-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/clusterlifecycle-state-metrics-rhel9
-    source: registry.redhat.io/multicluster-engine/clusterlifecycle-state-metrics-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/managed-serviceaccount-rhel9
-    source: registry.redhat.io/multicluster-engine/managed-serviceaccount-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/managedcluster-import-controller-rhel9
-    source: registry.redhat.io/multicluster-engine/managedcluster-import-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/capoa-control-plane-rhel9
-    source: registry.redhat.io/multicluster-engine/capoa-control-plane-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/node-exporter-rhel9
-    source: registry.redhat.io/rhacm2/node-exporter-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/clusterclaims-controller-rhel9
-    source: registry.redhat.io/multicluster-engine/clusterclaims-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/capoa-bootstrap-rhel9
-    source: registry.redhat.io/multicluster-engine/capoa-bootstrap-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/observatorium-rhel9
-    source: registry.redhat.io/rhacm2/observatorium-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-siteconfig-rhel9
-    source: registry.redhat.io/rhacm2/acm-siteconfig-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/hypershift-cli-rhel9
-    source: registry.redhat.io/multicluster-engine/hypershift-cli-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/multicloud-manager-rhel9
-    source: registry.redhat.io/multicluster-engine/multicloud-manager-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/prometheus-alertmanager-rhel9
-    source: registry.redhat.io/rhacm2/prometheus-alertmanager-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-proxy-rhel9
-    source: registry.redhat.io/multicluster-engine/cluster-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/console-rhel9
-    source: registry.redhat.io/rhacm2/console-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-cluster-permission-rhel9
-    source: registry.redhat.io/rhacm2/acm-cluster-permission-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-cli-artifacts-rhel9
-    source: registry.redhat.io/rhem/flightctl-cli-artifacts-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-ui-ocp-rhel9
-    source: registry.redhat.io/rhem/flightctl-ui-ocp-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-alert-exporter-rhel9
-    source: registry.redhat.io/rhem/flightctl-alert-exporter-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-ui-rhel9
-    source: registry.redhat.io/rhem/flightctl-ui-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-alertmanager-proxy-rhel9
-    source: registry.redhat.io/rhem/flightctl-alertmanager-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-db-setup-rhel9
-    source: registry.redhat.io/rhem/flightctl-db-setup-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-periodic-rhel9
-    source: registry.redhat.io/rhem/flightctl-periodic-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-worker-rhel9
-    source: registry.redhat.io/rhem/flightctl-worker-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-api-rhel9
-    source: registry.redhat.io/rhem/flightctl-api-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/flightctl-userinfo-proxy-rhel9
-    source: registry.redhat.io/rhem/flightctl-userinfo-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/frr-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/kubernetes-nmstate-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/kubernetes-nmstate-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/metallb-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/metallb-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/nmstate-console-plugin-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-aws-efs-csi-driver-container-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-aws-efs-csi-driver-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-aws-efs-csi-driver-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-cloud-event-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-cluster-nfd-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-cluster-nfd-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-csi-livenessprobe-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-gcp-filestore-csi-driver-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-gcp-filestore-csi-driver-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-gcp-filestore-csi-driver-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-kubernetes-nmstate-handler-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-local-storage-diskmaker-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-local-storage-mustgather-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-local-storage-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-local-storage-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-metallb-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-node-feature-discovery-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-ptp-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-ptp-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-ptp-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-secrets-store-csi-driver-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-secrets-store-csi-driver-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-secrets-store-csi-driver-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-smb-csi-driver-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-smb-csi-driver-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-smb-csi-driver-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-tools-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-vertical-pod-autoscaler-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-vertical-pod-autoscaler-rhel9
-  - mirrors:
     - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-vertical-pod-autoscaler-rhel9-operator
+    source: {{ prega_mirror }}/redhat-user-workloads/ocp-art-tenant/art-images-share
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/pf-status-relay-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/pf-status-relay-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/pf-status-relay-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-network-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-dp-admission-controller-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-infiniband-cni-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-network-config-daemon-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-network-device-plugin-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-network-metrics-exporter-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-network-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-network-webhook-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-sriov-rdma-cni-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/sriov-cni-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ingress-node-firewall-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ingress-node-firewall-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ingress-node-firewall-rhel9
+    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant
+    source: {{ prega_mirror }}/redhat-user-workloads/ocp-art-tenant
   - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-gitops-1/console-plugin-rhel8
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/console-plugin-rhel8
-    source: registry.redhat.io/openshift-gitops-1/console-plugin-rhel8
+    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant
+    source: {{ prega_mirror }}/redhat-user-workloads/rh-openshift-gitops-tenant
   - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/openshift-ose-kube-rbac-proxy-rhel9
-    - {{ prega_mirror }}/prega/test/openshift4/ose-kube-rbac-proxy-rhel9
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-gitops-1/gitops-rhel8-operator
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/gitops-rhel8-operator
-    source: registry.redhat.io/openshift-gitops-1/gitops-rhel8-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-gitops-1/argocd-rhel8
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/argocd-rhel8
-    source: registry.redhat.io/openshift-gitops-1/argocd-rhel8
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-gitops-1/gitops-rhel8
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/gitops-rhel8
-    source: registry.redhat.io/openshift-gitops-1/gitops-rhel8
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odr-rhel9-operator
-    source: registry.redhat.io/odf4/odr-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-multicluster-console-rhel9
-    source: registry.redhat.io/odf4/odf-multicluster-console-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-lightspeed-rag-content-rhel9
-    source: registry.redhat.io/odf4/odf-lightspeed-rag-content-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift-gitops-1/dex-rhel8
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/dex-rhel8
-    source: registry.redhat.io/openshift-gitops-1/dex-rhel8
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-multicluster-rhel9-operator
-    source: registry.redhat.io/odf4/odf-multicluster-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-cosi-sidecar-rhel9
-    source: registry.redhat.io/odf4/odf-cosi-sidecar-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-clusterresourceoverride-operator-bundle
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-clusterresourceoverride-rhel9-operator
+    - {{ prega_mirror }}/prega/test/openshift5/metallb-rhel9
+    source: registry.redhat.io/openshift5/metallb-rhel9
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-clusterresourceoverride-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-daemon-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-intel-ipu-p4sdk-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-intel-ipu-vsp-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-intel-netsec-vsp-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-marvell-cp-agent-rhel9
+    - {{ prega_mirror }}/prega/test/openshift5
+    source: registry.stage.redhat.io/openshift5
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-marvell-vsp-rhel9
+    - {{ prega_mirror }}/prega/test/openshift5/ose-cluster-nfd-rhel9-operator
+    source: registry.redhat.io/openshift5/ose-cluster-nfd-rhel9-operator
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-network-resources-injector-rhel9
+    - {{ prega_mirror }}/prega/test/openshift5/ose-kube-rbac-proxy-rhel9
+    source: registry.redhat.io/openshift5/ose-kube-rbac-proxy-rhel9
   - mirrors:
     - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-operator-bundle
+    source: registry.redhat.io/openshift5/ose-node-feature-discovery-rhel9
   - mirrors:
     - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-dpu-rhel9-operator
+    source: registry.stage.redhat.io/openshift5/ose-node-feature-discovery-rhel9
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ptp-must-gather-rhel9
+    - {{ prega_mirror }}/prega/test/openshift5/ose-ptp-rhel9
+    source: registry.stage.redhat.io/openshift5/ose-ptp-rhel9
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-must-gather-rhel9
+    - {{ prega_mirror }}/prega/test/openshift5/ose-ptp-rhel9-operator
+    source: registry.redhat.io/openshift5/ose-ptp-rhel9-operator
   - mirrors:
     - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-support-log-gather-operator-bundle
+    source: registry.redhat.io/openshift5/ose-secrets-store-csi-driver-rhel9
   - mirrors:
     - {{ prega_mirror }}/prega/test/redhat-user-workloads/ocp-art-tenant/art-images-share
-    source: registry.redhat.io/openshift4/ose-support-log-gather-rhel9-operator
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/odf4-odf-blackbox-exporter-rhel9
-    source: registry.redhat.io/odf4/odf-blackbox-exporter-rhel9
+    source: registry.stage.redhat.io/openshift5/ose-secrets-store-csi-driver-rhel9
   - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev/rhceph-9-rhel9
-    source: registry.redhat.io/rhceph/rhceph-9-rhel9
+    - {{ prega_mirror }}/prega/test
+    source: quay.io/prega/test
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/gitops-rhel9-operator
+    - {{ prega_mirror }}/prega/test/openshift-gitops-1/gitops-rhel9-operator
     source: registry.redhat.io/openshift-gitops-1/gitops-rhel9-operator
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/gitops-rhel9
+    - {{ prega_mirror }}/prega/test/openshift-gitops-1/gitops-rhel9
     source: registry.redhat.io/openshift-gitops-1/gitops-rhel9
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/console-plugin-rhel9
-    source: registry.redhat.io/openshift-gitops-1/console-plugin-rhel9
+    - {{ prega_mirror }}/prega/test/openshift-gitops-1/rh-openshift-gitops-tenant
+    source: registry.redhat.io/openshift-gitops-1
   - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/argocd-rhel9
-    source: registry.redhat.io/openshift-gitops-1/argocd-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/redhat-user-workloads/rh-openshift-gitops-tenant/dex-rhel9
-    source: registry.redhat.io/openshift-gitops-1/dex-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/acm-cluster-permission-rhel9
-    source: registry.redhat.io/multicluster-engine/acm-cluster-permission-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/acm-d/cluster-permission-rhel9
-    source: registry.redhat.io/multicluster-engine/cluster-permission-rhel9
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/advanced-cluster-security/rhacs-rhel9-operator
-    source: registry.redhat.io/advanced-cluster-security/rhacs-rhel9-operator
+    - {{ prega_mirror }}/prega/test/openshift5
+    source: registry.stage.redhat.io/openshift5
   - mirrors:
     - {{ prega_mirror }}/prega/test/openshift5
     source: registry.redhat.io/openshift5
   - mirrors:
-    - {{ prega_mirror }}/prega/test/rhceph-dev
-    source: quay.io/rhceph-dev
+    - {{ prega_mirror }}/prega/test/openshift-gitops-1
+    source: registry.redhat.io/openshift-gitops-1
   - mirrors:
-    - {{ prega_mirror }}/prega/test/quay
-    source: registry.redhat.io/quay
-  - mirrors:
-    - {{ prega_mirror }}/prega/test/openshift5
-    source: quay.io/prega/test/openshift5
-
+    - {{ prega_mirror }}/prega/test/rhceph/9-rhel9
+    source: registry.redhat.io/rhceph/rhceph-9-rhel9
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
@@ -841,4 +299,4 @@ spec:
   imageTagMirrors:
   - mirrors:
     - {{ prega_mirror }}/prega/test/openshift-logging
-    source: quay.io/prega/test/openshift-logging
+    source: {{ prega_mirror }}/prega/test/openshift-logging

@@ -310,6 +310,8 @@
     cmd: >
       plays/scripts/wipe-odf-disks.sh
       {{ local_storage_devices | join(' ') }}
+  environment:
+    SUPPORT_TOOLS_IMAGE: "{{ support_tools_image }}"
   ignore_errors: false
   register: disk_wipe_result
   retries: 3
