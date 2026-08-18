@@ -175,6 +175,7 @@
         repo_root_path: "{{ dci_cluster_configs_dir }}"
         manifest_templates: "{{ dci_extra_manifests }}"
         gm_image_sources: "{{ mirroring_image_sources | default('') }}"
+        gm_ocp_version: "{{ version }}"
       ansible.builtin.include_role:
         name: redhatci.ocp.generate_manifests
 
