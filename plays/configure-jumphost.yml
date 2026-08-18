@@ -60,7 +60,7 @@
 - name: "Download stable openshift clients"
   vars:
     ocp_clients_url:
-      "https://mirror.openshift.com/pub/openshift-v4/\
+      "https://mirror.openshift.com/pub/openshift-v{{ version.split('.')[0] }}/\
       x86_64/clients/ocp/stable"
     opm_suffix: "{{ ansible_distribution_major_version is version('9', '==') | ternary('-rhel9', '') }}"
   ansible.builtin.unarchive:

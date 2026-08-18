@@ -100,7 +100,7 @@
 
             - name: "Download the release signature"
               ansible.builtin.uri:
-                url: "https://mirror.openshift.com/pub/openshift-v4/signatures/openshift/release/sha256={{ release_digest }}/signature-1"
+                url: "https://mirror.openshift.com/pub/openshift-v{{ ocp_major }}/signatures/openshift/release/sha256={{ release_digest }}/signature-1"
                 return_content: true
                 timeout: 900
               register: release_signature
