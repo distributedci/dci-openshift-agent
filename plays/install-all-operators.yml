@@ -30,7 +30,7 @@
   vars:
     operator: "{{ package }}"
     source: "{{ install_all_from_catalog }}"
-    namespace: "{{ operator_ns_name | default(package, True) }}"
+    namespace: "{{ operator_ns_name | default(package, True) }}"  # noqa: var-naming[no-reserved]
     source_ns: "{{ install_all_from_catalog_source | default('openshift-marketplace') }}"
     operator_group_name: "{{ package }}"
 ...
