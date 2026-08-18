@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.34.0
+Version:       1.37.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -18,7 +18,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 4.2.0
+Requires: ansible-collection-redhatci-ocp >= 6.1.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -66,6 +66,15 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Mon Aug 17 2026 Ramon Perez <raperez@redhat.com> 1.37.EPOCH-1.VERS
+- Bump for changes in redhatci.ocp collections to support Two-Node with Fencing (TNF) in generate_manifests role, for ABI deployments
+
+* Fri Aug 14 2026 Frederic Lepied <flepied@redhat.com> 1.36.EPOCH-1.VERS
+- Resolve must-gather short names via CSV relatedImages (redhatci.ocp >= 3.7.0)
+
+* Fri Aug 07 2026 Frederic Lepied <flepied@redhat.com> 1.35.EPOCH-1.VERS
+- Implement ABI monitoring as a dedicated play; requires ansible-collection-redhatci-ocp >= 5.0.0
+
 * Wed Aug  5 2026 Beto Rdz <josearod@redhat.com> 1.34.EPOCH-1.VERS
 - Remove support for Gitea, using imagesources mirrored images
 

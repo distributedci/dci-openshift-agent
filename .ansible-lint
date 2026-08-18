@@ -5,6 +5,7 @@ exclude_paths:
   - systemd
   - tests
   - utils
+  - samples
 
 profile: production
 use_default_rules: true

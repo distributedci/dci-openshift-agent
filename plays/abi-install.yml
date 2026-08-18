@@ -175,6 +175,7 @@
         repo_root_path: "{{ dci_cluster_configs_dir }}"
         manifest_templates: "{{ dci_extra_manifests }}"
         gm_image_sources: "{{ mirroring_image_sources | default('') }}"
+        gm_ocp_version: "{{ version }}"
       ansible.builtin.include_role:
         name: redhatci.ocp.generate_manifests
 
@@ -231,12 +232,8 @@
         loop_var: target_host
 
     - name: Monitor Agent Based Installer
-      vars:
-        agent_based_installer_path: "{{ openshift_installer_path }}"
-        repo_root_path: "{{ dci_cluster_configs_dir }}"
-        mabi_retry_install_complete_check: "{{ ('OCPBUGS-49157' in dci_workarounds) }}"
-      ansible.builtin.include_role:
-        name: redhatci.ocp.monitor_agent_based_installer
+      ansible.builtin.include_tasks:
+        file: abi-install-monitoring.yml
 
   always:
     - name: Eject Media

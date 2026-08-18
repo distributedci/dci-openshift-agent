@@ -78,26 +78,44 @@
       when:
         - dci_collect_hardware | default(true) | bool
 
-    - name: Mirror log collection images
-      ansible.builtin.include_tasks: mirror-images.yml
-      vars:
+    - name: Resolve and mirror must-gather images
+      block:
+        - name: Resolve must-gather short names to full image references
+          ansible.builtin.include_role:
+            name: redhatci.ocp.resolve_must_gather_images
+          vars:
+            rmgi_images: "{{ dci_must_gather_images }}"
+      rescue:
+        - name: "Must-gather resolve failed, continuing with log collection"
+          ansible.builtin.debug:
+            msg: "Failed to resolve must-gather images: {{ ansible_failed_result.msg | default('unknown error') }}"
+
+        - name: Fall back to default must-gather image
+          ansible.builtin.set_fact:
+            rmgi_resolved_images:
+              - registry.redhat.io/openshift4/ose-must-gather
+
+    - name: Build log collection image candidates
+      ansible.builtin.set_fact:
         mi_candidates: >-
           {{
             (
-              [must_gather_image] +
-              (dci_must_gather_images | default([])) +
-              [support_tools_image]
+              (rmgi_resolved_images | default(
+                dci_must_gather_images
+              )) + [support_tools_image]
             ) | unique | list
           }}
+
+    - name: Mirror log collection images
+      ansible.builtin.include_tasks: mirror-images.yml
 
     - name: "Get logs from OCP deployment"
       environment:
         DCI_MUST_GATHER_IMAGES: >-
           {{
-            (
-              [must_gather_image] +
-              (dci_must_gather_images | default([]))
-            ) | unique | join(" ")
+            (rmgi_resolved_images | default(
+              dci_must_gather_images
+            )) | unique | join(" ")
           }}
         DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
         PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
@@ -136,10 +154,9 @@
   environment:
     DCI_MUST_GATHER_IMAGES: >-
       {{
-        (
-          [must_gather_image] +
-          (dci_must_gather_images | default([]))
-        ) | unique | join(" ")
+        (rmgi_hub_resolved_images | default(
+          dci_hub_must_gather_images
+        )) | unique | join(" ")
       }}
     DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
     KUBECONFIG: "{{ hub_kubeconfig_path }}"

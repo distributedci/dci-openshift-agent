@@ -400,15 +400,14 @@
 
       rescue: &teardown_failure
         - name: Run the teardown failure handler
-          delegate_to: localhost
           ignore_unreachable: true
           block:
             - name: Failure
               dci_job:
                 id: "{{ hostvars.localhost.job_id }}"
                 status: "failure"
-              delegate_to: localhost
               tags: [dci]
+              delegate_to: localhost
 
             - name: Run the failure process for partners
               ansible.builtin.include_tasks: "{{ hookdir }}/hooks/failure.yml"
@@ -418,11 +417,14 @@
               ignore_errors: true
 
             - name: Get Logs
-              ansible.builtin.include_tasks: plays/get-logs.yml
+              ansible.builtin.include_tasks:
+                file: plays/get-logs.yml
+                apply:
+                  environment:
+                    KUBECONFIG: "{{ kubeconfig_path }}"
 
             - name: Teardown Hooks
               when: dci_teardown_on_failure|bool
-              delegate_to: jumphost
               ignore_unreachable: true
               ignore_errors: true
               block:

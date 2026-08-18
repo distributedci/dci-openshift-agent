@@ -56,7 +56,11 @@ enable_gitops: false
 enable_lvms: false
 
 # Default must-gather images
-must_gather_image: "registry.redhat.io/openshift4/ose-must-gather@sha256:26fe3781e9b02e4f7c864a54056837e3e9175b6a299c43638e4947803844a841" # latest, date: 20260805
+dci_must_gather_images:
+  - ose-must-gather
+dci_hub_must_gather_images:
+  - ose-must-gather
+  - acm
 support_tools_image: "registry.redhat.io/rhel9/support-tools@sha256:f3a8b6d3c4a0231be20332e18eaf9754cde2db6badce55c6ab2564f36466c38b" # 9.8-1785950698
 
 # Feature images used by setup plays.

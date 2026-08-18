@@ -261,7 +261,8 @@ This is the dci-openshift-agent variables that can be set in the
 | Variable                        | Required | Type    | Default                                                        | Description
 |---------------------------------| -------- | ------- | -------------------------------------------------------------- | ------------
 | install_type                    | False    | String  | ipi                                                            | OpenShift Installer type.
-| dci_must_gather_images          | False    | List    |["registry.redhat.io/openshift4/ose-must-gather"]               | List of the must-gather images to use when retrieving "logs.\*".
+| dci_must_gather_images          | False    | List    |["ose-must-gather"]                                             | List of must-gather images for the spoke cluster. Short names (e.g. "ptp-must-gather") are resolved from CSV relatedImages; keywords (e.g. "acm", "openshift-gitops") match must-gather entries by name or image path. Full image references (containing "/") are passed through unchanged.
+| dci_hub_must_gather_images      | False    | List    |["ose-must-gather", "acm"]                                      | List of must-gather images for the hub cluster (ACM/ZTP only). Same resolution rules as `dci_must_gather_images`. Resolved against the hub cluster's CSVs.
 | dci_must_gather_since_time      | False    | String  | job `created_at`                                               | RFC3339 timestamp for `oc adm must-gather --since-time`
 | dci_teardown_on_failure         | False    | Boolean | False                                                          | Whether or not execute the teardown hook on a failure.
 | dci_teardown_on_success         | False    | Boolean | True                                                           | Whether or not execute the teardown hook on success.
@@ -295,7 +296,7 @@ This is the dci-openshift-agent variables that can be set in the
 | update_catalog_channel          | False    | Boolean | True                                                           | When performing operators upgrade, in disconnected mode, update disconnected catalogSources for mirroring.
 | storage_upgrade_tester          | False    | Boolean | False                                                          | only for upgrade; set it to true to launch CronJobs that are testing the storage service by deploying volumes (mounting and writing) during an upgrade.
 | tester_storage_class            | False    | String  | False                                                          | only for upgrade; define which storage class to use for Storage upgrade tests. If is not defined, it will use the default storage class.
-| dci_workarounds                 | False    | List    | []                                                             | List of workarounds to be considered in the execution. Each element of the list must be a String with the following format: bz\<id> or gh-org-repo-\<id>.
+| dci_workarounds                 | False    | List    | []                                                             | List of workaround identifiers consumed directly by agent plays. Each element must be a string.
 | openshift_secret                | False    | Dict    | auths:                                                         | Additional auths will be combined
 | operators_index                 | False    | String  | registry.redhat.io/redhat/redhat-operator-index:v<ocp_version> | Catalog index that contains the bundles for the operators that will be mirrored in disconnected environments. In connected environments, if defined it will update the operators catalog index.
 | opm_mirror_list                 | False    | List, Dict | {}                                                          | Additional operators to be mirrored in disconnected environments. The package names of operators deployed using `dci_operators` must be included in this list.
@@ -794,7 +795,7 @@ A DCI job produces a set of relevant configuration files, logs, reports, and tes
 
 | File                                            | Section | Description                                                                               |
 | ----------------------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
-| install-config-yaml.txt                         | Files   | Configuration file used for the cluster deployment                                        |
+| install-config.yaml                             | Files   | Configuration file used for the cluster deployment                                        |
 | all-nodes.yaml                                  | Files   | The output `oc get nodes -o yaml` command                                                 |
 | *.log                                           | Files   | Log files generated during the job execution and stored in the `dci_log` directory        |
 | *.trace                                         | Files   | Tracing files generated during the job execution and stored in the `dci_log` directory    |
@@ -830,7 +831,6 @@ You may find extra files for the case of Assisted jobs:
 | File                                           | Section | Description                                                                               |
 | ---------------------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
 | agent-config.yaml                              | Files   | agent-config file from the ABI deployment                                            |
-| install-config.yaml                            | Files   | install-config file from the ABI deployment                                          |
 | \<pod_name\>_ai_pod.log                        | Files   | Log files from pods (`assisted-db`, `assisted-installer`, `cluster-bootstrap` and `service`) deployed during Assisted bootstrap stage |
 | \<service_name\>.log                           | Files   | Log files from services (`bootkube` and `release-image`) running during Assisted bootstrap stage |
 | log-bundle-\<date\>                            | Files   | If present, it represents the output of `openshift-install gather bootstrap` command      |
