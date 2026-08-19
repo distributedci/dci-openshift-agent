@@ -99,6 +99,8 @@
                 release_digest: "{{ release_file | regex_search('^Digest:\\s+sha256:(.*)$', '\\1', multiline=True) | first }}"
 
             - name: "Download the release signature"
+              vars:
+                ocp_major: "{{ target_version.split('.')[0] }}"
               ansible.builtin.uri:
                 url: "https://mirror.openshift.com/pub/openshift-v{{ ocp_major }}/signatures/openshift/release/sha256={{ release_digest }}/signature-1"
                 return_content: true
