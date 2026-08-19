@@ -3,7 +3,7 @@
 
 - name: "Set pruned Pre-GA catalog destination in local registry"
   ansible.builtin.set_fact:
-    pre_ga_catalog_pruned: >-
+    pre_ga_catalog_pruned_dest: >-
       {{ dci_local_registry }}/{{
         dci_pre_ga_catalog | regex_replace('^[^/]+/', '')
       }}-pruned
@@ -11,25 +11,34 @@
 - name: "Prune the pre-GA catalog"
   ansible.builtin.include_role:
     name: redhatci.ocp.prune_catalog
+    apply:
+      environment:
+        DOCKER_CONFIG: "{{ docker_conf.path }}"
+        REGISTRY_AUTH_FILE: "{{ dci_pullsecret_file }}"
   vars:
     pc_source_catalog: "{{ dci_pre_ga_catalog }}"
-    pc_destination_catalog: "{{ pre_ga_catalog_pruned }}"
+    pc_destination_catalog: "{{ pre_ga_catalog_pruned_dest }}"
     pc_operators: "{{ mirror_list }}"
     pc_expire: "{{ dci_catalogimage_expire | default(true) }}"
     pc_expire_time: "{{ dci_catalog_image_expiration | default('360h') }}"
-    pc_ignore_pull_errors: true
     pc_opm_args: "--skip-tls-verify=true"
 
 - name: "Check if the pruned catalog was built"
   containers.podman.podman_image_info:
-    name: "{{ pre_ga_catalog_pruned }}"
+    name: "{{ pre_ga_catalog_pruned_dest }}"
   register: pruned_info
 
 - name: "Push and validate the pruned Pre-GA catalog"
   ansible.builtin.include_tasks: push-validate-catalog.yml
   vars:
-    pvc_catalog: "{{ pre_ga_catalog_pruned }}"
+    pvc_catalog: "{{ pre_ga_catalog_pruned_dest }}"
     pvc_fail_on_missing: true
     pvc_remove_local: true
   when:
     - pruned_info.images | length == 1
+
+- name: "Use pruned Pre-GA catalog when it was built"
+  ansible.builtin.set_fact:
+    pre_ga_catalog_pruned: "{{ pre_ga_catalog_pruned_dest }}"
+  when:
+    - pruned_info.images | default([]) | length == 1
