@@ -356,6 +356,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_remove_operator_signatures  | False    | Boolean | False                                                          | Removes operator signatures during mirroring. Enable it when operator images are unsigned or not fully cosign-signed.
 | dci_disable_signatures_validation| False   | Boolean | False                                                          | Disable image signature validation on cluster nodes. Set to `true` in 4.22+.
 | dci_prune_prega_catalog         | False    | Boolean | False                                                          | When `dci_disconnected` is true, prunes `dci_pre_ga_catalog` to the operators in `opm_mirror_list` and `dci_operators`, then mirrors and uses that pruned catalog instead of the full Pre-GA catalog. List all required operators and their dependencies.
+| tests\_to\_verify | False | List | undefined | List of expected test results. When defined, it triggers the validation of actual test results against the expectations. Please check [verify-tests readme](https://github.com/redhatci/ocp/tree/main/roles/verify_tests/README.md) to get more details and an example of the configuration.
 
 > NOTE: There are certain particularities about versioning that you can read more in depth
 > in [the versioning document](docs/ocp_versioning.md)
