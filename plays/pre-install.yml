@@ -141,8 +141,8 @@
     hub_os_images:
       - openshiftVersion: "{{ version }}"
         version: "{{ version.split('.')[:2] | join('.') }}"
-        url: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}" # From mirror_ocp_release
-        rootFSUrl: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
+        url: "{{ webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}" # From mirror_ocp_release
+        rootFSUrl: "{{ webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
         cpuArchitecture: x86_64
   when:
     - enable_acm | bool
