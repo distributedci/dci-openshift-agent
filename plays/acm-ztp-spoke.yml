@@ -86,8 +86,8 @@
         name: redhatci.ocp.mirror_images
       vars:
         mi_images:
-          - "{{ czga_site_generator_image }}:{{ dci_gitops_ztp_tag | default('v4.19.0') }}"
-          - "{{ czga_multicluster_image }}:{{ dci_gitops_mce_tag | default('v2.13') }}"
+          - "{{ czga_site_generator_image }}:{{ dci_gitops_ztp_tag | default('v4.22') }}"
+          - "{{ czga_multicluster_image }}:{{ dci_gitops_mce_tag | default('v2.17') }}"
         mi_registry: "{{ local_registry_host }}{{ _local_registry_port }}"
         mi_authfile: "{{ dci_pullsecret_file }}"
 
@@ -115,8 +115,8 @@
     czga_clusters_namespace: "{{ cluster }}"
     czga_policies_namespace: "{{ cluster }}-policies"
     czga_ocp_pull_secret: "{{ hub_pull_secret.resources[0].data['.dockerconfigjson'] | b64decode }}"
-    czga_site_generator_version: "{{ dci_gitops_ztp_tag | default('v4.19.0') }}"
-    czga_multicluster_version: "{{ dci_gitops_mce_tag | default('v2.13') }}"
+    czga_site_generator_version: "{{ dci_gitops_ztp_tag | default('v4.22') }}"
+    czga_multicluster_version: "{{ dci_gitops_mce_tag | default('v2.17') }}"
     czga_sites_path: "{{ dci_gitops_sites_repo.path}}"
     czga_sites_gitops_repo: "{{ dci_gitops_sites_repo.url }}"
     czga_sites_branch: "{{ dci_gitops_sites_repo.branch }}"
