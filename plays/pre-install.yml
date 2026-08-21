@@ -136,6 +136,18 @@
     mor_oc: "{{ oc_tool_path }}"
     mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
 
+- name: Set override fact for ACM hubs
+  ansible.builtin.set_fact:
+    hub_os_images:
+      - openshiftVersion: "{{ version }}"
+        version: "{{ version.split('.')[:2] | join('.') }}"
+        url: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_iso_location'] | basename }}" # From mirror_ocp_release
+        rootFSUrl: "{{ hostvars.jumphost.webserver_url }}/{{ ocp_release_data['rhcos_images']['metal_pxe_rootfs_location'] | basename }}"
+        cpuArchitecture: x86_64
+  when:
+    - enable_acm | bool
+    - dci_disconnected | default(false) | bool
+
 - name: "Mirror release images for custom OCP component"
   ansible.builtin.include_tasks: mirror-release-images.yml
   when:

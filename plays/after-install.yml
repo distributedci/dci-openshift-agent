@@ -247,17 +247,6 @@
       vars:
         hosts_list: "{{ all_hosts | list | unique }}"
 
-- name: Set override fact for ACM hubs
-  ansible.builtin.set_fact:
-    hub_os_images:
-      - openshiftVersion: "{{ version }}"
-        version: "{{ version.split('.')[:2] | join('.') }}"
-        url: "{{ metalosimage }}" # From mirror_ocp_release
-        cpuArchitecture: x86_64
-  when:
-    - enable_acm | bool
-    - dci_disconnected | default(false) | bool
-
 - name: Check for ICSPs that need to be migrated
   kubernetes.core.k8s_info:
     api_version: operator.openshift.io/v1alpha1
