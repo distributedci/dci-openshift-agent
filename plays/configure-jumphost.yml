@@ -23,6 +23,11 @@
       - libvirt-libs
     state: installed
 
+- name: "Log out of podman registries"
+  containers.podman.podman_logout:
+    all: true
+  failed_when: false
+
 - name: Ensure DCI cache directory is present
   ansible.builtin.file:
     path: "{{ dci_cache_dir }}"
