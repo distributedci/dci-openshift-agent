@@ -89,8 +89,6 @@ Please read the role's documentation for more information.
 
 ## HCP configuration
 
-> ⚠️ Currently, HCP only supports the "kvirt" hosted cluster type.
-
 1. A Hub cluster is deployed with support for ACM. It can be achieved by setting `enable_acm=true` during an OCP deployment. Please see the example of an [ACM Hub pipeline](#acm-hub-pipeline).
 1. The Hub cluster must have the CNV and metallb operators installed.
 1. The OCP release images for the HCP cluster will be mirrored to the same registry path as the Hub cluster images.
@@ -103,8 +101,6 @@ Please read the role's documentation for more information.
 ## ZTP
 
 ### ClusterInstance
-
-> ⚠️ Currently, in disconnected environments, it is only supported the same version of spoke cluster as the Hub
 
 1. A Hub cluster is deployed with support for ACM. It can be achieved by setting `enable_acm=true` during an OCP deployment. Please see the example of an [ACM Hub pipeline](#acm-hub-pipeline).
 1. The Hub cluster must have the SiteConfig Operator enabled.
