@@ -109,7 +109,7 @@
 - name: "Get registry mirror registry details"
   when:
     - dci_disconnected | default(false) | bool
-    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
+    - acm_cluster_type | default('') in ['SNO', 'HostedControlPlane', 'HighAvailable']
   block:
 
     - name: "Get Hub OCP component from DCI"
@@ -236,7 +236,7 @@
         name: redhatci.ocp.acm.utils
         tasks_from: image-sources
       when:
-        - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance','sno', 'SNO', 'HostedControlPlane', 'HighAvailable']
+        - acm_cluster_type | default('') in ['SNO', 'HostedControlPlane', 'HighAvailable']
 
     - name: Resolve hub must-gather short names to full image references
       ansible.builtin.include_role:
@@ -275,12 +275,12 @@
     tasks_from: image-sources
   when:
     - not (dci_disconnected | default(false) | bool)
-    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'SNO', 'HostedControlPlane', 'HighAvailable']
+    - acm_cluster_type | default('') in ['SNO', 'HostedControlPlane', 'HighAvailable']
 
 - name: "Get OCP release artifacts"
   when:
     - not (dci_disconnected | default(false) | bool)
-    - acm_cluster_type | default('') in ['ztp-spoke-clusterinstance', 'sno', 'ztp-spoke', 'SNO', 'HostedControlPlane', 'HighAvailable']
+    - acm_cluster_type | default('') in ['SNO', 'HostedControlPlane', 'HighAvailable']
   block:
     - name: Mirror release
       ansible.builtin.include_role:
