@@ -33,7 +33,7 @@
   ansible.builtin.include_tasks: abi-get-logs.yml
   when: (install_type | default('ipi')) in ['abi']
 
-- name: Check if cluster API is reachable
+- name: Check if the target cluster API is reachable
   ansible.builtin.command:
     cmd: >
       timeout 10
@@ -46,10 +46,17 @@
   changed_when: false
   delegate_to: jumphost
 
-- name: Collect logs that require cluster API
+- name: Collect logs that require the target cluster API
   when:
     - _cluster_api_readyz.rc == 0
   delegate_to: jumphost
+  vars:
+    _mg_is_type: "{{ (ocp_version | default(version)) is version('4.14', '>') | ternary('idms', 'icsp') }}"
+    _mg_hints: "{{ dci_must_gather_images | default([]) | reject('search', '/') | list }}"
+    _mg_full: "{{ dci_must_gather_images | default([]) | select('search', '/') | list }}"
+    _hub_mg_hints: "{{ dci_hub_must_gather_images | default([]) | reject('search', '/') | list }}"
+    _hub_mg_full: "{{ dci_hub_must_gather_images | default([]) | select('search', '/') | list }}"
+    _mg_mirror_images: "{{ (_mg_full + ((enable_acm | default(false) | bool) | ternary(_hub_mg_full, []))) | unique | list }}"
   block:
     - name: "Gathering results for storage service tester"
       ansible.builtin.include_role:
@@ -78,45 +85,103 @@
       when:
         - dci_collect_hardware | default(true) | bool
 
-    - name: Resolve and mirror must-gather images
-      block:
-        - name: Resolve must-gather short names to full image references
-          ansible.builtin.include_role:
-            name: redhatci.ocp.resolve_must_gather_images
-          vars:
-            rmgi_images: "{{ dci_must_gather_images }}"
-      rescue:
-        - name: "Must-gather resolve failed, continuing with log collection"
-          ansible.builtin.debug:
-            msg: "Failed to resolve must-gather images: {{ ansible_failed_result.msg | default('unknown error') }}"
-
-        - name: Fall back to default must-gather image
-          ansible.builtin.set_fact:
-            rmgi_resolved_images:
-              - registry.redhat.io/openshift4/ose-must-gather
-
-    - name: Build log collection image candidates
+    - name: Reset resolved must-gather images
       ansible.builtin.set_fact:
-        mi_candidates: >-
-          {{
-            (
-              (rmgi_resolved_images | default(
-                dci_must_gather_images
-              )) + [support_tools_image]
-            ) | unique | list
-          }}
+        rmgi_resolved_images: []
 
-    - name: Mirror log collection images
-      ansible.builtin.include_tasks: mirror-images.yml
+    - name: Resolve must-gather short names to full image references
+      ansible.builtin.include_role:
+        name: redhatci.ocp.resolve_must_gather_images
+      vars:
+        rmgi_images: "{{ _mg_hints }}"
+      when:
+        - _mg_hints | length > 0
+
+    - name: Set must-gather images
+      ansible.builtin.set_fact:
+        mi_mg_images: "{{ (_mg_full + rmgi_resolved_images) | flatten | unique | list }}"
+
+    - name: Reset resolved must-gather images for Hub
+      ansible.builtin.set_fact:
+        rmgi_resolved_images: []
+      when:
+        - enable_acm | bool
+
+    - name: Resolve Hub must-gather short names to full image references
+      ansible.builtin.include_role:
+        name: redhatci.ocp.resolve_must_gather_images
+      vars:
+        rmgi_images: "{{ _hub_mg_hints }}"
+      when:
+        - enable_acm | bool
+        - _hub_mg_hints | length > 0
+
+    - name: Append Hub must-gather images
+      ansible.builtin.set_fact:
+        mi_mg_images: "{{ (mi_mg_images | default([]) + _hub_mg_full + rmgi_resolved_images) | flatten | unique | list }}"
+      when:
+        - enable_acm | bool
+
+    - name: Debug target must-gather images
+      ansible.builtin.debug:
+        msg: "{{ mi_mg_images }}"
+
+    # Best effort to mirror explicit full must-gather refs. Short-name hints
+    # are resolved from CSVs and are expected to be reachable already.
+    - name: "Mirror must-gather images"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_images
+        apply:
+          ignore_errors: true
+      vars:
+        mi_images: "{{ _mg_mirror_images }}"
+        mi_authfile: "{{ dci_pullsecret_file }}"
+        mi_registry: "{{ dci_local_registry }}"
+        mi_is_type: "{{ _mg_is_type }}"
+      when:
+        - _mg_mirror_images | length > 0
+        - dci_local_registry is defined
+        - dci_local_registry not in ['', ':']
+
+    - name: Apply Image Source manifest
+      kubernetes.core.k8s:
+        state: present
+        definition: "{{ lookup('ansible.builtin.file', mi_is_file.path) | from_yaml_all | list }}"
+      register: _mg_is_apply
+      ignore_errors: true
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+        - acm_cluster_type | default('') not in ['HostedControlPlane']
+
+    - name: Wait for IDMS to roll out
+      ansible.builtin.include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: 120
+        check_wait_delay: 10
+      ignore_errors: true
+      when:
+        - _mg_is_type == 'idms'
+        - _mg_is_apply is changed
+        - acm_cluster_type | default('') not in ['HostedControlPlane']
+
+    - name: Remove temporary Image Source file
+      ansible.builtin.file:
+        path: "{{ mi_is_file.path }}"
+        state: absent
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+
+    - name: Clear Image Source file fact
+      ansible.builtin.set_fact:
+        mi_is_file: {}
 
     - name: "Get logs from OCP deployment"
       environment:
-        DCI_MUST_GATHER_IMAGES: >-
-          {{
-            (rmgi_resolved_images | default(
-              dci_must_gather_images
-            )) | unique | join(" ")
-          }}
+        DCI_MUST_GATHER_IMAGES: "{{ mi_mg_images | join(' ') }}"
         DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
         PATH: "{{ ansible_env.PATH }}:{{ dci_cluster_configs_dir }}:/sbin:/usr/sbin:/usr/local/bin/"
       ansible.builtin.shell:
@@ -128,7 +193,6 @@
           {% endif %}
           {{ job_logs.path }}
       ignore_errors: true
-      delegate_to: jumphost
 
     - name: "Remove the must-gather directory"
       vars:
@@ -150,25 +214,107 @@
         - dci_sos_report_nodes is defined
         - dci_sos_report_nodes | length
 
-- name: "Get logs from ACM-Hub"
-  environment:
-    DCI_MUST_GATHER_IMAGES: >-
-      {{
-        (rmgi_hub_resolved_images | default(
-          dci_hub_must_gather_images
-        )) | unique | join(" ")
-      }}
-    DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
-    KUBECONFIG: "{{ hub_kubeconfig_path }}"
-    PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin:/usr/local/bin/"
-  ansible.builtin.shell:
-    cmd: >
-      {{ scripts_dir.files[0].path }}/get-ocp-logs
-      {{ job_logs.path }}
-  ignore_errors: true
-  delegate_to: jumphost
+- name: Get logs from ACM-Hub
   when:
     - (install_type | default('ipi')) in ['acm']
+  delegate_to: jumphost
+  ignore_errors: true
+  vars:
+    _hub_mg_hints: "{{ dci_hub_must_gather_images | default([]) | reject('search', '/') | list }}"
+    _hub_mg_full: "{{ dci_hub_must_gather_images | default([]) | select('search', '/') | list }}"
+    _hub_mg_is_type: idms
+  block:
+
+    - name: Reset resolved must-gather images
+      ansible.builtin.set_fact:
+        rmgi_resolved_images: []
+
+    - name: Resolve Hub must-gather short names to full image references
+      ansible.builtin.include_role:
+        name: redhatci.ocp.resolve_must_gather_images
+        apply:
+          environment:
+            KUBECONFIG: "{{ hub_kubeconfig_path }}"
+      vars:
+        rmgi_images: "{{ _hub_mg_hints }}"
+      when:
+        - _hub_mg_hints | length > 0
+        - hub_kubeconfig_path is defined
+
+    - name: Set Hub must-gather images
+      ansible.builtin.set_fact:
+        hub_mg_images: "{{ (_hub_mg_full + rmgi_resolved_images) | flatten | unique | list }}"
+
+    - name: Debug Hub must-gather images
+      ansible.builtin.debug:
+        msg: "{{ hub_mg_images }}"
+
+    # Best effort to mirror explicit full must-gather refs. Short-name hints
+    # are resolved from CSVs and are expected to be reachable already.
+    - name: "Mirror Hub must-gather images"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_images
+        apply:
+          ignore_errors: true
+      vars:
+        mi_images: "{{ _hub_mg_full }}"
+        mi_authfile: "{{ dci_pullsecret_file }}"
+        mi_registry: "{{ dci_local_registry }}"
+        mi_is_type: "{{ _hub_mg_is_type }}"
+      when:
+        - _hub_mg_full | length > 0
+        - dci_local_registry is defined
+        - dci_local_registry not in ['', ':']
+
+    - name: Apply Hub Image Source manifest
+      kubernetes.core.k8s:
+        state: present
+        kubeconfig: "{{ hub_kubeconfig_path }}"
+        definition: "{{ lookup('ansible.builtin.file', mi_is_file.path) | from_yaml_all | list }}"
+      register: _hub_is_apply
+      ignore_errors: true
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+
+    - name: Wait for Hub IDMS to roll out
+      ansible.builtin.include_role:
+        name: redhatci.ocp.check_resource
+        apply:
+          environment:
+            KUBECONFIG: "{{ hub_kubeconfig_path }}"
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: 120
+        check_wait_delay: 10
+      ignore_errors: true
+      when: _hub_is_apply is changed
+
+    - name: Remove temporary Hub Image Source file
+      ansible.builtin.file:
+        path: "{{ mi_is_file.path }}"
+        state: absent
+      when:
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+
+    - name: Clear Hub Image Source file fact
+      ansible.builtin.set_fact:
+        mi_is_file: {}
+
+    - name: "Get logs from ACM-Hub"
+      environment:
+        DCI_MUST_GATHER_IMAGES: "{{ hub_mg_images | join(' ') }}"
+        DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
+        KUBECONFIG: "{{ hub_kubeconfig_path }}"
+        PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin:/usr/local/bin/"
+        REGISTRY: "{{ dci_local_registry }}"
+      ansible.builtin.shell:
+        cmd: >
+          timeout -v 20m
+          {{ scripts_dir.files[0].path }}/get-ocp-logs
+          {{ job_logs.path }}
+      ignore_errors: true
 
 - name: Get the differences from the previous DCI job
   ansible.builtin.shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
