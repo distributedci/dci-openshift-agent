@@ -478,34 +478,6 @@
       rescue: *teardown_failure
 
 # Step 3a-1 : installing
-- name: 'Launch ACM install'
-  hosts: jumphost
-  tags:
-    - running
-    - installing
-    - acm
-  environment:
-    http_proxy: "{{ http_proxy }}"
-    https_proxy: "{{ https_proxy }}"
-    no_proxy: "{{ no_proxy_list }}"
-    PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
-    TMPDIR: "{{ ansible_env.HOME }}/tmp"
-  tasks:
-    - name: Install ACM
-      block:
-        - name: "ACM Installation"
-          ansible.builtin.include_tasks:
-            file: plays/acm-install.yml
-            apply:
-              environment:
-                KUBECONFIG: "{{ hub_kubeconfig_path }}"
-          when:
-            - (install_type | default('ipi')) == 'acm'
-            - dci_main == 'install'
-            - not custom_install_hook | default(false) | bool
-      rescue: *teardown_failure
-
-# Step 3a-1 : installing
 - name: 'Launch ABI install'
   hosts: jumphost
   tags:

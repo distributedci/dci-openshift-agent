@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.37.0
+Version:       1.38.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Mon Aug 24 2026 Beto Rodriguez <josearod@redhat.com> 1.38.EPOCH-1.VERS
+- Removes support for ACM install types: ztp-spoke, ztp-spoke-clusterinstance, and sno
+
 * Mon Aug 17 2026 Ramon Perez <raperez@redhat.com> 1.37.EPOCH-1.VERS
 - Bump for changes in redhatci.ocp collections to support Two-Node with Fencing (TNF) in generate_manifests role, for ABI deployments
 

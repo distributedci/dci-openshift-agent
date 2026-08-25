@@ -96,17 +96,8 @@ The following settings must be provided to the SNO Spoke Cluster deployment job.
 
 | Variable                      | Required | Value | Description |
 |-------------------------------|----------|-------|-------------|
-| install_type                  | yes      | acm | Enables the dci-openshift-agent flow that installs a spoke cluster. |
-| acm_cluster_type              | yes      | ztp-spoke | Enables the gitops-ztp installation method from all the available ACM based methods. |
-| dci_gitops_sites_repo         | yes      | | Parameters to the site-config manifest repository.
-| dci_gitops_policies_repo      | yes      | | Parameters to the policy generator template manifest repository. |
-| dci_gitops_*_repo.url         | yes      | | URL to the repository in SSH or HTTP format. |
-| dci_gitops_*_repo.path        | yes      | | Path to the directory containing the manifests. |
-| dci_gitops_*_repo.branch      | yes      | | Branch containing your target version of the manifests. |
-| dci_gitops_*_repo.key_path    | yes      | | If using SSH protocol, local path to the private key file authorized to access the repository. |
-| dci_gitops_*_repo.username    | yes      | | If using HTTP protocol, user name of an authorized account. |
-| dci_gitops_*_repo.password    | yes      | | If using HTTP protocol, password for the authorized user name. |
-| dci_gitops_*_repo.known_hosts | no       | | (If required) List of the repository SSH fingerprints. |
+| install_type                  | yes      | acm   | Enables the dci-openshift-agent flow that installs a spoke cluster. |
+| acm_cluster_type              | yes      |       | Enables the gitops-ztp installation method from all the available ACM based methods. |
 
 ### Pipeline example for the ZTP Spoke Cluster
 
@@ -121,7 +112,7 @@ The following settings must be provided to the SNO Spoke Cluster deployment job.
   ansible_inventory: ~/inventories/sno_baremetal-sno1-ztp-spoke-hosts
   ansible_extravars:
     install_type: acm
-    acm_cluster_type: ztp-spoke
+    acm_cluster_type: SNO
     dci_tags: [debug, sno, ztp, spoke, baremetal]
     dci_must_gather_images:
       - ose-must-gather
@@ -150,22 +141,7 @@ all:
   vars:
     cluster: sno1
     domain: spoke.example.lab
-    dci_gitops_sites_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/sites
-      branch: ztp_spoke
-      key_path: "/path/to/ssh/private/key"
-      known_hosts: "{{ gitops_repo_known_hosts }}"
-    dci_gitops_policies_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/policies
-      branch: ztp_spoke
-      key_path: "/path/to/ssh/private/key"
-      known_hosts: "{{ gitops_repo_known_hosts }}"
-    gitops_repo_known_hosts: |
-      github.com ecdsa-sha2-nistp256 ### KEY ###
-      github.com ssh-ed25519 ### KEY ###
-      github.com ssh-rsa ### KEY ###
+    <dci_app_settings>
 ```
 
 ### Inventory example for the ZTP Spoke Cluster inventory - SNO running Git over HTTP
@@ -178,18 +154,7 @@ all:
   vars:
     cluster: sno1
     domain: spoke.example.lab
-    dci_gitops_sites_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/sites
-      branch: ztp_spoke
-      username: ### USERNAME ###
-      password: ### PASSWORD ###
-    dci_gitops_policies_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/policies
-      branch: ztp_spoke
-      username: ### USERNAME ###
-      password: ### PASSWORD ###
+    <dci_app_settings>
 ```
 
 ## Disconnected environments
@@ -202,7 +167,7 @@ Furthermore, for the deployment to work, a Cluster Image Set must exist in the h
 
 Bear in mind that, although the ClusterImageSet name value usually identifies the OCP release version number to be installed, in the context of DCI automated deployments the release version number is taken from the OCP DCI Job component, so the DCI agent will read whatever value is set in the site config manifest's ClusterImageSetNameRef field and create a ClusterImageSet of that name resolving to the OCP release image for the release number specified in the DCI component, so the original ClusterImageSetNameRef parameter has no relevance beyond acting as the place holder to link the spoke cluster configuration with the required OCP release number.
 
-The logic for these two operations is part of the dci-openshift-agent and is triggered by the presence of the dci_disconnected variable set to "true" in combination with the acm_cluster_type variable set to "ztp-spoke".
+The logic for these two operations is part of the dci-openshift-agent and is triggered by the presence of the dci_disconnected variable set to "true" in combination with the acm_cluster_type variable set to one of the supported spoke types.
 
 Besides the dci_disconnected and acm_cluster_type variables, the following variables must be defined in the inventory to control the mirroring services:
 

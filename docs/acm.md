@@ -89,8 +89,6 @@ Please read the role's documentation for more information.
 
 ## HCP configuration
 
-> ⚠️ Currently, HCP only supports the "kvirt" hosted cluster type.
-
 1. A Hub cluster is deployed with support for ACM. It can be achieved by setting `enable_acm=true` during an OCP deployment. Please see the example of an [ACM Hub pipeline](#acm-hub-pipeline).
 1. The Hub cluster must have the CNV and metallb operators installed.
 1. The OCP release images for the HCP cluster will be mirrored to the same registry path as the Hub cluster images.
@@ -104,8 +102,6 @@ Please read the role's documentation for more information.
 
 ### ClusterInstance
 
-> ⚠️ Currently, in disconnected environments, it is only supported the same version of spoke cluster as the Hub
-
 1. A Hub cluster is deployed with support for ACM. It can be achieved by setting `enable_acm=true` during an OCP deployment. Please see the example of an [ACM Hub pipeline](#acm-hub-pipeline).
 1. The Hub cluster must have the SiteConfig Operator enabled.
 1. The kubeconfig file of the Cluster Hub is exported as HUB_KUBECONFIG: `export HUB_KUBECONFIG=/<kubeconfig_path>`
@@ -116,7 +112,7 @@ Please read the role's documentation for more information.
 
 | Name                             | Required | Default | Description
 | -------------------------------- | -------- | ------- | -----------
-| acm_cluster_type                 | Yes      | None    | The type of cluster to deploy through ACM. Must use: ztp-spoke-clusterinstance, SNO, HostedControlPlane, HighAvailable
+| acm_cluster_type                 | Yes      | None    | The type of cluster to deploy through ACM. Must use: SNO, HostedControlPlane, HighAvailable
 | dci_clusterinstance_template_dir | Yes      | None    | Directory that holds the [ClusterInstance templates](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-clusters-preq)
 | dci_force_deploy_spoke           | No       | False   | Whether or not force an installation of a and Spoke cluster
 | dci_spoke_manifest_files         | No       | []      | Paths to manifest files on the controller, applied to the Hub before a GitOps-managed spoke install (e.g. pull secrets, BMC credentials). Files with `.j2` extension are rendered as jinja templates.
@@ -163,7 +159,7 @@ These facts are set before spoke installations. Use them in ClusterInstance temp
 | `acm_release_image`        | Yes          | Yes       | Spoke OCP release container image pullspec used by ACM/MCE installation
 | `utils_acm_registries`     | Yes          | Yes       | `registries.conf` content from merged Hub (+ spoke, when disconnected) image mirrors via `redhatci.ocp.acm.utils` `image-sources`
 
-> Spoke install facts (`acm_*`, registry/mirror facts) are only set when `acm_cluster_type` is one of: `sno`, `ztp-spoke`, `SNO`, `HostedControlPlane`, `HighAvailable`.
+> Spoke install facts (`acm_*`, registry/mirror facts) are only set when `acm_cluster_type` is one of: `SNO`, `HostedControlPlane`, `HighAvailable`.
 
 ## Pipeline Examples
 
