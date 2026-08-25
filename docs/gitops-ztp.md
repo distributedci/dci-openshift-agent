@@ -98,15 +98,6 @@ The following settings must be provided to the SNO Spoke Cluster deployment job.
 |-------------------------------|----------|-------|-------------|
 | install_type                  | yes      | acm   | Enables the dci-openshift-agent flow that installs a spoke cluster. |
 | acm_cluster_type              | yes      |       | Enables the gitops-ztp installation method from all the available ACM based methods. |
-| dci_gitops_sites_repo         | yes      |       | Parameters to the site-config manifest repository.
-| dci_gitops_policies_repo      | yes      |       | Parameters to the policy generator template manifest repository. |
-| dci_gitops_*_repo.url         | yes      |       | URL to the repository in SSH or HTTP format. |
-| dci_gitops_*_repo.path        | yes      |       | Path to the directory containing the manifests. |
-| dci_gitops_*_repo.branch      | yes      |       | Branch containing your target version of the manifests. |
-| dci_gitops_*_repo.key_path    | yes      |       | If using SSH protocol, local path to the private key file authorized to access the repository. |
-| dci_gitops_*_repo.username    | yes      |       | If using HTTP protocol, user name of an authorized account. |
-| dci_gitops_*_repo.password    | yes      |       | If using HTTP protocol, password for the authorized user name. |
-| dci_gitops_*_repo.known_hosts | no       |       | (If required) List of the repository SSH fingerprints. |
 
 ### Pipeline example for the ZTP Spoke Cluster
 
@@ -150,22 +141,7 @@ all:
   vars:
     cluster: sno1
     domain: spoke.example.lab
-    dci_gitops_sites_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/sites
-      branch: ztp_spoke
-      key_path: "/path/to/ssh/private/key"
-      known_hosts: "{{ gitops_repo_known_hosts }}"
-    dci_gitops_policies_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/policies
-      branch: ztp_spoke
-      key_path: "/path/to/ssh/private/key"
-      known_hosts: "{{ gitops_repo_known_hosts }}"
-    gitops_repo_known_hosts: |
-      github.com ecdsa-sha2-nistp256 ### KEY ###
-      github.com ssh-ed25519 ### KEY ###
-      github.com ssh-rsa ### KEY ###
+    <dci_app_settings>
 ```
 
 ### Inventory example for the ZTP Spoke Cluster inventory - SNO running Git over HTTP
@@ -178,18 +154,7 @@ all:
   vars:
     cluster: sno1
     domain: spoke.example.lab
-    dci_gitops_sites_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/sites
-      branch: ztp_spoke
-      username: ### USERNAME ###
-      password: ### PASSWORD ###
-    dci_gitops_policies_repo:
-      url: git@githost.com:org/spoke-ci-config.git
-      path: files/ztp-spoke/policies
-      branch: ztp_spoke
-      username: ### USERNAME ###
-      password: ### PASSWORD ###
+    <dci_app_settings>
 ```
 
 ## Disconnected environments
