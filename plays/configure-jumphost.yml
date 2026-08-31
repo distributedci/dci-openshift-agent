@@ -74,6 +74,7 @@
     remote_src: true
     mode: "0755"
   register: result
+  until: result is not failed
   retries: 3
   delay: 10
   loop:
