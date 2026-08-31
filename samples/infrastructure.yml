@@ -189,7 +189,7 @@
   tasks:
     - name: Erase bootloader to prevent old OS to boot
       delegate_to: "{{ item }}"
-      ansible.builtin.shell: |
+      ansible.builtin.raw: |
         if grep 'Red Hat Enterprise Linux CoreOS' /etc/os-release; then
           for disk in /dev/sd?; do
             dd if=/dev/zero of=$disk bs=512 count=1
