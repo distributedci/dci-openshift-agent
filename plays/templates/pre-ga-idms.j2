@@ -290,6 +290,12 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/rhceph/9-rhel9
     source: registry.redhat.io/rhceph/rhceph-9-rhel9
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/amq-streams
+    source: registry.redhat.io/amq-streams
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/amq-streams
+    source: registry.stage.redhat.io/amq-streams
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
