@@ -26,6 +26,7 @@
       when:
         - mi_is_file is defined
         - mi_is_file.path is defined
+        - acm_cluster_type | default('') not in ['HostedControlPlane']
 
     - name: Wait for Image Source to roll out
       ansible.builtin.include_role:
@@ -37,6 +38,7 @@
       when:
         - mi_is_file is defined
         - mi_is_file.path is defined
+        - acm_cluster_type | default('') not in ['HostedControlPlane']
 
     - name: Remove temporary Image Source file
       ansible.builtin.file:
