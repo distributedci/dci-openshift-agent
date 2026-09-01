@@ -154,16 +154,19 @@
     - dci_disconnected | default(false) | bool
     - dci_custom_component | default(false) | bool
 
+- name: Copy initial trust bundle
+  ansible.builtin.copy:
+    src: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_mirrors_file }}"
+    dest: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
+    mode: "0644"
+  when:
+    - groups['registry_host'] is defined
+    - hostvars[groups['registry_host'][0]].disconnected_registry_mirrors_file is defined
+
 - name: Append mirrors to trust bundle
   when:
     - dci_disconnected | default(false) | bool
   block:
-    - name: Copy initial trust bundle
-      ansible.builtin.copy:
-        src: "{{ hostvars[groups['registry_host'][0]].disconnected_registry_mirrors_file }}"
-        dest: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
-        mode: "0644"
-
     - name: Use imageDigestSources in OCP 4.14+
       ansible.builtin.replace:
         path: "{{ dci_cluster_configs_dir }}/trust-bundle.yml"
