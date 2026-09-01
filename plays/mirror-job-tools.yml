@@ -1,8 +1,8 @@
 ---
 - name: Mirror ubi9 image for kernel sideloading
   when:
-    - dci_sno_sideload_kernel_url is defined
-    - dci_sno_sideload_kernel_url | length
+    - dci_sno_sideload_kernel_uri is defined
+    - dci_sno_sideload_kernel_uri | length
     - (dci_disconnected | default(false) | bool) or
       (dci_local_registry is defined and dci_local_registry != '')
   block:
