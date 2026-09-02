@@ -102,9 +102,13 @@
             (
               (rmgi_resolved_images | default(
                 dci_must_gather_images
-              )) + [support_tools_image]
+              )) + [support_tools_image] + [pen_drive_scanner_image]
             ) | unique | list
           }}
+
+    - name: Get cluster pull-secret
+      ansible.builtin.include_tasks: get-cluster-pullsecret.yml
+      ignore_errors: true
 
     - name: Mirror log collection images
       ansible.builtin.include_tasks: mirror-images.yml
@@ -149,6 +153,31 @@
       when:
         - dci_sos_report_nodes is defined
         - dci_sos_report_nodes | length
+
+- name: Run pen-drive in-cluster check
+  containers.podman.podman_container:
+    name: "pen-drive-scanner-{{ job_id }}"
+    image: "{{ dci_local_registry | default('localhost') }}/pen-drive/pen-drive-scanner-rhel9:{{ pen_drive_scanner_image.split(':')[-1][:11] }}"
+    pull: newer
+    tls_verify: false
+    authfile: "{{ dci_pullsecret_file }}"
+    userns: keep-id
+    user: "{{ ansible_user_uid }}:{{ ansible_user_gid }}"
+    volume:
+      - "{{ kubeconfig_path }}:/opt/app-root/.kube/config:z,ro"
+      - "{{ job_logs.path }}:/mg:z"
+    timezone: local
+    command:
+      - in-cluster-check
+      - --format
+      - junit
+    detach: false
+    remove: true
+  ignore_errors: true
+  delegate_to: jumphost
+  when:
+    - _cluster_api_readyz.rc == 0
+    - dci_disconnected | default(false) | bool
 
 - name: "Get logs from ACM-Hub"
   environment:
