@@ -56,12 +56,10 @@ enable_gitops: false
 enable_lvms: false
 
 # Default must-gather images
-dci_must_gather_images:
-  - ose-must-gather
+dci_must_gather_images: []
 dci_hub_must_gather_images:
-  - ose-must-gather
   - acm
-support_tools_image: "registry.redhat.io/rhel9/support-tools@sha256:f3a8b6d3c4a0231be20332e18eaf9754cde2db6badce55c6ab2564f36466c38b" # 9.8-1785950698
+  - gitops
 
 # Feature images used by setup plays.
 minio_image: "quay.io/minio/minio@sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e" # RELEASE.2025-09-07T16-13-09Z
