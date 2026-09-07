@@ -148,7 +148,7 @@
         state: present
         definition: "{{ lookup('ansible.builtin.file', mi_is_file.path) | from_yaml_all | list }}"
       register: _mg_is_apply
-      ignore_errors: true
+      failed_when: false
       when:
         - mi_is_file is defined
         - mi_is_file.path is defined
