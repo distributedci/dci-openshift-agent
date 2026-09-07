@@ -52,11 +52,11 @@
   delegate_to: jumphost
   vars:
     _mg_is_type: "{{ (ocp_version | default(version)) is version('4.14', '>') | ternary('idms', 'icsp') }}"
-    _mg_hints: "{{ dci_must_gather_images | default([]) | reject('search', '/') | list }}"
-    _mg_full: "{{ dci_must_gather_images | default([]) | select('search', '/') | list }}"
-    _hub_mg_hints: "{{ dci_hub_must_gather_images | default([]) | reject('search', '/') | list }}"
-    _hub_mg_full: "{{ dci_hub_must_gather_images | default([]) | select('search', '/') | list }}"
-    _mg_mirror_images: "{{ (_mg_full + ((enable_acm | default(false) | bool) | ternary(_hub_mg_full, []))) | unique | list }}"
+    _mg_hints: "{{ dci_must_gather_images | reject('search', '/') | list }}"
+    _mg_full: "{{ dci_must_gather_images | select('search', '/') | list }}"
+    _hub_mg_hints: "{{ dci_hub_must_gather_images | reject('search', '/') | list }}"
+    _hub_mg_full: "{{ dci_hub_must_gather_images | select('search', '/') | list }}"
+    _mg_mirror_images: "{{ (_mg_full + (enable_acm | bool | ternary(_hub_mg_full, []))) | unique | list }}"
   block:
     - name: "Gathering results for storage service tester"
       ansible.builtin.include_role:
@@ -64,7 +64,7 @@
         tasks_from: gathering-logs.yml
         apply:
           environment:
-            REGISTRY: "{% if dci_local_registry is defined %}{{ dci_local_registry }}{% else %}registry.redhat.io{% endif %}"
+            REGISTRY: "{{ dci_local_registry }}"
             OC_PATH: "{{ oc_tool_path }}"
       when:
         - dci_main is defined
@@ -140,8 +140,6 @@
         mi_is_type: "{{ _mg_is_type }}"
       when:
         - _mg_mirror_images | length > 0
-        - dci_local_registry is defined
-        - dci_local_registry not in ['', ':']
 
     - name: Apply Image Source manifest
       kubernetes.core.k8s:
@@ -157,11 +155,12 @@
     - name: Wait for IDMS to roll out
       ansible.builtin.include_role:
         name: redhatci.ocp.check_resource
+        apply:
+          ignore_errors: true
       vars:
         resource_to_check: "MachineConfigPool"
         check_wait_retries: 120
         check_wait_delay: 10
-      ignore_errors: true
       when:
         - _mg_is_type == 'idms'
         - _mg_is_apply is changed
@@ -283,11 +282,11 @@
         apply:
           environment:
             KUBECONFIG: "{{ hub_kubeconfig_path }}"
+          ignore_errors: true
       vars:
         resource_to_check: "MachineConfigPool"
         check_wait_retries: 120
         check_wait_delay: 10
-      ignore_errors: true
       when: _hub_is_apply is changed
 
     - name: Remove temporary Hub Image Source file

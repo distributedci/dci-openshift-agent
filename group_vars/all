@@ -59,6 +59,7 @@ enable_lvms: false
 dci_must_gather_images: []
 dci_hub_must_gather_images:
   - acm
+  - multicluster-engine
   - gitops
 
 # Feature images used by setup plays.

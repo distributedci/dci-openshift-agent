@@ -98,13 +98,13 @@ if [[ -s "${image_sources}" ]]; then
   sed -i '$ { /^---$/d; }' "${image_sources}"
 fi
 
+must_gather_opts="--image-stream=openshift/must-gather:latest"
+
 # Collect must-gather
 for image in ${DCI_MUST_GATHER_IMAGES}
 do
     must_gather_opts="${must_gather_opts} --image=${image}"
 done
-
-must_gather_opts="${must_gather_opts} --image-stream=openshift/must-gather:latest"
 
 must_gather_dir="${log_dir}/${prefix}must_gather"
 mkdir -p "${must_gather_dir}"
