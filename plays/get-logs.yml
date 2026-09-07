@@ -131,13 +131,12 @@
     - name: "Mirror must-gather images"
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_images
-        apply:
-          ignore_errors: true
       vars:
         mi_images: "{{ _mg_mirror_images }}"
         mi_authfile: "{{ dci_pullsecret_file }}"
         mi_registry: "{{ dci_local_registry }}"
         mi_is_type: "{{ _mg_is_type }}"
+        mi_is_name: "must-gather"
       when:
         - _mg_mirror_images | length > 0
 
@@ -155,15 +154,12 @@
     - name: Wait for IDMS to roll out
       ansible.builtin.include_role:
         name: redhatci.ocp.check_resource
-        apply:
-          ignore_errors: true
       vars:
         resource_to_check: "MachineConfigPool"
         check_wait_retries: 120
         check_wait_delay: 10
       when:
-        - _mg_is_type == 'idms'
-        - _mg_is_apply is changed
+        - _mg_is_apply is changed  # noqa: no-handler
         - acm_cluster_type | default('') not in ['HostedControlPlane']
 
     - name: Remove temporary Image Source file
@@ -253,13 +249,12 @@
     - name: "Mirror Hub must-gather images"
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_images
-        apply:
-          ignore_errors: true
       vars:
         mi_images: "{{ _hub_mg_full }}"
         mi_authfile: "{{ dci_pullsecret_file }}"
         mi_registry: "{{ dci_local_registry }}"
         mi_is_type: "{{ _hub_mg_is_type }}"
+        mi_is_name: "must-gather"
       when:
         - _hub_mg_full | length > 0
         - dci_local_registry is defined
@@ -271,7 +266,6 @@
         kubeconfig: "{{ hub_kubeconfig_path }}"
         definition: "{{ lookup('ansible.builtin.file', mi_is_file.path) | from_yaml_all | list }}"
       register: _hub_is_apply
-      ignore_errors: true
       when:
         - mi_is_file is defined
         - mi_is_file.path is defined
@@ -282,12 +276,11 @@
         apply:
           environment:
             KUBECONFIG: "{{ hub_kubeconfig_path }}"
-          ignore_errors: true
       vars:
         resource_to_check: "MachineConfigPool"
         check_wait_retries: 120
         check_wait_delay: 10
-      when: _hub_is_apply is changed
+      when: _hub_is_apply is changed  # noqa: no-handler
 
     - name: Remove temporary Hub Image Source file
       ansible.builtin.file:
@@ -313,7 +306,6 @@
           timeout -v 20m
           {{ scripts_dir.files[0].path }}/get-ocp-logs
           {{ job_logs.path }}
-      ignore_errors: true
 
 - name: Get the differences from the previous DCI job
   ansible.builtin.shell: "dci-diff-jobs --job_id_1 {{ job_id }} > {{ job_logs.path }}/diff-jobs.txt"
