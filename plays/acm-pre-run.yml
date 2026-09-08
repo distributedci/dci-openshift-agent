@@ -111,7 +111,6 @@
     - dci_disconnected | default(false) | bool
     - acm_cluster_type | default('') in ['SNO', 'HostedControlPlane', 'HighAvailable']
   block:
-
     - name: "Get Hub OCP component from DCI"
       delegate_to: localhost
       block:
@@ -237,35 +236,6 @@
         tasks_from: image-sources
       when:
         - acm_cluster_type | default('') in ['SNO', 'HostedControlPlane', 'HighAvailable']
-
-    - name: Resolve hub must-gather short names to full image references
-      ansible.builtin.include_role:
-        name: redhatci.ocp.resolve_must_gather_images
-        apply:
-          environment:
-            KUBECONFIG: "{{ hub_kubeconfig_path }}"
-      vars:
-        rmgi_images: "{{ dci_hub_must_gather_images }}"
-      when: dci_hub_must_gather_images is defined
-
-    - name: Save hub resolved images
-      ansible.builtin.set_fact:
-        rmgi_hub_resolved_images: "{{ rmgi_resolved_images }}"
-      when: dci_hub_must_gather_images is defined
-
-    - name: "Mirror hub must-gather images"
-      ansible.builtin.include_role:
-        name: redhatci.ocp.mirror_images
-      vars:
-        mi_images: >-
-          {{
-            (rmgi_hub_resolved_images | default(
-              dci_hub_must_gather_images
-            )) | unique | list
-          }}
-        mi_authfile: "{{ dci_pullsecret_file }}"
-        mi_registry: "{{ dci_local_registry }}"
-        mi_is_type: "{{ version is version('4.14', '>') | ternary('idms', 'icsp')  }}"
 
 - name: Convert Image Source to registries.conf for connected
   vars:

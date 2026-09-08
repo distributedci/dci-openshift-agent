@@ -45,7 +45,7 @@ fi
 for NODE in $NODES; do
   echo ">>> Processing node: $NODE"
   for SCSI_ID in "${SCSI_IDS[@]}"; do
-    ${oc_path} debug node/$NODE -- chroot /host bash -c '
+    ${oc_path} debug node/$NODE --image-stream=openshift/tools:latest -- chroot /host bash -c '
       DEVICE_LINK="/dev/disk/by-id/'"$SCSI_ID"'"
       if [[ -L "$DEVICE_LINK" ]]; then
         DEVICE=$(readlink -f "$DEVICE_LINK")

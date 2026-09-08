@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.38.0
+Version:       1.39.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -66,6 +66,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Thu Sep 03 2026 Beto Rdz <josearod@redhat.com> 1.39.EPOCH-1.VERS
+- Changes for default must-gathers and logs collection
+
 * Mon Aug 24 2026 Beto Rodriguez <josearod@redhat.com> 1.38.EPOCH-1.VERS
 - Removes support for ACM install types: ztp-spoke, ztp-spoke-clusterinstance, and sno
 
