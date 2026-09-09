@@ -64,7 +64,6 @@
         tasks_from: gathering-logs.yml
         apply:
           environment:
-            REGISTRY: "{{ dci_local_registry }}"
             OC_PATH: "{{ oc_tool_path }}"
       when:
         - dci_main is defined
@@ -128,6 +127,11 @@
 
     # Best effort to mirror explicit full must-gather refs. Short-name hints
     # are resolved from CSVs and are expected to be reachable already.
+
+    - name: Clear Image Source file fact
+      ansible.builtin.set_fact:
+        mi_is_file: {}
+
     - name: "Mirror must-gather images"
       ansible.builtin.include_role:
         name: redhatci.ocp.mirror_images
@@ -244,6 +248,10 @@
       ansible.builtin.debug:
         msg: "{{ hub_mg_images }}"
 
+    - name: Clear Image Source file fact
+      ansible.builtin.set_fact:
+        mi_is_file: {}
+
     # Best effort to mirror explicit full must-gather refs. Short-name hints
     # are resolved from CSVs and are expected to be reachable already.
     - name: "Mirror Hub must-gather images"
@@ -290,17 +298,12 @@
         - mi_is_file is defined
         - mi_is_file.path is defined
 
-    - name: Clear Hub Image Source file fact
-      ansible.builtin.set_fact:
-        mi_is_file: {}
-
     - name: "Get logs from ACM-Hub"
       environment:
         DCI_MUST_GATHER_IMAGES: "{{ hub_mg_images | join(' ') }}"
         DCI_MUST_GATHER_SINCE_TIME: "{{ job_info.job.created_at }}"
         KUBECONFIG: "{{ hub_kubeconfig_path }}"
         PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin:/usr/local/bin/"
-        REGISTRY: "{{ dci_local_registry }}"
       ansible.builtin.shell:
         cmd: >
           timeout -v 20m
