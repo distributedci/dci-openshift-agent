@@ -7,4 +7,5 @@
     sl_dev_selector_paths: "{{ dci_lvms_dev_selector_paths }}"
     sl_storage_class: "{{ dci_lvms_storage_class | default('') }}"
     sl_force_wipe_devices: "{{ dci_lvms_force_wipe_devices | default(false) }}"
+    sl_node_selector: "{{ dci_lvms_sl_node_selector | default(omit) }}"
 ...
