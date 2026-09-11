@@ -15,113 +15,209 @@
     msg: "NUMA Resource Operator CRDs are not present, please install the operator in the OperatorHub"
   when: numa_crd.results[0].resources | list | count == 0
 
-- name: Mirroring the NRO scheduler image
-  include_role:
-    name: redhatci.ocp.mirror_images
+- name: Configure NUMA Resources Operator
   vars:
-    nro_image_repo: "registry.redhat.io/openshift4"
-    nro_image_name: "{{ ocp_version is version('4.14.0', '>=') |
-                    ternary('noderesourcetopology-scheduler-rhel9', 'noderesourcetopology-scheduler-container-rhel8') }}"
-    nro_image_tag: "{{ nro_topo_img_tag | default('v'+ ocp_version_maj +'.'+ ocp_version_min) }}"
-    mi_images: ["{{ nro_image_repo }}/{{ nro_image_name }}:{{ nro_image_tag }}"]
-    mi_authfile: "{{ dci_pullsecret_file }}"
-    mi_registry: "{{ dci_local_registry }}"
-  when:
-    - dci_disconnected | default(false) | bool
+    nro_image_ns: "{{ nro_topo_img_ns | default('openshift4') }}"
+    nro_image_name: "{{ nro_topo_img_name | default(
+      'noderesourcetopology-scheduler-rhel9' if (ocp_version is version('4.14.0', '>='))
+      else 'noderesourcetopology-scheduler-container-rhel8')
+      }}" #TODO: Add RHEL10 image name and openshift4 when available
+    nro_image_tag: "{{ nro_topo_img_tag | default('v' + ocp_version_maj + '.' + ocp_version_min) }}"
+  block:
+    - name: Resolve NRO scheduler image digest
+      ansible.builtin.command: >
+        skopeo inspect
+        --no-tags
+        {% if dci_pullsecret_file is defined %}
+        --authfile {{ dci_pullsecret_file }}
+        {% endif %}
+        --format '{{ "{{" }} .Digest {{ "}}" }}'
+        docker://registry.redhat.io/{{ nro_image_ns }}/{{ nro_image_name }}:{{ nro_image_tag }}
+      register: _nro_skopeo_inspect
+      changed_when: false
+      retries: 5
+      delay: 5
+      until:
+        - _nro_skopeo_inspect.rc == 0
+        - (_nro_skopeo_inspect.stdout | default('') | trim) is match('^sha256:')
 
-- name: Increase maxUnavailable workers
-  include_tasks: increase_maxunavailable.yml
-  when:
-    - increase_unavailable_workers | default(True) | bool
-    - (install_type | default('ipi')) != 'sno'
-    - acm_cluster_type | default('') not in ['sno']
+    - name: Clear Image Source file fact
+      ansible.builtin.set_fact:
+        mi_is_file: {}
+      when:
+        - dci_disconnected | default(false) | bool
 
-- name: Create NUMAResourcesOperator CRD
-  vars:
-    nro_def: |
-      apiVersion: nodetopology.openshift.io/v1
-      kind: NUMAResourcesOperator
-      metadata:
-        name: numaresourcesoperator
-      spec:
-        nodeGroups:
-        - machineConfigPoolSelector:
-            matchLabels:
-              pools.operator.machineconfiguration.openshift.io/worker: ""
-  kubernetes.core.k8s:
-    state: present
-    definition: "{{ nro_def }}"
+    - name: Mirror the digest-pinned NRO scheduler image
+      ansible.builtin.include_role:
+        name: redhatci.ocp.mirror_images
+      vars:
+        nro_image_pinned: "registry.redhat.io/{{ nro_image_ns }}/{{ nro_image_name }}@{{ _nro_skopeo_inspect.stdout | trim }}"
+        mi_images:
+          - "{{ nro_image_pinned }}"
+        mi_authfile: "{{ dci_pullsecret_file }}"
+        mi_registry: "{{ dci_local_registry }}"
+        mi_options: "--preserve-digests"
+        mi_is_name: "nro-scheduler"
+        mi_is_type: "{{ (ocp_version | default(version)) is version('4.14', '>') | ternary('idms', 'icsp') }}"
+      when:
+        - dci_disconnected | default(false) | bool
 
-- name: Pause 60 seconds to wait for MC triggered by NRO CRD starts the node changes
-  pause:
-    seconds: 60
-  when:
-    - (install_type | default('ipi')) != 'sno'
-    - reg_mcpool_worker.resources[0].status.machineCount >= 1 or reg_mcpool_controlplane.resources[0].status.machineCount >= 1
-  no_log: true
+    - name: Increase maxUnavailable workers
+      include_tasks: increase_maxunavailable.yml
+      when:
+        - increase_unavailable_workers | default(True) | bool
+        - (install_type | default('ipi')) != 'sno'
+        - acm_cluster_type | default('') not in ['sno']
 
-- name: Wait for SNO node to be available
-  include_tasks: wait_sno_reboot.yml
-  when:
-    - dci_control_plane_size | int == 1
+    - name: Apply NRO scheduler Image Source manifest
+      kubernetes.core.k8s:
+        state: present
+        definition: "{{ lookup('ansible.builtin.file', mi_is_file.path) | from_yaml_all | list }}"
+      when:
+        - dci_disconnected | default(false) | bool
+        - mi_is_file is defined
+        - mi_is_file.path is defined
+        - acm_cluster_type | default('') not in ['HostedControlPlane']
 
-- name: Wait for MCP status
-  include_role:
-    name: redhatci.ocp.check_resource
-  vars:
-    resource_to_check: "MachineConfigPool"
-    check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | int + 1 ) }}"
-    check_wait_delay: 60
+    - name: Remove temporary NRO Image Source file
+      ansible.builtin.file:
+        path: "{{ mi_is_file.path }}"
+        state: absent
+      when:
+        - dci_disconnected | default(false) | bool
+        - mi_is_file is defined
+        - mi_is_file.path is defined
 
-- name: Deploying the NUMA-aware secondary pod scheduler
-  vars:
-    nro_image_repo: "registry.redhat.io/openshift4"
-    nro_image_name: "{{ ocp_version is version('4.14.0', '>=') |
-                    ternary('noderesourcetopology-scheduler-rhel9', 'noderesourcetopology-scheduler-container-rhel8') }}"
-    nro_image_tag: "{{ nro_topo_img_tag | default('v'+ ocp_version_maj +'.'+ ocp_version_min) }}"
-    nro_image: "{{ dci_disconnected | default(false) | bool |
-               ternary (dci_local_registry+'/openshift4/'+nro_image_name+':'+nro_image_tag, nro_image_repo+'/'+nro_image_name+':'+nro_image_tag) }}"
-    nro_sch_def: |
-      apiVersion: nodetopology.openshift.io/v1alpha1
-      kind: NUMAResourcesScheduler
-      metadata:
-        name: numaresourcesscheduler
-      spec:
-        imageSpec: "{{ nro_image }}"
-  kubernetes.core.k8s:
-    state: present
-    definition: "{{ nro_sch_def }}"
+    - name: Create NUMAResourcesOperator CRD
+      vars:
+        nro_def: |
+          apiVersion: nodetopology.openshift.io/v1
+          kind: NUMAResourcesOperator
+          metadata:
+            name: numaresourcesoperator
+          spec:
+            nodeGroups:
+            - machineConfigPoolSelector:
+                matchLabels:
+                  pools.operator.machineconfiguration.openshift.io/worker: ""
+      kubernetes.core.k8s:
+        state: present
+        definition: "{{ nro_def }}"
 
-- name: Confirm that NUMA scheduler pods are Running
-  kubernetes.core.k8s_info:
-    api_version: v1
-    kind: Pod
-    namespace: openshift-numaresources
-    label_selectors:
-      - app = secondary-scheduler
-  register: pod_list
-  until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
-  retries: 15
-  delay: 10
+    - name: Pause 60 seconds to wait for MC triggered by NRO CRD starts the node changes
+      pause:
+        seconds: 60
+      when:
+        - (install_type | default('ipi')) != 'sno'
+        - reg_mcpool_worker.resources[0].status.machineCount >= 1 or reg_mcpool_controlplane.resources[0].status.machineCount >= 1
+      no_log: true
 
-- name: Confirm that NUMA resource-topology pods are Running
-  kubernetes.core.k8s_info:
-    api_version: v1
-    kind: Pod
-    namespace: openshift-numaresources
-    label_selectors:
-      - name = resource-topology
-  register: pod_list
-  until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
-  retries: 9
-  delay: 10
+    - name: Wait for SNO node to be available
+      include_tasks: wait_sno_reboot.yml
+      when:
+        - dci_control_plane_size | int == 1
 
-- name: Reset maxUnavailable count to default value 1
-  kubernetes.core.k8s:
-    definition:
-      kind: MachineConfigPool
-      metadata:
-        name: worker
-      spec:
-        maxUnavailable: 1
-...
+    - name: Wait for MCP status
+      include_role:
+        name: redhatci.ocp.check_resource
+      vars:
+        resource_to_check: "MachineConfigPool"
+        check_wait_retries: "{{ 16 * (dci_compute_size | default(dci_control_plane_size) | int + 1 ) }}"
+        check_wait_delay: 60
+
+    - name: Get NUMA Resources Operator subscription
+      kubernetes.core.k8s_info:
+        api_version: operators.coreos.com/v1alpha1
+        kind: Subscription
+        namespace: openshift-numaresources
+      register: _nro_subs
+
+    - name: Allow the resolved scheduler digest on the NRO operator
+      when:
+        - _nro_subs.resources | default([]) | length > 0
+      vars:
+        _nro_sub: "{{ _nro_subs.resources | first }}"
+        _nro_digest: "{{ _nro_skopeo_inspect.stdout | trim }}"
+        _nro_env: "{{ (_nro_sub.spec.config.env | default([])) | rejectattr('name', 'equalto', 'SCHEDULER_IMAGE_DIGESTS') | list + [{'name': 'SCHEDULER_IMAGE_DIGESTS', 'value': _nro_digest}] }}"
+      kubernetes.core.k8s:
+        state: present
+        definition:
+          apiVersion: operators.coreos.com/v1alpha1
+          kind: Subscription
+          metadata:
+            name: "{{ _nro_sub.metadata.name }}"
+            namespace: "{{ _nro_sub.metadata.namespace }}"
+          spec: "{{ _nro_sub.spec | combine({'config': (_nro_sub.spec.config | default({})) | combine({'env': _nro_env})}, recursive=true) }}"
+
+    - name: Wait for NRO operator to advertise the allowed digest
+      kubernetes.core.k8s_info:
+        api_version: apps/v1
+        kind: Deployment
+        namespace: openshift-numaresources
+      register: _nro_deps
+      until:
+        - _nro_deps.resources | default([]) | length > 0
+        - (_nro_skopeo_inspect.stdout | trim) in (
+            _nro_deps.resources
+            | map(attribute='spec.template.spec.containers')
+            | flatten
+            | map(attribute='env')
+            | select('defined')
+            | flatten
+            | selectattr('name', 'defined')
+            | selectattr('name', 'equalto', 'SCHEDULER_IMAGE_DIGESTS')
+            | map(attribute='value')
+            | list
+            | join(',')
+          )
+      retries: 36
+      delay: 5
+      when:
+        - _nro_subs.resources | default([]) | length > 0
+
+    - name: Deploying the NUMA-aware secondary pod scheduler
+      vars:
+        nro_image: "registry.redhat.io/{{ nro_image_ns }}/{{ nro_image_name }}@{{ _nro_skopeo_inspect.stdout | trim }}"
+        nro_sch_def: |
+          apiVersion: nodetopology.openshift.io/v1alpha1
+          kind: NUMAResourcesScheduler
+          metadata:
+            name: numaresourcesscheduler
+          spec:
+            imageSpec: "{{ nro_image }}"
+      kubernetes.core.k8s:
+        state: present
+        definition: "{{ nro_sch_def }}"
+
+    - name: Confirm that NUMA scheduler pods are Running
+      kubernetes.core.k8s_info:
+        api_version: v1
+        kind: Pod
+        namespace: openshift-numaresources
+        label_selectors:
+          - app = secondary-scheduler
+      register: pod_list
+      until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
+      retries: 15
+      delay: 10
+
+    - name: Confirm that NUMA resource-topology pods are Running
+      kubernetes.core.k8s_info:
+        api_version: v1
+        kind: Pod
+        namespace: openshift-numaresources
+        label_selectors:
+          - name = resource-topology
+      register: pod_list
+      until: pod_list|json_query('resources[*].status.phase')|unique == ["Running"]
+      retries: 9
+      delay: 10
+
+    - name: Reset maxUnavailable count to default value 1
+      kubernetes.core.k8s:
+        definition:
+          kind: MachineConfigPool
+          metadata:
+            name: worker
+          spec:
+            maxUnavailable: 1
