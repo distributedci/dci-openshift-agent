@@ -327,9 +327,10 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_ztp_tag                     | False    | String  | v4.19.0                                                        | Tag for ZTP site generator image.
 | dci_mce_tag                     | False    | String  | v2.13                                                          | Tag for Multicluster Engine subscription image.
 | dci_lvms_dev_class_name         | False    | String  |                                                                | Name of the device class for LVMS Operator
-| dci_lvms_dev_selector_paths     | False    | List    |                                                                | List of disk path patterns for device selection for LVMS Operator
+| dci_lvms_dev_selector_paths     | False    | List    |                                                                | List of disk path patterns for device selection for LVMS Operator. All paths must resolve on each node.
 | dci_lvms_storage_class          | False    | String  |                                                                | Name of the StorageClass to create with LVMS Operator
 | dci_lvms_force_wipe_devices     | False    | Bool    | False                                                          | Whether to force wipe devices and destroy all data when creating LVMCluster
+| dci_lvms_sl_node_selector       | False    | String  |                                                                | Role of the node where LVMS operator will lookup disks
 | nfs_server                      | False    | String  |                                                                | NFS server's FQDN or IP Address. eg. my-nfs.mylab.local
 | nfs_path                        | False    | String  |                                                                | NFS export path. e.g. /exports/nfs-provisioner
 | dci_pao_on_install              | Fals     | Bool    | True                                                           | Whether to apply the Performance Addon Operator during the installation of the cluster or after install. Used together with `performance_definition` (see below).
