@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.39.0
+Version:       1.40.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -10,6 +10,7 @@ Source0:       dci-openshift-agent-%{version}.tar.gz
 BuildRequires: systemd
 BuildRequires:  /usr/bin/pathfix.py
 Requires: /usr/bin/sudo
+Requires: /usr/sbin/hardlink
 Requires: dci-ansible >= 0.3.1
 %if 0%{?rhel} && 0%{?rhel} < 8
 Requires: python2-dciclient >= 3.1.0
@@ -66,6 +67,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Wed Sep 16 2026 Frederic Lepied <flepied@redhat.com> 1.40.0-1.VERS
+- depend on hardlink for reducing must_gather size
+
 * Thu Sep 03 2026 Beto Rdz <josearod@redhat.com> 1.39.EPOCH-1.VERS
 - Changes for default must-gathers and logs collection
 
