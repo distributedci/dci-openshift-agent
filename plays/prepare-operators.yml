@@ -167,6 +167,27 @@
       when:
         - acm_cluster_type | default('') not in ['HostedControlPlane']
 
+    # HCP consumes these mirrors via HostedCluster.spec.imageContentSources
+    - name: "Stash catalog Image Source mirrors for HostedControlPlane"
+      when:
+        - acm_cluster_type | default('') == 'HostedControlPlane'
+      block:
+        - name: "Slurp catalog Image Source manifests"
+          ansible.builtin.slurp:
+            src: "{{ is_file }}"
+          register: hcp_is_slurp
+          loop: "{{ is_files | unique | select | list }}"
+          loop_control:
+            loop_var: is_file
+
+        - name: "Set HCP catalog image digest mirrors"
+          ansible.builtin.set_fact:
+            hcp_catalog_digest_mirrors: "{{ _hcp_mirrors_map | dict2items(key_name='source', value_name='mirrors') }}"
+          vars:
+            _docs: "{{ hcp_is_slurp.results | selectattr('content', 'defined') | map(attribute='content') | map('b64decode') | map('from_yaml') | list }}"
+            _hcp_mirrors_flat: "{{ _docs | json_query('[].spec.imageDigestMirrors[]') | default([]) }}"
+            _hcp_mirrors_map: "{{ _hcp_mirrors_flat | items2dict(key_name='source', value_name='mirrors') }}"
+
     - name: "Delete Image Source manifest"
       ansible.builtin.file:
         path: "{{ is_file }}"

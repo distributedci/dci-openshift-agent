@@ -158,6 +158,7 @@ These facts are set before spoke installations. Use them in ClusterInstance temp
 | `acm_rootfs_url`           | Yes          | Yes       | RHCOS live rootfs URL for PXE/assisted boot
 | `acm_release_image`        | Yes          | Yes       | Spoke OCP release container image pullspec used by ACM/MCE installation
 | `utils_acm_registries`     | Yes          | Yes       | `registries.conf` content from merged Hub (+ spoke, when disconnected) image mirrors via `redhatci.ocp.acm.utils` `image-sources`
+| `hcp_catalog_digest_mirrors` | Yes        | No        | Flattened `{source, mirrors}` entries from oc-mirror Image Source YAML, stashed during operator mirroring. Not an IDMS CR. Merge into `HostedCluster.spec.imageContentSources` from `hooks/install.yml`. Empty when no catalog was mirrored.
 
 > Spoke install facts (`acm_*`, registry/mirror facts) are only set when `acm_cluster_type` is one of: `SNO`, `HostedControlPlane`, `HighAvailable`.
 
