@@ -296,6 +296,9 @@ spec:
   - mirrors:
     - {{ prega_mirror }}/prega/test/amq-streams
     source: registry.stage.redhat.io/amq-streams
+  - mirrors:
+    - {{ prega_mirror }}/prega/test/container-native-virtualization
+    source: registry.redhat.io/container-native-virtualization
 ---
 apiVersion: config.openshift.io/v1
 kind: ImageTagMirrorSet
