@@ -23,6 +23,12 @@
       - libvirt-libs
     state: installed
 
+- name: Ensure ~/.local/bin exists for uv binary installation
+  ansible.builtin.file:
+    state: directory
+    path: "{{ ansible_env.HOME }}/.local/bin"
+    mode: "0755"
+
 - name: Install uv binary
   vars:
     uv_ver: "{{ uv_version | default('0.12.15') }}"
