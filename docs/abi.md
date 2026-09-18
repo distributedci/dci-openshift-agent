@@ -2,7 +2,7 @@
 
 The Agent Based Installer (ABI) is yet another method DCI OCP
 agent can use to install OpenShift clusters. If you're curious about the
-[ABI](https://docs.redhat.com/en/documentation/openshift_container_platform/4.12/html-single/installing_an_on-premise_cluster_with_the_agent-based_installer/indexr) you can also
+[ABI](https://docs.redhat.com/en/documentation/openshift_container_platform/4.12/html-single/installing_an_on-premise_cluster_with_the_agent-based_installer/index) you can also
 read [meet the new agent based openshift installer](https://cloud.redhat.com/blog/meet-the-new-agent-based-openshift-installer-1).
 This document will focus on explaining how the ABI can be used to install an
 OpenShift cluster through the DCI agent.
@@ -25,11 +25,11 @@ OpenShift cluster through the DCI agent.
   * 16G RAM
   * 100GB Storage
 
-AI does not use a dedicated *bootstrap* node, instead it re-purposes the
+ABI does not use a dedicated *bootstrap* node, instead it re-purposes the
 bootstrap node into a control plane node when it completes the installation.
 
 !!! note
-    ABI installer in available starting OCP 4.12.
+    ABI installer is available starting OCP 4.12.
 
 For the DCI Jumphost you will need:
 
@@ -67,16 +67,16 @@ For the DCI Jumphost you will need:
 ## Configuration
 
 Before anything else you will need to set `install_type: abi` in your
-inventory or pipeline ansible extra variables. We do this because AI is not the
+inventory or pipeline ansible extra variables. We do this because ABI is not the
 default install method in the DCI OCP Agent.
 
 The first change you will notice right away is that the inventory file has a
 completely different format: instead of the INI-style format default
 configuration shows, it is a YAML file. The YAML file offers more capabilities
-to represent more comples variables (e.g. dicts, lists) then INI files, so
+to represent more complex variables (e.g. dicts, lists) than INI files, so
 familiarize yourself with it.
 
-The following variables control where **in the jumphost** the different pieces
+The following variables control where **on the jumphost** the different pieces
 will store their data, make sure you have enough space (at least 200G) to hold
 your cached files, and routinely monitor for disk consumption:
 
@@ -120,13 +120,13 @@ This setup is a little bit different from the regular disconnected environment
 from the IPI method mainly because of the changes in the underlying mechanism
 that performs the installation and the inventory format change.
 
-If you need to setup a disconnected environment, there's a couple more things
+If you need to setup a disconnected environment, there are a couple more things
 you'll have to adjust:
 
 * Set `dci_disconnected` to true, this can be done in the inventory file or the
   `settings.yml` file
 * Turn on the following variables:
-  * `setup_registry_service`: Creates a container registry in the jumphost
+  * `setup_registry_service`: Creates a container registry on the jumphost
   * `use_local_registry`: Tells the Installer to use the previously
     configured container registry
   * `setup_ntp_service` (if needed): Configures an NTP server so the cluster
@@ -159,7 +159,7 @@ requirements. Here's a quick step by step list of what you need to do:
     `/etc/dci-openshift-agent/hosts`
 1.  Start the agent
 
-That's it, after the process is complete, you should be left with a
+That's it. After the process is complete, you should be left with a
 `~dci-openshift-agent/clusterconfigs-dciokd/kubeconfig` file which you can use
 to interact with your OCP cluster.
 
@@ -171,11 +171,11 @@ to interact with your OCP cluster.
 
 ### Single Node Openshift
 
-If you followed the libvirt quickstart above, you can see right away there's a few notable differences between SNO and the other cluster configurations:
+If you followed the libvirt quickstart above, you can see right away there are a few notable differences between SNO and the other cluster configurations:
 
 1.  There are no nodes defined in the compute plane section
 1.  There is a single node defined in the control plane section
-1.  *Both* the `api_vip` and `ingress_vip` values are pointed to the **same IP
+1.  *Both* the `api_vip` and `ingress_vip` values point to the **same IP
     address you gave the single node**
 1.  Because SNO requires a minimum of 8 cores, make sure your `vm_spec` in your
     `vm_nodes` section for your control plane has `cpu_cores: 8` (it is
