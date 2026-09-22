@@ -23,6 +23,28 @@
       - libvirt-libs
     state: installed
 
+- name: Ensure ~/.local/bin exists for uv binary installation
+  ansible.builtin.file:
+    state: directory
+    path: "{{ ansible_env.HOME }}/.local/bin"
+    mode: "0755"
+
+- name: Install uv binary
+  vars:
+    uv_ver: "{{ uv_version | default('0.12.15') }}"
+  ansible.builtin.unarchive:
+    src: "https://github.com/astral-sh/uv/releases/download/{{ uv_ver }}/uv-x86_64-unknown-linux-gnu.tar.gz"
+    dest: "{{ ansible_env.HOME }}/.local/bin"
+    mode: "0755"
+    remote_src: true
+    extra_opts:
+      - uv-x86_64-unknown-linux-gnu/uv
+      - --strip-components=1
+  register: _uv_install
+  retries: 5
+  delay: 5
+  until: _uv_install is not failed
+
 - name: "Log out of podman registries"
   containers.podman.podman_logout:
     all: true
@@ -37,7 +59,7 @@
     mode: "0750"
   become: true
 
-- name: "Ensure tmp directory existes"
+- name: Ensure tmp directory exists
   ansible.builtin.file:
     state: directory
     path: "{{ ansible_env.HOME }}/tmp"
@@ -62,7 +84,7 @@
         state: directory
         mode: "0755"
 
-- name: "Download stable openshift clients"
+- name: Download stable openshift clients
   vars:
     ocp_clients_url:
       "https://mirror.openshift.com/pub/openshift-v{{ version.split('.')[0] }}/\
@@ -82,7 +104,7 @@
       {{ ansible_distribution_major_version }}.tar.gz"
     - "{{ ocp_clients_url }}/opm-linux{{ opm_suffix }}.tar.gz"
 
-- name: "Setup podman on the jumphost"
+- name: Setup podman on the jumphost
   ansible.builtin.include_role:
     name: ansible-role-dci-podman
 ...
