@@ -180,7 +180,7 @@
           loop: "{{ is_files | unique | select | list }}"
           loop_control:
             loop_var: is_file
-          when: is_file is defined
+          when: is_files is defined
 
         - name: "Set HCP catalog image digest mirrors"
           ansible.builtin.set_fact:
