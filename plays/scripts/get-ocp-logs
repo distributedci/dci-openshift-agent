@@ -162,6 +162,16 @@ if [ -n "${DCI_MUST_GATHER_SINCE_TIME}" ]; then
   done
 fi
 
+# Deduplicate identical files across must-gather image trees (ACM/MCE/gitops/base
+# each re-collect the whole cluster). Hardlinks let tar store each blob only once.
+# Lossless: every file remains present and extractable.
+hardlink_bin="$(command -v hardlink || echo /usr/sbin/hardlink)"
+if [ -x "${hardlink_bin}" ]; then
+  "${hardlink_bin}" -c "${must_gather_dir}" || true
+else
+  echo "hardlink not found; skipping must-gather dedup" >&2
+fi
+
 # Compress must-gather
 tar \
   --use-compress-program='pigz --best --recursive' \
