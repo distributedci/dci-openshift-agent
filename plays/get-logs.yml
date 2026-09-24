@@ -143,6 +143,7 @@
         mi_is_name: "must-gather"
       when:
         - _mg_mirror_images | length > 0
+        - dci_local_registry | length
 
     - name: Apply Image Source manifest
       kubernetes.core.k8s:
@@ -265,8 +266,7 @@
         mi_is_name: "must-gather"
       when:
         - _hub_mg_full | length > 0
-        - dci_local_registry is defined
-        - dci_local_registry not in ['', ':']
+        - dci_local_registry | length
 
     - name: Apply Hub Image Source manifest
       kubernetes.core.k8s:
