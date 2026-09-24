@@ -128,7 +128,7 @@ But the dci-openshift-agent only requires 3, as Namespace is created automatical
 
 The manifests are expected to be located in `dci_clusterinstance_template_dir` with a prefix of the cluster name, e.g. `my-sno-cluster-`.
 
-Here the links to the documention for each of the manifests required:
+Here the links to the documentation for each of the manifests required:
 
 - [PullSecret](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-create-pull-secret)
 - [BMH-Secret](https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index?ref=cloud-cult-devops#install-create-bmc-secret)
