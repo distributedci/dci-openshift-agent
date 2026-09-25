@@ -301,6 +301,7 @@ This is the dci-openshift-agent variables that can be set in the
 | operators_index                 | False    | String  | registry.redhat.io/redhat/redhat-operator-index:v<ocp_version> | Catalog index that contains the bundles for the operators that will be mirrored in disconnected environments. In connected environments, if defined it will update the operators catalog index.
 | opm_mirror_list                 | False    | List, Dict | {}                                                          | Additional operators to be mirrored in disconnected environments. The package names of operators deployed using `dci_operators` must be included in this list.
 | dci_catalog_source_name         | False    | String  | mirrored-redhat-operators                                      | The name to use for the catalog source in disconnected environments.
+| hcp_catalog_digest_mirrors     | False     | List | []                                                                | Fact set when `acm_cluster_type` is `HostedControlPlane`. Flattened `{source, mirrors}`.
 | dci_catalogimage_expire         | False    | Boolean | True                                                           | Enable or disable expiration label in the `dci_catalog_source_name` image.
 | dci_catalog_image_expiration    | False    | String  | 24h                                                            | The expire time for the image referenced in `dci_catalog_source_name`. The time values could be something like 1h, 2d, 3w.
 | dci_operators                   | False    | List    | []                                                             | List of additional operators or custom operators deployments. Please see the [Customizing the Operators installation](#customizing-the-operators-installation) section for more details.
@@ -594,6 +595,8 @@ opm_mirror_list:
 ```
 
 > NOTE: By default the catalog source name that can be used to create operator subscription is named mirrored-redhat-operators, can be changed with `dci_catalog_source_name`.
+
+> NOTE: When `acm_cluster_type` is `HostedControlPlane`, the agent still mirrors operators to `dci_local_registry` but does not create a CatalogSource or apply IDMS/ICSP on the guest. Flattened `{source, mirrors}` entries from the oc-mirror Image Source YAML are stored in the `hcp_catalog_digest_mirrors`.
 
 > NOTE: Some operators may have other operators dependencies, for such cases the dependencies must be added to the list.
 
