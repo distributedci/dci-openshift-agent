@@ -7,7 +7,7 @@ The samples contained in this directory are provided **for demonstration and exp
 ## Risks and Responsibilities
 - These samples **may cause unintended side effects**, including (but not limited to):
   - Disruption of networking.
-  - Interference with virtual machines already manged by Libvirt.
+  - Interference with virtual machines already managed by Libvirt.
   - Resource conflicts or unexpected behavior in your environment.
 - You are solely responsible for reviewing, understanding, and testing these samples **before execution**.
 - Running these samples is done **at your own risk**.

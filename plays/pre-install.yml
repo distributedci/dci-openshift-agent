@@ -87,7 +87,7 @@
     dci_pullsecret: "{{ mrc_auth_data }}"
   no_log: true
 
-- name: "Copy dci_pullsecret_file localy"
+- name: "Copy dci_pullsecret_file locally"
   ansible.builtin.fetch:
     src: "{{ dci_pullsecret_file }}"
     dest: "/tmp/"

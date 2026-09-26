@@ -56,7 +56,7 @@ bootstrap_interface=<IP ADDRESS OF PROVISIONER>
 
 [...]
 [bootstrap]
-boostrap name=boostrap
+bootstrap name=bootstrap
 
 [masters]
 master-0 name=master-0

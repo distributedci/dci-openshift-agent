@@ -1,6 +1,6 @@
 # Playbooks to deploy Single Node Openshift on a libvirt VM
 
-This directory includes playbooks, inventories and configuration files to faciliate the deployment of OCP SNO on virtual machines
+This directory includes playbooks, inventories and configuration files to facilitate the deployment of OCP SNO on virtual machines
 
 Virtual SNO can be deployed either with DCI on standalone mode (without DCI)
 

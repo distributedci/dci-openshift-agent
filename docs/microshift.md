@@ -26,7 +26,7 @@ dnf -y install dci-openshift-agent dci-pipeline
 
 ## Create a repository to save your settings
 
-In the following doc, we use `~/microshift-config` as a folder for our hooks and pipelines files. Change it with a better name (example: `<YOUR_COMPANY>-<LAB>-config`). A good pratice is to save this folder in git.
+In the following doc, we use `~/microshift-config` as a folder for our hooks and pipelines files. Change it with a better name (example: `<YOUR_COMPANY>-<LAB>-config`). A good practice is to save this folder in git.
 
 ```
 mkdir ~/microshift-config
