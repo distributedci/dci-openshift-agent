@@ -26,8 +26,9 @@
     query_csv: "resources[*].status.channels[? name=='{{ default_channel }}' ].currentCSV | [0]"
     current_csv: "{{ (packagemanifest | json_query(query_csv)) |
                     default([sub.installedCSV], true) | first }}"
-    catalog_version: "{{ current_csv | regex_replace('^.*\\.v', '') }}"
-    installed_version: "{{ sub.installedCSV | regex_replace('^.*\\.v', '') }}"
+    version_re: "{{ '^.*?\\.v?(?=\\d+\\.\\d+)' }}"
+    catalog_version: "{{ current_csv | regex_replace(version_re, '') }}"
+    installed_version: "{{ sub.installedCSV | regex_replace(version_re, '') }}"
   when:
     - catalog_version is version(installed_version, '>')
   block:
