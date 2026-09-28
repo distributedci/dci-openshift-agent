@@ -14,7 +14,7 @@ If you haven't already setup your virtualized masters then please ([learn how
  to install the virtual environment](../../docs/ocp_on_libvirt.md))
 
 For this playbook to work you will need two additional network interfaces
-on your jumphost for a total of 3 networks.  We will call the exisiting
+on your jumphost for a total of 3 networks.  We will call the existing
 network on your jumphost the jumphost network.  For the additional two
 networks, one network will be used for the baremetal network and the second
 one will be used for the provisioning network.  Each interface will need to
