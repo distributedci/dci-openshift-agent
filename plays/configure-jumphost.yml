@@ -90,19 +90,39 @@
       "https://mirror.openshift.com/pub/openshift-v{{ version.split('.')[0] }}/\
       x86_64/clients/ocp/stable"
     opm_suffix: "{{ ansible_distribution_major_version is version('9', '==') | ternary('-rhel9', '') }}"
-  ansible.builtin.unarchive:
-    src: "{{ item }}"
-    dest: "{{ dci_cluster_configs_dir }}"
-    remote_src: true
-    mode: "0755"
-  register: result
-  until: result is not failed
-  retries: 3
-  delay: 10
-  loop:
-    - "{{ ocp_clients_url }}/openshift-client-linux-amd64-rhel\
-      {{ ansible_distribution_major_version }}.tar.gz"
-    - "{{ ocp_clients_url }}/opm-linux{{ opm_suffix }}.tar.gz"
+    ocp_client_rhel_url: >-
+      {{ ocp_clients_url }}/openshift-client-linux-amd64-rhel{{ ansible_distribution_major_version }}.tar.gz
+    ocp_client_generic_url: "{{ ocp_clients_url }}/openshift-client-linux.tar.gz"
+  block:
+    - name: Check whether the RHEL-specific OpenShift client is published
+      ansible.builtin.uri:
+        url: "{{ ocp_client_rhel_url }}"
+        method: HEAD
+        status_code: [200, 404]
+      register: ocp_client_rhel
+      retries: 3
+      delay: 10
+      until: ocp_client_rhel.status | default(0) in [200, 404]
+
+    - name: Download stable openshift clients
+      vars:
+        ocp_client_url: >-
+          {{
+            (ocp_client_rhel.status | int == 200)
+            | ternary(ocp_client_rhel_url, ocp_client_generic_url)
+          }}
+      ansible.builtin.unarchive:
+        src: "{{ item }}"
+        dest: "{{ dci_cluster_configs_dir }}"
+        remote_src: true
+        mode: "0755"
+      register: result
+      until: result is not failed
+      retries: 3
+      delay: 10
+      loop:
+        - "{{ ocp_client_url }}"
+        - "{{ ocp_clients_url }}/opm-linux{{ opm_suffix }}.tar.gz"
 
 - name: Setup podman on the jumphost
   ansible.builtin.include_role:
