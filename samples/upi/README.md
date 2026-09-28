@@ -29,7 +29,7 @@ The following examples assume eno1 is your internal network for the cluster and 
    - Never use this network for default route
    - Automatically connect
 
-   > If changes arent applied automatically you can bounce the NIC with `nmcli connection down eno1` and `nmcli connection up eno1`
+   > If changes aren't applied automatically you can bounce the NIC with `nmcli connection down eno1` and `nmcli connection up eno1`
 
 
 1. Setup firewalld
