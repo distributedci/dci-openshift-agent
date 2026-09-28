@@ -16,7 +16,7 @@
 
 # A shell script to remove dangling containers for the artifacts web server
 # Lingering images named with job IDs are also removed
-# The Remore CI is used to confirm the Job status
+# The Remote CI is used to confirm the Job status
 # Params: The path to a valid remote CI
 
 exec >> "$HOME"/containers-cleanup.log 2>&1
