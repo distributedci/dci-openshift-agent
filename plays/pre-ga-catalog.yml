@@ -82,7 +82,7 @@
     - om_output_dir is defined
     - dci_disconnected | default(false) | bool
 
-- name: Append the Pre-GA catalog to the list of custom catalogs
+- name: Set prega_catalog facts
   vars:
     prega_catalog_image: >-
       {{
@@ -95,8 +95,18 @@
         if dci_disconnected | default(false) | bool
         else dci_pre_ga_catalog
       }}
-  ansible.builtin.set_fact:
-    custom_catalogs: "{{ custom_catalogs | default([]) + [prega_catalog_image] }}"
+  block:
+    - name: Append the Pre-GA catalog to the list of custom catalogs
+      ansible.builtin.set_fact:
+        custom_catalogs: "{{ custom_catalogs | default([]) + [prega_catalog_image] }}"
+      when:
+        - dci_main == 'install'
+
+    - name: Set prega_catalog_image for upgrade
+      ansible.builtin.set_fact:
+        prega_catalog_image: "{{ prega_catalog_image }}"
+      when:
+        - dci_main == 'upgrade'
 
 - name: Remove oc-mirror output directory
   ansible.builtin.file:

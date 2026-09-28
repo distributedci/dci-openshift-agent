@@ -45,6 +45,13 @@
     loop_var: sub
     label: "{{ sub.subscriptionName }}"
 
+- name: "Set upgrade catalog source image"
+  ansible.builtin.set_fact:
+    dci_prune_index: "{{ prega_catalog_image }}"
+  when:
+    - prega_catalog_image is defined
+    - dci_disconnected | default(false) | bool
+
 - name: "Update disconnected catalogSources"
   ansible.builtin.include_role:
     name: redhatci.ocp.catalog_source
@@ -58,6 +65,65 @@
     - mirror_list is defined
     - mirror_list | length
     - dci_prune_index is defined
+
+- name: "Override redhat-operators with the pre-GA index"
+  when:
+    - not dci_disconnected | default(false) | bool
+    - prega_catalog_image is defined
+  block:
+    - name: "Read the OperatorHub configuration"
+      kubernetes.core.k8s_info:
+        api_version: config.openshift.io/v1
+        kind: OperatorHub
+        name: cluster
+      register: operatorhub
+
+    - name: "Disable the default redhat-operators catalog"
+      vars:
+        hub_spec: "{{ operatorhub.resources[0].spec | default({}) }}"
+        kept_sources: >-
+          {{
+            hub_spec.sources | default([])
+            | rejectattr('name', 'equalto', 'redhat-operators')
+            | list
+          }}
+      kubernetes.core.k8s:
+        state: present
+        definition:
+          apiVersion: config.openshift.io/v1
+          kind: OperatorHub
+          metadata:
+            name: cluster
+          spec: >-
+            {{
+              hub_spec | combine({
+                'sources': kept_sources + [{'name': 'redhat-operators', 'disabled': true}]
+              })
+            }}
+
+    - name: "Wait for marketplace to drop the managed redhat-operators catalog"
+      vars:
+        managed_query: >-
+          resources[?metadata.annotations."operatorframework.io/managed-by"==`marketplace-operator`]
+      kubernetes.core.k8s_info:
+        api: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: redhat-operators
+        namespace: openshift-marketplace
+      register: rh_catsrc
+      until:
+        - (rh_catsrc | json_query(managed_query) | default([])) | length == 0
+      retries: 30
+      delay: 10
+
+    - name: "Re-create redhat-operators pointing to the pre-GA index"
+      ansible.builtin.include_role:
+        name: redhatci.ocp.catalog_source
+      vars:
+        cs_name: redhat-operators
+        cs_namespace: openshift-marketplace
+        cs_image: "{{ prega_catalog_image }}"
+        cs_publisher: Red Hat
 
 - name: "Upgrade-operators : Upgrade installed operators"
   ansible.builtin.include_tasks: upgrade-csv.yml
