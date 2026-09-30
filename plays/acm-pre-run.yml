@@ -222,6 +222,13 @@
         mor_oc: "{{ oc_tool_path }}"
         mor_extra_flags: "{{ dci_oc_mirror_extra_flags | default('') }}"
 
+    - name: "Mirror release 4.20.10 for HCP - OCPBUGS-86292"
+      ansible.builtin.include_tasks:
+        file: mirror-release-42010-hcp.yml
+      when:
+        - acm_cluster_type | default('') in ['HostedControlPlane']
+        - version is version('4.21', '>=')
+
     - name: Convert Image Source to registries.conf format
       vars:
         img_src_paths:
