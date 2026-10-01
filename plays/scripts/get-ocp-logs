@@ -179,4 +179,5 @@ tar \
   --create \
   --file "${must_gather_dir}.tar.gz" ${prefix}must_gather/
 
+find "${must_gather_dir}" -type d -exec chmod u+wx {} +
 rm -Rf "${must_gather_dir}"
