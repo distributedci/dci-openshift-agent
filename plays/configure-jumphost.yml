@@ -85,82 +85,28 @@
         mode: "0755"
 
 - name: Download stable openshift clients
+  ansible.builtin.include_role:
+    name: redhatci.ocp.ocp_tools
   vars:
-    ocp_clients_url:
-      "https://mirror.openshift.com/pub/openshift-v{{ version.split('.')[0] }}/\
-      x86_64/clients/ocp/stable"
-    ocp_client_rhel_url: >-
-      {{ ocp_clients_url }}/openshift-client-linux-amd64-rhel{{ ansible_distribution_major_version }}.tar.gz
-    ocp_client_generic_url: "{{ ocp_clients_url }}/openshift-client-linux.tar.gz"
-    opm_rhel_url: >-
-      {{ ocp_clients_url }}/opm-linux-rhel{{ ansible_distribution_major_version }}.tar.gz
-    opm_generic_url: "{{ ocp_clients_url }}/opm-linux.tar.gz"
-  block:
-    - name: Check whether the RHEL-specific OpenShift client is published
-      ansible.builtin.uri:
-        url: "{{ ocp_client_rhel_url }}"
-        method: HEAD
-        status_code: [200, 404]
-      register: ocp_client_rhel
-      retries: 3
-      delay: 10
-      until: ocp_client_rhel.status | default(0) in [200, 404]
+    ot_tools:
+      - oc
+      - opm
+    ot_dest: "{{ dci_cluster_configs_dir }}"
+    ot_major: "{{ version.split('.')[0] }}"
 
-    - name: Check whether the RHEL-specific opm client is published
-      ansible.builtin.uri:
-        url: "{{ opm_rhel_url }}"
-        method: HEAD
-        status_code: [200, 404]
-      register: opm_rhel
-      retries: 3
-      delay: 10
-      until: opm_rhel.status | default(0) in [200, 404]
-
-    - name: Download stable openshift clients
-      vars:
-        ocp_client_url: >-
-          {{
-            (ocp_client_rhel.status | int == 200)
-            | ternary(ocp_client_rhel_url, ocp_client_generic_url)
-          }}
-        opm_url: >-
-          {{
-            (opm_rhel.status | int == 200)
-            | ternary(opm_rhel_url, opm_generic_url)
-          }}
-      ansible.builtin.unarchive:
-        src: "{{ item }}"
-        dest: "{{ dci_cluster_configs_dir }}"
-        remote_src: true
-        mode: "0755"
-      register: result
-      until: result is not failed
-      retries: 3
-      delay: 10
-      loop:
-        - "{{ ocp_client_url }}"
-        - "{{ opm_url }}"
-
-- name: Find the extracted opm binary
-  ansible.builtin.find:
-    paths: "{{ dci_cluster_configs_dir }}"
-    patterns: "opm-rhel*"
-    file_type: file
-  register: _extracted_opm
-
-- name: Rename the extracted opm binary to opm
+- name: Move opm to the expected location
   ansible.builtin.copy:
-    src: "{{ _extracted_opm.files[0].path }}"
-    dest: "{{ dci_cluster_configs_dir }}/opm"
+    src: "{{ ot_bin.opm }}"
+    dest: "{{ opm_tool_path }}"
     remote_src: true
     mode: "0755"
-  when: _extracted_opm.files | length > 0
+  when: ot_bin.opm != opm_tool_path
 
-- name: Remove the extracted opm binary
+- name: Remove the versioned opm binary
   ansible.builtin.file:
-    path: "{{ _extracted_opm.files[0].path }}"
+    path: "{{ ot_bin.opm }}"
     state: absent
-  when: _extracted_opm.files | length > 0
+  when: ot_bin.opm != opm_tool_path
 
 - name: Setup podman on the jumphost
   ansible.builtin.include_role:
