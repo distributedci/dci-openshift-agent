@@ -15,6 +15,7 @@
     ts_do_virt_tests: "{{ dci_do_virt_tests }}"
   ansible.builtin.include_role:
     name: redhatci.ocp.redhat_tests
+  when: false
 
 - name: "Remove origin-tests image"
   containers.podman.podman_image:
@@ -39,6 +40,27 @@
   when:
     - eco_test_suites is defined
     - eco_test_suites | length
+
+- name: Run OpenShift conformance tests
+  ansible.builtin.include_role:
+      name: redhatci.ocp.ocp_conformance
+  vars:
+      oc_kubeconfig: "{{ kubeconfig_path }}"
+      oc_version: "v{{ ocp_version_short }}"
+      oc_registry: "{{ dci_local_registry }}"
+      oc_mirror_org: "conformance-{{ ocp_version_maj ~ ocp_version_min }}"
+      oc_registry_auth: "{{ dci_pullsecret_file }}"
+      oc_log_dir: "{{ job_logs.path }}"
+      # TODO: registry_certificate should be dci_registry_certificate to follow
+      # agent vars name convention. Also referenced in docs/gitops-ztp.md
+      oc_ca_cert: "{{ registry_certificate | default('') }}"
+      # Legacy var in group_vars/all: dci_openshift_agent_conformance: ''
+      oc_suite: "{{ dci_openshift_agent_conformance }}"
+      # TODO: Document these 2 new vars:
+      oc_extra_volumes: "{{ dci_conformance_extra_volumes | default([]) }}"
+      oc_extra_env: "{{ dci_conformance_extra_env | default({}) }}"
+  when:
+    - dci_openshift_agent_conformance | length
 
 - name: Run cluster-compare
   vars:
