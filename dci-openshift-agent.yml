@@ -521,6 +521,8 @@
       block:
         - name: "Get Cluster facts"
           ansible.builtin.include_tasks: plays/get-cluster-facts.yml
+        - name: "Record cluster info on the DCI job"
+          ansible.builtin.include_tasks: plays/set-cluster-info-metadata.yml
         - name: "Launch after install"
           ansible.builtin.include_tasks: "plays/after-install.yml"
           when:
