@@ -192,10 +192,6 @@
         state: present
         src: "{{ cache_dir }}/{{ version }}/imagesource.yaml"
 
-    - name: "Wait 10 seconds for IMDS changes to be applied"
-      pause:
-        seconds: 10
-
     - name: "Check MachineConfigPool status changes"
       ansible.builtin.include_role:
         name: redhatci.ocp.check_resource
