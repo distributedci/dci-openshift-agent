@@ -191,7 +191,10 @@
                   | selectattr('content', 'defined')
                   | map(attribute='content')
                   | map('b64decode')
-                  | map('from_yaml')
+                  | map('from_yaml_all')
+                  | map('list')
+                  | flatten
+                  | select('mapping')
                   | list
                   | json_query('[].spec.imageDigestMirrors[]')
                   | default([], true)

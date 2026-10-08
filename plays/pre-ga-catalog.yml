@@ -101,12 +101,14 @@
         custom_catalogs: "{{ custom_catalogs | default([]) + [prega_catalog_image] }}"
       when:
         - dci_main == 'install'
+        - acm_cluster_type | default('') not in ['HostedControlPlane']
 
-    - name: Set prega_catalog_image for upgrade
+    - name: Set prega_catalog_image for upgrade and HCP
       ansible.builtin.set_fact:
         prega_catalog_image: "{{ prega_catalog_image }}"
       when:
-        - dci_main == 'upgrade'
+        - dci_main == 'upgrade' or
+          acm_cluster_type | default('') == 'HostedControlPlane'
 
 - name: Remove oc-mirror output directory
   ansible.builtin.file:
@@ -114,14 +116,44 @@
     state: absent
   when: om_output_dir is defined
 
-- name: "Apply pre-ga IDMS from template"
+- name: "Handle pre-ga IDMS from template"
   vars:
     prega_mirror: "{{ dci_disconnected | default(false) | bool |
                 ternary (dci_local_registry,
                 'quay.io') }}"
-  kubernetes.core.k8s:
-    state: present
-    definition: "{{ lookup('template', 'pre-ga-idms.j2') }}"
+  block:
+    - name: "Apply pre-ga IDMS from template"
+      kubernetes.core.k8s:
+        state: present
+        definition: "{{ lookup('template', 'pre-ga-idms.j2') }}"
+      when:
+        - acm_cluster_type | default('') not in ['HostedControlPlane']
+
+    # IDMS file is consumed via is_files and stashed into hcp_catalog_digest_mirrors
+    - name: "Render pre-ga IDMS for HostedControlPlane"
+      when:
+        - acm_cluster_type | default('') == 'HostedControlPlane'
+      block:
+        - name: "Create temp file for pre-ga IDMS"
+          ansible.builtin.tempfile:
+            state: file
+            prefix: "dci_prega_idms_{{ job_id | default('') }}_"
+            suffix: ".yaml"
+          register: prega_idms_file
+
+        - name: "Write rendered pre-ga IDMS"
+          ansible.builtin.copy:
+            dest: "{{ prega_idms_file.path }}"
+            content: "{{ lookup('template', 'pre-ga-idms.j2') }}"
+            mode: "0644"
+
+        - name: "Append pre-ga IDMS to Image Source files"
+          ansible.builtin.set_fact:
+            is_files: "{{ is_files | default([]) + [prega_idms_file.path] }}"
+
+        - name: "Set pre-ga catalog source image"
+          ansible.builtin.set_fact:
+            dci_prune_index: "{{ prega_catalog_image }}"
 
 - name: Get differences between GA and daily Pre-GA
   environment:
