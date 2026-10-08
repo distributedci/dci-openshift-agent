@@ -132,7 +132,21 @@
         ni_bmc_address: "{{ _ni_bmc_address | default({}) }}"
         ni_bmc_username: "{{ _ni_bmc_username | default('') }}"
         ni_bmc_password: "{{ _ni_bmc_password | default('') }}"
-        ni_collect_bmc: "{{ (ni_bmc_address | length > 0) and (ni_bmc_username | length > 0) and (ni_bmc_password | length > 0) }}"
+        # Discover BMC address/credentials from BareMetalHost resources. For ACM
+        # managed spokes the BareMetalHosts live on the hub, so point the role at
+        # the hub kubeconfig; otherwise it reads from the target cluster.
+        ni_bmc_from_bmh: true
+        ni_hub_kubeconfig: >-
+          {{ hub_kubeconfig_path
+             if (enable_acm | default(false) | bool and hub_kubeconfig_path is defined)
+             else '' }}
+        # Collect BMC data when the inventory provides full address+credentials
+        # (IPI/ABI) or when an ACM hub is available for BareMetalHost discovery.
+        ni_collect_bmc: >-
+          {{ ((_ni_bmc_address | default({}) | length > 0)
+               and (_ni_bmc_username | default('') | length > 0)
+               and (_ni_bmc_password | default('') | length > 0))
+             or (enable_acm | default(false) | bool and hub_kubeconfig_path is defined) }}
       when:
         - dci_collect_hardware | default(true) | bool
 
