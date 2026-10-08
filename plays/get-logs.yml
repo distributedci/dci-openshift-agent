@@ -71,33 +71,52 @@
         - dci_main == 'upgrade'
         - storage_upgrade_tester | default(false) | bool
 
-    - name: Build BMC address map for node_info
-      ansible.builtin.set_fact:
-        _ni_bmc_address: >-
-          {{
-            _ni_bmc_address | default({}) | combine({
-              (hostvars[item].name | default(hostvars[item].nodename) | default(hostvars[item].hostname) | default(item)):
-                (hostvars[item].bmc_address | default(hostvars[item].ipmi_address))
-            })
-          }}
-      loop: "{{ _ni_bmc_hosts }}"
-      loop_control:
-        label: "{{ item }}"
+    - name: Resolve BMC data for node_info (best-effort)
       when:
         - dci_collect_hardware | default(true) | bool
-        - hostvars[item].bmc_address is defined or hostvars[item].ipmi_address is defined
+      block:
+        - name: Build BMC address map for node_info
+          ansible.builtin.set_fact:
+            _ni_bmc_address: >-
+              {{
+                _ni_bmc_address | default({}) | combine({
+                  (hostvars[item].name | default(hostvars[item].nodename) | default(hostvars[item].hostname) | default(item)):
+                    (hostvars[item].bmc_address | default(hostvars[item].ipmi_address))
+                })
+              }}
+          loop: "{{ _ni_bmc_hosts }}"
+          loop_control:
+            label: "{{ item }}"
+          when:
+            - hostvars[item].bmc_address is defined or hostvars[item].ipmi_address is defined
 
-    - name: Determine BMC credentials for node_info
-      ansible.builtin.set_fact:
-        _ni_bmc_username: "{{ hostvars[item].bmc_user | default(hostvars[item].ipmi_user) | default('') }}"
-        _ni_bmc_password: "{{ hostvars[item].bmc_password | default(hostvars[item].ipmi_password) | default('') }}"
-      loop: "{{ _ni_bmc_hosts }}"
-      loop_control:
-        label: "{{ item }}"
-      when:
-        - dci_collect_hardware | default(true) | bool
-        - _ni_bmc_username is not defined
-        - hostvars[item].bmc_user is defined or hostvars[item].ipmi_user is defined
+        - name: Determine BMC credentials for node_info
+          ansible.builtin.set_fact:
+            _ni_bmc_username: "{{ hostvars[item].bmc_user | default(hostvars[item].ipmi_user) | default('') }}"
+            _ni_bmc_password: "{{ hostvars[item].bmc_password | default(hostvars[item].ipmi_password) | default('') }}"
+          loop: "{{ _ni_bmc_hosts }}"
+          loop_control:
+            label: "{{ item }}"
+          when:
+            - _ni_bmc_username is not defined
+            - hostvars[item].bmc_user is defined or hostvars[item].ipmi_user is defined
+
+        - name: Ensure BMC credentials are resolvable
+          ansible.builtin.set_fact:
+            _ni_bmc_username: "{{ _ni_bmc_username | default('') | string }}"
+            _ni_bmc_password: "{{ _ni_bmc_password | default('') | string }}"
+      rescue:
+        - name: Disable BMC collection when data cannot be resolved
+          ansible.builtin.set_fact:
+            _ni_bmc_address: {}
+            _ni_bmc_username: ""
+            _ni_bmc_password: ""
+
+        - name: Notify that BMC firmware collection was skipped
+          ansible.builtin.debug:
+            msg: >-
+              Skipping BMC firmware collection: BMC address or credentials
+              could not be resolved from the inventory
 
     - name: Collect hardware data
       ansible.builtin.include_role:
