@@ -1,0 +1,48 @@
+---
+# Gather cluster configuration facts with the redhatci.ocp.cluster_info role
+# and record them on the current DCI job:
+#   - non-numerical facts as tags (platform, topology, region, network type,
+#     IP stack, default storage classes)
+#   - numerical facts as key/values (total node count and per-role node counts)
+
+- name: "Gather cluster configuration facts"
+  ansible.builtin.include_role:
+    name: redhatci.ocp.cluster_info
+
+- name: "Tag the DCI job with cluster configuration"
+  vars:
+    _ci_tags: >-
+      {{
+        (['platform:' ~ cluster_info_platform | lower] if cluster_info_platform not in ['unknown', ''] else [])
+        + (['topology:' ~ cluster_info_topology | lower] if cluster_info_topology not in ['unknown', ''] else [])
+        + (['region:' ~ cluster_info_region | lower] if cluster_info_region not in ['unknown', ''] else [])
+        + (['network_type:' ~ cluster_info_network_type | lower] if cluster_info_network_type not in ['unknown', ''] else [])
+        + (['ip_stack:' ~ cluster_info_ip_stack | lower] if cluster_info_ip_stack not in ['unknown', ''] else [])
+        + (cluster_info_default_storage | map('lower') | map('regex_replace', '^', 'storage:') | list)
+      }}
+  dci_job:
+    id: "{{ job_id }}"
+    tags: "{{ _ci_tags }}"
+  delegate_to: localhost
+  when: _ci_tags | length > 0
+  tags: [dci]
+
+- name: "Record the total node count on the DCI job"
+  dci_job:
+    id: "{{ job_id }}"
+    key: "node_count"
+    value: "{{ cluster_info_node_count }}"
+  delegate_to: localhost
+  tags: [dci]
+
+- name: "Record per-role node counts on the DCI job"
+  dci_job:
+    id: "{{ job_id }}"
+    key: "nodes_{{ item.key }}"
+    value: "{{ item.value }}"
+  loop: "{{ cluster_info_node_count_by_role | dict2items }}"
+  loop_control:
+    label: "nodes_{{ item.key }}"
+  delegate_to: localhost
+  tags: [dci]
+...
