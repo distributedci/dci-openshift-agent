@@ -71,9 +71,13 @@
         - dci_main == 'upgrade'
         - storage_upgrade_tester | default(false) | bool
 
-    - name: Resolve BMC data for node_info (best-effort)
+    - name: Resolve BMC data for node_info from inventory (best-effort)
       when:
         - dci_collect_hardware | default(true) | bool
+        # On ACM/ZTP the BareMetalHosts live on the hub and BMC credentials are
+        # discovered from there; skip inventory resolution (whose bmc_user may
+        # reference vars that are not loaded, e.g. a spoke vault).
+        - (install_type | default('ipi')) != 'acm'
       block:
         - name: Build BMC address map for node_info
           ansible.builtin.set_fact:
@@ -132,30 +136,23 @@
         ni_bmc_address: "{{ _ni_bmc_address | default({}) }}"
         ni_bmc_username: "{{ _ni_bmc_username | default('') }}"
         ni_bmc_password: "{{ _ni_bmc_password | default('') }}"
-        # Discover BMC address/credentials from BareMetalHost resources. For ACM
-        # managed spokes the BareMetalHosts live on the hub, so point the role at
-        # the hub kubeconfig; otherwise it reads from the target cluster.
+        # Discover BMC address/credentials from BareMetalHost resources. When a
+        # hub kubeconfig is available (ACM/ZTP managed spokes) the BareMetalHosts
+        # live on the hub, so point the role there and scope to the cluster
+        # namespace; otherwise discovery reads from the target cluster.
         ni_bmc_from_bmh: true
-        ni_hub_kubeconfig: >-
-          {{ hub_kubeconfig_path
-             if (enable_acm | default(false) | bool and hub_kubeconfig_path is defined)
-             else '' }}
-        # Scope hub discovery to the managed cluster namespace so BareMetalHosts
-        # of other spokes on the same hub are not mixed in.
-        ni_hub_kubeconfig_namespace: >-
-          {{ cluster | default('')
-             if (enable_acm | default(false) | bool and hub_kubeconfig_path is defined)
-             else '' }}
+        ni_hub_kubeconfig: "{{ hub_kubeconfig_path | default('') }}"
+        ni_hub_kubeconfig_namespace: "{{ cluster | default('') if hub_kubeconfig_path is defined else '' }}"
         # Lab BMCs typically use self-signed certificates; honor the existing
         # disable_bmc_certificate_verification knob (default: do not validate).
         ni_bmc_validate_certs: "{{ not (disable_bmc_certificate_verification | default(true) | bool) }}"
-        # Collect BMC data when the inventory provides full address+credentials
-        # (IPI/ABI) or when an ACM hub is available for BareMetalHost discovery.
+        # Collect BMC data when a hub is available for BareMetalHost discovery, or
+        # when the inventory provides full address+credentials (IPI/ABI).
         ni_collect_bmc: >-
-          {{ ((_ni_bmc_address | default({}) | length > 0)
-               and (_ni_bmc_username | default('') | length > 0)
-               and (_ni_bmc_password | default('') | length > 0))
-             or (enable_acm | default(false) | bool and hub_kubeconfig_path is defined) }}
+          {{ (hub_kubeconfig_path is defined)
+             or ((_ni_bmc_address | default({}) | length > 0)
+                 and (_ni_bmc_username | default('') | length > 0)
+                 and (_ni_bmc_password | default('') | length > 0)) }}
       when:
         - dci_collect_hardware | default(true) | bool
 
