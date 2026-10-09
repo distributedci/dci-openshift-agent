@@ -45,6 +45,39 @@
   delay: 5
   until: _uv_install is not failed
 
+# RHEL 10 does not ship python3-kubernetes.
+- name: Install the kubernetes Python library on RHEL 10
+  when:
+    - ansible_distribution == 'RedHat'
+    - ansible_distribution_major_version | int == 10
+  block:
+    - name: Check whether Ansible's Python can import kubernetes
+      ansible.builtin.command:
+        argv:
+          - "{{ ansible_python.executable }}"
+          - -c
+          - import kubernetes
+      register: _kubernetes_import
+      changed_when: false
+      failed_when: false
+
+    - name: Install the kubernetes Python library with uv
+      become: true
+      ansible.builtin.command:
+        argv:
+          - "{{ ansible_env.HOME }}/.local/bin/uv"
+          - pip
+          - install
+          - --python
+          - "{{ ansible_python.executable }}"
+          - --break-system-packages
+          - kubernetes
+      when: _kubernetes_import.rc != 0
+      register: _kubernetes_uv_install
+      retries: 5
+      delay: 5
+      until: _kubernetes_uv_install is not failed
+
 - name: "Log out of podman registries"
   containers.podman.podman_logout:
     all: true
