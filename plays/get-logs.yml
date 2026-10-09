@@ -140,6 +140,15 @@
           {{ hub_kubeconfig_path
              if (enable_acm | default(false) | bool and hub_kubeconfig_path is defined)
              else '' }}
+        # Scope hub discovery to the managed cluster namespace so BareMetalHosts
+        # of other spokes on the same hub are not mixed in.
+        ni_hub_kubeconfig_namespace: >-
+          {{ cluster | default('')
+             if (enable_acm | default(false) | bool and hub_kubeconfig_path is defined)
+             else '' }}
+        # Lab BMCs typically use self-signed certificates; honor the existing
+        # disable_bmc_certificate_verification knob (default: do not validate).
+        ni_bmc_validate_certs: "{{ not (disable_bmc_certificate_verification | default(true) | bool) }}"
         # Collect BMC data when the inventory provides full address+credentials
         # (IPI/ABI) or when an ACM hub is available for BareMetalHost discovery.
         ni_collect_bmc: >-
