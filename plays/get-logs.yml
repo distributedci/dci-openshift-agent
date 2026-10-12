@@ -92,7 +92,7 @@
           loop_control:
             label: "{{ item }}"
           when:
-            - hostvars[item].bmc_address is defined or hostvars[item].ipmi_address is defined
+            - "'bmc_address' in hostvars[item] or 'ipmi_address' in hostvars[item]"
 
         - name: Determine BMC credentials for node_info
           ansible.builtin.set_fact:
@@ -103,7 +103,7 @@
             label: "{{ item }}"
           when:
             - _ni_bmc_username is not defined
-            - hostvars[item].bmc_user is defined or hostvars[item].ipmi_user is defined
+            - "'bmc_user' in hostvars[item] or 'ipmi_user' in hostvars[item]"
 
         - name: Ensure BMC credentials are resolvable
           ansible.builtin.set_fact:
