@@ -63,8 +63,8 @@ dci_hub_must_gather_images:
   - gitops
 
 # Feature images used by setup plays.
-minio_image: "quay.io/minio/minio@sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e" # RELEASE.2025-09-07T16-13-09Z
-minio_client_image: "quay.io/minio/mc@sha256:a7fe349ef4bd8521fb8497f55c6042871b2ae640607cf99d9bede5e9bdf11727" # RELEASE.2025-08-13T08-35-41Z
+minio_image: "cgr.dev/chainguard/minio" # 06/10/2026
+minio_client_image: "cgr.dev/chainguard/minio-client" # 06/10/2026
 nfs_provisioner_image: "registry.k8s.io/sig-storage/nfs-subdir-external-provisioner@sha256:63d5e04551ec8b5aae83b6f35938ca5ddc50a88d85492d9731810c31591fa4c9" # v4.0.2
 nfd_image: "registry.redhat.io/openshift4/ose-node-feature-discovery@sha256:57a132bdf888ea95345027876c952d09ad72f43a5b4488794bf4f6c45f8520da" # latest, date: 20260805
 eventrouter_image: "registry.redhat.io/openshift-logging/eventrouter-rhel8@sha256:4acc0e5cb837972d812ceb6ce3be5938b121c167f4668ef7b8b626e353296014" # v5.2.1-1
