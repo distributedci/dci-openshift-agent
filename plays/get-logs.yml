@@ -142,7 +142,9 @@
         # namespace; otherwise discovery reads from the target cluster.
         ni_bmc_from_bmh: true
         ni_hub_kubeconfig: "{{ hub_kubeconfig_path | default('') }}"
-        ni_hub_kubeconfig_namespace: "{{ cluster | default('') if hub_kubeconfig_path is defined else '' }}"
+        ni_hub_kubeconfig_namespace: >-
+          {{ cluster if (hub_kubeconfig_path is defined and cluster is defined)
+             else 'openshift-machine-api' }}
         # Lab BMCs typically use self-signed certificates; honor the existing
         # disable_bmc_certificate_verification knob (default: do not validate).
         ni_bmc_validate_certs: "{{ not (disable_bmc_certificate_verification | default(true) | bool) }}"
