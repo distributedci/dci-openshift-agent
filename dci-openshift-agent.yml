@@ -301,7 +301,7 @@
     no_proxy: "{{ no_proxy_list }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
     TMPDIR: "{{ ansible_env.HOME }}/tmp"
-    KUBECONFIG: "{{ lookup('env', 'KUBECONFIG') }}"
+    KUBECONFIG: "{{ lookup('env', 'KUBECONFIG') or kubeconfig_path }}"
   tasks:
     - name: Pre-run hooks
       block:
