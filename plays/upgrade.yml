@@ -151,9 +151,6 @@
     - name: Pre-upgrade operators tasks
       ansible.builtin.include_tasks: pre-upgrade.yml
 
-    - name: Prepare operators and catalogs
-      ansible.builtin.include_tasks: prepare-operators.yml
-
     - name: Start the upgrade of the installed operators
       ansible.builtin.include_tasks: upgrade-operators.yml
       when:
@@ -161,4 +158,7 @@
 
     - name: Run cluster health checks
       ansible.builtin.include_tasks: check-cluster-health.yml
+
+- name: Prepare operators and catalogs
+  ansible.builtin.include_tasks: prepare-operators.yml
 ...
