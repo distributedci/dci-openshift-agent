@@ -11,8 +11,7 @@
     seconds: 60
   when:
     - (install_type | default('ipi')) == 'sno'
-    - ocp_version_maj|int == 4
-    - ocp_version_min|int <= 10
+    - ocp_version_short is version("4.10", "<=")
 
 - name: Create PerformanceProfile
   kubernetes.core.k8s:
