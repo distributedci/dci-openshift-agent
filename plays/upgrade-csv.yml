@@ -70,20 +70,31 @@
             installPlanApproval: "Automatic"
             channel: "{{ default_channel }}"
 
-    - name: "Delete non-approved install plans"
-      kubernetes.core.k8s:
+    # Catalog may create an InstallPlan while the sub is still Manual.
+    # So, re-list InstallPlans after the patch and approve any that are still pending.
+    - name: "List InstallPlans after switching to Automatic"
+      kubernetes.core.k8s_info:
         api: operators.coreos.com/v1alpha1
         kind: InstallPlan
         namespace: "{{ sub.namespace }}"
-        name: "{{ ip.ipName }}"
-        state: absent
+      register: re_listed_install_plans
       retries: 5
       delay: 5
-      loop: "{{ ips }}"
+
+    - name: "Approve unapproved InstallPlans"
+      kubernetes.core.k8s:
+        definition:
+          apiVersion: operators.coreos.com/v1alpha1
+          kind: InstallPlan
+          metadata:
+            name: "{{ item.metadata.name }}"
+            namespace: "{{ sub.namespace }}"
+          spec:
+            approved: true
+      loop: "{{ re_listed_install_plans.resources | default([]) }}"
       loop_control:
-        loop_var: ip
-        label: "{{ ip.ipName }}"
-      when: not ip.approved | bool
+        label: "{{ item.metadata.name }}"
+      when: not (item.spec.approved | default(false) | bool)
 
     - name: "Upgrade details"
       ansible.builtin.debug:
