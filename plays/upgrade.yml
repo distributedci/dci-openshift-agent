@@ -132,33 +132,33 @@
       when:
         - upgrade_eus | default(false) | bool
 
-    - name: Check for ICSPs that need to be migrated
-      kubernetes.core.k8s_info:
-        api_version: operator.openshift.io/v1alpha1
-        kind: ImageContentSourcePolicy
-      register: cluster_icsp
+- name: Check for ICSPs that need to be migrated
+  kubernetes.core.k8s_info:
+    api_version: operator.openshift.io/v1alpha1
+    kind: ImageContentSourcePolicy
+  register: cluster_icsp
 
-    - name: Migrate ICSP to IDMS
-      ansible.builtin.include_tasks: migrate-icsp.yml
-      when:
-        - cluster_icsp is defined
-        - cluster_icsp.resources | length > 0
-        - version is version("4.14", ">=")
+- name: Migrate ICSP to IDMS
+  ansible.builtin.include_tasks: migrate-icsp.yml
+  when:
+    - cluster_icsp is defined
+    - cluster_icsp.resources | length > 0
+    - version is version("4.14", ">=")
 
-    - name: Get cluster facts after upgrade
-      ansible.builtin.include_tasks: get-cluster-facts.yml
+- name: Get cluster facts after upgrade
+  ansible.builtin.include_tasks: get-cluster-facts.yml
 
-    - name: Pre-upgrade operators tasks
-      ansible.builtin.include_tasks: pre-upgrade.yml
+- name: Pre-upgrade operators tasks
+  ansible.builtin.include_tasks: pre-upgrade.yml
 
-    - name: Prepare operators and catalogs
-      ansible.builtin.include_tasks: prepare-operators.yml
+- name: Prepare operators and catalogs
+  ansible.builtin.include_tasks: prepare-operators.yml
 
-    - name: Start the upgrade of the installed operators
-      ansible.builtin.include_tasks: upgrade-operators.yml
-      when:
-        - upgrade_operators | default(true) | bool
+- name: Start the upgrade of the installed operators
+  ansible.builtin.include_tasks: upgrade-operators.yml
+  when:
+    - upgrade_operators | default(true) | bool
 
-    - name: Run cluster health checks
-      ansible.builtin.include_tasks: check-cluster-health.yml
+- name: Run cluster health checks
+  ansible.builtin.include_tasks: check-cluster-health.yml
 ...
