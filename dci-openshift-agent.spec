@@ -1,5 +1,5 @@
 Name:          dci-openshift-agent
-Version:       1.42.0
+Version:       1.43.0
 Release:       1.VERS%{?dist}
 Summary:       DCI Openshift Agent
 License:       ASL 2.0
@@ -19,7 +19,7 @@ Requires: python3-dciclient >= 3.1.0
 %endif
 Requires: dci-pipeline >= 0.7.0
 Requires: ansible-role-dci-podman
-Requires: ansible-collection-redhatci-ocp >= 6.6.0
+Requires: ansible-collection-redhatci-ocp >= 6.8.0
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
@@ -67,6 +67,9 @@ exit 0
 %{_sysconfdir}/sudoers.d/%{name}
 
 %changelog
+* Tue Oct 20 2026 Frederic Lepied <flepied@redhat.com> 1.43.EPOCH-1.VERS
+- Collect BMC firmware version and vendor via node_info (redhatci.ocp >= 6.8.0)
+
 * Thu Oct 08 2026 Frederic Lepied <flepied@redhat.com> 1.42.EPOCH-1.VERS
 - Record cluster configuration as DCI job tags and key/values (redhatci.ocp >= 6.6.0)
 
