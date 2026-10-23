@@ -2,11 +2,13 @@
   ansible.builtin.include_tasks: get-mirror-list.yml
 
 - name: "Set pruned Pre-GA catalog destination in local registry"
+  vars:
+    time_tag: "{{ now(utc=true, fmt='%H%M%S') }}"
   ansible.builtin.set_fact:
     pre_ga_catalog_pruned: >-
       {{ dci_local_registry }}/{{
         dci_pre_ga_catalog | regex_replace('^[^/]+/', '')
-      }}-pruned
+      }}-{{ time_tag }}-pruned
 
 - name: "Prune the pre-GA catalog"
   ansible.builtin.include_role:
