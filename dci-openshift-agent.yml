@@ -178,26 +178,19 @@
         - 'dci_operators | selectattr("name", "equalto", "topology-aware-lifecycle-manager") | list | length > 0'
         - not enable_acm | bool
 
-    - name: Requirements for ACM install_type
+    - name: Fail when ACM install is missing hub_kubeconfig_path
+      ansible.builtin.fail:
+        msg: "hub_kubeconfig_path must be defined when install_type is acm"
       when:
         - (install_type | default('ipi')) == 'acm'
         - hub_kubeconfig_path is not defined
-      block:
-        - name: Check HUB_KUBECONFIG path
-          ansible.builtin.stat:
-            path: "{{ lookup('env','HUB_KUBECONFIG') }}"
-          register: hub_kubeconfig
 
-        - name: Fail when HUB_KUBECONFIG is not found
-          ansible.builtin.fail:
-            msg: "HUB_KUBECONFIG not found at: {{ lookup('env','HUB_KUBECONFIG') }}"
-          when: not hub_kubeconfig.stat.exists
-
-        - name: Set KUBECONFIG for ACM installs
-          ansible.builtin.set_fact:
-            hub_kubeconfig_path: "{{ lookup('env','HUB_KUBECONFIG') }}"
-          delegate_to: jumphost
-          delegate_facts: true
+    - name: Fail when virtual_cp is missing host_kubeconfig_path
+      ansible.builtin.fail:
+        msg: "host_kubeconfig_path must be defined when virtual_cp is true"
+      when:
+        - virtual_cp | default(false) | bool
+        - host_kubeconfig_path is not defined
 
     - name: Set facts required in jumphost scope
       ansible.builtin.set_fact:
@@ -289,6 +282,22 @@
             - name: Run agent cleanup
               include_tasks: plays/agent-cleanup.yml
 
+    - name: Debug kubeconfig inputs
+      ansible.builtin.debug:
+        msg: >-
+          {{
+            {
+              'install_type': install_type | default(None),
+              'virtual_cp': virtual_cp | default(None),
+              'hub_kubeconfig_path': hub_kubeconfig_path | default(None),
+              'host_kubeconfig_path': host_kubeconfig_path | default(None),
+              'KUBECONFIG': lookup('env', 'KUBECONFIG') or None,
+            } | dict2items
+              | rejectattr('value', 'none')
+              | list
+              | items2dict
+          }}
+
 # Step 1b : hook pre run
 - name: 'Launch hook pre-run'
   hosts: jumphost
@@ -301,12 +310,22 @@
     no_proxy: "{{ no_proxy_list }}"
     PATH: "{{ dci_cluster_configs_dir }}:{{ ansible_env.PATH }}"
     TMPDIR: "{{ ansible_env.HOME }}/tmp"
-    KUBECONFIG: "{{ lookup('env', 'KUBECONFIG') }}"
   tasks:
     - name: Pre-run hooks
       block:
         - name: Run the pre-run hook
-          ansible.builtin.include_tasks: '{{ hookdir }}/hooks/pre-run.yml'
+          ansible.builtin.include_tasks:
+            file: '{{ hookdir }}/hooks/pre-run.yml'
+            apply:
+              environment:
+                KUBECONFIG: >-
+                  {{
+                    hub_kubeconfig_path
+                    if (install_type | default('ipi')) == 'acm'
+                    else host_kubeconfig_path
+                    if (virtual_cp | default(false) | bool)
+                    else lookup('env', 'KUBECONFIG')
+                  }}
           when:
             - dci_main == 'install'
           loop: "{{ dci_config_dirs }}"
