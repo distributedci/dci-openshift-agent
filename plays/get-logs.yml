@@ -150,6 +150,8 @@
         ni_bmc_validate_certs: "{{ not (disable_bmc_certificate_verification | default(true) | bool) }}"
         # Collect BMC data when a hub is available for BareMetalHost discovery, or
         # when the inventory provides full address+credentials (IPI/ABI).
+        # Collect BIOS settings via Redfish (reuses the BMC data above).
+        ni_collect_bios_settings: "{{ dci_collect_bios_settings | default(true) | bool }}"
         ni_collect_bmc: >-
           {{ (hub_kubeconfig_path is defined)
              or ((_ni_bmc_address | default({}) | length > 0)
