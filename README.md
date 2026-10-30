@@ -282,6 +282,7 @@ This is the dci-openshift-agent variables that can be set in the
 | dci_cluster_compare             | False    | Boolean | False                                                          | Executes the cluster-compare tool.
 | dci_cluster_metadata            | False    | Boolean | True                                                           | Adds metadata (job_info) to the deployed cluster in a configmap under the openshift-dci namespace.
 | dci_collect_hardware            | False    | Boolean | True                                                           | Collect hardware data.
+| dci_collect_bios_settings       | False    | Boolean | True                                                           | Collect BIOS settings through the BMC Redfish API (requires BMC address and credentials, from the inventory or the BareMetalHosts). Data is stored in `hardware.data.bios_settings`.
 | dci_hardware_tag                | False    | String  | latest                                                         | Tag used for the lshw container image in disconnected environments.
 | dci_hardware_img_path           | False    | String  | /dci/lshw                                                      | Image path in the local registry for the lshw container used in disconnected hardware collection.
 | dci_infra_type                  | False    | String  | core                                                           | Defines the OCP infrastructure type (core, ran). The value is used to choose the cluster_compare manifest according to the cluster purpose.
