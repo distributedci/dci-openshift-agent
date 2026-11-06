@@ -6,7 +6,7 @@
 
 - name: Set directory path for core password extra manifests
   set_fact:
-    core_pass_manifests: "{{ customize_extramanifests_path | default ('/tmp/dci_core/' + job_id | default('') ) }}"
+    core_pass_manifests: "{{ customize_extramanifests_path | default ((lookup('env', 'TMPDIR') | default('/tmp', true)) + '/dci_core/' + job_id | default('') ) }}"
 
 - name: Create directory for extra core user manifests
   ansible.builtin.file:
