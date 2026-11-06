@@ -25,15 +25,6 @@
         src: "{{ repo_root_path }}/fetched/install-config.yaml"
         dest: "{{ job_logs.path }}/install-config.yaml"
         mode: '0644'
-# get-abi-logs script also redacts this file, but that script runs only when a
-# kubeconfig exists. Redact here so a failed ABI install still uploads a
-# redacted file.
-    - name: Redact secrets from copied install-config.yaml
-      ansible.builtin.replace:
-        path: "{{ job_logs.path }}/install-config.yaml"
-        regexp: '^(\s*(?:username|password|pullSecret):\s*).*$'
-        replace: '\1REDACTED'
-      no_log: true
 
 - name: Check if kubeconfig file exists
   ansible.builtin.stat:
