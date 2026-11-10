@@ -29,6 +29,19 @@
     path: "{{ ansible_env.HOME }}/.local/bin"
     mode: "0755"
 
+- name: Check if uv binary is already installed
+  ansible.builtin.stat:
+    path: "{{ ansible_env.HOME }}/.local/bin/uv"
+  register: _uv_binary
+
+- name: Check installed uv binary version
+  ansible.builtin.command:
+    cmd: "{{ ansible_env.HOME }}/.local/bin/uv self version"
+  register: _uv_version
+  changed_when: false
+  failed_when: false
+  when: _uv_binary.stat.exists
+
 - name: Install uv binary
   vars:
     uv_ver: "{{ uv_version | default('0.12.15') }}"
@@ -44,6 +57,10 @@
   retries: 5
   delay: 5
   until: _uv_install is not failed
+  when: >-
+    not _uv_binary.stat.exists or
+    _uv_version.rc | default(1) != 0 or
+    (_uv_version.stdout | default('') | trim) is not match('^uv ' ~ (uv_ver | regex_escape) ~ ' \\(.+\\)$')
 
 - name: "Log out of podman registries"
   containers.podman.podman_logout:
