@@ -44,7 +44,7 @@
 
 - name: Install uv binary
   vars:
-    uv_ver: "{{ uv_version | default('0.12.15') }}"
+    uv_ver: "{{ uv_version | default('0.13.7') }}"
   ansible.builtin.unarchive:
     src: "https://github.com/astral-sh/uv/releases/download/{{ uv_ver }}/uv-x86_64-unknown-linux-gnu.tar.gz"
     dest: "{{ ansible_env.HOME }}/.local/bin"
