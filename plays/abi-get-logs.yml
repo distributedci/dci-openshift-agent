@@ -33,7 +33,7 @@
 
 - name: "Get Rendezvouz logs from deployment"
   environment:
-    OPENSHIFT_INSTALL_BINARY: "{{ repo_root_path }}/extract/openshift-install"
+    OPENSHIFT_INSTALL_BINARY: "{{ repo_root_path }}/openshift-install"
   vars:
     agent_based_installer_bootstrap_node: "{{ groups['masters'][0] }}"
     host_ip_keyword: ansible_host
