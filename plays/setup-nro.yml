@@ -22,7 +22,7 @@
       'noderesourcetopology-scheduler-rhel9' if (ocp_version is version('4.14.0', '>='))
       else 'noderesourcetopology-scheduler-container-rhel8')
       }}" #TODO: Add RHEL10 image name and openshift4 when available
-    nro_image_tag: "{{ nro_topo_img_tag | default('v' + ocp_version_maj + '.' + ocp_version_min) }}"
+    nro_image_tag: "{{ nro_topo_img_tag | default('v' ~ ocp_version_short) }}"
   block:
     - name: Resolve NRO scheduler image digest
       ansible.builtin.command: >
