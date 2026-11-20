@@ -28,3 +28,13 @@
     - { role: worker }
   loop_control:
     label: "{{ item.role }}"
+  register: _sig_policy_mc
+
+- name: Wait for signature policy MachineConfigs to roll out
+  when: _sig_policy_mc.changed  # noqa: no-handler
+  ansible.builtin.include_role:
+    name: redhatci.ocp.check_resource
+  vars:
+    resource_to_check: "MachineConfigPool"
+    check_wait_retries: "{{ 16 * (dci_control_plane_size + dci_compute_size) | int + 1 }}"
+    check_wait_delay: 30

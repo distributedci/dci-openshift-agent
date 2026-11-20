@@ -83,6 +83,13 @@
         check_wait_retries: "{{ 16 * (dci_control_plane_size + dci_compute_size) | int + 1 }}"
         check_wait_delay: 30
 
+- name: Disable image signature validation before an ACM upgrade
+  when:
+    - (install_type | default('ipi')) == 'acm'
+    - version is version('4.22', '>=')
+    - build != 'ga'
+  ansible.builtin.include_tasks: disable-signatures-validation-upgrade.yml
+
 - name: Upgrade process
   when:
     - install_type not in ['acm']
