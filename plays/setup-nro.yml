@@ -17,11 +17,11 @@
 
 - name: Configure NUMA Resources Operator
   vars:
-    nro_image_ns: "{{ nro_topo_img_ns | default('openshift4') }}"
+    nro_image_ns: "{{ nro_topo_img_ns | default('openshift' + ocp_version_maj) }}"
     nro_image_name: "{{ nro_topo_img_name | default(
       'noderesourcetopology-scheduler-rhel9' if (ocp_version is version('4.14.0', '>='))
       else 'noderesourcetopology-scheduler-container-rhel8')
-      }}" #TODO: Add RHEL10 image name and openshift4 when available
+      }}"
     nro_image_tag: "{{ nro_topo_img_tag | default('v' + ocp_version_maj + '.' + ocp_version_min) }}"
   block:
     - name: Resolve NRO scheduler image digest
